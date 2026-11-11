@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test TAI</title>
+<meta name="description" content="Tests del temario TAI con corrección, explicaciones y nivel por tema.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,600;62..125,800&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Idea: la hoja de respuestas del examen. Tinta de impresión magenta (la de las hojas ópticas),
+     relleno de lápiz grafito para lo marcado, rotulador verde/rojo para la corrección.
+     Una sola familia (Archivo) jugando con su anchura: estrecha y pesada para titulares, normal para leer. */
+  --paper: #ffffff;
+  --page: #f3f2f6;
+  --ink: #1f2026;
+  --graphite: #3a3c45;
+  --muted: #6b6d78;
+  --print: #b3306f;
+  --print-soft: #fbeaf2;
+  --rule: #ecc6d8;
+  --line: #e2e1e8;
+  --ok: #157a46;
+  --ok-soft: #e2f4ea;
+  --bad: #cf2e22;
+  --bad-soft: #fde8e5;
+  --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1c1d24; --page: #131419; --ink: #ecebf2; --graphite: #d6d5de; --muted: #a2a3b0;
+    --print: #f07bb0; --print-soft: #3a2030; --rule: #5a3346; --line: #2f3039;
+    --ok: #5dd195; --ok-soft: #173326; --bad: #ff7f72; --bad-soft: #3d1e1b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1c1d24; --page: #131419; --ink: #ecebf2; --graphite: #d6d5de; --muted: #a2a3b0;
+  --print: #f07bb0; --print-soft: #3a2030; --rule: #5a3346; --line: #2f3039;
+  --ok: #5dd195; --ok-soft: #173326; --bad: #ff7f72; --bad-soft: #3d1e1b;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--page); color: var(--ink); font: 400 17px/1.55 var(--font); font-stretch: 100%; -webkit-font-smoothing: antialiased; }
+a { color: var(--print); }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--print); outline-offset: 2px; }
+
+/* Cabecera: la franja impresa de una hoja de examen */
+.mast { background: var(--paper); border-bottom: 2px solid var(--print); position: sticky; top: 0; z-index: 10; }
+.mast-in { max-width: 860px; margin: 0 auto; padding: 14px 20px 0; display: flex; gap: 24px; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; }
+.mark { display: flex; align-items: center; gap: 12px; padding-bottom: 12px; text-decoration: none; color: var(--ink); }
+.mark b { font-weight: 800; font-stretch: 70%; font-size: 1.7rem; line-height: 1; letter-spacing: -0.01em; }
+.mark .bubbles { display: flex; gap: 3px; }
+.mark .bubbles i { width: 13px; height: 13px; border-radius: 50%; border: 1.5px solid var(--print); }
+.mark .bubbles i.f { background: var(--graphite); border-color: var(--graphite); }
+nav.tabs { display: flex; gap: 2px; overflow-x: auto; }
+nav.tabs a { text-decoration: none; color: var(--muted); padding: 10px 12px 12px; font-weight: 600; font-stretch: 85%; white-space: nowrap; border-bottom: 4px solid transparent; margin-bottom: -2px; }
+nav.tabs a:hover { color: var(--ink); }
+nav.tabs a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--graphite); }
+
+main { max-width: 860px; margin: 0 auto; padding: 28px 20px 80px; display: flex; flex-direction: column; gap: 28px; }
+h1, h2 { font-weight: 800; font-stretch: 70%; line-height: 1.02; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.1rem, 6vw, 3.1rem); }
+h2 { font-size: 1.6rem; }
+h3 { font-weight: 600; font-stretch: 85%; font-size: 1.05rem; margin: 0; }
+p { margin: 0; max-width: 64ch; }
+.muted { color: var(--muted); }
+.small { font-size: 0.88rem; }
+.sheet { background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 24px; display: flex; flex-direction: column; gap: 18px; }
+.notice { background: var(--paper); border: 1px solid var(--rule); border-left: 5px solid var(--print); padding: 12px 16px; border-radius: 4px; }
+.notice.error { border-color: var(--bad-soft); border-left-color: var(--bad); }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.spread { display: flex; gap: 12px; flex-wrap: wrap; align-items: baseline; justify-content: space-between; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1.5px solid var(--graphite); background: transparent; padding: 9px 16px; border-radius: 999px; cursor: pointer; font-weight: 600; font-stretch: 90%; text-decoration: none; color: var(--ink); line-height: 1.2; }
+.btn:hover { background: var(--page); }
+.btn.go { background: var(--graphite); color: var(--paper); }
+.btn.go:hover { background: var(--ink); }
+.btn.sm { padding: 5px 12px; font-size: 0.9rem; }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* Resumen de nivel */
+.hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: end; }
+.hero .lead { display: flex; flex-direction: column; gap: 12px; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 2px solid var(--graphite); }
+.fact { padding: 12px 0 10px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; }
+.fact:nth-child(odd) { padding-right: 14px; }
+.fact b { font-weight: 800; font-stretch: 75%; font-size: 1.8rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.fact span { color: var(--muted); font-size: 0.85rem; }
+
+/* Bloques y temas */
+.bloque { display: flex; flex-direction: column; }
+.bloque-h { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; padding-bottom: 8px; border-bottom: 2px solid var(--print); color: var(--print); }
+.bloque-h h3 { color: var(--print); }
+.tema { display: grid; grid-template-columns: 2.6rem 1fr auto; gap: 14px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.tema .n { font-weight: 800; font-stretch: 70%; font-size: 1.35rem; color: var(--print); font-variant-numeric: tabular-nums; }
+.tema .body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.tema .body .tt { overflow-wrap: anywhere; line-height: 1.35; }
+.tema .side { display: flex; gap: 8px; align-items: center; justify-content: flex-end; flex-wrap: wrap; }
+.strip { display: flex; flex-wrap: wrap; gap: 3px; }
+.strip i { width: 11px; height: 11px; border-radius: 50%; border: 1.5px solid var(--rule); }
+.strip i.ok { background: var(--ok); border-color: var(--ok); }
+.strip i.bad { background: var(--bad); border-color: var(--bad); }
+.strip i.blank { border-color: var(--muted); background: linear-gradient(var(--muted), var(--muted)) center / 100% 1.5px no-repeat; }
+.pct { font-weight: 600; font-stretch: 85%; font-variant-numeric: tabular-nums; font-size: 0.92rem; }
+.pct.good { color: var(--ok); } .pct.weak { color: var(--bad); }
+.tag { display: inline-block; font-size: 0.8rem; font-weight: 600; font-stretch: 90%; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); align-items: center; }
+.legend .strip { display: inline-flex; vertical-align: -1px; margin-right: 4px; }
+
+/* Formulario de test */
+fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+legend { font-weight: 600; font-stretch: 85%; padding: 0; margin-bottom: 8px; }
+.choice { display: flex; flex-wrap: wrap; gap: 8px; }
+.choice label { cursor: pointer; }
+.choice input { position: absolute; opacity: 0; pointer-events: none; }
+.choice span { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 10px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--paper); }
+.choice span::before { content: ""; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid var(--print); flex: none; }
+.choice input:checked + span { border-color: var(--graphite); }
+.choice input:checked + span::before { background: var(--graphite); border-color: var(--graphite); }
+.choice input:focus-visible + span { outline: 3px solid var(--print); outline-offset: 2px; }
+.choice input:disabled + span { opacity: 0.4; cursor: not-allowed; }
+.hint { font-size: 0.88rem; color: var(--muted); }
+
+/* Pregunta: opciones como burbujas de la hoja de respuestas */
+.q-meta { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; color: var(--muted); font-size: 0.9rem; }
+.q-num { font-weight: 800; font-stretch: 70%; font-size: 1.15rem; color: var(--print); }
+.clock { font-weight: 600; font-stretch: 85%; font-variant-numeric: tabular-nums; color: var(--ink); font-size: 1.05rem; }
+.clock.low { color: var(--bad); }
+.enun { font-size: 1.22rem; font-weight: 500; line-height: 1.4; overflow-wrap: anywhere; max-width: 60ch; }
+.opts { display: flex; flex-direction: column; gap: 6px; }
+.opt { display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: center; width: 100%; text-align: left; padding: 10px 12px; border: 1.5px solid transparent; border-radius: 8px; background: transparent; cursor: pointer; }
+.opt .bub { width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--print); color: var(--print); display: grid; place-items: center; font-weight: 600; font-size: 0.95rem; }
+.opt .tx { overflow-wrap: anywhere; }
+.opt .note { font-size: 0.82rem; font-weight: 600; font-stretch: 90%; }
+button.opt:hover:not(:disabled) { background: var(--print-soft); }
+button.opt:hover:not(:disabled) .bub { border-width: 2.5px; }
+.opt.sel .bub { background: var(--graphite); border-color: var(--graphite); color: var(--paper); }
+.opt.right { border-color: var(--ok); background: var(--ok-soft); }
+.opt.right .bub { background: var(--ok); border-color: var(--ok); color: var(--paper); }
+.opt.right .note { color: var(--ok); }
+.opt.wrong { border-color: var(--bad); background: var(--bad-soft); }
+.opt.wrong .bub { background: var(--bad); border-color: var(--bad); color: var(--paper); }
+.opt.wrong .note { color: var(--bad); }
+.opt:disabled, .opt.static { cursor: default; }
+.why { border-left: 4px solid var(--graphite); padding: 4px 0 4px 16px; display: flex; flex-direction: column; gap: 4px; max-width: 64ch; }
+.why > .v { font-weight: 800; font-stretch: 80%; font-size: 1.05rem; }
+.v.ok { color: var(--ok); } .v.bad { color: var(--bad); } .v.blank { color: var(--muted); }
+
+/* Hoja de respuestas (examen) */
+.answer-sheet { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 2px 14px; border-top: 2px solid var(--print); padding-top: 12px; }
+.as-row { display: flex; align-items: center; gap: 6px; padding: 3px 4px; border-radius: 6px; cursor: pointer; background: none; border: 0; }
+.as-row:hover { background: var(--print-soft); }
+.as-row.cur { background: var(--print-soft); box-shadow: inset 0 0 0 1.5px var(--print); }
+.as-row .k { width: 1.9rem; text-align: right; font-weight: 600; font-stretch: 80%; color: var(--print); font-variant-numeric: tabular-nums; font-size: 0.9rem; }
+.as-row i { width: 13px; height: 13px; border-radius: 50%; border: 1.3px solid var(--print); }
+.as-row i.f { background: var(--graphite); border-color: var(--graphite); }
+
+/* Resultado */
+.result-top { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+.grade { font-weight: 800; font-stretch: 62%; font-size: clamp(4.5rem, 16vw, 7rem); line-height: 0.85; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.grade small { font-size: 0.3em; font-stretch: 85%; color: var(--muted); letter-spacing: 0; }
+.grade.pass { color: var(--ok); } .grade.fail { color: var(--bad); }
+.tally { display: flex; gap: 18px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
+.tally b { font-weight: 800; font-stretch: 75%; font-size: 1.35rem; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+.dot.ok { background: var(--ok); } .dot.bad { background: var(--bad); } .dot.blank { border: 1.5px solid var(--muted); }
+.review { display: flex; flex-direction: column; }
+.review-item { display: flex; flex-direction: column; gap: 12px; padding: 20px 0; border-top: 1px solid var(--rule); }
+
+table.t { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+table.t th, table.t td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+table.t th { font-weight: 600; font-stretch: 85%; color: var(--muted); font-size: 0.85rem; border-bottom: 2px solid var(--graphite); }
+.wrap-x { overflow-x: auto; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.nota { font-weight: 800; font-stretch: 75%; font-size: 1.15rem; }
+
+@media (max-width: 640px) {
+  .hero { grid-template-columns: 1fr; }
+  .result-top { grid-template-columns: 1fr; gap: 12px; }
+  .tema { grid-template-columns: 2.2rem 1fr; }
+  .tema .side { grid-column: 2; justify-content: flex-start; }
+  .sheet { padding: 18px 16px; }
+  .mast-in { padding: 12px 16px 0; gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+@media print {
+  .mast, .btn, .answer-sheet { display: none !important; }
+  body { background: #fff; }
+  .sheet { border: 0; padding: 0; }
+}
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="mast-in">
+    <a class="mark" href="#nivel" aria-label="Test TAI, inicio">
+      <span class="bubbles" aria-hidden="true"><i></i><i class="f"></i><i></i><i></i></span>
+      <b>Test TAI</b>
+    </a>
+    <nav class="tabs" aria-label="Secciones">
+      <a href="#nivel" data-tab="nivel">Mi nivel</a>
+      <a href="#test" data-tab="test">Hacer test</a>
+      <a href="#historial" data-tab="historial">Historial</a>
+      <a href="#temario" data-tab="temario">Temario</a>
+    </nav>
+  </div>
+</header>
+<main id="app" aria-live="polite">
+  <p class="muted">Cargando preguntas…</p>
+</main>
+<input type="file" id="import-file" accept="application/json,.json" hidden>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------- Estado ----------
+  const S = {
+    loading: true, loadError: null, msg: "",
+    temas: [], bloques: [], indice: null, banks: [], intentos: [],
+    cfg: { origen: "temas", temas: [], banco: "", num: "20", modo: "practica" },
+    run: null, result: null, reviewFilter: "fallos", confirmFinish: false, delAsk: null, timeUp: false
+  };
+  const SEG_POR_PREGUNTA = 45;
+  const LETRAS = ["a", "b", "c", "d", "e", "f"];
+  const LS_KEY = "test-tai-intentos-v1";
+
+  // ---------- Utilidades ----------
+  const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const txt = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\n/g, "<br>");
+  const n2 = (x) => (Math.round(x * 100) / 100).toLocaleString("es-ES", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const pct = (x) => Math.round(x * 100) + " %";
+  const mmss = (s) => { s = Math.max(0, Math.round(s)); return String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0"); };
+  const fecha = (iso) => { try { return new Date(iso).toLocaleString("es-ES", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }); } catch (e) { return iso; } };
+  const shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const plural = (n, uno, varios) => n + " " + (n === 1 ? uno : varios);
+
+  // Nota como en el examen: acierto +1, fallo −1/3, blanco 0; sobre 10.
+  function puntuar(aciertos, fallos, total) { return total ? Math.max(0, aciertos - fallos / 3) / total * 10 : 0; }
+
+  // ---------- Preguntas ----------
+  function allQuestions() {
+    const out = [];
+    for (const b of S.banks) for (const q of (b.preguntas || [])) {
+      if (q.anulada) continue;
+      out.push({ key: b.id + ":" + q.id, bank: b, q, tema: q.tema != null ? q.tema : b.tema });
+    }
+    return out;
+  }
+  function qMap() { const m = new Map(); for (const x of allQuestions()) m.set(x.key, x); return m; }
+  function lastAnswers() {
+    const last = new Map();
+    const sorted = S.intentos.slice().sort((a, b) => String(a.fecha).localeCompare(String(b.fecha)));
+    for (const it of sorted) for (const r of (it.respuestas || [])) last.set(r.k, r.ok === true ? "ok" : (r.r == null ? "blank" : "bad"));
+    return last;
+  }
+  function temaStats() {
+    const last = lastAnswers(), st = new Map();
+    for (const t of S.temas) st.set(t.n, { total: 0, vistas: 0, ok: 0, marks: [] });
+    for (const x of allQuestions()) {
+      if (!st.has(x.tema)) st.set(x.tema, { total: 0, vistas: 0, ok: 0, marks: [] });
+      const s = st.get(x.tema), l = last.get(x.key);
+      s.total++; s.marks.push(l || "");
+      if (l) { s.vistas++; if (l === "ok") s.ok++; }
+    }
+    return st;
+  }
+  function pendientes() { const last = lastAnswers(), m = qMap(), out = []; for (const [k, v] of last) if (v !== "ok" && m.has(k)) out.push(k); return out; }
+
+  // ---------- Progreso (en este navegador) ----------
+  function loadLocal() { try { const v = JSON.parse(localStorage.getItem(LS_KEY) || "[]"); return Array.isArray(v) ? v : []; } catch (e) { return []; } }
+  function saveLocal() { try { localStorage.setItem(LS_KEY, JSON.stringify(S.intentos)); return true; } catch (e) { return false; } }
+  function guardarIntento(it) { S.intentos = S.intentos.concat([it]); if (!saveLocal()) S.msg = "Este navegador no permite guardar datos: el resultado se perderá al cerrar la página. Exporta tu progreso desde el historial."; }
+  function borrarIntento(id) { S.intentos = S.intentos.filter((x) => x.id !== id); saveLocal(); render(); }
+  function exportar() {
+    const blob = new Blob([JSON.stringify({ app: "test-tai", version: 1, exportado: new Date().toISOString(), intentos: S.intentos }, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "progreso-test-tai-" + new Date().toISOString().slice(0, 10) + ".json";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  }
+  function importar(file) {
+    const fr = new FileReader();
+    fr.onload = () => {
+      try {
+        const d = JSON.parse(fr.result), list = Array.isArray(d) ? d : d.intentos;
+        if (!Array.isArray(list)) throw new Error("formato");
+        const ids = new Set(S.intentos.map((x) => x.id));
+        const nuevos = list.filter((x) => x && x.id && Array.isArray(x.respuestas) && !ids.has(x.id));
+        S.intentos = S.intentos.concat(nuevos); saveLocal();
+        S.msg = nuevos.length ? "Importados " + plural(nuevos.length, "intento", "intentos") + "." : "Ese archivo no tiene intentos nuevos: ya estaban todos.";
+      } catch (e) { S.msg = "Ese archivo no es una exportación de Test TAI. Elige el .json que descargaste con «Exportar progreso»."; }
+      render();
+    };
+    fr.readAsText(file);
+  }
+
+  // ---------- Carga ----------
+  const getJSON = (u) => fetch(u, { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(u + " (" + r.status + ")"); return r.json(); });
+  async function init() {
+    window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
+    S.intentos = loadLocal();
+    try {
+      const man = await getJSON("data/manifest.json");
+      const tem = await getJSON("data/" + (man.temario || "temario.json"));
+      S.temas = (tem.temas || []).slice().sort((a, b) => a.n - b.n);
+      S.bloques = tem.bloques || [];
+      S.indice = tem.indice || null;
+      const res = await Promise.allSettled((man.bancos || []).map((f) => getJSON("data/bancos/" + f).then((b) => Object.assign({}, b, { id: b.id || f.replace(/\.json$/, "") }))));
+      S.banks = res.filter((r) => r.status === "fulfilled").map((r) => r.value);
+      const fallidos = res.filter((r) => r.status === "rejected");
+      if (fallidos.length) S.loadError = "No se pudieron cargar " + plural(fallidos.length, "banco", "bancos") + " de preguntas. Recarga la página.";
+    } catch (e) {
+      S.loadError = "No se pudo cargar el temario (" + e.message + "). Si abriste el archivo directamente, sírvelo con un servidor local: python3 -m http.server";
+    }
+    S.loading = false;
+    render();
+  }
+
+  // ---------- Router ----------
+  function tab() { const h = (location.hash || "").replace("#", ""); return ["nivel", "test", "historial", "temario"].includes(h) ? h : "nivel"; }
+  function go(t) { if (location.hash !== "#" + t) location.hash = t; else render(); }
+  function render() {
+    const t = tab();
+    document.querySelectorAll("nav.tabs a").forEach((a) => a.setAttribute("aria-current", a.dataset.tab === t ? "page" : "false"));
+    const app = document.getElementById("app");
+    if (S.loading) { app.innerHTML = '<p class="muted">Cargando preguntas…</p>'; return; }
+    let h = "";
+    if (S.loadError) h += '<div class="notice error">' + esc(S.loadError) + "</div>";
+    if (S.msg) h += '<div class="notice">' + esc(S.msg) + "</div>";
+    if (t === "nivel") h += viewNivel();
+    else if (t === "test") h += S.run ? viewRun() : (S.result && !S.result._fromHist ? viewResult() : viewConfig());
+    else if (t === "historial") h += S.result && S.result._fromHist ? viewResult() : viewHist();
+    else h += viewTemario();
+    app.innerHTML = h;
+    if (t === "test" && S.run) startTick(); else stopTick();
+  }
+
+  // ---------- Mi nivel ----------
+  function viewNivel() {
+    const qs = allQuestions();
+    if (!qs.length) return '<section class="sheet"><h1>Aún no hay preguntas</h1><p class="muted">Cuando se cargue el test de un tema, aparecerá aquí con tu nivel.</p></section>';
+    const st = temaStats(), last = lastAnswers();
+    let vistas = 0, ok = 0;
+    for (const x of qs) { const l = last.get(x.key); if (l) { vistas++; if (l === "ok") ok++; } }
+    const pend = pendientes().length;
+    const exams = S.intentos.filter((i) => i.modo === "examen").sort((a, b) => String(b.fecha).localeCompare(String(a.fecha)));
+    const temasCon = S.temas.filter((t) => (st.get(t.n) || {}).total).length;
+    let titular, sub;
+    if (!vistas) { titular = "Empieza por un test: tienes " + plural(qs.length, "pregunta", "preguntas") + " esperando."; sub = "Al responder verás aquí qué temas dominas y cuáles necesitan otra vuelta."; }
+    else { titular = "Aciertas " + pct(ok / vistas) + " de lo que has visto."; sub = "Cuenta la última vez que respondiste cada pregunta: si fallas algo que tenías bien, baja; si aciertas un fallo, sube."; }
+    let h = '<section class="hero"><div class="lead"><h1>' + esc(titular) + '</h1><p class="muted">' + esc(sub) + '</p><div class="row"><button class="btn go" data-action="new">Hacer un test</button>' + (pend ? '<button class="btn" data-action="repasar">Repasar ' + plural(pend, "fallo", "fallos") + "</button>" : "") + "</div></div>";
+    h += '<div class="facts">';
+    h += fact(vistas + " / " + qs.length, "preguntas vistas");
+    h += fact(String(pend), "fallos y blancos por repasar");
+    h += fact(exams[0] ? n2(exams[0].nota) : "—", exams[0] ? "último examen, " + fecha(exams[0].fecha) : "sin exámenes cronometrados");
+    h += fact(temasCon + " / " + S.temas.length, "temas con test");
+    h += "</div></section>";
+    h += '<section class="sheet"><div class="spread"><h2>Por tema</h2><div class="legend"><span><span class="strip"><i class="ok"></i></span>acierto</span><span><span class="strip"><i class="bad"></i></span>fallo</span><span><span class="strip"><i class="blank"></i></span>en blanco</span><span><span class="strip"><i></i></span>sin ver</span></div></div>';
+    h += bloquesHtml((t) => {
+      const s = st.get(t.n);
+      if (!s || !s.total) return null;
+      const d = s.vistas ? s.ok / s.vistas : 0;
+      const cls = !s.vistas ? "" : d >= 0.7 ? "good" : d < 0.5 ? "weak" : "";
+      return {
+        extra: '<div class="strip" role="img" aria-label="' + s.ok + " aciertos de " + s.vistas + " vistas, " + s.total + ' preguntas">' + s.marks.map((m) => "<i" + (m ? ' class="' + m + '"' : "") + "></i>").join("") + "</div>",
+        side: '<span class="pct ' + cls + '">' + (s.vistas ? pct(d) : "sin empezar") + '</span><button class="btn sm" data-action="test-tema" data-tema="' + t.n + '">Test</button>'
+      };
+    }, true);
+    h += "</section>";
+    return h;
+  }
+  function fact(b, s) { return '<div class="fact"><b>' + esc(b) + "</b><span>" + esc(s) + "</span></div>"; }
+
+  function bloquesHtml(fn, soloConPreguntas) {
+    const bl = S.bloques.length ? S.bloques : Array.from(new Set(S.temas.map((t) => t.bloque))).map((b) => ({ id: b, titulo: "Bloque " + b }));
+    let h = "";
+    for (const b of bl) {
+      const temas = S.temas.filter((t) => t.bloque === b.id);
+      const filas = temas.map((t) => ({ t, r: fn(t) })).filter((o) => o.r || !soloConPreguntas);
+      h += '<div class="bloque"><div class="bloque-h"><h3>' + esc(b.titulo) + '</h3><span class="small">' + (soloConPreguntas ? filas.length + " de " + temas.length + " con test" : plural(temas.length, "tema", "temas")) + "</span></div>";
+      for (const { t, r } of filas) {
+        h += '<div class="tema"><span class="n">' + t.n + '</span><div class="body"><span class="tt">' + esc(t.titulo) + "</span>" + ((r && r.extra) || "") + '</div><div class="side">' + ((r && r.side) || "") + "</div></div>";
+      }
+      h += "</div>";
+    }
+    return h;
+  }
+
+  // ---------- Configurar test ----------
+  function viewConfig() {
+    const qs = allQuestions(), st = temaStats(), c = S.cfg;
+    if (!qs.length) return '<section class="sheet"><h1>Aún no hay preguntas</h1><p class="muted">En cuanto se cargue el test de un tema podrás hacerlo aquí.</p></section>';
+    const temasCon = S.temas.filter((t) => (st.get(t.n) || {}).total);
+    const oficiales = S.banks.filter((b) => b.fuente === "oficial");
+    const pend = pendientes();
+    if (c.origen === "oficial" && !oficiales.length) c.origen = "temas";
+    if (c.origen === "fallos" && !pend.length) c.origen = "temas";
+    c.temas = c.temas.filter((n) => temasCon.some((t) => t.n === n));
+    if (!c.temas.length && temasCon.length) c.temas = [temasCon[0].n];
+    if (oficiales.length && !oficiales.some((b) => b.id === c.banco)) c.banco = oficiales[0].id;
+
+    let h = '<form class="sheet" id="cfg"><h1>Nuevo test</h1>';
+    h += '<fieldset><legend>Qué preguntas</legend><div class="choice">';
+    h += radio("origen", "temas", "Por temas", c.origen === "temas");
+    h += radio("origen", "oficial", oficiales.length ? "Examen oficial" : "Examen oficial (aún no hay)", c.origen === "oficial", !oficiales.length);
+    h += radio("origen", "fallos", "Mis fallos (" + pend.length + ")", c.origen === "fallos", !pend.length);
+    h += "</div></fieldset>";
+    if (c.origen === "temas") {
+      h += '<fieldset><legend>Temas</legend><div class="choice">';
+      for (const t of temasCon) h += '<label><input type="checkbox" name="tema" id="tema-' + t.n + '" value="' + t.n + '"' + (c.temas.includes(t.n) ? " checked" : "") + "><span>Tema " + t.n + " · " + st.get(t.n).total + " preguntas</span></label>";
+      h += '</div><span class="hint">Incluye las preguntas propias y las de exámenes oficiales asignadas a esos temas.</span></fieldset>';
+    } else if (c.origen === "oficial") {
+      h += '<fieldset><legend>Examen</legend><div class="choice">';
+      for (const b of oficiales) h += radio("banco", b.id, b.titulo + " (" + (b.preguntas || []).filter((q) => !q.anulada).length + ")", c.banco === b.id);
+      h += "</div></fieldset>";
+    }
+    const disp = poolFor(c).length, n = numFor(c, disp);
+    h += '<fieldset><legend>Cuántas</legend><div class="choice">';
+    for (const v of ["10", "20", "40", "todas"]) h += radio("num", v, v === "todas" ? "Todas (" + disp + ")" : v, c.num === v);
+    h += '</div><span class="hint">' + (c.origen === "oficial" && c.num === "todas" ? "El examen completo va en su orden original." : "Se eligen al azar entre " + plural(disp, "disponible", "disponibles") + ".") + "</span></fieldset>";
+    h += '<fieldset><legend>Cómo</legend><div class="choice">';
+    h += radio("modo", "practica", "Práctica: corrección al momento", c.modo === "practica");
+    h += radio("modo", "examen", "Examen: cronómetro y nota al final", c.modo === "examen");
+    h += '</div><span class="hint">' + (c.modo === "examen" ? "Tienes " + Math.round(tiempoPara(c, n) / 60) + " minutos. Lo que dejes en blanco no resta." : "Al responder ves si aciertas y por qué.") + "</span></fieldset>";
+    h += '<div class="row"><button class="btn go" type="submit"' + (disp ? "" : " disabled") + ">Empezar " + plural(n, "pregunta", "preguntas") + "</button></div></form>";
+    return h;
+  }
+  function radio(name, value, label, checked, disabled) {
+    return '<label><input type="radio" name="' + name + '" id="' + name + "-" + esc(value) + '" value="' + esc(value) + '"' + (checked ? " checked" : "") + (disabled ? " disabled" : "") + "><span>" + esc(label) + "</span></label>";
+  }
+  function poolFor(c) {
+    const qs = allQuestions();
+    if (c.origen === "oficial") return qs.filter((x) => x.bank.id === c.banco);
+    if (c.origen === "fallos") { const p = new Set(pendientes()); return qs.filter((x) => p.has(x.key)); }
+    return qs.filter((x) => c.temas.includes(x.tema));
+  }
+  function numFor(c, disp) { return c.num === "todas" ? disp : Math.min(Number(c.num), disp); }
+  function tiempoPara(c, n) {
+    if (c.origen === "oficial" && c.num === "todas") { const b = S.banks.find((x) => x.id === c.banco); if (b && b.minutos) return b.minutos * 60; }
+    return n * SEG_POR_PREGUNTA;
+  }
+  function readCfg(form) {
+    const fd = new FormData(form), c = S.cfg;
+    c.origen = fd.get("origen") || c.origen;
+    if (form.querySelector('input[name="tema"]')) c.temas = fd.getAll("tema").map(Number);
+    if (fd.get("banco")) c.banco = fd.get("banco");
+    c.num = fd.get("num") || c.num;
+    c.modo = fd.get("modo") || c.modo;
+  }
+  function startTest() {
+    const c = S.cfg, pool = poolFor(c);
+    if (!pool.length) return;
+    const n = numFor(c, pool.length), ordered = c.origen === "oficial" && c.num === "todas";
+    const items = (ordered ? pool : shuffle(pool)).slice(0, n).map((x) => x.key);
+    let titulo;
+    if (c.origen === "oficial") titulo = (S.banks.find((b) => b.id === c.banco) || {}).titulo || "Examen oficial";
+    else if (c.origen === "fallos") titulo = "Repaso de fallos";
+    else titulo = (c.temas.length === 1 ? "Tema " : "Temas ") + c.temas.slice().sort((a, b) => a - b).join(", ");
+    S.run = { modo: c.modo, titulo, origen: c.origen, items, idx: 0, answers: {}, revealed: {}, start: Date.now(), limit: c.modo === "examen" ? tiempoPara(c, items.length) : 0 };
+    S.result = null; S.msg = ""; S.timeUp = false; S.confirmFinish = false;
+    go("test"); render(); window.scrollTo(0, 0);
+  }
+
+  // ---------- Test en curso ----------
+  function viewRun() {
+    const R = S.run, m = qMap(), key = R.items[R.idx], x = m.get(key);
+    if (!x) return '<div class="notice error">Esta pregunta ya no está en el banco.</div><div class="row"><button class="btn" data-action="next">Siguiente</button></div>';
+    const q = x.q, ans = R.answers[key], shown = R.modo === "practica" && R.revealed[key];
+    const answered = R.items.filter((k) => R.answers[k] != null).length;
+    let h = '<section class="sheet">';
+    h += '<div class="q-meta"><span><span class="q-num">' + (R.idx + 1) + "</span> de " + R.items.length + " · " + esc(R.titulo) + (x.bank.fuente === "oficial" ? " · " + esc(x.bank.convocatoria || "oficial") + " · tema " + esc(x.tema) : (/^Tema \d+$/.test(R.titulo) ? "" : " · tema " + esc(x.tema))) + "</span>";
+    h += R.modo === "examen" ? '<span class="clock" id="clock" aria-label="Tiempo restante">' + mmss(R.limit - (Date.now() - R.start) / 1000) + "</span>" : "<span>" + plural(answered, "respondida", "respondidas") + "</span>";
+    h += '</div><div class="enun">' + txt(q.enunciado) + '</div><div class="opts" role="group" aria-label="Opciones">';
+    q.opciones.forEach((o, i) => {
+      let cls = "", note = "";
+      if (shown) { if (i === q.correcta) { cls = "right"; note = i === ans ? "Tu respuesta" : "Correcta"; } else if (i === ans) { cls = "wrong"; note = "Tu respuesta"; } }
+      else if (i === ans) cls = "sel";
+      h += '<button class="opt ' + cls + '" data-action="pick" data-i="' + i + '"' + (shown ? " disabled" : "") + '><span class="bub">' + LETRAS[i] + '</span><span class="tx">' + txt(o) + '</span><span class="note">' + note + "</span></button>";
+    });
+    h += "</div>";
+    if (shown) {
+      const ok = ans === q.correcta;
+      h += '<div class="why"><span class="v ' + (ans == null ? "blank" : ok ? "ok" : "bad") + '">' + (ans == null ? "En blanco. Era la " + LETRAS[q.correcta] + "." : ok ? "Correcta." : "Fallo. Era la " + LETRAS[q.correcta] + ".") + "</span><span>" + txt(q.explicacion || "Sin explicación todavía.") + "</span></div>";
+    }
+    h += '<div class="spread"><div class="row">';
+    if (R.modo === "examen") {
+      h += '<button class="btn" data-action="prev"' + (R.idx === 0 ? " disabled" : "") + ">Anterior</button>";
+      if (R.idx < R.items.length - 1) h += '<button class="btn go" data-action="next">Siguiente</button>';
+      if (ans != null) h += '<button class="btn" data-action="blank">Borrar marca</button>';
+    } else if (!shown) h += '<button class="btn" data-action="skip">Dejar en blanco</button>';
+    else h += R.idx < R.items.length - 1 ? '<button class="btn go" data-action="next">Siguiente</button>' : '<button class="btn go" data-action="finish">Ver resultado</button>';
+    h += '</div><button class="btn" data-action="finish-ask">' + (R.modo === "examen" ? "Entregar" : "Terminar") + "</button></div>";
+    if (S.confirmFinish) {
+      const sin = R.items.length - answered;
+      h += '<div class="notice"><p>' + (sin ? plural(sin, "pregunta sin responder contará", "preguntas sin responder contarán") + " en blanco. " : "") + '¿Terminar ahora?</p><div class="row" style="margin-top:10px"><button class="btn go" data-action="finish">Terminar y corregir</button><button class="btn" data-action="finish-cancel">Seguir</button></div></div>';
+    }
+    if (R.modo === "examen") {
+      h += '<div class="answer-sheet" aria-label="Hoja de respuestas">';
+      R.items.forEach((k, i) => {
+        const a = R.answers[k];
+        h += '<button class="as-row' + (i === R.idx ? " cur" : "") + '" data-action="goto" data-i="' + i + '" aria-label="Pregunta ' + (i + 1) + (a != null ? ", marcada " + LETRAS[a] : ", sin marcar") + '"><span class="k">' + (i + 1) + "</span>" + [0, 1, 2, 3].map((j) => "<i" + (a === j ? ' class="f"' : "") + "></i>").join("") + "</button>";
+      });
+      h += "</div>";
+    }
+    h += '<span class="hint">Con teclado: a–d o 1–4 para marcar, Intro para seguir.</span></section>';
+    return h;
+  }
+
+  let tickId = null;
+  function startTick() {
+    if (tickId || !S.run || S.run.modo !== "examen") return;
+    tickId = setInterval(() => {
+      if (!S.run) return stopTick();
+      const left = S.run.limit - (Date.now() - S.run.start) / 1000, el = document.getElementById("clock");
+      if (el) { el.textContent = mmss(left); el.classList.toggle("low", left < 60); }
+      if (left <= 0) { S.timeUp = true; finish(); }
+    }, 500);
+  }
+  function stopTick() { if (tickId) { clearInterval(tickId); tickId = null; } }
+
+  function finish() {
+    stopTick();
+    const R = S.run, m = qMap();
+    if (!R) return;
+    let a = 0, f = 0, b = 0;
+    const respuestas = R.items.map((k) => {
+      const x = m.get(k), r = R.answers[k] != null ? R.answers[k] : null, ok = x && r != null ? r === x.q.correcta : null;
+      if (r == null) b++; else if (ok) a++; else f++;
+      return { k, tema: x ? x.tema : null, r, ok };
+    });
+    const it = {
+      id: "i" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), fecha: new Date().toISOString(),
+      modo: R.modo, titulo: R.titulo, origen: R.origen, duracion: Math.round((Date.now() - R.start) / 1000), limite: R.limit,
+      aciertos: a, fallos: f, blancos: b, total: R.items.length, nota: Math.round(puntuar(a, f, R.items.length) * 100) / 100, respuestas
+    };
+    S.run = null; S.confirmFinish = false; S.result = it; S.reviewFilter = f + b ? "fallos" : "todas";
+    guardarIntento(it);
+    render(); window.scrollTo(0, 0);
+  }
+
+  // ---------- Resultado ----------
+  function viewResult() {
+    const it = S.result, m = qMap(), apto = it.nota >= 5;
+    const malas = it.respuestas.filter((r) => r.ok !== true).length;
+    let h = '<section class="sheet">';
+    if (S.timeUp && !it._fromHist) h += '<div class="notice">Se acabó el tiempo y el test se entregó solo.</div>';
+    h += '<div class="result-top"><div class="grade ' + (apto ? "pass" : "fail") + '">' + n2(it.nota) + "<small> /10</small></div>";
+    h += '<div style="display:flex;flex-direction:column;gap:10px"><h2>' + esc(it.titulo) + '</h2><p class="muted small">' + (it.modo === "examen" ? "Examen" : "Práctica") + ", " + fecha(it.fecha) + ", " + mmss(it.duracion) + (it.limite ? " de " + mmss(it.limite) : "") + "</p>";
+    h += '<div class="tally"><span><span class="dot ok"></span><b>' + it.aciertos + "</b> aciertos</span><span><span class=\"dot bad\"></span><b>" + it.fallos + "</b> fallos</span><span><span class=\"dot blank\"></span><b>" + it.blancos + "</b> en blanco</span></div></div></div>";
+    h += '<p class="muted">Aciertos menos un tercio de los fallos, sobre ' + it.total + ". " + (apto ? "Pasarías el corte de 25 sobre 50 que pide cada parte del examen." : "Para pasar el corte de cada parte del examen (25 sobre 50) necesitas un 5.") + "</p>";
+    const porTema = new Map();
+    for (const r of it.respuestas) { if (!porTema.has(r.tema)) porTema.set(r.tema, { a: 0, f: 0, b: 0 }); const s = porTema.get(r.tema); if (r.r == null) s.b++; else if (r.ok) s.a++; else s.f++; }
+    if (porTema.size > 1) {
+      h += '<div class="wrap-x"><table class="t"><thead><tr><th>Tema</th><th>Aciertos</th><th>Fallos</th><th>Blanco</th><th>Nota</th></tr></thead><tbody>';
+      for (const [t, s] of Array.from(porTema).sort((x, y) => x[0] - y[0])) h += "<tr><td>" + esc(t) + "</td><td>" + s.a + "</td><td>" + s.f + "</td><td>" + s.b + '</td><td class="nota">' + n2(puntuar(s.a, s.f, s.a + s.f + s.b)) + "</td></tr>";
+      h += "</tbody></table></div>";
+    }
+    h += '<div class="row">' + (malas ? '<button class="btn go" data-action="retry-fails">Repetir ' + plural(malas, "fallo", "fallos") + "</button>" : "") + '<button class="btn" data-action="new">Nuevo test</button>' + (it._fromHist ? '<button class="btn" data-action="back-hist">Volver al historial</button>' : "") + "</div></section>";
+
+    h += '<section class="sheet"><div class="spread"><h2>Corrección</h2><div class="choice">';
+    h += radio("rf", "fallos", "Fallos y blancos (" + malas + ")", S.reviewFilter === "fallos");
+    h += radio("rf", "todas", "Todas (" + it.total + ")", S.reviewFilter === "todas");
+    h += '</div></div><div class="review">';
+    const list = it.respuestas.map((r, i) => ({ r, i })).filter((o) => S.reviewFilter === "todas" || o.r.ok !== true);
+    if (!list.length) h += '<p class="muted">Ni un fallo ni un blanco.</p>';
+    for (const { r, i } of list) {
+      const x = m.get(r.k);
+      if (!x) { h += '<div class="review-item"><span class="hint">Pregunta ' + (i + 1) + ": ya no está en el banco.</span></div>"; continue; }
+      const q = x.q, st = r.r == null ? "blank" : r.ok ? "ok" : "bad";
+      h += '<div class="review-item"><div class="q-meta"><span><span class="q-num">' + (i + 1) + "</span> · tema " + esc(x.tema) + '</span><span class="v ' + st + '" style="font-weight:600">' + (st === "ok" ? "Acierto" : st === "bad" ? "Fallo" : "En blanco") + "</span></div>";
+      h += '<div class="enun" style="font-size:1.08rem">' + txt(q.enunciado) + '</div><div class="opts">';
+      q.opciones.forEach((o, j) => {
+        const cls = j === q.correcta ? "right" : j === r.r ? "wrong" : "";
+        const note = j === r.r ? "Tu respuesta" : j === q.correcta ? "Correcta" : "";
+        h += '<div class="opt static ' + cls + '"><span class="bub">' + LETRAS[j] + '</span><span class="tx">' + txt(o) + '</span><span class="note">' + note + "</span></div>";
+      });
+      h += '</div><div class="why"><span class="v">Por qué</span><span>' + txt(q.explicacion || "Sin explicación todavía.") + "</span></div></div>";
+    }
+    h += "</div></section>";
+    return h;
+  }
+
+  // ---------- Historial ----------
+  function viewHist() {
+    const list = S.intentos.slice().sort((a, b) => String(b.fecha).localeCompare(String(a.fecha)));
+    let h = '<section class="sheet"><div class="spread"><h1>Historial</h1><div class="row"><button class="btn sm" data-action="export"' + (list.length ? "" : " disabled") + '>Exportar progreso</button><button class="btn sm" data-action="import">Importar progreso</button></div></div>';
+    h += '<p class="muted small">Tu progreso se guarda en este navegador. Para llevarlo al móvil u otro ordenador, expórtalo aquí e impórtalo allí.</p>';
+    if (!list.length) return h + '<p>Todavía no has hecho ningún test.</p><div class="row"><button class="btn go" data-action="new">Hacer un test</button></div></section>';
+    const exams = list.filter((i) => i.modo === "examen").slice(0, 12).reverse();
+    if (exams.length >= 2) h += spark(exams);
+    h += '<div class="wrap-x"><table class="t"><thead><tr><th>Fecha</th><th>Test</th><th>Modo</th><th>Aciertos / fallos / blanco</th><th>Nota</th><th><span class="sr">Acciones</span></th></tr></thead><tbody>';
+    for (const it of list) {
+      h += "<tr><td>" + fecha(it.fecha) + "</td><td>" + esc(it.titulo) + "</td><td>" + (it.modo === "examen" ? "Examen" : "Práctica") + "</td><td>" + it.aciertos + " / " + it.fallos + " / " + it.blancos + '</td><td class="nota">' + n2(it.nota) + '</td><td><div class="row"><button class="btn sm" data-action="open-hist" data-id="' + esc(it.id) + '">Revisar</button>' + (S.delAsk === it.id ? '<button class="btn sm" data-action="del-yes" data-id="' + esc(it.id) + '">Sí, borrar</button>' : '<button class="btn sm" data-action="del-ask" data-id="' + esc(it.id) + '">Borrar</button>') + "</div></td></tr>";
+    }
+    return h + "</tbody></table></div></section>";
+  }
+  function spark(exams) {
+    const W = 640, H = 130, P = 26, xs = (i) => P + i * (W - 2 * P) / (exams.length - 1), ys = (v) => H - P - (v / 10) * (H - 2 * P);
+    const pts = exams.map((e, i) => xs(i).toFixed(1) + "," + ys(e.nota).toFixed(1)).join(" "), last = exams[exams.length - 1];
+    let s = '<figure style="margin:0"><figcaption class="hint">Nota de los últimos exámenes cronometrados; la línea discontinua es el corte del 5</figcaption><svg viewBox="0 0 ' + W + " " + H + '" width="100%" role="img" aria-label="Evolución de la nota">';
+    for (const v of [0, 5, 10]) s += '<line x1="' + P + '" x2="' + (W - P) + '" y1="' + ys(v) + '" y2="' + ys(v) + '" stroke="' + (v === 5 ? "var(--print)" : "var(--line)") + '"' + (v === 5 ? ' stroke-dasharray="5 4"' : "") + '/><text x="4" y="' + (ys(v) + 4) + '" font-size="11" fill="var(--muted)">' + v + "</text>";
+    s += '<polyline points="' + pts + '" fill="none" stroke="var(--graphite)" stroke-width="2"/>';
+    exams.forEach((e, i) => { s += '<circle cx="' + xs(i) + '" cy="' + ys(e.nota) + '" r="' + (i === exams.length - 1 ? 5.5 : 3.5) + '" fill="' + (e.nota >= 5 ? "var(--ok)" : "var(--bad)") + '"/>'; });
+    s += '<text x="' + (xs(exams.length - 1) - 8) + '" y="' + (ys(last.nota) - 10) + '" font-size="13" font-weight="700" text-anchor="end" fill="var(--ink)">' + n2(last.nota) + "</text>";
+    return s + "</svg></figure>";
+  }
+
+  // ---------- Temario ----------
+  function viewTemario() {
+    if (!S.temas.length) return '<section class="sheet"><h1>Temario</h1><p class="muted">El temario aún no está cargado.</p></section>';
+    const st = temaStats(), escritos = S.temas.filter((t) => t.doc).length;
+    let h = '<section class="sheet"><div class="spread"><h1>Temario</h1><span class="muted">' + escritos + " de " + S.temas.length + " temas escritos</span></div>";
+    h += '<p class="muted">Cada tema abre su versión vigente, que puedes exportar a PDF para estudiar en papel.' + (S.indice ? ' El plan de estudio está en el <a href="' + esc(S.indice) + '" target="_blank" rel="noopener">índice del temario</a>.' : "") + "</p>";
+    h += bloquesHtml((t) => {
+      const s = st.get(t.n) || { total: 0 };
+      return { side: (t.doc ? '<a class="btn sm" href="' + esc(t.doc) + '" target="_blank" rel="noopener">Abrir tema</a>' : '<span class="tag">Por escribir</span>') + (s.total ? '<button class="btn sm" data-action="test-tema" data-tema="' + t.n + '">Test · ' + s.total + "</button>" : "") };
+    }, false);
+    return h + "</section>";
+  }
+
+  // ---------- Eventos ----------
+  document.addEventListener("click", (ev) => {
+    const el = ev.target.closest("[data-action]");
+    if (!el) return;
+    const a = el.dataset.action, R = S.run;
+    if (a === "pick" && R) {
+      const k = R.items[R.idx], i = Number(el.dataset.i);
+      if (R.modo === "practica") { if (R.revealed[k]) return; R.answers[k] = i; R.revealed[k] = true; } else R.answers[k] = i;
+      render();
+    } else if (a === "skip" && R) { const k = R.items[R.idx]; R.answers[k] = null; R.revealed[k] = true; render(); }
+    else if (a === "blank" && R) { delete R.answers[R.items[R.idx]]; render(); }
+    else if (a === "next" && R) { if (R.idx < R.items.length - 1) { R.idx++; render(); window.scrollTo(0, 0); } }
+    else if (a === "prev" && R) { if (R.idx > 0) { R.idx--; render(); } }
+    else if (a === "goto" && R) { R.idx = Number(el.dataset.i); render(); }
+    else if (a === "finish-ask") { S.confirmFinish = true; render(); }
+    else if (a === "finish-cancel") { S.confirmFinish = false; render(); }
+    else if (a === "finish") finish();
+    else if (a === "new") { S.result = null; S.timeUp = false; S.msg = ""; go("test"); render(); }
+    else if (a === "repasar") { S.cfg.origen = "fallos"; S.cfg.num = "20"; S.result = null; go("test"); render(); }
+    else if (a === "test-tema") { S.cfg.origen = "temas"; S.cfg.temas = [Number(el.dataset.tema)]; S.result = null; go("test"); render(); }
+    else if (a === "retry-fails") {
+      const mm = qMap(), keys = S.result.respuestas.filter((r) => r.ok !== true).map((r) => r.k).filter((k) => mm.has(k));
+      S.run = { modo: "practica", titulo: "Fallos de " + S.result.titulo, origen: "fallos", items: shuffle(keys), idx: 0, answers: {}, revealed: {}, start: Date.now(), limit: 0 };
+      S.result = null; S.timeUp = false; go("test"); render(); window.scrollTo(0, 0);
+    }
+    else if (a === "open-hist") { const it = S.intentos.find((x) => x.id === el.dataset.id); if (it) { S.result = Object.assign({ _fromHist: true }, it); S.reviewFilter = it.fallos + it.blancos ? "fallos" : "todas"; render(); window.scrollTo(0, 0); } }
+    else if (a === "back-hist") { S.result = null; render(); }
+    else if (a === "del-ask") { S.delAsk = el.dataset.id; render(); }
+    else if (a === "del-yes") { S.delAsk = null; borrarIntento(el.dataset.id); }
+    else if (a === "export") exportar();
+    else if (a === "import") document.getElementById("import-file").click();
+  });
+  document.getElementById("import-file").addEventListener("change", (ev) => { const f = ev.target.files && ev.target.files[0]; if (f) importar(f); ev.target.value = ""; });
+  document.addEventListener("change", (ev) => {
+    const f = ev.target.closest("#cfg");
+    if (f) { readCfg(f); render(); return; }
+    if (ev.target.name === "rf") { S.reviewFilter = ev.target.value; render(); }
+  });
+  document.addEventListener("submit", (ev) => { if (ev.target.id === "cfg") { ev.preventDefault(); readCfg(ev.target); startTest(); } });
+  document.addEventListener("keydown", (ev) => {
+    if (!S.run || tab() !== "test" || ev.altKey || ev.ctrlKey || ev.metaKey) return;
+    if (ev.target && /INPUT|TEXTAREA|SELECT/.test(ev.target.tagName)) return;
+    const map = { a: 0, b: 1, c: 2, d: 3, "1": 0, "2": 1, "3": 2, "4": 3 }, k = ev.key.toLowerCase();
+    if (k in map) { const b = document.querySelector('.opt[data-i="' + map[k] + '"]'); if (b && !b.disabled) { ev.preventDefault(); b.click(); } }
+    else if (k === "enter") { const nx = document.querySelector('[data-action="next"]') || document.querySelector('.sheet > .spread [data-action="finish"]'); if (nx) { ev.preventDefault(); nx.click(); } }
+  });
+
+  window.__testTai = { puntuar };
+  init();
+})();
+</script>
+</body>
+</html>

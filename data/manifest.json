@@ -1,0 +1,6 @@
+{
+  "temario": "temario.json",
+  "bancos": [
+    "t10-propio.json"
+  ]
+}
