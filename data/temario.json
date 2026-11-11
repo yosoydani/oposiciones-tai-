@@ -2,44 +2,221 @@
   "actualizado": "2026-11-11",
   "indice": "https://claude.ai/artifact/XW4sESDcBBPBHmUz1BDRLX",
   "bloques": [
-    {"id": "I", "titulo": "Bloque I. Organización del Estado y Administración electrónica"},
-    {"id": "II", "titulo": "Bloque II. Tecnología básica"},
-    {"id": "III", "titulo": "Bloque III. Desarrollo de sistemas"},
-    {"id": "IV", "titulo": "Bloque IV. Sistemas y comunicaciones"}
+    {
+      "id": "I",
+      "titulo": "Bloque I. Organización del Estado y Administración electrónica"
+    },
+    {
+      "id": "II",
+      "titulo": "Bloque II. Tecnología básica"
+    },
+    {
+      "id": "III",
+      "titulo": "Bloque III. Desarrollo de sistemas"
+    },
+    {
+      "id": "IV",
+      "titulo": "Bloque IV. Sistemas y comunicaciones"
+    }
   ],
   "temas": [
-    {"n": 1, "bloque": "I", "titulo": "Constitución de 1978: derechos y deberes, garantías, suspensión, la Corona", "doc": null},
-    {"n": 2, "bloque": "I", "titulo": "Cortes Generales, Tribunal Constitucional y Defensor del Pueblo", "doc": null},
-    {"n": 3, "bloque": "I", "titulo": "El Gobierno: nombramiento, cese, funciones y relación con las Cortes", "doc": null},
-    {"n": 4, "bloque": "I", "titulo": "Estatuto Básico del Empleado Público, transparencia y Agenda 2030", "doc": null},
-    {"n": 5, "bloque": "I", "titulo": "Igualdad, violencia de género, no discriminación LGTBI, discapacidad y dependencia", "doc": null},
-    {"n": 6, "bloque": "I", "titulo": "Sociedad de la información, firma electrónica, DNI electrónico, Agenda Digital", "doc": null},
-    {"n": 7, "bloque": "I", "titulo": "Protección de datos personales y derechos digitales", "doc": null},
-    {"n": 8, "bloque": "I", "titulo": "Acceso electrónico a servicios públicos, ENS e interoperabilidad", "doc": null},
-    {"n": 9, "bloque": "I", "titulo": "Sedes electrónicas, identificación y autenticación, infraestructuras comunes", "doc": null},
-    {"n": 10, "bloque": "II", "titulo": "Informática básica, sistemas de información, arquitectura y componentes", "doc": "https://claude.ai/artifact/3dNrBiDxoQdVAfrm71N6A9"},
-    {"n": 11, "bloque": "II", "titulo": "Periféricos: conectividad, impresión, almacenamiento, visualización, digitalización", "doc": null},
-    {"n": 12, "bloque": "II", "titulo": "Estructuras de datos, ficheros, algoritmos y formatos de información", "doc": null},
-    {"n": 13, "bloque": "II", "titulo": "Sistemas operativos: Windows, Unix/Linux y móviles", "doc": null},
-    {"n": 14, "bloque": "II", "titulo": "Bases de datos relacionales, orientadas a objetos y NoSQL", "doc": null},
-    {"n": 15, "bloque": "III", "titulo": "Modelado de datos, diseño de BD, modelo relacional y normalización", "doc": null},
-    {"n": 16, "bloque": "III", "titulo": "Lenguajes de programación: tipos, operadores, control de flujo, funciones", "doc": null},
-    {"n": 17, "bloque": "III", "titulo": "SQL estándar, procedimientos almacenados y disparadores", "doc": null},
-    {"n": 18, "bloque": "III", "titulo": "Programación orientada a objetos, patrones de diseño y UML", "doc": null},
-    {"n": 19, "bloque": "III", "titulo": "Java EE / Jakarta EE y plataforma .NET", "doc": null},
-    {"n": 20, "bloque": "III", "titulo": "Arquitecturas cliente/servidor y multicapa, servicios web", "doc": null},
-    {"n": 21, "bloque": "III", "titulo": "Aplicaciones web front-end y servidor, marcado, navegadores, scripts", "doc": null},
-    {"n": 22, "bloque": "III", "titulo": "Accesibilidad, diseño universal, usabilidad y desarrollo seguro", "doc": null},
-    {"n": 23, "bloque": "III", "titulo": "Repositorios, documentación, metodologías, pruebas y control de versiones", "doc": null},
-    {"n": 24, "bloque": "IV", "titulo": "Administración del sistema operativo y software de base", "doc": null},
-    {"n": 25, "bloque": "IV", "titulo": "Administración de BD, almacenamiento, copias de seguridad y virtualización", "doc": null},
-    {"n": 26, "bloque": "IV", "titulo": "Servidores de correo, contenedores y microservicios", "doc": null},
-    {"n": 27, "bloque": "IV", "titulo": "Redes de área local: usuarios, dispositivos y monitorización de tráfico", "doc": null},
-    {"n": 28, "bloque": "IV", "titulo": "Seguridad de sistemas: física, lógica, amenazas, criptografía, CPD, incidencias", "doc": null},
-    {"n": 29, "bloque": "IV", "titulo": "Comunicaciones: medios, equipos, redes móviles e inalámbricas", "doc": null},
-    {"n": 30, "bloque": "IV", "titulo": "Modelos OSI y TCP/IP, protocolos TCP/IP", "doc": null},
-    {"n": 31, "bloque": "IV", "titulo": "Internet: arquitectura, servicios, HTTP, HTTPS, SSL/TLS", "doc": null},
-    {"n": 32, "bloque": "IV", "titulo": "Seguridad en redes: perimetral, acceso remoto, VPN, puesto de usuario", "doc": null},
-    {"n": 33, "bloque": "IV", "titulo": "Redes locales: topología, transmisión, acceso al medio, interconexión", "doc": null}
+    {
+      "n": 1,
+      "bloque": "I",
+      "titulo": "Constitución de 1978: derechos y deberes, garantías, suspensión, la Corona",
+      "doc": "https://claude.ai/artifact/UGr2Brg9dzVJEZrjQp7NWs"
+    },
+    {
+      "n": 2,
+      "bloque": "I",
+      "titulo": "Cortes Generales, Tribunal Constitucional y Defensor del Pueblo",
+      "doc": null
+    },
+    {
+      "n": 3,
+      "bloque": "I",
+      "titulo": "El Gobierno: nombramiento, cese, funciones y relación con las Cortes",
+      "doc": null
+    },
+    {
+      "n": 4,
+      "bloque": "I",
+      "titulo": "Estatuto Básico del Empleado Público, transparencia y Agenda 2030",
+      "doc": null
+    },
+    {
+      "n": 5,
+      "bloque": "I",
+      "titulo": "Igualdad, violencia de género, no discriminación LGTBI, discapacidad y dependencia",
+      "doc": null
+    },
+    {
+      "n": 6,
+      "bloque": "I",
+      "titulo": "Sociedad de la información, firma electrónica, DNI electrónico, Agenda Digital",
+      "doc": null
+    },
+    {
+      "n": 7,
+      "bloque": "I",
+      "titulo": "Protección de datos personales y derechos digitales",
+      "doc": null
+    },
+    {
+      "n": 8,
+      "bloque": "I",
+      "titulo": "Acceso electrónico a servicios públicos, ENS e interoperabilidad",
+      "doc": null
+    },
+    {
+      "n": 9,
+      "bloque": "I",
+      "titulo": "Sedes electrónicas, identificación y autenticación, infraestructuras comunes",
+      "doc": null
+    },
+    {
+      "n": 10,
+      "bloque": "II",
+      "titulo": "Informática básica, sistemas de información, arquitectura y componentes",
+      "doc": "https://claude.ai/artifact/3dNrBiDxoQdVAfrm71N6A9"
+    },
+    {
+      "n": 11,
+      "bloque": "II",
+      "titulo": "Periféricos: conectividad, impresión, almacenamiento, visualización, digitalización",
+      "doc": "https://claude.ai/artifact/KiHNZbif8Xzfpx7NEfQbgf"
+    },
+    {
+      "n": 12,
+      "bloque": "II",
+      "titulo": "Estructuras de datos, ficheros, algoritmos y formatos de información",
+      "doc": "https://claude.ai/artifact/U4M7F3p9Uo6jjLqhHZK1Jv"
+    },
+    {
+      "n": 13,
+      "bloque": "II",
+      "titulo": "Sistemas operativos: Windows, Unix/Linux y móviles",
+      "doc": null
+    },
+    {
+      "n": 14,
+      "bloque": "II",
+      "titulo": "Bases de datos relacionales, orientadas a objetos y NoSQL",
+      "doc": null
+    },
+    {
+      "n": 15,
+      "bloque": "III",
+      "titulo": "Modelado de datos, diseño de BD, modelo relacional y normalización",
+      "doc": null
+    },
+    {
+      "n": 16,
+      "bloque": "III",
+      "titulo": "Lenguajes de programación: tipos, operadores, control de flujo, funciones",
+      "doc": null
+    },
+    {
+      "n": 17,
+      "bloque": "III",
+      "titulo": "SQL estándar, procedimientos almacenados y disparadores",
+      "doc": null
+    },
+    {
+      "n": 18,
+      "bloque": "III",
+      "titulo": "Programación orientada a objetos, patrones de diseño y UML",
+      "doc": null
+    },
+    {
+      "n": 19,
+      "bloque": "III",
+      "titulo": "Java EE / Jakarta EE y plataforma .NET",
+      "doc": null
+    },
+    {
+      "n": 20,
+      "bloque": "III",
+      "titulo": "Arquitecturas cliente/servidor y multicapa, servicios web",
+      "doc": null
+    },
+    {
+      "n": 21,
+      "bloque": "III",
+      "titulo": "Aplicaciones web front-end y servidor, marcado, navegadores, scripts",
+      "doc": null
+    },
+    {
+      "n": 22,
+      "bloque": "III",
+      "titulo": "Accesibilidad, diseño universal, usabilidad y desarrollo seguro",
+      "doc": null
+    },
+    {
+      "n": 23,
+      "bloque": "III",
+      "titulo": "Repositorios, documentación, metodologías, pruebas y control de versiones",
+      "doc": null
+    },
+    {
+      "n": 24,
+      "bloque": "IV",
+      "titulo": "Administración del sistema operativo y software de base",
+      "doc": null
+    },
+    {
+      "n": 25,
+      "bloque": "IV",
+      "titulo": "Administración de BD, almacenamiento, copias de seguridad y virtualización",
+      "doc": null
+    },
+    {
+      "n": 26,
+      "bloque": "IV",
+      "titulo": "Servidores de correo, contenedores y microservicios",
+      "doc": null
+    },
+    {
+      "n": 27,
+      "bloque": "IV",
+      "titulo": "Redes de área local: usuarios, dispositivos y monitorización de tráfico",
+      "doc": null
+    },
+    {
+      "n": 28,
+      "bloque": "IV",
+      "titulo": "Seguridad de sistemas: física, lógica, amenazas, criptografía, CPD, incidencias",
+      "doc": null
+    },
+    {
+      "n": 29,
+      "bloque": "IV",
+      "titulo": "Comunicaciones: medios, equipos, redes móviles e inalámbricas",
+      "doc": null
+    },
+    {
+      "n": 30,
+      "bloque": "IV",
+      "titulo": "Modelos OSI y TCP/IP, protocolos TCP/IP",
+      "doc": null
+    },
+    {
+      "n": 31,
+      "bloque": "IV",
+      "titulo": "Internet: arquitectura, servicios, HTTP, HTTPS, SSL/TLS",
+      "doc": null
+    },
+    {
+      "n": 32,
+      "bloque": "IV",
+      "titulo": "Seguridad en redes: perimetral, acceso remoto, VPN, puesto de usuario",
+      "doc": null
+    },
+    {
+      "n": 33,
+      "bloque": "IV",
+      "titulo": "Redes locales: topología, transmisión, acceso al medio, interconexión",
+      "doc": null
+    }
   ]
 }
