@@ -7,126 +7,785 @@
   "origen": "Doc «Tema 23. Repositorios, metodologías, pruebas y control de versiones»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
   "actualizado": "2026-11-12",
   "preguntas": [
-    {"id": "01", "tema": 23, "enunciado": "¿Qué rasgo distingue al modelo en espiral de Boehm?", "opciones": ["Fases estrictamente secuenciales", "El análisis explícito de riesgos en cada iteración", "La ausencia de planificación", "El uso obligatorio de UML"], "correcta": 1,
-     "explicacion": "La espiral de **Boehm (1986)** incluye en cada vuelta un **análisis explícito de riesgos** (identificarlos y resolverlos), por eso encaja en proyectos grandes y arriesgados. Las fases estrictamente secuenciales son de la cascada y el uso de UML es propio de RUP, no de la espiral."},
-    {"id": "02", "tema": 23, "enunciado": "En Métrica v3, las pruebas de aceptación se realizan en el proceso:", "opciones": ["ASI", "DSI", "CSI", "IAS"], "correcta": 3,
-     "explicacion": "Las pruebas de implantación y de **aceptación** se hacen en **IAS** (Implantación y Aceptación del Sistema). En ASI se especifica el plan de pruebas, en DSI se diseña y en CSI se ejecutan las pruebas unitarias, de integración y de sistema."},
-    {"id": "03", "tema": 23, "enunciado": "¿Cuál de estas NO es una interfaz de Métrica v3?", "opciones": ["Gestión de Proyectos", "Seguridad", "Estudio de Viabilidad del Sistema", "Gestión de la Configuración"], "correcta": 2,
-     "explicacion": "El **Estudio de Viabilidad del Sistema (EVS)** es un **proceso** de desarrollo, no una interfaz. Las cuatro interfaces son **GP** (Gestión de Proyectos), **SEG** (Seguridad), **GC** (Gestión de la Configuración) y **CAL** (Aseguramiento de la Calidad)."},
-    {"id": "04", "tema": 23, "enunciado": "El proceso MSI de Métrica v3 contempla los mantenimientos:", "opciones": ["Correctivo y evolutivo", "Adaptativo y perfectivo", "Los cuatro tipos", "Solo el preventivo"], "correcta": 0,
-     "explicacion": "MSI solo cubre el mantenimiento **correctivo** (corregir errores) y el **evolutivo** (nuevas necesidades). El adaptativo y el perfectivo quedan fuera porque requieren una metodología específica. Truco: MSI = «C y E»."},
-    {"id": "05", "tema": 23, "enunciado": "Según la Guía Scrum 2020, la duración máxima del Daily Scrum es:", "opciones": ["5 minutos", "15 minutos", "30 minutos", "1 hora"], "correcta": 1,
-     "explicacion": "El **Daily Scrum dura como máximo 15 minutos**, y en él los Developers inspeccionan el progreso hacia el Sprint Goal. Para un Sprint de un mes, el Sprint Planning dura hasta 8 horas, la Review 4 y la Retrospective 3."},
-    {"id": "06", "tema": 23, "enunciado": "En la Guía Scrum 2020, el compromiso asociado al Product Backlog es:", "opciones": ["El Sprint Goal", "La Definition of Done", "El Product Goal", "La velocidad del equipo"], "correcta": 2,
-     "explicacion": "El compromiso del Product Backlog es el **Product Goal**, novedad de la guía de 2020. El Sprint Goal es el del Sprint Backlog y la Definition of Done la del Incremento. La velocidad es una práctica habitual, pero no forma parte de la Guía."},
-    {"id": "07", "tema": 23, "enunciado": "¿Quién puede cancelar un Sprint en Scrum?", "opciones": ["El Scrum Master", "Los Developers por mayoría", "El Product Owner", "Cualquier interesado"], "correcta": 2,
-     "explicacion": "**Solo el Product Owner** puede cancelar un Sprint, y lo hace si el **Sprint Goal queda obsoleto**. Ni el Scrum Master, ni los Developers, ni los interesados tienen esa facultad."},
-    {"id": "08", "tema": 23, "enunciado": "Una práctica esencial de Kanban es:", "opciones": ["Sprints de duración fija", "Limitar el trabajo en curso (WIP)", "Programación en parejas obligatoria", "El rol de Scrum Master"], "correcta": 1,
-     "explicacion": "Kanban **limita el trabajo en curso (WIP)** por columna y funciona como **sistema pull**. No tiene iteraciones fijas (eso es Scrum) ni roles prescritos, y la programación en parejas es una práctica de XP."},
-    {"id": "09", "tema": 23, "enunciado": "La diferencia entre entrega continua y despliegue continuo es que:", "opciones": ["En la entrega continua el paso a producción requiere una decisión manual", "El despliegue continuo no ejecuta pruebas", "La entrega continua no usa integración continua", "Son sinónimos"], "correcta": 0,
-     "explicacion": "En la **entrega continua** el software siempre está listo, pero el **paso a producción es manual**; en el **despliegue continuo** cada cambio que supera las pruebas llega **automáticamente** a producción. Ambas se apoyan en la integración continua y en pruebas automáticas."},
-    {"id": "10", "tema": 23, "enunciado": "¿Cuál es una técnica de caja negra?", "opciones": ["Cobertura de decisiones", "Camino básico", "Análisis de valores límite", "Prueba de bucles"], "correcta": 2,
-     "explicacion": "El **análisis de valores límite** se basa en la **especificación** sin mirar el código, igual que las particiones de equivalencia: es caja negra. La cobertura de decisiones, el camino básico y la prueba de bucles necesitan conocer el código, así que son de caja blanca."},
-    {"id": "11", "tema": 23, "enunciado": "Un grafo de flujo tiene 9 aristas y 7 nodos. Su complejidad ciclomática es:", "opciones": ["2", "3", "4", "16"], "correcta": 2,
-     "explicacion": "**V(G) = aristas − nodos + 2 = 9 − 7 + 2 = 4**. El 2 sale de olvidar sumar 2 y el 16 de sumar aristas y nodos. Ese 4 es el número de caminos independientes, es decir, los casos mínimos para cubrir el camino básico."},
-    {"id": "12", "tema": 23, "enunciado": "En la integración descendente (top-down), los módulos inferiores aún no disponibles se sustituyen por:", "opciones": ["Drivers", "Stubs", "Oráculos", "Mutantes"], "correcta": 1,
-     "explicacion": "En la integración **descendente** los módulos inferiores se simulan con **stubs** (resguardos). Los **drivers** (conductores) simulan los módulos superiores en la integración ascendente. El oráculo dice si un resultado es correcto y los mutantes se usan en las pruebas de mutación."},
-    {"id": "13", "tema": 23, "enunciado": "Las pruebas que comprueban que un cambio no ha estropeado funcionalidades que ya funcionaban son de:", "opciones": ["Estrés", "Humo", "Regresión", "Aceptación"], "correcta": 2,
-     "explicacion": "Las pruebas de **regresión** verifican que un cambio **no rompe lo que ya funcionaba**, y conviene automatizarlas. Las de estrés llevan el sistema más allá de sus límites, las de humo comprueban rápido que lo básico funciona y las de aceptación validan las necesidades del usuario."},
-    {"id": "14", "tema": 23, "enunciado": "El ciclo de TDD es:", "opciones": ["Código, prueba, despliegue", "Escribir una prueba que falla, código mínimo para que pase, refactorizar", "Diseño, código, prueba de sistema", "Prueba de aceptación, código, documentación"], "correcta": 1,
-     "explicacion": "TDD (Kent Beck) sigue el ciclo **rojo → verde → refactorizar**: primero una **prueba que falla**, luego el **código mínimo** para que pase y después mejorar el código con las pruebas en verde. Lo clave es que la prueba se escribe **antes** que el código."},
-    {"id": "15", "tema": 23, "enunciado": "git fetch:", "opciones": ["Descarga los cambios del remoto sin integrarlos en la rama actual", "Sube los commits locales", "Equivale a git pull", "Borra las ramas remotas"], "correcta": 0,
-     "explicacion": "**git fetch descarga** los cambios del remoto **sin integrarlos**. **git pull = fetch + merge** (o rebase con --rebase), así que no son equivalentes. Para subir commits se usa git push."},
-    {"id": "16", "tema": 23, "enunciado": "Para deshacer un commit ya publicado en una rama compartida sin reescribir la historia se usa:", "opciones": ["git reset --hard", "git commit --amend", "git rebase -i", "git revert"], "correcta": 3,
-     "explicacion": "**git revert** crea un **commit nuevo que invierte** los cambios de otro, sin tocar la historia, así que es seguro en ramas compartidas. reset --hard, commit --amend y rebase -i reescriben la historia, y hacerlo con commits ya publicados causa problemas a los demás."},
-    {"id": "17", "tema": 23, "enunciado": "Sobre git rebase, es cierto que:", "opciones": ["Crea siempre un commit de fusión con dos padres", "Reescribe los commits y no debe usarse en ramas ya compartidas", "Solo funciona con SVN", "No cambia los hashes"], "correcta": 1,
-     "explicacion": "**rebase reescribe** los commits sobre la punta de otra rama, con **hashes nuevos**, y deja un historial lineal; por eso **no debe usarse en ramas ya publicadas**. El commit de fusión con dos padres es lo que crea git merge (salvo en fast-forward)."},
-    {"id": "18", "tema": 23, "enunciado": "Subversion (SVN) es un sistema:", "opciones": ["Distribuido creado por Linus Torvalds", "Centralizado con números de revisión globales", "Distribuido de Atlassian", "Local sin servidor"], "correcta": 1,
-     "explicacion": "SVN es **centralizado**, con **numeración de revisiones global y secuencial** (r1, r2...) y commits atómicos. Nació en 2000 en CollabNet y hoy es un proyecto Apache. El distribuido de Linus Torvalds es Git, y Atlassian es la empresa de Bitbucket."},
-    {"id": "19", "tema": 23, "enunciado": "¿Qué etiqueta de Javadoc documenta una excepción que puede lanzar un método?", "opciones": ["@exception-type", "@return", "@throws", "@see"], "correcta": 2,
-     "explicacion": "**@throws** (o su sinónimo @exception) documenta las excepciones que puede lanzar un método. @return describe el valor devuelto, @see remite a otro elemento y @exception-type no existe."},
-    {"id": "20", "tema": 23, "enunciado": "La OpenAPI Specification es:", "opciones": ["Un framework Java para crear servicios SOAP", "Un formato estándar en YAML o JSON para describir API REST", "Un sistema de control de versiones", "Un lenguaje de consulta de grafos"], "correcta": 1,
-     "explicacion": "**OpenAPI** (antes especificación Swagger) es el estándar para **describir API REST en YAML o JSON**: rutas, parámetros, esquemas, respuestas y seguridad. Los servicios SOAP se describen con WSDL, y el lenguaje de consulta de grafos de API es GraphQL."},
-
-    {"id": "21", "tema": 23, "enunciado": "En la convención de directorios de Subversion, ¿dónde se guardan las instantáneas fijas de las versiones publicadas?", "opciones": ["trunk", "branches", "tags", "releases"], "correcta": 2,
-     "explicacion": "En SVN, **/tags** guarda **instantáneas fijas** (versiones publicadas), **/trunk** es la línea principal de desarrollo y **/branches** contiene las ramas. Ramas y etiquetas se crean con svn copy, que es una copia barata. releases no forma parte de la convención."},
-    {"id": "22", "tema": 23, "enunciado": "En Git, ¿qué zona contiene los cambios seleccionados con git add para incluirlos en el próximo commit?", "opciones": ["El directorio de trabajo", "El área de preparación (staging o índice)", "El repositorio local (.git)", "El repositorio remoto (origin)"], "correcta": 1,
-     "explicacion": "git add pasa los cambios al **área de preparación** (staging o **índice**), y git commit los confirma después en el repositorio local. El directorio de trabajo es donde se editan los ficheros, y el remoto solo recibe los cambios con git push."},
-    {"id": "23", "tema": 23, "enunciado": "Una librería está en la versión 2.4.7 y publica una nueva versión que solo añade funciones compatibles hacia atrás. Según el versionado semántico, ¿qué número le corresponde?", "opciones": ["2.4.8", "3.0.0", "2.5.7", "2.5.0"], "correcta": 3,
-     "explicacion": "En SemVer **MAYOR.MENOR.PARCHE**, añadir funciones compatibles sube la **MENOR** y **pone a cero el PARCHE**: **2.5.0**. 2.4.8 sería una simple corrección, 3.0.0 un cambio incompatible y 2.5.7 es el error de no reiniciar el parche."},
-    {"id": "24", "tema": 23, "enunciado": "¿Qué elementos forman las coordenadas con las que Maven identifica cada artefacto?", "opciones": ["groupId, artifactId y version", "name, path y checksum", "package, class y release", "repository, branch y tag"], "correcta": 0,
-     "explicacion": "Maven identifica cada artefacto por sus coordenadas **groupId:artifactId:version**. Busca primero en el repositorio **local** (~/.m2) y después en los remotos, como Maven Central o un repositorio corporativo."},
-    {"id": "25", "tema": 23, "enunciado": "En gestión de la configuración, ¿cómo se llama una configuración revisada y aprobada que solo puede cambiarse mediante el procedimiento formal de control de cambios?", "opciones": ["Rama de funcionalidad", "Versión SNAPSHOT", "Línea base", "Etiqueta ligera"], "correcta": 2,
-     "explicacion": "Una **línea base** (*baseline*) es una configuración **revisada y aprobada** que solo cambia mediante el **control formal de cambios**. Una versión SNAPSHOT es justo lo contrario, una versión en desarrollo que va cambiando, y las ramas y etiquetas son mecanismos del control de versiones."},
-    {"id": "26", "tema": 23, "enunciado": "Las herramientas CASE que cubren la construcción, las pruebas y la implantación, con funciones como la generación de código y la depuración, se denominan:", "opciones": ["Upper CASE", "Middle CASE", "I-CASE", "Lower CASE"], "correcta": 3,
-     "explicacion": "Las **Lower CASE** (L-CASE) cubren las fases finales: **construcción, pruebas e implantación**, con generación de código. Las Upper CASE cubren la planificación y el análisis de requisitos, las Middle CASE el análisis y el diseño, y las I-CASE todo el ciclo con un repositorio común."},
-    {"id": "27", "tema": 23, "enunciado": "Obtener el diagrama entidad-relación a partir de una base de datos que ya existe es un ejemplo de:", "opciones": ["Ingeniería directa", "Ingeniería inversa", "Ingeniería de ida y vuelta", "Andamiaje (scaffolding)"], "correcta": 1,
-     "explicacion": "La **ingeniería inversa** va **del código o la base de datos al modelo**. La directa hace el camino contrario (del modelo al código, por ejemplo el DDL desde un modelo de datos), la de ida y vuelta sincroniza ambos sentidos y el andamiaje genera la estructura de un proyecto."},
-    {"id": "28", "tema": 23, "enunciado": "En la arquitectura dirigida por modelos (MDA) de la OMG, ¿en qué orden se transforman los modelos hasta llegar al código?", "opciones": ["PIM → CIM → PSM → código", "CIM → PIM → PSM → código", "CIM → PSM → PIM → código", "PSM → PIM → CIM → código"], "correcta": 1,
-     "explicacion": "El orden es **CIM** (independiente de la computación) → **PIM** (independiente de la plataforma) → **PSM** (específico de la plataforma) → **código**. Truco: se va de lo más abstracto a lo más concreto, y la plataforma (la «S» de *Specific*) aparece al final."},
-    {"id": "29", "tema": 23, "enunciado": "Hoy en día, ¿qué designa el nombre «Swagger»?", "opciones": ["La especificación estándar que mantiene la OpenAPI Initiative", "Un conjunto de herramientas, como Swagger UI, Swagger Editor y Swagger Codegen", "Un formato para describir servicios SOAP", "Un estándar para describir API basadas en eventos"], "correcta": 1,
-     "explicacion": "Hoy **Swagger** es el nombre de las **herramientas** de SmartBear (Swagger UI, Editor, Codegen), mientras que la especificación se llama **OpenAPI** y la mantiene la OpenAPI Initiative (Linux Foundation). Los servicios SOAP se describen con WSDL y las API de eventos con AsyncAPI."},
-    {"id": "30", "tema": 23, "enunciado": "¿Qué formato se utiliza para describir API basadas en eventos y mensajería?", "opciones": ["WSDL", "RAML", "OpenAPI", "AsyncAPI"], "correcta": 3,
-     "explicacion": "**AsyncAPI** describe **API basadas en eventos y mensajería**. OpenAPI y RAML describen API REST, y WSDL describe servicios SOAP."},
-    {"id": "31", "tema": 23, "enunciado": "¿Qué modelo de ciclo de vida es una variante de la cascada que asocia cada fase de definición con su nivel de prueba correspondiente?", "opciones": ["Modelo en V", "Espiral", "Incremental", "RAD"], "correcta": 0,
-     "explicacion": "El **modelo en V** empareja cada fase de definición con un nivel de prueba (por ejemplo, requisitos del usuario con aceptación), así que **planifica la verificación desde el inicio**, aunque es igual de rígido que la cascada. La espiral destaca por el análisis de riesgos y el incremental por las entregas parciales."},
-    {"id": "32", "tema": 23, "enunciado": "En el modelo de prototipado, ¿cómo se llama el prototipo que se construye solo para aclarar los requisitos con el usuario y después se descarta?", "opciones": ["Desechable", "Evolutivo", "Incremental", "Iterativo"], "correcta": 0,
-     "explicacion": "El prototipo **desechable** solo sirve para **validar requisitos** y luego se tira. El **evolutivo**, en cambio, se va refinando hasta convertirse en el producto. El riesgo del prototipado es acabar usando como producto un prototipo que no se diseñó para ello."},
-    {"id": "33", "tema": 23, "enunciado": "¿Cuáles son, en orden, las fases de RUP?", "opciones": ["Inicio, elaboración, construcción y transición", "Análisis, diseño, construcción y pruebas", "Inicio, planificación, ejecución y cierre", "Elaboración, inicio, construcción y transición"], "correcta": 0,
-     "explicacion": "Las fases de RUP son **inicio** (*inception*), **elaboración**, **construcción** y **transición**, cada una con sus iteraciones. Análisis, diseño o pruebas son **disciplinas**, que se trabajan en todas las fases, y la opción c recuerda a las fases de la gestión de proyectos."},
-    {"id": "34", "tema": 23, "enunciado": "En Métrica v3, ¿en qué proceso se estudian las alternativas de solución, su coste-beneficio y sus riesgos para proponer una solución?", "opciones": ["PSI", "ASI", "EVS", "DSI"], "correcta": 2,
-     "explicacion": "En el **Estudio de Viabilidad del Sistema (EVS)** se analizan las alternativas, su coste-beneficio y los riesgos para obtener la **solución propuesta**. PSI es la planificación de sistemas de información, ASI produce el catálogo de requisitos y los modelos, y DSI el diseño detallado."},
-    {"id": "35", "tema": 23, "enunciado": "En Métrica v3, las pruebas unitarias, de integración y de sistema se ejecutan en el proceso:", "opciones": ["DSI", "CSI", "IAS", "ASI"], "correcta": 1,
-     "explicacion": "Las pruebas **unitarias, de integración y de sistema** se ejecutan en **CSI** (Construcción del Sistema de Información). Las de implantación y aceptación van en IAS, y el plan de pruebas se especifica en ASI."},
-    {"id": "36", "tema": 23, "enunciado": "En el modelo de madurez CMMI, ¿qué nombre recibe el nivel 4?", "opciones": ["Definido", "Gestionado", "En optimización", "Gestionado cuantitativamente"], "correcta": 3,
-     "explicacion": "Los niveles de CMMI son: 1 **inicial**, 2 **gestionado**, 3 **definido**, 4 **gestionado cuantitativamente** y 5 **en optimización**. El error típico es confundir el 2 y el 4, que se llaman parecido; el 4 añade la medición cuantitativa."},
-    {"id": "37", "tema": 23, "enunciado": "Según el Manifiesto ágil de 2001, se valora más el software funcionando que:", "opciones": ["Los procesos y herramientas", "La negociación contractual", "La documentación extensiva", "Seguir un plan"], "correcta": 2,
-     "explicacion": "El manifiesto valora el **software funcionando por encima de la documentación extensiva**. Las otras parejas son individuos e interacciones sobre procesos y herramientas, colaboración con el cliente sobre negociación contractual, y respuesta ante el cambio sobre seguir un plan."},
-    {"id": "38", "tema": 23, "enunciado": "Según la Guía Scrum 2020, ¿cuál es la duración máxima de la Sprint Retrospective en un Sprint de un mes?", "opciones": ["1 hora", "4 horas", "8 horas", "3 horas"], "correcta": 3,
-     "explicacion": "Para un Sprint de un mes, la **Retrospective dura hasta 3 horas**, la **Review 4 horas** y el **Planning 8 horas**; en Sprints más cortos, los eventos suelen ser más breves. Truco: 8-4-3, de la planificación al cierre."},
-    {"id": "39", "tema": 23, "enunciado": "Según la Guía Scrum 2020, el Scrum Team es:", "opciones": ["Autogestionado y multifuncional, normalmente de 10 personas o menos", "Autoorganizado, con un equipo de desarrollo separado del Product Owner y del Scrum Master", "Dirigido por el Scrum Master, que asigna las tareas", "De 3 a 9 Developers más el Product Owner y el Scrum Master, sin límite total"], "correcta": 0,
-     "explicacion": "La guía de 2020 define un equipo **autogestionado**, **multifuncional** y pequeño, **normalmente de 10 personas o menos**, sin subequipos ni jerarquías. «Autoorganizado» y el «equipo de desarrollo» son términos de la guía de 2017, y el Scrum Master no asigna tareas: es un líder que sirve."},
-    {"id": "40", "tema": 23, "enunciado": "¿Cuál de estas prácticas NO es propia de la Programación Extrema (XP)?", "opciones": ["Programación en parejas", "Desarrollo guiado por pruebas (TDD)", "Limitar el trabajo en curso de cada columna de un tablero", "Refactorización"], "correcta": 2,
-     "explicacion": "**Limitar el WIP por columna** es la práctica central de **Kanban**, no de XP. La programación en parejas, el TDD y la refactorización son prácticas de XP (Kent Beck), junto con la integración continua, las entregas pequeñas y el cliente in situ."},
-    {"id": "41", "tema": 23, "enunciado": "¿Qué estrategia de despliegue libera la nueva versión primero a un pequeño porcentaje de usuarios antes de extenderla a todos?", "opciones": ["Canary", "Blue-green", "Rolling", "Feature flags"], "correcta": 0,
-     "explicacion": "El despliegue **canary** expone la nueva versión a **un porcentaje de usuarios** para vigilar su comportamiento. Blue-green mantiene dos entornos y conmuta entre ellos, rolling actualiza por lotes de servidores y los feature flags activan o desactivan funcionalidades sin desplegar."},
-    {"id": "42", "tema": 23, "enunciado": "¿Dónde se definen los flujos de trabajo de CI/CD de GitHub Actions?", "opciones": ["En el fichero .gitlab-ci.yml", "En ficheros .yml del directorio .github/workflows/", "En el fichero Jenkinsfile", "En el fichero pom.xml"], "correcta": 1,
-     "explicacion": "GitHub Actions lee los flujos de **.github/workflows/*.yml**. .gitlab-ci.yml es el fichero de **GitLab CI/CD**, el Jenkinsfile es el de Jenkins y pom.xml es el descriptor de construcción de Maven."},
-    {"id": "43", "tema": 23, "enunciado": "La pregunta «¿estamos construyendo el producto correcto?», es decir, el que necesita el usuario, corresponde a la:", "opciones": ["Verificación", "Depuración", "Validación", "Inspección"], "correcta": 2,
-     "explicacion": "La **validación** comprueba que se construye el **producto correcto** (lo que necesita el usuario), y la **verificación** que se construye **correctamente** (conforme a la especificación). La depuración localiza y corrige defectos, y no es probar."},
-    {"id": "44", "tema": 23, "enunciado": "Un programador se equivoca al escribir una condición; el código queda con una imperfección y, al ejecutarlo, la pantalla muestra un importe incorrecto. Según la terminología de pruebas, ese importe incorrecto observable es:", "opciones": ["Un error", "Un defecto", "Una equivocación", "Un fallo"], "correcta": 3,
-     "explicacion": "La cadena es **error → defecto → fallo**: el **error** es la acción humana equivocada, el **defecto** la imperfección que queda en el código y el **fallo** el **comportamiento observable incorrecto** al ejecutarlo. «Equivocación» es otro nombre del error."},
-    {"id": "45", "tema": 23, "enunciado": "Un campo admite edades de 18 a 65 años, ambas incluidas. Aplicando el análisis de valores límite, ¿qué valores se prueban como mínimo?", "opciones": ["17, 18, 65 y 66", "18, 40 y 65", "0, 18, 65 y 100", "19 y 64"], "correcta": 0,
-     "explicacion": "Los valores límite se prueban **en cada frontera y justo fuera de ella**: **17, 18, 65 y 66** (a veces también 19 y 64). Un valor central como 40 es propio de las **particiones de equivalencia** (<18, 18-65 y >65), no de los valores límite."},
-    {"id": "46", "tema": 23, "enunciado": "¿Cuál es la complejidad ciclomática de este método? (todas las condiciones son simples)\nif (a > 0) { x = 1; }\nwhile (i < n) {\n  if (v[i] == 0) { c++; }\n  i++;\n}", "opciones": ["3", "5", "4", "2"], "correcta": 2,
-     "explicacion": "**V(G) = número de decisiones + 1**. Hay **3 decisiones** (el primer if, el while y el if anidado), así que V(G) = 3 + 1 = **4**. El 3 sale de olvidar sumar 1, y anidar un if no cuenta doble: cada condición simple suma una sola vez."},
-    {"id": "47", "tema": 23, "enunciado": "Las pruebas de aceptación que realizan los usuarios en su propio entorno, fuera del entorno del desarrollador, se denominan:", "opciones": ["Pruebas alfa", "Pruebas de humo", "Pruebas de regresión", "Pruebas beta"], "correcta": 3,
-     "explicacion": "Las pruebas **beta** las hacen usuarios **en su propio entorno**; las **alfa**, usuarios **en el entorno del desarrollador**. Las de humo comprueban rápido lo básico tras una construcción y las de regresión que un cambio no rompe lo anterior."},
-    {"id": "48", "tema": 23, "enunciado": "¿Qué doble de prueba, además de simular una dependencia, verifica las llamadas que ha recibido?", "opciones": ["Stub", "Mock", "Dummy", "Fake"], "correcta": 1,
-     "explicacion": "Un **mock verifica las llamadas recibidas** (cuáles, cuántas veces, con qué argumentos). Un **stub** solo devuelve respuestas predefinidas, un dummy se pasa sin usarse y un fake es una implementación simplificada que funciona (por ejemplo, una base de datos en memoria)."},
-    {"id": "49", "tema": 23, "enunciado": "En BDD, los escenarios escritos en Gherkin siguen la estructura:", "opciones": ["Given / When / Then", "Arrange / Act / Assert", "Rojo / Verde / Refactorizar", "Setup / Exercise / Teardown"], "correcta": 0,
-     "explicacion": "Gherkin usa **Given / When / Then** (Dado / Cuando / Entonces) para escribir escenarios en lenguaje natural, que después ejecuta una herramienta como **Cucumber**. Rojo / Verde / Refactorizar es el ciclo de TDD."},
-    {"id": "50", "tema": 23, "enunciado": "¿Qué hace git reset --soft HEAD~1?", "opciones": ["Elimina el último commit y descarta todos sus cambios", "Deshace el último commit y deja sus cambios en el directorio de trabajo, pero fuera del índice", "Deshace el último commit y conserva sus cambios en el índice y en el directorio de trabajo", "Crea un commit nuevo que invierte el último"], "correcta": 2,
-     "explicacion": "**--soft** mueve HEAD al commit anterior y **conserva el índice y el directorio de trabajo**, así que los cambios quedan preparados para volver a confirmarlos. La opción a es **--hard** (lo descarta todo), la b es **--mixed** (la opción por defecto) y la d es **git revert**."},
-    {"id": "51", "tema": 23, "enunciado": "Se ejecuta git merge feature y la rama actual no ha avanzado desde que se creó feature. ¿Qué hace Git por defecto?", "opciones": ["Crea un commit de fusión con dos padres", "Genera siempre un conflicto", "Reescribe los commits de feature con hashes nuevos", "Avanza el puntero de la rama actual (fast-forward), sin commit de fusión"], "correcta": 3,
-     "explicacion": "Si la rama destino no ha avanzado, el merge es un **fast-forward**: Git solo **mueve el puntero** y no crea commit de fusión. Para forzar ese commit se usa **--no-ff**. Reescribir los commits con hashes nuevos es lo que hace rebase."},
-    {"id": "52", "tema": 23, "enunciado": "¿Qué comando de Git guarda temporalmente los cambios sin confirmar para poder cambiar de rama y recuperarlos después?", "opciones": ["git restore", "git stash", "git revert", "git tag"], "correcta": 1,
-     "explicacion": "**git stash** aparta los cambios sin confirmar y **git stash pop** los recupera. git restore descarta los cambios del directorio de trabajo (se pierden), git revert crea un commit que deshace otro y git tag pone etiquetas."},
-    {"id": "53", "tema": 23, "enunciado": "¿Qué comando de Git hace una búsqueda binaria en el historial para localizar el commit que introdujo un fallo?", "opciones": ["git bisect", "git blame", "git cherry-pick", "git log --graph"], "correcta": 0,
-     "explicacion": "**git bisect** hace una **búsqueda binaria**: se marcan un commit bueno y uno malo, y Git va partiendo el intervalo hasta dar con el culpable. git blame muestra el autor de cada línea, cherry-pick aplica un commit concreto y log --graph dibuja el historial."},
-    {"id": "54", "tema": 23, "enunciado": "¿Cuál de estos sistemas de control de versiones es distribuido?", "opciones": ["CVS", "Subversion", "Mercurial", "Perforce"], "correcta": 2,
-     "explicacion": "**Mercurial** es **distribuido**, como Git y Bazaar: cada clon tiene el repositorio completo y se puede trabajar sin conexión. CVS, Subversion y Perforce son **centralizados**: un servidor con el repositorio y clientes con una copia de trabajo."},
-    {"id": "55", "tema": 23, "enunciado": "Durante un git merge surge un conflicto. Una vez editado el fichero para eliminar las marcas <<<<<<<, ======= y >>>>>>>, ¿cómo se completa la fusión?", "opciones": ["Con git push --force", "Con git add del fichero y git commit", "Con git reset --hard", "Con git stash pop"], "correcta": 1,
-     "explicacion": "Tras resolver el conflicto se marca el fichero como resuelto con **git add** y se completa la fusión con **git commit** (en un rebase sería git rebase --continue). reset --hard descartaría el trabajo y push --force sobrescribiría el remoto."},
-    {"id": "56", "tema": 23, "enunciado": "¿Qué estrategia de ramas utiliza las ramas main, develop, feature/*, release/* y hotfix/*?", "opciones": ["GitHub Flow", "Trunk-based development", "GitLab Flow", "Git Flow"], "correcta": 3,
-     "explicacion": "**Git Flow** (Vincent Driessen, 2010) usa **main, develop, feature/*, release/* y hotfix/*** y encaja con versiones planificadas. GitHub Flow tiene solo main y ramas cortas con pull request; GitLab Flow añade ramas de entorno; y en trunk-based todos integran a menudo en la rama principal."},
-    {"id": "57", "tema": 23, "enunciado": "En GitLab, ¿cómo se denomina la solicitud para integrar una rama en otra con revisión de código, comentarios y ejecución de CI?", "opciones": ["Merge request", "Pull request", "Fork", "Issue"], "correcta": 0,
-     "explicacion": "En **GitLab** se llama **merge request**; en GitHub y Bitbucket, **pull request**. Un fork es una copia propia de un repositorio ajeno y una issue es una incidencia (error, tarea o mejora)."},
-    {"id": "58", "tema": 23, "enunciado": "Según el artículo 157 de la Ley 40/2015, antes de desarrollar una nueva aplicación, las Administraciones deben:", "opciones": ["Publicar su código en GitHub", "Licenciarla con la GPL", "Consultar si existen soluciones disponibles para su reutilización", "Obtener autorización previa de la Comisión Europea"], "correcta": 2,
-     "explicacion": "El **art. 157 de la Ley 40/2015** obliga a **consultar si ya existen soluciones reutilizables** antes de desarrollar o adquirir una nueva, y a poner a disposición de otras Administraciones las aplicaciones propias. El art. 158 regula la transferencia de tecnología (directorios de aplicaciones, como el CTT)."},
-    {"id": "59", "tema": 23, "enunciado": "¿Qué licencia de código abierto elaboró la Comisión Europea?", "opciones": ["MIT", "EUPL", "Apache 2.0", "GPL"], "correcta": 1,
-     "explicacion": "La **EUPL** (*European Union Public Licence*) es la licencia de la **Comisión Europea**. La GPL es una licencia *copyleft* de la Free Software Foundation, y Apache 2.0 y MIT son licencias permisivas."},
-    {"id": "60", "tema": 23, "enunciado": "¿Qué es un fork en una plataforma de desarrollo colaborativo como GitHub?", "opciones": ["Una rama protegida que exige revisión antes de integrar", "Una etiqueta anotada que marca una versión", "Un commit que combina todos los de una rama", "Una copia propia de un repositorio ajeno para proponer cambios sin tener permiso de escritura"], "correcta": 3,
-     "explicacion": "Un **fork** es una **copia propia de un repositorio ajeno** en la plataforma. Permite trabajar y luego abrir un pull request al original **sin permiso de escritura** en él. El flujo típico es fork → clone → rama → commits → push al fork → pull request. La opción c describe un *squash merge*."}
+    {
+      "id": "01",
+      "tema": 23,
+      "enunciado": "¿Qué rasgo distingue al modelo en espiral de Boehm?",
+      "opciones": [
+        "Fases estrictamente secuenciales",
+        "El análisis explícito de riesgos en cada iteración",
+        "La ausencia de planificación",
+        "El uso obligatorio de UML"
+      ],
+      "correcta": 1,
+      "explicacion": "La espiral de **Boehm (1986)** incluye en cada vuelta un **análisis explícito de riesgos** (identificarlos y resolverlos), por eso encaja en proyectos grandes y arriesgados. Las fases estrictamente secuenciales son de la cascada y el uso de UML es propio de RUP, no de la espiral."
+    },
+    {
+      "id": "02",
+      "tema": 23,
+      "enunciado": "En Métrica v3, las pruebas de aceptación se realizan en el proceso:",
+      "opciones": [
+        "ASI",
+        "DSI",
+        "CSI",
+        "IAS"
+      ],
+      "correcta": 3,
+      "explicacion": "Las pruebas de implantación y de **aceptación** se hacen en **IAS** (Implantación y Aceptación del Sistema). En ASI se especifica el plan de pruebas, en DSI se diseña y en CSI se ejecutan las pruebas unitarias, de integración y de sistema."
+    },
+    {
+      "id": "03",
+      "tema": 23,
+      "enunciado": "¿Cuál de estas NO es una interfaz de Métrica v3?",
+      "opciones": [
+        "Gestión de Proyectos",
+        "Seguridad",
+        "Estudio de Viabilidad del Sistema",
+        "Gestión de la Configuración"
+      ],
+      "correcta": 2,
+      "explicacion": "El **Estudio de Viabilidad del Sistema (EVS)** es un **proceso** de desarrollo, no una interfaz. Las cuatro interfaces son **GP** (Gestión de Proyectos), **SEG** (Seguridad), **GC** (Gestión de la Configuración) y **CAL** (Aseguramiento de la Calidad)."
+    },
+    {
+      "id": "04",
+      "tema": 23,
+      "enunciado": "El proceso MSI de Métrica v3 contempla los mantenimientos:",
+      "opciones": [
+        "Correctivo y evolutivo",
+        "Adaptativo y perfectivo",
+        "Los cuatro tipos",
+        "Solo el preventivo"
+      ],
+      "correcta": 0,
+      "explicacion": "MSI solo cubre el mantenimiento **correctivo** (corregir errores) y el **evolutivo** (nuevas necesidades). El adaptativo y el perfectivo quedan fuera porque requieren una metodología específica. Truco: MSI = «C y E»."
+    },
+    {
+      "id": "05",
+      "tema": 23,
+      "enunciado": "Según la Guía Scrum 2020, la duración máxima del Daily Scrum es:",
+      "opciones": [
+        "5 minutos",
+        "15 minutos",
+        "30 minutos",
+        "1 hora"
+      ],
+      "correcta": 1,
+      "explicacion": "El **Daily Scrum dura como máximo 15 minutos**, y en él los Developers inspeccionan el progreso hacia el Sprint Goal. Para un Sprint de un mes, el Sprint Planning dura hasta 8 horas, la Review 4 y la Retrospective 3."
+    },
+    {
+      "id": "06",
+      "tema": 23,
+      "enunciado": "En la Guía Scrum 2020, el compromiso asociado al Product Backlog es:",
+      "opciones": [
+        "El Sprint Goal",
+        "La Definition of Done",
+        "El Product Goal",
+        "La velocidad del equipo"
+      ],
+      "correcta": 2,
+      "explicacion": "El compromiso del Product Backlog es el **Product Goal**, novedad de la guía de 2020. El Sprint Goal es el del Sprint Backlog y la Definition of Done la del Incremento. La velocidad es una práctica habitual, pero no forma parte de la Guía."
+    },
+    {
+      "id": "07",
+      "tema": 23,
+      "enunciado": "¿Quién puede cancelar un Sprint en Scrum?",
+      "opciones": [
+        "El Scrum Master",
+        "Los Developers por mayoría",
+        "El Product Owner",
+        "Cualquier interesado"
+      ],
+      "correcta": 2,
+      "explicacion": "**Solo el Product Owner** puede cancelar un Sprint, y lo hace si el **Sprint Goal queda obsoleto**. Ni el Scrum Master, ni los Developers, ni los interesados tienen esa facultad."
+    },
+    {
+      "id": "08",
+      "tema": 23,
+      "enunciado": "Una práctica esencial de Kanban es:",
+      "opciones": [
+        "Sprints de duración fija",
+        "Limitar el trabajo en curso (WIP)",
+        "Programación en parejas obligatoria",
+        "El rol de Scrum Master"
+      ],
+      "correcta": 1,
+      "explicacion": "Kanban **limita el trabajo en curso (WIP)** por columna y funciona como **sistema pull**. No tiene iteraciones fijas (eso es Scrum) ni roles prescritos, y la programación en parejas es una práctica de XP."
+    },
+    {
+      "id": "09",
+      "tema": 23,
+      "enunciado": "La diferencia entre entrega continua y despliegue continuo es que:",
+      "opciones": [
+        "En la entrega continua el paso a producción requiere una decisión manual",
+        "El despliegue continuo no ejecuta pruebas",
+        "La entrega continua no usa integración continua",
+        "Son sinónimos"
+      ],
+      "correcta": 0,
+      "explicacion": "En la **entrega continua** el software siempre está listo, pero el **paso a producción es manual**; en el **despliegue continuo** cada cambio que supera las pruebas llega **automáticamente** a producción. Ambas se apoyan en la integración continua y en pruebas automáticas."
+    },
+    {
+      "id": "10",
+      "tema": 23,
+      "enunciado": "¿Cuál es una técnica de caja negra?",
+      "opciones": [
+        "Cobertura de decisiones",
+        "Camino básico",
+        "Análisis de valores límite",
+        "Prueba de bucles"
+      ],
+      "correcta": 2,
+      "explicacion": "El **análisis de valores límite** se basa en la **especificación** sin mirar el código, igual que las particiones de equivalencia: es caja negra. La cobertura de decisiones, el camino básico y la prueba de bucles necesitan conocer el código, así que son de caja blanca."
+    },
+    {
+      "id": "11",
+      "tema": 23,
+      "enunciado": "Un grafo de flujo tiene 9 aristas y 7 nodos. Su complejidad ciclomática es:",
+      "opciones": [
+        "2",
+        "3",
+        "4",
+        "16"
+      ],
+      "correcta": 2,
+      "explicacion": "**V(G) = aristas − nodos + 2 = 9 − 7 + 2 = 4**. El 2 sale de olvidar sumar 2 y el 16 de sumar aristas y nodos. Ese 4 es el número de caminos independientes, es decir, los casos mínimos para cubrir el camino básico."
+    },
+    {
+      "id": "12",
+      "tema": 23,
+      "enunciado": "En la integración descendente (top-down), los módulos inferiores aún no disponibles se sustituyen por:",
+      "opciones": [
+        "Drivers",
+        "Stubs",
+        "Oráculos",
+        "Mutantes"
+      ],
+      "correcta": 1,
+      "explicacion": "En la integración **descendente** los módulos inferiores se simulan con **stubs** (resguardos). Los **drivers** (conductores) simulan los módulos superiores en la integración ascendente. El oráculo dice si un resultado es correcto y los mutantes se usan en las pruebas de mutación."
+    },
+    {
+      "id": "13",
+      "tema": 23,
+      "enunciado": "Las pruebas que comprueban que un cambio no ha estropeado funcionalidades que ya funcionaban son de:",
+      "opciones": [
+        "Estrés",
+        "Humo",
+        "Regresión",
+        "Aceptación"
+      ],
+      "correcta": 2,
+      "explicacion": "Las pruebas de **regresión** verifican que un cambio **no rompe lo que ya funcionaba**, y conviene automatizarlas. Las de estrés llevan el sistema más allá de sus límites, las de humo comprueban rápido que lo básico funciona y las de aceptación validan las necesidades del usuario."
+    },
+    {
+      "id": "14",
+      "tema": 23,
+      "enunciado": "El ciclo de TDD es:",
+      "opciones": [
+        "Código, prueba, despliegue",
+        "Escribir una prueba que falla, código mínimo para que pase, refactorizar",
+        "Diseño, código, prueba de sistema",
+        "Prueba de aceptación, código, documentación"
+      ],
+      "correcta": 1,
+      "explicacion": "TDD (Kent Beck) sigue el ciclo **rojo → verde → refactorizar**: primero una **prueba que falla**, luego el **código mínimo** para que pase y después mejorar el código con las pruebas en verde. Lo clave es que la prueba se escribe **antes** que el código."
+    },
+    {
+      "id": "15",
+      "tema": 23,
+      "enunciado": "git fetch:",
+      "opciones": [
+        "Descarga los cambios del remoto sin integrarlos en la rama actual",
+        "Sube los commits locales",
+        "Equivale a git pull",
+        "Borra las ramas remotas"
+      ],
+      "correcta": 0,
+      "explicacion": "**git fetch descarga** los cambios del remoto **sin integrarlos**. **git pull = fetch + merge** (o rebase con --rebase), así que no son equivalentes. Para subir commits se usa git push."
+    },
+    {
+      "id": "16",
+      "tema": 23,
+      "enunciado": "Para deshacer un commit ya publicado en una rama compartida sin reescribir la historia se usa:",
+      "opciones": [
+        "git reset --hard",
+        "git commit --amend",
+        "git rebase -i",
+        "git revert"
+      ],
+      "correcta": 3,
+      "explicacion": "**git revert** crea un **commit nuevo que invierte** los cambios de otro, sin tocar la historia, así que es seguro en ramas compartidas. reset --hard, commit --amend y rebase -i reescriben la historia, y hacerlo con commits ya publicados causa problemas a los demás."
+    },
+    {
+      "id": "17",
+      "tema": 23,
+      "enunciado": "Sobre git rebase, es cierto que:",
+      "opciones": [
+        "Crea siempre un commit de fusión con dos padres",
+        "Reescribe los commits y no debe usarse en ramas ya compartidas",
+        "Solo funciona con SVN",
+        "No cambia los hashes"
+      ],
+      "correcta": 1,
+      "explicacion": "**rebase reescribe** los commits sobre la punta de otra rama, con **hashes nuevos**, y deja un historial lineal; por eso **no debe usarse en ramas ya publicadas**. El commit de fusión con dos padres es lo que crea git merge (salvo en fast-forward)."
+    },
+    {
+      "id": "18",
+      "tema": 23,
+      "enunciado": "Subversion (SVN) es un sistema:",
+      "opciones": [
+        "Distribuido creado por Linus Torvalds",
+        "Centralizado con números de revisión globales",
+        "Distribuido de Atlassian",
+        "Local sin servidor"
+      ],
+      "correcta": 1,
+      "explicacion": "SVN es **centralizado**, con **numeración de revisiones global y secuencial** (r1, r2...) y commits atómicos. Nació en 2000 en CollabNet y hoy es un proyecto Apache. El distribuido de Linus Torvalds es Git, y Atlassian es la empresa de Bitbucket."
+    },
+    {
+      "id": "19",
+      "tema": 23,
+      "enunciado": "¿Qué etiqueta de Javadoc documenta una excepción que puede lanzar un método?",
+      "opciones": [
+        "@exception-type",
+        "@return",
+        "@throws",
+        "@see"
+      ],
+      "correcta": 2,
+      "explicacion": "**@throws** (o su sinónimo @exception) documenta las excepciones que puede lanzar un método. @return describe el valor devuelto, @see remite a otro elemento y @exception-type no existe."
+    },
+    {
+      "id": "20",
+      "tema": 23,
+      "enunciado": "La OpenAPI Specification es:",
+      "opciones": [
+        "Un framework Java para crear servicios SOAP",
+        "Un formato estándar en YAML o JSON para describir API REST",
+        "Un sistema de control de versiones",
+        "Un lenguaje de consulta de grafos"
+      ],
+      "correcta": 1,
+      "explicacion": "**OpenAPI** (antes especificación Swagger) es el estándar para **describir API REST en YAML o JSON**: rutas, parámetros, esquemas, respuestas y seguridad. Los servicios SOAP se describen con WSDL, y el lenguaje de consulta de grafos de API es GraphQL."
+    },
+    {
+      "id": "21",
+      "tema": 23,
+      "enunciado": "En la convención de directorios de Subversion, ¿dónde se guardan las instantáneas fijas de las versiones publicadas?",
+      "opciones": [
+        "trunk",
+        "branches",
+        "tags",
+        "releases"
+      ],
+      "correcta": 2,
+      "explicacion": "En SVN, **/tags** guarda **instantáneas fijas** (versiones publicadas), **/trunk** es la línea principal de desarrollo y **/branches** contiene las ramas. Ramas y etiquetas se crean con svn copy, que es una copia barata. releases no forma parte de la convención."
+    },
+    {
+      "id": "22",
+      "tema": 23,
+      "enunciado": "En Git, ¿qué zona contiene los cambios seleccionados con git add para incluirlos en el próximo commit?",
+      "opciones": [
+        "El directorio de trabajo",
+        "El área de preparación (staging o índice)",
+        "El repositorio local (.git)",
+        "El repositorio remoto (origin)"
+      ],
+      "correcta": 1,
+      "explicacion": "git add pasa los cambios al **área de preparación** (staging o **índice**), y git commit los confirma después en el repositorio local. El directorio de trabajo es donde se editan los ficheros, y el remoto solo recibe los cambios con git push."
+    },
+    {
+      "id": "23",
+      "tema": 23,
+      "enunciado": "Una librería está en la versión 2.4.7 y publica una nueva versión que solo añade funciones compatibles hacia atrás. Según el versionado semántico, ¿qué número le corresponde?",
+      "opciones": [
+        "2.4.8",
+        "3.0.0",
+        "2.5.7",
+        "2.5.0"
+      ],
+      "correcta": 3,
+      "explicacion": "En SemVer **MAYOR.MENOR.PARCHE**, añadir funciones compatibles sube la **MENOR** y **pone a cero el PARCHE**: **2.5.0**. 2.4.8 sería una simple corrección, 3.0.0 un cambio incompatible y 2.5.7 es el error de no reiniciar el parche."
+    },
+    {
+      "id": "24",
+      "tema": 23,
+      "enunciado": "¿Qué elementos forman las coordenadas con las que Maven identifica cada artefacto?",
+      "opciones": [
+        "groupId, artifactId y version",
+        "name, path y checksum",
+        "package, class y release",
+        "repository, branch y tag"
+      ],
+      "correcta": 0,
+      "explicacion": "Maven identifica cada artefacto por sus coordenadas **groupId:artifactId:version**. Busca primero en el repositorio **local** (~/.m2) y después en los remotos, como Maven Central o un repositorio corporativo."
+    },
+    {
+      "id": "25",
+      "tema": 23,
+      "enunciado": "En gestión de la configuración, ¿cómo se llama una configuración revisada y aprobada que solo puede cambiarse mediante el procedimiento formal de control de cambios?",
+      "opciones": [
+        "Rama de funcionalidad",
+        "Versión SNAPSHOT",
+        "Línea base",
+        "Etiqueta ligera"
+      ],
+      "correcta": 2,
+      "explicacion": "Una **línea base** (*baseline*) es una configuración **revisada y aprobada** que solo cambia mediante el **control formal de cambios**. Una versión SNAPSHOT es justo lo contrario, una versión en desarrollo que va cambiando, y las ramas y etiquetas son mecanismos del control de versiones."
+    },
+    {
+      "id": "26",
+      "tema": 23,
+      "enunciado": "Las herramientas CASE que cubren la construcción, las pruebas y la implantación, con funciones como la generación de código y la depuración, se denominan:",
+      "opciones": [
+        "Upper CASE",
+        "Middle CASE",
+        "I-CASE",
+        "Lower CASE"
+      ],
+      "correcta": 3,
+      "explicacion": "Las **Lower CASE** (L-CASE) cubren las fases finales: **construcción, pruebas e implantación**, con generación de código. Las Upper CASE cubren la planificación y el análisis de requisitos, las Middle CASE el análisis y el diseño, y las I-CASE todo el ciclo con un repositorio común."
+    },
+    {
+      "id": "27",
+      "tema": 23,
+      "enunciado": "Obtener el diagrama entidad-relación a partir de una base de datos que ya existe es un ejemplo de:",
+      "opciones": [
+        "Ingeniería directa",
+        "Ingeniería inversa",
+        "Ingeniería de ida y vuelta",
+        "Andamiaje (scaffolding)"
+      ],
+      "correcta": 1,
+      "explicacion": "La **ingeniería inversa** va **del código o la base de datos al modelo**. La directa hace el camino contrario (del modelo al código, por ejemplo el DDL desde un modelo de datos), la de ida y vuelta sincroniza ambos sentidos y el andamiaje genera la estructura de un proyecto."
+    },
+    {
+      "id": "28",
+      "tema": 23,
+      "enunciado": "En la arquitectura dirigida por modelos (MDA) de la OMG, ¿en qué orden se transforman los modelos hasta llegar al código?",
+      "opciones": [
+        "PIM → CIM → PSM → código",
+        "CIM → PIM → PSM → código",
+        "CIM → PSM → PIM → código",
+        "PSM → PIM → CIM → código"
+      ],
+      "correcta": 1,
+      "explicacion": "El orden es **CIM** (independiente de la computación) → **PIM** (independiente de la plataforma) → **PSM** (específico de la plataforma) → **código**. Truco: se va de lo más abstracto a lo más concreto, y la plataforma (la «S» de *Specific*) aparece al final."
+    },
+    {
+      "id": "29",
+      "tema": 23,
+      "enunciado": "Hoy en día, ¿qué designa el nombre «Swagger»?",
+      "opciones": [
+        "La especificación estándar que mantiene la OpenAPI Initiative",
+        "Un conjunto de herramientas, como Swagger UI, Swagger Editor y Swagger Codegen",
+        "Un formato para describir servicios SOAP",
+        "Un estándar para describir API basadas en eventos"
+      ],
+      "correcta": 1,
+      "explicacion": "Hoy **Swagger** es el nombre de las **herramientas** de SmartBear (Swagger UI, Editor, Codegen), mientras que la especificación se llama **OpenAPI** y la mantiene la OpenAPI Initiative (Linux Foundation). Los servicios SOAP se describen con WSDL y las API de eventos con AsyncAPI."
+    },
+    {
+      "id": "30",
+      "tema": 23,
+      "enunciado": "¿Qué formato se utiliza para describir API basadas en eventos y mensajería?",
+      "opciones": [
+        "WSDL",
+        "RAML",
+        "OpenAPI",
+        "AsyncAPI"
+      ],
+      "correcta": 3,
+      "explicacion": "**AsyncAPI** describe **API basadas en eventos y mensajería**. OpenAPI y RAML describen API REST, y WSDL describe servicios SOAP."
+    },
+    {
+      "id": "31",
+      "tema": 23,
+      "enunciado": "¿Qué modelo de ciclo de vida es una variante de la cascada que asocia cada fase de definición con su nivel de prueba correspondiente?",
+      "opciones": [
+        "Modelo en V",
+        "Espiral",
+        "Incremental",
+        "RAD"
+      ],
+      "correcta": 0,
+      "explicacion": "El **modelo en V** empareja cada fase de definición con un nivel de prueba (por ejemplo, requisitos del usuario con aceptación), así que **planifica la verificación desde el inicio**, aunque es igual de rígido que la cascada. La espiral destaca por el análisis de riesgos y el incremental por las entregas parciales."
+    },
+    {
+      "id": "32",
+      "tema": 23,
+      "enunciado": "En el modelo de prototipado, ¿cómo se llama el prototipo que se construye solo para aclarar los requisitos con el usuario y después se descarta?",
+      "opciones": [
+        "Evolutivo",
+        "Desechable",
+        "Incremental",
+        "Iterativo"
+      ],
+      "correcta": 1,
+      "explicacion": "El prototipo **desechable** solo sirve para **validar requisitos** y luego se tira. El **evolutivo**, en cambio, se va refinando hasta convertirse en el producto. El riesgo del prototipado es acabar usando como producto un prototipo que no se diseñó para ello."
+    },
+    {
+      "id": "33",
+      "tema": 23,
+      "enunciado": "¿Cuáles son, en orden, las fases de RUP?",
+      "opciones": [
+        "Inicio, elaboración, construcción y transición",
+        "Análisis, diseño, construcción y pruebas",
+        "Inicio, planificación, ejecución y cierre",
+        "Elaboración, inicio, construcción y transición"
+      ],
+      "correcta": 0,
+      "explicacion": "Las fases de RUP son **inicio** (*inception*), **elaboración**, **construcción** y **transición**, cada una con sus iteraciones. Análisis, diseño o pruebas son **disciplinas**, que se trabajan en todas las fases, y la opción c recuerda a las fases de la gestión de proyectos."
+    },
+    {
+      "id": "34",
+      "tema": 23,
+      "enunciado": "En Métrica v3, ¿en qué proceso se estudian las alternativas de solución, su coste-beneficio y sus riesgos para proponer una solución?",
+      "opciones": [
+        "PSI",
+        "ASI",
+        "EVS",
+        "DSI"
+      ],
+      "correcta": 2,
+      "explicacion": "En el **Estudio de Viabilidad del Sistema (EVS)** se analizan las alternativas, su coste-beneficio y los riesgos para obtener la **solución propuesta**. PSI es la planificación de sistemas de información, ASI produce el catálogo de requisitos y los modelos, y DSI el diseño detallado."
+    },
+    {
+      "id": "35",
+      "tema": 23,
+      "enunciado": "En Métrica v3, las pruebas unitarias, de integración y de sistema se ejecutan en el proceso:",
+      "opciones": [
+        "DSI",
+        "CSI",
+        "IAS",
+        "ASI"
+      ],
+      "correcta": 1,
+      "explicacion": "Las pruebas **unitarias, de integración y de sistema** se ejecutan en **CSI** (Construcción del Sistema de Información). Las de implantación y aceptación van en IAS, y el plan de pruebas se especifica en ASI."
+    },
+    {
+      "id": "36",
+      "tema": 23,
+      "enunciado": "En el modelo de madurez CMMI, ¿qué nombre recibe el nivel 4?",
+      "opciones": [
+        "Definido",
+        "Gestionado",
+        "En optimización",
+        "Gestionado cuantitativamente"
+      ],
+      "correcta": 3,
+      "explicacion": "Los niveles de CMMI son: 1 **inicial**, 2 **gestionado**, 3 **definido**, 4 **gestionado cuantitativamente** y 5 **en optimización**. El error típico es confundir el 2 y el 4, que se llaman parecido; el 4 añade la medición cuantitativa."
+    },
+    {
+      "id": "37",
+      "tema": 23,
+      "enunciado": "Según el Manifiesto ágil de 2001, se valora más el software funcionando que:",
+      "opciones": [
+        "Los procesos y herramientas",
+        "La negociación contractual",
+        "La documentación extensiva",
+        "Seguir un plan"
+      ],
+      "correcta": 2,
+      "explicacion": "El manifiesto valora el **software funcionando por encima de la documentación extensiva**. Las otras parejas son individuos e interacciones sobre procesos y herramientas, colaboración con el cliente sobre negociación contractual, y respuesta ante el cambio sobre seguir un plan."
+    },
+    {
+      "id": "38",
+      "tema": 23,
+      "enunciado": "Según la Guía Scrum 2020, ¿cuál es la duración máxima de la Sprint Retrospective en un Sprint de un mes?",
+      "opciones": [
+        "1 hora",
+        "4 horas",
+        "8 horas",
+        "3 horas"
+      ],
+      "correcta": 3,
+      "explicacion": "Para un Sprint de un mes, la **Retrospective dura hasta 3 horas**, la **Review 4 horas** y el **Planning 8 horas**; en Sprints más cortos, los eventos suelen ser más breves. Truco: 8-4-3, de la planificación al cierre."
+    },
+    {
+      "id": "39",
+      "tema": 23,
+      "enunciado": "Según la Guía Scrum 2020, el Scrum Team es:",
+      "opciones": [
+        "Autogestionado y multifuncional, normalmente de 10 personas o menos",
+        "Autoorganizado, con un equipo de desarrollo separado del Product Owner y del Scrum Master",
+        "Dirigido por el Scrum Master, que asigna las tareas",
+        "De 3 a 9 Developers más el Product Owner y el Scrum Master, sin límite total"
+      ],
+      "correcta": 0,
+      "explicacion": "La guía de 2020 define un equipo **autogestionado**, **multifuncional** y pequeño, **normalmente de 10 personas o menos**, sin subequipos ni jerarquías. «Autoorganizado» y el «equipo de desarrollo» son términos de la guía de 2017, y el Scrum Master no asigna tareas: es un líder que sirve."
+    },
+    {
+      "id": "40",
+      "tema": 23,
+      "enunciado": "¿Cuál de estas prácticas NO es propia de la Programación Extrema (XP)?",
+      "opciones": [
+        "Programación en parejas",
+        "Desarrollo guiado por pruebas (TDD)",
+        "Limitar el trabajo en curso de cada columna de un tablero",
+        "Refactorización"
+      ],
+      "correcta": 2,
+      "explicacion": "**Limitar el WIP por columna** es la práctica central de **Kanban**, no de XP. La programación en parejas, el TDD y la refactorización son prácticas de XP (Kent Beck), junto con la integración continua, las entregas pequeñas y el cliente in situ."
+    },
+    {
+      "id": "41",
+      "tema": 23,
+      "enunciado": "¿Qué estrategia de despliegue libera la nueva versión primero a un pequeño porcentaje de usuarios antes de extenderla a todos?",
+      "opciones": [
+        "Canary",
+        "Blue-green",
+        "Rolling",
+        "Feature flags"
+      ],
+      "correcta": 0,
+      "explicacion": "El despliegue **canary** expone la nueva versión a **un porcentaje de usuarios** para vigilar su comportamiento. Blue-green mantiene dos entornos y conmuta entre ellos, rolling actualiza por lotes de servidores y los feature flags activan o desactivan funcionalidades sin desplegar."
+    },
+    {
+      "id": "42",
+      "tema": 23,
+      "enunciado": "¿Dónde se definen los flujos de trabajo de CI/CD de GitHub Actions?",
+      "opciones": [
+        "En el fichero .gitlab-ci.yml",
+        "En ficheros .yml del directorio .github/workflows/",
+        "En el fichero Jenkinsfile",
+        "En el fichero pom.xml"
+      ],
+      "correcta": 1,
+      "explicacion": "GitHub Actions lee los flujos de **.github/workflows/*.yml**. .gitlab-ci.yml es el fichero de **GitLab CI/CD**, el Jenkinsfile es el de Jenkins y pom.xml es el descriptor de construcción de Maven."
+    },
+    {
+      "id": "43",
+      "tema": 23,
+      "enunciado": "La pregunta «¿estamos construyendo el producto correcto?», es decir, el que necesita el usuario, corresponde a la:",
+      "opciones": [
+        "Verificación",
+        "Depuración",
+        "Validación",
+        "Inspección"
+      ],
+      "correcta": 2,
+      "explicacion": "La **validación** comprueba que se construye el **producto correcto** (lo que necesita el usuario), y la **verificación** que se construye **correctamente** (conforme a la especificación). La depuración localiza y corrige defectos, y no es probar."
+    },
+    {
+      "id": "44",
+      "tema": 23,
+      "enunciado": "Un programador se equivoca al escribir una condición; el código queda con una imperfección y, al ejecutarlo, la pantalla muestra un importe incorrecto. Según la terminología de pruebas, ese importe incorrecto observable es:",
+      "opciones": [
+        "Un error",
+        "Un defecto",
+        "Una equivocación",
+        "Un fallo"
+      ],
+      "correcta": 3,
+      "explicacion": "La cadena es **error → defecto → fallo**: el **error** es la acción humana equivocada, el **defecto** la imperfección que queda en el código y el **fallo** el **comportamiento observable incorrecto** al ejecutarlo. «Equivocación» es otro nombre del error."
+    },
+    {
+      "id": "45",
+      "tema": 23,
+      "enunciado": "Un campo admite edades de 18 a 65 años, ambas incluidas. Aplicando el análisis de valores límite, ¿qué valores se prueban como mínimo?",
+      "opciones": [
+        "17, 18, 65 y 66",
+        "18, 40 y 65",
+        "0, 18, 65 y 100",
+        "19 y 64"
+      ],
+      "correcta": 0,
+      "explicacion": "Los valores límite se prueban **en cada frontera y justo fuera de ella**: **17, 18, 65 y 66** (a veces también 19 y 64). Un valor central como 40 es propio de las **particiones de equivalencia** (<18, 18-65 y >65), no de los valores límite."
+    },
+    {
+      "id": "46",
+      "tema": 23,
+      "enunciado": "¿Cuál es la complejidad ciclomática de este método? (todas las condiciones son simples)\nif (a > 0) { x = 1; }\nwhile (i < n) {\n  if (v[i] == 0) { c++; }\n  i++;\n}",
+      "opciones": [
+        "3",
+        "5",
+        "4",
+        "2"
+      ],
+      "correcta": 2,
+      "explicacion": "**V(G) = número de decisiones + 1**. Hay **3 decisiones** (el primer if, el while y el if anidado), así que V(G) = 3 + 1 = **4**. El 3 sale de olvidar sumar 1, y anidar un if no cuenta doble: cada condición simple suma una sola vez."
+    },
+    {
+      "id": "47",
+      "tema": 23,
+      "enunciado": "Las pruebas de aceptación que realizan los usuarios en su propio entorno, fuera del entorno del desarrollador, se denominan:",
+      "opciones": [
+        "Pruebas alfa",
+        "Pruebas de humo",
+        "Pruebas de regresión",
+        "Pruebas beta"
+      ],
+      "correcta": 3,
+      "explicacion": "Las pruebas **beta** las hacen usuarios **en su propio entorno**; las **alfa**, usuarios **en el entorno del desarrollador**. Las de humo comprueban rápido lo básico tras una construcción y las de regresión que un cambio no rompe lo anterior."
+    },
+    {
+      "id": "48",
+      "tema": 23,
+      "enunciado": "¿Qué doble de prueba, además de simular una dependencia, verifica las llamadas que ha recibido?",
+      "opciones": [
+        "Stub",
+        "Mock",
+        "Dummy",
+        "Fake"
+      ],
+      "correcta": 1,
+      "explicacion": "Un **mock verifica las llamadas recibidas** (cuáles, cuántas veces, con qué argumentos). Un **stub** solo devuelve respuestas predefinidas, un dummy se pasa sin usarse y un fake es una implementación simplificada que funciona (por ejemplo, una base de datos en memoria)."
+    },
+    {
+      "id": "49",
+      "tema": 23,
+      "enunciado": "En BDD, los escenarios escritos en Gherkin siguen la estructura:",
+      "opciones": [
+        "Given / When / Then",
+        "Arrange / Act / Assert",
+        "Rojo / Verde / Refactorizar",
+        "Setup / Exercise / Teardown"
+      ],
+      "correcta": 0,
+      "explicacion": "Gherkin usa **Given / When / Then** (Dado / Cuando / Entonces) para escribir escenarios en lenguaje natural, que después ejecuta una herramienta como **Cucumber**. Rojo / Verde / Refactorizar es el ciclo de TDD."
+    },
+    {
+      "id": "50",
+      "tema": 23,
+      "enunciado": "¿Qué hace git reset --soft HEAD~1?",
+      "opciones": [
+        "Elimina el último commit y descarta todos sus cambios",
+        "Deshace el último commit y deja sus cambios en el directorio de trabajo, pero fuera del índice",
+        "Deshace el último commit y conserva sus cambios en el índice y en el directorio de trabajo",
+        "Crea un commit nuevo que invierte el último"
+      ],
+      "correcta": 2,
+      "explicacion": "**--soft** mueve HEAD al commit anterior y **conserva el índice y el directorio de trabajo**, así que los cambios quedan preparados para volver a confirmarlos. La opción a es **--hard** (lo descarta todo), la b es **--mixed** (la opción por defecto) y la d es **git revert**."
+    },
+    {
+      "id": "51",
+      "tema": 23,
+      "enunciado": "Se ejecuta git merge feature y la rama actual no ha avanzado desde que se creó feature. ¿Qué hace Git por defecto?",
+      "opciones": [
+        "Crea un commit de fusión con dos padres",
+        "Genera siempre un conflicto",
+        "Reescribe los commits de feature con hashes nuevos",
+        "Avanza el puntero de la rama actual (fast-forward), sin commit de fusión"
+      ],
+      "correcta": 3,
+      "explicacion": "Si la rama destino no ha avanzado, el merge es un **fast-forward**: Git solo **mueve el puntero** y no crea commit de fusión. Para forzar ese commit se usa **--no-ff**. Reescribir los commits con hashes nuevos es lo que hace rebase."
+    },
+    {
+      "id": "52",
+      "tema": 23,
+      "enunciado": "¿Qué comando de Git guarda temporalmente los cambios sin confirmar para poder cambiar de rama y recuperarlos después?",
+      "opciones": [
+        "git stash",
+        "git restore",
+        "git revert",
+        "git tag"
+      ],
+      "correcta": 0,
+      "explicacion": "**git stash** aparta los cambios sin confirmar y **git stash pop** los recupera. git restore descarta los cambios del directorio de trabajo (se pierden), git revert crea un commit que deshace otro y git tag pone etiquetas."
+    },
+    {
+      "id": "53",
+      "tema": 23,
+      "enunciado": "¿Qué comando de Git hace una búsqueda binaria en el historial para localizar el commit que introdujo un fallo?",
+      "opciones": [
+        "git bisect",
+        "git blame",
+        "git cherry-pick",
+        "git log --graph"
+      ],
+      "correcta": 0,
+      "explicacion": "**git bisect** hace una **búsqueda binaria**: se marcan un commit bueno y uno malo, y Git va partiendo el intervalo hasta dar con el culpable. git blame muestra el autor de cada línea, cherry-pick aplica un commit concreto y log --graph dibuja el historial."
+    },
+    {
+      "id": "54",
+      "tema": 23,
+      "enunciado": "¿Cuál de estos sistemas de control de versiones es distribuido?",
+      "opciones": [
+        "CVS",
+        "Subversion",
+        "Mercurial",
+        "Perforce"
+      ],
+      "correcta": 2,
+      "explicacion": "**Mercurial** es **distribuido**, como Git y Bazaar: cada clon tiene el repositorio completo y se puede trabajar sin conexión. CVS, Subversion y Perforce son **centralizados**: un servidor con el repositorio y clientes con una copia de trabajo."
+    },
+    {
+      "id": "55",
+      "tema": 23,
+      "enunciado": "Durante un git merge surge un conflicto. Una vez editado el fichero para eliminar las marcas <<<<<<<, ======= y >>>>>>>, ¿cómo se completa la fusión?",
+      "opciones": [
+        "Con git push --force",
+        "Con git add del fichero y git commit",
+        "Con git reset --hard",
+        "Con git stash pop"
+      ],
+      "correcta": 1,
+      "explicacion": "Tras resolver el conflicto se marca el fichero como resuelto con **git add** y se completa la fusión con **git commit** (en un rebase sería git rebase --continue). reset --hard descartaría el trabajo y push --force sobrescribiría el remoto."
+    },
+    {
+      "id": "56",
+      "tema": 23,
+      "enunciado": "¿Qué estrategia de ramas utiliza las ramas main, develop, feature/*, release/* y hotfix/*?",
+      "opciones": [
+        "GitHub Flow",
+        "Trunk-based development",
+        "GitLab Flow",
+        "Git Flow"
+      ],
+      "correcta": 3,
+      "explicacion": "**Git Flow** (Vincent Driessen, 2010) usa **main, develop, feature/*, release/* y hotfix/*** y encaja con versiones planificadas. GitHub Flow tiene solo main y ramas cortas con pull request; GitLab Flow añade ramas de entorno; y en trunk-based todos integran a menudo en la rama principal."
+    },
+    {
+      "id": "57",
+      "tema": 23,
+      "enunciado": "En GitLab, ¿cómo se denomina la solicitud para integrar una rama en otra con revisión de código, comentarios y ejecución de CI?",
+      "opciones": [
+        "Merge request",
+        "Pull request",
+        "Fork",
+        "Issue"
+      ],
+      "correcta": 0,
+      "explicacion": "En **GitLab** se llama **merge request**; en GitHub y Bitbucket, **pull request**. Un fork es una copia propia de un repositorio ajeno y una issue es una incidencia (error, tarea o mejora)."
+    },
+    {
+      "id": "58",
+      "tema": 23,
+      "enunciado": "Según el artículo 157 de la Ley 40/2015, antes de desarrollar una nueva aplicación, las Administraciones deben:",
+      "opciones": [
+        "Publicar su código en GitHub",
+        "Licenciarla con la GPL",
+        "Consultar si existen soluciones disponibles para su reutilización",
+        "Obtener autorización previa de la Comisión Europea"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 157 de la Ley 40/2015** obliga a **consultar si ya existen soluciones reutilizables** antes de desarrollar o adquirir una nueva, y a poner a disposición de otras Administraciones las aplicaciones propias. El art. 158 regula la transferencia de tecnología (directorios de aplicaciones, como el CTT)."
+    },
+    {
+      "id": "59",
+      "tema": 23,
+      "enunciado": "¿Qué licencia de código abierto elaboró la Comisión Europea?",
+      "opciones": [
+        "MIT",
+        "EUPL",
+        "Apache 2.0",
+        "GPL"
+      ],
+      "correcta": 1,
+      "explicacion": "La **EUPL** (*European Union Public Licence*) es la licencia de la **Comisión Europea**. La GPL es una licencia *copyleft* de la Free Software Foundation, y Apache 2.0 y MIT son licencias permisivas."
+    },
+    {
+      "id": "60",
+      "tema": 23,
+      "enunciado": "¿Qué es un fork en una plataforma de desarrollo colaborativo como GitHub?",
+      "opciones": [
+        "Una rama protegida que exige revisión antes de integrar",
+        "Una etiqueta anotada que marca una versión",
+        "Un commit que combina todos los de una rama",
+        "Una copia propia de un repositorio ajeno para proponer cambios sin tener permiso de escritura"
+      ],
+      "correcta": 3,
+      "explicacion": "Un **fork** es una **copia propia de un repositorio ajeno** en la plataforma. Permite trabajar y luego abrir un pull request al original **sin permiso de escritura** en él. El flujo típico es fork → clone → rama → commits → push al fork → pull request. La opción c describe un *squash merge*."
+    }
   ]
 }

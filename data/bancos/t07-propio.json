@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 07 · test",
+  "fuente": "propio",
+  "tema": 7,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 7. Protección de datos personales y derechos digitales»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 7,
+      "enunciado": "El Reglamento (UE) 2016/679 es aplicable desde:",
+      "opciones": [
+        "El 27 de abril de 2016",
+        "El 7 de diciembre de 2018",
+        "El 25 de mayo de 2018",
+        "El 4 de mayo de 2016"
+      ],
+      "correcta": 2,
+      "explicacion": "Según el **art. 99 RGPD**, el Reglamento es **aplicable desde el 25-5-2018**, aunque entró en vigor a los 20 días de su publicación. El 27-4-2016 es su fecha de aprobación; el 4-5-2016, la de publicación en el DOUE, y el 7-12-2018, la de entrada en vigor de la LOPDGDD."
+    },
+    {
+      "id": "02",
+      "tema": 7,
+      "enunciado": "En España, el menor puede consentir por sí mismo el tratamiento de sus datos a partir de los:",
+      "opciones": [
+        "14 años",
+        "13 años",
+        "16 años",
+        "18 años"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 7 LOPDGDD** fija la edad en **14 años**; por debajo consiente quien ejerce la patria potestad o tutela. Los 16 años son la regla general del art. 8 RGPD, y 13 es el mínimo por debajo del cual ningún Estado puede bajar."
+    },
+    {
+      "id": "03",
+      "tema": 7,
+      "enunciado": "El responsable debe notificar una violación de seguridad a la autoridad de control, si es posible, en un plazo de:",
+      "opciones": [
+        "24 horas",
+        "72 horas",
+        "1 mes",
+        "10 días hábiles"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 33.1 RGPD** exige notificarla sin dilación indebida y, si es posible, en las **72 horas** siguientes a tener constancia de ella. No hace falta si es improbable que suponga un riesgo. 1 mes es el plazo para responder a los derechos; 24 horas es el acuse de recibo de la LSSI."
+    },
+    {
+      "id": "04",
+      "tema": 7,
+      "enunciado": "El plazo general para responder a una solicitud de ejercicio de derechos es:",
+      "opciones": [
+        "10 días, prorrogable otros 10",
+        "15 días hábiles",
+        "3 meses",
+        "1 mes, prorrogable 2 meses más"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 12.3 RGPD** fija **1 mes** desde la recepción, **prorrogable 2 meses** más si la solicitud es compleja o hay muchas; la prórroga se comunica dentro del primer mes. Los plazos en días eran los de la antigua normativa ARCO."
+    },
+    {
+      "id": "05",
+      "tema": 7,
+      "enunciado": "¿Cuál NO es un principio del art. 5.1 RGPD?",
+      "opciones": [
+        "Minimización de datos",
+        "Exactitud",
+        "Proporcionalidad",
+        "Limitación del plazo de conservación"
+      ],
+      "correcta": 2,
+      "explicacion": "El art. 5.1 recoge seis principios: licitud, lealtad y transparencia; limitación de la finalidad; minimización; exactitud; limitación del plazo de conservación, e integridad y confidencialidad. La **proporcionalidad** no figura como tal (la idea está dentro de la minimización). El art. 5.2 añade la responsabilidad proactiva."
+    },
+    {
+      "id": "06",
+      "tema": 7,
+      "enunciado": "El art. 20 RGPD regula el derecho:",
+      "opciones": [
+        "A la portabilidad de los datos",
+        "De oposición",
+        "A la limitación del tratamiento",
+        "De acceso"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 20 RGPD** regula la **portabilidad**. Secuencia: 15 acceso, 16 rectificación, 17 supresión, 18 limitación, 19 notificación a destinatarios, 20 portabilidad, 21 oposición y 22 decisiones automatizadas."
+    },
+    {
+      "id": "07",
+      "tema": 7,
+      "enunciado": "La base jurídica del interés legítimo (art. 6.1.f) NO puede invocarse por:",
+      "opciones": [
+        "Empresas privadas",
+        "Las autoridades públicas en el ejercicio de sus funciones",
+        "Asociaciones sin ánimo de lucro",
+        "Corresponsables del tratamiento"
+      ],
+      "correcta": 1,
+      "explicacion": "El último párrafo del **art. 6.1 RGPD** excluye el interés legítimo para los tratamientos de las **autoridades públicas en el ejercicio de sus funciones**. Las Administraciones suelen basarse en la obligación legal (letra c) o en la misión de interés público (letra e). Empresas, asociaciones y corresponsables sí pueden invocarlo."
+    },
+    {
+      "id": "08",
+      "tema": 7,
+      "enunciado": "La multa máxima por vulnerar los principios básicos del tratamiento es de:",
+      "opciones": [
+        "10 M€ o el 2 % del volumen de negocio, la menor",
+        "600.000 €",
+        "20 M€ o el 4 %, la menor",
+        "20 M€ o el 4 % del volumen de negocio, la de mayor cuantía"
+      ],
+      "correcta": 3,
+      "explicacion": "Vulnerar los principios (arts. 5, 6, 7 y 9) se sanciona según el **art. 83.5 RGPD**: hasta **20 M€ o el 4 %** del volumen de negocio anual global, **la de mayor cuantía**. Los 10 M€ o 2 % son del art. 83.4 (obligaciones del responsable y encargado). La trampa es «la menor»."
+    },
+    {
+      "id": "09",
+      "tema": 7,
+      "enunciado": "Cuando una Administración pública comete una infracción de la LOPDGDD, la autoridad de protección de datos:",
+      "opciones": [
+        "Impone una multa reducida a la mitad",
+        "Archiva el procedimiento",
+        "Dicta resolución con apercibimiento, sin multa",
+        "Remite el caso al Tribunal de Cuentas"
+      ],
+      "correcta": 2,
+      "explicacion": "España usó el margen del art. 83.7 RGPD: según el **art. 77 LOPDGDD**, a las Administraciones se les dicta resolución con **apercibimiento, sin multa**. Además se ordenan medidas para corregir la conducta y pueden proponerse actuaciones disciplinarias. No se archiva ni hay multa reducida."
+    },
+    {
+      "id": "10",
+      "tema": 7,
+      "enunciado": "Las infracciones graves de la LOPDGDD prescriben a los:",
+      "opciones": [
+        "2 años",
+        "3 años",
+        "1 año",
+        "6 meses"
+      ],
+      "correcta": 0,
+      "explicacion": "Según el **art. 73 LOPDGDD**, las graves prescriben a los **2 años**. Las muy graves, a los 3 (art. 72), y las leves, al año (art. 74). Truco: 3 / 2 / 1, de más a menos grave."
+    },
+    {
+      "id": "11",
+      "tema": 7,
+      "enunciado": "La Presidencia de la AEPD tiene un mandato de:",
+      "opciones": [
+        "4 años no renovables",
+        "5 años, renovable por otro igual",
+        "6 años",
+        "Indefinido"
+      ],
+      "correcta": 1,
+      "explicacion": "Según el **art. 48 LOPDGDD**, la Presidencia y el Adjunto tienen un mandato de **5 años, renovable una vez** por otro periodo igual. No confundir con la Autoridad Independiente para la Igualdad de Trato (tema 5): 5 años **no** renovables."
+    },
+    {
+      "id": "12",
+      "tema": 7,
+      "enunciado": "Están exentas en principio de llevar el registro de actividades de tratamiento las organizaciones con:",
+      "opciones": [
+        "Menos de 50 empleados",
+        "Menos de 500 empleados",
+        "Volumen de negocio inferior a 2 M€",
+        "Menos de 250 empleados"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 30.5 RGPD** exime a las organizaciones de **menos de 250 empleados**, salvo que el tratamiento entrañe riesgo, no sea ocasional o incluya categorías especiales o datos penales. Con esas salvedades, en la práctica muchas pymes sí deben llevarlo."
+    },
+    {
+      "id": "13",
+      "tema": 7,
+      "enunciado": "Si el afectado presenta una reclamación ante el delegado de protección de datos, este debe responder en un plazo máximo de:",
+      "opciones": [
+        "1 mes",
+        "15 días",
+        "2 meses",
+        "3 meses"
+      ],
+      "correcta": 2,
+      "explicacion": "Según el **art. 37 LOPDGDD**, el DPD responde en **2 meses**. Si es la AEPD quien le remite la reclamación, el plazo es de 1 mes, de ahí el distractor."
+    },
+    {
+      "id": "14",
+      "tema": 7,
+      "enunciado": "El procedimiento sancionador de la AEPD tiene una duración máxima de:",
+      "opciones": [
+        "9 meses",
+        "6 meses",
+        "12 meses",
+        "3 meses"
+      ],
+      "correcta": 2,
+      "explicacion": "Tras la reforma de la **Ley 11/2023**, el **art. 64.2 LOPDGDD** da a la AEPD **12 meses** desde el acuerdo de inicio para resolver el procedimiento sancionador. Los 9 meses eran la redacción original, la que recoge el doc y muchos temarios antiguos. 6 meses es el plazo del procedimiento por falta de atención de derechos, y 3 meses el de admisión de la reclamación."
+    },
+    {
+      "id": "15",
+      "tema": 7,
+      "enunciado": "Las imágenes de videovigilancia deben suprimirse, como regla general, en el plazo máximo de:",
+      "opciones": [
+        "72 horas",
+        "1 mes",
+        "15 días",
+        "3 meses"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 22 LOPDGDD** obliga a suprimir las imágenes en **1 mes** desde su captación, salvo que deban conservarse para acreditar actos contra personas o bienes. Las 72 horas son el plazo para entregarlas a la autoridad en ese caso."
+    },
+    {
+      "id": "16",
+      "tema": 7,
+      "enunciado": "El derecho al olvido en búsquedas de Internet se regula en el artículo de la LOPDGDD:",
+      "opciones": [
+        "88",
+        "94",
+        "96",
+        "93"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 93** regula el olvido en **buscadores**; el 94, el olvido en redes sociales. El 88 es la desconexión digital y el 96, el testamento digital. Truco: 93 buscadores, 94 redes, 95 portabilidad en redes."
+    },
+    {
+      "id": "17",
+      "tema": 7,
+      "enunciado": "El derecho a la desconexión digital en el ámbito laboral se recoge en el artículo de la LOPDGDD:",
+      "opciones": [
+        "87",
+        "90",
+        "88",
+        "91"
+      ],
+      "correcta": 2,
+      "explicacion": "La **desconexión digital** está en el **art. 88**. El 87 es la intimidad en el uso de dispositivos digitales, el 90 la geolocalización y el 91 los derechos digitales en la negociación colectiva."
+    },
+    {
+      "id": "18",
+      "tema": 7,
+      "enunciado": "Las decisiones de adecuación para transferencias internacionales las adopta:",
+      "opciones": [
+        "La Comisión Europea",
+        "El Comité Europeo de Protección de Datos",
+        "Cada autoridad nacional",
+        "El Consejo de la UE"
+      ],
+      "correcta": 0,
+      "explicacion": "Según el **art. 45 RGPD**, la **Comisión Europea** decide si un tercer país garantiza un nivel de protección adecuado; con esa decisión la transferencia no necesita autorización. El CEPD emite dictámenes, pero no adopta estas decisiones."
+    },
+    {
+      "id": "19",
+      "tema": 7,
+      "enunciado": "El Comité Europeo de Protección de Datos está compuesto por:",
+      "opciones": [
+        "Los comisarios europeos competentes",
+        "El director de una autoridad de control de cada Estado y el Supervisor Europeo de Protección de Datos",
+        "Un juez por Estado miembro",
+        "Los ministros de Justicia de la UE"
+      ],
+      "correcta": 1,
+      "explicacion": "Según el **art. 68 RGPD**, el CEPD lo forman el **director de una autoridad de control de cada Estado** y el **Supervisor Europeo de Protección de Datos**. La Comisión participa, pero sin voto. Sustituye al antiguo Grupo del artículo 29."
+    },
+    {
+      "id": "20",
+      "tema": 7,
+      "enunciado": "La LO 3/2018 derogó:",
+      "opciones": [
+        "El Reglamento (UE) 2016/679",
+        "La Ley 34/2002",
+        "La Directiva 95/46/CE",
+        "La LO 15/1999"
+      ],
+      "correcta": 3,
+      "explicacion": "La disposición derogatoria única de la LOPDGDD deroga la **LO 15/1999** (y el RDL 5/2018). La Directiva 95/46/CE la derogó el propio RGPD (art. 94), y una ley española no puede derogar un reglamento europeo."
+    },
+    {
+      "id": "21",
+      "tema": 7,
+      "enunciado": "La protección de datos personales es un derecho fundamental vinculado al artículo de la Constitución que manda a la ley limitar el uso de la informática. ¿Cuál es?",
+      "opciones": [
+        "Art. 18.4",
+        "Art. 18.3",
+        "Art. 20.1.d",
+        "Art. 105.b"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el **art. 18.4 CE**. El 18.3 garantiza el secreto de las comunicaciones; el 20.1.d, el derecho a comunicar y recibir información veraz, y el 105.b, el acceso de los ciudadanos a archivos y registros administrativos."
+    },
+    {
+      "id": "22",
+      "tema": 7,
+      "enunciado": "La LOPDGDD (DF 14.ª) reconoce la intimidad y la desconexión digital de los empleados públicos introduciendo en el TREBEP:",
+      "opciones": [
+        "Un nuevo art. 20 bis",
+        "Un nuevo apartado en el art. 53, sobre principios éticos",
+        "Una nueva letra j bis) en el art. 14",
+        "Un nuevo apartado en el art. 95, sobre faltas muy graves"
+      ],
+      "correcta": 2,
+      "explicacion": "La **DF 14.ª** añade la **letra j bis) al art. 14 TREBEP**, el de los derechos individuales de los empleados públicos. El **art. 20 bis** es el que la DF 13.ª añade al **Estatuto de los Trabajadores**, de ahí la confusión."
+    },
+    {
+      "id": "23",
+      "tema": 7,
+      "enunciado": "Según el RGPD, los datos seudonimizados:",
+      "opciones": [
+        "Son datos anónimos y quedan fuera del RGPD",
+        "Siguen siendo datos personales",
+        "Solo son datos personales si no están cifrados",
+        "Son siempre categorías especiales de datos"
+      ],
+      "correcta": 1,
+      "explicacion": "La **seudonimización** impide atribuir los datos a una persona sin información adicional que se guarda aparte, pero esa información existe. Por eso los datos seudonimizados **siguen siendo datos personales**; solo los **anónimos** quedan fuera del RGPD."
+    },
+    {
+      "id": "24",
+      "tema": 7,
+      "enunciado": "Según el art. 4.7 RGPD, el responsable del tratamiento es quien:",
+      "opciones": [
+        "Trata datos personales por cuenta de otro",
+        "Recibe la comunicación de los datos",
+        "Supervisa el cumplimiento de la normativa dentro de la organización",
+        "Determina los fines y medios del tratamiento"
+      ],
+      "correcta": 3,
+      "explicacion": "El **responsable** es quien **determina los fines y medios** del tratamiento, solo o junto con otros. Quien trata datos por cuenta de otro es el **encargado** (art. 4.8); quien los recibe, el destinatario, y quien supervisa el cumplimiento, el DPD."
+    },
+    {
+      "id": "25",
+      "tema": 7,
+      "enunciado": "El formulario de registro de una web incluye una casilla ya marcada que dice «Acepto el tratamiento de mis datos para recibir publicidad». Según el RGPD:",
+      "opciones": [
+        "El consentimiento es válido si la web informa de su política de privacidad",
+        "El consentimiento es válido si el usuario no desmarca la casilla en 30 días",
+        "No hay consentimiento válido: hace falta una declaración o una clara acción afirmativa",
+        "El consentimiento es válido solo para mayores de 14 años"
+      ],
+      "correcta": 2,
+      "explicacion": "El consentimiento debe ser **libre, específico, informado e inequívoco** y darse por declaración o **clara acción afirmativa** (art. 4.11). El considerando 32 aclara que las **casillas ya marcadas**, el silencio o la inacción **no** son consentimiento, informe o no la web y sea cual sea la edad."
+    },
+    {
+      "id": "26",
+      "tema": 7,
+      "enunciado": "El principio según el cual los datos deben recogerse con fines determinados, explícitos y legítimos, y no tratarse después de manera incompatible con ellos, es el de:",
+      "opciones": [
+        "Limitación de la finalidad",
+        "Minimización de datos",
+        "Exactitud",
+        "Licitud, lealtad y transparencia"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la **limitación de la finalidad** (art. 5.1.b). La minimización se refiere a la cantidad de datos (solo los adecuados, pertinentes y necesarios); la exactitud, a que estén actualizados, y la licitud, a que haya una base jurídica y un tratamiento claro."
+    },
+    {
+      "id": "27",
+      "tema": 7,
+      "enunciado": "El art. 5.2 RGPD, según el cual el responsable es responsable del cumplimiento de los principios y debe ser capaz de demostrarlo, recoge el principio de:",
+      "opciones": [
+        "Integridad y confidencialidad",
+        "Transparencia",
+        "Protección de datos desde el diseño",
+        "Responsabilidad proactiva"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la **responsabilidad proactiva** (accountability): no basta con cumplir, hay que **poder demostrarlo**. La integridad y confidencialidad (5.1.f) es la seguridad, y la protección desde el diseño es una obligación del art. 25, no un principio del art. 5."
+    },
+    {
+      "id": "28",
+      "tema": 7,
+      "enunciado": "Según el art. 3 LOPDGDD, los familiares y herederos de una persona fallecida:",
+      "opciones": [
+        "No pueden acceder en ningún caso a sus datos personales",
+        "Pueden pedir el acceso, la rectificación o la supresión de sus datos, salvo que el fallecido lo prohibiera expresamente o lo prohíba una ley",
+        "Solo pueden acceder a sus datos con autorización judicial",
+        "Solo pueden actuar a través del albacea testamentario"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 3 LOPDGDD** permite a familiares, allegados y herederos pedir **acceso, rectificación o supresión**, **salvo prohibición expresa** del fallecido o de la ley. No hace falta autorización judicial, y el albacea es una posibilidad más, no la única vía."
+    },
+    {
+      "id": "29",
+      "tema": 7,
+      "enunciado": "Una tienda en línea trata la dirección postal de un cliente para entregarle el pedido que acaba de comprar. ¿Cuál es la base jurídica más adecuada según el art. 6.1 RGPD?",
+      "opciones": [
+        "El consentimiento del interesado",
+        "La ejecución de un contrato",
+        "El interés legítimo del responsable",
+        "El cumplimiento de una obligación legal"
+      ],
+      "correcta": 1,
+      "explicacion": "El tratamiento es necesario para **ejecutar el contrato** de compraventa (art. 6.1.b), así que no hace falta pedir consentimiento. El interés legítimo es una base residual, y ninguna ley obliga a la tienda a tratar ese dato para entregar el pedido."
+    },
+    {
+      "id": "30",
+      "tema": 7,
+      "enunciado": "Según el art. 7.3 RGPD, si el interesado retira su consentimiento:",
+      "opciones": [
+        "Los tratamientos realizados antes se vuelven ilícitos",
+        "Solo puede retirarlo por escrito y alegando una causa",
+        "La retirada no afecta a la licitud del tratamiento basado en el consentimiento previo",
+        "La retirada solo produce efectos al cabo de un mes"
+      ],
+      "correcta": 2,
+      "explicacion": "El consentimiento puede **retirarse en cualquier momento**, y debe ser **tan fácil retirarlo como darlo**. La retirada mira al futuro: **no afecta a la licitud** de lo tratado antes. No exige forma escrita ni causa, ni tiene un plazo de espera."
+    },
+    {
+      "id": "31",
+      "tema": 7,
+      "enunciado": "El art. 8.1 RGPD fija en 16 años la edad para que un menor consienta por sí mismo en los servicios de la sociedad de la información, pero permite a los Estados fijar una edad inferior siempre que no baje de:",
+      "opciones": [
+        "13 años",
+        "12 años",
+        "14 años",
+        "15 años"
+      ],
+      "correcta": 0,
+      "explicacion": "El suelo es de **13 años**. España no ha llegado a ese mínimo: el art. 7 LOPDGDD fija **14 años**. Mientras no se apruebe el proyecto de ley de menores en entornos digitales, esa edad sigue siendo la vigente."
+    },
+    {
+      "id": "32",
+      "tema": 7,
+      "enunciado": "¿Cuál de los siguientes datos NO es una categoría especial de datos según el art. 9 RGPD?",
+      "opciones": [
+        "Los datos genéticos",
+        "La afiliación sindical",
+        "Los datos relativos a la salud",
+        "Los datos sobre la solvencia económica"
+      ],
+      "correcta": 3,
+      "explicacion": "El art. 9 incluye origen étnico o racial, opiniones políticas, convicciones religiosas o filosóficas, **afiliación sindical**, datos **genéticos**, biométricos para identificar, de **salud** y de vida u orientación sexual. Los datos **económicos o de solvencia** son datos personales, pero no categorías especiales."
+    },
+    {
+      "id": "33",
+      "tema": 7,
+      "enunciado": "Según el considerando 51 RGPD, una fotografía de una persona:",
+      "opciones": [
+        "Es siempre un dato biométrico",
+        "No es nunca un dato personal",
+        "Solo es dato biométrico si se trata con medios técnicos específicos que permitan su identificación unívoca",
+        "Es categoría especial siempre que muestre la cara"
+      ],
+      "correcta": 2,
+      "explicacion": "Una fotografía es un **dato personal** si identifica a alguien, pero solo es **dato biométrico** (y categoría especial) cuando se trata con **medios técnicos específicos** que permiten identificar de forma unívoca, como el reconocimiento facial. Una foto normal en un expediente no es categoría especial."
+    },
+    {
+      "id": "34",
+      "tema": 7,
+      "enunciado": "Según el art. 12.5 RGPD, ante solicitudes manifiestamente infundadas o excesivas, especialmente por su carácter repetitivo, el responsable puede:",
+      "opciones": [
+        "Cobrar el coste íntegro de su gestión",
+        "Cobrar un canon razonable o negarse a actuar, y debe demostrar ese carácter",
+        "Archivarlas sin informar al interesado",
+        "Remitirlas a la autoridad de control para que decida"
+      ],
+      "correcta": 1,
+      "explicacion": "La regla es la **gratuidad**, pero ante solicitudes infundadas o excesivas cabe un **canon razonable** (no el coste íntegro) o la negativa a actuar. La **carga de la prueba** es del responsable. Si no atiende la solicitud, debe explicar los motivos e informar de que se puede reclamar (art. 12.4)."
+    },
+    {
+      "id": "35",
+      "tema": 7,
+      "enunciado": "Según el art. 13.3 LOPDGDD, el ejercicio del derecho de acceso puede considerarse repetitivo, salvo causa legítima, si se ejerce más de una vez en el plazo de:",
+      "opciones": [
+        "1 mes",
+        "3 meses",
+        "12 meses",
+        "6 meses"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 13.3 LOPDGDD** permite considerar repetitivo el acceso pedido **más de una vez en 6 meses**, salvo causa legítima. Eso abre la puerta a cobrar un canon o negarse (art. 12.5 RGPD)."
+    },
+    {
+      "id": "36",
+      "tema": 7,
+      "enunciado": "Cuando los datos personales no se han obtenido del propio interesado, la información que debe facilitarle el responsable se regula en el artículo del RGPD:",
+      "opciones": [
+        "14",
+        "13",
+        "15",
+        "12"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 14** se aplica cuando los datos vienen de **otra fuente**; el **art. 13**, cuando se recogen del propio interesado. El 15 es el derecho de acceso y el 12 contiene las reglas comunes de transparencia y ejercicio de derechos."
+    },
+    {
+      "id": "37",
+      "tema": 7,
+      "enunciado": "Un interesado impugna la exactitud de sus datos. Mientras el responsable comprueba si son exactos, el interesado puede pedir:",
+      "opciones": [
+        "La portabilidad de los datos",
+        "La supresión inmediata de los datos",
+        "La limitación del tratamiento",
+        "La oposición por mercadotecnia directa"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 18.1.a RGPD** permite pedir la **limitación del tratamiento** mientras se verifica la exactitud: los datos se conservan, pero no se tratan. La supresión no procede solo por discutir la exactitud, y portabilidad y oposición responden a otros supuestos."
+    },
+    {
+      "id": "38",
+      "tema": 7,
+      "enunciado": "Según el art. 20 RGPD, el derecho a la portabilidad solo procede cuando el tratamiento:",
+      "opciones": [
+        "Se basa en cualquier base jurídica del art. 6",
+        "Se basa en el consentimiento o en un contrato y se efectúa por medios automatizados",
+        "Se realiza en papel",
+        "Se basa en una misión de interés público"
+      ],
+      "correcta": 1,
+      "explicacion": "La portabilidad exige dos condiciones: base de **consentimiento o contrato** y tratamiento **automatizado**. Los datos se entregan en formato estructurado, de uso común y lectura mecánica. Por eso no cabe frente a tratamientos de interés público, como los de muchas Administraciones."
+    },
+    {
+      "id": "39",
+      "tema": 7,
+      "enunciado": "Si el interesado se opone al tratamiento de sus datos con fines de mercadotecnia directa (art. 21 RGPD):",
+      "opciones": [
+        "Los datos dejarán de tratarse para esos fines, sin que el responsable pueda alegar motivos legítimos",
+        "El responsable puede seguir si acredita un interés legítimo prevalente",
+        "El interesado debe motivar su oposición en su situación particular",
+        "La oposición solo surte efectos a los 6 meses"
+      ],
+      "correcta": 0,
+      "explicacion": "En la **mercadotecnia directa** la oposición es **absoluta**: el responsable debe dejar de tratar los datos para esos fines. En los tratamientos basados en interés público o interés legítimo, en cambio, el interesado alega su situación particular y el responsable puede acreditar motivos legítimos imperiosos."
+    },
+    {
+      "id": "40",
+      "tema": 7,
+      "enunciado": "Según el art. 22 RGPD, NO es una excepción al derecho a no ser objeto de decisiones basadas únicamente en tratamiento automatizado:",
+      "opciones": [
+        "Que la decisión sea necesaria para celebrar o ejecutar un contrato",
+        "Que esté autorizada por el Derecho de la Unión o del Estado miembro",
+        "Que se base en el consentimiento explícito del interesado",
+        "Que se base en el interés legítimo del responsable"
+      ],
+      "correcta": 3,
+      "explicacion": "Las excepciones del art. 22 son tres: **contrato**, **ley** y **consentimiento explícito**. El **interés legítimo** no permite someter a alguien a decisiones totalmente automatizadas con efectos jurídicos o significativos."
+    },
+    {
+      "id": "41",
+      "tema": 7,
+      "enunciado": "Según el art. 26 RGPD, cuando hay corresponsables del tratamiento, el interesado puede ejercer sus derechos:",
+      "opciones": [
+        "Frente al corresponsable que figure en primer lugar en su acuerdo",
+        "Frente a cualquiera de ellos",
+        "Solo frente al que tenga el establecimiento principal",
+        "Solo ante la autoridad de control"
+      ],
+      "correcta": 1,
+      "explicacion": "Aunque los corresponsables repartan sus responsabilidades en un acuerdo transparente, el interesado puede ejercer sus derechos **frente a cualquiera de ellos**. El acuerdo interno no le afecta."
+    },
+    {
+      "id": "42",
+      "tema": 7,
+      "enunciado": "Según el art. 28 RGPD, el tratamiento por un encargado se rige por:",
+      "opciones": [
+        "Un acuerdo verbal entre las partes",
+        "Una autorización previa de la autoridad de control",
+        "Un contrato u otro acto jurídico, por escrito",
+        "La inscripción en un registro público de encargados"
+      ],
+      "correcta": 2,
+      "explicacion": "El encargado debe ofrecer garantías suficientes y actuar mediante **contrato u otro acto jurídico** que conste **por escrito** (también en formato electrónico). No hace falta autorización de la autoridad ni existe un registro público de encargados."
+    },
+    {
+      "id": "43",
+      "tema": 7,
+      "enunciado": "Una clínica con 40 empleados trata de forma habitual datos de salud de sus pacientes. Según el art. 30.5 RGPD, respecto del registro de actividades de tratamiento:",
+      "opciones": [
+        "Debe llevarlo, porque trata categorías especiales y el tratamiento no es ocasional",
+        "Está exenta por tener menos de 250 empleados",
+        "Solo debe llevarlo si se lo pide la autoridad de control",
+        "Solo debe llevarlo si ha designado un DPD"
+      ],
+      "correcta": 0,
+      "explicacion": "La exención de las organizaciones de menos de 250 empleados **no se aplica** si el tratamiento **no es ocasional** o incluye **categorías especiales**, como los datos de salud. La clínica cumple las dos salvedades, así que debe llevar el registro."
+    },
+    {
+      "id": "44",
+      "tema": 7,
+      "enunciado": "Una empresa pierde un portátil con datos personales cifrados con un algoritmo robusto, y la clave no se ha visto comprometida. Según el art. 34 RGPD, la comunicación de la brecha a los interesados:",
+      "opciones": [
+        "Es obligatoria en 72 horas",
+        "Es obligatoria en el plazo de 1 mes",
+        "Se puede sustituir por una denuncia ante la policía",
+        "No es necesaria, porque los datos son ininteligibles para quien acceda a ellos"
+      ],
+      "correcta": 3,
+      "explicacion": "El art. 34 exige comunicar la brecha al interesado cuando suponga **alto riesgo**, pero no hace falta si los datos son **ininteligibles** (por ejemplo, **cifrados**), si el riesgo ya se eliminó o si sería un esfuerzo desproporcionado. Las 72 horas son para notificar a la **autoridad de control** (art. 33), no a los interesados."
+    },
+    {
+      "id": "45",
+      "tema": 7,
+      "enunciado": "¿En cuál de estos casos exige siempre el art. 35 RGPD una evaluación de impacto relativa a la protección de datos?",
+      "opciones": [
+        "La gestión de las nóminas de una pequeña empresa",
+        "La agenda de contactos profesionales de un despacho",
+        "La observación sistemática a gran escala de una zona de acceso público",
+        "El envío de un boletín a los suscriptores de una web"
+      ],
+      "correcta": 2,
+      "explicacion": "El art. 35.3 exige siempre la EIPD en tres casos: perfiles o decisiones automatizadas con efectos jurídicos, tratamiento **a gran escala** de categorías especiales o datos penales, y **observación sistemática a gran escala de zonas de acceso público** (por ejemplo, videovigilancia masiva). Las otras opciones son tratamientos de bajo riesgo."
+    },
+    {
+      "id": "46",
+      "tema": 7,
+      "enunciado": "Si la evaluación de impacto muestra que el tratamiento entraña un alto riesgo que el responsable no puede mitigar, el art. 36 RGPD le obliga a:",
+      "opciones": [
+        "Consultar previamente a la autoridad de control",
+        "Designar un delegado de protección de datos",
+        "Comunicarlo a todos los interesados",
+        "Pedir una decisión de adecuación a la Comisión"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la **consulta previa** del art. 36: antes de empezar el tratamiento, el responsable consulta a la **autoridad de control**. Designar un DPD o comunicar a los interesados responden a otras obligaciones, y la decisión de adecuación es para transferencias internacionales."
+    },
+    {
+      "id": "47",
+      "tema": 7,
+      "enunciado": "Según el art. 34.1 LOPDGDD, ¿cuál de estas entidades está obligada a designar un delegado de protección de datos?",
+      "opciones": [
+        "Una comunidad de propietarios",
+        "Un centro docente",
+        "Un profesional autónomo sin empleados",
+        "Un pequeño comercio minorista"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 34.1 LOPDGDD** amplía la lista del RGPD con, entre otros, colegios profesionales, **centros docentes y universidades**, entidades de crédito y aseguradoras, centros sanitarios, operadores de juego en línea y empresas de seguridad privada. Comunidades de propietarios, autónomos y pequeños comercios no figuran."
+    },
+    {
+      "id": "48",
+      "tema": 7,
+      "enunciado": "Según el art. 38.3 RGPD, el delegado de protección de datos:",
+      "opciones": [
+        "Recibe instrucciones del responsable sobre cómo desempeñar sus funciones",
+        "Puede ser destituido libremente por el responsable",
+        "Rinde cuentas a su superior jerárquico inmediato",
+        "No puede ser destituido ni sancionado por desempeñar sus funciones, y rinde cuentas al más alto nivel jerárquico"
+      ],
+      "correcta": 3,
+      "explicacion": "La **independencia** del DPD significa que **no recibe instrucciones**, **no puede ser destituido ni sancionado** por desempeñar sus funciones y rinde cuentas al **más alto nivel jerárquico**. La LOPDGDD (art. 36) añade que, si es persona física de la organización, solo puede ser removido por dolo o negligencia grave."
+    },
+    {
+      "id": "49",
+      "tema": 7,
+      "enunciado": "Según el art. 42 RGPD, las certificaciones, sellos y marcas de protección de datos:",
+      "opciones": [
+        "Son obligatorias y duran 5 años",
+        "Son voluntarias y no caducan",
+        "Son voluntarias y tienen una validez máxima de 3 años",
+        "Son obligatorias para las Administraciones y duran 2 años"
+      ],
+      "correcta": 2,
+      "explicacion": "Las certificaciones son **voluntarias** y tienen una **validez máxima de 3 años**, renovable si se siguen cumpliendo los requisitos. Ayudan a demostrar el cumplimiento, pero no lo sustituyen."
+    },
+    {
+      "id": "50",
+      "tema": 7,
+      "enunciado": "Según el art. 47 RGPD, las normas corporativas vinculantes que permiten transferencias internacionales dentro de un grupo empresarial las aprueba:",
+      "opciones": [
+        "La Comisión Europea",
+        "La autoridad de control competente",
+        "El Comité Europeo de Protección de Datos",
+        "El Consejo de la Unión Europea"
+      ],
+      "correcta": 1,
+      "explicacion": "Las **normas corporativas vinculantes** las aprueba la **autoridad de control competente**, dentro del mecanismo de coherencia. La Comisión Europea adopta las decisiones de adecuación (art. 45) y las cláusulas tipo; el CEPD emite dictámenes."
+    },
+    {
+      "id": "51",
+      "tema": 7,
+      "enunciado": "En un tratamiento transfronterizo, el mecanismo de ventanilla única del art. 56 RGPD convierte en autoridad principal a:",
+      "opciones": [
+        "El Comité Europeo de Protección de Datos",
+        "La autoridad del Estado de residencia del reclamante",
+        "El Supervisor Europeo de Protección de Datos",
+        "La autoridad de control del establecimiento principal del responsable"
+      ],
+      "correcta": 3,
+      "explicacion": "La **autoridad principal** es la del **establecimiento principal** del responsable o encargado, y es su único interlocutor. El interesado puede reclamar ante la autoridad de su residencia (art. 77), pero esa autoridad coopera con la principal. El CEPD resuelve conflictos entre autoridades."
+    },
+    {
+      "id": "52",
+      "tema": 7,
+      "enunciado": "Según el art. 44 LOPDGDD, la AEPD se relaciona con el Gobierno a través del:",
+      "opciones": [
+        "Ministerio de Justicia",
+        "Ministerio del Interior",
+        "Ministerio para la Transformación Digital y de la Función Pública",
+        "Ministerio de la Presidencia"
+      ],
+      "correcta": 0,
+      "explicacion": "La AEPD es una **autoridad administrativa independiente** de ámbito estatal, con personalidad jurídica, que se relaciona con el Gobierno a través del **Ministerio de Justicia**, que también propone el nombramiento de su Presidencia. Interior y Transformación Digital son los ministerios del DNI y de los servicios de confianza (tema 6)."
+    },
+    {
+      "id": "53",
+      "tema": 7,
+      "enunciado": "Según el art. 48 LOPDGDD, antes de que el Gobierno nombre a la Presidencia de la AEPD, la persona propuesta debe ser ratificada por:",
+      "opciones": [
+        "El Pleno del Congreso, por mayoría absoluta",
+        "El Senado, por mayoría de tres quintos",
+        "La Comisión de Justicia del Congreso, por tres quintos en primera votación o mayoría absoluta en segunda",
+        "El Consejo General del Poder Judicial"
+      ],
+      "correcta": 2,
+      "explicacion": "La ratificación corresponde a la **Comisión de Justicia del Congreso**: **3/5 en primera votación** o **mayoría absoluta en segunda**. Después, el Gobierno la nombra por real decreto a propuesta del Ministerio de Justicia. No interviene el Pleno ni el Senado."
+    },
+    {
+      "id": "54",
+      "tema": 7,
+      "enunciado": "Según el art. 77 RGPD, el interesado puede presentar una reclamación ante la autoridad de control del Estado miembro:",
+      "opciones": [
+        "Del establecimiento principal del responsable, únicamente",
+        "De su residencia habitual, de su lugar de trabajo o del lugar de la supuesta infracción",
+        "Que elija el responsable del tratamiento",
+        "De su nacionalidad, únicamente"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 77** permite reclamar en el Estado de **residencia habitual**, **lugar de trabajo** o **lugar de la supuesta infracción**, para facilitar el acceso a la tutela. Que luego coordine la autoridad del establecimiento principal (art. 56) no limita dónde se puede reclamar."
+    },
+    {
+      "id": "55",
+      "tema": 7,
+      "enunciado": "Una empresa con un volumen de negocio anual global de 1.000 millones de euros incumple la obligación de llevar el registro de actividades (art. 30 RGPD). ¿Cuál es la multa máxima que se le puede imponer?",
+      "opciones": [
+        "10.000.000 €",
+        "40.000.000 €",
+        "2.000.000 €",
+        "20.000.000 €"
+      ],
+      "correcta": 3,
+      "explicacion": "El art. 30 está entre las obligaciones del responsable del **art. 83.4** (arts. 25-39): hasta **10 M€ o el 2 %**, la de **mayor cuantía**. El 2 % de 1.000 M€ son **20 M€**, que supera los 10 M€. 40 M€ sería el 4 % del art. 83.5, que no se aplica a esta obligación."
+    },
+    {
+      "id": "56",
+      "tema": 7,
+      "enunciado": "La AEPD impone a una empresa una multa de 100.000 €. Según el art. 78 LOPDGDD, esa sanción prescribe a los:",
+      "opciones": [
+        "2 años",
+        "1 año",
+        "3 años",
+        "4 años"
+      ],
+      "correcta": 0,
+      "explicacion": "Las sanciones de **40.001 a 300.000 €** prescriben a los **2 años**; las de hasta 40.000 €, al año, y las de más de 300.000 €, a los 3 años. Ojo: la prescripción de las **sanciones** se mide por la cuantía de la multa, no por la gravedad de la infracción."
+    },
+    {
+      "id": "57",
+      "tema": 7,
+      "enunciado": "Según el art. 87 LOPDGDD, el empleador puede acceder a los contenidos derivados del uso de los dispositivos digitales que facilita a sus trabajadores:",
+      "opciones": [
+        "Libremente y en todo caso, porque los dispositivos son suyos",
+        "Nunca, porque prevalece la intimidad del trabajador",
+        "Solo para controlar el cumplimiento de las obligaciones laborales y garantizar la integridad de los dispositivos",
+        "Solo con autorización judicial previa"
+      ],
+      "correcta": 2,
+      "explicacion": "El art. 87 reconoce la **intimidad** del trabajador en el uso de los dispositivos del empleador, que solo puede acceder para **controlar el cumplimiento laboral** y **garantizar la integridad** de los dispositivos. No es un acceso libre ni está prohibido del todo, y no necesita autorización judicial."
+    },
+    {
+      "id": "58",
+      "tema": 7,
+      "enunciado": "Según el art. 94 LOPDGDD, los datos que un usuario facilitó él mismo a una red social:",
+      "opciones": [
+        "Solo pueden suprimirse por orden judicial",
+        "Se suprimen a su simple solicitud, y si los facilitó siendo menor de edad, sin dilación",
+        "Se conservan durante 5 años antes de poder suprimirse",
+        "Solo se suprimen si son inexactos"
+      ],
+      "correcta": 1,
+      "explicacion": "El **derecho al olvido en redes sociales** permite suprimir, **a simple solicitud**, los datos que uno mismo facilitó. Si se facilitaron durante la **minoría de edad**, se suprimen **sin dilación**. No hace falta orden judicial ni que los datos sean inexactos."
+    },
+    {
+      "id": "59",
+      "tema": 7,
+      "enunciado": "En el caso de menores fallecidos, según el art. 96 LOPDGDD (testamento digital), pueden acceder a sus contenidos digitales y decidir sobre ellos:",
+      "opciones": [
+        "Solo el albacea testamentario",
+        "Solo el Defensor del Pueblo",
+        "Exclusivamente sus herederos testamentarios",
+        "Sus representantes legales o el Ministerio Fiscal"
+      ],
+      "correcta": 3,
+      "explicacion": "Para los **menores fallecidos**, el art. 96 atribuye esas facultades a sus **representantes legales** o, en el marco de sus competencias, al **Ministerio Fiscal**. En los adultos actúan los familiares, allegados y herederos, el albacea o la persona designada, salvo prohibición expresa del fallecido."
+    },
+    {
+      "id": "60",
+      "tema": 7,
+      "enunciado": "Según la DA 7.ª LOPDGDD, cuando sea necesario publicar un acto administrativo con datos personales del afectado, este se identificará con:",
+      "opciones": [
+        "Su nombre y apellidos y cuatro cifras numéricas aleatorias de su documento de identidad",
+        "Su nombre completo y el número completo de su DNI",
+        "Solo sus iniciales",
+        "Su nombre y las tres últimas cifras de su DNI"
+      ],
+      "correcta": 0,
+      "explicacion": "La **DA 7.ª** combina **nombre, apellidos y cuatro cifras aleatorias** del documento, para identificar sin publicar el número completo. Publicar el DNI entero vulneraría la minimización, y las iniciales no bastarían para identificar al interesado."
+    }
+  ]
+}

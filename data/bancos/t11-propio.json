@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 11 · test",
+  "fuente": "propio",
+  "tema": 11,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 11. Periféricos»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 11,
+      "enunciado": "¿Qué técnica de E/S transfiere bloques entre el dispositivo y la memoria sin intervención de la CPU?",
+      "opciones": [
+        "Sondeo",
+        "Interrupciones",
+        "DMA",
+        "E/S programada"
+      ],
+      "correcta": 2,
+      "explicacion": "Con **DMA** (acceso directo a memoria) un controlador mueve bloques entre el dispositivo y la memoria **sin pasar por la CPU**, que solo recibe un aviso al final. El sondeo y la E/S programada son lo mismo (la CPU pregunta una y otra vez) y con interrupciones la CPU sigue haciendo la transferencia. Truco: de más a menos carga para la CPU, sondeo > interrupciones > DMA."
+    },
+    {
+      "id": "02",
+      "tema": 11,
+      "enunciado": "La velocidad máxima de USB 2.0 es:",
+      "opciones": [
+        "12 Mb/s",
+        "480 Mb/s",
+        "5 Gb/s",
+        "10 Gb/s"
+      ],
+      "correcta": 1,
+      "explicacion": "USB 2.0 (**High Speed**) llega a **480 Mb/s**. 12 Mb/s es USB 1.1 (Full Speed), 5 Gb/s es USB 3.2 Gen 1 (antes 3.0) y 10 Gb/s es USB 3.2 Gen 2 (antes 3.1)."
+    },
+    {
+      "id": "03",
+      "tema": 11,
+      "enunciado": "USB 3.2 Gen 1 corresponde a:",
+      "opciones": [
+        "480 Mb/s",
+        "5 Gb/s",
+        "10 Gb/s",
+        "20 Gb/s"
+      ],
+      "correcta": 1,
+      "explicacion": "**USB 3.2 Gen 1** es el antiguo **USB 3.0** (SuperSpeed) y alcanza **5 Gb/s**. 480 Mb/s es USB 2.0, 10 Gb/s es Gen 2 (antes 3.1) y 20 Gb/s es Gen 2x2, solo con USB-C. Truco: Gen 1 = 5, Gen 2 = 10, Gen 2x2 = 20."
+    },
+    {
+      "id": "04",
+      "tema": 11,
+      "enunciado": "¿Cuántos dispositivos admite como máximo un controlador USB?",
+      "opciones": [
+        "63",
+        "64",
+        "127",
+        "255"
+      ],
+      "correcta": 2,
+      "explicacion": "Un controlador USB admite hasta **127 dispositivos** (las direcciones van en 7 bits, y la 0 se reserva para el dispositivo recién conectado). 63 es el máximo de dispositivos de FireWire, 64 son los valores de 6 bits y 255 el máximo de 8 bits."
+    },
+    {
+      "id": "05",
+      "tema": 11,
+      "enunciado": "¿Qué interfaz de vídeo es analógica?",
+      "opciones": [
+        "HDMI",
+        "DisplayPort",
+        "DVI-D",
+        "VGA"
+      ],
+      "correcta": 3,
+      "explicacion": "**VGA** transmite señal **analógica** y usa el conector **DB-15**. HDMI y DisplayPort son digitales y llevan audio, y DVI-D es la variante digital de DVI (la analógica es DVI-A)."
+    },
+    {
+      "id": "06",
+      "tema": 11,
+      "enunciado": "Bluetooth está definido en el estándar:",
+      "opciones": [
+        "IEEE 802.3",
+        "IEEE 802.11",
+        "IEEE 802.15.1",
+        "IEEE 1394"
+      ],
+      "correcta": 2,
+      "explicacion": "Bluetooth es el **IEEE 802.15.1** y trabaja en la banda de **2,4 GHz**. IEEE 802.3 es Ethernet, 802.11 es Wi-Fi y 1394 es FireWire."
+    },
+    {
+      "id": "07",
+      "tema": 11,
+      "enunciado": "NFC trabaja en la frecuencia de:",
+      "opciones": [
+        "2,4 GHz",
+        "5 GHz",
+        "13,56 MHz",
+        "125 kHz"
+      ],
+      "correcta": 2,
+      "explicacion": "NFC usa **13,56 MHz** y funciona a **menos de 10 cm** (pagos, DNIe 3.0 y 4.0). 2,4 GHz es la banda de Bluetooth y Wi-Fi, 5 GHz es otra banda Wi-Fi y 125 kHz es una frecuencia típica de algunas etiquetas RFID de baja frecuencia."
+    },
+    {
+      "id": "08",
+      "tema": 11,
+      "enunciado": "El puerto por defecto del protocolo IPP es:",
+      "opciones": [
+        "515",
+        "631",
+        "9100",
+        "443"
+      ],
+      "correcta": 1,
+      "explicacion": "**IPP** (Internet Printing Protocol) usa el puerto **631**, el mismo que la interfaz de CUPS. 515 es LPD/LPR, 9100 es RAW o JetDirect y 443 es HTTPS."
+    },
+    {
+      "id": "09",
+      "tema": 11,
+      "enunciado": "¿Qué impresora es de impacto?",
+      "opciones": [
+        "Láser",
+        "Inyección de tinta",
+        "Matricial",
+        "Térmica"
+      ],
+      "correcta": 2,
+      "explicacion": "La **matricial** es de **impacto**: sus agujas (9 o 24) golpean una cinta entintada contra el papel, y por eso sirve para formularios autocopiativos. Láser, inyección de tinta y térmica son tecnologías **sin impacto**."
+    },
+    {
+      "id": "10",
+      "tema": 11,
+      "enunciado": "PostScript es un lenguaje de descripción de página creado por:",
+      "opciones": [
+        "HP",
+        "Adobe",
+        "Epson",
+        "Microsoft"
+      ],
+      "correcta": 1,
+      "explicacion": "**PostScript** es de **Adobe** y es independiente del dispositivo (artes gráficas). HP creó **PCL**, Epson creó ESC/P para matriciales y Microsoft no es autor de estos lenguajes. Truco: PCL = HP; PostScript y PDF = Adobe."
+    },
+    {
+      "id": "11",
+      "tema": 11,
+      "enunciado": "La velocidad de una impresora matricial se suele medir en:",
+      "opciones": [
+        "ppm",
+        "ppp",
+        "cps",
+        "rpm"
+      ],
+      "correcta": 2,
+      "explicacion": "Las matriciales imprimen carácter a carácter, así que su velocidad se da en **cps** (caracteres por segundo). Las láser y de tinta usan **ppm** (páginas por minuto), **ppp** mide la resolución y **rpm** la velocidad de giro de un disco."
+    },
+    {
+      "id": "12",
+      "tema": 11,
+      "enunciado": "El tiempo de acceso de un disco duro incluye:",
+      "opciones": [
+        "Solo el tiempo de búsqueda",
+        "Búsqueda, latencia rotacional y transferencia",
+        "Solo la latencia rotacional",
+        "El tiempo de TRIM"
+      ],
+      "correcta": 1,
+      "explicacion": "El **tiempo de acceso** es la suma de **búsqueda** (mover el cabezal a la pista), **latencia rotacional** (esperar a que pase el sector) y **transferencia**. Quedarse con una sola parte es el error típico; TRIM es un comando de los SSD, que no tienen partes móviles."
+    },
+    {
+      "id": "13",
+      "tema": 11,
+      "enunciado": "¿Qué comando permite al SO avisar al SSD de los bloques que ya no se usan?",
+      "opciones": [
+        "DMA",
+        "LBA",
+        "TRIM",
+        "S.M.A.R.T."
+      ],
+      "correcta": 2,
+      "explicacion": "Con **TRIM** el sistema operativo avisa al SSD de los bloques borrados para que la controladora los libere y **mantenga el rendimiento**. DMA es una técnica de E/S, LBA es el direccionamiento por bloques lógicos y S.M.A.R.T. es el sistema de autodiagnóstico de los discos."
+    },
+    {
+      "id": "14",
+      "tema": 11,
+      "enunciado": "Un DVD de una capa tiene una capacidad de:",
+      "opciones": [
+        "700 MB",
+        "4,7 GB",
+        "8,5 GB",
+        "25 GB"
+      ],
+      "correcta": 1,
+      "explicacion": "El DVD de una capa guarda **4,7 GB** (láser rojo de 650 nm). 700 MB es un CD, 8,5 GB es el DVD de doble capa y 25 GB es una capa de Blu-ray."
+    },
+    {
+      "id": "15",
+      "tema": 11,
+      "enunciado": "El RAID 5 necesita como mínimo:",
+      "opciones": [
+        "2 discos",
+        "3 discos",
+        "4 discos",
+        "5 discos"
+      ],
+      "correcta": 1,
+      "explicacion": "RAID 5 reparte bandas con **paridad distribuida**, así que necesita como mínimo **3 discos** (dos de datos y la paridad en cada banda). 2 discos es el mínimo de RAID 0 y RAID 1, y 4 el de RAID 6 y RAID 10."
+    },
+    {
+      "id": "16",
+      "tema": 11,
+      "enunciado": "Con 4 discos de 2 TB en RAID 6, la capacidad útil es:",
+      "opciones": [
+        "2 TB",
+        "4 TB",
+        "6 TB",
+        "8 TB"
+      ],
+      "correcta": 1,
+      "explicacion": "RAID 6 usa **doble paridad**, que ocupa el equivalente a 2 discos: capacidad útil **n − 2** = (4 − 2) × 2 TB = **4 TB**. 6 TB sería RAID 5 (n − 1), 8 TB RAID 0 (sin redundancia) y 2 TB la de un solo disco, como en RAID 1."
+    },
+    {
+      "id": "17",
+      "tema": 11,
+      "enunciado": "Un NAS ofrece acceso a nivel de:",
+      "opciones": [
+        "Bloque",
+        "Fichero",
+        "Sector",
+        "Cilindro"
+      ],
+      "correcta": 1,
+      "explicacion": "Un **NAS** es un servidor de ficheros en la red local y ofrece acceso a nivel de **fichero** (NFS, SMB/CIFS). El acceso a nivel de **bloque** es el de una **SAN** o un DAS; sector y cilindro son conceptos de la geometría del disco."
+    },
+    {
+      "id": "18",
+      "tema": 11,
+      "enunciado": "¿Qué tecnología de pantalla no necesita retroiluminación?",
+      "opciones": [
+        "LCD TN",
+        "LCD IPS",
+        "LED",
+        "OLED"
+      ],
+      "correcta": 3,
+      "explicacion": "En **OLED** **cada píxel emite su propia luz**, así que no necesita retroiluminación (y da negros puros). TN e IPS son paneles LCD, que dejan pasar o no la luz de una retroiluminación, y un monitor «LED» es un LCD retroiluminado por LED."
+    },
+    {
+      "id": "19",
+      "tema": 11,
+      "enunciado": "El modelo de color de las impresoras es:",
+      "opciones": [
+        "RGB, aditivo",
+        "CMYK, sustractivo",
+        "RGB, sustractivo",
+        "CMYK, aditivo"
+      ],
+      "correcta": 1,
+      "explicacion": "Las impresoras usan **CMYK** (cian, magenta, amarillo y negro), que es **sustractivo**: cada tinta absorbe parte de la luz. **RGB** es **aditivo** y es el de las pantallas. Las otras dos opciones cruzan modelo y tipo."
+    },
+    {
+      "id": "20",
+      "tema": 11,
+      "enunciado": "La tecnología que reconoce texto manuscrito es:",
+      "opciones": [
+        "OCR",
+        "OMR",
+        "ICR",
+        "CIS"
+      ],
+      "correcta": 2,
+      "explicacion": "El **ICR** reconoce **escritura manuscrita**. El OCR reconoce caracteres **impresos**, el OMR detecta **marcas** (casillas) y CIS es un tipo de sensor de escáner, no una técnica de reconocimiento."
+    },
+    {
+      "id": "21",
+      "tema": 11,
+      "enunciado": "Según su función, una pantalla táctil es un periférico:",
+      "opciones": [
+        "De entrada",
+        "De salida",
+        "De almacenamiento",
+        "De entrada/salida (mixto)"
+      ],
+      "correcta": 3,
+      "explicacion": "La pantalla táctil **muestra** información (salida) y **recoge** las pulsaciones (entrada), así que es un periférico **mixto o de entrada/salida**, como la impresora multifunción o el módem. Clasificarla solo como entrada o solo como salida es quedarse con la mitad."
+    },
+    {
+      "id": "22",
+      "tema": 11,
+      "enunciado": "¿Qué técnica de entrada/salida supone la MAYOR carga de trabajo para la CPU?",
+      "opciones": [
+        "E/S por interrupciones",
+        "E/S programada o por sondeo (polling)",
+        "Acceso directo a memoria (DMA)",
+        "E/S mediante controlador DMA con aviso final"
+      ],
+      "correcta": 1,
+      "explicacion": "En la **E/S programada o sondeo** la CPU **pregunta una y otra vez** si el dispositivo está listo, así que está ocupada todo el tiempo: carga **muy alta**. Con interrupciones el dispositivo avisa (carga media) y con DMA la CPU solo recibe el aviso del final (carga baja)."
+    },
+    {
+      "id": "23",
+      "tema": 11,
+      "enunciado": "La versión de USB que antes se llamaba USB 3.1 (SuperSpeed+, 10 Gb/s) se denomina actualmente:",
+      "opciones": [
+        "USB 3.2 Gen 1",
+        "USB 3.2 Gen 2x2",
+        "USB 3.2 Gen 2",
+        "USB4"
+      ],
+      "correcta": 2,
+      "explicacion": "El antiguo USB 3.1 es hoy **USB 3.2 Gen 2**, a **10 Gb/s**. USB 3.2 Gen 1 es el antiguo 3.0 (5 Gb/s), Gen 2x2 llega a 20 Gb/s solo con USB-C y USB4 alcanza 40 Gb/s."
+    },
+    {
+      "id": "24",
+      "tema": 11,
+      "enunciado": "USB 3.2 Gen 2x2 ofrece una velocidad de:",
+      "opciones": [
+        "20 Gb/s, solo con conector USB-C",
+        "10 Gb/s, con cualquier conector tipo A o C",
+        "40 Gb/s, solo con conector USB-C",
+        "5 Gb/s, con conectores tipo A y B"
+      ],
+      "correcta": 0,
+      "explicacion": "**USB 3.2 Gen 2x2** usa dos carriles de 10 Gb/s y llega a **20 Gb/s**, y **solo con conector USB-C**. 10 Gb/s es Gen 2, 40 Gb/s es USB4 (o Thunderbolt 3 y 4) y 5 Gb/s es Gen 1."
+    },
+    {
+      "id": "25",
+      "tema": 11,
+      "enunciado": "Respecto a un dispositivo que tiene conector USB-C, es correcto afirmar que:",
+      "opciones": [
+        "Funciona siempre a 40 Gb/s, porque USB-C equivale a USB4",
+        "Puede funcionar con distintas versiones de USB, porque USB-C es un conector y no una versión",
+        "No admite carga por USB Power Delivery",
+        "Solo es compatible con dispositivos Thunderbolt"
+      ],
+      "correcta": 1,
+      "explicacion": "**USB-C** es un **conector** reversible, **no una versión**: detrás puede haber USB 2.0, USB 3.2, USB4 o Thunderbolt. Por eso no garantiza 40 Gb/s. USB Power Delivery funciona precisamente sobre USB-C, y Thunderbolt 3 y 4 usan ese conector, pero no es exclusivo de ellos."
+    },
+    {
+      "id": "26",
+      "tema": 11,
+      "enunciado": "La interfaz de vídeo digital, con audio, propia de los monitores de ordenador y que permite encadenar varios monitores es:",
+      "opciones": [
+        "HDMI",
+        "DVI-I",
+        "VGA",
+        "DisplayPort"
+      ],
+      "correcta": 3,
+      "explicacion": "**DisplayPort** es digital, lleva audio, es la habitual en monitores de ordenador y **permite encadenar monitores**. HDMI también es digital con audio, pero es la de los televisores; DVI no lleva audio y VGA es analógica."
+    },
+    {
+      "id": "27",
+      "tema": 11,
+      "enunciado": "La variante de DVI que transporta tanto señal digital como analógica es:",
+      "opciones": [
+        "DVI-I",
+        "DVI-D",
+        "DVI-A",
+        "DVI-HD"
+      ],
+      "correcta": 0,
+      "explicacion": "**DVI-I** (integrada) lleva señal **digital y analógica**. DVI-D es solo digital y DVI-A solo analógica. «DVI-HD» no existe. Truco: I = Integrado (las dos), D = Digital, A = Analógico."
+    },
+    {
+      "id": "28",
+      "tema": 11,
+      "enunciado": "Un auricular Bluetooth de clase 2 tiene un alcance aproximado de:",
+      "opciones": [
+        "1 metro",
+        "100 metros",
+        "10 metros",
+        "50 metros"
+      ],
+      "correcta": 2,
+      "explicacion": "Las clases de Bluetooth fijan el alcance: **clase 1 = 100 m**, **clase 2 = 10 m** y **clase 3 = 1 m**. La mayoría de auriculares y teclados son de clase 2. 50 m no corresponde a ninguna clase."
+    },
+    {
+      "id": "29",
+      "tema": 11,
+      "enunciado": "¿Qué comando de Linux lista los dispositivos conectados al bus USB?",
+      "opciones": [
+        "lsusb",
+        "lspci",
+        "lsblk",
+        "lsmod"
+      ],
+      "correcta": 0,
+      "explicacion": "**lsusb** lista los dispositivos **USB**. **lspci** lista los del bus **PCI/PCIe**, **lsblk** los dispositivos de **bloque** (discos y particiones) y **lsmod** los módulos del núcleo cargados. Truco: el sufijo dice qué lista."
+    },
+    {
+      "id": "30",
+      "tema": 11,
+      "enunciado": "En Windows, la consola del Administrador de dispositivos se abre ejecutando:",
+      "opciones": [
+        "diskmgmt.msc",
+        "services.msc",
+        "eventvwr.msc",
+        "devmgmt.msc"
+      ],
+      "correcta": 3,
+      "explicacion": "**devmgmt.msc** abre el **Administrador de dispositivos** (devices management), donde se ven y actualizan los controladores. diskmgmt.msc abre la Administración de discos, services.msc los Servicios y eventvwr.msc el Visor de eventos."
+    },
+    {
+      "id": "31",
+      "tema": 11,
+      "enunciado": "Señale cuál NO es uno de los recursos del sistema que se asignan a un periférico:",
+      "opciones": [
+        "Línea de interrupción (IRQ)",
+        "Canal DMA",
+        "Dirección MAC",
+        "Direcciones de E/S"
+      ],
+      "correcta": 2,
+      "explicacion": "Los **recursos del sistema** de un periférico son la **IRQ** (línea de interrupción), el **canal DMA** y las **direcciones de E/S**. La **dirección MAC** es el identificador físico de una tarjeta de red en la red local, no un recurso que el sistema asigne al dispositivo."
+    },
+    {
+      "id": "32",
+      "tema": 11,
+      "enunciado": "Un técnico configura una impresora de red con el protocolo RAW (JetDirect). ¿Qué puerto TCP usa por defecto?",
+      "opciones": [
+        "515",
+        "9100",
+        "631",
+        "443"
+      ],
+      "correcta": 1,
+      "explicacion": "**RAW o JetDirect** usa el puerto **9100**. 515 es LPD/LPR, 631 es IPP (y la interfaz de CUPS) y 443 es HTTPS. Truco: de menor a mayor, LPD 515, IPP 631, RAW 9100."
+    },
+    {
+      "id": "33",
+      "tema": 11,
+      "enunciado": "En la impresión por inyección de tinta piezoeléctrica, característica de Epson, la gota se expulsa mediante:",
+      "opciones": [
+        "Una burbuja generada por calor",
+        "Un cristal que vibra al aplicarle corriente",
+        "Un láser que carga un tambor",
+        "Agujas que golpean una cinta"
+      ],
+      "correcta": 1,
+      "explicacion": "En la tinta **piezoeléctrica** un **cristal vibra** y empuja la gota. La **burbuja de calor** es la tinta **térmica** (HP, Canon); el láser con tambor es la impresora láser, y las agujas sobre una cinta son la matricial, de impacto."
+    },
+    {
+      "id": "34",
+      "tema": 11,
+      "enunciado": "En una impresora láser, el componente que fija el tóner al papel mediante calor es:",
+      "opciones": [
+        "El fusor",
+        "El tambor fotosensible",
+        "El cabezal de agujas",
+        "La cinta de transferencia térmica"
+      ],
+      "correcta": 0,
+      "explicacion": "El **fusor** fija el tóner al papel con **calor** (y presión). El **tambor fotosensible** es donde el láser dibuja la imagen y se adhiere el tóner; el cabezal de agujas es de las matriciales y la cinta de transferencia térmica es de las impresoras térmicas."
+    },
+    {
+      "id": "35",
+      "tema": 11,
+      "enunciado": "En el proceso de impresión láser, la fase que sigue al revelado (cuando el tóner se adhiere al tambor) es:",
+      "opciones": [
+        "La fusión",
+        "La carga del tambor",
+        "La exposición con el láser",
+        "La transferencia al papel"
+      ],
+      "correcta": 3,
+      "explicacion": "El orden es: **carga** del tambor, **exposición** con el láser, **revelado** (el tóner se pega), **transferencia** al papel, **fusión** y **limpieza**. Tras el revelado, el tóner todavía está en el tambor y hay que pasarlo al papel antes de fundirlo."
+    },
+    {
+      "id": "36",
+      "tema": 11,
+      "enunciado": "La tecnología habitual para imprimir tiques y recibos sobre papel termosensible es:",
+      "opciones": [
+        "La sublimación",
+        "La impresión matricial",
+        "La impresión térmica directa",
+        "La impresión láser"
+      ],
+      "correcta": 2,
+      "explicacion": "La **impresión térmica directa** aplica calor sobre **papel termosensible**, sin tinta: es la de tiques, recibos y etiquetas. La sublimación (tinta que pasa de sólido a gas) es para fotos y tarjetas plásticas, la matricial es de impacto y la láser usa tóner."
+    },
+    {
+      "id": "37",
+      "tema": 11,
+      "enunciado": "El lenguaje de descripción de página de las impresoras de etiquetas de Zebra es:",
+      "opciones": [
+        "ZPL",
+        "PCL",
+        "ESC/P",
+        "PostScript"
+      ],
+      "correcta": 0,
+      "explicacion": "**ZPL** es el lenguaje de **Zebra** para impresoras de **etiquetas**. **PCL** es de HP (láser), **ESC/P** de Epson (matriciales) y **PostScript** de Adobe (artes gráficas)."
+    },
+    {
+      "id": "38",
+      "tema": 11,
+      "enunciado": "Un tóner cuesta 60 € y su rendimiento es de 3.000 páginas. ¿Cuál es el coste por página en tóner?",
+      "opciones": [
+        "0,20 €",
+        "0,002 €",
+        "0,05 €",
+        "0,02 €"
+      ],
+      "correcta": 3,
+      "explicacion": "**Coste por página** = precio del consumible ÷ rendimiento: 60 € ÷ 3.000 páginas = **0,02 €**. 0,20 € y 0,002 € son errores de un decimal; 0,05 € saldría de un rendimiento de 1.200 páginas."
+    },
+    {
+      "id": "39",
+      "tema": 11,
+      "enunciado": "El «ciclo de trabajo» de una impresora indica:",
+      "opciones": [
+        "Las páginas que imprime por minuto",
+        "Los puntos por pulgada que alcanza",
+        "El número de páginas al mes que soporta",
+        "El tiempo que tarda en imprimir la primera página"
+      ],
+      "correcta": 2,
+      "explicacion": "El **ciclo de trabajo** es el número de **páginas al mes** que la impresora soporta. Las páginas por minuto (ppm) son la velocidad, los ppp son la resolución y el tiempo de la primera página es otra característica distinta."
+    },
+    {
+      "id": "40",
+      "tema": 11,
+      "enunciado": "En un disco duro, el conjunto de pistas situadas a la misma distancia del eje en todos los platos se denomina:",
+      "opciones": [
+        "Sector",
+        "Cilindro",
+        "Clúster",
+        "Bloque LBA"
+      ],
+      "correcta": 1,
+      "explicacion": "Un **cilindro** es el conjunto de **pistas a la misma altura** en todos los platos. El **sector** es la división de una pista (512 bytes o 4 KB), el clúster es la unidad de asignación del sistema de ficheros y el bloque LBA es la numeración lógica de los bloques."
+    },
+    {
+      "id": "41",
+      "tema": 11,
+      "enunciado": "El método de direccionamiento actual de los discos, que asigna un número a cada bloque lógico, es:",
+      "opciones": [
+        "CHS",
+        "LBA",
+        "DMA",
+        "SMART"
+      ],
+      "correcta": 1,
+      "explicacion": "**LBA** (Logical Block Addressing) numera cada bloque lógico y ha sustituido al antiguo **CHS** (cilindro, cabeza, sector). DMA es una técnica de E/S y SMART es el autodiagnóstico de los discos."
+    },
+    {
+      "id": "42",
+      "tema": 11,
+      "enunciado": "Un disco duro gira a 7.200 rpm. ¿Cuál es su latencia rotacional media aproximada?",
+      "opciones": [
+        "4,17 ms",
+        "8,33 ms",
+        "7,2 ms",
+        "0,83 ms"
+      ],
+      "correcta": 0,
+      "explicacion": "Una vuelta dura 60 s ÷ 7.200 = **8,33 ms**, y la **latencia media** es **media vuelta**: **4,17 ms**. 8,33 ms es el peor caso (vuelta completa), 7,2 ms sale de leer las rpm como milisegundos y 0,83 ms es un error de un decimal."
+    },
+    {
+      "id": "43",
+      "tema": 11,
+      "enunciado": "La técnica con la que la controladora de un SSD reparte las escrituras entre todas las celdas para alargar su vida útil se llama:",
+      "opciones": [
+        "TRIM",
+        "Desfragmentación",
+        "Nivelación de desgaste (wear leveling)",
+        "TBW"
+      ],
+      "correcta": 2,
+      "explicacion": "La **nivelación de desgaste** reparte las escrituras porque **cada celda aguanta un número limitado**. **TRIM** es el aviso del sistema operativo sobre bloques borrados, la desfragmentación es propia de discos magnéticos y no conviene en SSD, y **TBW** es la cantidad de terabytes escritos que garantiza el fabricante."
+    },
+    {
+      "id": "44",
+      "tema": 11,
+      "enunciado": "El Blu-ray almacena más datos por capa que el DVD principalmente porque:",
+      "opciones": [
+        "Su láser es infrarrojo, de 780 nm",
+        "Graba en las dos caras del disco a la vez",
+        "Usa una pista en círculos concéntricos en vez de en espiral",
+        "Su láser tiene una longitud de onda más corta (405 nm frente a 650 nm)"
+      ],
+      "correcta": 3,
+      "explicacion": "A **menor longitud de onda**, el punto del láser es más pequeño y cabe **más densidad**: el Blu-ray usa láser **azul-violeta de 405 nm** frente al rojo de 650 nm del DVD, y logra 25 GB por capa. El infrarrojo de 780 nm es el del CD, y los discos ópticos usan una pista en espiral."
+    },
+    {
+      "id": "45",
+      "tema": 11,
+      "enunciado": "En los discos ópticos, el sufijo «-R» (por ejemplo, DVD-R) indica que el disco:",
+      "opciones": [
+        "Se puede grabar una sola vez",
+        "Es de solo lectura y viene grabado de fábrica",
+        "Se puede borrar y regrabar muchas veces",
+        "Tiene dos capas de grabación"
+      ],
+      "correcta": 0,
+      "explicacion": "**-R** significa que el disco se **graba una vez**. **-ROM** es de solo lectura (grabado de fábrica) y **-RW** o **-RE** son regrabables. La doble capa se indica de otra forma (DL)."
+    },
+    {
+      "id": "46",
+      "tema": 11,
+      "enunciado": "¿Cuál es la capacidad nativa (sin comprimir) de una cinta LTO-9?",
+      "opciones": [
+        "45 TB",
+        "18 TB",
+        "12 TB",
+        "9 TB"
+      ],
+      "correcta": 1,
+      "explicacion": "Una cinta **LTO-9** guarda **18 TB sin comprimir** y 45 TB comprimidos. 45 TB es la cifra comprimida, que es la que suele aparecer en la publicidad; 12 TB y 9 TB no son la capacidad de esta generación (9 confunde el número de versión con la capacidad)."
+    },
+    {
+      "id": "47",
+      "tema": 11,
+      "enunciado": "Se quiere comprar una tarjeta de memoria de 64 GB. Según la clasificación de las tarjetas SD, será de tipo:",
+      "opciones": [
+        "SD",
+        "SDHC",
+        "SDUC",
+        "SDXC"
+      ],
+      "correcta": 3,
+      "explicacion": "**SD** llega a 2 GB, **SDHC** a 32 GB, **SDXC** a **2 TB** y **SDUC** a 128 TB. 64 GB supera el límite de SDHC y queda dentro de **SDXC**. Truco: HC = alta capacidad (32 GB), XC = capacidad extendida (2 TB)."
+    },
+    {
+      "id": "48",
+      "tema": 11,
+      "enunciado": "Un servidor tiene 4 discos de 2 TB configurados en RAID 5. ¿Cuál es su capacidad útil?",
+      "opciones": [
+        "8 TB",
+        "4 TB",
+        "6 TB",
+        "2 TB"
+      ],
+      "correcta": 2,
+      "explicacion": "En RAID 5 la paridad distribuida ocupa el equivalente a un disco: capacidad útil **n − 1** = (4 − 1) × 2 TB = **6 TB**, y aguanta el fallo de un disco. 8 TB sería RAID 0, 4 TB sería RAID 6 o RAID 10 y 2 TB, RAID 1 con todo en espejo."
+    },
+    {
+      "id": "49",
+      "tema": 11,
+      "enunciado": "Un usuario borra por error un fichero almacenado en un volumen RAID 1. ¿Qué ocurre?",
+      "opciones": [
+        "El fichero se recupera automáticamente desde el disco espejo",
+        "El borrado solo afecta al primer disco hasta la siguiente sincronización",
+        "El RAID 1 bloquea el borrado porque guarda dos copias",
+        "El fichero se borra en los dos discos, porque el RAID no sustituye a las copias de seguridad"
+      ],
+      "correcta": 3,
+      "explicacion": "El espejo de RAID 1 replica **todas** las operaciones, también los borrados: el fichero desaparece **en los dos discos**. El RAID protege frente al **fallo de un disco**, no frente a errores humanos, virus o borrados; por eso **no sustituye a las copias de seguridad**."
+    },
+    {
+      "id": "50",
+      "tema": 11,
+      "enunciado": "Fibre Channel e iSCSI son protocolos característicos de:",
+      "opciones": [
+        "Una SAN, con acceso a nivel de bloque",
+        "Un NAS, con acceso a nivel de fichero",
+        "Un DAS conectado por USB",
+        "Una impresora de red"
+      ],
+      "correcta": 0,
+      "explicacion": "**Fibre Channel** e **iSCSI** son los protocolos de una **SAN**, una red dedicada de almacenamiento con acceso a nivel de **bloque**. Un **NAS** da acceso a nivel de fichero con NFS o SMB/CIFS, y un DAS se conecta directamente al equipo (SATA, SAS, USB)."
+    },
+    {
+      "id": "51",
+      "tema": 11,
+      "enunciado": "¿Qué tipo de panel LCD ofrece mejor reproducción del color y mejores ángulos de visión?",
+      "opciones": [
+        "TN",
+        "VA",
+        "IPS",
+        "CRT"
+      ],
+      "correcta": 2,
+      "explicacion": "Los paneles **IPS** dan **mejor color y ángulos de visión**. Los **TN** son rápidos pero con ángulos pobres, los **VA** destacan por el **contraste** y CRT no es un panel LCD, sino el antiguo tubo de rayos catódicos."
+    },
+    {
+      "id": "52",
+      "tema": 11,
+      "enunciado": "Un monitor comercializado como «LED» es, técnicamente:",
+      "opciones": [
+        "Un LCD cuya retroiluminación se hace con LED",
+        "Una pantalla en la que cada píxel emite su propia luz",
+        "Una pantalla de tinta electrónica",
+        "Un tubo de rayos catódicos de bajo consumo"
+      ],
+      "correcta": 0,
+      "explicacion": "Un monitor «**LED**» es un **LCD retroiluminado por LED**: el cristal líquido sigue filtrando la luz. Que cada píxel emita su propia luz es lo propio de **OLED**, que no hay que confundir con LED. La tinta electrónica refleja la luz y el CRT es otra tecnología."
+    },
+    {
+      "id": "53",
+      "tema": 11,
+      "enunciado": "Un técnico necesita una pantalla táctil que funcione con guantes o con un puntero cualquiera. Elegirá una pantalla:",
+      "opciones": [
+        "Capacitiva",
+        "Resistiva",
+        "OLED multitáctil",
+        "De tinta electrónica"
+      ],
+      "correcta": 1,
+      "explicacion": "Las pantallas **resistivas** reaccionan a la **presión**, así que funcionan con guantes o con cualquier puntero. Las **capacitivas** detectan la electricidad del dedo (admiten multitáctil, como en los móviles) y no responden a un guante normal. OLED y tinta electrónica son tecnologías de visualización, no de detección táctil."
+    },
+    {
+      "id": "54",
+      "tema": 11,
+      "enunciado": "¿Cuántos píxeles tiene una pantalla 4K UHD (3840 × 2160) en comparación con una Full HD (1920 × 1080)?",
+      "opciones": [
+        "El doble",
+        "Ocho veces más",
+        "Dieciséis veces más",
+        "Cuatro veces más"
+      ],
+      "correcta": 3,
+      "explicacion": "4K UHD duplica **las dos dimensiones** de Full HD (3840 = 2 × 1920 y 2160 = 2 × 1080), así que tiene 2 × 2 = **cuatro veces** más píxeles (unos 8,3 millones frente a 2,1). «El doble» es el error de pensar solo en una dimensión."
+    },
+    {
+      "id": "55",
+      "tema": 11,
+      "enunciado": "¿Cuánto mide, aproximadamente, la diagonal de un monitor de 27 pulgadas?",
+      "opciones": [
+        "10,6 cm",
+        "68,6 cm",
+        "54,0 cm",
+        "81,3 cm"
+      ],
+      "correcta": 1,
+      "explicacion": "La diagonal se mide en pulgadas y **1″ = 2,54 cm**: 27 × 2,54 ≈ **68,6 cm**. 10,6 cm sale de dividir en lugar de multiplicar, 54 cm de multiplicar por 2 y 81,3 cm corresponde a 32 pulgadas."
+    },
+    {
+      "id": "56",
+      "tema": 11,
+      "enunciado": "Una pantalla con profundidad de color de 30 bits (10 bits por canal) puede representar aproximadamente:",
+      "opciones": [
+        "Unos 16,7 millones de colores",
+        "Unos 268 millones de colores",
+        "Unos 1.073 millones de colores",
+        "Unos 30 millones de colores"
+      ],
+      "correcta": 2,
+      "explicacion": "Con n bits por píxel hay **2ⁿ colores**: 2³⁰ ≈ **1.073 millones**. 16,7 millones es la cifra de **24 bits** (8 por canal), 268 millones serían 28 bits y 30 millones confunde los bits con millones de colores."
+    },
+    {
+      "id": "57",
+      "tema": 11,
+      "enunciado": "El tiempo que tarda un píxel en cambiar de color, que se expresa en milisegundos, es:",
+      "opciones": [
+        "El tiempo de respuesta",
+        "La frecuencia de refresco",
+        "El tamaño de punto (dot pitch)",
+        "La relación de contraste"
+      ],
+      "correcta": 0,
+      "explicacion": "El **tiempo de respuesta** es lo que tarda un píxel en cambiar y se mide en **milisegundos**. La **frecuencia de refresco** son las veces por segundo que se redibuja la imagen (hercios), el **dot pitch** es la distancia entre píxeles y el contraste es la relación entre blanco y negro."
+    },
+    {
+      "id": "58",
+      "tema": 11,
+      "enunciado": "En un escáner, la resolución interpolada:",
+      "opciones": [
+        "Es la resolución física del sensor",
+        "Es siempre menor que la resolución óptica",
+        "Solo existe en los escáneres de tambor",
+        "Se calcula por software y no aporta detalle real"
+      ],
+      "correcta": 3,
+      "explicacion": "La **resolución interpolada** la **calcula el software** a partir de la real y **no aporta detalle**; la que cuenta es la **óptica**, la del sensor. La interpolada suele anunciarse **mayor** que la óptica, y existe en cualquier tipo de escáner."
+    },
+    {
+      "id": "59",
+      "tema": 11,
+      "enunciado": "Para corregir automáticamente hojas de respuesta de un examen tipo test con casillas marcadas se usa:",
+      "opciones": [
+        "OCR",
+        "OMR",
+        "ICR",
+        "CCD"
+      ],
+      "correcta": 1,
+      "explicacion": "El **OMR** (reconocimiento óptico de marcas) detecta **marcas** como las casillas de una hoja de examen. El OCR reconoce texto impreso, el ICR texto manuscrito y CCD es un tipo de sensor de escáner o cámara."
+    },
+    {
+      "id": "60",
+      "tema": 11,
+      "enunciado": "Según la Norma Técnica de Interoperabilidad de Digitalización de Documentos, la resolución mínima de la imagen digitalizada es:",
+      "opciones": [
+        "150 ppp",
+        "300 ppp",
+        "200 ppp",
+        "600 ppp"
+      ],
+      "correcta": 2,
+      "explicacion": "La **NTI de Digitalización de Documentos** exige una resolución mínima de **200 ppp**, además de formatos del catálogo de estándares y metadatos mínimos, para obtener copias electrónicas auténticas. 300 y 600 ppp son resoluciones habituales en escáneres, pero no el mínimo de la norma, y 150 ppp no llega."
+    }
+  ]
+}

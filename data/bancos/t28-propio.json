@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 28 · test",
+  "fuente": "propio",
+  "tema": 28,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 28. Seguridad de los sistemas de información»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 28,
+      "enunciado": "¿Cuál de las siguientes NO es una dimensión de seguridad del ENS?",
+      "opciones": [
+        "Trazabilidad",
+        "Autenticidad",
+        "Legalidad",
+        "Disponibilidad"
+      ],
+      "correcta": 2,
+      "explicacion": "El ENS (anexo I) fija **cinco dimensiones**: **confidencialidad, integridad, trazabilidad, autenticidad y disponibilidad** (C, I, T, A, D). La **legalidad no es una dimensión**. Truco: a la tríada CIA el ENS le añade T y A."
+    },
+    {
+      "id": "02",
+      "tema": 28,
+      "enunciado": "El Esquema Nacional de Seguridad vigente está regulado por el:",
+      "opciones": [
+        "Real Decreto 3/2010",
+        "Real Decreto 311/2022",
+        "Real Decreto 203/2021",
+        "Real Decreto-ley 12/2018"
+      ],
+      "correcta": 1,
+      "explicacion": "El ENS vigente es el **Real Decreto 311/2022, de 3 de mayo**, que **derogó el RD 3/2010** (el ENS anterior). El RD 203/2021 es el Reglamento de actuación y funcionamiento del sector público por medios electrónicos, y el RDL 12/2018 transpuso la Directiva NIS."
+    },
+    {
+      "id": "03",
+      "tema": 28,
+      "enunciado": "Para enviar un mensaje confidencial con criptografía asimétrica se cifra con:",
+      "opciones": [
+        "La clave privada del emisor",
+        "La clave pública del emisor",
+        "La clave pública del receptor",
+        "La clave privada del receptor"
+      ],
+      "correcta": 2,
+      "explicacion": "Se cifra con la **clave pública del receptor**, porque solo él, con su clave privada, puede descifrar. Cifrar con la clave privada del emisor es lo que se hace al **firmar** (autenticidad), no para dar confidencialidad, y la clave privada del receptor nunca la tiene el emisor."
+    },
+    {
+      "id": "04",
+      "tema": 28,
+      "enunciado": "¿Qué función hash se considera rota y no debe usarse en firma?",
+      "opciones": [
+        "SHA-256",
+        "SHA3-512",
+        "SHA-512",
+        "SHA-1"
+      ],
+      "correcta": 3,
+      "explicacion": "**SHA-1** está rota: en 2017 se publicó una colisión práctica (SHAttered). SHA-256 y SHA-512 (familia **SHA-2**) y SHA3-512 (**SHA-3**) se consideran seguras. MD5 también está rota."
+    },
+    {
+      "id": "05",
+      "tema": 28,
+      "enunciado": "El tamaño de bloque de AES es de:",
+      "opciones": [
+        "128 bits",
+        "64 bits",
+        "256 bits",
+        "56 bits"
+      ],
+      "correcta": 0,
+      "explicacion": "AES cifra en **bloques de 128 bits**; lo que varía es la **clave**: 128, 192 o 256 bits. Los bloques de 64 bits son de DES y 3DES, y 56 bits es la clave efectiva de DES. No confundir bloque con clave."
+    },
+    {
+      "id": "06",
+      "tema": 28,
+      "enunciado": "El malware que se propaga por la red por sí mismo, sin intervención del usuario, es un:",
+      "opciones": [
+        "Troyano",
+        "Gusano",
+        "Bomba lógica",
+        "Adware"
+      ],
+      "correcta": 1,
+      "explicacion": "El **gusano** se **autopropaga** por la red sin intervención del usuario. El virus necesita que se ejecute el archivo infectado, el troyano aparenta ser legítimo para abrir una puerta, la bomba lógica se activa ante una condición o fecha y el adware muestra publicidad."
+    },
+    {
+      "id": "07",
+      "tema": 28,
+      "enunciado": "¿Qué protocolo de IPsec proporciona cifrado de la carga útil?",
+      "opciones": [
+        "AH",
+        "IKE",
+        "ESP",
+        "ISAKMP"
+      ],
+      "correcta": 2,
+      "explicacion": "**ESP** (protocolo IP 50) da **cifrado** además de integridad y autenticación. **AH** (protocolo 51) solo autentica e integra, **sin cifrar**. IKE (sobre ISAKMP) negocia las asociaciones de seguridad, pero no protege los datos."
+    },
+    {
+      "id": "08",
+      "tema": 28,
+      "enunciado": "Según eIDAS, la firma electrónica cualificada exige:",
+      "opciones": [
+        "Solo un certificado electrónico",
+        "Certificado cualificado y dispositivo cualificado de creación de firma",
+        "Un sello de tiempo",
+        "El DNIe"
+      ],
+      "correcta": 1,
+      "explicacion": "La firma **cualificada** es una firma avanzada con **certificado cualificado** y **dispositivo cualificado de creación de firma (QSCD)**; equivale a la manuscrita en toda la UE. El DNIe es un medio posible, no un requisito, y el sello de tiempo es otro servicio de confianza."
+    },
+    {
+      "id": "09",
+      "tema": 28,
+      "enunciado": "El protocolo OCSP sirve para:",
+      "opciones": [
+        "Consultar en línea el estado de revocación de un certificado",
+        "Publicar listas periódicas de certificados revocados",
+        "Sellar en el tiempo un documento",
+        "Solicitar un certificado a la CA"
+      ],
+      "correcta": 0,
+      "explicacion": "**OCSP** permite **consultar en tiempo real** el estado de un certificado. Las listas periódicas de revocados son las **CRL**, el sellado de tiempo lo hace una TSA (RFC 3161) y la solicitud de certificado es un CSR (PKCS#10)."
+    },
+    {
+      "id": "10",
+      "tema": 28,
+      "enunciado": "El valor ideal del indicador PUE de un CPD es:",
+      "opciones": [
+        "0",
+        "2",
+        "100",
+        "1"
+      ],
+      "correcta": 3,
+      "explicacion": "**PUE = energía total del CPD / energía de los equipos TI**, así que el ideal es **1**: toda la energía va a TI. No puede ser menor que 1, y un PUE de 2 significa que por cada kWh de TI se gasta otro en clima, pérdidas e iluminación."
+    },
+    {
+      "id": "11",
+      "tema": 28,
+      "enunciado": "Un CPD Tier III se caracteriza por ser:",
+      "opciones": [
+        "Tolerante a fallos",
+        "Básico, sin redundancia",
+        "De mantenimiento concurrente",
+        "De componentes redundantes con una sola ruta"
+      ],
+      "correcta": 2,
+      "explicacion": "**Tier III = mantenimiento concurrente** (99,982 %): con rutas redundantes, cualquier componente se puede mantener sin parar. Tolerante a fallos es el Tier IV, básico es el Tier I y componentes redundantes con una sola ruta es el Tier II."
+    },
+    {
+      "id": "12",
+      "tema": 28,
+      "enunciado": "El SAI que alimenta la carga siempre desde el inversor, sin tiempo de conmutación, es el:",
+      "opciones": [
+        "Off-line",
+        "Interactivo",
+        "Standby",
+        "On-line de doble conversión"
+      ],
+      "correcta": 3,
+      "explicacion": "El **SAI on-line de doble conversión** alimenta **siempre desde el inversor** (AC→DC→AC), con **conmutación cero**; es el propio de los CPD. El off-line (o standby, que es lo mismo) conmuta a batería al fallar la red, y el interactivo añade regulación de tensión."
+    },
+    {
+      "id": "13",
+      "tema": 28,
+      "enunciado": "¿Qué agente de extinción está prohibido por dañar la capa de ozono?",
+      "opciones": [
+        "Halón",
+        "IG-541",
+        "Agua nebulizada",
+        "HFC-227ea"
+      ],
+      "correcta": 0,
+      "explicacion": "El **halón** está **prohibido** por dañar la capa de ozono. En los CPD se usan gases inertes como el **IG-541** (reducen el oxígeno), agentes limpios como el **HFC-227ea** (FM-200) y agua nebulizada."
+    },
+    {
+      "id": "14",
+      "tema": 28,
+      "enunciado": "El CERT que articula la respuesta a incidentes en el sector público según el ENS es:",
+      "opciones": [
+        "INCIBE-CERT",
+        "ESPDEF-CERT",
+        "CCN-CERT",
+        "CERT-EU"
+      ],
+      "correcta": 2,
+      "explicacion": "Según el **art. 33 del RD 311/2022**, la respuesta la articula el **CCN-CERT**. INCIBE-CERT atiende a ciudadanos y entidades privadas, ESPDEF-CERT a Defensa y CERT-EU a las instituciones de la UE."
+    },
+    {
+      "id": "15",
+      "tema": 28,
+      "enunciado": "LUCIA es:",
+      "opciones": [
+        "Un SIEM del INCIBE",
+        "Una herramienta de gestión de ciberincidentes del CCN-CERT",
+        "Una herramienta de análisis de riesgos",
+        "Un antivirus corporativo"
+      ],
+      "correcta": 1,
+      "explicacion": "**LUCIA** (Listado Unificado de Coordinación de Incidentes y Amenazas) es la herramienta del **CCN-CERT** para **gestionar ciberincidentes** en el ámbito del ENS, basada en Request Tracker. La correlación de eventos es GLORIA y el análisis de riesgos, PILAR."
+    },
+    {
+      "id": "16",
+      "tema": 28,
+      "enunciado": "Los sistemas sujetos al ENS deben someterse a auditoría ordinaria:",
+      "opciones": [
+        "Cada año",
+        "Cada tres años",
+        "Al menos cada dos años",
+        "Cada cinco años"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 31 del RD 311/2022** exige auditoría ordinaria **al menos cada dos años**, y una extraordinaria cuando haya cambios sustanciales en el sistema."
+    },
+    {
+      "id": "17",
+      "tema": 28,
+      "enunciado": "Según ITIL, el objetivo principal de la gestión de incidencias es:",
+      "opciones": [
+        "Restablecer el servicio lo antes posible",
+        "Hallar la causa raíz",
+        "Aprobar los cambios",
+        "Mantener el catálogo de servicios"
+      ],
+      "correcta": 0,
+      "explicacion": "La gestión de incidencias busca **restablecer el servicio cuanto antes**, aunque sea con una solución temporal. **Hallar la causa raíz** es la gestión de **problemas**, y aprobar cambios corresponde a la gestión de cambios (CAB)."
+    },
+    {
+      "id": "18",
+      "tema": 28,
+      "enunciado": "El puerto por defecto del Escritorio remoto de Windows (RDP) es:",
+      "opciones": [
+        "5900",
+        "22",
+        "443",
+        "3389"
+      ],
+      "correcta": 3,
+      "explicacion": "RDP usa el **TCP 3389** (también UDP 3389). El 5900 es VNC, el 22 es SSH y el 443 es HTTPS, que es el que usa una pasarela RD Gateway para encapsular RDP."
+    },
+    {
+      "id": "19",
+      "tema": 28,
+      "enunciado": "Una brecha de datos personales debe notificarse a la AEPD en un plazo de:",
+      "opciones": [
+        "72 horas",
+        "24 horas",
+        "48 horas",
+        "7 días"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 33 del RGPD** obliga a notificar a la autoridad de control (la **AEPD**) sin dilación indebida y, de ser posible, **en 72 horas** desde que se tiene constancia. Si hay alto riesgo, además se comunica a los afectados (art. 34)."
+    },
+    {
+      "id": "20",
+      "tema": 28,
+      "enunciado": "En TLS 1.3 el acuerdo de claves se realiza siempre mediante:",
+      "opciones": [
+        "RSA estático",
+        "(EC)DHE",
+        "DES",
+        "MD5"
+      ],
+      "correcta": 1,
+      "explicacion": "TLS 1.3 **eliminó el intercambio RSA estático** y usa siempre **(EC)DHE**, que da **secreto perfecto hacia adelante**: aunque se robe después la clave privada del servidor, no se pueden descifrar sesiones pasadas. DES es un cifrado simétrico y MD5 una función hash, ambos rotos."
+    },
+    {
+      "id": "21",
+      "tema": 28,
+      "enunciado": "¿Qué dimensión de seguridad del ENS garantiza que se pueda saber quién hizo qué y cuándo?",
+      "opciones": [
+        "Integridad",
+        "Autenticidad",
+        "Trazabilidad",
+        "Confidencialidad"
+      ],
+      "correcta": 2,
+      "explicacion": "La **trazabilidad [T]** permite saber **quién hizo qué y cuándo**, con registros (*logs*) y sellado de tiempo. La autenticidad garantiza que la entidad es quien dice ser, la integridad que no hay alteraciones no autorizadas y la confidencialidad que solo acceden los autorizados."
+    },
+    {
+      "id": "22",
+      "tema": 28,
+      "enunciado": "En el análisis de riesgos, la debilidad de un activo que una amenaza puede explotar se denomina:",
+      "opciones": [
+        "Amenaza",
+        "Vulnerabilidad",
+        "Impacto",
+        "Riesgo residual"
+      ],
+      "correcta": 1,
+      "explicacion": "La **vulnerabilidad** es la **debilidad** del activo; la **amenaza** es la causa potencial que la explota y el **impacto** el daño que produce. El riesgo residual es el que queda tras aplicar salvaguardas, y lo acepta la dirección."
+    },
+    {
+      "id": "23",
+      "tema": 28,
+      "enunciado": "Una organización contrata un seguro que cubre los daños de un posible ciberataque. ¿Qué opción de tratamiento del riesgo aplica?",
+      "opciones": [
+        "Mitigar",
+        "Evitar",
+        "Aceptar",
+        "Transferir"
+      ],
+      "correcta": 3,
+      "explicacion": "Contratar un seguro o externalizar es **transferir** el riesgo a un tercero. **Mitigar** es reducir la probabilidad o el impacto con salvaguardas, **evitar** es eliminar la actividad que lo genera y **aceptar** es asumirlo sin más."
+    },
+    {
+      "id": "24",
+      "tema": 28,
+      "enunciado": "¿Qué herramienta del CCN da soporte al análisis de riesgos según la metodología MAGERIT?",
+      "opciones": [
+        "PILAR",
+        "CLARA",
+        "LUCIA",
+        "GLORIA"
+      ],
+      "correcta": 0,
+      "explicacion": "**PILAR** es la herramienta del CCN para el **análisis de riesgos** con **MAGERIT** (v3). CLARA comprueba el cumplimiento del ENS en Windows, LUCIA gestiona ciberincidentes y GLORIA correlaciona eventos de seguridad."
+    },
+    {
+      "id": "25",
+      "tema": 28,
+      "enunciado": "Un sistema tiene, según el ENS, impacto bajo en confidencialidad, autenticidad y trazabilidad, medio en integridad y alto en disponibilidad. ¿Qué categoría le corresponde?",
+      "opciones": [
+        "BÁSICA, porque la mayoría de sus dimensiones tienen impacto bajo",
+        "MEDIA, por ser el valor intermedio del conjunto",
+        "ALTA, porque se toma el nivel más alto en cualquiera de las dimensiones",
+        "No se puede categorizar hasta valorar el riesgo residual"
+      ],
+      "correcta": 2,
+      "explicacion": "La categoría del sistema la marca **el nivel más alto de impacto en cualquiera de las dimensiones**: aquí la disponibilidad es **alta**, así que el sistema es de categoría **ALTA**. No se hace media ni se cuenta la mayoría. Truco: manda la dimensión peor."
+    },
+    {
+      "id": "26",
+      "tema": 28,
+      "enunciado": "En el anexo II del ENS, las medidas de seguridad se agrupan en:",
+      "opciones": [
+        "Marco organizativo [org], marco operacional [op] y medidas de protección [mp]",
+        "Medidas físicas, lógicas y organizativas",
+        "Medidas de prevención, detección y respuesta",
+        "Medidas básicas, medias y altas"
+      ],
+      "correcta": 0,
+      "explicacion": "Las medidas del anexo II se agrupan en **[org] marco organizativo**, **[op] marco operacional** y **[mp] medidas de protección**. Básica, media y alta son las **categorías** de los sistemas, y prevención, detección y respuesta forman parte de uno de los principios básicos."
+    },
+    {
+      "id": "27",
+      "tema": 28,
+      "enunciado": "Según su versión de 2022, ¿cuántos controles recoge la norma ISO/IEC 27002 y en cuántos temas se organizan?",
+      "opciones": [
+        "114 controles en 14 dominios",
+        "93 controles en 4 temas",
+        "133 controles en 11 dominios",
+        "100 controles en 5 temas"
+      ],
+      "correcta": 1,
+      "explicacion": "La **ISO/IEC 27002:2022** tiene **93 controles en 4 temas** (organizativos, de personas, físicos y tecnológicos). Los **114 controles en 14 dominios** son de la versión de 2013 y los 133 en 11 dominios, de la de 2005."
+    },
+    {
+      "id": "28",
+      "tema": 28,
+      "enunciado": "Si clasificamos los ataques por su efecto sobre el flujo de información, la fabricación (crear información falsa como si viniera de un emisor legítimo) afecta principalmente a la:",
+      "opciones": [
+        "Disponibilidad",
+        "Confidencialidad",
+        "Integridad",
+        "Autenticidad"
+      ],
+      "correcta": 3,
+      "explicacion": "La **fabricación** ataca la **autenticidad**. Las otras tres categorías son la **interrupción** (disponibilidad), la **interceptación** (confidencialidad) y la **modificación** (integridad). Truco: fabricar es falsificar el origen."
+    },
+    {
+      "id": "29",
+      "tema": 28,
+      "enunciado": "¿Qué tipo de malware oculta su presencia, y la de otro malware, operando con privilegios máximos en el sistema?",
+      "opciones": [
+        "Bomba lógica",
+        "Rootkit",
+        "Adware",
+        "Gusano"
+      ],
+      "correcta": 1,
+      "explicacion": "El **rootkit** **se oculta** a sí mismo y a otro malware con privilegios máximos, lo que hace muy difícil detectarlo desde el propio sistema. La bomba lógica se activa ante una condición, el adware muestra publicidad y el gusano se autopropaga."
+    },
+    {
+      "id": "30",
+      "tema": 28,
+      "enunciado": "El ataque que inyecta scripts maliciosos en páginas web que después verán otros usuarios es:",
+      "opciones": [
+        "XSS (*Cross-Site Scripting*)",
+        "Inyección SQL",
+        "MITM (intermediario)",
+        "*DNS spoofing*"
+      ],
+      "correcta": 0,
+      "explicacion": "El **XSS** inyecta **scripts** en páginas que se ejecutan en el navegador de **otros usuarios** (por ejemplo, para robar cookies de sesión). La **inyección SQL** mete código SQL en entradas no validadas para atacar la base de datos. MITM y *spoofing* no dependen de inyectar código en una web."
+    },
+    {
+      "id": "31",
+      "tema": 28,
+      "enunciado": "¿Cómo se denomina el phishing dirigido específicamente a directivos de una organización?",
+      "opciones": [
+        "*Smishing*",
+        "*Vishing*",
+        "*Pharming*",
+        "*Whaling*"
+      ],
+      "correcta": 3,
+      "explicacion": "El **whaling** («caza de ballenas») es el phishing **dirigido a directivos**. El **smishing** usa SMS, el **vishing** la voz, y el *pharming* redirige al usuario a una web falsa manipulando el DNS."
+    },
+    {
+      "id": "32",
+      "tema": 28,
+      "enunciado": "¿Qué catálogo clasifica los tipos de debilidad del software, frente a CVE, que identifica vulnerabilidades concretas, y CVSS, que puntúa su gravedad?",
+      "opciones": [
+        "CVE",
+        "CVSS",
+        "CWE",
+        "CPSTIC"
+      ],
+      "correcta": 2,
+      "explicacion": "**CWE** es el **catálogo de tipos de debilidad** (por ejemplo, la inyección SQL como tipo). **CVE** identifica cada vulnerabilidad concreta (CVE-año-número) y **CVSS** la puntúa de 0 a 10. CPSTIC es el catálogo de productos de seguridad cualificados del CCN."
+    },
+    {
+      "id": "33",
+      "tema": 28,
+      "enunciado": "¿Qué protección de seguridad física se aplica frente a las emanaciones electromagnéticas de los equipos?",
+      "opciones": [
+        "TEMPEST",
+        "Las esclusas (*mantrap*)",
+        "La detección por aspiración tipo VESDA",
+        "El SAI on-line"
+      ],
+      "correcta": 0,
+      "explicacion": "La protección **TEMPEST** (jaulas de Faraday, equipos certificados) evita que se capte información a partir de las **emanaciones electromagnéticas**. Las esclusas controlan el acceso de personas, VESDA detecta humo y el SAI protege frente a fallos eléctricos."
+    },
+    {
+      "id": "34",
+      "tema": 28,
+      "enunciado": "Un organismo quiere que 10 usuarios puedan comunicarse por parejas con criptografía simétrica, con una clave distinta para cada pareja. ¿Cuántas claves necesita?",
+      "opciones": [
+        "20",
+        "45",
+        "90",
+        "100"
+      ],
+      "correcta": 1,
+      "explicacion": "Con criptografía simétrica hacen falta **n(n−1)/2** claves: 10 × 9 / 2 = **45**. **20** serían las claves de la asimétrica (**2n**: un par por usuario), y 90 resulta de olvidar dividir entre 2. Por eso la distribución de claves es el gran problema de la simétrica."
+    },
+    {
+      "id": "35",
+      "tema": 28,
+      "enunciado": "¿Qué modo de operación de los cifradores de bloque es inseguro porque bloques de texto iguales producen bloques cifrados iguales?",
+      "opciones": [
+        "ECB",
+        "CBC",
+        "CTR",
+        "GCM"
+      ],
+      "correcta": 0,
+      "explicacion": "En **ECB** cada bloque se cifra por separado, así que **bloques iguales dan cifrados iguales** y se notan los patrones. CBC encadena los bloques con un vector de inicialización, CTR usa un contador y **GCM** añade autenticación (cifrado autenticado **AEAD**), por eso es el preferido."
+    },
+    {
+      "id": "36",
+      "tema": 28,
+      "enunciado": "¿Qué algoritmo asimétrico se usa solo para el acuerdo de claves, sin cifrar ni firmar?",
+      "opciones": [
+        "RSA",
+        "DSA",
+        "Diffie-Hellman",
+        "AES"
+      ],
+      "correcta": 2,
+      "explicacion": "**Diffie-Hellman** (y su variante con curvas elípticas, ECDH) sirve para **acordar una clave** secreta compartida, pero **no cifra ni firma**. RSA cifra y firma, DSA solo firma y AES es un algoritmo **simétrico**."
+    },
+    {
+      "id": "37",
+      "tema": 28,
+      "enunciado": "Según la equivalencia habitual, una clave ECC de 256 bits ofrece una seguridad parecida a una clave RSA de:",
+      "opciones": [
+        "1024 bits",
+        "2048 bits",
+        "3072 bits",
+        "15360 bits"
+      ],
+      "correcta": 2,
+      "explicacion": "**256 bits ECC ≈ 3072 bits RSA**: las curvas elípticas dan la **misma seguridad con claves mucho más cortas**, lo que ahorra cálculo y ancho de banda. 2048 bits es el mínimo habitual para RSA, pero ofrece algo menos de seguridad."
+    },
+    {
+      "id": "38",
+      "tema": 28,
+      "enunciado": "Un HMAC proporciona:",
+      "opciones": [
+        "Confidencialidad e integridad del mensaje",
+        "Integridad, autenticidad y no repudio",
+        "Solo la confidencialidad del mensaje",
+        "Integridad y autenticidad del origen, pero no no repudio"
+      ],
+      "correcta": 3,
+      "explicacion": "El **HMAC** combina un hash con una **clave secreta compartida**: da **integridad y autenticidad del origen**, pero **no no repudio**, porque las dos partes tienen la misma clave y cualquiera de ellas pudo generarlo. No cifra, así que no da confidencialidad. El no repudio exige firma digital."
+    },
+    {
+      "id": "39",
+      "tema": 28,
+      "enunciado": "¿Cuál es la forma adecuada de almacenar las contraseñas de los usuarios de una aplicación?",
+      "opciones": [
+        "Con sal y una función lenta como bcrypt, scrypt, Argon2 o PBKDF2",
+        "Con un hash MD5 sin sal",
+        "Cifradas con AES para poder recuperarlas si se olvidan",
+        "Con un hash SHA-256 simple, sin sal"
+      ],
+      "correcta": 0,
+      "explicacion": "Las contraseñas se guardan con **sal** y **funciones lentas** (**bcrypt, scrypt, Argon2, PBKDF2**), que encarecen los ataques de fuerza bruta y de tablas precalculadas. MD5 está roto, un SHA-256 simple sin sal es demasiado rápido, y cifrarlas de forma reversible permitiría recuperarlas a quien robe la clave."
+    },
+    {
+      "id": "40",
+      "tema": 28,
+      "enunciado": "¿Qué modo de IPsec encapsula el paquete IP completo dentro de un paquete nuevo y es el típico de las VPN entre sedes?",
+      "opciones": [
+        "Modo transporte",
+        "Modo túnel",
+        "Modo principal de IKE",
+        "Modo agresivo de IKE"
+      ],
+      "correcta": 1,
+      "explicacion": "El **modo túnel** **encapsula el paquete IP entero** en otro nuevo, por eso se usa en **VPN entre sedes** (*site-to-site*). El modo transporte solo protege la carga útil, de extremo a extremo entre equipos. Principal y agresivo son modos de negociación de IKE, no de protección de datos."
+    },
+    {
+      "id": "41",
+      "tema": 28,
+      "enunciado": "¿Qué proporciona DNSSEC?",
+      "opciones": [
+        "Confidencialidad de las consultas DNS",
+        "Integridad y autenticidad de las respuestas DNS, sin confidencialidad",
+        "Cifrado de los ficheros de zona en el servidor",
+        "Protección de la disponibilidad frente a ataques DDoS"
+      ],
+      "correcta": 1,
+      "explicacion": "**DNSSEC firma** las respuestas DNS, así que da **integridad y autenticidad**, pero **no confidencialidad**: las consultas siguen viajando en claro. Para cifrarlas existen otros mecanismos (DNS sobre TLS o HTTPS), y DNSSEC tampoco protege frente a DDoS."
+    },
+    {
+      "id": "42",
+      "tema": 28,
+      "enunciado": "¿Qué estándar poscuántico publicado por el NIST en 2024 (FIPS 203) se usa para el encapsulado de claves?",
+      "opciones": [
+        "ML-DSA",
+        "SLH-DSA",
+        "ML-KEM",
+        "ECDH"
+      ],
+      "correcta": 2,
+      "explicacion": "**ML-KEM** (FIPS 203, antes Kyber) es el estándar de **encapsulado de claves**. **ML-DSA** (FIPS 204, antes Dilithium) y **SLH-DSA** (FIPS 205) son de **firma**. ECDH es clásico y un ordenador cuántico lo rompería con el algoritmo de Shor."
+    },
+    {
+      "id": "43",
+      "tema": 28,
+      "enunciado": "Para verificar una firma digital, el receptor calcula el hash del documento recibido y lo compara con el que obtiene al descifrar la firma con:",
+      "opciones": [
+        "Su propia clave privada",
+        "La clave pública del emisor",
+        "La clave privada del emisor",
+        "La clave de sesión simétrica"
+      ],
+      "correcta": 1,
+      "explicacion": "La firma se genera con la **clave privada del emisor** y se verifica con su **clave pública**, tomada de su certificado. Si los dos hash coinciden, el documento es íntegro y lo firmó el titular. La clave privada del emisor solo la tiene él, y la del receptor no interviene en la firma."
+    },
+    {
+      "id": "44",
+      "tema": 28,
+      "enunciado": "Sobre la firma digital, señale la afirmación INCORRECTA:",
+      "opciones": [
+        "Garantiza la autenticidad del firmante",
+        "Garantiza la integridad del documento firmado",
+        "Permite el no repudio por parte del firmante",
+        "Proporciona por sí misma la confidencialidad del documento"
+      ],
+      "correcta": 3,
+      "explicacion": "Es falso: la firma digital **no da confidencialidad** por sí misma, porque cualquiera con la clave pública del firmante puede leer el documento. Da **autenticidad, integridad y no repudio**; para la confidencialidad hay que cifrar además con la clave pública del receptor."
+    },
+    {
+      "id": "45",
+      "tema": 28,
+      "enunciado": "En una PKI, ¿qué componente comprueba la identidad del solicitante antes de que se emita su certificado?",
+      "opciones": [
+        "La autoridad de certificación (CA)",
+        "La autoridad de validación (VA)",
+        "La autoridad de sellado de tiempo (TSA)",
+        "La autoridad de registro (RA)"
+      ],
+      "correcta": 3,
+      "explicacion": "La **autoridad de registro (RA)** **comprueba la identidad** del solicitante; después la **CA** emite y firma el certificado. La VA informa del estado de los certificados (OCSP) y la TSA certifica la fecha y hora de un dato."
+    },
+    {
+      "id": "46",
+      "tema": 28,
+      "enunciado": "¿Qué formato de fichero contiene un certificado junto con su clave privada, protegido por contraseña?",
+      "opciones": [
+        "`.cer` / `.crt`",
+        "`.p7b` (PKCS#7)",
+        "`.csr` (PKCS#10)",
+        "`.p12` / `.pfx` (PKCS#12)"
+      ],
+      "correcta": 3,
+      "explicacion": "El **.p12/.pfx (PKCS#12)** guarda el certificado **con su clave privada**, protegido por contraseña: es el que se usa para hacer copia o mover un certificado personal. El .cer/.crt solo lleva el certificado, el .p7b la cadena sin clave privada y el .csr es la solicitud a la CA."
+    },
+    {
+      "id": "47",
+      "tema": 28,
+      "enunciado": "¿Qué formato de firma de ETSI se basa en XML-DSig y se usa, por ejemplo, en las facturas electrónicas Facturae?",
+      "opciones": [
+        "CAdES",
+        "XAdES",
+        "PAdES",
+        "JAdES"
+      ],
+      "correcta": 1,
+      "explicacion": "**XAdES** se basa en **XML-DSig** y se usa en documentos XML como **Facturae**. **CAdES** se basa en CMS/PKCS#7 y sirve para ficheros de cualquier tipo, **PAdES** firma dentro del PDF y **JAdES** usa JSON. Truco: la letra del medio da el formato (C de CMS, X de XML, P de PDF, J de JSON)."
+    },
+    {
+      "id": "48",
+      "tema": 28,
+      "enunciado": "¿Qué servicio web de la Administración española permite validar firmas electrónicas y certificados?",
+      "opciones": [
+        "AutoFirma",
+        "Cl@ve",
+        "VALIDe",
+        "TS@"
+      ],
+      "correcta": 2,
+      "explicacion": "**VALIDe** es el servicio web para **validar firmas y certificados**. **AutoFirma** es la aplicación de escritorio para firmar, **Cl@ve** el sistema de identificación con claves concertadas y **TS@** la plataforma de sellado de tiempo de la AGE."
+    },
+    {
+      "id": "49",
+      "tema": 28,
+      "enunciado": "¿Cuánto mide una unidad de rack (1 U)?",
+      "opciones": [
+        "1,75 pulgadas (44,45 mm)",
+        "1 pulgada (25,4 mm)",
+        "2 pulgadas (50,8 mm)",
+        "19 pulgadas (482,6 mm)"
+      ],
+      "correcta": 0,
+      "explicacion": "**1 U = 1,75 pulgadas = 44,45 mm** de altura; un rack típico de 42 U mide unos 1,87 m útiles. Las **19 pulgadas** son la **anchura** normalizada del rack, no la altura de una unidad."
+    },
+    {
+      "id": "50",
+      "tema": 28,
+      "enunciado": "Un CPD consume en total 1.500 kW, de los que 1.000 kW corresponden a los equipos TI. ¿Cuál es su PUE?",
+      "opciones": [
+        "0,67",
+        "1,5",
+        "2,5",
+        "500"
+      ],
+      "correcta": 1,
+      "explicacion": "**PUE = energía total / energía TI = 1.500 / 1.000 = 1,5**. El 0,67 es el **DCiE** (1/PUE, es decir, el 67 %), 2,5 resulta de sumar en lugar de dividir y 500 kW es el consumo que no va a TI (clima, pérdidas, iluminación)."
+    },
+    {
+      "id": "51",
+      "tema": 28,
+      "enunciado": "Una sala necesita 3 equipos de climatización para su carga y se instalan 4. ¿Qué nivel de redundancia tiene?",
+      "opciones": [
+        "N",
+        "2N",
+        "N+1",
+        "2(N+1)"
+      ],
+      "correcta": 2,
+      "explicacion": "Hay **un componente de reserva** sobre los necesarios: **N+1** (N = 3, más 1). **2N** serían dos sistemas completos e independientes (6 equipos) y **2(N+1)** dos sistemas con su propia reserva cada uno (8 equipos)."
+    },
+    {
+      "id": "52",
+      "tema": 28,
+      "enunciado": "¿Qué disponibilidad de referencia corresponde a un CPD Tier IV, tolerante a fallos?",
+      "opciones": [
+        "99,671 %",
+        "99,741 %",
+        "99,982 %",
+        "99,995 %"
+      ],
+      "correcta": 3,
+      "explicacion": "**Tier IV = 99,995 %**, unos **26 minutos** de parada al año. 99,671 % es el Tier I (28,8 h), 99,741 % el Tier II (22,7 h) y 99,982 % el Tier III (1,6 h). Son valores de referencia, no requisitos certificables."
+    },
+    {
+      "id": "53",
+      "tema": 28,
+      "enunciado": "En la disposición de pasillos fríos y calientes de un CPD, el pasillo frío es:",
+      "opciones": [
+        "El que queda entre los frontales de los racks, por donde los equipos aspiran el aire",
+        "El que queda entre las traseras de los racks, por donde expulsan el aire",
+        "El falso techo por donde retorna el aire hacia los equipos de clima",
+        "El espacio bajo el suelo técnico por donde pasa el cableado"
+      ],
+      "correcta": 0,
+      "explicacion": "Los racks se enfrentan por el **frontal** para formar el **pasillo frío**, por donde **aspiran** el aire, y por la trasera para formar el **pasillo caliente**, por donde lo expulsan. El falso techo sirve para el retorno del aire caliente; con confinamiento se evita que los dos flujos se mezclen."
+    },
+    {
+      "id": "54",
+      "tema": 28,
+      "enunciado": "¿Qué sistema de detección de incendios toma muestras continuas del aire y permite una detección muy precoz en un CPD?",
+      "opciones": [
+        "La detección por aspiración, tipo VESDA",
+        "Los detectores térmicos",
+        "Los rociadores de preacción",
+        "Los extintores portátiles de CO₂"
+      ],
+      "correcta": 0,
+      "explicacion": "La **detección por aspiración (tipo VESDA)** analiza continuamente muestras de aire y detecta el humo **muy pronto**. Los detectores térmicos reaccionan más tarde, al subir la temperatura, y los rociadores y extintores son medios de **extinción**, no de detección."
+    },
+    {
+      "id": "55",
+      "tema": 28,
+      "enunciado": "Según ITIL, un problema cuya causa se ha identificado y que tiene documentada una solución temporal (*workaround*) es:",
+      "opciones": [
+        "Una incidencia",
+        "Un problema",
+        "Un error conocido",
+        "Una petición de servicio"
+      ],
+      "correcta": 2,
+      "explicacion": "Es un **error conocido**: problema con **causa identificada** y **solución temporal**, que se documenta en la base de conocimiento (KEDB). Un **problema** es la causa raíz de uno o varios incidentes, aún sin diagnosticar; una incidencia es la interrupción del servicio, y una petición de servicio es una solicitud estándar."
+    },
+    {
+      "id": "56",
+      "tema": 28,
+      "enunciado": "El técnico de primer nivel del CAU no puede resolver una incidencia por falta de conocimientos y la pasa al equipo de segundo nivel. ¿Qué tipo de escalado ha hecho?",
+      "opciones": [
+        "Escalado funcional",
+        "Escalado jerárquico",
+        "Gestión de cambios",
+        "Cierre de la incidencia"
+      ],
+      "correcta": 0,
+      "explicacion": "Pasar la incidencia a un nivel con **más conocimiento** (N1 → N2 → N3 o fabricante) es **escalado funcional**. El **escalado jerárquico** es avisar a los responsables, por impacto o por incumplimiento de plazos. Truco: funcional = más saber; jerárquico = más mando."
+    },
+    {
+      "id": "57",
+      "tema": 28,
+      "enunciado": "En la gestión de un ciberincidente según la guía CCN-STIC 817, ¿qué fase sigue a la contención?",
+      "opciones": [
+        "Detección, análisis e identificación",
+        "Erradicación",
+        "Preparación",
+        "Actividad post-incidente"
+      ],
+      "correcta": 1,
+      "explicacion": "El orden es **preparación → detección y análisis → contención → erradicación → recuperación → actividad post-incidente**. Tras limitar la propagación (contención) se **elimina la causa** (**erradicación**: malware, cuentas comprometidas, vulnerabilidad). Las lecciones aprendidas van al final."
+    },
+    {
+      "id": "58",
+      "tema": 28,
+      "enunciado": "¿Qué CERT es el de referencia para los ciudadanos y las entidades privadas en España?",
+      "opciones": [
+        "CCN-CERT",
+        "ESPDEF-CERT",
+        "INCIBE-CERT",
+        "CERT-EU"
+      ],
+      "correcta": 2,
+      "explicacion": "**INCIBE-CERT** atiende a **ciudadanos y entidades privadas** (y a operadores críticos privados, junto con la Oficina de Coordinación de Ciberseguridad). El **CCN-CERT** es el del **sector público**, ESPDEF-CERT el de **Defensa** y CERT-EU el de las instituciones europeas."
+    },
+    {
+      "id": "59",
+      "tema": 28,
+      "enunciado": "¿Qué protocolo utiliza VNC para el control remoto de escritorios?",
+      "opciones": [
+        "RDP",
+        "ICA",
+        "SSH",
+        "RFB"
+      ],
+      "correcta": 3,
+      "explicacion": "VNC usa el protocolo **RFB** (*Remote Framebuffer*) en el **TCP 5900** (+ número de pantalla); algunas implementaciones no cifran, así que se tunelizan por SSH. **RDP** es el protocolo de Microsoft (3389) e **ICA/HDX** el de Citrix."
+    },
+    {
+      "id": "60",
+      "tema": 28,
+      "enunciado": "¿Cuál es la medida adecuada para que los técnicos del CAU accedan por escritorio remoto a los puestos desde fuera de la organización?",
+      "opciones": [
+        "Publicar el puerto 3389 en Internet y exigir contraseñas robustas",
+        "Usar VNC sin cifrar, porque es multiplataforma",
+        "Dejar que cada técnico elija la herramienta de control remoto que prefiera",
+        "Acceder por VPN o por una pasarela RD Gateway, con autenticación fuerte y registro de las sesiones"
+      ],
+      "correcta": 3,
+      "explicacion": "RDP o VNC **nunca deben exponerse directamente a Internet**: se accede por **VPN** o **pasarela** (RD Gateway), con **autenticación fuerte**, cifrado y **registro** de sesiones, y avisando al usuario. Las herramientas no autorizadas son un vector habitual de los fraudes de «falso soporte técnico»."
+    }
+  ]
+}

@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 12 · test",
+  "fuente": "propio",
+  "tema": 12,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 12. Estructuras de datos, ficheros, algoritmos y formatos»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 12,
+      "enunciado": "Una estructura en la que el último elemento en entrar es el primero en salir es:",
+      "opciones": [
+        "Una cola",
+        "Una pila",
+        "Una lista circular",
+        "Un árbol"
+      ],
+      "correcta": 1,
+      "explicacion": "La **pila** es **LIFO** (Last In, First Out): el último en entrar es el primero en salir, con las operaciones push y pop. La **cola** es FIFO (el primero en entrar sale primero); la lista circular y el árbol no imponen ese orden de salida. Truco: una pila de platos."
+    },
+    {
+      "id": "02",
+      "tema": 12,
+      "enunciado": "¿Qué estructura de datos se usa para gestionar las llamadas a funciones?",
+      "opciones": [
+        "Cola",
+        "Pila",
+        "Grafo",
+        "Tabla hash"
+      ],
+      "correcta": 1,
+      "explicacion": "La **pila de llamadas** guarda el contexto de cada función: la última llamada es la primera en terminar (**LIFO**). Por eso una recursión sin caso base acaba en desbordamiento de pila. La cola sirve para procesos o impresión, y el grafo y la tabla hash no tienen ese orden."
+    },
+    {
+      "id": "03",
+      "tema": 12,
+      "enunciado": "El recorrido de un árbol binario de búsqueda que devuelve los valores ordenados es:",
+      "opciones": [
+        "Preorden",
+        "Postorden",
+        "Inorden",
+        "Por niveles"
+      ],
+      "correcta": 2,
+      "explicacion": "El **inorden** visita **izquierda, raíz, derecha**; como en un ABB a la izquierda están los menores y a la derecha los mayores, sale la secuencia **ordenada**. El preorden (raíz primero) sirve para copiar el árbol, el postorden (raíz al final) para borrarlo y el recorrido por niveles usa una cola."
+    },
+    {
+      "id": "04",
+      "tema": 12,
+      "enunciado": "En un árbol AVL, las alturas de los subárboles de cada nodo difieren como máximo en:",
+      "opciones": [
+        "0",
+        "1",
+        "2",
+        "log n"
+      ],
+      "correcta": 1,
+      "explicacion": "En un **AVL** las alturas de los dos subárboles de cada nodo difieren **como mucho en 1** (factor de equilibrio −1, 0 o 1). Exigir 0 sería un árbol perfecto, imposible en general; 2 ya obliga a rotar, y log n es la altura del árbol, no la diferencia permitida."
+    },
+    {
+      "id": "05",
+      "tema": 12,
+      "enunciado": "La estructura más usada para los índices de las bases de datos es:",
+      "opciones": [
+        "Lista enlazada",
+        "Árbol B+",
+        "Pila",
+        "Grafo dirigido"
+      ],
+      "correcta": 1,
+      "explicacion": "El **árbol B+** es multicamino y equilibrado, pensado para **leer bloques de disco**, y tiene los datos en las hojas enlazadas, lo que facilita búsquedas por rango. La lista enlazada obliga a búsquedas O(n), y la pila y el grafo no sirven como índice."
+    },
+    {
+      "id": "06",
+      "tema": 12,
+      "enunciado": "El recorrido en anchura (BFS) de un grafo utiliza:",
+      "opciones": [
+        "Una pila",
+        "Una cola",
+        "Un montículo",
+        "Recursividad"
+      ],
+      "correcta": 1,
+      "explicacion": "El recorrido en **anchura (BFS)** visita nivel a nivel y usa una **cola**. La **pila** (o la recursividad, que usa la pila del sistema) es la del recorrido en **profundidad (DFS)**. El montículo es para colas de prioridad. Truco: BFS = Breadth = cola; DFS = Depth = pila."
+    },
+    {
+      "id": "07",
+      "tema": 12,
+      "enunciado": "El algoritmo de Dijkstra calcula:",
+      "opciones": [
+        "El árbol de expansión mínima",
+        "El camino mínimo desde un origen",
+        "La ordenación topológica",
+        "El flujo máximo"
+      ],
+      "correcta": 1,
+      "explicacion": "**Dijkstra** calcula el **camino mínimo desde un origen** a todos los vértices, sin pesos negativos (lo usa OSPF). El árbol de expansión mínima lo obtienen **Prim y Kruskal**; la ordenación topológica y el flujo máximo son otros problemas de grafos."
+    },
+    {
+      "id": "08",
+      "tema": 12,
+      "enunciado": "Cuando dos claves distintas producen la misma posición en una tabla hash se produce:",
+      "opciones": [
+        "Un desbordamiento de pila",
+        "Una colisión",
+        "Un fallo de página",
+        "Una recursión"
+      ],
+      "correcta": 1,
+      "explicacion": "Se produce una **colisión**, que se resuelve por **encadenamiento** (una lista en cada posición) o por **direccionamiento abierto** (buscar otra posición libre). El desbordamiento de pila es propio de la recursión sin fin y el fallo de página es de la memoria virtual."
+    },
+    {
+      "id": "09",
+      "tema": 12,
+      "enunciado": "La única organización posible en una cinta magnética es la:",
+      "opciones": [
+        "Directa",
+        "Indexada",
+        "Secuencial",
+        "Por dispersión"
+      ],
+      "correcta": 2,
+      "explicacion": "La cinta solo permite **acceso secuencial**: para llegar a un registro hay que recorrer los anteriores, así que la única organización posible es la **secuencial**. La directa, la indexada y la de dispersión necesitan saltar a una posición, lo que exige un soporte de acceso directo como el disco."
+    },
+    {
+      "id": "10",
+      "tema": 12,
+      "enunciado": "La organización secuencial indexada permite:",
+      "opciones": [
+        "Solo acceso secuencial",
+        "Solo acceso directo",
+        "Acceso secuencial y directo",
+        "Solo acceso por hash"
+      ],
+      "correcta": 2,
+      "explicacion": "La **secuencial indexada** combina un fichero secuencial ordenado con un **índice** de claves y direcciones (más una zona de desbordamiento), así que admite **acceso secuencial y directo**. Las otras opciones se quedan con un solo tipo de acceso; el hash es propio de la organización por dispersión."
+    },
+    {
+      "id": "11",
+      "tema": 12,
+      "enunciado": "Un índice con una entrada por cada bloque del fichero es:",
+      "opciones": [
+        "Denso",
+        "Disperso",
+        "Secundario",
+        "Invertido"
+      ],
+      "correcta": 1,
+      "explicacion": "Un índice **disperso** tiene **una entrada por bloque**; el **denso** tiene una por **registro**. Primario y secundario es otra clasificación (según el campo por el que se indexa), y un índice invertido es otro concepto, propio de los buscadores de texto."
+    },
+    {
+      "id": "12",
+      "tema": 12,
+      "enunciado": "Según el teorema de Böhm y Jacopini, basta con estas estructuras:",
+      "opciones": [
+        "Secuencia, selección e iteración",
+        "Secuencia y salto incondicional",
+        "Selección y recursión",
+        "Iteración y GOTO"
+      ],
+      "correcta": 0,
+      "explicacion": "El teorema de **Böhm y Jacopini** (1966), base de la **programación estructurada**, demuestra que basta con **secuencia, selección e iteración**. Precisamente sirve para prescindir del salto incondicional (GOTO), y la recursión no forma parte del teorema."
+    },
+    {
+      "id": "13",
+      "tema": 12,
+      "enunciado": "La búsqueda binaria requiere que los datos estén:",
+      "opciones": [
+        "En una lista enlazada",
+        "Ordenados",
+        "En una tabla hash",
+        "Duplicados"
+      ],
+      "correcta": 1,
+      "explicacion": "La **búsqueda binaria** compara con el elemento central y descarta la mitad, así que necesita los datos **ordenados** y con **acceso directo** a cada posición. Una lista enlazada no da acceso directo y una tabla hash ya tiene su propio método de búsqueda."
+    },
+    {
+      "id": "14",
+      "tema": 12,
+      "enunciado": "La complejidad de la búsqueda binaria es:",
+      "opciones": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada paso **divide el intervalo a la mitad**, así que hacen falta unos log₂ n pasos: **O(log n)**. O(1) es el acceso por índice o por hash, O(n) la búsqueda secuencial y O(n log n) la de las buenas ordenaciones."
+    },
+    {
+      "id": "15",
+      "tema": 12,
+      "enunciado": "¿Qué algoritmo de ordenación tiene O(n²) en el peor caso pero O(n log n) de media?",
+      "opciones": [
+        "Mergesort",
+        "Heapsort",
+        "Quicksort",
+        "Burbuja"
+      ],
+      "correcta": 2,
+      "explicacion": "**Quicksort** es O(n log n) de media, pero **O(n²) en el peor caso**, cuando el pivote elegido es siempre el peor (por ejemplo, datos ya ordenados con el primer elemento como pivote). Mergesort y Heapsort son O(n log n) siempre, y Burbuja es O(n²) también de media."
+    },
+    {
+      "id": "16",
+      "tema": 12,
+      "enunciado": "¿Cuál de estos algoritmos de ordenación es estable?",
+      "opciones": [
+        "Selección",
+        "Quicksort",
+        "Heapsort",
+        "Mergesort"
+      ],
+      "correcta": 3,
+      "explicacion": "**Mergesort** es **estable**: respeta el orden original de los elementos con la misma clave. Selección, Quicksort y Heapsort no lo son. Truco: estables son burbuja, inserción y mergesort."
+    },
+    {
+      "id": "17",
+      "tema": 12,
+      "enunciado": "¿Qué formato de imagen usa compresión con pérdida?",
+      "opciones": [
+        "PNG",
+        "GIF",
+        "JPEG",
+        "BMP"
+      ],
+      "correcta": 2,
+      "explicacion": "**JPEG** usa compresión **con pérdida**, pensada para fotografías. PNG y GIF comprimen **sin pérdida** y BMP normalmente no comprime."
+    },
+    {
+      "id": "18",
+      "tema": 12,
+      "enunciado": "El formato de imagen vectorial basado en XML es:",
+      "opciones": [
+        "SVG",
+        "TIFF",
+        "WebP",
+        "GIF"
+      ],
+      "correcta": 0,
+      "explicacion": "**SVG** (Scalable Vector Graphics) es **vectorial**, está escrito en **XML** y se escala sin perder calidad. TIFF, WebP y GIF son formatos de **mapa de bits** (rejillas de píxeles)."
+    },
+    {
+      "id": "19",
+      "tema": 12,
+      "enunciado": "La norma ISO del formato PDF/A, pensado para archivo a largo plazo, es:",
+      "opciones": [
+        "ISO 32000",
+        "ISO 19005",
+        "ISO/IEC 26300",
+        "ISO/IEC 29500"
+      ],
+      "correcta": 1,
+      "explicacion": "**PDF/A** es la norma **ISO 19005**: incrusta las fuentes y prohíbe contenido dinámico y cifrado para garantizar la conservación. ISO 32000 es el PDF general, ISO/IEC 26300 es ODF e ISO/IEC 29500 es OOXML."
+    },
+    {
+      "id": "20",
+      "tema": 12,
+      "enunciado": "¿Qué formato empaqueta ficheros pero no los comprime?",
+      "opciones": [
+        "ZIP",
+        "GZIP",
+        "TAR",
+        "7z"
+      ],
+      "correcta": 2,
+      "explicacion": "**TAR** solo **empaqueta** varios ficheros en uno, sin comprimir; por eso se combina con GZIP (.tar.gz). ZIP y 7z empaquetan y comprimen, y GZIP comprime un único fichero."
+    },
+    {
+      "id": "21",
+      "tema": 12,
+      "enunciado": "Un tipo abstracto de datos (TAD) se caracteriza por:",
+      "opciones": [
+        "Definir los valores y las operaciones sobre ellos sin especificar su implementación",
+        "Ser la forma concreta en que los datos se organizan en memoria",
+        "Estar formado solo por tipos simples como entero o carácter",
+        "Tener siempre un tamaño fijo determinado en la compilación"
+      ],
+      "correcta": 0,
+      "explicacion": "Un **TAD** define **valores y operaciones** sin decir **cómo se implementan** (encapsulamiento). La forma concreta de organizarlos en memoria es la **estructura de datos**. Un TAD puede ser compuesto y no tiene por qué ser estático."
+    },
+    {
+      "id": "22",
+      "tema": 12,
+      "enunciado": "¿Cuál de las siguientes es una estructura de datos estática?",
+      "opciones": [
+        "La lista enlazada",
+        "El árbol binario de búsqueda",
+        "El array",
+        "El grafo con listas de adyacencia"
+      ],
+      "correcta": 2,
+      "explicacion": "El **array** es **estático**: su tamaño queda fijado en la compilación. Las listas enlazadas, los árboles y las listas de adyacencia son **dinámicas**: crecen y decrecen en ejecución mediante punteros."
+    },
+    {
+      "id": "23",
+      "tema": 12,
+      "enunciado": "Sobre una pila vacía se ejecutan push(1), push(2), push(3), pop(), push(4), pop(), pop(). ¿Qué elemento queda en la cima?",
+      "opciones": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "correcta": 1,
+      "explicacion": "La pila es **LIFO**. Tras los tres push queda 1-2-3 (cima 3); pop saca el 3; push(4) deja 1-2-4; pop saca el 4 y el último pop saca el 2. Solo queda el **1**, que es la cima. Error típico: pensar que el último pop saca el 1, como si fuera una cola."
+    },
+    {
+      "id": "24",
+      "tema": 12,
+      "enunciado": "Sobre una cola vacía se ejecutan encolar(A), encolar(B), encolar(C), desencolar(), encolar(D), desencolar(). ¿Qué elemento queda al frente?",
+      "opciones": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "correcta": 3,
+      "explicacion": "La cola es **FIFO**: sale siempre el que lleva más tiempo. El primer desencolar saca **A** y el segundo saca **B**, así que quedan C y D, con **C al frente**. D está al final porque fue el último en entrar; pensar en D es razonar como en una pila."
+    },
+    {
+      "id": "25",
+      "tema": 12,
+      "enunciado": "Una lista enlazada en la que el último nodo apunta al primero se denomina:",
+      "opciones": [
+        "Doblemente enlazada",
+        "Bicola",
+        "Montículo",
+        "Circular"
+      ],
+      "correcta": 3,
+      "explicacion": "En la lista **circular** el último nodo apunta al primero. La **doblemente enlazada** tiene en cada nodo un puntero al siguiente y otro al anterior; la **bicola** (deque) permite insertar y sacar por los dos extremos, y el montículo es un árbol."
+    },
+    {
+      "id": "26",
+      "tema": 12,
+      "enunciado": "Buscar un elemento por su valor en una lista enlazada no ordenada tiene una complejidad, en el peor caso, de:",
+      "opciones": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n log n)"
+      ],
+      "correcta": 1,
+      "explicacion": "En una lista enlazada no hay acceso directo: hay que recorrer los nodos uno a uno, así que buscar es **O(n)**. Lo que sí es O(1) es **insertar o borrar** cuando ya se tiene el nodo, y O(log n) exigiría datos ordenados con acceso directo (búsqueda binaria)."
+    },
+    {
+      "id": "27",
+      "tema": 12,
+      "enunciado": "En un árbol, un nodo hoja es aquel que:",
+      "opciones": [
+        "No tiene hijos",
+        "No tiene padre",
+        "Tiene exactamente dos hijos",
+        "Está en el primer nivel"
+      ],
+      "correcta": 0,
+      "explicacion": "Una **hoja** es un nodo **sin hijos**. El nodo sin padre es la **raíz**, que es también el que está en el primer nivel; tener dos hijos es lo máximo en un árbol binario, pero no define a la hoja."
+    },
+    {
+      "id": "28",
+      "tema": 12,
+      "enunciado": "¿Cuál es el número máximo de nodos de un árbol binario de altura 4?",
+      "opciones": [
+        "16",
+        "8",
+        "15",
+        "31"
+      ],
+      "correcta": 2,
+      "explicacion": "Un árbol binario de altura h tiene como máximo **2ʰ − 1** nodos: 2⁴ − 1 = **15** (1 + 2 + 4 + 8 por niveles). 16 olvida restar 1, 8 son solo los nodos del último nivel y 31 corresponde a altura 5."
+    },
+    {
+      "id": "29",
+      "tema": 12,
+      "enunciado": "Se insertan en un árbol binario de búsqueda vacío las claves 1, 2, 3, 4 y 5, en ese orden. ¿Cuál es la complejidad de buscar una clave en el árbol resultante?",
+      "opciones": [
+        "O(log n), porque todo ABB está equilibrado",
+        "O(n), porque el árbol degenera en una lista",
+        "O(1), porque las claves están ordenadas",
+        "O(n log n), porque hay que reordenarlo antes de buscar"
+      ],
+      "correcta": 1,
+      "explicacion": "Al insertar en orden creciente cada clave va a la derecha de la anterior y el ABB **degenera en una lista**: buscar es **O(n)**, el peor caso. El O(log n) solo se garantiza si el árbol está **equilibrado** (por eso existen AVL y rojinegros), y un ABB no se reordena para buscar."
+    },
+    {
+      "id": "30",
+      "tema": 12,
+      "enunciado": "En un árbol binario, la raíz es A, su hijo izquierdo es B y su hijo derecho es C; B tiene como hijo izquierdo a D y como hijo derecho a E. ¿Cuál es su recorrido en postorden?",
+      "opciones": [
+        "D, E, B, C, A",
+        "A, B, D, E, C",
+        "D, B, E, A, C",
+        "A, B, C, D, E"
+      ],
+      "correcta": 0,
+      "explicacion": "El **postorden** visita **izquierda, derecha, raíz**: primero el subárbol de B (D, E, B), luego C y al final la raíz A: **D, E, B, C, A**. A, B, D, E, C es el **preorden**, D, B, E, A, C el **inorden** y A, B, C, D, E el recorrido **por niveles**."
+    },
+    {
+      "id": "31",
+      "tema": 12,
+      "enunciado": "En un árbol B+, a diferencia de un árbol B:",
+      "opciones": [
+        "Cada nodo tiene como máximo dos hijos",
+        "No es necesario que el árbol esté equilibrado",
+        "Los datos están solo en la raíz",
+        "Los datos están solo en las hojas, que están enlazadas entre sí"
+      ],
+      "correcta": 3,
+      "explicacion": "En el **B+** los datos están **solo en las hojas**, y las hojas están **enlazadas**, lo que permite recorridos secuenciales y por rango; por eso es la base de los índices de bases de datos. Ambos son árboles **multicamino** (más de dos hijos) y **equilibrados**."
+    },
+    {
+      "id": "32",
+      "tema": 12,
+      "enunciado": "La estructura con la que se implementa habitualmente una cola de prioridad es:",
+      "opciones": [
+        "Una pila",
+        "Una lista circular",
+        "Un montículo (heap)",
+        "Un trie"
+      ],
+      "correcta": 2,
+      "explicacion": "La cola de prioridad saca primero el de **mayor prioridad**, y el **montículo** (árbol binario completo en el que cada padre es mayor o menor que sus hijos) da ese elemento en la raíz. La pila es LIFO, la lista circular no ordena por prioridad y el trie sirve para prefijos de cadenas."
+    },
+    {
+      "id": "33",
+      "tema": 12,
+      "enunciado": "La estructura de árbol especializada en prefijos de cadenas, útil para el autocompletado, es:",
+      "opciones": [
+        "El árbol AVL",
+        "El montículo",
+        "El trie",
+        "El árbol B+"
+      ],
+      "correcta": 2,
+      "explicacion": "El **trie** organiza las cadenas por **prefijos**: cada camino desde la raíz forma un prefijo, ideal para **autocompletado**. El AVL es un ABB equilibrado, el montículo implementa colas de prioridad y el B+ es el de los índices de bases de datos."
+    },
+    {
+      "id": "34",
+      "tema": 12,
+      "enunciado": "Para representar un grafo disperso (con pocas aristas en relación con sus vértices), la opción más eficiente en memoria es:",
+      "opciones": [
+        "La lista de adyacencia",
+        "La matriz de adyacencia",
+        "Un array de n × n posiciones",
+        "Una pila de vértices"
+      ],
+      "correcta": 0,
+      "explicacion": "La **lista de adyacencia** guarda solo las aristas que existen, así que es mejor para grafos **dispersos**. La **matriz de adyacencia** ocupa siempre n × n posiciones (las dos primeras opciones son lo mismo) y conviene para grafos **densos**. Una pila no representa un grafo."
+    },
+    {
+      "id": "35",
+      "tema": 12,
+      "enunciado": "El recorrido en profundidad (DFS) de un grafo se implementa con:",
+      "opciones": [
+        "Una cola",
+        "Una pila o mediante recursión",
+        "Una tabla hash",
+        "Un montículo"
+      ],
+      "correcta": 1,
+      "explicacion": "El **DFS** baja todo lo posible por cada camino antes de retroceder, y para eso usa una **pila** (explícita o la del sistema, con **recursión**). La **cola** es la del recorrido en **anchura (BFS)**. Tabla hash y montículo no definen el orden del recorrido."
+    },
+    {
+      "id": "36",
+      "tema": 12,
+      "enunciado": "Para calcular el camino mínimo desde un origen en un grafo con aristas de peso negativo se debe usar el algoritmo de:",
+      "opciones": [
+        "Dijkstra",
+        "Prim",
+        "Kruskal",
+        "Bellman-Ford"
+      ],
+      "correcta": 3,
+      "explicacion": "**Bellman-Ford** calcula caminos mínimos desde un origen y **admite pesos negativos**. **Dijkstra** no funciona con pesos negativos, y **Prim** y **Kruskal** no calculan caminos, sino el **árbol de expansión mínima**."
+    },
+    {
+      "id": "37",
+      "tema": 12,
+      "enunciado": "En una tabla hash, la técnica de resolución de colisiones que guarda en cada posición una lista con todos los elementos que caen en ella se llama:",
+      "opciones": [
+        "Encadenamiento",
+        "Sondeo lineal",
+        "Sondeo cuadrático",
+        "Doble hash"
+      ],
+      "correcta": 0,
+      "explicacion": "El **encadenamiento** guarda en cada posición una **lista** con los elementos que colisionan. El sondeo lineal, el cuadrático y el doble hash son variantes del **direccionamiento abierto**: buscan **otra posición libre** en la propia tabla."
+    },
+    {
+      "id": "38",
+      "tema": 12,
+      "enunciado": "Una tabla hash de 400 posiciones contiene 300 elementos. ¿Cuál es su factor de carga?",
+      "opciones": [
+        "1,33",
+        "0,75",
+        "0,25",
+        "75"
+      ],
+      "correcta": 1,
+      "explicacion": "El **factor de carga** es **elementos ÷ tamaño de la tabla**: 300 ÷ 400 = **0,75**. 1,33 es la división al revés, 0,25 es la proporción de posiciones libres y 75 es el porcentaje sin pasar a tanto por uno. Si el factor crece mucho, la tabla se redimensiona."
+    },
+    {
+      "id": "39",
+      "tema": 12,
+      "enunciado": "La unidad de información que se lee o escribe en el disco de una sola vez se denomina:",
+      "opciones": [
+        "Registro lógico",
+        "Campo clave",
+        "Factor de bloqueo",
+        "Registro físico o bloque"
+      ],
+      "correcta": 3,
+      "explicacion": "El **registro físico o bloque** es lo que se transfiere con el disco de una vez. El **registro lógico** es la unidad que maneja el programa, el campo clave identifica a cada registro y el **factor de bloqueo** es el número de registros lógicos que caben en un bloque."
+    },
+    {
+      "id": "40",
+      "tema": 12,
+      "enunciado": "Un fichero tiene registros lógicos de longitud fija de 256 bytes y bloques físicos de 4.096 bytes. ¿Cuál es su factor de bloqueo?",
+      "opciones": [
+        "8",
+        "32",
+        "16",
+        "4"
+      ],
+      "correcta": 2,
+      "explicacion": "El **factor de bloqueo** es el número de **registros lógicos por bloque**: 4.096 ÷ 256 = **16**. 8 correspondería a registros de 512 bytes, 32 a registros de 128 bytes y 4 a registros de 1.024 bytes."
+    },
+    {
+      "id": "41",
+      "tema": 12,
+      "enunciado": "En la organización directa o relativa de ficheros:",
+      "opciones": [
+        "Los registros se graban uno tras otro y solo se accede secuencialmente",
+        "La posición del registro se deduce directamente de la clave, que es el número de registro",
+        "Una función hash transforma la clave en una dirección y gestiona colisiones",
+        "Se mantiene un índice con claves y direcciones junto a una zona de desbordamiento"
+      ],
+      "correcta": 1,
+      "explicacion": "En la organización **directa o relativa** la **posición se deduce de la clave** (el número de registro), lo que la hace muy rápida aunque puede dejar huecos. Grabar uno tras otro es la **secuencial**, la función hash es la organización **por dispersión** y el índice con desbordamiento es la **secuencial indexada**."
+    },
+    {
+      "id": "42",
+      "tema": 12,
+      "enunciado": "En la organización aleatoria o por dispersión (hash), los registros cuya dirección calculada ya está ocupada se guardan en:",
+      "opciones": [
+        "El índice primario",
+        "El fichero de movimientos",
+        "La cabecera del fichero",
+        "La zona de desbordamiento"
+      ],
+      "correcta": 3,
+      "explicacion": "Cuando dos claves dan la misma dirección hay una **colisión**, y el registro va a la **zona de desbordamiento** (overflow). El índice primario es propio de las organizaciones indexadas y el fichero de movimientos es un tipo de fichero según su uso, no una zona del fichero."
+    },
+    {
+      "id": "43",
+      "tema": 12,
+      "enunciado": "Un índice construido sobre un campo distinto de aquel por el que está ordenado el fichero es un índice:",
+      "opciones": [
+        "Secundario",
+        "Primario",
+        "Disperso",
+        "Denso"
+      ],
+      "correcta": 0,
+      "explicacion": "El índice **secundario** se construye sobre **otro campo** distinto del que ordena el fichero; el **primario**, sobre la clave que ordena el fichero. Denso y disperso es otra clasificación (una entrada por registro o por bloque)."
+    },
+    {
+      "id": "44",
+      "tema": 12,
+      "enunciado": "El fichero que recoge los cambios (altas, bajas y modificaciones) con los que se actualiza periódicamente el fichero maestro es el fichero de:",
+      "opciones": [
+        "Maniobra",
+        "Histórico",
+        "Movimientos",
+        "Copia de seguridad"
+      ],
+      "correcta": 2,
+      "explicacion": "El fichero de **movimientos** recoge los **cambios** que actualizan el **maestro**, que guarda los datos permanentes. El de **maniobra** es temporal (uso intermedio de un proceso), el **histórico** guarda datos pasados y la copia de seguridad sirve para recuperar."
+    },
+    {
+      "id": "45",
+      "tema": 12,
+      "enunciado": "El principal inconveniente de la organización secuencial indexada es que:",
+      "opciones": [
+        "Necesita reorganizaciones periódicas por el crecimiento de la zona de desbordamiento",
+        "Solo permite el acceso secuencial a los registros",
+        "No puede almacenarse en disco, solo en cinta",
+        "Impide buscar un registro por su clave"
+      ],
+      "correcta": 0,
+      "explicacion": "La **secuencial indexada** sirve para los dos accesos, pero las altas van a la **zona de desbordamiento** y, cuando esta crece, el rendimiento baja: necesita **reorganizaciones periódicas**. Permite acceso directo por el índice, por lo que requiere disco (no cinta) y precisamente permite buscar por clave."
+    },
+    {
+      "id": "46",
+      "tema": 12,
+      "enunciado": "La propiedad de un algoritmo por la que, con los mismos datos de entrada, produce siempre el mismo resultado se denomina:",
+      "opciones": [
+        "Preciso",
+        "Finito",
+        "Definido",
+        "Eficiente"
+      ],
+      "correcta": 2,
+      "explicacion": "Un algoritmo es **definido** cuando, con los mismos datos, da siempre el mismo resultado. **Preciso** significa sin ambigüedad en cada paso y **finito** que termina. La eficiencia es deseable, pero no es una de las tres propiedades que lo definen."
+    },
+    {
+      "id": "47",
+      "tema": 12,
+      "enunciado": "Dada la función «int f(int n) { return n * f(n - 1); }», ¿qué problema tiene?",
+      "opciones": [
+        "Tiene complejidad O(1) y no calcula nada útil",
+        "No tiene caso base, por lo que produce un desbordamiento de pila",
+        "Solo funciona con valores negativos de n",
+        "Es iterativa y no puede expresarse de forma recursiva"
+      ],
+      "correcta": 1,
+      "explicacion": "Una función recursiva necesita un **caso base** que detenga las llamadas (por ejemplo, «if (n <= 1) return 1;»). Sin él, f se llama indefinidamente y cada llamada ocupa espacio en la pila hasta provocar un **desbordamiento de pila**. La función es recursiva, no iterativa, y falla con cualquier valor de n."
+    },
+    {
+      "id": "48",
+      "tema": 12,
+      "enunciado": "¿Cuál es la complejidad del fragmento «for (i = 0; i < n; i++) for (j = 0; j < n; j++) suma++;»?",
+      "opciones": [
+        "O(n)",
+        "O(2n)",
+        "O(n log n)",
+        "O(n²)"
+      ],
+      "correcta": 3,
+      "explicacion": "Hay **dos bucles anidados** de n vueltas cada uno: la instrucción interior se ejecuta n × n veces, **O(n²)**, como burbuja, selección o inserción. O(n) sería un solo bucle; O(2n) serían dos bucles **seguidos** (y además se simplifica a O(n)); O(n log n) requiere dividir el problema."
+    },
+    {
+      "id": "49",
+      "tema": 12,
+      "enunciado": "Se busca un valor en un vector ordenado de 1.000.000 de elementos mediante búsqueda binaria. ¿Cuántas comparaciones se necesitan, como máximo, aproximadamente?",
+      "opciones": [
+        "6",
+        "20",
+        "1.000",
+        "500.000"
+      ],
+      "correcta": 1,
+      "explicacion": "La búsqueda binaria parte el intervalo por la mitad en cada paso: hacen falta unos **log₂ n** pasos, y 2²⁰ ≈ 1.048.576, así que bastan unas **20** comparaciones. 6 sale de usar el logaritmo decimal, 1.000 es la raíz cuadrada y 500.000 es el caso medio de la búsqueda **secuencial**."
+    },
+    {
+      "id": "50",
+      "tema": 12,
+      "enunciado": "Señale cuál de los siguientes algoritmos de ordenación NO es estable:",
+      "opciones": [
+        "Selección",
+        "Burbuja",
+        "Inserción",
+        "Mergesort"
+      ],
+      "correcta": 0,
+      "explicacion": "La **selección** no es estable: al llevar el mínimo al principio intercambia elementos lejanos y puede alterar el orden de los iguales. **Burbuja** e **inserción** solo intercambian o desplazan elementos adyacentes, y **Mergesort** mezcla respetando el orden de los iguales: los tres son **estables**."
+    },
+    {
+      "id": "51",
+      "tema": 12,
+      "enunciado": "¿Qué algoritmo de ordenación tiene complejidad O(n log n) también en el peor caso y, además, no es estable?",
+      "opciones": [
+        "Mergesort",
+        "Quicksort",
+        "Heapsort",
+        "Inserción"
+      ],
+      "correcta": 2,
+      "explicacion": "**Heapsort** es O(n log n) en todos los casos y **no es estable**. **Mergesort** también es O(n log n) siempre, pero **sí es estable**; Quicksort es O(n²) en el peor caso e inserción es O(n²)."
+    },
+    {
+      "id": "52",
+      "tema": 12,
+      "enunciado": "Resolver un sudoku probando valores y deshaciendo la elección cuando no lleva a una solución es un ejemplo de la estrategia:",
+      "opciones": [
+        "Divide y vencerás",
+        "Voraz (greedy)",
+        "Programación dinámica",
+        "Vuelta atrás (backtracking)"
+      ],
+      "correcta": 3,
+      "explicacion": "La **vuelta atrás** prueba opciones y **deshace** las que no llevan a solución (sudoku, n reinas). **Divide y vencerás** parte el problema en subproblemas (Mergesort), la estrategia **voraz** elige en cada paso la mejor opción local sin deshacer, y la **programación dinámica** guarda resultados de subproblemas."
+    },
+    {
+      "id": "53",
+      "tema": 12,
+      "enunciado": "Los algoritmos de Dijkstra, Prim y Kruskal siguen la estrategia de diseño:",
+      "opciones": [
+        "Vuelta atrás (backtracking)",
+        "Voraz (greedy)",
+        "Programación dinámica",
+        "Divide y vencerás"
+      ],
+      "correcta": 1,
+      "explicacion": "Los tres son **voraces**: en cada paso eligen la **mejor opción local** (la arista o el vértice más barato) y no la revisan. La **programación dinámica** es la de Floyd-Warshall o la mochila, **divide y vencerás** la de Mergesort y la vuelta atrás la del sudoku."
+    },
+    {
+      "id": "54",
+      "tema": 12,
+      "enunciado": "En un fichero de texto, el salto de línea se codifica en Windows como:",
+      "opciones": [
+        "CRLF (retorno de carro + salto de línea)",
+        "LF (solo salto de línea)",
+        "CR (solo retorno de carro)",
+        "Un byte nulo (NUL)"
+      ],
+      "correcta": 0,
+      "explicacion": "Windows usa **CRLF** (dos caracteres: retorno de carro y salto de línea), mientras que **Unix/Linux y macOS** usan **LF**. Por eso un fichero de texto creado en Linux puede verse en una sola línea en editores antiguos de Windows. El byte nulo no es un salto de línea."
+    },
+    {
+      "id": "55",
+      "tema": 12,
+      "enunciado": "Un fichero .docx (OOXML, ISO/IEC 29500) es internamente:",
+      "opciones": [
+        "Un fichero binario propietario sin estructura pública",
+        "Un fichero PDF con texto editable",
+        "Un archivo ZIP que contiene ficheros XML",
+        "Un único fichero de texto plano en formato RTF"
+      ],
+      "correcta": 2,
+      "explicacion": "Los formatos **OOXML** (.docx, .xlsx, .pptx) son **ZIP con XML dentro**: si se cambia la extensión a .zip se pueden abrir. El binario propietario sin estructura pública era el antiguo .doc, y PDF y RTF son formatos distintos."
+    },
+    {
+      "id": "56",
+      "tema": 12,
+      "enunciado": "¿Qué formato de imagen admite como máximo 256 colores?",
+      "opciones": [
+        "PNG",
+        "JPEG",
+        "TIFF",
+        "GIF"
+      ],
+      "correcta": 3,
+      "explicacion": "**GIF** está limitado a **256 colores** (paleta de 8 bits), aunque comprime sin pérdida (LZW) y admite animaciones. PNG, JPEG y TIFF admiten millones de colores, por eso GIF no sirve para fotografías."
+    },
+    {
+      "id": "57",
+      "tema": 12,
+      "enunciado": "¿Cuál es, aproximadamente, la tasa de bits de un audio con calidad de CD (44,1 kHz, 16 bits) en estéreo y sin comprimir (WAV/PCM)?",
+      "opciones": [
+        "1.411 kbps",
+        "706 kbps",
+        "128 kbps",
+        "176 kbps"
+      ],
+      "correcta": 0,
+      "explicacion": "Tasa = muestras por segundo × bits por muestra × canales: 44.100 × 16 × 2 = 1.411.200 b/s ≈ **1.411 kbps**. 706 kbps sería en **mono**, 128 kbps es una tasa típica de **MP3** (con pérdida) y 176 sale de confundir bits y bytes (176.400 **bytes** por segundo)."
+    },
+    {
+      "id": "58",
+      "tema": 12,
+      "enunciado": "Señale cuál de los siguientes NO es un códec de vídeo, sino un contenedor:",
+      "opciones": [
+        "H.264/AVC",
+        "MKV (Matroska)",
+        "AV1",
+        "VP9"
+      ],
+      "correcta": 1,
+      "explicacion": "**MKV** es un **contenedor**: agrupa pistas de vídeo, audio y subtítulos en un fichero, como MP4, AVI, MOV o WebM. **H.264**, **AV1** y **VP9** son **códecs**: definen cómo se comprime cada pista de vídeo."
+    },
+    {
+      "id": "59",
+      "tema": 12,
+      "enunciado": "El algoritmo DEFLATE, que usan ZIP y GZIP, combina:",
+      "opciones": [
+        "RLE y LZW",
+        "Huffman y RLE",
+        "LZW y JPEG",
+        "LZ77 y codificación Huffman"
+      ],
+      "correcta": 3,
+      "explicacion": "**DEFLATE** = **LZ77** (diccionario de cadenas repetidas) + **Huffman** (códigos más cortos para los símbolos más frecuentes). LZW es el algoritmo de GIF, RLE cuenta repeticiones y JPEG es un formato con pérdida, no un algoritmo de ZIP."
+    },
+    {
+      "id": "60",
+      "tema": 12,
+      "enunciado": "Codificar la cadena «AAAABBBCC» como «4A3B2C» es un ejemplo de compresión:",
+      "opciones": [
+        "Huffman",
+        "Con pérdida, como JPEG",
+        "RLE (codificación por longitud de series)",
+        "LZW por diccionario"
+      ],
+      "correcta": 2,
+      "explicacion": "**RLE** (Run-Length Encoding) sustituye cada serie de símbolos repetidos por el **número de repeticiones** y el símbolo, y es **sin pérdida**. Huffman asigna códigos de distinta longitud según la frecuencia, LZW usa un diccionario de cadenas y aquí no se pierde información."
+    }
+  ]
+}

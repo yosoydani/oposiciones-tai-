@@ -7,126 +7,785 @@
   "origen": "Doc «Tema 22. Accesibilidad, usabilidad y seguridad en el desarrollo»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
   "actualizado": "2026-11-12",
   "preguntas": [
-    {"id": "01", "tema": 22, "enunciado": "¿Qué nivel de conformidad WCAG exige la normativa europea y española de accesibilidad web del sector público?", "opciones": ["A", "AA", "AAA", "Ninguno, solo recomienda"], "correcta": 1,
-     "explicacion": "Se exige el **nivel AA**: la norma armonizada EN 301 549 V3.2.1, que da presunción de conformidad con el RD 1112/2018 y la Directiva 2016/2102, incorpora **WCAG 2.1 AA**. El nivel A es el mínimo y el AAA no se exige como política general para sitios enteros."},
-    {"id": "02", "tema": 22, "enunciado": "Los cuatro principios de las WCAG son:", "opciones": ["Perceptible, operable, comprensible y robusto", "Perceptible, usable, compatible y robusto", "Visible, operable, sencillo y seguro", "Accesible, usable, comprensible y fiable"], "correcta": 0,
-     "explicacion": "Los principios son **POUR: perceptible, operable, comprensible y robusto**, que el art. 5 del RD 1112/2018 también recoge. Las demás opciones mezclan términos parecidos («usable», «compatible»); «Compatible» es el nombre de la pauta 4.1, no un principio."},
-    {"id": "03", "tema": 22, "enunciado": "Según el criterio 1.4.3 (AA), la relación de contraste mínima del texto normal es:", "opciones": ["3:1", "4,5:1", "7:1", "21:1"], "correcta": 1,
-     "explicacion": "El criterio 1.4.3 Contraste (mínimo), de nivel AA, exige **4,5:1** para el texto normal. 3:1 es lo que se pide al texto grande, 7:1 es el contraste mejorado (1.4.6, AAA) y 21:1 es el máximo posible (negro sobre blanco)."},
-    {"id": "04", "tema": 22, "enunciado": "¿Qué criterio de éxito elimina WCAG 2.2?", "opciones": ["1.1.1 Contenido no textual", "2.4.7 Foco visible", "4.1.1 Procesamiento", "4.1.2 Nombre, función, valor"], "correcta": 2,
-     "explicacion": "WCAG 2.2 **retira el 4.1.1 Procesamiento** (*Parsing*) por considerarlo obsoleto. 1.1.1, 2.4.7 y 4.1.2 siguen vigentes. Truco: 2.2 añade 9 criterios y quita 1."},
-    {"id": "05", "tema": 22, "enunciado": "El criterio 2.5.8 Tamaño del objetivo (mínimo), de WCAG 2.2, fija:", "opciones": ["24 × 24 píxeles CSS, nivel AA", "44 × 44 píxeles CSS, nivel A", "48 × 48 píxeles, nivel AAA", "16 × 16 píxeles, nivel AA"], "correcta": 0,
-     "explicacion": "El 2.5.8, nuevo en WCAG 2.2, pide objetivos de al menos **24 × 24 px CSS** en **nivel AA**. Los 44 × 44 px corresponden al 2.5.5 Tamaño del objetivo (mejorado), que es de nivel AAA, no A."},
-    {"id": "06", "tema": 22, "enunciado": "El Real Decreto 1112/2018 transpone:", "opciones": ["La Directiva (UE) 2019/882", "La Directiva (UE) 2016/2102", "La Directiva (UE) 2022/2555", "El Reglamento (UE) 2016/679"], "correcta": 1,
-     "explicacion": "El RD 1112/2018 transpone la **Directiva (UE) 2016/2102**, sobre accesibilidad de sitios web y apps del **sector público**. La Directiva 2019/882 (Acta Europea de Accesibilidad) la transpone la Ley 11/2023, la 2022/2555 es la NIS2 y el Reglamento 2016/679 es el RGPD, que además no necesita transposición."},
-    {"id": "07", "tema": 22, "enunciado": "Según el RD 1112/2018, las aplicaciones móviles del sector público deben ser accesibles desde:", "opciones": ["20-9-2019", "20-9-2020", "23-6-2021", "28-6-2025"], "correcta": 2,
-     "explicacion": "Las **apps móviles** deben ser accesibles desde el **23-6-2021**. Las webs nuevas, desde el 20-9-2019 (un año después de la entrada en vigor), las ya existentes desde el 20-9-2020 (dos años), y el 28-6-2025 es la fecha de aplicación de la Ley 11/2023."},
-    {"id": "08", "tema": 22, "enunciado": "Una reclamación del art. 13 del RD 1112/2018 que no se resuelve en plazo:", "opciones": ["Se entiende estimada a los 20 días hábiles", "Se entiende desestimada a los 2 meses", "Se entiende estimada a los 3 meses", "Pasa al Defensor del Pueblo"], "correcta": 1,
-     "explicacion": "La reclamación del art. 13 tiene un plazo de resolución de **2 meses** y el **silencio es desestimatorio**. Los 20 días hábiles son el plazo para responder a una queja o solicitud de información accesible (art. 12), no a una reclamación."},
-    {"id": "09", "tema": 22, "enunciado": "En la AGE, las unidades responsables de accesibilidad se designan en:", "opciones": ["Las Subsecretarías de cada departamento", "La Secretaría General de Administración Digital", "Las Delegaciones del Gobierno", "Cada unidad que publique contenidos"], "correcta": 0,
-     "explicacion": "Según el art. 16 del RD 1112/2018, en la AGE las unidades responsables de accesibilidad están en las **Subsecretarías** de cada departamento; en las comunidades autónomas hay una para todo su ámbito. La SGAD es la que ejerce el seguimiento y publica el Observatorio de Accesibilidad Web."},
-    {"id": "10", "tema": 22, "enunciado": "La declaración de accesibilidad debe actualizarse:", "opciones": ["Cada tres años", "Solo cuando cambie la normativa", "Al menos una vez al año o tras cada revisión", "Cada seis meses"], "correcta": 2,
-     "explicacion": "El art. 15 del RD 1112/2018 obliga a actualizar la declaración **al menos una vez al año o tras cada revisión**. Cada tres años es la periodicidad del informe a la Comisión Europea, no de la declaración."},
-    {"id": "11", "tema": 22, "enunciado": "La versión de EN 301 549 citada hoy como norma armonizada en el DOUE es:", "opciones": ["V1.1.2, que incorpora WCAG 2.0", "V2.1.2, que incorpora WCAG 2.2", "V3.2.1, que incorpora WCAG 2.1 AA", "V4.1.1, que incorpora WCAG 3.0"], "correcta": 2,
-     "explicacion": "La armonizada vigente es la **V3.2.1 (2021)**, que incorpora **WCAG 2.1 AA** (en España, UNE-EN 301549:2022). La V2.1.2 incorporaba WCAG 2.1, no 2.2, y la V4.1.1, publicada en 2026, incorpora WCAG 2.2 y aún no está citada en el DOUE. WCAG 3.0 es solo un borrador."},
-    {"id": "12", "tema": 22, "enunciado": "La Ley 11/2023, en materia de accesibilidad de productos y servicios:", "opciones": ["Transpone la Directiva (UE) 2019/882 y sus requisitos se aplican desde el 28-6-2025", "Deroga el RD 1112/2018", "Solo afecta a sitios web públicos", "Obliga a las microempresas que prestan servicios sin excepción"], "correcta": 0,
-     "explicacion": "Su **título I transpone la Directiva (UE) 2019/882** (Acta Europea de Accesibilidad) y los requisitos se aplican desde el **28-6-2025**. No deroga el RD 1112/2018, que sigue regulando el sector público; se dirige sobre todo a productos y servicios del sector privado y **exime a las microempresas** que prestan servicios."},
-    {"id": "13", "tema": 22, "enunciado": "Según ISO 9241-11, la usabilidad se mide por:", "opciones": ["Rapidez, seguridad y coste", "Efectividad, eficiencia y satisfacción", "Accesibilidad, fiabilidad y portabilidad", "Estética, consistencia y ayuda"], "correcta": 1,
-     "explicacion": "ISO 9241-11 define la usabilidad como el grado en que un producto permite a usuarios concretos lograr objetivos con **efectividad, eficiencia y satisfacción** en un contexto de uso. Truco: las tres «E/S». Fiabilidad y portabilidad son características de calidad del software, no de usabilidad."},
-    {"id": "14", "tema": 22, "enunciado": "En el ENS (RD 311/2022), la medida de bloqueo del puesto de trabajo es:", "opciones": ["mp.eq.1", "mp.eq.2", "mp.info.6", "op.exp.6"], "correcta": 1,
-     "explicacion": "El **bloqueo del puesto** es la medida **mp.eq.2**. mp.eq.1 es el puesto de trabajo despejado, mp.info.6 las copias de seguridad y op.exp.6 la protección frente a código dañino."},
-    {"id": "15", "tema": 22, "enunciado": "Una copia de seguridad diferencial guarda:", "opciones": ["Todos los datos", "Los cambios desde la última copia de cualquier tipo", "Los cambios desde la última copia completa", "Solo los ficheros de sistema"], "correcta": 2,
-     "explicacion": "La **diferencial** guarda los cambios **desde la última completa**, y para restaurar basta con la completa más la última diferencial. La opción b describe la **incremental**, que parte de la última copia de cualquier tipo; la opción a es la copia completa."},
-    {"id": "16", "tema": 22, "enunciado": "En el OWASP Top 10:2025, la categoría A01 es:", "opciones": ["Inyección", "Fallos criptográficos", "Pérdida de control de acceso", "Configuración de seguridad incorrecta"], "correcta": 2,
-     "explicacion": "**A01:2025 es la Pérdida de control de acceso** (*Broken Access Control*), que además absorbe SSRF. En 2025 la configuración incorrecta es A02, los fallos criptográficos A04 y la inyección A05."},
-    {"id": "17", "tema": 22, "enunciado": "¿Qué categoría es nueva en el OWASP Top 10:2025?", "opciones": ["Diseño inseguro", "Manejo inadecuado de condiciones excepcionales", "Inyección", "Fallos de autenticación"], "correcta": 1,
-     "explicacion": "**A10:2025 Manejo inadecuado de condiciones excepcionales** es nueva, igual que A03 Fallos en la cadena de suministro de software. Diseño inseguro ya existía en 2021 (era A04), y la inyección y los fallos de autenticación vienen de ediciones anteriores."},
-    {"id": "18", "tema": 22, "enunciado": "La defensa principal contra la inyección SQL es:", "opciones": ["Cifrar la base de datos", "Usar HTTPS", "Consultas parametrizadas", "Ocultar los mensajes de error"], "correcta": 2,
-     "explicacion": "Las **consultas parametrizadas** (*prepared statements*) separan el código SQL de los datos, así que la entrada nunca se interpreta como SQL. Cifrar la base de datos o usar HTTPS protegen otras cosas, y ocultar los errores solo dificulta la explotación, no la evita."},
-    {"id": "19", "tema": 22, "enunciado": "Un script malicioso guardado en un comentario de un foro y ejecutado en el navegador de cada visitante es un:", "opciones": ["XSS almacenado", "XSS reflejado", "CSRF", "SSRF"], "correcta": 0,
-     "explicacion": "Es **XSS almacenado** (persistente): el código **queda guardado en el servidor** y se sirve a todos los visitantes, por eso es el más grave. En el XSS reflejado el código va en la propia petición; CSRF fuerza acciones sin ejecutar código en la página y SSRF hace que el servidor haga peticiones."},
-    {"id": "20", "tema": 22, "enunciado": "El SAST se caracteriza por:", "opciones": ["Atacar la aplicación en ejecución desde fuera", "Analizar el código fuente sin ejecutarlo", "Proteger la aplicación en producción", "Ser una prueba manual de intrusión"], "correcta": 1,
-     "explicacion": "**SAST = análisis estático** del código fuente **sin ejecutarlo** (caja blanca), por ejemplo con SonarQube o Semgrep. La opción a es el DAST, la c el RASP y la d el pentesting. Truco: la S de SAST es de *Static*; la D de DAST, de *Dynamic*."},
-
-    {"id": "21", "tema": 22, "enunciado": "¿Cómo se denomina la actividad de concebir desde el origen entornos, productos y servicios utilizables por todas las personas, en la mayor medida posible, sin necesidad de adaptación ni diseño especializado?", "opciones": ["Ajustes razonables", "Accesibilidad universal", "Diseño universal o diseño para todas las personas", "Productos de apoyo"], "correcta": 2,
-     "explicacion": "Es el **diseño universal** o «diseño para todas las personas»: se piensa **desde el origen** y **sin adaptación**. La accesibilidad universal es la condición que deben cumplir los entornos y productos (el resultado), los ajustes razonables son adaptaciones para un caso concreto y los productos de apoyo son tecnologías para la persona."},
-    {"id": "22", "tema": 22, "enunciado": "Las adaptaciones concretas para un caso particular cuando el diseño universal no basta, sin imponer una carga desproporcionada, se denominan:", "opciones": ["Ajustes razonables", "Productos de apoyo", "Diseño para todas las personas", "Medidas de acción positiva"], "correcta": 0,
-     "explicacion": "Son **ajustes razonables**: medidas **para un caso particular** cuando el diseño universal no es suficiente, siempre que no supongan una carga desproporcionada. Los productos de apoyo son tecnologías como lectores de pantalla o líneas braille, y el diseño para todas las personas actúa desde el origen, no caso por caso."},
-    {"id": "23", "tema": 22, "enunciado": "¿Cuál de los siguientes NO es uno de los siete principios del diseño universal formulados en 1997?", "opciones": ["Uso equitativo", "Tolerancia al error", "Bajo esfuerzo físico", "Consistencia y estándares"], "correcta": 3,
-     "explicacion": "**Consistencia y estándares** es una de las **heurísticas de Nielsen**, no un principio del diseño universal. Los siete principios del Center for Universal Design (Ron Mace, 1997) son: uso equitativo, flexibilidad, uso simple e intuitivo, información perceptible, tolerancia al error, bajo esfuerzo físico, y tamaño y espacio para el acercamiento y uso."},
-    {"id": "24", "tema": 22, "enunciado": "¿Cuál de las siguientes es una de las diez heurísticas de usabilidad de Nielsen?", "opciones": ["Tamaño y espacio para el acercamiento y uso", "Reconocer antes que recordar", "Uso equitativo", "Información perceptible"], "correcta": 1,
-     "explicacion": "**Reconocer antes que recordar** es una heurística de Nielsen (1994): el usuario no debería tener que memorizar información entre pantallas. Las otras tres opciones son principios del **diseño universal**, una confusión típica entre las dos listas."},
-    {"id": "25", "tema": 22, "enunciado": "¿Qué método de evaluación de la usabilidad realizan expertos, sin usuarios, revisando la interfaz frente a un conjunto de principios reconocidos?", "opciones": ["Test de usuarios", "Pruebas A/B", "Encuesta con la escala SUS", "Evaluación heurística"], "correcta": 3,
-     "explicacion": "La **evaluación heurística** la hacen **expertos sin usuarios**, comprobando la interfaz frente a principios como las heurísticas de Nielsen. El test de usuarios, las pruebas A/B y la encuesta SUS (10 ítems) son métodos **con usuarios**."},
-    {"id": "26", "tema": 22, "enunciado": "¿Qué norma ISO describe el diseño centrado en el usuario como un proceso iterativo de entender el contexto, especificar requisitos, diseñar y evaluar?", "opciones": ["ISO 9241-11", "ISO/IEC 40500", "ISO 9241-210", "ISO/IEC 27001"], "correcta": 2,
-     "explicacion": "El **diseño centrado en el usuario** se recoge en la **ISO 9241-210**. La ISO 9241-11 define la usabilidad (efectividad, eficiencia y satisfacción), la ISO/IEC 40500 es la versión ISO de las WCAG y la ISO/IEC 27001 trata los sistemas de gestión de la seguridad de la información."},
-    {"id": "27", "tema": 22, "enunciado": "¿Qué norma regula las condiciones básicas de acceso de las personas con discapacidad a las tecnologías, productos y servicios relacionados con la sociedad de la información y medios de comunicación social?", "opciones": ["El Real Decreto 1494/2007, de 12 de noviembre", "El Real Decreto 1112/2018, de 7 de septiembre", "La Ley 11/2023, de 8 de mayo", "El Real Decreto 311/2022, de 3 de mayo"], "correcta": 0,
-     "explicacion": "Es el **RD 1494/2007**, al que alude el enunciado del tema. El RD 1112/2018 derogó sus arts. 5 a 7 (accesibilidad web) al regular las webs y apps del sector público; la Ley 11/2023 trata productos y servicios del sector privado y el RD 311/2022 es el ENS."},
-    {"id": "28", "tema": 22, "enunciado": "¿Qué pautas de la WAI (W3C) se dirigen a las herramientas de autor, como gestores de contenidos y editores?", "opciones": ["WCAG", "UAAG", "WAI-ARIA", "ATAG"], "correcta": 3,
-     "explicacion": "Las **ATAG** (*Authoring Tool Accessibility Guidelines*) se dirigen a las **herramientas de autor**. Las WCAG son para el contenido web, las UAAG para navegadores y reproductores (*user agents*) y WAI-ARIA aporta atributos para aplicaciones dinámicas. Truco: la A de ATAG es de *Authoring*."},
-    {"id": "29", "tema": 22, "enunciado": "¿Cuántos criterios de conformidad tiene WCAG 2.2?", "opciones": ["78", "86", "61", "87"], "correcta": 1,
-     "explicacion": "WCAG 2.2 tiene **86 criterios** (31 A, 24 AA y 31 AAA). Sale de los **78 de WCAG 2.1 + 9 nuevos − 1 retirado** (el 4.1.1). 87 es el error de olvidar la retirada del 4.1.1, y 61 era la cifra de WCAG 2.0."},
-    {"id": "30", "tema": 22, "enunciado": "La pauta «2.1 Accesible por teclado» de WCAG 2.2 pertenece al principio:", "opciones": ["Operable", "Perceptible", "Comprensible", "Robusto"], "correcta": 0,
-     "explicacion": "Todas las pautas que empiezan por 2 son del principio **Operable** (teclado, tiempo suficiente, convulsiones, navegable y modalidades de entrada). Las que empiezan por 1 son de Perceptible, las de 3 de Comprensible y la 4.1 de Robusto. Truco: el primer número indica el principio en el orden POUR."},
-    {"id": "31", "tema": 22, "enunciado": "Un texto de 14 pt en negrita sobre fondo blanco tiene una relación de contraste de 3,5:1. Según WCAG 2.2:", "opciones": ["No cumple el 1.4.3, que exige 4,5:1 a todo texto", "Cumple el contraste mejorado (1.4.6, AAA)", "No cumple ningún criterio, porque el mínimo es 7:1", "Cumple el 1.4.3 (AA), porque es texto grande"], "correcta": 3,
-     "explicacion": "14 pt en negrita es **texto grande** (igual que 18 pt normal), y para él el 1.4.3 (AA) exige solo **3:1**, así que 3,5:1 **cumple**. No llega al AAA (1.4.6), que pide 4,5:1 en texto grande y 7:1 en texto normal. El 4,5:1 del 1.4.3 es para texto normal."},
-    {"id": "32", "tema": 22, "enunciado": "El criterio 1.4.4 Cambio de tamaño del texto (AA) exige que el texto pueda ampliarse sin pérdida de contenido ni de funcionalidad hasta el:", "opciones": ["150 %", "400 %", "200 %", "300 %"], "correcta": 2,
-     "explicacion": "El 1.4.4 exige poder ampliar el texto hasta el **200 %** sin pérdida. No hay que confundirlo con el 1.4.10 Reajuste (AA), que exige que no haga falta desplazarse en dos dimensiones con un ancho de **320 px CSS**."},
-    {"id": "33", "tema": 22, "enunciado": "Un formulario indica qué campos son obligatorios solo poniendo su etiqueta en color rojo. ¿Qué criterio WCAG incumple?", "opciones": ["1.4.3 Contraste (mínimo)", "1.4.1 Uso del color", "2.4.7 Foco visible", "3.1.1 Idioma de la página"], "correcta": 1,
-     "explicacion": "El **1.4.1 Uso del color** (nivel A) prohíbe que el color sea **el único medio** de transmitir información: hay que añadir, por ejemplo, un asterisco o el texto «obligatorio». El problema no es el contraste (1.4.3), sino que la información depende solo del color."},
-    {"id": "34", "tema": 22, "enunciado": "¿Cuál de estos criterios de conformidad es NUEVO en WCAG 2.2?", "opciones": ["1.4.10 Reajuste", "2.4.7 Foco visible", "3.3.8 Autenticación accesible (mínimo)", "4.1.3 Mensajes de estado"], "correcta": 2,
-     "explicacion": "El **3.3.8 Autenticación accesible (mínimo)**, de nivel AA, es uno de los 9 nuevos de WCAG 2.2: no se pueden exigir pruebas cognitivas como recordar o transcribir. El 1.4.10 y el 4.1.3 llegaron con WCAG 2.1, y el 2.4.7 Foco visible existe desde WCAG 2.0 (el nuevo es el 2.4.11 Foco no oculto)."},
-    {"id": "35", "tema": 22, "enunciado": "Según la primera regla de uso de WAI-ARIA, para crear un botón accesible lo correcto es:", "opciones": ["Usar el elemento nativo <button>", "Usar un <div> con role=\"button\"", "Usar un <span> con aria-label", "Usar un <div> con tabindex=\"0\" y aria-pressed"], "correcta": 0,
-     "explicacion": "La **primera regla de ARIA** dice que, si existe un **elemento HTML nativo** con la semántica necesaria, se use ese en lugar de ARIA. <button> ya trae rol, foco y manejo del teclado. Un <div> con role=\"button\" obliga a programar a mano el foco y las teclas."},
-    {"id": "36", "tema": 22, "enunciado": "¿Qué atributo WAI-ARIA hace que un lector de pantalla anuncie los cambios de una región de la página sin mover el foco?", "opciones": ["aria-hidden", "aria-expanded", "aria-describedby", "aria-live"], "correcta": 3,
-     "explicacion": "**aria-live** marca una región viva cuyos cambios se anuncian **sin mover el foco** (role=\"status\", del criterio 4.1.3, equivale a una región viva educada). aria-hidden oculta el elemento a los lectores, aria-expanded indica si algo está desplegado y aria-describedby asocia una descripción."},
-    {"id": "37", "tema": 22, "enunciado": "En la norma EN 301 549, ¿qué cláusula recoge los requisitos del software, incluidas las aplicaciones móviles?", "opciones": ["Cláusula 9", "Cláusula 10", "Cláusula 11", "Cláusula 12"], "correcta": 2,
-     "explicacion": "La **cláusula 11** es la de **software, incluidas las apps móviles**. La 9 es la web (incorpora las WCAG), la 10 los documentos no web y la 12 la documentación y los servicios de apoyo. Truco: 9 web, 10 documentos, 11 software, en orden."},
-    {"id": "38", "tema": 22, "enunciado": "Según el art. 3 del RD 1112/2018, ¿cuál de estos contenidos NO está excluido de su ámbito de aplicación?", "opciones": ["El contenido multimedia en directo", "Los mapas en línea, si la información esencial se ofrece de forma accesible", "Un formulario PDF publicado en 2024 y necesario para un trámite activo", "Los contenidos de terceros ni financiados ni controlados por la entidad"], "correcta": 2,
-     "explicacion": "La exclusión de ficheros ofimáticos solo alcanza a los **publicados antes del 20-9-2018**, y ni siquiera a esos si son **necesarios para trámites activos**; un PDF de 2024 para un trámite activo **debe ser accesible**. El multimedia en directo, los mapas en línea (con la información esencial accesible) y los contenidos de terceros no controlados sí están excluidos."},
-    {"id": "39", "tema": 22, "enunciado": "Según el art. 7 del RD 1112/2018, ¿cuál de estas razones puede justificar acogerse a la excepción por carga desproporcionada?", "opciones": ["La falta de prioridad del proyecto", "La falta de tiempo para adaptar el sitio", "La falta de conocimientos técnicos del personal", "Una carga financiera u organizativa excesiva, evaluada por escrito"], "correcta": 3,
-     "explicacion": "Solo cabe por una **carga financiera u organizativa excesiva**, con una evaluación inicial escrita que se revisa al menos una vez al año y se indica en la declaración. El RD dice expresamente que la **falta de prioridad, de tiempo o de conocimientos no la justifica**."},
-    {"id": "40", "tema": 22, "enunciado": "Una persona presenta una queja por la falta de accesibilidad de una web ministerial (art. 12 del RD 1112/2018). ¿En qué plazo debe responderse?", "opciones": ["10 días hábiles", "20 días hábiles", "1 mes", "2 meses"], "correcta": 1,
-     "explicacion": "Las quejas y solicitudes de información accesible se responden en **20 días hábiles**; sin respuesta, se entienden no aceptadas. 2 meses es el plazo de la **reclamación** del art. 13, y 10 días hábiles es el plazo del requerimiento de aclaración."},
-    {"id": "41", "tema": 22, "enunciado": "Según el RD 1112/2018, ¿desde qué fecha debían cumplir los requisitos de accesibilidad los sitios web del sector público que ya existían antes de su entrada en vigor?", "opciones": ["20-9-2019", "20-9-2020", "23-6-2021", "28-6-2025"], "correcta": 1,
-     "explicacion": "Los sitios **ya existentes** tenían **dos años** desde la entrada en vigor (20-9-2018), así que el plazo era el **20-9-2020** (la Directiva fija el 23-9-2020). El 20-9-2019 era para los sitios nuevos, el 23-6-2021 para las apps y el 28-6-2025 es la fecha de la Ley 11/2023."},
-    {"id": "42", "tema": 22, "enunciado": "¿Qué órgano ejerce las funciones de seguimiento del RD 1112/2018 y publica el Observatorio de Accesibilidad Web en el Portal de Administración Electrónica?", "opciones": ["La Secretaría General de Administración Digital (SGAD)", "El Centro Criptológico Nacional (CCN)", "La Agencia Española de Protección de Datos", "El Defensor del Pueblo"], "correcta": 0,
-     "explicacion": "El seguimiento corresponde al ministerio competente en función pública y administración digital, y lo ejerce la **SGAD**, que publica el **Observatorio de Accesibilidad Web** en el PAe. El CCN se ocupa de la ciberseguridad (guías CCN-STIC) y la AEPD de la protección de datos."},
-    {"id": "43", "tema": 22, "enunciado": "¿Cuál de estos servicios está incluido en el ámbito de los requisitos de accesibilidad de la Ley 11/2023?", "opciones": ["El portal web de un ministerio", "Los servicios bancarios a consumidores", "La sede electrónica de un ayuntamiento", "La app de una consejería autonómica"], "correcta": 1,
-     "explicacion": "La Ley 11/2023 incluye los **servicios bancarios a consumidores**, junto con el comercio electrónico, las comunicaciones electrónicas, el transporte de viajeros, los libros electrónicos o el 112. Los portales, sedes y apps de las administraciones se rigen por el **RD 1112/2018**."},
-    {"id": "44", "tema": 22, "enunciado": "Una tienda en línea tiene 8 trabajadores y un volumen de negocios anual de 1,5 millones de euros. Respecto a los requisitos de accesibilidad de servicios de la Ley 11/2023:", "opciones": ["Está exenta, porque es una microempresa que presta servicios", "Debe cumplirlos desde el 28-6-2025", "Debe cumplirlos desde el 28-6-2030", "Solo debe cumplir el nivel A de las WCAG"], "correcta": 0,
-     "explicacion": "Es una **microempresa**: **menos de 10 personas y hasta 2 millones de euros** de volumen de negocios o balance. Las microempresas que **prestan servicios** están **exentas**. El 28-6-2025 es la fecha general de aplicación y 2030 el fin del periodo transitorio para productos que ya se usaban."},
-    {"id": "45", "tema": 22, "enunciado": "Un ransomware cifra los ficheros de un puesto de usuario y pide un rescate. ¿Qué dimensiones de la seguridad ataca principalmente?", "opciones": ["Confidencialidad y trazabilidad", "Integridad y disponibilidad", "Solo la autenticidad", "Solo la confidencialidad"], "correcta": 1,
-     "explicacion": "El ransomware **altera** los datos (integridad) y los deja **inaccesibles** (disponibilidad). Los troyanos, keyloggers y spyware son los que atacan sobre todo la **confidencialidad**, y la suplantación ataca la autenticidad."},
-    {"id": "46", "tema": 22, "enunciado": "¿Qué medida del ENS (RD 311/2022) trata la protección de los equipos portátiles, que incluye su inventario y el cifrado del disco?", "opciones": ["mp.eq.1", "mp.eq.2", "mp.info.6", "mp.eq.3"], "correcta": 3,
-     "explicacion": "La **protección de portátiles** es la medida **mp.eq.3** (inventario, **cifrado de disco** con BitLocker, FileVault o LUKS, y protección física). mp.eq.1 es el puesto despejado, mp.eq.2 el bloqueo del puesto y mp.info.6 las copias de seguridad. Truco: eq 1, 2, 3 = despejado, bloqueo, portátiles."},
-    {"id": "47", "tema": 22, "enunciado": "Se hace una copia completa el domingo y copias incrementales de lunes a jueves. El viernes por la mañana falla el disco. ¿Qué hay que restaurar para recuperar los datos del jueves?", "opciones": ["La completa del domingo y la incremental del jueves", "La completa del domingo y las cuatro incrementales, de lunes a jueves", "Solo la incremental del jueves", "La completa del domingo y la incremental del lunes"], "correcta": 1,
-     "explicacion": "Cada **incremental** guarda solo los cambios desde la copia anterior, así que hay que aplicar la **completa y todas las incrementales en orden**. Restaurar la completa y la última copia (opción a) solo funcionaría si las copias fueran **diferenciales**, porque cada diferencial acumula todo desde la completa."},
-    {"id": "48", "tema": 22, "enunciado": "Antes de reutilizar o desechar un disco que contenía información sensible, ¿qué medida garantiza la confidencialidad?", "opciones": ["Un formateo rápido", "Borrar los ficheros y vaciar la papelera", "El borrado seguro por sobrescritura, la desmagnetización o la destrucción física", "La desfragmentación del disco"], "correcta": 2,
-     "explicacion": "Para impedir la recuperación hace falta **borrado seguro**: **sobrescritura**, desmagnetización o destrucción física. Un formateo rápido o vaciar la papelera solo marcan el espacio como libre, y los datos se pueden recuperar con herramientas forenses. La desfragmentación no borra nada."},
-    {"id": "49", "tema": 22, "enunciado": "¿Qué principio de diseño seguro exige comprobar la autorización en cada acceso a un recurso, sin fiarse de comprobaciones anteriores?", "opciones": ["Defensa en profundidad", "Mediación completa", "Economía del mecanismo", "Diseño abierto"], "correcta": 1,
-     "explicacion": "La **mediación completa** obliga a verificar la autorización en **cada** acceso. La defensa en profundidad pone varias capas independientes, la economía del mecanismo busca diseños simples y el diseño abierto rechaza la «seguridad por oscuridad». Todos proceden de Saltzer y Schroeder (1975), salvo la defensa en profundidad."},
-    {"id": "50", "tema": 22, "enunciado": "En el modelo de amenazas STRIDE, la amenaza «Tampering» vulnera la propiedad de:", "opciones": ["Confidencialidad", "Disponibilidad", "Integridad", "Autenticidad"], "correcta": 2,
-     "explicacion": "**Tampering (manipulación) ataca la integridad**. En STRIDE, Spoofing ataca la autenticidad, Repudiation el no repudio, Information disclosure la confidencialidad, Denial of service la disponibilidad y Elevation of privilege la autorización."},
-    {"id": "51", "tema": 22, "enunciado": "¿Qué artículo del RGPD exige la protección de datos desde el diseño y por defecto?", "opciones": ["Artículo 5", "Artículo 25", "Artículo 32", "Artículo 35"], "correcta": 1,
-     "explicacion": "El **art. 25 del RGPD** regula la **protección de datos desde el diseño y por defecto**. El art. 5 recoge los principios del tratamiento, el 32 la seguridad del tratamiento y el 35 la evaluación de impacto."},
-    {"id": "52", "tema": 22, "enunciado": "¿Cuál es la forma adecuada de almacenar las contraseñas de los usuarios en una aplicación?", "opciones": ["Cifradas con AES, para poder recuperarlas", "Con un hash MD5", "Con un hash SHA-1 sin sal", "Con un hash con sal y un algoritmo lento, como bcrypt o Argon2"], "correcta": 3,
-     "explicacion": "Las contraseñas se guardan con **hash con sal y un algoritmo lento** (**bcrypt, scrypt, Argon2** o PBKDF2), que encarece los ataques de fuerza bruta. Nunca en claro ni con **cifrado reversible** como AES, y **MD5 y SHA-1 no son aceptables** por rápidos y débiles."},
-    {"id": "53", "tema": 22, "enunciado": "¿Qué diferencia hay entre CWE y CVE?", "opciones": ["CWE cataloga tipos de debilidades; CVE identifica vulnerabilidades concretas", "CWE identifica vulnerabilidades concretas; CVE cataloga tipos de debilidades", "CWE puntúa la gravedad de 0 a 10; CVE es la lista OWASP Top 10", "Son dos nombres para el mismo catálogo de MITRE"], "correcta": 0,
-     "explicacion": "**CWE** (MITRE) es el catálogo de **tipos de debilidades** (por ejemplo, la inyección SQL en general), y **CVE** es el identificador de una **vulnerabilidad concreta** en un producto. La puntuación de gravedad de 0 a 10 es **CVSS**. Truco: W de *Weakness*, V de *Vulnerability*."},
-    {"id": "54", "tema": 22, "enunciado": "Una aplicación construye esta consulta:\n\"SELECT * FROM usuarios WHERE login='\" + login + \"' AND clave='\" + clave + \"'\"\nUn atacante escribe en el campo login: ' OR '1'='1' --\n¿Qué ocurre?", "opciones": ["La condición siempre es verdadera y la clave queda comentada, así que entra sin conocerla", "La consulta da siempre error de sintaxis y no hay riesgo", "Solo se ve afectado el campo clave", "La base de datos cifra la entrada y la anula"], "correcta": 0,
-     "explicacion": "La consulta queda WHERE login='' **OR '1'='1'** --..., y como '1'='1' siempre es cierto y **-- comenta el resto** (la comprobación de la clave), se devuelven usuarios sin conocer la contraseña. Es una **inyección SQL** clásica, que se evita con **consultas parametrizadas**."},
-    {"id": "55", "tema": 22, "enunciado": "¿Cuál de estas medidas protege específicamente frente a los ataques CSRF?", "opciones": ["Un token anti-CSRF único e impredecible en cada formulario", "El atributo HttpOnly en la cookie de sesión", "Guardar las contraseñas con bcrypt", "El cifrado del disco del servidor"], "correcta": 0,
-     "explicacion": "El **token anti-CSRF** impide que una web maliciosa fabrique una petición válida, porque no conoce el token; también ayudan las cookies **SameSite** y comprobar Origin/Referer. HttpOnly protege la cookie frente a XSS, no frente a CSRF, porque en CSRF el navegador envía la cookie igualmente."},
-    {"id": "56", "tema": 22, "enunciado": "Un usuario autenticado cambia en la URL ?id=124 por ?id=125 y puede ver el expediente de otra persona. ¿Qué vulnerabilidad es?", "opciones": ["XXE", "Path traversal", "IDOR (referencia directa insegura a objetos)", "Clickjacking"], "correcta": 2,
-     "explicacion": "Es un **IDOR**: la aplicación no comprueba la **autorización sobre cada objeto**, que es la defensa. Pertenece a la Pérdida de control de acceso (A01:2025). Path traversal usa rutas como ../../etc/passwd, XXE abusa de entidades externas XML y el clickjacking esconde la página en un iframe invisible."},
-    {"id": "57", "tema": 22, "enunciado": "¿Cómo se previene un ataque XXE?", "opciones": ["Desactivando el procesamiento de DTD y entidades externas en el analizador XML", "Enviando la cabecera X-Frame-Options", "Regenerando el identificador de sesión tras el inicio de sesión", "Usando un token anti-CSRF en los formularios"], "correcta": 0,
-     "explicacion": "**XXE** abusa de las **entidades externas** de XML, así que la defensa es **desactivar las DTD y las entidades externas** en el analizador. X-Frame-Options frena el clickjacking, regenerar el ID de sesión evita la fijación de sesión y el token anti-CSRF protege frente a CSRF."},
-    {"id": "58", "tema": 22, "enunciado": "En el OWASP Top 10:2025, la categoría Inyección, que incluye la inyección SQL y el XSS, ocupa la posición:", "opciones": ["A01", "A03", "A05", "A07"], "correcta": 2,
-     "explicacion": "En 2025 la **Inyección es A05** (en 2021 era A03) e **incluye el XSS**. A01 es la Pérdida de control de acceso, A03 los Fallos en la cadena de suministro de software (nueva) y A07 los Fallos de autenticación. El distractor típico es A03, su puesto en 2021."},
-    {"id": "59", "tema": 22, "enunciado": "¿Qué técnica detecta en una aplicación las dependencias de terceros con vulnerabilidades conocidas (CVE) y los problemas de licencias?", "opciones": ["SAST", "DAST", "RASP", "SCA"], "correcta": 3,
-     "explicacion": "El **SCA** (*Software Composition Analysis*) revisa las **dependencias** frente a CVE conocidos y licencias, por ejemplo con OWASP Dependency-Check. SAST analiza el código propio sin ejecutarlo, DAST ataca la aplicación en ejecución y RASP la protege en producción."},
-    {"id": "60", "tema": 22, "enunciado": "Señale la afirmación INCORRECTA sobre un WAF (cortafuegos de aplicaciones web):", "opciones": ["Filtra peticiones HTTP maliciosas antes de que lleguen a la aplicación", "Es una capa adicional dentro de la defensa en profundidad", "Puede bloquear patrones típicos de inyección SQL o XSS", "Hace innecesario corregir el código vulnerable de la aplicación"], "correcta": 3,
-     "explicacion": "Un **WAF no sustituye al código seguro**: es solo una **capa adicional** que filtra peticiones maliciosas y puede saltarse con variantes del ataque. Por eso las vulnerabilidades hay que corregirlas en el propio código, con consultas parametrizadas y codificación de la salida."}
+    {
+      "id": "01",
+      "tema": 22,
+      "enunciado": "¿Qué nivel de conformidad WCAG exige la normativa europea y española de accesibilidad web del sector público?",
+      "opciones": [
+        "A",
+        "AA",
+        "AAA",
+        "Ninguno, solo recomienda"
+      ],
+      "correcta": 1,
+      "explicacion": "Se exige el **nivel AA**: la norma armonizada EN 301 549 V3.2.1, que da presunción de conformidad con el RD 1112/2018 y la Directiva 2016/2102, incorpora **WCAG 2.1 AA**. El nivel A es el mínimo y el AAA no se exige como política general para sitios enteros."
+    },
+    {
+      "id": "02",
+      "tema": 22,
+      "enunciado": "Los cuatro principios de las WCAG son:",
+      "opciones": [
+        "Perceptible, operable, comprensible y robusto",
+        "Perceptible, usable, compatible y robusto",
+        "Visible, operable, sencillo y seguro",
+        "Accesible, usable, comprensible y fiable"
+      ],
+      "correcta": 0,
+      "explicacion": "Los principios son **POUR: perceptible, operable, comprensible y robusto**, que el art. 5 del RD 1112/2018 también recoge. Las demás opciones mezclan términos parecidos («usable», «compatible»); «Compatible» es el nombre de la pauta 4.1, no un principio."
+    },
+    {
+      "id": "03",
+      "tema": 22,
+      "enunciado": "Según el criterio 1.4.3 (AA), la relación de contraste mínima del texto normal es:",
+      "opciones": [
+        "3:1",
+        "4,5:1",
+        "7:1",
+        "21:1"
+      ],
+      "correcta": 1,
+      "explicacion": "El criterio 1.4.3 Contraste (mínimo), de nivel AA, exige **4,5:1** para el texto normal. 3:1 es lo que se pide al texto grande, 7:1 es el contraste mejorado (1.4.6, AAA) y 21:1 es el máximo posible (negro sobre blanco)."
+    },
+    {
+      "id": "04",
+      "tema": 22,
+      "enunciado": "¿Qué criterio de éxito elimina WCAG 2.2?",
+      "opciones": [
+        "1.1.1 Contenido no textual",
+        "2.4.7 Foco visible",
+        "4.1.1 Procesamiento",
+        "4.1.2 Nombre, función, valor"
+      ],
+      "correcta": 2,
+      "explicacion": "WCAG 2.2 **retira el 4.1.1 Procesamiento** (*Parsing*) por considerarlo obsoleto. 1.1.1, 2.4.7 y 4.1.2 siguen vigentes. Truco: 2.2 añade 9 criterios y quita 1."
+    },
+    {
+      "id": "05",
+      "tema": 22,
+      "enunciado": "El criterio 2.5.8 Tamaño del objetivo (mínimo), de WCAG 2.2, fija:",
+      "opciones": [
+        "24 × 24 píxeles CSS, nivel AA",
+        "44 × 44 píxeles CSS, nivel A",
+        "48 × 48 píxeles, nivel AAA",
+        "16 × 16 píxeles, nivel AA"
+      ],
+      "correcta": 0,
+      "explicacion": "El 2.5.8, nuevo en WCAG 2.2, pide objetivos de al menos **24 × 24 px CSS** en **nivel AA**. Los 44 × 44 px corresponden al 2.5.5 Tamaño del objetivo (mejorado), que es de nivel AAA, no A."
+    },
+    {
+      "id": "06",
+      "tema": 22,
+      "enunciado": "El Real Decreto 1112/2018 transpone:",
+      "opciones": [
+        "La Directiva (UE) 2019/882",
+        "La Directiva (UE) 2016/2102",
+        "La Directiva (UE) 2022/2555",
+        "El Reglamento (UE) 2016/679"
+      ],
+      "correcta": 1,
+      "explicacion": "El RD 1112/2018 transpone la **Directiva (UE) 2016/2102**, sobre accesibilidad de sitios web y apps del **sector público**. La Directiva 2019/882 (Acta Europea de Accesibilidad) la transpone la Ley 11/2023, la 2022/2555 es la NIS2 y el Reglamento 2016/679 es el RGPD, que además no necesita transposición."
+    },
+    {
+      "id": "07",
+      "tema": 22,
+      "enunciado": "Según el RD 1112/2018, las aplicaciones móviles del sector público deben ser accesibles desde:",
+      "opciones": [
+        "20-9-2019",
+        "20-9-2020",
+        "23-6-2021",
+        "28-6-2025"
+      ],
+      "correcta": 2,
+      "explicacion": "Las **apps móviles** deben ser accesibles desde el **23-6-2021**. Las webs nuevas, desde el 20-9-2019 (un año después de la entrada en vigor), las ya existentes desde el 20-9-2020 (dos años), y el 28-6-2025 es la fecha de aplicación de la Ley 11/2023."
+    },
+    {
+      "id": "08",
+      "tema": 22,
+      "enunciado": "Una reclamación del art. 13 del RD 1112/2018 que no se resuelve en plazo:",
+      "opciones": [
+        "Se entiende estimada a los 20 días hábiles",
+        "Se entiende desestimada a los 2 meses",
+        "Se entiende estimada a los 3 meses",
+        "Pasa al Defensor del Pueblo"
+      ],
+      "correcta": 1,
+      "explicacion": "La reclamación del art. 13 tiene un plazo de resolución de **2 meses** y el **silencio es desestimatorio**. Los 20 días hábiles son el plazo para responder a una queja o solicitud de información accesible (art. 12), no a una reclamación."
+    },
+    {
+      "id": "09",
+      "tema": 22,
+      "enunciado": "En la AGE, las unidades responsables de accesibilidad se designan en:",
+      "opciones": [
+        "Las Subsecretarías de cada departamento",
+        "La Secretaría General de Administración Digital",
+        "Las Delegaciones del Gobierno",
+        "Cada unidad que publique contenidos"
+      ],
+      "correcta": 0,
+      "explicacion": "Según el art. 16 del RD 1112/2018, en la AGE las unidades responsables de accesibilidad están en las **Subsecretarías** de cada departamento; en las comunidades autónomas hay una para todo su ámbito. La SGAD es la que ejerce el seguimiento y publica el Observatorio de Accesibilidad Web."
+    },
+    {
+      "id": "10",
+      "tema": 22,
+      "enunciado": "La declaración de accesibilidad debe actualizarse:",
+      "opciones": [
+        "Cada tres años",
+        "Solo cuando cambie la normativa",
+        "Al menos una vez al año o tras cada revisión",
+        "Cada seis meses"
+      ],
+      "correcta": 2,
+      "explicacion": "El art. 15 del RD 1112/2018 obliga a actualizar la declaración **al menos una vez al año o tras cada revisión**. Cada tres años es la periodicidad del informe a la Comisión Europea, no de la declaración."
+    },
+    {
+      "id": "11",
+      "tema": 22,
+      "enunciado": "La versión de EN 301 549 citada hoy como norma armonizada en el DOUE es:",
+      "opciones": [
+        "V1.1.2, que incorpora WCAG 2.0",
+        "V2.1.2, que incorpora WCAG 2.2",
+        "V3.2.1, que incorpora WCAG 2.1 AA",
+        "V4.1.1, que incorpora WCAG 3.0"
+      ],
+      "correcta": 2,
+      "explicacion": "La armonizada vigente es la **V3.2.1 (2021)**, que incorpora **WCAG 2.1 AA** (en España, UNE-EN 301549:2022). La V2.1.2 incorporaba WCAG 2.1, no 2.2, y la V4.1.1, publicada en 2026, incorpora WCAG 2.2 y aún no está citada en el DOUE. WCAG 3.0 es solo un borrador."
+    },
+    {
+      "id": "12",
+      "tema": 22,
+      "enunciado": "La Ley 11/2023, en materia de accesibilidad de productos y servicios:",
+      "opciones": [
+        "Transpone la Directiva (UE) 2019/882 y sus requisitos se aplican desde el 28-6-2025",
+        "Deroga el RD 1112/2018",
+        "Solo afecta a sitios web públicos",
+        "Obliga a las microempresas que prestan servicios sin excepción"
+      ],
+      "correcta": 0,
+      "explicacion": "Su **título I transpone la Directiva (UE) 2019/882** (Acta Europea de Accesibilidad) y los requisitos se aplican desde el **28-6-2025**. No deroga el RD 1112/2018, que sigue regulando el sector público; se dirige sobre todo a productos y servicios del sector privado y **exime a las microempresas** que prestan servicios."
+    },
+    {
+      "id": "13",
+      "tema": 22,
+      "enunciado": "Según ISO 9241-11, la usabilidad se mide por:",
+      "opciones": [
+        "Rapidez, seguridad y coste",
+        "Efectividad, eficiencia y satisfacción",
+        "Accesibilidad, fiabilidad y portabilidad",
+        "Estética, consistencia y ayuda"
+      ],
+      "correcta": 1,
+      "explicacion": "ISO 9241-11 define la usabilidad como el grado en que un producto permite a usuarios concretos lograr objetivos con **efectividad, eficiencia y satisfacción** en un contexto de uso. Truco: las tres «E/S». Fiabilidad y portabilidad son características de calidad del software, no de usabilidad."
+    },
+    {
+      "id": "14",
+      "tema": 22,
+      "enunciado": "En el ENS (RD 311/2022), la medida de bloqueo del puesto de trabajo es:",
+      "opciones": [
+        "mp.eq.1",
+        "mp.eq.2",
+        "mp.info.6",
+        "op.exp.6"
+      ],
+      "correcta": 1,
+      "explicacion": "El **bloqueo del puesto** es la medida **mp.eq.2**. mp.eq.1 es el puesto de trabajo despejado, mp.info.6 las copias de seguridad y op.exp.6 la protección frente a código dañino."
+    },
+    {
+      "id": "15",
+      "tema": 22,
+      "enunciado": "Una copia de seguridad diferencial guarda:",
+      "opciones": [
+        "Todos los datos",
+        "Los cambios desde la última copia de cualquier tipo",
+        "Los cambios desde la última copia completa",
+        "Solo los ficheros de sistema"
+      ],
+      "correcta": 2,
+      "explicacion": "La **diferencial** guarda los cambios **desde la última completa**, y para restaurar basta con la completa más la última diferencial. La opción b describe la **incremental**, que parte de la última copia de cualquier tipo; la opción a es la copia completa."
+    },
+    {
+      "id": "16",
+      "tema": 22,
+      "enunciado": "En el OWASP Top 10:2025, la categoría A01 es:",
+      "opciones": [
+        "Inyección",
+        "Fallos criptográficos",
+        "Pérdida de control de acceso",
+        "Configuración de seguridad incorrecta"
+      ],
+      "correcta": 2,
+      "explicacion": "**A01:2025 es la Pérdida de control de acceso** (*Broken Access Control*), que además absorbe SSRF. En 2025 la configuración incorrecta es A02, los fallos criptográficos A04 y la inyección A05."
+    },
+    {
+      "id": "17",
+      "tema": 22,
+      "enunciado": "¿Qué categoría es nueva en el OWASP Top 10:2025?",
+      "opciones": [
+        "Diseño inseguro",
+        "Manejo inadecuado de condiciones excepcionales",
+        "Inyección",
+        "Fallos de autenticación"
+      ],
+      "correcta": 1,
+      "explicacion": "**A10:2025 Manejo inadecuado de condiciones excepcionales** es nueva, igual que A03 Fallos en la cadena de suministro de software. Diseño inseguro ya existía en 2021 (era A04), y la inyección y los fallos de autenticación vienen de ediciones anteriores."
+    },
+    {
+      "id": "18",
+      "tema": 22,
+      "enunciado": "La defensa principal contra la inyección SQL es:",
+      "opciones": [
+        "Cifrar la base de datos",
+        "Usar HTTPS",
+        "Consultas parametrizadas",
+        "Ocultar los mensajes de error"
+      ],
+      "correcta": 2,
+      "explicacion": "Las **consultas parametrizadas** (*prepared statements*) separan el código SQL de los datos, así que la entrada nunca se interpreta como SQL. Cifrar la base de datos o usar HTTPS protegen otras cosas, y ocultar los errores solo dificulta la explotación, no la evita."
+    },
+    {
+      "id": "19",
+      "tema": 22,
+      "enunciado": "Un script malicioso guardado en un comentario de un foro y ejecutado en el navegador de cada visitante es un:",
+      "opciones": [
+        "XSS almacenado",
+        "XSS reflejado",
+        "CSRF",
+        "SSRF"
+      ],
+      "correcta": 0,
+      "explicacion": "Es **XSS almacenado** (persistente): el código **queda guardado en el servidor** y se sirve a todos los visitantes, por eso es el más grave. En el XSS reflejado el código va en la propia petición; CSRF fuerza acciones sin ejecutar código en la página y SSRF hace que el servidor haga peticiones."
+    },
+    {
+      "id": "20",
+      "tema": 22,
+      "enunciado": "El SAST se caracteriza por:",
+      "opciones": [
+        "Atacar la aplicación en ejecución desde fuera",
+        "Analizar el código fuente sin ejecutarlo",
+        "Proteger la aplicación en producción",
+        "Ser una prueba manual de intrusión"
+      ],
+      "correcta": 1,
+      "explicacion": "**SAST = análisis estático** del código fuente **sin ejecutarlo** (caja blanca), por ejemplo con SonarQube o Semgrep. La opción a es el DAST, la c el RASP y la d el pentesting. Truco: la S de SAST es de *Static*; la D de DAST, de *Dynamic*."
+    },
+    {
+      "id": "21",
+      "tema": 22,
+      "enunciado": "¿Cómo se denomina la actividad de concebir desde el origen entornos, productos y servicios utilizables por todas las personas, en la mayor medida posible, sin necesidad de adaptación ni diseño especializado?",
+      "opciones": [
+        "Ajustes razonables",
+        "Accesibilidad universal",
+        "Diseño universal o diseño para todas las personas",
+        "Productos de apoyo"
+      ],
+      "correcta": 2,
+      "explicacion": "Es el **diseño universal** o «diseño para todas las personas»: se piensa **desde el origen** y **sin adaptación**. La accesibilidad universal es la condición que deben cumplir los entornos y productos (el resultado), los ajustes razonables son adaptaciones para un caso concreto y los productos de apoyo son tecnologías para la persona."
+    },
+    {
+      "id": "22",
+      "tema": 22,
+      "enunciado": "Las adaptaciones concretas para un caso particular cuando el diseño universal no basta, sin imponer una carga desproporcionada, se denominan:",
+      "opciones": [
+        "Ajustes razonables",
+        "Productos de apoyo",
+        "Diseño para todas las personas",
+        "Medidas de acción positiva"
+      ],
+      "correcta": 0,
+      "explicacion": "Son **ajustes razonables**: medidas **para un caso particular** cuando el diseño universal no es suficiente, siempre que no supongan una carga desproporcionada. Los productos de apoyo son tecnologías como lectores de pantalla o líneas braille, y el diseño para todas las personas actúa desde el origen, no caso por caso."
+    },
+    {
+      "id": "23",
+      "tema": 22,
+      "enunciado": "¿Cuál de los siguientes NO es uno de los siete principios del diseño universal formulados en 1997?",
+      "opciones": [
+        "Uso equitativo",
+        "Tolerancia al error",
+        "Bajo esfuerzo físico",
+        "Consistencia y estándares"
+      ],
+      "correcta": 3,
+      "explicacion": "**Consistencia y estándares** es una de las **heurísticas de Nielsen**, no un principio del diseño universal. Los siete principios del Center for Universal Design (Ron Mace, 1997) son: uso equitativo, flexibilidad, uso simple e intuitivo, información perceptible, tolerancia al error, bajo esfuerzo físico, y tamaño y espacio para el acercamiento y uso."
+    },
+    {
+      "id": "24",
+      "tema": 22,
+      "enunciado": "¿Cuál de las siguientes es una de las diez heurísticas de usabilidad de Nielsen?",
+      "opciones": [
+        "Tamaño y espacio para el acercamiento y uso",
+        "Reconocer antes que recordar",
+        "Uso equitativo",
+        "Información perceptible"
+      ],
+      "correcta": 1,
+      "explicacion": "**Reconocer antes que recordar** es una heurística de Nielsen (1994): el usuario no debería tener que memorizar información entre pantallas. Las otras tres opciones son principios del **diseño universal**, una confusión típica entre las dos listas."
+    },
+    {
+      "id": "25",
+      "tema": 22,
+      "enunciado": "¿Qué método de evaluación de la usabilidad realizan expertos, sin usuarios, revisando la interfaz frente a un conjunto de principios reconocidos?",
+      "opciones": [
+        "Test de usuarios",
+        "Pruebas A/B",
+        "Encuesta con la escala SUS",
+        "Evaluación heurística"
+      ],
+      "correcta": 3,
+      "explicacion": "La **evaluación heurística** la hacen **expertos sin usuarios**, comprobando la interfaz frente a principios como las heurísticas de Nielsen. El test de usuarios, las pruebas A/B y la encuesta SUS (10 ítems) son métodos **con usuarios**."
+    },
+    {
+      "id": "26",
+      "tema": 22,
+      "enunciado": "¿Qué norma ISO describe el diseño centrado en el usuario como un proceso iterativo de entender el contexto, especificar requisitos, diseñar y evaluar?",
+      "opciones": [
+        "ISO 9241-210",
+        "ISO 9241-11",
+        "ISO/IEC 40500",
+        "ISO/IEC 27001"
+      ],
+      "correcta": 0,
+      "explicacion": "El **diseño centrado en el usuario** se recoge en la **ISO 9241-210**. La ISO 9241-11 define la usabilidad (efectividad, eficiencia y satisfacción), la ISO/IEC 40500 es la versión ISO de las WCAG y la ISO/IEC 27001 trata los sistemas de gestión de la seguridad de la información."
+    },
+    {
+      "id": "27",
+      "tema": 22,
+      "enunciado": "¿Qué norma regula las condiciones básicas de acceso de las personas con discapacidad a las tecnologías, productos y servicios relacionados con la sociedad de la información y medios de comunicación social?",
+      "opciones": [
+        "El Real Decreto 1494/2007, de 12 de noviembre",
+        "El Real Decreto 1112/2018, de 7 de septiembre",
+        "La Ley 11/2023, de 8 de mayo",
+        "El Real Decreto 311/2022, de 3 de mayo"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el **RD 1494/2007**, al que alude el enunciado del tema. El RD 1112/2018 derogó sus arts. 5 a 7 (accesibilidad web) al regular las webs y apps del sector público; la Ley 11/2023 trata productos y servicios del sector privado y el RD 311/2022 es el ENS."
+    },
+    {
+      "id": "28",
+      "tema": 22,
+      "enunciado": "¿Qué pautas de la WAI (W3C) se dirigen a las herramientas de autor, como gestores de contenidos y editores?",
+      "opciones": [
+        "WCAG",
+        "UAAG",
+        "WAI-ARIA",
+        "ATAG"
+      ],
+      "correcta": 3,
+      "explicacion": "Las **ATAG** (*Authoring Tool Accessibility Guidelines*) se dirigen a las **herramientas de autor**. Las WCAG son para el contenido web, las UAAG para navegadores y reproductores (*user agents*) y WAI-ARIA aporta atributos para aplicaciones dinámicas. Truco: la A de ATAG es de *Authoring*."
+    },
+    {
+      "id": "29",
+      "tema": 22,
+      "enunciado": "¿Cuántos criterios de conformidad tiene WCAG 2.2?",
+      "opciones": [
+        "78",
+        "86",
+        "61",
+        "87"
+      ],
+      "correcta": 1,
+      "explicacion": "WCAG 2.2 tiene **86 criterios** (31 A, 24 AA y 31 AAA). Sale de los **78 de WCAG 2.1 + 9 nuevos − 1 retirado** (el 4.1.1). 87 es el error de olvidar la retirada del 4.1.1, y 61 era la cifra de WCAG 2.0."
+    },
+    {
+      "id": "30",
+      "tema": 22,
+      "enunciado": "La pauta «2.1 Accesible por teclado» de WCAG 2.2 pertenece al principio:",
+      "opciones": [
+        "Operable",
+        "Perceptible",
+        "Comprensible",
+        "Robusto"
+      ],
+      "correcta": 0,
+      "explicacion": "Todas las pautas que empiezan por 2 son del principio **Operable** (teclado, tiempo suficiente, convulsiones, navegable y modalidades de entrada). Las que empiezan por 1 son de Perceptible, las de 3 de Comprensible y la 4.1 de Robusto. Truco: el primer número indica el principio en el orden POUR."
+    },
+    {
+      "id": "31",
+      "tema": 22,
+      "enunciado": "Un texto de 14 pt en negrita sobre fondo blanco tiene una relación de contraste de 3,5:1. Según WCAG 2.2:",
+      "opciones": [
+        "No cumple el 1.4.3, que exige 4,5:1 a todo texto",
+        "Cumple el contraste mejorado (1.4.6, AAA)",
+        "No cumple ningún criterio, porque el mínimo es 7:1",
+        "Cumple el 1.4.3 (AA), porque es texto grande"
+      ],
+      "correcta": 3,
+      "explicacion": "14 pt en negrita es **texto grande** (igual que 18 pt normal), y para él el 1.4.3 (AA) exige solo **3:1**, así que 3,5:1 **cumple**. No llega al AAA (1.4.6), que pide 4,5:1 en texto grande y 7:1 en texto normal. El 4,5:1 del 1.4.3 es para texto normal."
+    },
+    {
+      "id": "32",
+      "tema": 22,
+      "enunciado": "El criterio 1.4.4 Cambio de tamaño del texto (AA) exige que el texto pueda ampliarse sin pérdida de contenido ni de funcionalidad hasta el:",
+      "opciones": [
+        "150 %",
+        "400 %",
+        "200 %",
+        "300 %"
+      ],
+      "correcta": 2,
+      "explicacion": "El 1.4.4 exige poder ampliar el texto hasta el **200 %** sin pérdida. No hay que confundirlo con el 1.4.10 Reajuste (AA), que exige que no haga falta desplazarse en dos dimensiones con un ancho de **320 px CSS**."
+    },
+    {
+      "id": "33",
+      "tema": 22,
+      "enunciado": "Un formulario indica qué campos son obligatorios solo poniendo su etiqueta en color rojo. ¿Qué criterio WCAG incumple?",
+      "opciones": [
+        "1.4.3 Contraste (mínimo)",
+        "1.4.1 Uso del color",
+        "2.4.7 Foco visible",
+        "3.1.1 Idioma de la página"
+      ],
+      "correcta": 1,
+      "explicacion": "El **1.4.1 Uso del color** (nivel A) prohíbe que el color sea **el único medio** de transmitir información: hay que añadir, por ejemplo, un asterisco o el texto «obligatorio». El problema no es el contraste (1.4.3), sino que la información depende solo del color."
+    },
+    {
+      "id": "34",
+      "tema": 22,
+      "enunciado": "¿Cuál de estos criterios de conformidad es NUEVO en WCAG 2.2?",
+      "opciones": [
+        "1.4.10 Reajuste",
+        "2.4.7 Foco visible",
+        "3.3.8 Autenticación accesible (mínimo)",
+        "4.1.3 Mensajes de estado"
+      ],
+      "correcta": 2,
+      "explicacion": "El **3.3.8 Autenticación accesible (mínimo)**, de nivel AA, es uno de los 9 nuevos de WCAG 2.2: no se pueden exigir pruebas cognitivas como recordar o transcribir. El 1.4.10 y el 4.1.3 llegaron con WCAG 2.1, y el 2.4.7 Foco visible existe desde WCAG 2.0 (el nuevo es el 2.4.11 Foco no oculto)."
+    },
+    {
+      "id": "35",
+      "tema": 22,
+      "enunciado": "Según la primera regla de uso de WAI-ARIA, para crear un botón accesible lo correcto es:",
+      "opciones": [
+        "Usar el elemento nativo <button>",
+        "Usar un <div> con role=\"button\"",
+        "Usar un <span> con aria-label",
+        "Usar un <div> con tabindex=\"0\" y aria-pressed"
+      ],
+      "correcta": 0,
+      "explicacion": "La **primera regla de ARIA** dice que, si existe un **elemento HTML nativo** con la semántica necesaria, se use ese en lugar de ARIA. <button> ya trae rol, foco y manejo del teclado. Un <div> con role=\"button\" obliga a programar a mano el foco y las teclas."
+    },
+    {
+      "id": "36",
+      "tema": 22,
+      "enunciado": "¿Qué atributo WAI-ARIA hace que un lector de pantalla anuncie los cambios de una región de la página sin mover el foco?",
+      "opciones": [
+        "aria-hidden",
+        "aria-expanded",
+        "aria-describedby",
+        "aria-live"
+      ],
+      "correcta": 3,
+      "explicacion": "**aria-live** marca una región viva cuyos cambios se anuncian **sin mover el foco** (role=\"status\", del criterio 4.1.3, equivale a una región viva educada). aria-hidden oculta el elemento a los lectores, aria-expanded indica si algo está desplegado y aria-describedby asocia una descripción."
+    },
+    {
+      "id": "37",
+      "tema": 22,
+      "enunciado": "En la norma EN 301 549, ¿qué cláusula recoge los requisitos del software, incluidas las aplicaciones móviles?",
+      "opciones": [
+        "Cláusula 9",
+        "Cláusula 10",
+        "Cláusula 11",
+        "Cláusula 12"
+      ],
+      "correcta": 2,
+      "explicacion": "La **cláusula 11** es la de **software, incluidas las apps móviles**. La 9 es la web (incorpora las WCAG), la 10 los documentos no web y la 12 la documentación y los servicios de apoyo. Truco: 9 web, 10 documentos, 11 software, en orden."
+    },
+    {
+      "id": "38",
+      "tema": 22,
+      "enunciado": "Según el art. 3 del RD 1112/2018, ¿cuál de estos contenidos NO está excluido de su ámbito de aplicación?",
+      "opciones": [
+        "El contenido multimedia en directo",
+        "Los mapas en línea, si la información esencial se ofrece de forma accesible",
+        "Un formulario PDF publicado en 2024 y necesario para un trámite activo",
+        "Los contenidos de terceros ni financiados ni controlados por la entidad"
+      ],
+      "correcta": 2,
+      "explicacion": "La exclusión de ficheros ofimáticos solo alcanza a los **publicados antes del 20-9-2018**, y ni siquiera a esos si son **necesarios para trámites activos**; un PDF de 2024 para un trámite activo **debe ser accesible**. El multimedia en directo, los mapas en línea (con la información esencial accesible) y los contenidos de terceros no controlados sí están excluidos."
+    },
+    {
+      "id": "39",
+      "tema": 22,
+      "enunciado": "Según el art. 7 del RD 1112/2018, ¿cuál de estas razones puede justificar acogerse a la excepción por carga desproporcionada?",
+      "opciones": [
+        "La falta de prioridad del proyecto",
+        "La falta de tiempo para adaptar el sitio",
+        "La falta de conocimientos técnicos del personal",
+        "Una carga financiera u organizativa excesiva, evaluada por escrito"
+      ],
+      "correcta": 3,
+      "explicacion": "Solo cabe por una **carga financiera u organizativa excesiva**, con una evaluación inicial escrita que se revisa al menos una vez al año y se indica en la declaración. El RD dice expresamente que la **falta de prioridad, de tiempo o de conocimientos no la justifica**."
+    },
+    {
+      "id": "40",
+      "tema": 22,
+      "enunciado": "Una persona presenta una queja por la falta de accesibilidad de una web ministerial (art. 12 del RD 1112/2018). ¿En qué plazo debe responderse?",
+      "opciones": [
+        "10 días hábiles",
+        "20 días hábiles",
+        "1 mes",
+        "2 meses"
+      ],
+      "correcta": 1,
+      "explicacion": "Las quejas y solicitudes de información accesible se responden en **20 días hábiles**; sin respuesta, se entienden no aceptadas. 2 meses es el plazo de la **reclamación** del art. 13, y 10 días hábiles es el plazo del requerimiento de aclaración."
+    },
+    {
+      "id": "41",
+      "tema": 22,
+      "enunciado": "Según el RD 1112/2018, ¿desde qué fecha debían cumplir los requisitos de accesibilidad los sitios web del sector público que ya existían antes de su entrada en vigor?",
+      "opciones": [
+        "20-9-2019",
+        "20-9-2020",
+        "23-6-2021",
+        "28-6-2025"
+      ],
+      "correcta": 1,
+      "explicacion": "Los sitios **ya existentes** tenían **dos años** desde la entrada en vigor (20-9-2018), así que el plazo era el **20-9-2020** (la Directiva fija el 23-9-2020). El 20-9-2019 era para los sitios nuevos, el 23-6-2021 para las apps y el 28-6-2025 es la fecha de la Ley 11/2023."
+    },
+    {
+      "id": "42",
+      "tema": 22,
+      "enunciado": "¿Qué órgano ejerce las funciones de seguimiento del RD 1112/2018 y publica el Observatorio de Accesibilidad Web en el Portal de Administración Electrónica?",
+      "opciones": [
+        "La Secretaría General de Administración Digital (SGAD)",
+        "El Centro Criptológico Nacional (CCN)",
+        "La Agencia Española de Protección de Datos",
+        "El Defensor del Pueblo"
+      ],
+      "correcta": 0,
+      "explicacion": "El seguimiento corresponde al ministerio competente en función pública y administración digital, y lo ejerce la **SGAD**, que publica el **Observatorio de Accesibilidad Web** en el PAe. El CCN se ocupa de la ciberseguridad (guías CCN-STIC) y la AEPD de la protección de datos."
+    },
+    {
+      "id": "43",
+      "tema": 22,
+      "enunciado": "¿Cuál de estos servicios está incluido en el ámbito de los requisitos de accesibilidad de la Ley 11/2023?",
+      "opciones": [
+        "El portal web de un ministerio",
+        "Los servicios bancarios a consumidores",
+        "La sede electrónica de un ayuntamiento",
+        "La app de una consejería autonómica"
+      ],
+      "correcta": 1,
+      "explicacion": "La Ley 11/2023 incluye los **servicios bancarios a consumidores**, junto con el comercio electrónico, las comunicaciones electrónicas, el transporte de viajeros, los libros electrónicos o el 112. Los portales, sedes y apps de las administraciones se rigen por el **RD 1112/2018**."
+    },
+    {
+      "id": "44",
+      "tema": 22,
+      "enunciado": "Una tienda en línea tiene 8 trabajadores y un volumen de negocios anual de 1,5 millones de euros. Respecto a los requisitos de accesibilidad de servicios de la Ley 11/2023:",
+      "opciones": [
+        "Está exenta, porque es una microempresa que presta servicios",
+        "Debe cumplirlos desde el 28-6-2025",
+        "Debe cumplirlos desde el 28-6-2030",
+        "Solo debe cumplir el nivel A de las WCAG"
+      ],
+      "correcta": 0,
+      "explicacion": "Es una **microempresa**: **menos de 10 personas y hasta 2 millones de euros** de volumen de negocios o balance. Las microempresas que **prestan servicios** están **exentas**. El 28-6-2025 es la fecha general de aplicación y 2030 el fin del periodo transitorio para productos que ya se usaban."
+    },
+    {
+      "id": "45",
+      "tema": 22,
+      "enunciado": "Un ransomware cifra los ficheros de un puesto de usuario y pide un rescate. ¿Qué dimensiones de la seguridad ataca principalmente?",
+      "opciones": [
+        "Confidencialidad y trazabilidad",
+        "Integridad y disponibilidad",
+        "Solo la autenticidad",
+        "Solo la confidencialidad"
+      ],
+      "correcta": 1,
+      "explicacion": "El ransomware **altera** los datos (integridad) y los deja **inaccesibles** (disponibilidad). Los troyanos, keyloggers y spyware son los que atacan sobre todo la **confidencialidad**, y la suplantación ataca la autenticidad."
+    },
+    {
+      "id": "46",
+      "tema": 22,
+      "enunciado": "¿Qué medida del ENS (RD 311/2022) trata la protección de los equipos portátiles, que incluye su inventario y el cifrado del disco?",
+      "opciones": [
+        "mp.eq.1",
+        "mp.eq.2",
+        "mp.info.6",
+        "mp.eq.3"
+      ],
+      "correcta": 3,
+      "explicacion": "La **protección de portátiles** es la medida **mp.eq.3** (inventario, **cifrado de disco** con BitLocker, FileVault o LUKS, y protección física). mp.eq.1 es el puesto despejado, mp.eq.2 el bloqueo del puesto y mp.info.6 las copias de seguridad. Truco: eq 1, 2, 3 = despejado, bloqueo, portátiles."
+    },
+    {
+      "id": "47",
+      "tema": 22,
+      "enunciado": "Se hace una copia completa el domingo y copias incrementales de lunes a jueves. El viernes por la mañana falla el disco. ¿Qué hay que restaurar para recuperar los datos del jueves?",
+      "opciones": [
+        "La completa del domingo y la incremental del jueves",
+        "La completa del domingo y las cuatro incrementales, de lunes a jueves",
+        "Solo la incremental del jueves",
+        "La completa del domingo y la incremental del lunes"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada **incremental** guarda solo los cambios desde la copia anterior, así que hay que aplicar la **completa y todas las incrementales en orden**. Restaurar la completa y la última copia (opción a) solo funcionaría si las copias fueran **diferenciales**, porque cada diferencial acumula todo desde la completa."
+    },
+    {
+      "id": "48",
+      "tema": 22,
+      "enunciado": "Antes de reutilizar o desechar un disco que contenía información sensible, ¿qué medida garantiza la confidencialidad?",
+      "opciones": [
+        "Un formateo rápido",
+        "Borrar los ficheros y vaciar la papelera",
+        "El borrado seguro por sobrescritura, la desmagnetización o la destrucción física",
+        "La desfragmentación del disco"
+      ],
+      "correcta": 2,
+      "explicacion": "Para impedir la recuperación hace falta **borrado seguro**: **sobrescritura**, desmagnetización o destrucción física. Un formateo rápido o vaciar la papelera solo marcan el espacio como libre, y los datos se pueden recuperar con herramientas forenses. La desfragmentación no borra nada."
+    },
+    {
+      "id": "49",
+      "tema": 22,
+      "enunciado": "¿Qué principio de diseño seguro exige comprobar la autorización en cada acceso a un recurso, sin fiarse de comprobaciones anteriores?",
+      "opciones": [
+        "Defensa en profundidad",
+        "Mediación completa",
+        "Economía del mecanismo",
+        "Diseño abierto"
+      ],
+      "correcta": 1,
+      "explicacion": "La **mediación completa** obliga a verificar la autorización en **cada** acceso. La defensa en profundidad pone varias capas independientes, la economía del mecanismo busca diseños simples y el diseño abierto rechaza la «seguridad por oscuridad». Todos proceden de Saltzer y Schroeder (1975), salvo la defensa en profundidad."
+    },
+    {
+      "id": "50",
+      "tema": 22,
+      "enunciado": "En el modelo de amenazas STRIDE, la amenaza «Tampering» vulnera la propiedad de:",
+      "opciones": [
+        "Confidencialidad",
+        "Disponibilidad",
+        "Integridad",
+        "Autenticidad"
+      ],
+      "correcta": 2,
+      "explicacion": "**Tampering (manipulación) ataca la integridad**. En STRIDE, Spoofing ataca la autenticidad, Repudiation el no repudio, Information disclosure la confidencialidad, Denial of service la disponibilidad y Elevation of privilege la autorización."
+    },
+    {
+      "id": "51",
+      "tema": 22,
+      "enunciado": "¿Qué artículo del RGPD exige la protección de datos desde el diseño y por defecto?",
+      "opciones": [
+        "Artículo 5",
+        "Artículo 25",
+        "Artículo 32",
+        "Artículo 35"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 25 del RGPD** regula la **protección de datos desde el diseño y por defecto**. El art. 5 recoge los principios del tratamiento, el 32 la seguridad del tratamiento y el 35 la evaluación de impacto."
+    },
+    {
+      "id": "52",
+      "tema": 22,
+      "enunciado": "¿Cuál es la forma adecuada de almacenar las contraseñas de los usuarios en una aplicación?",
+      "opciones": [
+        "Cifradas con AES, para poder recuperarlas",
+        "Con un hash MD5",
+        "Con un hash SHA-1 sin sal",
+        "Con un hash con sal y un algoritmo lento, como bcrypt o Argon2"
+      ],
+      "correcta": 3,
+      "explicacion": "Las contraseñas se guardan con **hash con sal y un algoritmo lento** (**bcrypt, scrypt, Argon2** o PBKDF2), que encarece los ataques de fuerza bruta. Nunca en claro ni con **cifrado reversible** como AES, y **MD5 y SHA-1 no son aceptables** por rápidos y débiles."
+    },
+    {
+      "id": "53",
+      "tema": 22,
+      "enunciado": "¿Qué diferencia hay entre CWE y CVE?",
+      "opciones": [
+        "CWE cataloga tipos de debilidades; CVE identifica vulnerabilidades concretas",
+        "CWE identifica vulnerabilidades concretas; CVE cataloga tipos de debilidades",
+        "CWE puntúa la gravedad de 0 a 10; CVE es la lista OWASP Top 10",
+        "Son dos nombres para el mismo catálogo de MITRE"
+      ],
+      "correcta": 0,
+      "explicacion": "**CWE** (MITRE) es el catálogo de **tipos de debilidades** (por ejemplo, la inyección SQL en general), y **CVE** es el identificador de una **vulnerabilidad concreta** en un producto. La puntuación de gravedad de 0 a 10 es **CVSS**. Truco: W de *Weakness*, V de *Vulnerability*."
+    },
+    {
+      "id": "54",
+      "tema": 22,
+      "enunciado": "Una aplicación construye esta consulta:\n\"SELECT * FROM usuarios WHERE login='\" + login + \"' AND clave='\" + clave + \"'\"\nUn atacante escribe en el campo login: ' OR '1'='1' --\n¿Qué ocurre?",
+      "opciones": [
+        "La consulta da siempre error de sintaxis y no hay riesgo",
+        "Solo se ve afectado el campo clave",
+        "La condición siempre es verdadera y la clave queda comentada, así que entra sin conocerla",
+        "La base de datos cifra la entrada y la anula"
+      ],
+      "correcta": 2,
+      "explicacion": "La consulta queda WHERE login='' **OR '1'='1'** --..., y como '1'='1' siempre es cierto y **-- comenta el resto** (la comprobación de la clave), se devuelven usuarios sin conocer la contraseña. Es una **inyección SQL** clásica, que se evita con **consultas parametrizadas**."
+    },
+    {
+      "id": "55",
+      "tema": 22,
+      "enunciado": "¿Cuál de estas medidas protege específicamente frente a los ataques CSRF?",
+      "opciones": [
+        "Un token anti-CSRF único e impredecible en cada formulario",
+        "El atributo HttpOnly en la cookie de sesión",
+        "Guardar las contraseñas con bcrypt",
+        "El cifrado del disco del servidor"
+      ],
+      "correcta": 0,
+      "explicacion": "El **token anti-CSRF** impide que una web maliciosa fabrique una petición válida, porque no conoce el token; también ayudan las cookies **SameSite** y comprobar Origin/Referer. HttpOnly protege la cookie frente a XSS, no frente a CSRF, porque en CSRF el navegador envía la cookie igualmente."
+    },
+    {
+      "id": "56",
+      "tema": 22,
+      "enunciado": "Un usuario autenticado cambia en la URL ?id=124 por ?id=125 y puede ver el expediente de otra persona. ¿Qué vulnerabilidad es?",
+      "opciones": [
+        "XXE",
+        "Path traversal",
+        "IDOR (referencia directa insegura a objetos)",
+        "Clickjacking"
+      ],
+      "correcta": 2,
+      "explicacion": "Es un **IDOR**: la aplicación no comprueba la **autorización sobre cada objeto**, que es la defensa. Pertenece a la Pérdida de control de acceso (A01:2025). Path traversal usa rutas como ../../etc/passwd, XXE abusa de entidades externas XML y el clickjacking esconde la página en un iframe invisible."
+    },
+    {
+      "id": "57",
+      "tema": 22,
+      "enunciado": "¿Cómo se previene un ataque XXE?",
+      "opciones": [
+        "Desactivando el procesamiento de DTD y entidades externas en el analizador XML",
+        "Enviando la cabecera X-Frame-Options",
+        "Regenerando el identificador de sesión tras el inicio de sesión",
+        "Usando un token anti-CSRF en los formularios"
+      ],
+      "correcta": 0,
+      "explicacion": "**XXE** abusa de las **entidades externas** de XML, así que la defensa es **desactivar las DTD y las entidades externas** en el analizador. X-Frame-Options frena el clickjacking, regenerar el ID de sesión evita la fijación de sesión y el token anti-CSRF protege frente a CSRF."
+    },
+    {
+      "id": "58",
+      "tema": 22,
+      "enunciado": "En el OWASP Top 10:2025, la categoría Inyección, que incluye la inyección SQL y el XSS, ocupa la posición:",
+      "opciones": [
+        "A01",
+        "A03",
+        "A05",
+        "A07"
+      ],
+      "correcta": 2,
+      "explicacion": "En 2025 la **Inyección es A05** (en 2021 era A03) e **incluye el XSS**. A01 es la Pérdida de control de acceso, A03 los Fallos en la cadena de suministro de software (nueva) y A07 los Fallos de autenticación. El distractor típico es A03, su puesto en 2021."
+    },
+    {
+      "id": "59",
+      "tema": 22,
+      "enunciado": "¿Qué técnica detecta en una aplicación las dependencias de terceros con vulnerabilidades conocidas (CVE) y los problemas de licencias?",
+      "opciones": [
+        "SAST",
+        "DAST",
+        "RASP",
+        "SCA"
+      ],
+      "correcta": 3,
+      "explicacion": "El **SCA** (*Software Composition Analysis*) revisa las **dependencias** frente a CVE conocidos y licencias, por ejemplo con OWASP Dependency-Check. SAST analiza el código propio sin ejecutarlo, DAST ataca la aplicación en ejecución y RASP la protege en producción."
+    },
+    {
+      "id": "60",
+      "tema": 22,
+      "enunciado": "Señale la afirmación INCORRECTA sobre un WAF (cortafuegos de aplicaciones web):",
+      "opciones": [
+        "Filtra peticiones HTTP maliciosas antes de que lleguen a la aplicación",
+        "Es una capa adicional dentro de la defensa en profundidad",
+        "Puede bloquear patrones típicos de inyección SQL o XSS",
+        "Hace innecesario corregir el código vulnerable de la aplicación"
+      ],
+      "correcta": 3,
+      "explicacion": "Un **WAF no sustituye al código seguro**: es solo una **capa adicional** que filtra peticiones maliciosas y puede saltarse con variantes del ataque. Por eso las vulnerabilidades hay que corregirlas en el propio código, con consultas parametrizadas y codificación de la salida."
+    }
   ]
 }

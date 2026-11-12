@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 08 · test",
+  "fuente": "propio",
+  "tema": 8,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 8. Acceso electrónico, gestión electrónica del procedimiento, ENS y ENI»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 8,
+      "enunciado": "Según el art. 14.2 de la Ley 39/2015, NO está obligado en todo caso a relacionarse electrónicamente con las Administraciones:",
+      "opciones": [
+        "Una sociedad limitada",
+        "Una comunidad de bienes",
+        "Una persona física sin actividad profesional colegiada",
+        "Un notario, en los trámites de su actividad"
+      ],
+      "correcta": 2,
+      "explicacion": "Las **personas físicas** pueden elegir en todo momento el medio (**art. 14.1**), salvo que estén obligadas. La sociedad limitada es persona jurídica (14.2.a), la comunidad de bienes es una entidad sin personalidad jurídica (14.2.b) y el notario ejerce una actividad con colegiación obligatoria (14.2.c)."
+    },
+    {
+      "id": "02",
+      "tema": 8,
+      "enunciado": "El Reglamento de actuación y funcionamiento del sector público por medios electrónicos se aprobó por:",
+      "opciones": [
+        "Real Decreto 4/2010",
+        "Real Decreto 203/2021",
+        "Real Decreto 311/2022",
+        "Real Decreto 1671/2009"
+      ],
+      "correcta": 1,
+      "explicacion": "Lo aprobó el **RD 203/2021, de 30 de marzo**, que desarrolla las Leyes 39/2015 y 40/2015 en lo electrónico. El RD 4/2010 es el ENI; el RD 311/2022, el ENS, y el RD 1671/2009 desarrollaba la antigua Ley 11/2007 y quedó derogado."
+    },
+    {
+      "id": "03",
+      "tema": 8,
+      "enunciado": "Según el art. 31.2.b) de la Ley 39/2015, un documento presentado en el registro electrónico un domingo se entiende presentado:",
+      "opciones": [
+        "A las 00:00 del domingo",
+        "En la primera hora del primer día hábil siguiente",
+        "A las 15:00 del lunes",
+        "Cuando lo lea el órgano destinatario"
+      ],
+      "correcta": 1,
+      "explicacion": "El registro funciona 24 horas todos los días, pero la presentación en día inhábil se entiende hecha en la **primera hora del primer día hábil siguiente** (**art. 31.2.b**), salvo que una norma permita expresamente la recepción en día inhábil. Las demás opciones no aparecen en la ley."
+    },
+    {
+      "id": "04",
+      "tema": 8,
+      "enunciado": "Una notificación electrónica obligatoria se entiende rechazada cuando, sin acceder a su contenido, transcurren desde su puesta a disposición:",
+      "opciones": [
+        "10 días hábiles",
+        "15 días naturales",
+        "10 días naturales",
+        "1 mes"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 43.2 Ley 39/2015** entiende rechazada la notificación a los **10 días naturales** sin acceso. Ojo con la trampa de los «10 días»: para **cursar** la notificación hay 10 días hábiles (art. 40.2); para el **rechazo**, son naturales."
+    },
+    {
+      "id": "05",
+      "tema": 8,
+      "enunciado": "Los poderes inscritos en el registro electrónico de apoderamientos tienen una validez máxima de:",
+      "opciones": [
+        "Dos años",
+        "Tres años",
+        "Cinco años",
+        "Indefinida hasta su revocación"
+      ],
+      "correcta": 2,
+      "explicacion": "Según el **art. 6.6 Ley 39/2015**, los poderes inscritos valen como máximo **5 años** desde la inscripción. Antes de que venzan, el poderdante puede revocarlos o prorrogarlos, y cada prórroga vale también un máximo de 5 años. No son indefinidos."
+    },
+    {
+      "id": "06",
+      "tema": 8,
+      "enunciado": "En la notificación en papel en el domicilio, si el primer intento se hizo a las 11:00, el segundo debe hacerse:",
+      "opciones": [
+        "Dentro de los 3 días siguientes, después de las 15:00",
+        "Dentro de los 5 días siguientes, a cualquier hora",
+        "Al día siguiente, antes de las 15:00",
+        "No hay segundo intento; se publica en el BOE"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 42.2 Ley 39/2015** exige un segundo intento, una sola vez, dentro de los **3 días siguientes** y en la franja contraria: si el primero fue antes de las 15:00, el segundo será **después de las 15:00**, con al menos 3 horas de diferencia. El BOE solo se usa si la notificación es infructuosa."
+    },
+    {
+      "id": "07",
+      "tema": 8,
+      "enunciado": "El plazo para expedir copias auténticas solicitadas por el interesado (art. 27.4 Ley 39/2015) es de:",
+      "opciones": [
+        "10 días",
+        "15 días",
+        "20 días",
+        "1 mes"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 27.4** fija **15 días** desde la recepción de la solicitud en el registro electrónico. Los interesados pueden pedir copias auténticas en cualquier momento. 10 días es el plazo para cursar notificaciones, de ahí la confusión."
+    },
+    {
+      "id": "08",
+      "tema": 8,
+      "enunciado": "Según el art. 70.4 de la Ley 39/2015, forma parte del expediente administrativo:",
+      "opciones": [
+        "Un borrador de resolución",
+        "Una nota interna entre órganos",
+        "Un informe preceptivo solicitado antes de la resolución",
+        "Un juicio de valor del instructor"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 70.4** excluye del expediente la información auxiliar o de apoyo (notas, borradores, opiniones, informes internos) y los juicios de valor, **salvo** los **informes preceptivos y facultativos** solicitados antes de la resolución. Por eso el informe preceptivo sí forma parte del expediente."
+    },
+    {
+      "id": "09",
+      "tema": 8,
+      "enunciado": "La actuación administrativa automatizada se define en:",
+      "opciones": [
+        "Art. 41 Ley 40/2015",
+        "Art. 41 Ley 39/2015",
+        "Art. 13 Ley 39/2015",
+        "Art. 156 Ley 40/2015"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 41 Ley 40/2015** la define como el acto o actuación realizado íntegramente por medios electrónicos, sin intervención directa de un empleado público. El art. 41 de la Ley 39/2015 trata de las condiciones de las notificaciones (mismo número, otra ley); el 13 son los derechos y el 156 el ENI y el ENS."
+    },
+    {
+      "id": "10",
+      "tema": 8,
+      "enunciado": "Para la firma en la actuación administrativa automatizada, el art. 42 de la Ley 40/2015 prevé:",
+      "opciones": [
+        "Firma manuscrita digitalizada o PIN",
+        "Sello electrónico o código seguro de verificación",
+        "Solo certificado de empleado público",
+        "Cl@ve PIN"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 42** permite firmar la actuación automatizada con **sello electrónico** de Administración, órgano u organismo (basado en certificado cualificado) o con **código seguro de verificación** vinculado. No interviene ningún empleado, así que no tiene sentido su certificado personal, y Cl@ve PIN identifica a ciudadanos."
+    },
+    {
+      "id": "11",
+      "tema": 8,
+      "enunciado": "¿Qué dimensión de seguridad NO figura en el Anexo I del ENS?",
+      "opciones": [
+        "Trazabilidad",
+        "Autenticidad",
+        "Disponibilidad",
+        "Conservación"
+      ],
+      "correcta": 3,
+      "explicacion": "Las cinco dimensiones del ENS son **confidencialidad, integridad, trazabilidad, autenticidad y disponibilidad** (C-I-T-A-D). La **conservación** no es una dimensión: aparece entre los principios («prevención, detección, respuesta y conservación») y en el ENI."
+    },
+    {
+      "id": "12",
+      "tema": 8,
+      "enunciado": "En el ENS, un sistema con integridad en nivel ALTO y el resto en nivel BAJO es de categoría:",
+      "opciones": [
+        "BÁSICA",
+        "MEDIA",
+        "ALTA",
+        "Se calcula la media de niveles"
+      ],
+      "correcta": 2,
+      "explicacion": "La categoría la marca el **nivel más alto** de cualquier dimensión: basta **una dimensión en ALTO** para que el sistema sea de categoría **ALTA**. No se hace la media. Truco: manda la dimensión más exigente."
+    },
+    {
+      "id": "13",
+      "tema": 8,
+      "enunciado": "Los sistemas de categoría BÁSICA del ENS demuestran su conformidad mediante:",
+      "opciones": [
+        "Auditoría formal y certificación",
+        "Autoevaluación y declaración de conformidad",
+        "Informe del CCN-CERT",
+        "No necesitan acreditar conformidad"
+      ],
+      "correcta": 1,
+      "explicacion": "Según el **art. 38 RD 311/2022**, la categoría **BÁSICA** se acredita con **autoevaluación** y **declaración** de conformidad. Las categorías MEDIA y ALTA necesitan auditoría y **certificación**. Todas deben acreditarla y publicarla."
+    },
+    {
+      "id": "14",
+      "tema": 8,
+      "enunciado": "Según el art. 31 del RD 311/2022, la auditoría ordinaria de los sistemas se realiza:",
+      "opciones": [
+        "Cada año",
+        "Al menos cada dos años",
+        "Cada tres años",
+        "Solo ante cambios sustanciales"
+      ],
+      "correcta": 1,
+      "explicacion": "La auditoría ordinaria es **al menos cada dos años**. Además, hay auditoría **extraordinaria** cuando se producen modificaciones sustanciales, pero eso no sustituye a la ordinaria."
+    },
+    {
+      "id": "15",
+      "tema": 8,
+      "enunciado": "El Anexo II del ENS agrupa las medidas en:",
+      "opciones": [
+        "Marco organizativo, marco operacional y medidas de protección",
+        "Prevención, detección y respuesta",
+        "Medidas físicas, lógicas y legales",
+        "Básicas, medias y altas"
+      ],
+      "correcta": 0,
+      "explicacion": "El Anexo II agrupa las 73 medidas en **marco organizativo (org)**, **marco operacional (op)** y **medidas de protección (mp)**. «Prevención, detección y respuesta» forma parte de un principio básico, y «básica, media y alta» son las categorías de los sistemas."
+    },
+    {
+      "id": "16",
+      "tema": 8,
+      "enunciado": "La respuesta a incidentes de seguridad del sector público en el ENS la articula:",
+      "opciones": [
+        "INCIBE-CERT",
+        "ESPDEF-CERT",
+        "CCN-CERT",
+        "La AEPD"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 33 RD 311/2022** atribuye al **CCN-CERT** la respuesta a incidentes del sector público. El INCIBE-CERT recibe los incidentes de las entidades privadas que prestan servicios a las públicas (y avisa al CCN-CERT), y el ESPDEF-CERT interviene cuando afectan a la Defensa Nacional."
+    },
+    {
+      "id": "17",
+      "tema": 8,
+      "enunciado": "Las dimensiones de la interoperabilidad que recoge el ENI (art. 6 RD 4/2010) son:",
+      "opciones": [
+        "Organizativa, semántica y técnica",
+        "Jurídica, técnica y económica",
+        "Física, lógica y temporal",
+        "Local, autonómica y estatal"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 6 ENI** define la interoperabilidad como multidimensional: **organizativa, semántica y técnica**, que son además los capítulos III, IV y V del RD 4/2010. Las otras combinaciones no están en el ENI."
+    },
+    {
+      "id": "18",
+      "tema": 8,
+      "enunciado": "Según el art. 15 del ENI, las Administraciones sincronizan la fecha y hora con:",
+      "opciones": [
+        "El Centro Español de Metrología",
+        "El Real Instituto y Observatorio de la Armada",
+        "El Instituto Geográfico Nacional",
+        "La FNMT-RCM"
+      ],
+      "correcta": 1,
+      "explicacion": "La hora oficial se sincroniza con el **Real Instituto y Observatorio de la Armada** (art. 15 RD 4/2010), que mantiene la hora legal en España. El Centro Español de Metrología, el IGN y la FNMT son distractores plausibles, pero no son la referencia del ENI."
+    },
+    {
+      "id": "19",
+      "tema": 8,
+      "enunciado": "NO es un componente del expediente electrónico según su NTI:",
+      "opciones": [
+        "Documentos electrónicos",
+        "Índice electrónico",
+        "Firma del índice",
+        "Recibo de presentación en registro"
+      ],
+      "correcta": 3,
+      "explicacion": "Según la NTI de Expediente electrónico, sus componentes son **documentos electrónicos, índice electrónico, firma del índice** y **metadatos** del expediente. El **recibo de registro** no es un componente: si acaso, puede ser uno de los documentos del expediente."
+    },
+    {
+      "id": "20",
+      "tema": 8,
+      "enunciado": "Las Normas Técnicas de Interoperabilidad se aprueban, según la DA 1.ª vigente del RD 4/2010, a propuesta de:",
+      "opciones": [
+        "El Consejo de Ministros",
+        "El Centro Criptológico Nacional",
+        "La Comisión Sectorial de Administración Electrónica",
+        "La Agencia Española de Protección de Datos"
+      ],
+      "correcta": 2,
+      "explicacion": "Tras el RD 1125/2024, las NTI las aprueba el **Ministerio para la Transformación Digital y de la Función Pública** a propuesta de la **Comisión Sectorial de Administración Electrónica**, y se publican por resolución de la Secretaría de Estado de Función Pública. El CCN es el referente del ENS, no del ENI."
+    },
+    {
+      "id": "21",
+      "tema": 8,
+      "enunciado": "Según el art. 13.a) de la Ley 39/2015, las personas tienen derecho a comunicarse con las Administraciones a través de:",
+      "opciones": [
+        "La Carpeta Ciudadana",
+        "La Dirección Electrónica Habilitada única",
+        "Un Punto de Acceso General electrónico de la Administración",
+        "La Red SARA"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 13.a)** reconoce el derecho a comunicarse a través de un **Punto de Acceso General electrónico**. La Carpeta Ciudadana es un área personalizada dentro de la sede del PAGe; la DEHú sirve para notificar, y la Red SARA es la red entre Administraciones, no un canal para los ciudadanos."
+    },
+    {
+      "id": "22",
+      "tema": 8,
+      "enunciado": "Según el art. 28.2 Ley 39/2015, la Administración puede consultar los documentos que ya obren en su poder salvo oposición expresa del interesado. Esa oposición NO cabe cuando:",
+      "opciones": [
+        "Se trate del ejercicio de potestades sancionadoras o de inspección",
+        "El documento lo haya elaborado otra Administración",
+        "El procedimiento se haya iniciado a instancia de parte",
+        "El interesado sea una persona jurídica"
+      ],
+      "correcta": 0,
+      "explicacion": "El interesado puede oponerse a la consulta de sus datos, pero **no** en el ejercicio de **potestades sancionadoras o de inspección**. Que el documento sea de otra Administración no importa: el derecho a no aportarlo alcanza a lo que obra en poder de **cualquier** Administración."
+    },
+    {
+      "id": "23",
+      "tema": 8,
+      "enunciado": "Según el art. 14.1 Ley 39/2015, una persona física no obligada a relacionarse electrónicamente:",
+      "opciones": [
+        "Debe mantener el medio elegido hasta que termine el procedimiento",
+        "Solo puede cambiar de medio con autorización del órgano instructor",
+        "Queda obligada a la vía electrónica si la usó una vez",
+        "Puede elegir en todo momento el medio y cambiarlo en cualquier momento"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 14.1** permite a las personas físicas **elegir en todo momento** si se relacionan por medios electrónicos o no, y **cambiar** el medio en cualquier momento. No queda atada al medio elegido ni necesita autorización para cambiarlo."
+    },
+    {
+      "id": "24",
+      "tema": 8,
+      "enunciado": "Según el art. 14.2.e) Ley 39/2015, los empleados públicos están obligados a relacionarse electrónicamente con las Administraciones:",
+      "opciones": [
+        "En todos sus trámites, también como ciudadanos particulares",
+        "Para los trámites que realicen por su condición de empleado público, en la forma que determine cada Administración",
+        "Solo si son funcionarios de carrera del subgrupo A1",
+        "Únicamente cuando se lo pida su superior jerárquico"
+      ],
+      "correcta": 1,
+      "explicacion": "La obligación alcanza a los **trámites por su condición de empleado público**, en la forma que fije cada Administración. Como ciudadano particular, el empleado público conserva el derecho de elección del art. 14.1. No depende del cuerpo ni del subgrupo."
+    },
+    {
+      "id": "25",
+      "tema": 8,
+      "enunciado": "En la AGE, la obligación de relacionarse electrónicamente para determinados colectivos de personas físicas (art. 14.3 Ley 39/2015) puede establecerse, según el art. 3.3 RD 203/2021, mediante:",
+      "opciones": [
+        "Únicamente una ley",
+        "Real decreto u orden ministerial",
+        "Resolución de la Secretaría General de Administración Digital",
+        "Instrucción interna de cada órgano"
+      ],
+      "correcta": 1,
+      "explicacion": "El art. 14.3 Ley 39/2015 remite al reglamento, y el **art. 3.3 RD 203/2021** precisa que en la AGE puede hacerse por **real decreto u orden ministerial**. No hace falta una ley, pero tampoco bastan una resolución o una instrucción."
+    },
+    {
+      "id": "26",
+      "tema": 8,
+      "enunciado": "Una persona física que participa en un proceso selectivo de la Administración General del Estado:",
+      "opciones": [
+        "Puede elegir si se relaciona electrónicamente o en papel",
+        "Debe presentar la solicitud en papel en todo caso",
+        "Solo está obligada a la vía electrónica si tiene titulación universitaria",
+        "Está obligada a relacionarse electrónicamente, según la DA 1.ª del RD 203/2021"
+      ],
+      "correcta": 3,
+      "explicacion": "La **DA 1.ª del Reglamento del RD 203/2021** obliga a relacionarse por medios electrónicos a quienes participan en **procesos selectivos** de la AGE. Es un caso de ampliación reglamentaria del art. 14.3 Ley 39/2015 y afecta directamente a los opositores."
+    },
+    {
+      "id": "27",
+      "tema": 8,
+      "enunciado": "Un interesado no obligado y sin medios electrónicos necesita firmar un trámite. Según el art. 12 Ley 39/2015, un funcionario habilitado puede hacerlo por él:",
+      "opciones": [
+        "Con su consentimiento expreso, usando el sistema de firma del que esté dotado el funcionario",
+        "Sin necesidad de consentimiento, si el trámite es urgente",
+        "Solo si el interesado le otorga un poder notarial",
+        "Solo si el interesado es una persona jurídica"
+      ],
+      "correcta": 0,
+      "explicacion": "El funcionario habilitado puede identificar o firmar por el interesado con **su propio sistema de firma**, siempre con el **consentimiento expreso** del interesado. No hace falta poder notarial. Las personas jurídicas están obligadas a la vía electrónica, así que no reciben esta asistencia."
+    },
+    {
+      "id": "28",
+      "tema": 8,
+      "enunciado": "El Real Decreto 203/2021 entró en vigor el:",
+      "opciones": [
+        "30 de marzo de 2021",
+        "31 de marzo de 2021",
+        "2 de abril de 2021",
+        "1 de octubre de 2021"
+      ],
+      "correcta": 2,
+      "explicacion": "El RD 203/2021 es **de 30 de marzo**, se publicó en el BOE el **31 de marzo** y entró en vigor el **2 de abril de 2021** (DF 5.ª). El 1 de octubre es la fecha de las Leyes 39 y 40/2015, de ahí el distractor."
+    },
+    {
+      "id": "29",
+      "tema": 8,
+      "enunciado": "Según el art. 13 RD 4/2010 (ENI), para comunicarse entre sí las Administraciones públicas usarán preferentemente:",
+      "opciones": [
+        "La Red de comunicaciones de las Administraciones públicas españolas (Red SARA)",
+        "Internet pública con redes privadas virtuales propias",
+        "La red académica RedIRIS",
+        "Una red privada distinta en cada ministerio"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 13 ENI** establece el uso preferente de la **Red SARA**, que interconecta a las Administraciones españolas. Su conexión tiene una NTI propia (requisitos de conexión a la Red de comunicaciones de las AAPP) y otra para el plan de direccionamiento IP."
+    },
+    {
+      "id": "30",
+      "tema": 8,
+      "enunciado": "Según el art. 5 RD 203/2021, los portales de internet de la AGE utilizan el dominio:",
+      "opciones": [
+        "«.es»",
+        "«.gov»",
+        "«.administracion.es»",
+        "«.gob.es»"
+      ],
+      "correcta": 3,
+      "explicacion": "Los portales de la AGE usan **«.gob.es»** y deben figurar en el Punto de Acceso General electrónico. «.gov» es el dominio de la Administración de EE. UU., y «.es» es el dominio genérico de España."
+    },
+    {
+      "id": "31",
+      "tema": 8,
+      "enunciado": "La Carpeta Ciudadana regulada en el art. 8 RD 203/2021 es:",
+      "opciones": [
+        "El registro electrónico de apoderamientos de la AGE",
+        "El buzón de notificaciones de la DEHú",
+        "El área personalizada de los interesados en el sector público estatal, en la sede del PAGe",
+        "El archivo electrónico único de la AGE"
+      ],
+      "correcta": 2,
+      "explicacion": "La **Carpeta Ciudadana** es el **área personalizada** de cada interesado ante el sector público estatal y se encuentra en la **sede del PAGe**. La DEHú también está en el PAGe, pero es el sistema de notificaciones; los apoderamientos y el archivo único son otros registros."
+    },
+    {
+      "id": "32",
+      "tema": 8,
+      "enunciado": "Según el art. 21 RD 203/2021, la verificación de documentos mediante código seguro de verificación (CSV):",
+      "opciones": [
+        "Es de pago, según la tasa del órgano emisor",
+        "Es gratuita y debe estar disponible al menos 5 años",
+        "Es gratuita y debe estar disponible al menos 2 años",
+        "Solo la puede hacer el interesado, durante 10 años"
+      ],
+      "correcta": 1,
+      "explicacion": "La comprobación por CSV es **gratuita** y debe estar disponible al menos **5 años** (art. 21.4.e). Permite a cualquiera contrastar en la sede una copia o un documento firmado con CSV."
+    },
+    {
+      "id": "33",
+      "tema": 8,
+      "enunciado": "Según el art. 17 RD 4/2010 (ENI), el directorio general de aplicaciones reutilizables de la AGE se mantiene a través del:",
+      "opciones": [
+        "Centro de Interoperabilidad Semántica",
+        "Centro Criptológico Nacional",
+        "Punto de Acceso General electrónico",
+        "Centro de Transferencia de Tecnología (CTT)"
+      ],
+      "correcta": 3,
+      "explicacion": "El **CTT** es el directorio de aplicaciones reutilizables (art. 17). El Centro de Interoperabilidad Semántica publica los modelos de datos comunes (art. 10); el CCN es el referente del ENS, y el PAGe es el punto de acceso de los ciudadanos."
+    },
+    {
+      "id": "34",
+      "tema": 8,
+      "enunciado": "Según el art. 16.1 Ley 39/2015, en el Registro Electrónico General se anota:",
+      "opciones": [
+        "La entrada de los documentos y, de forma potestativa, la salida de los documentos oficiales",
+        "Solo la salida de los documentos oficiales",
+        "Obligatoriamente la entrada y la salida de todos los documentos",
+        "Solo los documentos presentados por personas jurídicas"
+      ],
+      "correcta": 0,
+      "explicacion": "En el Registro Electrónico General se anota **toda entrada** de documentos, y la **salida** de los documentos oficiales es **potestativa**. Los organismos vinculados pueden tener su propio registro, siempre interoperable e interconectado con el general."
+    },
+    {
+      "id": "35",
+      "tema": 8,
+      "enunciado": "Un interesado que se encuentra en el extranjero quiere presentar en papel un escrito dirigido a la AGE. Según el art. 16.4 Ley 39/2015 puede hacerlo en:",
+      "opciones": [
+        "Cualquier oficina bancaria española",
+        "La notaría del país donde reside",
+        "Las representaciones diplomáticas u oficinas consulares de España en el extranjero",
+        "Únicamente el registro electrónico, por estar fuera de España"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 16.4.c)** admite la presentación en las **representaciones diplomáticas u oficinas consulares** de España. Los otros lugares del art. 16.4 son el registro electrónico, las oficinas de Correos, las oficinas de asistencia en materia de registros y los que fijen otras normas. Bancos y notarías extranjeras no figuran."
+    },
+    {
+      "id": "36",
+      "tema": 8,
+      "enunciado": "Según el art. 31.3 Ley 39/2015, el calendario de días inhábiles aplicable a los registros electrónicos es:",
+      "opciones": [
+        "El calendario del art. 30.6, aprobado cada año",
+        "El que determine la sede electrónica, que es el único aplicable",
+        "El del domicilio del interesado",
+        "El de días inhábiles publicado para todo el territorio nacional"
+      ],
+      "correcta": 1,
+      "explicacion": "La **sede electrónica** del registro determina los días inhábiles, y ese es el **único calendario** aplicable a los registros electrónicos. Por eso el art. 30.6 (calendario anual de días inhábiles) no se aplica aquí."
+    },
+    {
+      "id": "37",
+      "tema": 8,
+      "enunciado": "A un interesado se le notifica el lunes 2 de noviembre de 2026 un trámite de audiencia de 10 días. Suponiendo que no hay festivos en ese periodo, ¿cuál es el último día del plazo?",
+      "opciones": [
+        "Lunes 16 de noviembre",
+        "Jueves 12 de noviembre",
+        "Viernes 13 de noviembre",
+        "Martes 17 de noviembre"
+      ],
+      "correcta": 0,
+      "explicacion": "Los plazos por días son **hábiles** y se excluyen sábados, domingos y festivos (art. 30.2), contando desde el **día siguiente** a la notificación. Del martes 3 al viernes 6 son 4 días; del lunes 9 al viernes 13, 9, y el décimo es el **lunes 16**. El jueves 12 saldría contando días naturales."
+    },
+    {
+      "id": "38",
+      "tema": 8,
+      "enunciado": "Una resolución con un plazo de recurso de un mes se notifica el martes 31 de marzo de 2026. Según el art. 30.4 Ley 39/2015, el plazo vence el:",
+      "opciones": [
+        "1 de mayo de 2026",
+        "4 de mayo de 2026",
+        "30 de mayo de 2026",
+        "30 de abril de 2026"
+      ],
+      "correcta": 3,
+      "explicacion": "Los plazos por meses vencen el **mismo día** del mes de vencimiento; si ese día no existe (no hay 31 de abril), el plazo expira el **último día del mes**: el **jueves 30 de abril**, que es hábil. Solo se prorrogaría al primer día hábil siguiente si el último día fuera inhábil (art. 30.5)."
+    },
+    {
+      "id": "39",
+      "tema": 8,
+      "enunciado": "Según el art. 6.4 Ley 39/2015, el poder que permite al apoderado actuar en nombre del poderdante en cualquier actuación administrativa y ante cualquier Administración es el:",
+      "opciones": [
+        "Poder para trámites especificados",
+        "Poder general",
+        "Poder ante una Administración u organismo concreto",
+        "Poder apud acta"
+      ],
+      "correcta": 1,
+      "explicacion": "El art. 6.4 distingue tres poderes inscribibles: **general** (cualquier actuación ante **cualquier** Administración), ante una Administración u organismo concreto, y para trámites especificados. El **apud acta** es una forma de **acreditar** la representación, no un tipo de poder."
+    },
+    {
+      "id": "40",
+      "tema": 8,
+      "enunciado": "Según el art. 33 RD 203/2021, el registro electrónico de apoderamientos:",
+      "opciones": [
+        "Es público y cualquier persona puede consultarlo",
+        "Solo lo pueden consultar los notarios",
+        "No es público: cada interesado solo puede consultar los apoderamientos de los que es poderdante o apoderado",
+        "Se publica cada año en el BOE"
+      ],
+      "correcta": 2,
+      "explicacion": "El registro de apoderamientos **no es público**: cada interesado solo ve **sus** poderes. Los órganos que tramitan los procedimientos lo consultan para comprobar la representación. Es interoperable entre AGE, CCAA y EELL."
+    },
+    {
+      "id": "41",
+      "tema": 8,
+      "enunciado": "El Sistema de Interconexión de Registros (SIR) permite el intercambio de asientos registrales entre Administraciones siempre que la aplicación de registro esté certificada en la norma:",
+      "opciones": [
+        "ISO/IEC 27001",
+        "ENS de categoría ALTA",
+        "SICRES 2.0",
+        "SICRES 3.0"
+      ],
+      "correcta": 3,
+      "explicacion": "El SIR exige que la aplicación esté certificada en **SICRES 3.0**, el modelo de datos para el intercambio de asientos registrales (que además es una NTI). Así se intercambian **copias electrónicas auténticas** y se elimina el traslado de papel. SICRES 2.0 es una versión anterior."
+    },
+    {
+      "id": "42",
+      "tema": 8,
+      "enunciado": "Según el art. 11 RD 4/2010 (ENI), las Administraciones públicas usarán:",
+      "opciones": [
+        "Estándares abiertos y, de forma complementaria, de uso generalizado; uno no abierto en exclusiva solo si no hay uno abierto equivalente",
+        "Solo estándares de uso generalizado, sean o no abiertos",
+        "El estándar que elija libremente cada órgano",
+        "Exclusivamente estándares ISO"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 11 ENI** da preferencia a los **estándares abiertos** y admite los de **uso generalizado** de forma complementaria. Un estándar no abierto solo puede usarse en exclusiva si no hay uno abierto equivalente, y mientras no lo haya. Es la misma idea que la neutralidad tecnológica del art. 2 RD 203/2021."
+    },
+    {
+      "id": "43",
+      "tema": 8,
+      "enunciado": "Según el art. 41.6 Ley 39/2015, si la Administración no envía al interesado el aviso de que tiene una notificación a su disposición, la notificación es:",
+      "opciones": [
+        "Nula de pleno derecho",
+        "Plenamente válida",
+        "Anulable a instancia del interesado",
+        "Válida, pero el plazo de 10 días vuelve a empezar"
+      ],
+      "correcta": 1,
+      "explicacion": "El aviso al dispositivo o al correo del interesado es **solo informativo** (art. 43 RD 203/2021): su **falta no impide** que la notificación sea **plenamente válida** (art. 41.6). Por eso conviene revisar la DEHú y la sede con regularidad."
+    },
+    {
+      "id": "44",
+      "tema": 8,
+      "enunciado": "Según el art. 41.2 Ley 39/2015, NO se practican por medios electrónicos las notificaciones:",
+      "opciones": [
+        "Dirigidas a personas jurídicas",
+        "De actos de trámite",
+        "Que contengan medios de pago a favor de los obligados, como cheques",
+        "De resoluciones sancionadoras"
+      ],
+      "correcta": 2,
+      "explicacion": "Nunca son electrónicas las notificaciones de actos con elementos **no convertibles** a formato electrónico y las que contienen **medios de pago** (cheques, etc.). Las personas jurídicas, al contrario, están obligadas a recibirlas electrónicamente, y los actos de trámite o las sanciones se notifican por la vía general."
+    },
+    {
+      "id": "45",
+      "tema": 8,
+      "enunciado": "Una notificación se pone a disposición a la vez en la sede electrónica y en la DEHú. El interesado accede por la DEHú el día 3 y por la sede el día 5. Según el art. 42.1 RD 203/2021, se entiende practicada:",
+      "opciones": [
+        "El día 5, último acceso",
+        "En la fecha más favorable para el interesado",
+        "El día 3, el del primer acceso",
+        "A los 10 días naturales de la puesta a disposición"
+      ],
+      "correcta": 2,
+      "explicacion": "Cuando se notifica por los dos sistemas, cuenta la fecha del **primer acceso o rechazo**, en el sistema donde ocurra primero: el **día 3**. El segundo acceso no cambia nada, y los 10 días naturales solo importan si no hay acceso (rechazo)."
+    },
+    {
+      "id": "46",
+      "tema": 8,
+      "enunciado": "Según el art. 42.2 Ley 39/2015, en ausencia del interesado puede hacerse cargo de la notificación en papel en su domicilio:",
+      "opciones": [
+        "Cualquier persona mayor de 14 años que se encuentre allí y haga constar su identidad",
+        "Solo un familiar mayor de edad",
+        "Solo su representante legal acreditado",
+        "Cualquier persona mayor de 16 años, aunque no se identifique"
+      ],
+      "correcta": 0,
+      "explicacion": "Puede recibirla **cualquier persona mayor de 14 años** que esté en el domicilio y **se identifique**. No hace falta ser familiar ni mayor de edad. Los 14 años coinciden con la edad del DNI obligatorio y con la del consentimiento en la LOPDGDD."
+    },
+    {
+      "id": "47",
+      "tema": 8,
+      "enunciado": "Según el art. 44 Ley 39/2015, cuando el interesado es desconocido, se ignora el lugar de la notificación o no se ha podido practicar, la notificación se hace por:",
+      "opciones": [
+        "Edicto en el tablón del ayuntamiento del último domicilio, únicamente",
+        "Anuncio en el diario oficial de la comunidad autónoma",
+        "Comunicación a la oficina consular, si reside fuera",
+        "Anuncio en el Boletín Oficial del Estado"
+      ],
+      "correcta": 3,
+      "explicacion": "La notificación infructuosa se hace por **anuncio en el BOE**. De forma previa y **facultativa** puede publicarse también en otros boletines, en el tablón del ayuntamiento del último domicilio o en el consulado, pero eso **no sustituye** al BOE."
+    },
+    {
+      "id": "48",
+      "tema": 8,
+      "enunciado": "Según el art. 40.4 Ley 39/2015, para entender cumplida la obligación de notificar dentro del plazo máximo del procedimiento basta con:",
+      "opciones": [
+        "Haber dictado la resolución dentro de ese plazo",
+        "La notificación con el texto íntegro de la resolución y el intento de notificación debidamente acreditado",
+        "Haber enviado un aviso al correo electrónico del interesado",
+        "Haber publicado la resolución en la sede electrónica"
+      ],
+      "correcta": 1,
+      "explicacion": "Basta con la **notificación del texto íntegro** y el **intento de notificación debidamente acreditado**. Dictar la resolución no es suficiente si no se intenta notificar, y el aviso por correo es solo informativo. En la notificación en sede, la puesta a disposición cumple la obligación (art. 45.3 RD 203/2021)."
+    },
+    {
+      "id": "49",
+      "tema": 8,
+      "enunciado": "Según el art. 26.2 Ley 39/2015, para ser válido, el documento administrativo electrónico debe incorporar, entre otros requisitos:",
+      "opciones": [
+        "Una referencia temporal del momento en que se ha emitido",
+        "La firma manuscrita escaneada del titular del órgano",
+        "En todo caso, un sello cualificado de tiempo",
+        "El visto bueno del delegado de protección de datos"
+      ],
+      "correcta": 0,
+      "explicacion": "El art. 26.2 exige formato determinado, datos de identificación, **referencia temporal**, metadatos mínimos y las firmas electrónicas que correspondan. La referencia temporal puede ser una marca de tiempo **o** un sello cualificado de tiempo (art. 50 RD 203/2021), así que el sello no es obligatorio en todo caso."
+    },
+    {
+      "id": "50",
+      "tema": 8,
+      "enunciado": "Según el art. 27 Ley 39/2015, la copia en papel de un documento electrónico, para ser auténtica, debe contener:",
+      "opciones": [
+        "La firma manuscrita del funcionario que la imprime",
+        "Una diligencia de compulsa con sello en tinta",
+        "Un código generado electrónicamente u otro sistema de verificación que permita contrastarla con el original en la sede",
+        "Una referencia al número de registro de entrada"
+      ],
+      "correcta": 2,
+      "explicacion": "La copia en papel de un documento electrónico indica que es copia y lleva un **código generado electrónicamente** (CSV) u otro sistema que permita **contrastarla con el original** en la sede electrónica. La compulsa tradicional con sello en tinta ya no es el sistema de la Ley 39/2015."
+    },
+    {
+      "id": "51",
+      "tema": 8,
+      "enunciado": "Según el art. 70 Ley 39/2015, cuando se remite un expediente electrónico debe ir acompañado de:",
+      "opciones": [
+        "Una copia en papel de todos sus documentos",
+        "Un índice numerado de todos los documentos que contenga, firmado o sellado",
+        "Un certificado del registro electrónico de entrada",
+        "Un resumen elaborado por el instructor"
+      ],
+      "correcta": 1,
+      "explicacion": "El expediente se remite con un **índice numerado** de todos sus documentos, que se **firma o sella** (art. 51 RD 203/2021) para garantizar su integridad. La firma del índice es también uno de los componentes del expediente en su NTI."
+    },
+    {
+      "id": "52",
+      "tema": 8,
+      "enunciado": "En la Administración General del Estado, la actuación administrativa automatizada se autoriza mediante:",
+      "opciones": [
+        "Real decreto del Consejo de Ministros",
+        "Orden del ministro del departamento",
+        "Instrucción interna, sin necesidad de publicarla",
+        "Resolución del titular del órgano competente, publicada en la sede electrónica"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 13 RD 203/2021** exige en la AGE una **resolución** del titular del órgano competente, que se **publica en la sede** electrónica. Así cualquiera puede conocer qué órgano responde de la actuación automatizada a efectos de impugnación."
+    },
+    {
+      "id": "53",
+      "tema": 8,
+      "enunciado": "Según el art. 41.2 Ley 40/2015, antes de implantar una actuación administrativa automatizada debe establecerse el órgano competente para, entre otras tareas:",
+      "opciones": [
+        "Notificar los actos dictados",
+        "Archivar los expedientes finalizados",
+        "La auditoría del sistema de información y de su código fuente",
+        "Cobrar las tasas del procedimiento"
+      ],
+      "correcta": 2,
+      "explicacion": "Hay que fijar el órgano competente para especificaciones, programación, mantenimiento, supervisión, control de calidad y **auditoría del sistema y de su código fuente**, y el órgano responsable a efectos de **impugnación**. Las otras tareas no forman parte de esa lista."
+    },
+    {
+      "id": "54",
+      "tema": 8,
+      "enunciado": "Según la NTI de Documento electrónico, los componentes del documento electrónico son:",
+      "opciones": [
+        "El contenido, la firma electrónica (en su caso) y los metadatos",
+        "El contenido, el índice electrónico y la firma del índice",
+        "El contenido, el código seguro de verificación y el sello de tiempo",
+        "El contenido y el recibo de presentación en registro"
+      ],
+      "correcta": 0,
+      "explicacion": "El documento electrónico tiene **contenido, firma electrónica** (en su caso) **y metadatos**. El índice y su firma son componentes del **expediente** electrónico, no del documento, de ahí la confusión más habitual."
+    },
+    {
+      "id": "55",
+      "tema": 8,
+      "enunciado": "Respecto del Real Decreto 311/2022 (ENS), señale la afirmación correcta:",
+      "opciones": [
+        "Entró en vigor el 4 de mayo de 2022 y modificó el RD 3/2010",
+        "Entró en vigor el 5 de mayo de 2022 y derogó el RD 3/2010",
+        "Entró en vigor el 1 de enero de 2023 y derogó el RD 4/2010",
+        "Entró en vigor el 3 de mayo de 2022, sin derogar ninguna norma"
+      ],
+      "correcta": 1,
+      "explicacion": "El RD 311/2022 es **de 3 de mayo**, se publicó el **4 de mayo** y entró en vigor el **5 de mayo de 2022**, **derogando el RD 3/2010** (el ENS anterior). El RD 4/2010 es el ENI, que sigue vigente."
+    },
+    {
+      "id": "56",
+      "tema": 8,
+      "enunciado": "Según el art. 2 RD 311/2022, el ENS se aplica también a:",
+      "opciones": [
+        "Todas las empresas privadas que usen sistemas de información",
+        "Solo la Administración General del Estado",
+        "Solo los sistemas que no manejan información clasificada",
+        "Las entidades del sector privado que presten servicios o provean soluciones a las entidades del sector público"
+      ],
+      "correcta": 3,
+      "explicacion": "El ENS se aplica a **todo el sector público**, a los sistemas con información clasificada (sin perjuicio de la Ley 9/1968) y a las **entidades privadas** que presten servicios o provean soluciones al sector público por relación contractual. No alcanza a cualquier empresa privada."
+    },
+    {
+      "id": "57",
+      "tema": 8,
+      "enunciado": "Según el RD 311/2022, en la organización de la seguridad:",
+      "opciones": [
+        "El responsable de la seguridad y el responsable del sistema deben ser personas distintas, salvo excepciones justificadas",
+        "El responsable de la seguridad y el del sistema pueden ser siempre la misma persona",
+        "El responsable del sistema determina la categoría del sistema",
+        "El responsable de la información realiza la auditoría ordinaria"
+      ],
+      "correcta": 0,
+      "explicacion": "La responsabilidad de la seguridad está **diferenciada de la de explotación**: el responsable de la seguridad y el del sistema deben ser **personas distintas**, sin dependencia jerárquica, salvo excepciones justificadas con medidas compensatorias. La categoría la determina el **responsable de la seguridad**, a partir de las valoraciones de los responsables de la información y del servicio."
+    },
+    {
+      "id": "58",
+      "tema": 8,
+      "enunciado": "En el ENS, un sistema tiene estas valoraciones: confidencialidad MEDIO, integridad BAJO, trazabilidad sin nivel, autenticidad MEDIO y disponibilidad BAJO. ¿Cuál es su categoría?",
+      "opciones": [
+        "BÁSICA",
+        "ALTA",
+        "MEDIA",
+        "No se puede categorizar si alguna dimensión no tiene nivel"
+      ],
+      "correcta": 2,
+      "explicacion": "La categoría la marca el **nivel más alto**: hay dimensiones en **MEDIO** y ninguna en ALTO, así que la categoría es **MEDIA**. Que la trazabilidad no tenga nivel no impide categorizar: simplemente no cuenta."
+    },
+    {
+      "id": "59",
+      "tema": 8,
+      "enunciado": "Según el Anexo II del RD 311/2022, ¿cuántas medidas de seguridad tiene el marco operacional (op)?",
+      "opciones": [
+        "4",
+        "33",
+        "36",
+        "73"
+      ],
+      "correcta": 1,
+      "explicacion": "El marco operacional tiene **33 medidas**; el organizativo, 4, y las medidas de protección, 36, que suman **73**. Truco: 4 + 33 + 36 = 73; el grupo más numeroso es el de protección (mp)."
+    },
+    {
+      "id": "60",
+      "tema": 8,
+      "enunciado": "Según el art. 16 RD 4/2010 (ENI), cuando las Administraciones liberen aplicaciones en fuentes abiertas, procurarán usar la licencia:",
+      "opciones": [
+        "GPL v3",
+        "Apache 2.0",
+        "MIT",
+        "EUPL (Licencia Pública de la Unión Europea)"
+      ],
+      "correcta": 3,
+      "explicacion": "El art. 16 ENI dispone que las aplicaciones se licencien por defecto **sin contraprestación y sin convenio**, y que en fuentes abiertas se procure la **EUPL**. GPL, Apache y MIT son licencias libres conocidas, pero no son la que cita el ENI."
+    }
+  ]
+}

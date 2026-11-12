@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 27 · test",
+  "fuente": "propio",
+  "tema": 27,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 27. Administración de redes de área local»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 27,
+      "enunciado": "¿En qué puerto recibe el gestor SNMP las notificaciones *trap*?",
+      "opciones": [
+        "UDP 161",
+        "UDP 162",
+        "UDP 514",
+        "UDP 69"
+      ],
+      "correcta": 1,
+      "explicacion": "Los *traps* llegan al gestor por **UDP 162**; el **agente** escucha las peticiones en **UDP 161**. El 514 es syslog y el 69 es TFTP. Truco: 161 para preguntar al agente, 162 para que el agente avise al gestor."
+    },
+    {
+      "id": "02",
+      "tema": 27,
+      "enunciado": "¿Cuántos bits ocupa el identificador de VLAN (VID) en la etiqueta IEEE 802.1Q?",
+      "opciones": [
+        "8",
+        "10",
+        "12",
+        "16"
+      ],
+      "correcta": 2,
+      "explicacion": "El **VID tiene 12 bits**: 4096 valores, de los que son utilizables las VLAN **1-4094** (0 y 4095 están reservadas). La etiqueta completa ocupa 4 bytes (32 bits): TPID 16, PCP 3, DEI 1 y VID 12."
+    },
+    {
+      "id": "03",
+      "tema": 27,
+      "enunciado": "En el modelo FCAPS, la letra «A» corresponde a la gestión de:",
+      "opciones": [
+        "Autenticación",
+        "Disponibilidad",
+        "Auditoría",
+        "Contabilidad"
+      ],
+      "correcta": 3,
+      "explicacion": "La «A» es **Accounting = contabilidad**: el registro del **uso** de los recursos por usuario o servicio (tarificación, cuotas), no la contabilidad financiera. La autenticación forma parte de la «S» (seguridad); FCAPS = fallos, configuración, contabilidad, prestaciones y seguridad."
+    },
+    {
+      "id": "04",
+      "tema": 27,
+      "enunciado": "TACACS+ utiliza como transporte:",
+      "opciones": [
+        "UDP 1812",
+        "TCP 49",
+        "UDP 49",
+        "TCP 1813"
+      ],
+      "correcta": 1,
+      "explicacion": "**TACACS+** usa **TCP 49** y cifra todo el cuerpo del paquete. **RADIUS** usa **UDP** 1812 (autenticación) y 1813 (contabilidad). Truco: TACACS+ es el de Cisco para administrar equipos, con TCP fiable."
+    },
+    {
+      "id": "05",
+      "tema": 27,
+      "enunciado": "En IEEE 802.1X, el switch que controla el puerto desempeña el papel de:",
+      "opciones": [
+        "Suplicante",
+        "Servidor de autenticación",
+        "Autenticador",
+        "Proxy EAP"
+      ],
+      "correcta": 2,
+      "explicacion": "En 802.1X el switch o punto de acceso es el **autenticador**: controla el puerto y reenvía EAP al servidor. El **suplicante** es el cliente que pide acceso y el **servidor de autenticación** suele ser un RADIUS que consulta el directorio."
+    },
+    {
+      "id": "06",
+      "tema": 27,
+      "enunciado": "¿Qué versión de SNMP incorpora autenticación de usuarios y cifrado?",
+      "opciones": [
+        "SNMPv1",
+        "SNMPv2c",
+        "SNMPv2 basada en comunidad",
+        "SNMPv3"
+      ],
+      "correcta": 3,
+      "explicacion": "**SNMPv3**, con el modelo **USM**, añade autenticación, integridad y cifrado (nivel authPriv). SNMPv1 y SNMPv2c (que es precisamente «v2 basada en comunidad») usan una **comunidad en texto claro**."
+    },
+    {
+      "id": "07",
+      "tema": 27,
+      "enunciado": "En STP, el puente raíz es el switch con:",
+      "opciones": [
+        "Mayor Bridge ID",
+        "Menor Bridge ID",
+        "Mayor dirección MAC",
+        "Más puertos activos"
+      ],
+      "correcta": 1,
+      "explicacion": "Gana el **menor Bridge ID** (prioridad, 32768 por defecto, + MAC); a igual prioridad decide la **MAC más baja**, no la más alta. El número de puertos no interviene."
+    },
+    {
+      "id": "08",
+      "tema": 27,
+      "enunciado": "Rapid Spanning Tree (RSTP) se definió en el estándar:",
+      "opciones": [
+        "IEEE 802.1w",
+        "IEEE 802.1s",
+        "IEEE 802.1D",
+        "IEEE 802.1AB"
+      ],
+      "correcta": 0,
+      "explicacion": "**RSTP = IEEE 802.1w**. 802.1s es MSTP, 802.1D es el STP original y 802.1AB es LLDP. Truco: la **w** de *rapid* va antes que la **s** de *multiple*."
+    },
+    {
+      "id": "09",
+      "tema": 27,
+      "enunciado": "El orden correcto de los mensajes en la obtención de una concesión DHCP es:",
+      "opciones": [
+        "Request, Offer, Discover, Ack",
+        "Discover, Request, Offer, Ack",
+        "Discover, Offer, Request, Ack",
+        "Offer, Discover, Ack, Request"
+      ],
+      "correcta": 2,
+      "explicacion": "El proceso es **DORA**: **Discover** (el cliente busca), **Offer** (el servidor ofrece), **Request** (el cliente pide la oferta elegida) y **Ack** (el servidor confirma). El cliente no puede pedir una dirección antes de que se la ofrezcan."
+    },
+    {
+      "id": "10",
+      "tema": 27,
+      "enunciado": "NetFlow proporciona principalmente:",
+      "opciones": [
+        "El contenido completo de los paquetes",
+        "Metadatos de los flujos de tráfico",
+        "Solo los errores de interfaz",
+        "Las tablas MAC de los switches"
+      ],
+      "correcta": 1,
+      "explicacion": "NetFlow exporta **metadatos de flujos** (quién habla con quién, cuánto, con qué protocolo), **no el contenido**. Para ver el contenido de los paquetes hace falta captura (SPAN o TAP con Wireshark)."
+    },
+    {
+      "id": "11",
+      "tema": 27,
+      "enunciado": "En syslog, ¿qué nivel de gravedad indica la situación más grave?",
+      "opciones": [
+        "0",
+        "1",
+        "7",
+        "3"
+      ],
+      "correcta": 0,
+      "explicacion": "En syslog, cuanto **menor** el número, **más grave**: **0 = Emergency**, 1 Alert, 2 Critical, 3 Error… hasta 7 Debug. Por eso 7 es el menos grave, no el más."
+    },
+    {
+      "id": "12",
+      "tema": 27,
+      "enunciado": "Una ACL estándar filtra el tráfico únicamente por:",
+      "opciones": [
+        "Dirección IP de destino",
+        "Puerto de destino",
+        "Dirección IP de origen",
+        "Protocolo de transporte"
+      ],
+      "correcta": 2,
+      "explicacion": "La **ACL estándar** (Cisco 1-99) solo mira la **IP de origen**; por eso se coloca cerca del destino. La extendida (100-199) añade IP destino, protocolo y puertos, y se coloca cerca del origen."
+    },
+    {
+      "id": "13",
+      "tema": 27,
+      "enunciado": "¿Qué operación SNMP es una notificación del agente que requiere confirmación del gestor?",
+      "opciones": [
+        "Trap",
+        "InformRequest",
+        "GetBulkRequest",
+        "SetRequest"
+      ],
+      "correcta": 1,
+      "explicacion": "**InformRequest** (desde SNMPv2c) es una notificación **con confirmación**; el **Trap** no se confirma. GetBulkRequest y SetRequest van del gestor al agente, para leer muchos valores y para modificar un valor."
+    },
+    {
+      "id": "14",
+      "tema": 27,
+      "enunciado": "El puerto estándar de LDAP sobre TLS (LDAPS) es:",
+      "opciones": [
+        "389",
+        "443",
+        "3268",
+        "636"
+      ],
+      "correcta": 3,
+      "explicacion": "**LDAPS usa el 636/TCP**. LDAP usa el 389 (también con StartTLS), el 3268 es el catálogo global de Active Directory y el 443 es HTTPS."
+    },
+    {
+      "id": "15",
+      "tema": 27,
+      "enunciado": "La función de *port mirroring* (SPAN) en un switch sirve para:",
+      "opciones": [
+        "Agregar varios enlaces físicos",
+        "Evitar bucles de nivel 2",
+        "Copiar el tráfico de unos puertos a un puerto de análisis",
+        "Asignar VLAN dinámicas"
+      ],
+      "correcta": 2,
+      "explicacion": "**SPAN** **copia el tráfico** de uno o varios puertos o VLAN a un **puerto destino** con un analizador o un IDS. Agregar enlaces es LACP, evitar bucles es STP y las VLAN dinámicas se asignan con 802.1X y RADIUS."
+    },
+    {
+      "id": "16",
+      "tema": 27,
+      "enunciado": "En QoS, el *shaping* (conformado) del tráfico que excede la tasa:",
+      "opciones": [
+        "Lo retiene en búfer para enviarlo después",
+        "Lo descarta inmediatamente",
+        "Lo marca con CoS 7",
+        "Lo cifra"
+      ],
+      "correcta": 0,
+      "explicacion": "El **shaping retiene en búfer** el exceso para suavizar el tráfico (añade retardo, pero no descarta de entrada). Descartar o remarcar el exceso es el **policing**. Truco: *shaping* da forma (espera); *policing* es el policía (multa y fuera)."
+    },
+    {
+      "id": "17",
+      "tema": 27,
+      "enunciado": "La VLAN nativa de un enlace troncal 802.1Q es aquella que:",
+      "opciones": [
+        "Viaja sin etiqueta",
+        "Lleva doble etiqueta",
+        "Se usa obligatoriamente para gestión",
+        "Tiene siempre el VID 4095"
+      ],
+      "correcta": 0,
+      "explicacion": "La **VLAN nativa** es la que **viaja sin etiqueta** por el troncal (por defecto la VLAN 1); se recomienda cambiarla a una VLAN sin uso. La doble etiqueta es QinQ (802.1ad) y el VID 4095 está reservado."
+    },
+    {
+      "id": "18",
+      "tema": 27,
+      "enunciado": "La MIB-II estándar cuelga en el árbol de OID de la rama:",
+      "opciones": [
+        "1.3.6.1.4.1",
+        "1.3.6.1.6.3",
+        "1.3.6.1.2.1",
+        "2.5.4.3"
+      ],
+      "correcta": 2,
+      "explicacion": "**MIB-II = 1.3.6.1.2.1** (*mgmt*.*mib-2*, RFC 1213). La rama **1.3.6.1.4.1** es la de las MIB **privadas** de fabricantes. Todas cuelgan de la rama de Internet 1.3.6.1."
+    },
+    {
+      "id": "19",
+      "tema": 27,
+      "enunciado": "Para que equipos de VLAN distintas se comuniquen se necesita:",
+      "opciones": [
+        "Un hub",
+        "Un switch de nivel 2 sin más",
+        "Un repetidor",
+        "Un dispositivo de nivel 3"
+      ],
+      "correcta": 3,
+      "explicacion": "Cada VLAN es un **dominio de difusión** distinto, así que unirlas exige **enrutamiento (nivel 3)**: un router (router-on-a-stick) o un switch de nivel 3 con SVI. Hubs, repetidores y switches de nivel 2 no enrutan."
+    },
+    {
+      "id": "20",
+      "tema": 27,
+      "enunciado": "DHCP Snooping protege principalmente frente a:",
+      "opciones": [
+        "Servidores DHCP no autorizados",
+        "Bucles de nivel 2",
+        "Doble etiquetado de VLAN",
+        "Tormentas de multicast"
+      ],
+      "correcta": 0,
+      "explicacion": "**DHCP Snooping** solo deja que los **puertos de confianza** emitan respuestas DHCP, lo que frena los **servidores DHCP falsos**. Los bucles se evitan con STP, el doble etiquetado es un ataque de VLAN hopping y las tormentas se limitan con *storm control*."
+    },
+    {
+      "id": "21",
+      "tema": 27,
+      "enunciado": "En el modelo FCAPS, las gráficas de uso de los enlaces, las líneas base y el análisis de tendencias corresponden al área de:",
+      "opciones": [
+        "Fallos",
+        "Configuración",
+        "Contabilidad",
+        "Prestaciones"
+      ],
+      "correcta": 3,
+      "explicacion": "Rendimiento, utilización, latencia, líneas base y tendencias son la «P» de **Prestaciones** (*Performance*). Fallos se ocupa de alarmas y diagnóstico, Configuración del inventario y los cambios, y Contabilidad del uso de recursos por usuario o servicio."
+    },
+    {
+      "id": "22",
+      "tema": 27,
+      "enunciado": "Hacer copia de seguridad de la *running-config* de los switches es, en el modelo FCAPS, una tarea de gestión de:",
+      "opciones": [
+        "Fallos",
+        "Configuración",
+        "Prestaciones",
+        "Seguridad"
+      ],
+      "correcta": 1,
+      "explicacion": "Inventario, versiones, cambios y **copias de configuración** pertenecen a la **gestión de configuración** («C»). Que la copia ayude después a recuperar un fallo no la convierte en gestión de fallos."
+    },
+    {
+      "id": "23",
+      "tema": 27,
+      "enunciado": "¿Qué tipo de gestión de red permite recuperar un equipo cuando la red de datos ha caído?",
+      "opciones": [
+        "La gestión fuera de banda (*out-of-band*)",
+        "La gestión en banda",
+        "El sondeo periódico por SNMP",
+        "La telemetría en flujo continuo"
+      ],
+      "correcta": 0,
+      "explicacion": "La **gestión fuera de banda** usa una **red de gestión separada**, el puerto de consola o un servidor de consolas, así que sigue funcionando aunque caiga la red de datos. La gestión en banda, el sondeo SNMP y la telemetría viajan por la propia red de datos."
+    },
+    {
+      "id": "24",
+      "tema": 27,
+      "enunciado": "Sobre los dominios de colisión y de difusión en una LAN, señale la afirmación INCORRECTA:",
+      "opciones": [
+        "El switch separa dominios de colisión, uno por puerto",
+        "El router separa dominios de difusión",
+        "Un switch de nivel 2 sin VLAN separa dominios de difusión",
+        "Cada VLAN constituye un dominio de difusión lógico"
+      ],
+      "correcta": 2,
+      "explicacion": "Es falso: un switch de nivel 2 sin VLAN **reenvía los broadcast por todos sus puertos**, así que todo él es un **único dominio de difusión**. Los dominios de difusión los separan el **router** y las **VLAN**; el switch solo separa dominios de colisión."
+    },
+    {
+      "id": "25",
+      "tema": 27,
+      "enunciado": "En una dirección MAC de 48 bits, el identificador del fabricante (OUI) ocupa:",
+      "opciones": [
+        "8 bits",
+        "16 bits",
+        "24 bits",
+        "32 bits"
+      ],
+      "correcta": 2,
+      "explicacion": "El **OUI ocupa los 24 primeros bits** (3 bytes) de la MAC y lo asigna el IEEE al fabricante; los otros 24 bits los numera el fabricante. Así, en 00:1A:2B:3C:4D:5E el OUI es 00:1A:2B."
+    },
+    {
+      "id": "26",
+      "tema": 27,
+      "enunciado": "Una política que permite acceder a una aplicación solo en horario laboral y desde la red interna corresponde al modelo de control de acceso:",
+      "opciones": [
+        "DAC (discrecional)",
+        "MAC (obligatorio)",
+        "RBAC (por roles)",
+        "ABAC (por atributos)"
+      ],
+      "correcta": 3,
+      "explicacion": "**ABAC** decide con **reglas sobre atributos** del usuario, del recurso y del **entorno** (hora, ubicación, red). En DAC decide el propietario del recurso, en MAC una política central por etiquetas de clasificación y en RBAC el rol del usuario."
+    },
+    {
+      "id": "27",
+      "tema": 27,
+      "enunciado": "En el DN `cn=Ana Ruiz,ou=Informatica,dc=ministerio,dc=es`, el atributo `ou` indica:",
+      "opciones": [
+        "El nombre común de la entrada",
+        "La unidad organizativa",
+        "Un componente del nombre de dominio",
+        "El identificador de usuario"
+      ],
+      "correcta": 1,
+      "explicacion": "**ou** es la **unidad organizativa** (aquí, Informatica). **cn** es el nombre común (Ana Ruiz), **dc** cada componente de dominio (ministerio y es) y **uid** el identificador de usuario, que no aparece en este DN."
+    },
+    {
+      "id": "28",
+      "tema": 27,
+      "enunciado": "Cuando una conexión LDAP se protege con StartTLS, ¿qué puerto utiliza?",
+      "opciones": [
+        "389",
+        "636",
+        "3268",
+        "88"
+      ],
+      "correcta": 0,
+      "explicacion": "Con **StartTLS** la conexión empieza en claro en el puerto normal de LDAP y se eleva a TLS, así que sigue siendo el **389**. El **636** es LDAPS, con TLS desde el inicio; el 3268 es el catálogo global de AD y el 88 es Kerberos."
+    },
+    {
+      "id": "29",
+      "tema": 27,
+      "enunciado": "Una GPO vinculada al dominio y otra vinculada a la OU del usuario configuran el mismo ajuste con valores distintos. Sin opciones de forzado ni de bloqueo de herencia, ¿qué valor se aplica?",
+      "opciones": [
+        "El de la GPO del dominio, porque es la de mayor ámbito",
+        "El de la directiva local del equipo, que siempre prevalece",
+        "Ninguno: el conflicto deja el ajuste sin configurar",
+        "El de la GPO de la OU, porque se aplica la última y prevalece"
+      ],
+      "correcta": 3,
+      "explicacion": "Las GPO se aplican en el orden **L-S-D-OU** (local, sitio, dominio, unidad organizativa) y **prevalece la última aplicada**, así que gana la **GPO de la OU**. La directiva local es la primera en aplicarse, por eso es la que menos pesa."
+    },
+    {
+      "id": "30",
+      "tema": 27,
+      "enunciado": "¿Qué requisito es imprescindible para que funcione la autenticación Kerberos?",
+      "opciones": [
+        "Que los relojes de los equipos estén sincronizados, normalmente mediante NTP",
+        "Que cliente y servidor estén en la misma VLAN",
+        "Que cada cliente disponga de un certificado X.509",
+        "Que exista un servidor RADIUS en la red"
+      ],
+      "correcta": 0,
+      "explicacion": "Los tickets de **Kerberos** llevan marcas de tiempo, por lo que exige **relojes sincronizados** (NTP). No necesita estar en la misma VLAN ni certificados en el cliente (eso es EAP-TLS), y RADIUS es otro protocolo de autenticación."
+    },
+    {
+      "id": "31",
+      "tema": 27,
+      "enunciado": "En Kerberos, ¿cómo se llama el ticket que obtiene el usuario al autenticarse y que le sirve para pedir después tickets de servicio?",
+      "opciones": [
+        "TGS",
+        "KDC",
+        "TGT",
+        "AS"
+      ],
+      "correcta": 2,
+      "explicacion": "El usuario obtiene un **TGT** (*Ticket Granting Ticket*) y con él pide los tickets de servicio. El **KDC** es el tercero de confianza, formado por el **AS** (servicio de autenticación, que emite el TGT) y el **TGS** (que emite los tickets de servicio)."
+    },
+    {
+      "id": "32",
+      "tema": 27,
+      "enunciado": "Respecto a RADIUS y TACACS+, es correcto que:",
+      "opciones": [
+        "RADIUS cifra todo el cuerpo del paquete",
+        "TACACS+ combina autenticación y autorización en un mismo proceso",
+        "RADIUS solo cifra la contraseña, mientras que TACACS+ cifra todo el cuerpo del paquete",
+        "TACACS+ es un estándar IETF que funciona sobre UDP 1812"
+      ],
+      "correcta": 2,
+      "explicacion": "**RADIUS cifra solo la contraseña** y **TACACS+ cifra todo el cuerpo**. Además, TACACS+ separa las tres A (por eso permite autorizar comando a comando) y usa TCP 49; el estándar IETF sobre UDP 1812/1813 es RADIUS."
+    },
+    {
+      "id": "33",
+      "tema": 27,
+      "enunciado": "En IEEE 802.1X, ¿cómo viajan los mensajes EAP entre el suplicante y el autenticador?",
+      "opciones": [
+        "Encapsulados en RADIUS",
+        "En tramas EAP sobre LAN (EAPoL)",
+        "Encapsulados en TACACS+",
+        "Dentro de consultas LDAP"
+      ],
+      "correcta": 1,
+      "explicacion": "Entre suplicante y autenticador viaja **EAPoL** (EAP sobre LAN), porque el cliente aún no tiene IP. Entre el **autenticador y el servidor** EAP va **encapsulado en RADIUS**. Truco: EAPoL en el cable del puesto, RADIUS hacia el servidor."
+    },
+    {
+      "id": "34",
+      "tema": 27,
+      "enunciado": "¿Qué mecanismo permite autenticar en un puerto 802.1X a una impresora que no tiene suplicante?",
+      "opciones": [
+        "EAP-TLS",
+        "PEAP",
+        "MAB (*MAC Authentication Bypass*)",
+        "EAP-TTLS"
+      ],
+      "correcta": 2,
+      "explicacion": "**MAB** autentica al equipo por su **dirección MAC**, pensado para dispositivos sin suplicante como impresoras o cámaras; es menos seguro porque la MAC se puede falsificar. EAP-TLS, PEAP y EAP-TTLS son métodos EAP que exigen un suplicante."
+    },
+    {
+      "id": "35",
+      "tema": 27,
+      "enunciado": "¿Qué protocolo, usado tradicionalmente para copiar configuraciones de equipos de red, funciona sobre UDP 69 sin autenticación ni cifrado?",
+      "opciones": [
+        "TFTP",
+        "FTP",
+        "SFTP",
+        "SCP"
+      ],
+      "correcta": 0,
+      "explicacion": "**TFTP** usa **UDP 69** y no tiene seguridad; por eso se prefieren **SCP o SFTP**, que van sobre SSH y cifran. FTP usa TCP y autentica, pero con credenciales en claro."
+    },
+    {
+      "id": "36",
+      "tema": 27,
+      "enunciado": "¿Qué valor tiene el campo TPID de una trama etiquetada con IEEE 802.1Q?",
+      "opciones": [
+        "0x0800",
+        "0x86DD",
+        "0x8100",
+        "0x88CC"
+      ],
+      "correcta": 2,
+      "explicacion": "La etiqueta 802.1Q empieza por el **TPID 0x8100**, que avisa de que la trama va etiquetada. 0x0800 es el EtherType de IPv4, 0x86DD el de IPv6 y 0x88CC el de LLDP."
+    },
+    {
+      "id": "37",
+      "tema": 27,
+      "enunciado": "¿Cómo se denomina la técnica de enrutamiento entre VLAN que usa subinterfaces de un router sobre un único enlace troncal?",
+      "opciones": [
+        "*Router-on-a-stick*",
+        "Interfaces SVI en un switch de nivel 3",
+        "QinQ",
+        "ISL"
+      ],
+      "correcta": 0,
+      "explicacion": "El **router-on-a-stick** crea una **subinterfaz por VLAN** en un router unido al switch por un solo troncal. Las **SVI** son la alternativa en un **switch de nivel 3**, sin router externo. QinQ apila dos etiquetas e ISL era el troncal propietario de Cisco, ya obsoleto."
+    },
+    {
+      "id": "38",
+      "tema": 27,
+      "enunciado": "¿Qué medida protege frente al ataque de VLAN hopping?",
+      "opciones": [
+        "Activar la negociación automática de troncales (DTP) en todos los puertos",
+        "Usar la VLAN 1 como VLAN nativa de los usuarios",
+        "Habilitar PortFast en los puertos troncales",
+        "Desactivar la negociación automática de troncales (DTP) y no usar la VLAN nativa para usuarios"
+      ],
+      "correcta": 3,
+      "explicacion": "El VLAN hopping aprovecha la **negociación de troncales** (*switch spoofing*) o el **doble etiquetado** sobre la VLAN nativa. Por eso se **desactiva DTP** y la VLAN nativa no se usa para usuarios. Las opciones a y b son justo lo que facilita el ataque, y PortFast es para puertos de usuario."
+    },
+    {
+      "id": "39",
+      "tema": 27,
+      "enunciado": "Cuatro switches con STP tienen estos Bridge ID: SW-A prioridad 32768 y MAC 0000.0c11.1111; SW-B prioridad 4096 y MAC 0000.0cff.ffff; SW-C prioridad 32768 y MAC 0000.0c00.0001; SW-D prioridad 8192 y MAC 0000.0c00.0002. ¿Cuál será el puente raíz?",
+      "opciones": [
+        "SW-A",
+        "SW-B",
+        "SW-C",
+        "SW-D"
+      ],
+      "correcta": 1,
+      "explicacion": "Gana el **menor Bridge ID**, que compara **primero la prioridad**: SW-B tiene la más baja (**4096**) y es raíz aunque tenga la MAC más alta. La MAC solo desempata entre prioridades iguales; si todos tuvieran 32768, ganaría SW-C."
+    },
+    {
+      "id": "40",
+      "tema": 27,
+      "enunciado": "¿Qué variante de Spanning Tree permite crear varias instancias de árbol, cada una asociada a un grupo de VLAN?",
+      "opciones": [
+        "STP (802.1D)",
+        "RSTP (802.1w)",
+        "MSTP (802.1s)",
+        "PVST+"
+      ],
+      "correcta": 2,
+      "explicacion": "**MSTP (802.1s)** agrupa VLAN en **instancias**, cada una con su propio árbol. **PVST+** (Cisco) crea **un árbol por cada VLAN**, no por grupos; STP y RSTP construyen un solo árbol para toda la red."
+    },
+    {
+      "id": "41",
+      "tema": 27,
+      "enunciado": "¿Qué protección de STP desactiva un puerto de acceso si recibe una BPDU?",
+      "opciones": [
+        "PortFast",
+        "BPDU Guard",
+        "Root Guard",
+        "*Storm control*"
+      ],
+      "correcta": 1,
+      "explicacion": "**BPDU Guard** **desactiva el puerto** si llega una BPDU, señal de que alguien ha conectado un switch donde debía haber un puesto. PortFast hace que el puerto pase directo a reenvío, Root Guard impide que un puerto lleve a otra raíz y *storm control* limita el broadcast."
+    },
+    {
+      "id": "42",
+      "tema": 27,
+      "enunciado": "¿Qué potencia máxima entrega en el puerto un switch PoE+ según IEEE 802.3at?",
+      "opciones": [
+        "15,4 W",
+        "30 W",
+        "60 W",
+        "90 W"
+      ],
+      "correcta": 1,
+      "explicacion": "**802.3at (PoE+)** entrega **30 W** en el puerto. 802.3af (PoE) da 15,4 W y 802.3bt llega a 60 W y a 90-100 W. Truco: af, at, bt, en orden alfabético y de potencia."
+    },
+    {
+      "id": "43",
+      "tema": 27,
+      "enunciado": "La función Dynamic ARP Inspection (DAI) de un switch protege frente a:",
+      "opciones": [
+        "Servidores DHCP no autorizados",
+        "El VLAN hopping por doble etiquetado",
+        "La suplantación ARP (*ARP spoofing*)",
+        "Los bucles de nivel 2"
+      ],
+      "correcta": 2,
+      "explicacion": "**DAI** valida los mensajes ARP contra la tabla de DHCP Snooping y frena el **ARP spoofing**. Los servidores DHCP falsos los frena **DHCP Snooping**, en el que se apoya DAI; los bucles los evita STP."
+    },
+    {
+      "id": "44",
+      "tema": 27,
+      "enunciado": "Un servidor DHCP concede una dirección con un tiempo de concesión de 8 horas. ¿Cuándo intentará el cliente renovarla por primera vez (T1) y cuándo intentará después con cualquier servidor (T2)?",
+      "opciones": [
+        "A las 2 y a las 4 horas",
+        "A las 4 y a las 6 horas",
+        "A las 4 y a las 7 horas",
+        "A las 6 y a las 8 horas"
+      ],
+      "correcta": 2,
+      "explicacion": "**T1 = 50 %** de la concesión (8 × 0,5 = **4 h**) y **T2 = 87,5 %** (8 × 0,875 = **7 h**). A las 8 h la concesión vence; si no se ha renovado, el cliente pierde la dirección y vuelve a empezar el proceso DORA."
+    },
+    {
+      "id": "45",
+      "tema": 27,
+      "enunciado": "Un equipo Windows no obtiene respuesta de ningún servidor DHCP. ¿Qué dirección se autoasigna?",
+      "opciones": [
+        "Una del rango 10.0.0.0/8",
+        "Una del rango 172.16.0.0/12",
+        "Una del rango 192.168.0.0/16",
+        "Una del rango 169.254.0.0/16 (APIPA)"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin respuesta DHCP, Windows se autoasigna una dirección **APIPA** del rango **169.254.0.0/16**, que solo sirve para comunicarse en el enlace local. Los otros tres rangos son las direcciones privadas de la RFC 1918, que se asignan manualmente o por DHCP."
+    },
+    {
+      "id": "46",
+      "tema": 27,
+      "enunciado": "¿Qué operación SNMP se utiliza para recorrer secuencialmente la MIB (*walk*)?",
+      "opciones": [
+        "GetRequest",
+        "GetNextRequest",
+        "SetRequest",
+        "InformRequest"
+      ],
+      "correcta": 1,
+      "explicacion": "**GetNextRequest** pide el **siguiente OID**, lo que permite recorrer la MIB (*snmpwalk*). GetRequest lee un valor concreto, SetRequest lo modifica e InformRequest es una notificación con confirmación del agente al gestor."
+    },
+    {
+      "id": "47",
+      "tema": 27,
+      "enunciado": "¿Qué nivel de seguridad de SNMPv3 ofrece autenticación pero no cifrado?",
+      "opciones": [
+        "noAuthNoPriv",
+        "authPriv",
+        "USM",
+        "authNoPriv"
+      ],
+      "correcta": 3,
+      "explicacion": "**authNoPriv** = **autenticación sin cifrado** (*priv* es privacidad, es decir, cifrado). noAuthNoPriv no tiene ni lo uno ni lo otro y **authPriv** tiene ambos, que es lo recomendado. USM no es un nivel, sino el modelo de seguridad basado en usuarios."
+    },
+    {
+      "id": "48",
+      "tema": 27,
+      "enunciado": "Las MIB de SNMP se definen en lenguaje SMI utilizando la sintaxis:",
+      "opciones": [
+        "XML",
+        "ASN.1",
+        "YANG",
+        "JSON"
+      ],
+      "correcta": 1,
+      "explicacion": "Las MIB se escriben en **SMI** con sintaxis **ASN.1**. **YANG** es el lenguaje de modelado de NETCONF/RESTCONF, la alternativa moderna, y XML o JSON son formatos en los que esos protocolos codifican los datos."
+    },
+    {
+      "id": "49",
+      "tema": 27,
+      "enunciado": "Un switch envía al servidor syslog un mensaje con gravedad 4. ¿A qué nivel corresponde?",
+      "opciones": [
+        "Error",
+        "Notice",
+        "Critical",
+        "Warning"
+      ],
+      "correcta": 3,
+      "explicacion": "Los niveles son 0 Emergency, 1 Alert, 2 Critical, 3 Error, **4 Warning**, 5 Notice, 6 Informational y 7 Debug. Truco: los cuatro primeros son graves (de emergencia a error) y a partir del 4 son avisos e información."
+    },
+    {
+      "id": "50",
+      "tema": 27,
+      "enunciado": "Respecto a RMON, es correcto que:",
+      "opciones": [
+        "RMON1 trabaja en el nivel 2 y RMON2 amplía la monitorización hasta el nivel de aplicación",
+        "RMON1 trabaja hasta el nivel de aplicación y RMON2 solo en el nivel 2",
+        "RMON es un protocolo independiente que sustituye a SNMP y no usa MIB",
+        "RMON2 solo recoge estadísticas eléctricas del nivel físico"
+      ],
+      "correcta": 0,
+      "explicacion": "**RMON** es una **extensión de la MIB** para sondas que recogen estadísticas de segmento: **RMON1 en nivel 2** (estadísticas, historial, alarmas, eventos, *hosts*) y **RMON2 hasta el nivel de aplicación**. No sustituye a SNMP: se consulta con él."
+    },
+    {
+      "id": "51",
+      "tema": 27,
+      "enunciado": "¿Cómo se llama el indicador que mide la variación de la latencia y es crítico en voz y vídeo?",
+      "opciones": [
+        "Latencia",
+        "*Jitter*",
+        "Caudal (*throughput*)",
+        "Utilización"
+      ],
+      "correcta": 1,
+      "explicacion": "El **jitter** es la **variación de la latencia** entre paquetes; con mucho jitter la voz se entrecorta aunque la latencia media sea buena. La latencia es el tiempo de tránsito, el caudal los datos transmitidos por unidad de tiempo y la utilización el porcentaje de capacidad en uso."
+    },
+    {
+      "id": "52",
+      "tema": 27,
+      "enunciado": "En la monitorización de una red, la línea base sirve sobre todo para:",
+      "opciones": [
+        "Fijar umbrales de alarma y detectar anomalías",
+        "Asignar VLAN dinámicas a los usuarios",
+        "Elegir el puente raíz de Spanning Tree",
+        "Calcular la capacidad nominal de los enlaces"
+      ],
+      "correcta": 0,
+      "explicacion": "La **línea base** es el **comportamiento normal** medido durante un periodo; comparando con ella se **fijan umbrales** y se detectan anomalías. La capacidad nominal es un dato del enlace, no algo que se mida con la línea base."
+    },
+    {
+      "id": "53",
+      "tema": 27,
+      "enunciado": "¿Cuál de los siguientes campos NO forma parte de la 7-tupla que identifica un flujo en NetFlow clásico?",
+      "opciones": [
+        "La dirección IP de origen",
+        "El puerto de destino",
+        "La interfaz de entrada",
+        "La dirección MAC de destino"
+      ],
+      "correcta": 3,
+      "explicacion": "La 7-tupla de NetFlow clásico es: IP origen, IP destino, puerto origen, puerto destino, protocolo de nivel 3, **ToS** e **interfaz de entrada**. La **MAC de destino no está**: NetFlow trabaja con datos de nivel 3 y 4."
+    },
+    {
+      "id": "54",
+      "tema": 27,
+      "enunciado": "¿Qué tecnología de análisis de tráfico se basa en el muestreo de paquetes (1 de cada N) y en contadores, lo que la hace muy escalable?",
+      "opciones": [
+        "NetFlow v5",
+        "NetFlow v9",
+        "IPFIX",
+        "sFlow"
+      ],
+      "correcta": 3,
+      "explicacion": "**sFlow** **muestrea** 1 de cada N paquetes y envía contadores, por eso escala muy bien en redes rápidas. NetFlow agrupa los paquetes en flujos y exporta sus registros; la v9 usa plantillas e **IPFIX** (RFC 7011) es el estándar IETF derivado de ella."
+    },
+    {
+      "id": "55",
+      "tema": 27,
+      "enunciado": "¿Qué ventaja tiene un TAP frente al *port mirroring* (SPAN) para capturar tráfico?",
+      "opciones": [
+        "Copia el tráfico sin perder tramas, aunque el switch vaya muy cargado",
+        "No necesita intercalarse físicamente en el enlace",
+        "Permite bloquear el tráfico malicioso que detecta",
+        "Solo copia los metadatos de los flujos, no los paquetes"
+      ],
+      "correcta": 0,
+      "explicacion": "El **TAP** es un dispositivo físico **intercalado en el enlace** que copia el tráfico **sin perder tramas**; el SPAN puede descartar copias si el switch va cargado. Ninguno de los dos bloquea: eso lo hace un IPS en línea. Los metadatos de flujos son cosa de NetFlow."
+    },
+    {
+      "id": "56",
+      "tema": 27,
+      "enunciado": "¿Por qué un IPS se instala en línea (*inline*) y no sobre una copia del tráfico, como un IDS?",
+      "opciones": [
+        "Para analizar el tráfico sin afectar al rendimiento de la red",
+        "Porque solo puede trabajar con la copia que le envía un puerto SPAN",
+        "Para poder bloquear el tráfico malicioso, además de detectarlo",
+        "Porque analiza únicamente los metadatos de los flujos"
+      ],
+      "correcta": 2,
+      "explicacion": "El **IPS** va **en línea** porque el tráfico tiene que **atravesarlo** para que pueda **bloquearlo**. El **IDS** trabaja de forma pasiva sobre una copia (SPAN o TAP), así que solo detecta y avisa. Estar en línea, de hecho, puede añadir algo de retardo."
+    },
+    {
+      "id": "57",
+      "tema": 27,
+      "enunciado": "Un router tiene aplicada esta ACL estándar en una interfaz:\n`access-list 10 permit 192.168.10.0 0.0.0.255`\n`access-list 10 deny host 192.168.10.7`\n¿Qué ocurre con un paquete cuyo origen es 192.168.10.7?",
+      "opciones": [
+        "Se deniega por la segunda línea",
+        "Se permite, porque coincide con la primera línea",
+        "Se deniega por el *deny any* implícito",
+        "Se permite solo si su destino está en la red 192.168.10.0"
+      ],
+      "correcta": 1,
+      "explicacion": "Las ACL se evalúan **de arriba abajo** y se aplica la **primera coincidencia**: 192.168.10.7 está en 192.168.10.0/24, así que lo **permite la primera línea** y la segunda nunca se llega a evaluar. Para bloquearlo, el *deny host* debería ir antes. Una ACL estándar no mira el destino."
+    },
+    {
+      "id": "58",
+      "tema": 27,
+      "enunciado": "¿Qué máscara wildcard abarca exactamente la red 172.16.32.0/20 en una ACL?",
+      "opciones": [
+        "0.0.15.255",
+        "0.0.31.255",
+        "0.0.16.255",
+        "255.255.240.0"
+      ],
+      "correcta": 0,
+      "explicacion": "Una /20 tiene máscara **255.255.240.0**, y la wildcard es su inversa: 255.255.255.255 − 255.255.240.0 = **0.0.15.255** (0 = comprobar el bit, 1 = ignorarlo). 0.0.31.255 correspondería a una /19, y 255.255.240.0 es la máscara de subred, no la wildcard."
+    },
+    {
+      "id": "59",
+      "tema": 27,
+      "enunciado": "En DiffServ, ¿qué valor DSCP corresponde a la clase EF (*Expedited Forwarding*), la habitual para la voz?",
+      "opciones": [
+        "8",
+        "26",
+        "34",
+        "46"
+      ],
+      "correcta": 3,
+      "explicacion": "**EF = DSCP 46**, la clase de reenvío acelerado para la voz, que se suele llevar a una cola de prioridad estricta (LLQ). 8 es CS1, 26 es AF31 y 34 es AF41. En nivel 2, la voz se marca con **CoS 5**."
+    },
+    {
+      "id": "60",
+      "tema": 27,
+      "enunciado": "¿Qué algoritmo de control de tráfico permite ráfagas mientras haya fichas acumuladas, frente al que mantiene un caudal de salida constante?",
+      "opciones": [
+        "El cubo con fichas (*token bucket*)",
+        "El cubo con agujero (*leaky bucket*)",
+        "WRED",
+        "La cola FIFO"
+      ],
+      "correcta": 0,
+      "explicacion": "El **cubo con fichas** (*token bucket*) acumula fichas y deja pasar **ráfagas** mientras haya fichas disponibles. El **cubo con agujero** (*leaky bucket*) da un **caudal de salida constante**. WRED descarta de forma selectiva para evitar la congestión y FIFO no prioriza nada."
+    }
+  ]
+}

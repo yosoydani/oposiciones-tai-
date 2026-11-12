@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 16 · test",
+  "fuente": "propio",
+  "tema": 16,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 16. Lenguajes de programación»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 16,
+      "enunciado": "Con 8 bits en complemento a 2 se pueden representar los enteros:",
+      "opciones": [
+        "0 a 255",
+        "−127 a 127",
+        "−128 a 127",
+        "−128 a 128"
+      ],
+      "correcta": 2,
+      "explicacion": "En **complemento a 2** con n bits el rango es **−2ⁿ⁻¹ a 2ⁿ⁻¹ − 1**: con 8 bits, **−128 a 127**, con un solo cero. −127 a 127 es el rango de signo-magnitud y complemento a 1 (que tienen doble cero) y 0 a 255 el de 8 bits sin signo. Truco: hay un negativo más que positivos porque el cero «ocupa» un hueco positivo."
+    },
+    {
+      "id": "02",
+      "tema": 16,
+      "enunciado": "En IEEE 754 de simple precisión, el exponente ocupa:",
+      "opciones": [
+        "8 bits",
+        "11 bits",
+        "23 bits",
+        "7 bits"
+      ],
+      "correcta": 0,
+      "explicacion": "La simple precisión (32 bits) reparte **1 bit de signo + 8 de exponente + 23 de mantisa**, con sesgo 127. **11 bits** es el exponente de la **doble** precisión (1 + 11 + 52) y **23 bits** es la mantisa de la simple."
+    },
+    {
+      "id": "03",
+      "tema": 16,
+      "enunciado": "En UTF-8 un carácter ocupa:",
+      "opciones": [
+        "Siempre 1 byte",
+        "Siempre 2 bytes",
+        "Siempre 4 bytes",
+        "Entre 1 y 4 bytes"
+      ],
+      "correcta": 3,
+      "explicacion": "**UTF-8** es de **longitud variable**: **1 byte** para los caracteres ASCII y **hasta 4 bytes** para el resto de Unicode, lo que lo hace compatible con ASCII. Siempre 4 bytes es **UTF-32**, y UTF-16 usa 2 o 4 bytes."
+    },
+    {
+      "id": "04",
+      "tema": 16,
+      "enunciado": "En Java, si `a` y `b` son `int` con valores 7 y 2, `a / b` vale:",
+      "opciones": [
+        "3.5",
+        "3",
+        "4",
+        "1"
+      ],
+      "correcta": 1,
+      "explicacion": "Entre dos enteros, `/` hace **división entera** y **trunca hacia 0**: 7 / 2 = **3**. Para obtener 3.5 habría que convertir uno de los operandos a real (`7 / 2.0`). 1 es el resto (`7 % 2`)."
+    },
+    {
+      "id": "05",
+      "tema": 16,
+      "enunciado": "Tras ejecutar `int i = 5; int j = i++;` los valores son:",
+      "opciones": [
+        "j = 5, i = 6",
+        "j = 6, i = 6",
+        "j = 5, i = 5",
+        "j = 6, i = 5"
+      ],
+      "correcta": 0,
+      "explicacion": "El **postincremento** `i++` **devuelve el valor antiguo** (5, que se asigna a j) y **después incrementa** i a 6. Con el preincremento `++i` ambos valdrían 6. Truco: si el `++` va detrás, el incremento llega «después»."
+    },
+    {
+      "id": "06",
+      "tema": 16,
+      "enunciado": "En la expresión `A && B` con evaluación en cortocircuito:",
+      "opciones": [
+        "Siempre se evalúan A y B",
+        "Si A es verdadera, B no se evalúa",
+        "Si A es falsa, B no se evalúa",
+        "Se evalúa primero B"
+      ],
+      "correcta": 2,
+      "explicacion": "Con **cortocircuito**, si **A es falsa** el AND ya es falso y **B no se evalúa**. Si A es verdadera, hay que evaluar B para conocer el resultado. En `||` ocurre al revés: si A es verdadera, B no se evalúa."
+    },
+    {
+      "id": "07",
+      "tema": 16,
+      "enunciado": "¿Qué bucle ejecuta su cuerpo al menos una vez?",
+      "opciones": [
+        "`while`",
+        "`do...while`",
+        "`for`",
+        "`for-each`"
+      ],
+      "correcta": 1,
+      "explicacion": "**`do...while`** comprueba la condición **al final** (postest), así que el cuerpo se ejecuta **al menos una vez**. `while`, `for` y `for-each` comprueban **al principio** y pueden no ejecutarse nunca. Por eso `do...while` es el típico de menús y validación de entradas."
+    },
+    {
+      "id": "08",
+      "tema": 16,
+      "enunciado": "¿Cuántas veces se ejecuta el cuerpo de `for (i = 0; i < 10; i += 3)`?",
+      "opciones": [
+        "3",
+        "10",
+        "5",
+        "4"
+      ],
+      "correcta": 3,
+      "explicacion": "i toma los valores **0, 3, 6 y 9** (con 12 ya no se cumple i < 10): **4 iteraciones**. Con la fórmula, ⌈(10 − 0) / 3⌉ = ⌈3,33⌉ = 4. El 3 sale de olvidar la iteración con i = 0."
+    },
+    {
+      "id": "09",
+      "tema": 16,
+      "enunciado": "En C, si un `case` de un `switch` no termina en `break`:",
+      "opciones": [
+        "La ejecución continúa en el caso siguiente",
+        "Da error de compilación",
+        "Sale del `switch`",
+        "Vuelve al primer `case`"
+      ],
+      "correcta": 0,
+      "explicacion": "Sin `break` se produce el ***fall-through***: la ejecución **continúa con las instrucciones del caso siguiente**. Es legal en C, C++ y Java, y se usa a propósito para agrupar casos (como `case 6: case 7:`). C#, en cambio, prohíbe el *fall-through* implícito entre casos con instrucciones."
+    },
+    {
+      "id": "10",
+      "tema": 16,
+      "enunciado": "Una recursividad es «de cola» cuando:",
+      "opciones": [
+        "Hay dos llamadas recursivas",
+        "La función A llama a B y B a A",
+        "La llamada recursiva es la última operación",
+        "No tiene caso base"
+      ],
+      "correcta": 2,
+      "explicacion": "En la **recursividad de cola** la **llamada recursiva es la última operación** y no queda nada pendiente tras ella, así que el compilador puede convertirla en un bucle sin hacer crecer la pila. Dos llamadas es recursividad **múltiple** y A ↔ B es **indirecta o mutua**. Sin caso base solo hay desbordamiento de pila."
+    },
+    {
+      "id": "11",
+      "tema": 16,
+      "enunciado": "Según el teorema de Böhm-Jacopini, basta con estas estructuras de control:",
+      "opciones": [
+        "Secuencia, `goto` e iteración",
+        "Secuencia, selección e iteración",
+        "Selección, recursividad y excepciones",
+        "Iteración y recursividad"
+      ],
+      "correcta": 1,
+      "explicacion": "El **teorema de Böhm-Jacopini (1966)** demuestra que todo programa con una entrada y una salida puede escribirse con **secuencia, selección e iteración**. Es la base de la programación estructurada, que prescinde precisamente del `goto` (Dijkstra, 1968)."
+    },
+    {
+      "id": "12",
+      "tema": 16,
+      "enunciado": "En Java el paso de parámetros es:",
+      "opciones": [
+        "Por referencia para objetos y por valor para primitivos",
+        "Siempre por referencia",
+        "Por nombre",
+        "Siempre por valor"
+      ],
+      "correcta": 3,
+      "explicacion": "**Java pasa siempre por valor**. Con objetos se copia **el valor de la referencia**: el método puede cambiar el estado del objeto, pero no hacer que la variable del llamante apunte a otro. Por eso «por referencia para objetos» es el error típico. El paso por nombre es de ALGOL 60."
+    },
+    {
+      "id": "13",
+      "tema": 16,
+      "enunciado": "En C, para que una función modifique una variable del llamante se le pasa:",
+      "opciones": [
+        "Un puntero a la variable",
+        "La variable con `var`",
+        "La variable con `ref`",
+        "No es posible"
+      ],
+      "correcta": 0,
+      "explicacion": "**C solo pasa por valor**; el paso por referencia se **simula con un puntero**: se llama con `f(&x)` y dentro se modifica `*p`. `var` es la forma de Pascal y `ref` la de C#."
+    },
+    {
+      "id": "14",
+      "tema": 16,
+      "enunciado": "Los parámetros formales son:",
+      "opciones": [
+        "Los valores que se pasan en la llamada",
+        "Los declarados en la definición del subprograma",
+        "Las variables globales",
+        "Los valores devueltos"
+      ],
+      "correcta": 1,
+      "explicacion": "Los **parámetros formales** son los **declarados en la definición** del subprograma (`int suma(int a, int b)`). Los valores o variables que se pasan **en la llamada** son los **parámetros reales**, actuales o argumentos (`suma(x, 3)`)."
+    },
+    {
+      "id": "15",
+      "tema": 16,
+      "enunciado": "En C, `int m[3][4]` empieza en la dirección 1000 y cada `int` ocupa 4 bytes. La dirección de `m[2][1]` es:",
+      "opciones": [
+        "1024",
+        "1028",
+        "1036",
+        "1009"
+      ],
+      "correcta": 2,
+      "explicacion": "C almacena las matrices **por filas**: dir = base + (i · C + j) · t = 1000 + (2 · 4 + 1) · 4 = 1000 + 36 = **1036**. 1009 sale de olvidar multiplicar por el tamaño del `int`, y 1028 de usar el número de filas en lugar del de columnas: 1000 + (2 · 3 + 1) · 4."
+    },
+    {
+      "id": "16",
+      "tema": 16,
+      "enunciado": "¿Qué lenguaje almacena las matrices por columnas (*column-major*)?",
+      "opciones": [
+        "C",
+        "Pascal",
+        "C++",
+        "Fortran"
+      ],
+      "correcta": 3,
+      "explicacion": "**Fortran** (igual que MATLAB y R) guarda las matrices **por columnas**. **C, C++ y Pascal** las guardan **por filas** (*row-major*). En Java, una matriz es un vector de vectores."
+    },
+    {
+      "id": "17",
+      "tema": 16,
+      "enunciado": "Un registro se caracteriza por:",
+      "opciones": [
+        "Agrupar campos heterogéneos accesibles por nombre",
+        "Agrupar elementos homogéneos accesibles por índice",
+        "Ser siempre dinámico",
+        "No poder formar vectores"
+      ],
+      "correcta": 0,
+      "explicacion": "Un **registro** (`struct`, `record`) agrupa **campos de distinto tipo** a los que se accede por **nombre** (`e.nombre`). Elementos homogéneos accesibles por índice es la definición de **vector**. Los registros pueden ser estáticos y formar vectores de registros (`struct Empleado plantilla[100]`)."
+    },
+    {
+      "id": "18",
+      "tema": 16,
+      "enunciado": "La búsqueda binaria en un vector de n elementos:",
+      "opciones": [
+        "Tiene coste O(n) y no exige orden",
+        "Tiene coste O(log n) y exige vector ordenado",
+        "Tiene coste O(n²)",
+        "Tiene coste O(1)"
+      ],
+      "correcta": 1,
+      "explicacion": "La **búsqueda binaria** divide el intervalo a la mitad en cada paso, con coste **O(log n)**, pero **exige que el vector esté ordenado**. O(n) sin exigir orden corresponde a la **búsqueda secuencial**. Con un millón de elementos bastan unas 20 comparaciones."
+    },
+    {
+      "id": "19",
+      "tema": 16,
+      "enunciado": "El orden de las divisiones de un programa COBOL es:",
+      "opciones": [
+        "DATA, IDENTIFICATION, PROCEDURE, ENVIRONMENT",
+        "ENVIRONMENT, IDENTIFICATION, DATA, PROCEDURE",
+        "IDENTIFICATION, ENVIRONMENT, DATA, PROCEDURE",
+        "IDENTIFICATION, DATA, ENVIRONMENT, PROCEDURE"
+      ],
+      "correcta": 2,
+      "explicacion": "Un programa COBOL tiene cuatro divisiones en este orden: **IDENTIFICATION, ENVIRONMENT, DATA y PROCEDURE**. Truco: «quién soy, dónde corro, qué datos uso y qué hago» (IEDP)."
+    },
+    {
+      "id": "20",
+      "tema": 16,
+      "enunciado": "En Java, `-7 % 3` vale:",
+      "opciones": [
+        "2",
+        "1",
+        "−2",
+        "−1"
+      ],
+      "correcta": 3,
+      "explicacion": "En Java y C el resto toma el **signo del dividendo**: −7 = 3 · (−2) + (−1), así que **−7 % 3 = −1**. En **Python** valdría **2**, porque allí el resto toma el signo del divisor. Es un dato muy preguntado por esa diferencia."
+    },
+    {
+      "id": "21",
+      "tema": 16,
+      "enunciado": "¿Qué lenguaje es el representante clásico del paradigma lógico, basado en hechos y reglas a partir de los cuales el motor deduce?",
+      "opciones": [
+        "Haskell",
+        "Smalltalk",
+        "Prolog",
+        "COBOL"
+      ],
+      "correcta": 2,
+      "explicacion": "**Prolog** es el lenguaje del **paradigma lógico**: se escriben **hechos y reglas** y el motor de inferencia deduce las respuestas. **Haskell** es funcional, **Smalltalk** orientado a objetos y **COBOL** imperativo. Lógico y funcional son las dos ramas del paradigma declarativo."
+    },
+    {
+      "id": "22",
+      "tema": 16,
+      "enunciado": "¿Cuál fue el primer lenguaje de alto nivel de uso extendido, creado por J. Backus en IBM en 1957 para el cálculo científico?",
+      "opciones": [
+        "FORTRAN",
+        "COBOL",
+        "LISP",
+        "ALGOL 60"
+      ],
+      "correcta": 0,
+      "explicacion": "**FORTRAN** (*FORmula TRANslation*, 1957, John Backus en IBM) fue el primer lenguaje de alto nivel extendido, orientado al **cálculo científico**. **LISP** (1958, McCarthy) es funcional, **COBOL** (1959, CODASYL) es de gestión y **ALGOL 60** introdujo los bloques y la notación BNF."
+    },
+    {
+      "id": "23",
+      "tema": 16,
+      "enunciado": "El lenguaje C++, concebido inicialmente como «C con clases», fue creado por:",
+      "opciones": [
+        "Bjarne Stroustrup",
+        "Dennis Ritchie",
+        "Niklaus Wirth",
+        "James Gosling"
+      ],
+      "correcta": 0,
+      "explicacion": "**C++** es obra de **Bjarne Stroustrup**. **Dennis Ritchie** creó C (1972) en Bell Labs, **Niklaus Wirth** creó Pascal (1970) y **James Gosling** creó Java (1995) en Sun."
+    },
+    {
+      "id": "24",
+      "tema": 16,
+      "enunciado": "Señale la respuesta INCORRECTA sobre compiladores e intérpretes:",
+      "opciones": [
+        "Un programa compilado suele ejecutarse más rápido que uno interpretado",
+        "Un compilador detecta los errores de sintaxis antes de la ejecución",
+        "Un compilador JIT genera código nativo en tiempo de ejecución",
+        "Un intérprete traduce todo el programa antes de empezar a ejecutarlo"
+      ],
+      "correcta": 3,
+      "explicacion": "Es falso: el **intérprete** traduce y ejecuta **instrucción a instrucción**; traducir todo antes de ejecutar es lo que hace el **compilador**. Las demás son ciertas: lo compilado es más rápido, los errores sintácticos se detectan en compilación y el **JIT** compila a código nativo durante la ejecución."
+    },
+    {
+      "id": "25",
+      "tema": 16,
+      "enunciado": "La fase del compilador que divide el código fuente en unidades mínimas (tokens), como palabras clave, identificadores y literales, es el análisis:",
+      "opciones": [
+        "Léxico",
+        "Sintáctico",
+        "Semántico",
+        "De optimización"
+      ],
+      "correcta": 0,
+      "explicacion": "El **análisis léxico** lee los caracteres y forma **tokens**. Después, el **sintáctico** comprueba la estructura según la gramática y construye el árbol, y el **semántico** verifica los tipos. La optimización actúa sobre el código intermedio."
+    },
+    {
+      "id": "26",
+      "tema": 16,
+      "enunciado": "En la plataforma .NET, el código fuente se compila a:",
+      "opciones": [
+        "Bytecode, que ejecuta la JVM",
+        "CIL, que ejecuta el CLR",
+        "Código máquina nativo, sin máquina virtual",
+        "DEX, que ejecuta ART"
+      ],
+      "correcta": 1,
+      "explicacion": "En .NET se compila a **CIL** (*Common Intermediate Language*), que ejecuta el **CLR** con compilación **JIT**. El **bytecode y la JVM** son la solución equivalente de **Java**, y DEX/ART pertenecen a Android. Ambas plataformas son soluciones híbridas entre compilación e interpretación."
+    },
+    {
+      "id": "27",
+      "tema": 16,
+      "enunciado": "Python se considera un lenguaje de tipado:",
+      "opciones": [
+        "Estático y fuerte",
+        "Dinámico y débil",
+        "Dinámico y fuerte",
+        "Estático y débil"
+      ],
+      "correcta": 2,
+      "explicacion": "Python comprueba los tipos **en ejecución** (**dinámico**) pero **no los mezcla implícitamente** (**fuerte**): `'5' + 1` lanza `TypeError`. Estático o dinámico indica **cuándo** se comprueba el tipo; fuerte o débil, si hay **conversiones implícitas**. JavaScript es dinámico y débil."
+    },
+    {
+      "id": "28",
+      "tema": 16,
+      "enunciado": "En JavaScript, ¿qué valores producen las expresiones `'5' + 1` y `'5' - 1`?",
+      "opciones": [
+        "6 y 4",
+        "'51' y '41'",
+        "6 y '4'",
+        "'51' y 4"
+      ],
+      "correcta": 3,
+      "explicacion": "JavaScript tiene **tipado débil**: con `+` y una cadena, **concatena** (`'5' + 1` = **'51'**), pero `-` solo es aritmético, así que convierte la cadena en número (`'5' - 1` = **4**). Es el ejemplo clásico de conversiones implícitas. En Python, la primera expresión daría `TypeError`."
+    },
+    {
+      "id": "29",
+      "tema": 16,
+      "enunciado": "Con 8 bits en complemento a 2, el número −6 se representa como:",
+      "opciones": [
+        "11111001",
+        "11111010",
+        "10000110",
+        "00000110"
+      ],
+      "correcta": 1,
+      "explicacion": "+6 = `00000110`; se **invierten los bits** (`11111001`) y se **suma 1**: **`11111010`**. `11111001` es −6 en **complemento a 1** (sin sumar 1), `10000110` es −6 en **signo-magnitud** y `00000110` es +6."
+    },
+    {
+      "id": "30",
+      "tema": 16,
+      "enunciado": "¿Cuál de las siguientes representaciones de enteros con signo tiene un único cero?",
+      "opciones": [
+        "Signo-magnitud",
+        "Complemento a 1",
+        "Ninguna: todas tienen +0 y −0",
+        "Complemento a 2"
+      ],
+      "correcta": 3,
+      "explicacion": "El **complemento a 2** tiene **un solo cero**, y por eso gana un valor negativo más (−128 a 127 con 8 bits) y es la representación que usan los ordenadores. **Signo-magnitud** y **complemento a 1** tienen **doble cero** (+0 y −0)."
+    },
+    {
+      "id": "31",
+      "tema": 16,
+      "enunciado": "En IEEE 754 de doble precisión (64 bits), el sesgo del exponente es:",
+      "opciones": [
+        "127",
+        "1024",
+        "1023",
+        "2047"
+      ],
+      "correcta": 2,
+      "explicacion": "La doble precisión usa **11 bits de exponente** con **sesgo 1023** (2¹⁰ − 1) y 52 bits de mantisa. **127** es el sesgo de la **simple** precisión (8 bits de exponente). 2047 es el valor máximo del exponente (todo a 1), reservado para infinito y NaN."
+    },
+    {
+      "id": "32",
+      "tema": 16,
+      "enunciado": "¿Por qué en la mayoría de los lenguajes `0.1 + 0.2 == 0.3` es falso?",
+      "opciones": [
+        "Porque 0,1 no tiene representación exacta en binario y se acumula un error de redondeo",
+        "Porque `==` compara las referencias de los objetos y no su valor",
+        "Porque la suma de dos reales se trunca a un número entero",
+        "Porque los literales reales se almacenan como cadenas de texto"
+      ],
+      "correcta": 0,
+      "explicacion": "En **coma flotante (IEEE 754)**, **0,1 no tiene representación binaria exacta**, y la suma da un valor ligeramente distinto de 0,3. Por eso no se deben comparar reales con `==` y para importes se usan tipos decimales (`BigDecimal` en Java, `DECIMAL` en SQL). Comparar referencias es lo que pasa con objetos `String` en Java, no con reales."
+    },
+    {
+      "id": "33",
+      "tema": 16,
+      "enunciado": "En coma flotante IEEE 754, un valor con el exponente con todos los bits a 1 y la mantisa distinta de 0 representa:",
+      "opciones": [
+        "Infinito",
+        "Un número subnormal",
+        "Cero",
+        "NaN (*Not a Number*)"
+      ],
+      "correcta": 3,
+      "explicacion": "Exponente todo a 1 con **mantisa ≠ 0** es **NaN**; con **mantisa 0** es **±infinito**. Los **subnormales** tienen exponente 0 y mantisa ≠ 0, y el **cero** tiene exponente y mantisa a 0."
+    },
+    {
+      "id": "34",
+      "tema": 16,
+      "enunciado": "¿Cuántos bits utiliza el código ASCII estándar?",
+      "opciones": [
+        "8",
+        "7",
+        "16",
+        "Entre 8 y 32"
+      ],
+      "correcta": 1,
+      "explicacion": "**ASCII** usa **7 bits** (128 caracteres). Las extensiones de 8 bits, como ISO-8859-1 o ISO-8859-15 (que incluye €), son posteriores. 16 bits es la unidad de **UTF-16** y entre 8 y 32 bits es lo que ocupa un carácter en UTF-8."
+    },
+    {
+      "id": "35",
+      "tema": 16,
+      "enunciado": "En Java, ¿qué se obtiene al evaluar `Integer.MAX_VALUE + 1`?",
+      "opciones": [
+        "Una excepción `ArithmeticException`",
+        "`Integer.MIN_VALUE` (−2.147.483.648), sin ningún error",
+        "Un valor `long` igual a 2.147.483.648",
+        "`Integer.MAX_VALUE`, porque el resultado se satura"
+      ],
+      "correcta": 1,
+      "explicacion": "Es un **desbordamiento (overflow)**: en complemento a 2 de 32 bits, sumar 1 al máximo «da la vuelta» al **mínimo**, `Integer.MIN_VALUE`, y Java **no lanza ningún error**. No hay promoción automática a `long` ni saturación. `ArithmeticException` solo aparece, por ejemplo, al dividir un entero entre 0."
+    },
+    {
+      "id": "36",
+      "tema": 16,
+      "enunciado": "Según las leyes de De Morgan, NOT (A AND B) es equivalente a:",
+      "opciones": [
+        "(NOT A) AND (NOT B)",
+        "NOT A AND B",
+        "A OR B",
+        "(NOT A) OR (NOT B)"
+      ],
+      "correcta": 3,
+      "explicacion": "Por **De Morgan**, **NOT (A AND B) = (NOT A) OR (NOT B)**, y NOT (A OR B) = (NOT A) AND (NOT B). Truco: al negar el paréntesis, se niega cada operando y **el AND se cambia por OR** (y viceversa)."
+    },
+    {
+      "id": "37",
+      "tema": 16,
+      "enunciado": "La operación lógica XOR (o exclusivo) entre A y B es verdadera cuando:",
+      "opciones": [
+        "Los dos operandos son verdaderos",
+        "Exactamente uno de los dos operandos es verdadero",
+        "Al menos uno de los dos operandos es verdadero",
+        "Los dos operandos son falsos"
+      ],
+      "correcta": 1,
+      "explicacion": "**XOR** es verdadero **solo si los operandos son distintos**: uno verdadero y el otro falso. «Al menos uno» es el **OR**, que también es verdadero con los dos verdaderos, justo el caso en que XOR es falso. En C y Java, el XOR de bits es el operador `^`."
+    },
+    {
+      "id": "38",
+      "tema": 16,
+      "enunciado": "En Java, ¿cuál es el valor de `r` tras ejecutar `int r = 10 - 4 - 3 * 2 % 4;`?",
+      "opciones": [
+        "0",
+        "2",
+        "4",
+        "6"
+      ],
+      "correcta": 2,
+      "explicacion": "Primero los multiplicativos, de izquierda a derecha: `3 * 2` = 6 y `6 % 4` = 2. Después las restas, asociativas por la izquierda: (10 − 4) − 2 = **4**. 0 saldría de restar 3 · 2 sin hacer el `%`, y 6 de calcular solo 10 − 4."
+    },
+    {
+      "id": "39",
+      "tema": 16,
+      "enunciado": "¿Cuánto valen en Java las expresiones `9 & 5` y `9 | 5`?",
+      "opciones": [
+        "13 y 1",
+        "0 y 14",
+        "1 y 13",
+        "1 y 12"
+      ],
+      "correcta": 2,
+      "explicacion": "En binario 9 = `1001` y 5 = `0101`. El **AND de bits** solo deja los bits comunes: `0001` = **1**. El **OR de bits** deja los que están en cualquiera: `1101` = **13**. Invertir los resultados es el error típico."
+    },
+    {
+      "id": "40",
+      "tema": 16,
+      "enunciado": "En JavaScript, la diferencia entre `==` y `===` es que:",
+      "opciones": [
+        "`==` compara sin hacer conversiones de tipo, y `===` convierte antes de comparar",
+        "`===` compara sin hacer conversiones de tipo, y `==` convierte antes de comparar",
+        "`===` compara solo referencias de objetos, y `==` compara valores",
+        "Ninguna: son sinónimos desde ECMAScript 6"
+      ],
+      "correcta": 1,
+      "explicacion": "**`===`** es la **igualdad estricta**: exige el mismo tipo y valor, sin conversiones (`'5' === 5` es falso). **`==`** aplica **conversiones implícitas** antes de comparar (`'5' == 5` es verdadero). No son sinónimos en ninguna versión de ECMAScript."
+    },
+    {
+      "id": "41",
+      "tema": 16,
+      "enunciado": "En Java, para comprobar si dos objetos `String` tienen el mismo contenido se debe usar:",
+      "opciones": [
+        "El operador `==`",
+        "El operador `===`",
+        "El método `equals()`",
+        "El método `hashCode()` de uno de ellos"
+      ],
+      "correcta": 2,
+      "explicacion": "Con objetos, **`==` compara referencias** (si son el mismo objeto), no el contenido; para comparar el texto se usa **`equals()`**. `===` no existe en Java. Que dos cadenas tengan el mismo `hashCode()` no garantiza que sean iguales."
+    },
+    {
+      "id": "42",
+      "tema": 16,
+      "enunciado": "En la instrucción `if (a) if (b) x(); else y();`, ¿a qué `if` pertenece el `else`?",
+      "opciones": [
+        "Al `if` más externo, el de `a`",
+        "Al `if` más cercano, el de `b`",
+        "A los dos `if` a la vez",
+        "A ninguno: es un error de compilación"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el problema del **else colgante** (*dangling else*): por regla, el `else` se asocia al **`if` más cercano** que no tenga ya `else`, aquí el de `b`. Para asociarlo al de `a` hay que usar llaves. Es código válido, no un error."
+    },
+    {
+      "id": "43",
+      "tema": 16,
+      "enunciado": "En C, ¿qué ocurre con la instrucción `if (x = 5) { ... }`?",
+      "opciones": [
+        "Compara x con 5 y entra solo si son iguales",
+        "Produce siempre un error de compilación",
+        "Asigna 5 a x y la condición es siempre verdadera",
+        "Asigna 5 a x y la condición es siempre falsa"
+      ],
+      "correcta": 2,
+      "explicacion": "En C, `=` es **asignación**: guarda 5 en x y la expresión vale 5, que es distinto de 0 y por tanto **verdadero**: siempre entra. Para comparar hay que usar **`==`**. El compilador puede avisar, pero es código válido."
+    },
+    {
+      "id": "44",
+      "tema": 16,
+      "enunciado": "En Pascal, el bucle `repeat ... until C`:",
+      "opciones": [
+        "Repite el cuerpo hasta que C sea verdadera y lo ejecuta al menos una vez",
+        "Repite el cuerpo mientras C sea verdadera y puede no ejecutarlo nunca",
+        "Repite el cuerpo mientras C sea verdadera y lo ejecuta al menos una vez",
+        "Comprueba C al principio y repite hasta que sea falsa"
+      ],
+      "correcta": 0,
+      "explicacion": "`repeat ... until C` es **postest** (al menos una ejecución) y repite **hasta que C sea verdadera**, es decir, mientras sea falsa. `do ... while (C)` de C y Java también es postest, pero con la condición **opuesta**: repite **mientras** C sea verdadera. Es el detalle que más se confunde."
+    },
+    {
+      "id": "45",
+      "tema": 16,
+      "enunciado": "En un bucle que lee datos de entrada, el valor especial que indica que no hay más datos (por ejemplo, un −1) se llama:",
+      "opciones": [
+        "Centinela",
+        "Acumulador",
+        "Contador",
+        "Bandera o interruptor"
+      ],
+      "correcta": 0,
+      "explicacion": "El **centinela** es un valor especial que **marca el final de la entrada**. El **acumulador** va sumando o multiplicando valores, el **contador** se incrementa en una cantidad fija y la **bandera** es una variable lógica que indica si ha ocurrido algo."
+    },
+    {
+      "id": "46",
+      "tema": 16,
+      "enunciado": "Si el caso base de una función recursiva nunca se alcanza, en Java se produce normalmente:",
+      "opciones": [
+        "Una excepción `ArrayIndexOutOfBoundsException`",
+        "Un bucle infinito que no consume memoria",
+        "Un error de compilación",
+        "Un desbordamiento de pila (`StackOverflowError`)"
+      ],
+      "correcta": 3,
+      "explicacion": "Cada llamada apila un **registro de activación** (parámetros, locales, dirección de retorno); sin caso base la pila crece hasta agotarse: **`StackOverflowError`**. A diferencia de un bucle infinito, la recursión infinita sí consume memoria. El compilador no detecta este error."
+    },
+    {
+      "id": "47",
+      "tema": 16,
+      "enunciado": "¿Qué valor devuelve `g(48, 18)` con la siguiente función? `int g(int a, int b) { if (b == 0) return a; return g(b, a % b); }`",
+      "opciones": [
+        "12",
+        "6",
+        "18",
+        "2"
+      ],
+      "correcta": 1,
+      "explicacion": "Traza: g(48, 18) → g(18, 48 % 18 = 12) → g(12, 18 % 12 = 6) → g(6, 12 % 6 = 0) → devuelve **6**. Es el **algoritmo de Euclides** del máximo común divisor, y además es recursividad **de cola**. 12 es el valor de b en la segunda llamada, no el resultado."
+    },
+    {
+      "id": "48",
+      "tema": 16,
+      "enunciado": "La versión recursiva ingenua de Fibonacci, `fib(n) = fib(n − 1) + fib(n − 2)`, tiene un coste:",
+      "opciones": [
+        "Exponencial; con memoización o con una versión iterativa pasa a ser lineal",
+        "Lineal, igual que la versión iterativa",
+        "Logarítmico, porque divide el problema en cada llamada",
+        "Cuadrático; con memoización pasa a ser logarítmico"
+      ],
+      "correcta": 0,
+      "explicacion": "Cada llamada genera **dos** llamadas (recursividad **múltiple**) y se recalculan los mismos valores una y otra vez: coste **exponencial**. Con **memoización** (programación dinámica) o con un bucle, cada valor se calcula una vez: coste **lineal**. No divide el problema a la mitad, así que no es logarítmico."
+    },
+    {
+      "id": "49",
+      "tema": 16,
+      "enunciado": "Respecto a la diferencia entre procedimiento y función, es correcto que:",
+      "opciones": [
+        "La función devuelve un valor y se invoca dentro de una expresión",
+        "El procedimiento devuelve un valor y se invoca dentro de una expresión",
+        "La función no puede recibir parámetros",
+        "El procedimiento no puede modificar ningún parámetro"
+      ],
+      "correcta": 0,
+      "explicacion": "La **función** devuelve **un valor** (con `return`) y se usa **dentro de una expresión** (`x = raiz(16) + 1`). El **procedimiento** no devuelve valor y se llama como instrucción independiente, aunque puede devolver resultados mediante **parámetros de salida**. En C y Java, un procedimiento es una función `void`."
+    },
+    {
+      "id": "50",
+      "tema": 16,
+      "enunciado": "Señale la respuesta INCORRECTA sobre la sobrecarga de métodos en Java:",
+      "opciones": [
+        "La firma incluye el nombre y el número, orden y tipo de los parámetros",
+        "El lenguaje C no admite la sobrecarga de funciones",
+        "Los métodos sobrecargados comparten el mismo nombre",
+        "Dos métodos pueden sobrecargarse si solo difieren en el tipo de retorno"
+      ],
+      "correcta": 3,
+      "explicacion": "Es falso: en Java **el tipo de retorno no forma parte de la firma**, así que dos métodos que solo difieran en él **no compilan**. La sobrecarga exige una **lista de parámetros distinta**. Las demás afirmaciones son correctas: C no admite sobrecarga, a diferencia de C++, Java y C#."
+    },
+    {
+      "id": "51",
+      "tema": 16,
+      "enunciado": "¿Qué modo de paso de parámetros copia el valor del argumento al entrar en el subprograma y lo copia de vuelta al salir?",
+      "opciones": [
+        "Por referencia",
+        "Por resultado",
+        "Por valor-resultado (copia-restauración)",
+        "Por nombre"
+      ],
+      "correcta": 2,
+      "explicacion": "El paso **por valor-resultado** (copia-restauración) copia al **entrar** y vuelve a copiar al **salir**, así que los cambios se ven al terminar. **Por referencia** se trabaja directamente sobre la variable original, **por resultado** solo se copia a la salida y **por nombre** (ALGOL 60) se pasa la expresión sin evaluar."
+    },
+    {
+      "id": "52",
+      "tema": 16,
+      "enunciado": "En C++, la declaración `void inc(int &x)` indica que el parámetro `x` se pasa:",
+      "opciones": [
+        "Por valor",
+        "Por referencia",
+        "Mediante un puntero, que hay que desreferenciar con `*x`",
+        "Por resultado"
+      ],
+      "correcta": 1,
+      "explicacion": "En C++ el **`&` en la declaración** del parámetro indica **paso por referencia**: `x` es un alias de la variable del llamante y los cambios se ven fuera. Con un puntero se declararía `int *x` y se desreferenciaría con `*x`, como en C. Sin `&` sería paso por valor."
+    },
+    {
+      "id": "53",
+      "tema": 16,
+      "enunciado": "¿Qué valores tienen `a` y `b` tras ejecutar este código en Python? `def f(lista, n): lista.append(4); n = n + 1` y luego `a = [1, 2, 3]; b = 10; f(a, b)`",
+      "opciones": [
+        "a = [1, 2, 3] y b = 10",
+        "a = [1, 2, 3, 4] y b = 11",
+        "a = [1, 2, 3] y b = 11",
+        "a = [1, 2, 3, 4] y b = 10"
+      ],
+      "correcta": 3,
+      "explicacion": "Python pasa **referencias a objetos** (*call by sharing*): `append` **modifica la lista mutable** a la que también apunta `a`, así que el cambio se ve fuera. En cambio, `n = n + 1` crea un **nuevo entero** y solo reasigna la variable local; `b` sigue valiendo **10**."
+    },
+    {
+      "id": "54",
+      "tema": 16,
+      "enunciado": "En C, dada la función `int cuenta(void) { static int n = 0; n++; return n; }`, ¿qué devuelve la tercera llamada a `cuenta()`?",
+      "opciones": [
+        "1",
+        "0",
+        "3",
+        "6"
+      ],
+      "correcta": 2,
+      "explicacion": "Una variable local **`static`** se inicializa una sola vez y **conserva su valor entre llamadas** (está en la zona de datos estáticos, no en la pila): las llamadas devuelven 1, 2 y **3**. Sin `static`, n se crearía de nuevo cada vez y siempre devolvería 1. 6 sería la suma 1 + 2 + 3."
+    },
+    {
+      "id": "55",
+      "tema": 16,
+      "enunciado": "Los criterios de calidad de un diseño modular recomiendan módulos con:",
+      "opciones": [
+        "Baja cohesión y alto acoplamiento",
+        "Alta cohesión y alto acoplamiento",
+        "Baja cohesión y bajo acoplamiento",
+        "Alta cohesión y bajo acoplamiento"
+      ],
+      "correcta": 3,
+      "explicacion": "Se buscan módulos con **alta cohesión** (cada uno hace **una sola cosa**) y **bajo acoplamiento** (**poca dependencia** entre ellos). Así son más fáciles de entender, probar y reutilizar. Truco: «muy unido por dentro, poco atado por fuera»."
+    },
+    {
+      "id": "56",
+      "tema": 16,
+      "enunciado": "¿Qué coste tiene acceder al elemento `v[i]` de un vector?",
+      "opciones": [
+        "O(n), lineal",
+        "O(1), constante",
+        "O(log n), logarítmico",
+        "O(n²), cuadrático"
+      ],
+      "correcta": 1,
+      "explicacion": "Los elementos de un vector están en **posiciones contiguas**, así que la dirección se calcula directamente (base + i · t): **acceso directo O(1)**. O(n) es el coste de una **búsqueda secuencial** y O(log n) el de la **búsqueda binaria**."
+    },
+    {
+      "id": "57",
+      "tema": 16,
+      "enunciado": "¿En cuál de los siguientes lenguajes el primer elemento de un vector tiene, por defecto, el índice 1?",
+      "opciones": [
+        "COBOL",
+        "Java",
+        "C",
+        "Python"
+      ],
+      "correcta": 0,
+      "explicacion": "**COBOL**, como Fortran, MATLAB o Lua, empieza a numerar por **1**. **C, C++, Java, C#, Python y JavaScript** empiezan por **0**. En Pascal el rango de índices lo define el programador (`array[1..10]`)."
+    },
+    {
+      "id": "58",
+      "tema": 16,
+      "enunciado": "En C, si `p` es un puntero a una estructura con un campo `salario`, ¿cómo se accede a ese campo?",
+      "opciones": [
+        "`p.salario`",
+        "`*p.salario`",
+        "`&p.salario`",
+        "`p->salario`"
+      ],
+      "correcta": 3,
+      "explicacion": "Con un puntero a estructura se usa el operador **flecha**: `p->salario`, equivalente a `(*p).salario`. El **punto** (`e.salario`) se usa con la variable de tipo estructura, no con el puntero. `*p.salario` no es válido porque `.` tiene más precedencia que `*`."
+    },
+    {
+      "id": "59",
+      "tema": 16,
+      "enunciado": "Durante la ejecución de un programa, la memoria reservada dinámicamente con `malloc` en C o con `new` en Java se ubica en:",
+      "opciones": [
+        "La pila (stack)",
+        "La zona de código",
+        "El montículo (heap)",
+        "La zona de datos estáticos"
+      ],
+      "correcta": 2,
+      "explicacion": "La **memoria dinámica** (`malloc`, `new`) está en el **montículo (heap)**; en Java la libera el recolector de basura. La **pila** guarda los registros de activación (locales, parámetros, dirección de retorno), la zona de **código** las instrucciones y la de **datos estáticos** las globales y `static`."
+    },
+    {
+      "id": "60",
+      "tema": 16,
+      "enunciado": "En Python, los bloques de código (por ejemplo, el cuerpo de un `if` o de una función) se delimitan mediante:",
+      "opciones": [
+        "El sangrado (indentación)",
+        "Llaves `{ }`",
+        "Las palabras `begin` y `end`",
+        "Punto y coma al final del bloque"
+      ],
+      "correcta": 0,
+      "explicacion": "En Python los bloques se marcan con el **sangrado**, que es obligatorio y forma parte de la sintaxis. Las **llaves** son propias de C, Java o JavaScript y **`begin ... end`** de Pascal. Por convenio (PEP 8) se usan 4 espacios por nivel."
+    }
+  ]
+}
