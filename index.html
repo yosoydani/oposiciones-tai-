@@ -155,6 +155,7 @@ button.opt:hover:not(:disabled) .bub { border-width: 2.5px; }
 .ctx summary { cursor: pointer; padding: 10px 14px; font-weight: 600; font-stretch: 85%; color: var(--print); }
 .ctx div { padding: 0 14px 14px; max-height: 340px; overflow-y: auto; white-space: pre-line; font-size: 0.95rem; line-height: 1.5; }
 .why { border-left: 4px solid var(--graphite); padding: 4px 0 4px 16px; display: flex; flex-direction: column; gap: 4px; max-width: 64ch; }
+.vig { display: block; margin-top: 8px; padding: 8px 12px; border-radius: 6px; background: var(--bad-soft); }
 .why > .v { font-weight: 800; font-stretch: 80%; font-size: 1.05rem; }
 .v.ok { color: var(--ok); } .v.bad { color: var(--bad); } .v.blank { color: var(--muted); }
 
@@ -268,7 +269,8 @@ code { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; 
   }
   function explic(x) {
     const q = x.q;
-    if (q.explicacion) return txt(q.explicacion);
+    const aviso = q.nota_vigencia ? '<span class="vig"><b>Ojo, puede estar desfasada:</b> ' + txt(q.nota_vigencia) + "</span>" : "";
+    if (q.explicacion) return txt(q.explicacion) + aviso;
     if (x.bank.fuente === "oficial") return "Respuesta según la plantilla definitiva del tribunal: " + LETRAS[q.correcta] + ")." + (q.modificada_en_definitiva ? " La plantilla definitiva cambió esta respuesta respecto a la provisional." : "") + " Esta pregunta aún no tiene explicación." + (x.bank.url_plantilla ? ' <a href="' + esc(x.bank.url_plantilla) + '" target="_blank" rel="noopener">Ver plantilla</a>' : "");
     return "Sin explicación todavía.";
   }
