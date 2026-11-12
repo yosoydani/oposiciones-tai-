@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 20 · test",
+  "fuente": "propio",
+  "tema": 20,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 20. Arquitectura cliente/servidor, multicapa y servicios web»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 20,
+      "enunciado": "En el modelo cliente/servidor, ¿quién inicia la comunicación?",
+      "opciones": [
+        "El servidor",
+        "El cliente",
+        "El middleware",
+        "Cualquiera de los dos indistintamente"
+      ],
+      "correcta": 1,
+      "explicacion": "En C/S **el cliente inicia** la petición y el **servidor espera** de forma pasiva, la procesa y responde. El middleware solo intermedia y, si cualquiera pudiera iniciar, sería un modelo *peer-to-peer*."
+    },
+    {
+      "id": "02",
+      "tema": 20,
+      "enunciado": "En una arquitectura de tres niveles, la lógica de negocio reside en:",
+      "opciones": [
+        "El cliente",
+        "El servidor de base de datos",
+        "El servidor de aplicaciones",
+        "El servidor DNS"
+      ],
+      "correcta": 2,
+      "explicacion": "En 3 niveles, la presentación está en el cliente, la **lógica de negocio en el servidor de aplicaciones** y los datos en el SGBD. Poner la lógica en el cliente o en la BD (procedimientos almacenados) es propio de las variantes de 2 niveles; el DNS solo resuelve nombres."
+    },
+    {
+      "id": "03",
+      "tema": 20,
+      "enunciado": "Un cliente ligero (*thin client*) se caracteriza porque:",
+      "opciones": [
+        "Incluye la lógica de negocio y datos locales",
+        "Requiere instalación en cada puesto",
+        "Puede trabajar sin conexión",
+        "Solo se encarga de la presentación"
+      ],
+      "correcta": 3,
+      "explicacion": "El **cliente ligero solo se encarga de la presentación** (un navegador, un terminal VDI) y la lógica está en el servidor. Las otras tres opciones describen al **cliente pesado**: lógica y datos locales, instalación en cada puesto y trabajo sin conexión."
+    },
+    {
+      "id": "04",
+      "tema": 20,
+      "enunciado": "El middleware orientado a mensajes (MOM) se caracteriza por:",
+      "opciones": [
+        "Comunicación síncrona bloqueante",
+        "Comunicación asíncrona mediante colas",
+        "Invocación de métodos de objetos remotos",
+        "Acceso uniforme a bases de datos"
+      ],
+      "correcta": 1,
+      "explicacion": "El **MOM** comunica de forma **asíncrona mediante colas** y desacopla emisor y receptor en el tiempo. La comunicación síncrona es la del RPC, la invocación de objetos remotos es la del ORB (CORBA, RMI) y el acceso uniforme a BD es el de ODBC/JDBC."
+    },
+    {
+      "id": "05",
+      "tema": 20,
+      "enunciado": "En RPC, el proceso de empaquetar los parámetros para enviarlos por la red se denomina:",
+      "opciones": [
+        "*Marshalling*",
+        "*Binding*",
+        "*Caching*",
+        "*Hashing*"
+      ],
+      "correcta": 0,
+      "explicacion": "El ***marshalling*** (aplanamiento o serialización) lo hace el *stub* del cliente; el inverso, en el servidor, es el *unmarshalling*. El *binding* es el enlace entre cliente y servidor, y *caching* y *hashing* no tienen relación con el envío de parámetros."
+    },
+    {
+      "id": "06",
+      "tema": 20,
+      "enunciado": "El protocolo de CORBA para la comunicación entre ORB sobre TCP/IP es:",
+      "opciones": [
+        "JRMP",
+        "IIOP",
+        "AMQP",
+        "MQTT"
+      ],
+      "correcta": 1,
+      "explicacion": "**IIOP** (*Internet Inter-ORB Protocol*) es GIOP sobre TCP/IP. JRMP es el protocolo nativo de Java RMI, y AMQP y MQTT son protocolos de mensajería."
+    },
+    {
+      "id": "07",
+      "tema": 20,
+      "enunciado": "Además del `Envelope`, ¿qué elemento es obligatorio en un mensaje SOAP?",
+      "opciones": [
+        "`Header`",
+        "`Fault`",
+        "`Body`",
+        "`Attachment`"
+      ],
+      "correcta": 2,
+      "explicacion": "Son obligatorios **`Envelope` y `Body`**. El `Header` es opcional, `Fault` solo aparece dentro del Body cuando hay un error y `Attachment` no es un elemento de SOAP (los adjuntos se envían con MTOM/XOP)."
+    },
+    {
+      "id": "08",
+      "tema": 20,
+      "enunciado": "En WSDL 2.0, el elemento `portType` de WSDL 1.1 pasa a llamarse:",
+      "opciones": [
+        "`endpoint`",
+        "`service`",
+        "`binding`",
+        "`interface`"
+      ],
+      "correcta": 3,
+      "explicacion": "En WSDL 2.0, **`portType` → `interface`** y `port` → `endpoint`; además desaparece `message`. `service` y `binding` conservan su nombre. El distractor típico es `endpoint`, que sustituye a `port`, no a `portType`."
+    },
+    {
+      "id": "09",
+      "tema": 20,
+      "enunciado": "El tipo de contenido HTTP de un mensaje SOAP 1.2 es:",
+      "opciones": [
+        "`text/xml`",
+        "`application/soap+xml`",
+        "`application/json`",
+        "`multipart/related`"
+      ],
+      "correcta": 1,
+      "explicacion": "SOAP 1.2 usa **`application/soap+xml`** (con el parámetro `action`). `text/xml` con la cabecera `SOAPAction` es de SOAP 1.1, `application/json` es lo habitual en REST y `multipart/related` se usa para mensajes con adjuntos."
+    },
+    {
+      "id": "10",
+      "tema": 20,
+      "enunciado": "¿Cuál de las restricciones de REST es opcional?",
+      "opciones": [
+        "Sin estado",
+        "Cacheable",
+        "Código bajo demanda",
+        "Sistema en capas"
+      ],
+      "correcta": 2,
+      "explicacion": "El **código bajo demanda** (*code on demand*, el servidor envía código ejecutable como JavaScript) es **la única restricción opcional** de las definidas por Fielding. Sin estado, cacheable y sistema en capas son obligatorias."
+    },
+    {
+      "id": "11",
+      "tema": 20,
+      "enunciado": "¿Qué método HTTP no es ni seguro ni idempotente?",
+      "opciones": [
+        "GET",
+        "PUT",
+        "DELETE",
+        "POST"
+      ],
+      "correcta": 3,
+      "explicacion": "**POST** no es seguro (modifica el estado) ni idempotente (repetirlo crea un recurso nuevo cada vez). GET es seguro e idempotente; PUT y DELETE son idempotentes, aunque no seguros."
+    },
+    {
+      "id": "12",
+      "tema": 20,
+      "enunciado": "Tras crear correctamente un recurso con POST, la API REST debería responder:",
+      "opciones": [
+        "200 OK",
+        "201 Created",
+        "202 Accepted",
+        "204 No Content"
+      ],
+      "correcta": 1,
+      "explicacion": "**201 Created**, con la URI del nuevo recurso en la cabecera **`Location`**. 200 es un éxito genérico, 202 indica que la petición se ha aceptado para procesarla de forma asíncrona y 204, éxito sin cuerpo de respuesta (por ejemplo, tras un DELETE)."
+    },
+    {
+      "id": "13",
+      "tema": 20,
+      "enunciado": "Un usuario autenticado intenta acceder a un recurso para el que no tiene permiso. El código adecuado es:",
+      "opciones": [
+        "403",
+        "401",
+        "404",
+        "407"
+      ],
+      "correcta": 0,
+      "explicacion": "**403 Forbidden** = **autenticado pero sin permiso**. 401 Unauthorized significa que **falta autenticarse** (a pesar de su nombre), 404 que el recurso no existe y 407 que hay que autenticarse ante un *proxy*."
+    },
+    {
+      "id": "14",
+      "tema": 20,
+      "enunciado": "HTTP/3 se apoya en:",
+      "opciones": [
+        "TCP",
+        "SCTP",
+        "QUIC sobre UDP",
+        "TLS sobre TCP"
+      ],
+      "correcta": 2,
+      "explicacion": "**HTTP/3** (RFC 9114) funciona sobre **QUIC, que va sobre UDP**, y así evita el bloqueo de cabeza de línea del transporte. HTTP/1.1 y HTTP/2 usan TCP (con TLS en HTTPS); SCTP no se usa para HTTP."
+    },
+    {
+      "id": "15",
+      "tema": 20,
+      "enunciado": "gRPC utiliza:",
+      "opciones": [
+        "HTTP/2 y Protocol Buffers",
+        "HTTP/1.1 y XML",
+        "WebSocket y JSON",
+        "AMQP y Avro"
+      ],
+      "correcta": 0,
+      "explicacion": "gRPC usa **HTTP/2** como transporte y **Protocol Buffers** (binario) para serializar, con el contrato en ficheros `.proto`. XML es propio de SOAP, JSON de REST y GraphQL, y AMQP es un protocolo de mensajería."
+    },
+    {
+      "id": "16",
+      "tema": 20,
+      "enunciado": "En GraphQL, la operación que modifica datos es:",
+      "opciones": [
+        "`query`",
+        "`subscription`",
+        "`fragment`",
+        "`mutation`"
+      ],
+      "correcta": 3,
+      "explicacion": "**`mutation`** es la operación de escritura. `query` lee, `subscription` recibe notificaciones en tiempo real y `fragment` no es una operación, sino un trozo reutilizable de selección de campos."
+    },
+    {
+      "id": "17",
+      "tema": 20,
+      "enunciado": "Al establecer una conexión WebSocket, el servidor acepta el cambio de protocolo con el código:",
+      "opciones": [
+        "200",
+        "101",
+        "301",
+        "426"
+      ],
+      "correcta": 1,
+      "explicacion": "El cliente envía una petición HTTP con `Upgrade: websocket` y el servidor responde **101 Switching Protocols**. 200 es éxito normal, 301 redirección permanente y 426 *Upgrade Required* indica que el cliente debe cambiar de protocolo, no que se acepta el cambio."
+    },
+    {
+      "id": "18",
+      "tema": 20,
+      "enunciado": "OAuth 2.0 es un marco para:",
+      "opciones": [
+        "La autenticación de usuarios",
+        "El cifrado del canal",
+        "La autorización delegada",
+        "La firma de documentos XML"
+      ],
+      "correcta": 2,
+      "explicacion": "**OAuth 2.0 es un marco de autorización delegada**: emite *access tokens* para que un cliente acceda a recursos en nombre del usuario. La autenticación la añade **OpenID Connect**, el cifrado del canal es TLS y la firma XML es XML Signature (WS-Security). Truco: OAuth **autoriza**, OIDC **autentica**."
+    },
+    {
+      "id": "19",
+      "tema": 20,
+      "enunciado": "El patrón de microservicios que deja de llamar temporalmente a un servicio que falla para evitar fallos en cascada es:",
+      "opciones": [
+        "Saga",
+        "CQRS",
+        "*Strangler fig*",
+        "*Circuit breaker*"
+      ],
+      "correcta": 3,
+      "explicacion": "El ***circuit breaker*** pasa a estado **abierto** ante fallos repetidos y deja de llamar al servicio; después prueba en semiabierto y vuelve a cerrado si funciona. Saga gestiona transacciones distribuidas, CQRS separa lectura y escritura y *Strangler fig* sirve para migrar un monolito."
+    },
+    {
+      "id": "20",
+      "tema": 20,
+      "enunciado": "Los servicios web de la Plataforma de Intermediación de Datos de la AGE siguen el protocolo:",
+      "opciones": [
+        "SCSP",
+        "SIR",
+        "CORBA",
+        "GraphQL"
+      ],
+      "correcta": 0,
+      "explicacion": "La PID usa el protocolo **SCSP** (*Sustitución de Certificados en Soporte Papel*), con servicios web **SOAP** firmados con WS-Security. SIR es el Sistema de Interconexión de Registros, y CORBA y GraphQL no se usan en la PID."
+    },
+    {
+      "id": "21",
+      "tema": 20,
+      "enunciado": "¿Cuál de los siguientes es un inconveniente típico del modelo cliente/servidor?",
+      "opciones": [
+        "El control de los datos y de la seguridad queda centralizado",
+        "Permite integrar plataformas heterogéneas",
+        "El servidor puede convertirse en un punto único de fallo y en un cuello de botella",
+        "Los cambios se hacen en el servidor, lo que simplifica el mantenimiento"
+      ],
+      "correcta": 2,
+      "explicacion": "El principal inconveniente es que el **servidor es un punto único de fallo** y un posible **cuello de botella**, además de la congestión de red y la dependencia de la conexión. El control centralizado, la integración de plataformas heterogéneas y el mantenimiento en el servidor son ventajas."
+    },
+    {
+      "id": "22",
+      "tema": 20,
+      "enunciado": "Un servidor que atiende cada petición en un hilo o proceso distinto (o mediante un *pool*) mientras sigue aceptando otras se denomina:",
+      "opciones": [
+        "Iterativo",
+        "Sin estado",
+        "Concurrente",
+        "*Peer-to-peer*"
+      ],
+      "correcta": 2,
+      "explicacion": "Un servidor **concurrente** atiende varias peticiones a la vez con hilos, procesos o un *pool*. El **iterativo** atiende una petición cada vez. Ser con estado o sin estado es otra clasificación distinta (si recuerda la sesión), y P2P es un modelo sin servidor central."
+    },
+    {
+      "id": "23",
+      "tema": 20,
+      "enunciado": "Señale cuál NO es uno de los cinco modelos de reparto cliente/servidor definidos por Gartner:",
+      "opciones": [
+        "Presentación remota",
+        "Lógica distribuida",
+        "Gestión de datos remota",
+        "Replicación de datos"
+      ],
+      "correcta": 3,
+      "explicacion": "Los cinco modelos de **Gartner (1995)** son: **presentación distribuida, presentación remota, lógica distribuida, gestión de datos remota y base de datos distribuida**. La «replicación de datos» no es uno de ellos."
+    },
+    {
+      "id": "24",
+      "tema": 20,
+      "enunciado": "En el modelo *peer-to-peer* (P2P):",
+      "opciones": [
+        "Un servidor central reparte las peticiones entre los clientes",
+        "Solo el servidor puede iniciar la comunicación",
+        "Los clientes se conectan siempre a través de un ESB",
+        "Todos los nodos actúan a la vez como clientes y como servidores, sin servidor central"
+      ],
+      "correcta": 3,
+      "explicacion": "En **P2P** todos los nodos son **a la vez cliente y servidor** y no hay servidor central (BitTorrent, *blockchain*). Un servidor central es propio del modelo C/S y el ESB es una pieza de integración de SOA."
+    },
+    {
+      "id": "25",
+      "tema": 20,
+      "enunciado": "Un servidor sin estado (*stateless*), como un servicio REST:",
+      "opciones": [
+        "Recuerda la sesión de cada cliente entre una petición y la siguiente",
+        "No guarda información de la sesión entre peticiones, lo que facilita escalar",
+        "Solo puede atender una petición cada vez",
+        "No puede acceder a una base de datos"
+      ],
+      "correcta": 1,
+      "explicacion": "Un servidor **sin estado** no conserva datos de sesión entre peticiones: cada una lleva toda la información necesaria, así que cualquier instancia puede atenderla y el sistema **escala mejor**. Recordar la sesión es lo propio del servidor con estado; atender una petición cada vez es ser iterativo."
+    },
+    {
+      "id": "26",
+      "tema": 20,
+      "enunciado": "En arquitecturas de software, el término inglés *tier* se refiere a:",
+      "opciones": [
+        "Una capa lógica de la aplicación, como la presentación o el negocio",
+        "Un patrón de diseño para separar modelo, vista y controlador",
+        "Un protocolo de comunicación entre capas",
+        "Un nivel físico: la máquina o el proceso en que se despliega una parte de la aplicación"
+      ],
+      "correcta": 3,
+      "explicacion": "Un ***tier*** es un **nivel físico** (dónde se despliega); un ***layer*** es una **capa lógica** (presentación, negocio y datos). En el examen se usa «capa» para ambos, pero conviene distinguirlos: una aplicación de 3 capas lógicas puede desplegarse en 2 niveles físicos."
+    },
+    {
+      "id": "27",
+      "tema": 20,
+      "enunciado": "¿Cuál es un inconveniente característico de la arquitectura de 2 niveles frente a la de 3?",
+      "opciones": [
+        "Mayor tráfico de red entre los niveles",
+        "Más puntos de fallo en la infraestructura",
+        "Mayor complejidad de despliegue y operación",
+        "Escalabilidad limitada, porque cada cliente mantiene su propia conexión con la base de datos"
+      ],
+      "correcta": 3,
+      "explicacion": "En **2 niveles** cada cliente abre su conexión con el SGBD, lo que **limita la escalabilidad**; además, actualizar la lógica obliga a redistribuir el cliente a cada puesto. Más tráfico entre niveles, más puntos de fallo y más complejidad son los inconvenientes de las arquitecturas de **3 y n niveles**."
+    },
+    {
+      "id": "28",
+      "tema": 20,
+      "enunciado": "En la variante de «servidor pesado» de la arquitectura de 2 niveles, la lógica de negocio se sitúa:",
+      "opciones": [
+        "En la aplicación instalada en el puesto del cliente",
+        "En procedimientos almacenados y *triggers* del SGBD",
+        "En un servidor de aplicaciones intermedio",
+        "En el código JavaScript del navegador"
+      ],
+      "correcta": 1,
+      "explicacion": "Con **servidor pesado** la lógica está en el **SGBD**, en **procedimientos almacenados y *triggers***. Si está en la aplicación del puesto es la variante de **cliente pesado**, y un servidor de aplicaciones intermedio ya sería una arquitectura de 3 niveles."
+    },
+    {
+      "id": "29",
+      "tema": 20,
+      "enunciado": "Una aplicación SPA hecha con Angular o React, que se ejecuta en el navegador y obtiene los datos de una API, se considera un cliente:",
+      "opciones": [
+        "Enriquecido o híbrido (RIA)",
+        "Ligero, porque solo muestra la información",
+        "Pesado, porque debe instalarse en cada puesto",
+        "Tonto, conectado a un *mainframe*"
+      ],
+      "correcta": 0,
+      "explicacion": "Las **SPA, RIA y PWA** son clientes **enriquecidos o híbridos**: interfaz rica en el navegador con **lógica de presentación en JavaScript** y datos por API, sin instalación. No son ligeros puros (llevan lógica en el cliente) ni pesados (no se instalan en cada puesto)."
+    },
+    {
+      "id": "30",
+      "tema": 20,
+      "enunciado": "En un balanceador de carga, las sesiones persistentes (*sticky sessions*) consisten en:",
+      "opciones": [
+        "Repartir las peticiones por turnos entre los servidores (*round robin*)",
+        "Enviar cada petición al servidor con menos conexiones abiertas",
+        "Guardar la sesión en una base de datos compartida por todos los servidores",
+        "Enviar todas las peticiones de un mismo usuario al mismo servidor"
+      ],
+      "correcta": 3,
+      "explicacion": "Con ***sticky sessions*** el balanceador **mantiene a cada usuario en el mismo servidor**, útil cuando la sesión está en memoria de ese servidor. *Round robin* y «menos conexiones» son algoritmos de reparto, y guardar la sesión en un almacén compartido es justo la alternativa que evita necesitar sesiones persistentes."
+    },
+    {
+      "id": "31",
+      "tema": 20,
+      "enunciado": "ODBC, JDBC y ADO.NET son ejemplos de middleware:",
+      "opciones": [
+        "De acceso a datos",
+        "Orientado a mensajes (MOM)",
+        "Orientado a objetos (ORB)",
+        "De monitores de transacciones"
+      ],
+      "correcta": 0,
+      "explicacion": "Son **middleware de acceso a datos**: ofrecen una API común para trabajar con distintos SGBD. Ejemplos de MOM son JMS, RabbitMQ o Kafka; de ORB, CORBA y Java RMI; y de monitores de transacciones, CICS y Tuxedo."
+    },
+    {
+      "id": "32",
+      "tema": 20,
+      "enunciado": "El registro de Java RMI (`rmiregistry`) escucha por defecto en el puerto:",
+      "opciones": [
+        "1521",
+        "1099",
+        "8080",
+        "443"
+      ],
+      "correcta": 1,
+      "explicacion": "El **registro RMI** usa por defecto el puerto **1099**. 1521 es el puerto habitual del *listener* de Oracle, 8080 el típico de servidores de aplicaciones o Tomcat en desarrollo y 443 el de HTTPS."
+    },
+    {
+      "id": "33",
+      "tema": 20,
+      "enunciado": "En RPC, la interfaz a partir de la cual se generan el *stub* del cliente y el *skeleton* del servidor se describe con:",
+      "opciones": [
+        "Una DTD",
+        "Un esquema JSON Schema",
+        "Una hoja XSLT",
+        "Un IDL (*Interface Definition Language*)"
+      ],
+      "correcta": 3,
+      "explicacion": "La interfaz remota se describe con un **IDL** y de ella se generan *stubs* y *skeletons* (por ejemplo, el IDL de OMG en CORBA). DTD y JSON Schema validan documentos XML o JSON, y XSLT transforma XML."
+    },
+    {
+      "id": "34",
+      "tema": 20,
+      "enunciado": "En una llamada RPC, si el cliente reenvía la petición hasta recibir respuesta y el servidor no filtra los duplicados, la semántica de invocación resultante es:",
+      "opciones": [
+        "Como mucho una vez",
+        "Al menos una vez",
+        "Exactamente una vez",
+        "Quizás"
+      ],
+      "correcta": 1,
+      "explicacion": "Al **reintentar sin filtrar duplicados**, el procedimiento se ejecuta una o varias veces: semántica **al menos una vez** (válida solo para operaciones idempotentes). «Como mucho una vez» exige que el servidor detecte duplicados, «exactamente una vez» es el ideal y «quizás» no reintenta."
+    },
+    {
+      "id": "35",
+      "tema": 20,
+      "enunciado": "¿Qué protocolo de mensajería ligero, normalizado por OASIS, está pensado especialmente para dispositivos IoT?",
+      "opciones": [
+        "AMQP",
+        "MQTT",
+        "STOMP",
+        "IIOP"
+      ],
+      "correcta": 1,
+      "explicacion": "**MQTT** es el protocolo ligero de publicación/suscripción para **IoT**, estándar de OASIS. AMQP es el estándar general de mensajería (OASIS e ISO/IEC 19464, el de RabbitMQ), STOMP es un protocolo de texto e IIOP es el de CORBA."
+    },
+    {
+      "id": "36",
+      "tema": 20,
+      "enunciado": "CICS de IBM y Tuxedo de Oracle son ejemplos de:",
+      "opciones": [
+        "Middleware orientado a mensajes",
+        "Buses de servicio empresarial (ESB)",
+        "Monitores de transacciones (TP)",
+        "Intermediarios de objetos (ORB)"
+      ],
+      "correcta": 2,
+      "explicacion": "**CICS** y **Tuxedo** son **monitores de transacciones (TP)**, que coordinan transacciones distribuidas (estándar X/Open XA). Ejemplos de MOM son IBM MQ o RabbitMQ; de ESB, MuleSoft o WSO2; y de ORB, CORBA."
+    },
+    {
+      "id": "37",
+      "tema": 20,
+      "enunciado": "En la composición de servicios, ¿cómo se llama el enfoque en el que un coordinador central, por ejemplo un proceso WS-BPEL, dirige la secuencia de llamadas?",
+      "opciones": [
+        "Orquestación",
+        "Coreografía",
+        "Mediación",
+        "Federación"
+      ],
+      "correcta": 0,
+      "explicacion": "En la **orquestación** un **coordinador central** dirige el proceso (WS-BPEL). En la **coreografía** no hay director: cada servicio reacciona a eventos (WS-CDL, arquitecturas de eventos). Truco: la orquesta tiene director; en una coreografía cada bailarín sabe su papel."
+    },
+    {
+      "id": "38",
+      "tema": 20,
+      "enunciado": "¿Qué característica es propia de los microservicios frente a la SOA clásica?",
+      "opciones": [
+        "La comunicación pasa por un ESB «inteligente» que transforma los mensajes",
+        "Los servicios son de grano grueso, a escala de toda la empresa",
+        "Cada servicio gestiona su propia base de datos",
+        "El gobierno de los servicios está centralizado"
+      ],
+      "correcta": 2,
+      "explicacion": "Los microservicios siguen el principio de **una base de datos por servicio** (*database per service*), con despliegue independiente y gobierno descentralizado, y prefieren «extremos inteligentes, tuberías tontas». El ESB inteligente, el grano grueso y el gobierno centralizado son rasgos de la **SOA clásica**."
+    },
+    {
+      "id": "39",
+      "tema": 20,
+      "enunciado": "El patrón Saga en microservicios sirve para:",
+      "opciones": [
+        "Cortar las llamadas a un servicio que falla para evitar fallos en cascada",
+        "Separar el modelo de escritura del modelo de lectura",
+        "Migrar un monolito sustituyendo sus funciones poco a poco",
+        "Gestionar una transacción distribuida como una secuencia de transacciones locales con compensaciones, en lugar de usar 2PC"
+      ],
+      "correcta": 3,
+      "explicacion": "Una **Saga** encadena **transacciones locales** y, si una falla, ejecuta **transacciones de compensación** para deshacer las anteriores; evita la confirmación en dos fases (2PC). Cortar llamadas es el *circuit breaker*, separar lectura y escritura es CQRS y migrar poco a poco es *Strangler fig*."
+    },
+    {
+      "id": "40",
+      "tema": 20,
+      "enunciado": "El patrón CQRS consiste en:",
+      "opciones": [
+        "Separar el modelo de escritura (comandos) del modelo de lectura (consultas)",
+        "Guardar el estado de la aplicación como una secuencia de eventos",
+        "Ofrecer un punto de entrada único para todas las peticiones",
+        "Registrar dinámicamente las instancias de cada servicio"
+      ],
+      "correcta": 0,
+      "explicacion": "**CQRS** (*Command Query Responsibility Segregation*) **separa escritura y lectura** en modelos distintos. Guardar el estado como eventos es *event sourcing* (que a menudo se combina con CQRS), el punto de entrada único es el API Gateway y el registro de instancias es el descubrimiento de servicios."
+    },
+    {
+      "id": "41",
+      "tema": 20,
+      "enunciado": "Según el teorema CAP, cuando se produce una partición de red, un sistema distribuido debe elegir entre:",
+      "opciones": [
+        "Consistencia y tolerancia a particiones",
+        "Disponibilidad y baja latencia",
+        "Consistencia y disponibilidad",
+        "Atomicidad y durabilidad"
+      ],
+      "correcta": 2,
+      "explicacion": "El **teorema CAP** (Brewer) dice que no se pueden garantizar a la vez consistencia, disponibilidad y tolerancia a particiones; como la partición ya ha ocurrido, hay que **elegir entre C y A**. En microservicios se suele aceptar la consistencia eventual (BASE). Atomicidad y durabilidad son propiedades ACID."
+    },
+    {
+      "id": "42",
+      "tema": 20,
+      "enunciado": "El patrón *Strangler fig* se utiliza para:",
+      "opciones": [
+        "Limitar el número de peticiones que puede hacer cada cliente",
+        "Comunicar los servicios mediante *sidecars* en una *service mesh*",
+        "Agregar las respuestas de varios servicios para un tipo de cliente concreto",
+        "Migrar un monolito sustituyendo sus funciones por servicios nuevos de forma gradual"
+      ],
+      "correcta": 3,
+      "explicacion": "***Strangler fig*** (higuera estranguladora) **migra un monolito poco a poco**: las funciones nuevas o reescritas se desvían a servicios nuevos hasta que el monolito desaparece. Limitar peticiones es *rate limiting*, los *sidecars* son de la *service mesh* y la agregación por tipo de cliente es el BFF."
+    },
+    {
+      "id": "43",
+      "tema": 20,
+      "enunciado": "En un bloque de la cabecera SOAP, el atributo `mustUnderstand` con valor verdadero indica que:",
+      "opciones": [
+        "El bloque es opcional y puede ignorarse si no se entiende",
+        "El mensaje debe cifrarse con WS-Security",
+        "El nodo destinatario debe procesar ese bloque y, si no lo entiende, devolver un Fault",
+        "El cuerpo del mensaje debe validarse contra el WSDL"
+      ],
+      "correcta": 2,
+      "explicacion": "Con **`mustUnderstand`** a verdadero, el nodo al que va dirigido el bloque **está obligado a procesarlo**; si no sabe hacerlo, debe responder con un **Fault de tipo MustUnderstand**. Sin ese atributo, el bloque puede ignorarse. No tiene relación con el cifrado ni con la validación."
+    },
+    {
+      "id": "44",
+      "tema": 20,
+      "enunciado": "En SOAP 1.2, el código de Fault que indica que el error se debe a un mensaje incorrecto enviado por el emisor es:",
+      "opciones": [
+        "`Client`",
+        "`Receiver`",
+        "`Sender`",
+        "`VersionMismatch`"
+      ],
+      "correcta": 2,
+      "explicacion": "En **SOAP 1.2** el error del emisor es **`Sender`** y el del receptor, `Receiver`; en SOAP 1.1 se llamaban `Client` y `Server` (de ahí el distractor). `VersionMismatch` indica un espacio de nombres de Envelope no válido."
+    },
+    {
+      "id": "45",
+      "tema": 20,
+      "enunciado": "¿Qué estilo y codificación de mensajes SOAP recomienda el WS-I Basic Profile para la interoperabilidad?",
+      "opciones": [
+        "*RPC/encoded*",
+        "*Document/literal*",
+        "*Document/encoded*",
+        "*RPC/SOAP-ENC*"
+      ],
+      "correcta": 1,
+      "explicacion": "El **WS-I Basic Profile** recomienda **document/literal** (y su variante *wrapped*), porque el cuerpo se valida directamente contra el XSD. La codificación *encoded* (SOAP Encoding) daba problemas de interoperabilidad y el perfil la excluye."
+    },
+    {
+      "id": "46",
+      "tema": 20,
+      "enunciado": "En WSDL, ¿qué elemento indica el protocolo y el formato concretos (por ejemplo, SOAP sobre HTTP) con que se invocan las operaciones?",
+      "opciones": [
+        "`binding`",
+        "`portType`",
+        "`types`",
+        "`message`"
+      ],
+      "correcta": 0,
+      "explicacion": "El **`binding`** une la interfaz abstracta con un **protocolo y formato concretos**. `portType` (en 2.0, `interface`) es el conjunto abstracto de operaciones, `types` los tipos XSD y `message`, los mensajes intercambiados (desaparece en WSDL 2.0)."
+    },
+    {
+      "id": "47",
+      "tema": 20,
+      "enunciado": "En un registro UDDI, la información técnica de un servicio, como la referencia a su WSDL, corresponde a las:",
+      "opciones": [
+        "Páginas blancas",
+        "Páginas amarillas",
+        "Páginas azules",
+        "Páginas verdes"
+      ],
+      "correcta": 3,
+      "explicacion": "UDDI organiza la información en **páginas blancas** (datos de la empresa), **amarillas** (clasificación por categorías) y **verdes** (información **técnica**, con la referencia al WSDL). No existen páginas azules."
+    },
+    {
+      "id": "48",
+      "tema": 20,
+      "enunciado": "¿Cuál es la principal diferencia entre proteger un servicio SOAP con TLS y hacerlo con WS-Security?",
+      "opciones": [
+        "WS-Security protege el mensaje de extremo a extremo aunque pase por intermediarios; TLS solo protege el canal punto a punto",
+        "TLS protege el mensaje de extremo a extremo; WS-Security solo protege el canal",
+        "WS-Security solo cifra las cabeceras HTTP del mensaje",
+        "TLS firma el documento XML con XML Signature"
+      ],
+      "correcta": 0,
+      "explicacion": "**WS-Security** firma (XML Signature) y cifra (XML Encryption) **el propio mensaje**, así que la protección se mantiene **extremo a extremo** aunque pase por intermediarios. **TLS** cifra **el canal** entre dos puntos: en cada intermediario el mensaje queda en claro."
+    },
+    {
+      "id": "49",
+      "tema": 20,
+      "enunciado": "Según su definición original, REST es:",
+      "opciones": [
+        "Un protocolo de mensajería normalizado por el W3C",
+        "Un estándar de OASIS para describir servicios web",
+        "Un formato de intercambio de datos basado en JSON",
+        "Un estilo arquitectónico, definido por Roy Fielding en su tesis doctoral de 2000"
+      ],
+      "correcta": 3,
+      "explicacion": "**REST es un estilo arquitectónico**, no un protocolo ni un estándar, definido por **Roy Fielding** en su **tesis de 2000**. El protocolo del W3C es SOAP, el estándar de OASIS para el registro es UDDI y JSON es solo una de las posibles representaciones."
+    },
+    {
+      "id": "50",
+      "tema": 20,
+      "enunciado": "En REST, el principio HATEOAS significa que:",
+      "opciones": [
+        "El servidor guarda el estado de la sesión de cada cliente",
+        "Las respuestas indican si pueden almacenarse en caché",
+        "Las respuestas incluyen enlaces a las acciones y recursos relacionados que el cliente puede usar",
+        "El servidor puede enviar código ejecutable al cliente"
+      ],
+      "correcta": 2,
+      "explicacion": "**HATEOAS** (*Hypermedia As The Engine Of Application State*) hace que la **respuesta incluya enlaces** a las acciones posibles, de modo que el cliente navega por la API sin conocer las URI de antemano. Es parte de la interfaz uniforme y el nivel 3 del modelo de Richardson. Las demás opciones son otras restricciones (o su contrario)."
+    },
+    {
+      "id": "51",
+      "tema": 20,
+      "enunciado": "En el modelo de madurez de Richardson, una API que usa recursos con URI propias y los verbos y códigos de estado HTTP, pero sin hipermedia, está en el nivel:",
+      "opciones": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "correcta": 0,
+      "explicacion": "**Nivel 2** = recursos + **verbos HTTP y códigos de estado**. El nivel 0 es un único *endpoint* estilo RPC, el nivel 1 introduce los recursos y el **nivel 3 añade HATEOAS**, el único que Fielding considera REST pleno."
+    },
+    {
+      "id": "52",
+      "tema": 20,
+      "enunciado": "¿Qué método HTTP es idempotente pero NO es seguro?",
+      "opciones": [
+        "GET",
+        "POST",
+        "PUT",
+        "PATCH"
+      ],
+      "correcta": 2,
+      "explicacion": "**PUT** reemplaza el recurso completo: repetirlo deja el mismo resultado (**idempotente**), pero modifica el servidor (**no seguro**); lo mismo ocurre con DELETE. GET es seguro e idempotente, y POST y PATCH no son ni lo uno ni lo otro. Recuerda: todo método seguro es idempotente, pero no al revés."
+    },
+    {
+      "id": "53",
+      "tema": 20,
+      "enunciado": "Un *proxy* inverso reenvía una petición al servidor de origen, pero no recibe su respuesta a tiempo. ¿Qué código debe devolver al cliente?",
+      "opciones": [
+        "504 Gateway Timeout",
+        "502 Bad Gateway",
+        "503 Service Unavailable",
+        "408 Request Timeout"
+      ],
+      "correcta": 0,
+      "explicacion": "**504 Gateway Timeout**: el intermediario **agotó el tiempo esperando** al servidor de origen. **502** es para una respuesta **inválida** del origen, 503 indica que el propio servicio no está disponible (con `Retry-After`) y 408 que fue el **cliente** quien tardó demasiado en enviar la petición."
+    },
+    {
+      "id": "54",
+      "tema": 20,
+      "enunciado": "¿Cuáles son rasgos de HTTP/2 (RFC 9113)?",
+      "opciones": [
+        "Funcionamiento sobre QUIC y UDP, con compresión de cabeceras QPACK",
+        "Formato binario, multiplexación de flujos en una sola conexión y compresión de cabeceras HPACK",
+        "Formato de texto con conexiones persistentes (*keep-alive*)",
+        "Comunicación *full-duplex* iniciada con una cabecera `Upgrade`"
+      ],
+      "correcta": 1,
+      "explicacion": "**HTTP/2** es **binario**, **multiplexa** varios flujos en una conexión TCP y comprime las cabeceras con **HPACK**. QUIC/UDP y QPACK son de **HTTP/3**, el texto con *keep-alive* es de HTTP/1.1 y la comunicación *full-duplex* con `Upgrade` es WebSocket."
+    },
+    {
+      "id": "55",
+      "tema": 20,
+      "enunciado": "La especificación OpenAPI (OAS):",
+      "opciones": [
+        "Describe servicios SOAP en XML y sustituye a WSDL 2.0",
+        "Describe API REST/HTTP en YAML o JSON y procede de Swagger",
+        "Define el lenguaje de consulta de GraphQL",
+        "Es el formato binario de los contratos de gRPC"
+      ],
+      "correcta": 1,
+      "explicacion": "**OpenAPI** describe **API REST/HTTP** (rutas, parámetros, esquemas, seguridad) en **YAML o JSON**, y procede de **Swagger** (donado en 2015). Cumple para REST el papel que tiene WSDL en SOAP, pero no lo sustituye. GraphQL usa su propio esquema SDL y gRPC, ficheros `.proto`."
+    },
+    {
+      "id": "56",
+      "tema": 20,
+      "enunciado": "Una ventaja de GraphQL frente a una API REST es que:",
+      "opciones": [
+        "Aprovecha mejor la caché HTTP, porque cada recurso tiene su propia URI",
+        "Usa un formato binario más compacto que JSON",
+        "El cliente pide exactamente los campos que necesita a través de un único *endpoint*, sin recibir datos de más ni de menos",
+        "No necesita definir ningún esquema"
+      ],
+      "correcta": 2,
+      "explicacion": "En **GraphQL** el cliente indica **exactamente qué campos quiere** en un **único *endpoint***, evitando la sobrecarga (*over-fetching*) y la subcarga (*under-fetching*). Al contrario, aprovecha **peor** la caché HTTP (todo va por POST al mismo *endpoint*), usa JSON y tiene un esquema fuertemente tipado."
+    },
+    {
+      "id": "57",
+      "tema": 20,
+      "enunciado": "¿Qué tecnología permite al servidor enviar eventos al navegador de forma unidireccional sobre HTTP, con el tipo `text/event-stream` y reconexión automática?",
+      "opciones": [
+        "Server-Sent Events (SSE)",
+        "WebSocket",
+        "*Long polling*",
+        "*Webhooks*"
+      ],
+      "correcta": 0,
+      "explicacion": "**SSE** es un canal **servidor → cliente** sobre HTTP con `text/event-stream`. **WebSocket** es bidireccional (*full-duplex*), el *long polling* son peticiones repetidas del cliente y los *webhooks* son llamadas POST de servidor a servidor."
+    },
+    {
+      "id": "58",
+      "tema": 20,
+      "enunciado": "En gRPC, el contrato del servicio (métodos y mensajes) se define en:",
+      "opciones": [
+        "Un documento WSDL",
+        "Ficheros `.proto` de Protocol Buffers",
+        "Un documento OpenAPI en YAML",
+        "Un esquema SDL"
+      ],
+      "correcta": 1,
+      "explicacion": "gRPC define el contrato en ficheros **`.proto`** (el IDL de Protocol Buffers), de los que se genera código cliente y servidor. WSDL es el contrato de SOAP, OpenAPI el de REST y SDL el esquema de GraphQL."
+    },
+    {
+      "id": "59",
+      "tema": 20,
+      "enunciado": "¿Qué añade OpenID Connect a OAuth 2.0?",
+      "opciones": [
+        "Una capa de autenticación con el ID Token, en formato JWT",
+        "El cifrado del canal de comunicación mediante TLS",
+        "La firma de los mensajes SOAP con XML Signature",
+        "Las aserciones XML para el inicio de sesión único con SAML"
+      ],
+      "correcta": 0,
+      "explicacion": "**OpenID Connect** es una **capa de identidad (autenticación)** sobre OAuth 2.0 y añade el **ID Token** (un JWT con los datos del usuario autenticado). El cifrado del canal es TLS, la firma de mensajes SOAP es WS-Security y las aserciones XML para SSO son de SAML 2.0."
+    },
+    {
+      "id": "60",
+      "tema": 20,
+      "enunciado": "Según el artículo 28 de la Ley 39/2015, en relación con los documentos que aporta el interesado:",
+      "opciones": [
+        "Debe aportar siempre copia auténtica de todos los documentos del procedimiento",
+        "No está obligado a aportar documentos que ya obren en poder de las Administraciones o hayan sido elaborados por ellas",
+        "Solo puede aportar documentos originales en papel",
+        "Debe aportarlos en el plazo de tres días desde que se le requieran"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 28 de la Ley 39/2015** establece que el interesado **no está obligado a aportar documentos que ya tenga la Administración**; para ello las administraciones se consultan los datos entre sí (art. 155 de la Ley 40/2015), por ejemplo a través de la **PID con servicios SCSP**."
+    }
+  ]
+}

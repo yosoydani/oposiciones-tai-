@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 05 · test",
+  "fuente": "propio",
+  "tema": 5,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 5. Igualdad, violencia de género, LGTBI, discapacidad y dependencia»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 5,
+      "enunciado": "Según la LO 3/2007, el trato desfavorable a una mujer por embarazo es:",
+      "opciones": [
+        "Discriminación indirecta",
+        "Discriminación directa",
+        "Acoso por razón de sexo",
+        "Acción positiva"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 8 LO 3/2007** dice que todo trato desfavorable a las mujeres relacionado con el embarazo o la maternidad constituye **discriminación directa** por razón de sexo. No es indirecta, porque no hay un criterio aparentemente neutro: el motivo es el propio embarazo. El acoso (art. 7) y la acción positiva (art. 11) son figuras distintas."
+    },
+    {
+      "id": "02",
+      "tema": 5,
+      "enunciado": "Hay composición equilibrada cuando ningún sexo supera ni baja de:",
+      "opciones": [
+        "70 % y 30 %",
+        "55 % y 45 %",
+        "60 % y 40 %",
+        "50 % y 50 %"
+      ],
+      "correcta": 2,
+      "explicacion": "La **DA 1ª LO 3/2007** define la presencia equilibrada: las personas de cada sexo no superan el **60 %** ni son menos del **40 %**. El 50/50 sería paridad estricta, que la ley no exige; 70/30 y 55/45 no aparecen en la norma. Truco: «40-60», el mismo mínimo del 40 % que generaliza la LO 2/2024."
+    },
+    {
+      "id": "03",
+      "tema": 5,
+      "enunciado": "El Plan para la Igualdad en la AGE se aprueba:",
+      "opciones": [
+        "Cada año",
+        "Cada 4 años",
+        "Al inicio de cada legislatura",
+        "Cada 2 años"
+      ],
+      "correcta": 2,
+      "explicacion": "Según el **art. 64 LO 3/2007**, el Gobierno aprueba el Plan para la Igualdad en la AGE **al inicio de cada legislatura**. Lo anual es su **evaluación** por el Consejo de Ministros, de ahí el distractor «cada año». «Cada 4 años» confunde la legislatura con un plazo fijo."
+    },
+    {
+      "id": "04",
+      "tema": 5,
+      "enunciado": "Deben tener plan de igualdad las empresas de:",
+      "opciones": [
+        "Más de 250 trabajadores",
+        "100 o más",
+        "50 o más",
+        "25 o más"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 45 LO 3/2007** obliga a elaborar y aplicar un plan de igualdad a las empresas de **50 o más** trabajadores, negociado con la representación legal. El umbral de 250 era el de la redacción original de la ley, ya superado; 100 y 25 no figuran en la norma."
+    },
+    {
+      "id": "05",
+      "tema": 5,
+      "enunciado": "La LO 2/2024 exige en las listas electorales:",
+      "opciones": [
+        "Un 30 % de mujeres",
+        "Alternancia de sexos (cremallera)",
+        "Paridad solo entre titulares",
+        "Nada, solo recomienda"
+      ],
+      "correcta": 1,
+      "explicacion": "La **LO 2/2024** impone listas **cremallera**: los candidatos se ordenan alternando sexos, con exención para municipios de hasta 3.000 habitantes. No es una recomendación ni un porcentaje mínimo del 30 %, y afecta a toda la lista, no solo a los titulares."
+    },
+    {
+      "id": "06",
+      "tema": 5,
+      "enunciado": "Según la LO 1/2004, la violencia de género exige que la relación de afectividad haya implicado:",
+      "opciones": [
+        "Matrimonio",
+        "Convivencia",
+        "Convivencia mínima de un año",
+        "Ninguna convivencia necesariamente"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 1 LO 1/2004** abarca a quienes sean o hayan sido cónyuges o estén o hayan estado ligados por análoga relación de afectividad **aun sin convivencia**. Por eso no se exige matrimonio ni convivencia, y mucho menos un tiempo mínimo de convivencia."
+    },
+    {
+      "id": "07",
+      "tema": 5,
+      "enunciado": "NO es un medio de acreditación del art. 23 LO 1/2004:",
+      "opciones": [
+        "Orden de protección",
+        "Informe del Ministerio Fiscal",
+        "Declaración jurada de la víctima",
+        "Informe de los servicios sociales"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 23 LO 1/2004** admite como acreditación la sentencia condenatoria, la orden de protección u otra resolución judicial cautelar, el informe del Ministerio Fiscal con indicios y el informe de los servicios sociales, especializados o de acogida. La **declaración jurada de la víctima** no figura en la lista. Truco: todos los medios válidos proceden de un tercero (juez, fiscal, servicios sociales)."
+    },
+    {
+      "id": "08",
+      "tema": 5,
+      "enunciado": "La ayuda de pago único del art. 27 LO 1/2004 equivale, con carácter general, a:",
+      "opciones": [
+        "3 meses de subsidio",
+        "6 meses",
+        "12 meses",
+        "24 meses"
+      ],
+      "correcta": 1,
+      "explicacion": "Con carácter general, la ayuda del **art. 27 LO 1/2004** equivale a **6 meses** de subsidio por desempleo. Los 12 meses corresponden a la víctima con discapacidad igual o superior al 33 %, y los 24 al caso de responsabilidades familiares más discapacidad. Secuencia para recordar: 6 / 12 / 18 / 24."
+    },
+    {
+      "id": "09",
+      "tema": 5,
+      "enunciado": "Tras la LO 1/2025, los antiguos Juzgados de Violencia sobre la Mujer son:",
+      "opciones": [
+        "Fiscalías provinciales",
+        "Secciones de los Tribunales de Instancia",
+        "Salas de las Audiencias Provinciales",
+        "Oficinas de Atención a la Víctima"
+      ],
+      "correcta": 1,
+      "explicacion": "La **LO 1/2025**, de eficiencia de la Justicia, transforma los juzgados unipersonales en **Secciones de Violencia sobre la Mujer de los Tribunales de Instancia**. No pasan a las Audiencias Provinciales ni son órganos fiscales o de asistencia: siguen siendo órganos judiciales de primera instancia e instrucción."
+    },
+    {
+      "id": "10",
+      "tema": 5,
+      "enunciado": "En la Ley 15/2022, discriminar a alguien por su relación con otra persona es discriminación:",
+      "opciones": [
+        "Por error",
+        "Por asociación",
+        "Interseccional",
+        "Indirecta"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 6.2 Ley 15/2022** llama discriminación **por asociación** a la que sufre alguien por su relación con otra persona o grupo que tiene una causa de discriminación. La discriminación por error parte de una apreciación equivocada sobre la propia persona; la interseccional, de varios motivos que interactúan; la indirecta, de un criterio aparentemente neutro."
+    },
+    {
+      "id": "11",
+      "tema": 5,
+      "enunciado": "El mandato de la Presidencia de la Autoridad Independiente para la Igualdad de Trato es de:",
+      "opciones": [
+        "4 años renovable",
+        "5 años no renovable",
+        "6 años no renovable",
+        "5 años renovable"
+      ],
+      "correcta": 1,
+      "explicacion": "Según el **art. 41 Ley 15/2022**, el mandato de la Presidencia de la Autoridad Independiente es de **5 años y no es renovable**. La no renovación busca reforzar su independencia. Los distractores juegan con la duración (4 o 6 años) y con la posibilidad de renovar."
+    },
+    {
+      "id": "12",
+      "tema": 5,
+      "enunciado": "La multa máxima por infracción muy grave de la Ley 15/2022 es:",
+      "opciones": [
+        "40.000 €",
+        "150.000 €",
+        "500.000 €",
+        "1.000.000 €"
+      ],
+      "correcta": 2,
+      "explicacion": "Las infracciones muy graves de la Ley 15/2022 se sancionan con multa de **40.001 a 500.000 €**. 40.000 € es el tope de las graves; 1.000.000 € es el máximo de las muy graves en materia de discapacidad (RDLeg 1/2013), un distractor típico."
+    },
+    {
+      "id": "13",
+      "tema": 5,
+      "enunciado": "La Estrategia estatal LGTBI de la Ley 4/2023 es:",
+      "opciones": [
+        "Anual",
+        "Bienal",
+        "Cuatrienal",
+        "Sexenal"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 10 Ley 4/2023** prevé una Estrategia estatal para la igualdad de trato y no discriminación de las personas LGTBI de carácter **cuatrienal**, que aprueba el Consejo de Ministros previo informe de la Conferencia Sectorial de Igualdad. También es cuatrienal la Estrategia Estatal de la Ley 15/2022 (art. 34)."
+    },
+    {
+      "id": "14",
+      "tema": 5,
+      "enunciado": "Una persona de 15 años puede pedir la rectificación registral de la mención del sexo:",
+      "opciones": [
+        "Sola",
+        "Asistida por sus representantes legales",
+        "Con autorización judicial",
+        "No puede"
+      ],
+      "correcta": 1,
+      "explicacion": "Según el **art. 43 Ley 4/2023**, entre **14 y 16 años** la persona presenta la solicitud por sí misma pero **asistida** por sus representantes legales. Sola puede hacerlo desde los 16 años, y entre 12 y 14 necesita autorización judicial. Truco: 16 solo, 14 asistido, 12 juez."
+    },
+    {
+      "id": "15",
+      "tema": 5,
+      "enunciado": "La ratificación de la solicitud de rectificación registral debe hacerse en un máximo de:",
+      "opciones": [
+        "1 mes",
+        "3 meses",
+        "6 meses",
+        "1 año"
+      ],
+      "correcta": 1,
+      "explicacion": "Tras la primera comparecencia, la persona debe ratificar su solicitud en una segunda comparecencia en un plazo máximo de **3 meses** (art. 44 Ley 4/2023). El mes es el plazo para resolver desde la segunda comparecencia, y los 6 meses, el plazo para poder revertir la rectificación."
+    },
+    {
+      "id": "16",
+      "tema": 5,
+      "enunciado": "Tras la Ley 4/2026, una persona con dependencia de grado II se equipara a una discapacidad del:",
+      "opciones": [
+        "33 %",
+        "50 %",
+        "65 %",
+        "75 %"
+      ],
+      "correcta": 2,
+      "explicacion": "Con la reforma de la **Ley 4/2026**, el art. 4 RDLeg 1/2013 considera con discapacidad del **65 %** a quien tiene reconocida dependencia de grado II o III. El 33 % corresponde al grado I. El 50 % y el 75 % no aparecen en la equiparación. Ojo: no se aplica en el ámbito tributario."
+    },
+    {
+      "id": "17",
+      "tema": 5,
+      "enunciado": "La cuota de reserva para personas con discapacidad en empresas de 50 o más trabajadores es del:",
+      "opciones": [
+        "2 %",
+        "5 %",
+        "7 %",
+        "10 %"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 42 RDLeg 1/2013** obliga a las empresas públicas y privadas de 50 o más trabajadores a reservar el **2 %** de la plantilla a personas con discapacidad. No confundir con el 7 % de reserva en las ofertas de empleo público, que es otra norma, ni con el 70 % de plantilla de los antiguos centros especiales de empleo."
+    },
+    {
+      "id": "18",
+      "tema": 5,
+      "enunciado": "Con la Ley 4/2026, los centros especiales de empleo pasan a llamarse:",
+      "opciones": [
+        "Centros ocupacionales",
+        "Enclaves laborales",
+        "Empresas para la inclusión laboral de las personas con discapacidad",
+        "Empresas de inserción"
+      ],
+      "correcta": 2,
+      "explicacion": "La **Ley 4/2026** rebautiza los centros especiales de empleo como **empresas para la inclusión laboral de las personas con discapacidad**. Centros ocupacionales, enclaves laborales y empresas de inserción son figuras distintas que ya existían, por eso confunden."
+    },
+    {
+      "id": "19",
+      "tema": 5,
+      "enunciado": "El nivel mínimo de protección del SAAD lo financia:",
+      "opciones": [
+        "La AGE íntegramente",
+        "Las CCAA",
+        "AGE y CCAA a partes iguales",
+        "Las entidades locales"
+      ],
+      "correcta": 0,
+      "explicacion": "Según el **art. 7 Ley 39/2006**, el nivel **mínimo** lo fija y lo financia **íntegramente la AGE**. El nivel acordado se financia entre AGE y CCAA mediante convenio (la CCAA aporta al menos lo mismo que la AGE), y el adicional lo pone cada CCAA con su presupuesto."
+    },
+    {
+      "id": "20",
+      "tema": 5,
+      "enunciado": "Necesitar ayuda para varias ABVD dos o tres veces al día corresponde al:",
+      "opciones": [
+        "Grado I",
+        "Grado II",
+        "Grado III",
+        "Grado III, nivel 2"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 26 Ley 39/2006** define el **grado II**, dependencia severa, como la necesidad de ayuda para varias ABVD **dos o tres veces al día**, sin apoyo permanente de cuidador. El grado I pide ayuda al menos una vez al día y el III varias veces al día con apoyo continuo. Los «niveles» dentro de cada grado ya no existen, por eso la d es incorrecta."
+    },
+    {
+      "id": "21",
+      "tema": 5,
+      "enunciado": "Según el art. 6 LO 3/2007, la situación en que una disposición, criterio o práctica aparentemente neutros pone a personas de un sexo en desventaja particular respecto de las del otro constituye:",
+      "opciones": [
+        "Discriminación directa",
+        "Discriminación indirecta",
+        "Acción positiva",
+        "Acoso por razón de sexo"
+      ],
+      "correcta": 1,
+      "explicacion": "Es **discriminación indirecta** (art. 6.2 LO 3/2007): la clave es el criterio **aparentemente neutro** que en la práctica perjudica a un sexo. En la directa el trato menos favorable se basa abiertamente en el sexo. La acción positiva busca corregir desigualdades y el acoso es una conducta, no un criterio."
+    },
+    {
+      "id": "22",
+      "tema": 5,
+      "enunciado": "Según el art. 17 LO 3/2007, el Plan Estratégico de Igualdad de Oportunidades lo aprueba periódicamente:",
+      "opciones": [
+        "Las Cortes Generales",
+        "El Ministerio de Igualdad",
+        "El Gobierno",
+        "La Comisión Interministerial de Igualdad"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 17 LO 3/2007** atribuye al **Gobierno** la aprobación periódica del Plan Estratégico de Igualdad de Oportunidades. A las Cortes Generales se les envía un informe periódico (art. 18), y la Comisión Interministerial (art. 76) coordina, pero no aprueba el Plan."
+    },
+    {
+      "id": "23",
+      "tema": 5,
+      "enunciado": "Según el art. 19 LO 3/2007, los proyectos de disposiciones de carácter general y los planes de especial relevancia que se sometan al Consejo de Ministros deben incorporar:",
+      "opciones": [
+        "Un plan de igualdad",
+        "Un informe del Consejo de Participación de la Mujer",
+        "Un dictamen del Consejo de Estado sobre igualdad",
+        "Un informe sobre su impacto por razón de género"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 19 LO 3/2007** exige un **informe de impacto de género** en esos proyectos y planes. Los planes de igualdad son de empresas (art. 45) o de la AGE (art. 64); el Consejo de Participación de la Mujer es consultivo, y el dictamen del Consejo de Estado no es el instrumento que prevé este artículo."
+    },
+    {
+      "id": "24",
+      "tema": 5,
+      "enunciado": "Según el art. 46 LO 3/2007, los planes de igualdad de las empresas:",
+      "opciones": [
+        "Se elaboran sin necesidad de diagnóstico previo",
+        "Los aprueba la Inspección de Trabajo",
+        "Se inscriben en el Registro de Planes de Igualdad",
+        "Solo son obligatorios en el sector público"
+      ],
+      "correcta": 2,
+      "explicacion": "Los planes de igualdad parten de un **diagnóstico** de situación y se **inscriben en el Registro de Planes de Igualdad** (art. 46). La Inspección de Trabajo no los aprueba (se negocian con la representación legal), y son obligatorios en empresas de 50 o más trabajadores, también privadas."
+    },
+    {
+      "id": "25",
+      "tema": 5,
+      "enunciado": "¿Qué órganos prevé el art. 77 LO 3/2007 en cada ministerio para desarrollar las funciones relacionadas con el principio de igualdad?",
+      "opciones": [
+        "Unidades de Igualdad",
+        "Observatorios de Igualdad",
+        "Comisiones Interministeriales de Igualdad",
+        "Consejos de Participación de la Mujer"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 77 LO 3/2007** encomienda a **Unidades de Igualdad** en cada ministerio esas funciones. La Comisión Interministerial de Igualdad (art. 76) es una sola para toda la AGE, y el Consejo de Participación de la Mujer (art. 78) es un órgano consultivo único, no ministerial."
+    },
+    {
+      "id": "26",
+      "tema": 5,
+      "enunciado": "Señale la correspondencia correcta entre artículo de la LO 3/2007 y órgano:",
+      "opciones": [
+        "Art. 76: Unidades de Igualdad",
+        "Art. 77: Consejo de Participación de la Mujer",
+        "Art. 78: Comisión Interministerial de Igualdad",
+        "Art. 76: Comisión Interministerial de Igualdad entre mujeres y hombres"
+      ],
+      "correcta": 3,
+      "explicacion": "La secuencia es **76 Comisión Interministerial de Igualdad entre mujeres y hombres**, 77 Unidades de Igualdad y 78 Consejo de Participación de la Mujer. Las otras opciones mezclan los tres órganos. Truco: de lo general a lo participativo, Comisión (76), Unidades (77), Consejo (78)."
+    },
+    {
+      "id": "27",
+      "tema": 5,
+      "enunciado": "Según el art. 55 LO 3/2007, la aprobación de convocatorias de pruebas selectivas para el acceso al empleo público debe acompañarse de:",
+      "opciones": [
+        "Un plan de igualdad del ministerio convocante",
+        "Una memoria de impacto presupuestario",
+        "Un informe de impacto de género, salvo en casos de urgencia",
+        "Un informe vinculante de la Unidad de Igualdad"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 55 LO 3/2007** exige un **informe de impacto de género** en las convocatorias de acceso al empleo público, **salvo en casos de urgencia**. Es el mismo instrumento del art. 19, aplicado a las convocatorias. No se exige un plan de igualdad específico ni un informe vinculante de la Unidad de Igualdad."
+    },
+    {
+      "id": "28",
+      "tema": 5,
+      "enunciado": "Según la LO 2/2024, la regla de presencia mínima del 40 % de cada sexo en el Gobierno se aplica:",
+      "opciones": [
+        "Al conjunto del Gobierno, incluido el Presidente",
+        "Solo a las Vicepresidencias",
+        "A las secretarías de Estado, pero no a los ministerios",
+        "Al conjunto de Vicepresidencias y Ministerios, sin contar al Presidente"
+      ],
+      "correcta": 3,
+      "explicacion": "La **LO 2/2024** exige que el conjunto de **Vicepresidencias y Ministerios** tenga al menos un **40 %** de cada sexo, **sin computar al Presidente**. En las secretarías de Estado y órganos directivos del sector público estatal rige la horquilla 40-60, pero eso es una regla distinta y no excluye a los ministerios."
+    },
+    {
+      "id": "29",
+      "tema": 5,
+      "enunciado": "Según la LO 2/2024, las 35 sociedades cotizadas de mayor capitalización deben alcanzar un 40 % del sexo menos representado en su consejo de administración antes del:",
+      "opciones": [
+        "30/06/2025",
+        "30/06/2026",
+        "30/06/2027",
+        "30/06/2029"
+      ],
+      "correcta": 1,
+      "explicacion": "Las 35 mayores cotizadas debían llegar al **40 %** antes del **30/06/2026**; el resto de cotizadas tiene hasta el 30/06/2027. El 30/06/2029 es el plazo de las juntas de gobierno de los colegios profesionales. Truco: primero las grandes (2026), luego el resto (2027) y al final los colegios (2029)."
+    },
+    {
+      "id": "30",
+      "tema": 5,
+      "enunciado": "Según la LO 2/2024, quedan exentas de la obligación de presentar listas cremallera las candidaturas en municipios de hasta:",
+      "opciones": [
+        "1.000 habitantes",
+        "3.000 habitantes",
+        "5.000 habitantes",
+        "10.000 habitantes"
+      ],
+      "correcta": 1,
+      "explicacion": "La exención de las listas cremallera alcanza a los municipios de hasta **3.000 habitantes**. Es una excepción pensada para los municipios pequeños, donde puede ser difícil completar listas alternas; las otras cifras no aparecen en la regla."
+    },
+    {
+      "id": "31",
+      "tema": 5,
+      "enunciado": "Según el art. 1.4 LO 1/2004, la violencia de género comprende también la violencia que, con el objetivo de causar perjuicio o daño a la mujer, se ejerza sobre:",
+      "opciones": [
+        "Sus familiares o allegados menores de edad",
+        "Sus compañeros de trabajo, aunque no haya relación afectiva",
+        "Sus ascendientes mayores de 65 años",
+        "Cualquier persona que conviva con el agresor"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 1.4 LO 1/2004** incluye la **violencia vicaria**: la que se ejerce sobre **familiares o allegados menores de edad** para dañar a la mujer. La ley no extiende el concepto a compañeros de trabajo, a ascendientes mayores ni a cualquier conviviente del agresor."
+    },
+    {
+      "id": "32",
+      "tema": 5,
+      "enunciado": "¿Cuál de los siguientes es un derecho de las víctimas de violencia de género regulado en los arts. 17 a 20 LO 1/2004?",
+      "opciones": [
+        "Una indemnización automática a cargo del Estado",
+        "Una exención total en el IRPF",
+        "La asistencia jurídica gratuita",
+        "Una pensión vitalicia"
+      ],
+      "correcta": 2,
+      "explicacion": "Los **arts. 17-20 LO 1/2004** reconocen el derecho a la información, a la asistencia social integral y a la **asistencia jurídica gratuita**. La ley no prevé indemnizaciones automáticas, exenciones fiscales totales ni pensiones vitalicias; la ayuda económica específica es la de pago único del art. 27."
+    },
+    {
+      "id": "33",
+      "tema": 5,
+      "enunciado": "En los asuntos que conocen las Secciones (antes Juzgados) de Violencia sobre la Mujer, la mediación:",
+      "opciones": [
+        "Es obligatoria antes del juicio",
+        "Es voluntaria, a instancia de la víctima",
+        "Solo cabe en los asuntos civiles",
+        "Está excluida"
+      ],
+      "correcta": 3,
+      "explicacion": "La LO 1/2004 **excluye la mediación** en los asuntos de violencia sobre la mujer, porque la relación de poder desigual entre las partes impide negociar en igualdad. Por eso no es obligatoria ni voluntaria, ni siquiera en la parte civil que conocen estos órganos."
+    },
+    {
+      "id": "34",
+      "tema": 5,
+      "enunciado": "La Delegación del Gobierno contra la Violencia de Género (art. 29 LO 1/2004):",
+      "opciones": [
+        "Está adscrita al Ministerio de Igualdad y puede intervenir en juicio",
+        "Depende del Consejo General del Poder Judicial",
+        "Es el órgano del Ministerio Fiscal que coordina a los fiscales especializados",
+        "Es un órgano colegiado asesor que elabora un informe anual"
+      ],
+      "correcta": 0,
+      "explicacion": "La **Delegación del Gobierno** propone la política del Gobierno, coordina y puede intervenir en juicio, y está **adscrita al Ministerio de Igualdad**. La coordinación de los fiscales corresponde al Fiscal contra la Violencia sobre la Mujer (art. 70), y el órgano colegiado asesor con informe anual es el Observatorio Estatal (art. 30)."
+    },
+    {
+      "id": "35",
+      "tema": 5,
+      "enunciado": "Una víctima de violencia de género sin responsabilidades familiares y con una discapacidad reconocida del 40 % solicita la ayuda de pago único del art. 27 LO 1/2004. ¿A cuánto equivaldrá?",
+      "opciones": [
+        "6 meses de subsidio por desempleo",
+        "12 meses de subsidio por desempleo",
+        "18 meses de subsidio por desempleo",
+        "24 meses de subsidio por desempleo"
+      ],
+      "correcta": 1,
+      "explicacion": "Con discapacidad **igual o superior al 33 %** la ayuda sube a **12 meses** de subsidio. 6 meses es el caso general; 18, con responsabilidades familiares, y 24, cuando concurren responsabilidades familiares y discapacidad. Aquí no hay responsabilidades familiares, así que son 12."
+    },
+    {
+      "id": "36",
+      "tema": 5,
+      "enunciado": "Tras la LO 1/2025, las Secciones de Violencia sobre la Mujer de los Tribunales de Instancia asumen además la instrucción de:",
+      "opciones": [
+        "Los delitos contra los derechos de los trabajadores",
+        "Todos los delitos cometidos contra menores",
+        "Los delitos contra la libertad sexual cuando la víctima es mujer",
+        "Los delitos de odio por razón de sexo"
+      ],
+      "correcta": 2,
+      "explicacion": "La **LO 1/2025** (DT 4ª y art. 89 LOPJ) atribuye a estas Secciones la instrucción de los **delitos contra la libertad sexual cuando la víctima es mujer**, aunque no haya relación de pareja. No asumen todos los delitos contra menores, ni los delitos de odio o contra los trabajadores."
+    },
+    {
+      "id": "37",
+      "tema": 5,
+      "enunciado": "La Ley 15/2022, integral para la igualdad de trato y la no discriminación, desarrolla los artículos de la Constitución:",
+      "opciones": [
+        "1.1, 9.3 y 103",
+        "9.2, 10 y 14",
+        "14, 16 y 18",
+        "10, 14 y 49"
+      ],
+      "correcta": 1,
+      "explicacion": "La Ley 15/2022 desarrolla los **arts. 9.2** (igualdad real y efectiva), **10** (dignidad) **y 14 CE** (igualdad ante la ley). El art. 49 CE se refiere a las personas con discapacidad (y lo desarrolla el RDLeg 1/2013 tras la Ley 4/2026); el 16 y el 18 son libertad religiosa e intimidad."
+    },
+    {
+      "id": "38",
+      "tema": 5,
+      "enunciado": "¿Cuál de los siguientes motivos NO figura expresamente en la lista del art. 2.1 Ley 15/2022?",
+      "opciones": [
+        "Estado serológico",
+        "Situación socioeconómica",
+        "Expresión de género",
+        "Estado civil"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 2.1 Ley 15/2022** menciona expresamente el estado serológico, la situación socioeconómica y la expresión de género, entre otros, y cierra con una cláusula abierta («cualquier otra condición»). El **estado civil** no está en esa lista; sí aparece en el art. 3 LO 3/2007 respecto de la discriminación por sexo, de ahí la confusión."
+    },
+    {
+      "id": "39",
+      "tema": 5,
+      "enunciado": "Según el art. 6.1 Ley 15/2022, la denegación de ajustes razonables a las personas con discapacidad constituye:",
+      "opciones": [
+        "Discriminación indirecta",
+        "Acoso discriminatorio",
+        "Discriminación directa",
+        "Discriminación por asociación"
+      ],
+      "correcta": 2,
+      "explicacion": "La Ley 15/2022 considera **discriminación directa** la **denegación de ajustes razonables**. Es fácil pensar en la indirecta porque no hay intención expresa, pero la ley la califica de directa. El acoso y la discriminación por asociación son figuras de otros apartados del art. 6."
+    },
+    {
+      "id": "40",
+      "tema": 5,
+      "enunciado": "Un arrendador se niega a alquilar una vivienda a una persona porque cree, equivocadamente, que es de origen extranjero. Según el art. 6.2 Ley 15/2022, se trata de discriminación:",
+      "opciones": [
+        "Por asociación",
+        "Múltiple",
+        "Indirecta",
+        "Por error"
+      ],
+      "correcta": 3,
+      "explicacion": "Hay **discriminación por error** cuando se basa en una **apreciación equivocada** sobre las características de la persona (art. 6.2). Sería por asociación si se la discriminara por su relación con otra persona extranjera; múltiple, si concurrieran varios motivos; indirecta, si se aplicara un criterio aparentemente neutro."
+    },
+    {
+      "id": "41",
+      "tema": 5,
+      "enunciado": "Según el art. 30 Ley 15/2022, la regla por la que, aportados indicios fundados de discriminación, corresponde a la parte demandada justificar su conducta NO se aplica en los procesos:",
+      "opciones": [
+        "Civiles",
+        "Laborales",
+        "Contencioso-administrativos",
+        "Penales"
+      ],
+      "correcta": 3,
+      "explicacion": "La inversión de la carga de la prueba del **art. 30** no se aplica en los **procesos penales** ni en los procedimientos sancionadores, donde rige la presunción de inocencia. En los civiles, laborales y contencioso-administrativos sí opera: con indicios fundados, el demandado debe probar que su actuación no fue discriminatoria."
+    },
+    {
+      "id": "42",
+      "tema": 5,
+      "enunciado": "Según el art. 34 Ley 15/2022, la Estrategia Estatal para la Igualdad de Trato y la No Discriminación la aprueba:",
+      "opciones": [
+        "El Consejo de Ministros",
+        "La Conferencia Sectorial de Igualdad",
+        "Las Cortes Generales",
+        "La Autoridad Independiente para la Igualdad de Trato"
+      ],
+      "correcta": 0,
+      "explicacion": "La Estrategia Estatal es **cuatrienal**: la prepara la Conferencia Sectorial de Igualdad y la **aprueba el Consejo de Ministros**. La Conferencia Sectorial es el distractor más peligroso porque interviene, pero solo en la preparación. Ni las Cortes ni la Autoridad Independiente la aprueban."
+    },
+    {
+      "id": "43",
+      "tema": 5,
+      "enunciado": "La Presidencia de la Autoridad Independiente para la Igualdad de Trato se nombra por real decreto del Gobierno. Según la Ley 15/2022, el Congreso puede vetar el nombramiento por:",
+      "opciones": [
+        "Mayoría absoluta, en el plazo de 1 mes",
+        "Mayoría de tres quintos, en el plazo de 2 meses",
+        "Mayoría simple, en el plazo de 15 días",
+        "Mayoría absoluta, en el plazo de 3 meses"
+      ],
+      "correcta": 0,
+      "explicacion": "El Congreso puede vetarlo por **mayoría absoluta** en el plazo de **1 mes**. Las otras opciones cambian la mayoría o el plazo. Recuerda el conjunto: real decreto del Gobierno, veto por mayoría absoluta en 1 mes y mandato de 5 años no renovable."
+    },
+    {
+      "id": "44",
+      "tema": 5,
+      "enunciado": "Una empresa comete una discriminación indirecta, tipificada como infracción grave en la Ley 15/2022. ¿Con qué multa puede sancionarse?",
+      "opciones": [
+        "De 300 a 10.000 €",
+        "De 10.001 a 40.000 €",
+        "De 40.001 a 500.000 €",
+        "De 30.001 a 90.000 €"
+      ],
+      "correcta": 1,
+      "explicacion": "Las infracciones **graves** de la Ley 15/2022 (discriminación directa o indirecta, represalias) se sancionan con multa de **10.001 a 40.000 €**. 300-10.000 € es para las leves y 40.001-500.000 € para las muy graves. 30.001-90.000 € es la horquilla de las graves en materia de discapacidad (RDLeg 1/2013)."
+    },
+    {
+      "id": "45",
+      "tema": 5,
+      "enunciado": "Según el art. 3 Ley 4/2023, la vivencia interna e individual del sexo tal y como cada persona la siente, que puede corresponder o no con el sexo asignado al nacer, es la:",
+      "opciones": [
+        "Identidad sexual",
+        "Expresión de género",
+        "Orientación sexual",
+        "Intersexualidad"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la **identidad sexual** (art. 3.i Ley 4/2023). La expresión de género es la manifestación externa; la orientación sexual se refiere a la atracción hacia otras personas, y la intersexualidad a características biológicas que no encajan en las nociones de cuerpo masculino o femenino."
+    },
+    {
+      "id": "46",
+      "tema": 5,
+      "enunciado": "Según el art. 17 Ley 4/2023, las terapias de conversión:",
+      "opciones": [
+        "Están permitidas en mayores de edad que las consientan",
+        "Solo están prohibidas en menores de edad",
+        "Están prohibidas, incluso con el consentimiento de la persona",
+        "Requieren autorización judicial previa"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 17 Ley 4/2023** **prohíbe** las terapias de conversión **aunque medie el consentimiento** de la persona o de sus representantes. Por eso no basta la mayoría de edad ni cabe autorizarlas judicialmente."
+    },
+    {
+      "id": "47",
+      "tema": 5,
+      "enunciado": "Según el art. 15 Ley 4/2023, las empresas de más de 50 personas trabajadoras deben contar con un conjunto planificado de medidas para la igualdad de las personas LGTBI, que incluya un protocolo de actuación frente al acoso, en el plazo de:",
+      "opciones": [
+        "3 meses",
+        "6 meses",
+        "12 meses",
+        "24 meses"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 15 Ley 4/2023** da a estas empresas **12 meses** desde la entrada en vigor de la ley para tener esas medidas, pactadas en negociación colectiva e incluido el **protocolo contra el acoso**. No confundir el umbral de «más de 50» con los «50 o más» de los planes de igualdad de la LO 3/2007."
+    },
+    {
+      "id": "48",
+      "tema": 5,
+      "enunciado": "Según el art. 19 Ley 4/2023, a una persona intersexual de 13 años se le pueden practicar modificaciones genitales:",
+      "opciones": [
+        "Solo a petición suya, con consentimiento informado",
+        "Cuando lo decidan sus progenitores",
+        "En ningún caso hasta que cumpla 16 años",
+        "Únicamente con autorización judicial"
+      ],
+      "correcta": 0,
+      "explicacion": "El art. 19 prohíbe estas prácticas en **menores de 12 años** salvo indicación médica, y **entre 12 y 16** solo las permite **a petición del menor**, con consentimiento informado. A los 13 años, por tanto, ni deciden los progenitores ni se exige autorización judicial, y tampoco hay que esperar a los 16."
+    },
+    {
+      "id": "49",
+      "tema": 5,
+      "enunciado": "Según la DF 11ª Ley 4/2023, cuando hay un parte médico que indica la condición intersexual del recién nacido, la mención del sexo en el Registro Civil puede quedar en blanco durante un máximo de:",
+      "opciones": [
+        "3 meses",
+        "6 meses",
+        "1 año",
+        "2 años"
+      ],
+      "correcta": 2,
+      "explicacion": "Con parte médico de intersexualidad, los progenitores pueden dejar la mención del sexo **en blanco** durante un máximo de **1 año**. No confundir con los 3 meses para ratificar la rectificación registral ni con los 6 meses para revertirla."
+    },
+    {
+      "id": "50",
+      "tema": 5,
+      "enunciado": "Una persona española de 13 años quiere solicitar la rectificación registral de la mención relativa al sexo. Según la Ley 4/2023:",
+      "opciones": [
+        "Puede hacerlo por sí misma, sin asistencia",
+        "Puede hacerlo asistida por sus representantes legales",
+        "No puede hacerlo hasta cumplir 14 años",
+        "Necesita autorización judicial, por jurisdicción voluntaria"
+      ],
+      "correcta": 3,
+      "explicacion": "Entre **12 y 14 años** la modificación requiere **autorización judicial** mediante expediente de **jurisdicción voluntaria**. La asistencia de los representantes es para la franja de 14 a 16, y la solicitud en solitario, desde los 16. Truco: 16 solo, 14 asistido, 12 juez."
+    },
+    {
+      "id": "51",
+      "tema": 5,
+      "enunciado": "Según el art. 47 Ley 4/2023, la persona que ha obtenido la rectificación registral de la mención del sexo puede recuperar la mención anterior una vez transcurridos desde la inscripción:",
+      "opciones": [
+        "3 meses",
+        "6 meses",
+        "1 año",
+        "2 años"
+      ],
+      "correcta": 1,
+      "explicacion": "La **reversión** del art. 47 es posible pasados **6 meses** desde la inscripción de la rectificación. 3 meses es el plazo para ratificar la solicitud, y 1 año, el máximo que puede quedar en blanco la mención del sexo de un recién nacido intersexual."
+    },
+    {
+      "id": "52",
+      "tema": 5,
+      "enunciado": "Señale la respuesta INCORRECTA sobre la rectificación registral de la mención del sexo en la Ley 4/2023:",
+      "opciones": [
+        "No exige informe médico o psicológico",
+        "No exige modificación de la apariencia o de la función corporal",
+        "Tiene efectos constitutivos desde la inscripción",
+        "Exige acreditar dos años de tratamiento hormonal"
+      ],
+      "correcta": 3,
+      "explicacion": "La Ley 4/2023 **no exige** informe médico o psicológico **ni modificación corporal** (art. 44), y la resolución tiene **efectos constitutivos** desde la inscripción (art. 46). Por tanto es falso que haya que acreditar un **tratamiento hormonal**: ese era el requisito de la normativa anterior, de ahí la confusión."
+    },
+    {
+      "id": "53",
+      "tema": 5,
+      "enunciado": "Tras la Ley 4/2026, la equiparación entre grado de dependencia reconocido y grado de discapacidad del art. 4 RDLeg 1/2013 NO se aplica en el ámbito:",
+      "opciones": [
+        "Laboral",
+        "Tributario",
+        "De los servicios sociales",
+        "Educativo"
+      ],
+      "correcta": 1,
+      "explicacion": "La Ley 4/2026 considera con discapacidad del 33 % al grado I y del 65 % a los grados II y III, pero esa equiparación **no se aplica en el ámbito tributario**. Es decir, para beneficios fiscales seguirá haciendo falta el certificado de discapacidad."
+    },
+    {
+      "id": "54",
+      "tema": 5,
+      "enunciado": "Tras la Ley 4/2026, las adaptaciones del art. 40.2 RDLeg 1/2013 alcanzan también al cónyuge o pareja de hecho y a los familiares que cuidan a la persona con discapacidad hasta el:",
+      "opciones": [
+        "Primer grado",
+        "Segundo grado",
+        "Tercer grado",
+        "Cuarto grado"
+      ],
+      "correcta": 1,
+      "explicacion": "La reforma extiende las adaptaciones a cónyuges o parejas de hecho y a familiares hasta el **2.º grado** que cuidan a la persona con discapacidad. El 2.º grado incluye padres, hijos, abuelos, nietos y hermanos; tíos y sobrinos (3.º) quedan fuera."
+    },
+    {
+      "id": "55",
+      "tema": 5,
+      "enunciado": "La Ley 4/2026 encarga al Gobierno regular las medidas alternativas al cumplimiento de la cuota de reserva del art. 42 RDLeg 1/2013 en el plazo de:",
+      "opciones": [
+        "3 meses",
+        "6 meses",
+        "1 año",
+        "2 años"
+      ],
+      "correcta": 2,
+      "explicacion": "La Ley 4/2026 da al Gobierno **1 año** para regular esas **medidas alternativas** a la cuota del 2 % en empresas de 50 o más trabajadores. No confundir con los 12 meses que la Ley 4/2023 da a las empresas de más de 50 trabajadores para sus medidas LGTBI: son normas distintas."
+    },
+    {
+      "id": "56",
+      "tema": 5,
+      "enunciado": "Tras la Ley 4/2026, ¿cuántos servicios comprende el catálogo del art. 15.1 Ley 39/2006?",
+      "opciones": [
+        "7",
+        "9",
+        "11",
+        "12"
+      ],
+      "correcta": 1,
+      "explicacion": "El catálogo reformado tiene **9 servicios** (letras a-i): prevención, promoción de la autonomía, teleasistencia, ayuda a domicilio, asistencia personal, centro de día y de noche, cuidados y apoyos en viviendas, atención residencial y productos de apoyo. Truco: las letras van de la a a la i, nueve."
+    },
+    {
+      "id": "57",
+      "tema": 5,
+      "enunciado": "Según el art. 14 Ley 39/2006, en la redacción de la Ley 4/2026, la prioridad en el acceso a los servicios se determina, por este orden, por:",
+      "opciones": [
+        "Grado de dependencia, tiempo de espera y capacidad económica",
+        "Capacidad económica, grado de dependencia y tiempo de espera",
+        "Tiempo de espera, grado de dependencia y capacidad económica",
+        "Grado de dependencia, capacidad económica y tiempo de espera"
+      ],
+      "correcta": 0,
+      "explicacion": "El orden es **1.º grado**, **2.º tiempo de espera** y **3.º capacidad económica**. Los distractores mezclan los mismos tres criterios: lo que se pregunta es el orden. Truco: primero lo que necesitas, luego lo que llevas esperando y por último lo que tienes."
+    },
+    {
+      "id": "58",
+      "tema": 5,
+      "enunciado": "Tras la Ley 4/2026, las prestaciones del SAAD son:",
+      "opciones": [
+        "Compatibles con el trabajo por cuenta ajena o propia",
+        "Incompatibles con el trabajo por cuenta ajena",
+        "Compatibles solo con el trabajo a tiempo parcial",
+        "Incompatibles con cualquier actividad remunerada"
+      ],
+      "correcta": 0,
+      "explicacion": "El nuevo art. 14 declara las prestaciones **compatibles con el trabajo por cuenta ajena o propia**. Eso sí, los ingresos cuentan para calcular la capacidad económica y el copago (art. 33). No hay límite de jornada ni incompatibilidad con la actividad remunerada."
+    },
+    {
+      "id": "59",
+      "tema": 5,
+      "enunciado": "La Ley 4/2026 añade a la Ley 39/2006 una nueva prestación económica en el art. 19 bis destinada a:",
+      "opciones": [
+        "La asistencia personal",
+        "Los cuidados en el entorno familiar",
+        "La vinculada al servicio",
+        "Los cuidados y apoyos en viviendas"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 19 bis** es la nueva prestación económica de **cuidados y apoyos en viviendas**, para contratar el servicio del art. 24 bis. La vinculada al servicio (art. 17), la de cuidados en el entorno familiar (art. 18) y la de asistencia personal (art. 19) ya existían, aunque la reforma modifica las dos últimas."
+    },
+    {
+      "id": "60",
+      "tema": 5,
+      "enunciado": "Tras la Ley 4/2026, quedan exentos de los requisitos de nacionalidad y de 5 años de residencia para ser titulares de los derechos de la Ley 39/2006:",
+      "opciones": [
+        "Los solicitantes de asilo y los beneficiarios de protección temporal",
+        "Los españoles residentes en el extranjero",
+        "Las personas mayores de 80 años",
+        "Todos los menores de 5 años"
+      ],
+      "correcta": 0,
+      "explicacion": "La novedad del art. 5 es que los **solicitantes de asilo** y los **beneficiarios de protección temporal** quedan exentos de la nacionalidad y de los 5 años de residencia. En los menores de 5 años no desaparece el requisito: se exige la residencia a quien tenga su guarda y custodia. La edad avanzada o residir fuera no dan ninguna exención."
+    }
+  ]
+}

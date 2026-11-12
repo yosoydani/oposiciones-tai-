@@ -1,51 +1,791 @@
 {
-  "titulo": "Tema 10 · test de autoevaluación",
+  "titulo": "Tema 10 · test",
   "fuente": "propio",
   "tema": 10,
   "convocatoria": null,
-  "minutos": 15,
-  "origen": "Doc «Tema 10. Informática básica y arquitectura de ordenadores», sección 7",
-  "actualizado": "2026-11-11",
+  "minutos": 45,
+  "origen": "Doc «Tema 10. Informática básica y arquitectura de ordenadores»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
   "preguntas": [
-    {"id": "01", "tema": 10, "enunciado": "¿Cuántos bytes tiene 1 KiB?", "opciones": ["1.000", "1.024", "1.048.576", "8.192"], "correcta": 1,
-     "explicacion": "KiB es un prefijo **binario** (IEC): 2¹⁰ = 1.024 bytes. Los 1.000 bytes corresponden a 1 kB, prefijo decimal del SI. 1.048.576 bytes es 1 MiB (2²⁰), y 8.192 son los bits que hay en 1 KiB."},
-    {"id": "02", "tema": 10, "enunciado": "El número hexadecimal 3F equivale en decimal a:", "opciones": ["63", "48", "36", "315"], "correcta": 0,
-     "explicacion": "Cada cifra vale su valor por 16 elevado a su posición: 3 × 16 + F (15) = 48 + 15 = **63**. 48 es solo la primera cifra (3 × 16); 36 y 315 salen de leer las cifras como si fueran decimales."},
-    {"id": "03", "tema": 10, "enunciado": "Rango de un entero en complemento a 2 con 8 bits:", "opciones": ["−127 a 127", "−128 a 127", "0 a 255", "−128 a 128"], "correcta": 1,
-     "explicacion": "Con n bits, el complemento a 2 va de −2ⁿ⁻¹ a 2ⁿ⁻¹ − 1: con 8 bits, **−128 a 127**. Tiene un solo cero, y por eso le cabe un negativo más. −127 a 127 es el rango de signo-magnitud y complemento a 1, que tienen dos ceros. 0 a 255 es un entero sin signo."},
-    {"id": "04", "tema": 10, "enunciado": "¿Qué codificación es de longitud variable y compatible con ASCII?", "opciones": ["UTF-16", "UTF-32", "UTF-8", "EBCDIC"], "correcta": 2,
-     "explicacion": "**UTF-8** usa de 1 a 4 bytes por carácter, y los 128 primeros coinciden byte a byte con ASCII. UTF-16 usa 2 o 4 bytes y no es compatible con ASCII; UTF-32 usa siempre 4 bytes fijos; EBCDIC es el código de 8 bits de IBM, distinto de ASCII."},
-    {"id": "05", "tema": 10, "enunciado": "¿Qué memoria necesita refresco periódico?", "opciones": ["SRAM", "DRAM", "EEPROM", "Flash"], "correcta": 1,
-     "explicacion": "La **DRAM** guarda cada bit en un condensador que se descarga con el tiempo, así que hay que refrescarla periódicamente. La SRAM guarda el bit en biestables y no lo necesita (por eso es más rápida y cara, y se usa en la caché). EEPROM y flash son memorias no volátiles."},
-    {"id": "06", "tema": 10, "enunciado": "El registro que guarda la dirección de la siguiente instrucción es:", "opciones": ["IR", "MAR", "PC", "MDR"], "correcta": 2,
-     "explicacion": "El **PC** (contador de programa) apunta a la siguiente instrucción y se incrementa en cada búsqueda. El IR guarda la instrucción que se está ejecutando, el MAR la dirección de memoria que se va a leer o escribir, y el MDR el dato leído o por escribir."},
-    {"id": "07", "tema": 10, "enunciado": "La arquitectura con memorias separadas para instrucciones y datos es:", "opciones": ["Von Neumann", "Harvard", "CISC", "NUMA"], "correcta": 1,
-     "explicacion": "La arquitectura **Harvard** separa memorias y buses de instrucciones y de datos, de modo que puede leer ambos a la vez. Von Neumann los guarda en la misma memoria, y de ahí su «cuello de botella». CISC es un tipo de juego de instrucciones y NUMA una forma de organizar la memoria en multiprocesadores."},
-    {"id": "08", "tema": 10, "enunciado": "Según la taxonomía de Flynn, una GPU es principalmente:", "opciones": ["SISD", "SIMD", "MISD", "MIMD"], "correcta": 1,
-     "explicacion": "Una GPU aplica **una misma instrucción a muchos datos a la vez** (SIMD), igual que las instrucciones vectoriales SSE o AVX. SISD es el procesador clásico de un núcleo, MISD es una categoría rara (sistemas redundantes) y MIMD corresponde a multinúcleo y clústeres."},
-    {"id": "09", "tema": 10, "enunciado": "¿Qué bus del sistema es unidireccional?", "opciones": ["Datos", "Control", "Direcciones", "Ninguno"], "correcta": 2,
-     "explicacion": "El **bus de direcciones** solo va de la CPU hacia la memoria o la E/S: es la CPU quien indica qué posición quiere. El bus de datos es bidireccional (se lee y se escribe), y el de control también lleva señales en ambos sentidos (órdenes e interrupciones, por ejemplo)."},
-    {"id": "10", "tema": 10, "enunciado": "Con un bus de direcciones de 32 líneas se pueden direccionar:", "opciones": ["32 bytes", "4 GiB", "32 GiB", "64 GiB"], "correcta": 1,
-     "explicacion": "Con n líneas se direccionan 2ⁿ posiciones: 2³² = 4.294.967.296 bytes = **4 GiB**. Es el límite clásico de los sistemas de 32 bits sin extensiones."},
-    {"id": "11", "tema": 10, "enunciado": "La EPROM se borra mediante:", "opciones": ["Impulsos eléctricos byte a byte", "Luz ultravioleta", "No se puede borrar", "Bloques eléctricos"], "correcta": 1,
-     "explicacion": "La EPROM se borra entera exponiendo el chip a **luz ultravioleta** a través de su ventanilla. La EEPROM se borra eléctricamente byte a byte, la flash eléctricamente por bloques, y la ROM de máscara (y la PROM) no se pueden borrar."},
-    {"id": "12", "tema": 10, "enunciado": "¿Cuál es una arquitectura RISC?", "opciones": ["x86-64", "ARM", "x86", "IA-32"], "correcta": 1,
-     "explicacion": "**ARM** es RISC: instrucciones simples, de longitud fija, y solo load/store acceden a memoria. x86, IA-32 y x86-64 son nombres de la misma familia CISC de Intel y AMD."},
-    {"id": "13", "tema": 10, "enunciado": "M.2 es:", "opciones": ["Un protocolo de almacenamiento", "Un factor de forma", "Una versión de SATA", "Un tipo de RAM"], "correcta": 1,
-     "explicacion": "M.2 es un **factor de forma**: el formato de la tarjeta y de su ranura. Un SSD M.2 puede funcionar con protocolo SATA (hasta unos 600 MB/s) o NVMe sobre PCIe (varios GB/s). Es una trampa habitual confundirlo con NVMe."},
-    {"id": "14", "tema": 10, "enunciado": "La política de caché que escribe a la vez en caché y en memoria principal es:", "opciones": ["Write-back", "LRU", "Write-through", "FIFO"], "correcta": 2,
-     "explicacion": "**Write-through** escribe a la vez en caché y en RAM. Write-back escribe solo en caché y lleva el dato a RAM cuando se sustituye el bloque. LRU y FIFO no son políticas de escritura, sino de reemplazo (qué bloque se expulsa)."},
-    {"id": "15", "tema": 10, "enunciado": "¿Qué puede existir sin ordenadores?", "opciones": ["Un sistema informático", "Un sistema de información", "Un ERP", "Un TPS"], "correcta": 1,
-     "explicacion": "Un **sistema de información** es el conjunto de personas, datos, procedimientos y medios que gestionan la información de una organización, y puede funcionar en papel (un archivo de expedientes). El sistema informático es su parte automatizada, y un ERP o un TPS son sistemas informatizados."},
-    {"id": "16", "tema": 10, "enunciado": "En IEEE 754 de simple precisión, el exponente ocupa:", "opciones": ["8 bits", "11 bits", "23 bits", "52 bits"], "correcta": 0,
-     "explicacion": "Simple precisión son 32 bits: 1 de signo + **8 de exponente** (sesgo 127) + 23 de mantisa. Los 11 bits de exponente y 52 de mantisa son de doble precisión (64 bits)."},
-    {"id": "17", "tema": 10, "enunciado": "El código Hamming permite:", "opciones": ["Solo detectar errores", "Detectar y corregir errores de un bit", "Comprimir datos", "Cifrar datos"], "correcta": 1,
-     "explicacion": "Hamming **detecta y corrige** errores de un bit; por eso se usa en las memorias ECC. El bit de paridad solo detecta errores de un bit, y el CRC detecta errores en ráfagas, pero ninguno de los dos corrige."},
-    {"id": "18", "tema": 10, "enunciado": "La comprobación del hardware al encender el equipo se llama:", "opciones": ["POST", "CMOS", "DMI", "TDP"], "correcta": 0,
-     "explicacion": "**POST** (Power-On Self-Test) es la autoprueba que hace la BIOS o UEFI al arrancar. La CMOS es la memoria donde se guarda la configuración, DMI es el enlace entre la CPU y el chipset (PCH) y el TDP es el calor máximo que debe disipar el sistema."},
-    {"id": "19", "tema": 10, "enunciado": "Para arrancar desde un disco de 4 TB con todo su espacio en una partición se necesita:", "opciones": ["BIOS y MBR", "UEFI y GPT", "BIOS y FAT32", "Basta con MBR"], "correcta": 1,
-     "explicacion": "MBR solo llega a **2 TiB** por disco y 4 particiones primarias, así que un disco de 4 TB entero necesita tabla **GPT**, y para arrancar Windows desde GPT hace falta **UEFI**. FAT32 es un sistema de archivos, no una tabla de particiones."},
-    {"id": "20", "tema": 10, "enunciado": "El número decimal 45 en binario es:", "opciones": ["101011", "110101", "101101", "100101"], "correcta": 2,
-     "explicacion": "45 = 32 + 8 + 4 + 1, es decir, **101101**. Comprobación de las otras: 101011 = 43, 110101 = 53 y 100101 = 37. Truco: divide entre 2 y lee los restos de abajo arriba."}
+    {
+      "id": "01",
+      "tema": 10,
+      "enunciado": "¿Cuántos bytes tiene 1 KiB?",
+      "opciones": [
+        "1.000",
+        "1.024",
+        "1.048.576",
+        "8.192"
+      ],
+      "correcta": 1,
+      "explicacion": "KiB es un prefijo **binario** (IEC): 2¹⁰ = 1.024 bytes. Los 1.000 bytes corresponden a 1 kB, prefijo decimal del SI. 1.048.576 bytes es 1 MiB (2²⁰), y 8.192 son los bits que hay en 1 KiB."
+    },
+    {
+      "id": "02",
+      "tema": 10,
+      "enunciado": "El número hexadecimal 3F equivale en decimal a:",
+      "opciones": [
+        "63",
+        "48",
+        "36",
+        "315"
+      ],
+      "correcta": 0,
+      "explicacion": "Cada cifra vale su valor por 16 elevado a su posición: 3 × 16 + F (15) = 48 + 15 = **63**. 48 es solo la primera cifra (3 × 16); 36 y 315 salen de leer las cifras como si fueran decimales."
+    },
+    {
+      "id": "03",
+      "tema": 10,
+      "enunciado": "Rango de un entero en complemento a 2 con 8 bits:",
+      "opciones": [
+        "−127 a 127",
+        "−128 a 127",
+        "0 a 255",
+        "−128 a 128"
+      ],
+      "correcta": 1,
+      "explicacion": "Con n bits, el complemento a 2 va de −2ⁿ⁻¹ a 2ⁿ⁻¹ − 1: con 8 bits, **−128 a 127**. Tiene un solo cero, y por eso le cabe un negativo más. −127 a 127 es el rango de signo-magnitud y complemento a 1, que tienen dos ceros. 0 a 255 es un entero sin signo."
+    },
+    {
+      "id": "04",
+      "tema": 10,
+      "enunciado": "¿Qué codificación es de longitud variable y compatible con ASCII?",
+      "opciones": [
+        "UTF-16",
+        "UTF-32",
+        "UTF-8",
+        "EBCDIC"
+      ],
+      "correcta": 2,
+      "explicacion": "**UTF-8** usa de 1 a 4 bytes por carácter, y los 128 primeros coinciden byte a byte con ASCII. UTF-16 usa 2 o 4 bytes y no es compatible con ASCII; UTF-32 usa siempre 4 bytes fijos; EBCDIC es el código de 8 bits de IBM, distinto de ASCII."
+    },
+    {
+      "id": "05",
+      "tema": 10,
+      "enunciado": "¿Qué memoria necesita refresco periódico?",
+      "opciones": [
+        "SRAM",
+        "DRAM",
+        "EEPROM",
+        "Flash"
+      ],
+      "correcta": 1,
+      "explicacion": "La **DRAM** guarda cada bit en un condensador que se descarga con el tiempo, así que hay que refrescarla periódicamente. La SRAM guarda el bit en biestables y no lo necesita (por eso es más rápida y cara, y se usa en la caché). EEPROM y flash son memorias no volátiles."
+    },
+    {
+      "id": "06",
+      "tema": 10,
+      "enunciado": "El registro que guarda la dirección de la siguiente instrucción es:",
+      "opciones": [
+        "IR",
+        "MAR",
+        "PC",
+        "MDR"
+      ],
+      "correcta": 2,
+      "explicacion": "El **PC** (contador de programa) apunta a la siguiente instrucción y se incrementa en cada búsqueda. El IR guarda la instrucción que se está ejecutando, el MAR la dirección de memoria que se va a leer o escribir, y el MDR el dato leído o por escribir."
+    },
+    {
+      "id": "07",
+      "tema": 10,
+      "enunciado": "La arquitectura con memorias separadas para instrucciones y datos es:",
+      "opciones": [
+        "Von Neumann",
+        "Harvard",
+        "CISC",
+        "NUMA"
+      ],
+      "correcta": 1,
+      "explicacion": "La arquitectura **Harvard** separa memorias y buses de instrucciones y de datos, de modo que puede leer ambos a la vez. Von Neumann los guarda en la misma memoria, y de ahí su «cuello de botella». CISC es un tipo de juego de instrucciones y NUMA una forma de organizar la memoria en multiprocesadores."
+    },
+    {
+      "id": "08",
+      "tema": 10,
+      "enunciado": "Según la taxonomía de Flynn, una GPU es principalmente:",
+      "opciones": [
+        "SISD",
+        "SIMD",
+        "MISD",
+        "MIMD"
+      ],
+      "correcta": 1,
+      "explicacion": "Una GPU aplica **una misma instrucción a muchos datos a la vez** (SIMD), igual que las instrucciones vectoriales SSE o AVX. SISD es el procesador clásico de un núcleo, MISD es una categoría rara (sistemas redundantes) y MIMD corresponde a multinúcleo y clústeres."
+    },
+    {
+      "id": "09",
+      "tema": 10,
+      "enunciado": "¿Qué bus del sistema es unidireccional?",
+      "opciones": [
+        "Datos",
+        "Control",
+        "Direcciones",
+        "Ninguno"
+      ],
+      "correcta": 2,
+      "explicacion": "El **bus de direcciones** solo va de la CPU hacia la memoria o la E/S: es la CPU quien indica qué posición quiere. El bus de datos es bidireccional (se lee y se escribe), y el de control también lleva señales en ambos sentidos (órdenes e interrupciones, por ejemplo)."
+    },
+    {
+      "id": "10",
+      "tema": 10,
+      "enunciado": "Con un bus de direcciones de 32 líneas se pueden direccionar:",
+      "opciones": [
+        "32 bytes",
+        "4 GiB",
+        "32 GiB",
+        "64 GiB"
+      ],
+      "correcta": 1,
+      "explicacion": "Con n líneas se direccionan 2ⁿ posiciones: 2³² = 4.294.967.296 bytes = **4 GiB**. Es el límite clásico de los sistemas de 32 bits sin extensiones."
+    },
+    {
+      "id": "11",
+      "tema": 10,
+      "enunciado": "La EPROM se borra mediante:",
+      "opciones": [
+        "Impulsos eléctricos byte a byte",
+        "Luz ultravioleta",
+        "No se puede borrar",
+        "Bloques eléctricos"
+      ],
+      "correcta": 1,
+      "explicacion": "La EPROM se borra entera exponiendo el chip a **luz ultravioleta** a través de su ventanilla. La EEPROM se borra eléctricamente byte a byte, la flash eléctricamente por bloques, y la ROM de máscara (y la PROM) no se pueden borrar."
+    },
+    {
+      "id": "12",
+      "tema": 10,
+      "enunciado": "¿Cuál es una arquitectura RISC?",
+      "opciones": [
+        "x86-64",
+        "ARM",
+        "x86",
+        "IA-32"
+      ],
+      "correcta": 1,
+      "explicacion": "**ARM** es RISC: instrucciones simples, de longitud fija, y solo load/store acceden a memoria. x86, IA-32 y x86-64 son nombres de la misma familia CISC de Intel y AMD."
+    },
+    {
+      "id": "13",
+      "tema": 10,
+      "enunciado": "M.2 es:",
+      "opciones": [
+        "Un protocolo de almacenamiento",
+        "Un factor de forma",
+        "Una versión de SATA",
+        "Un tipo de RAM"
+      ],
+      "correcta": 1,
+      "explicacion": "M.2 es un **factor de forma**: el formato de la tarjeta y de su ranura. Un SSD M.2 puede funcionar con protocolo SATA (hasta unos 600 MB/s) o NVMe sobre PCIe (varios GB/s). Es una trampa habitual confundirlo con NVMe."
+    },
+    {
+      "id": "14",
+      "tema": 10,
+      "enunciado": "La política de caché que escribe a la vez en caché y en memoria principal es:",
+      "opciones": [
+        "Write-back",
+        "LRU",
+        "Write-through",
+        "FIFO"
+      ],
+      "correcta": 2,
+      "explicacion": "**Write-through** escribe a la vez en caché y en RAM. Write-back escribe solo en caché y lleva el dato a RAM cuando se sustituye el bloque. LRU y FIFO no son políticas de escritura, sino de reemplazo (qué bloque se expulsa)."
+    },
+    {
+      "id": "15",
+      "tema": 10,
+      "enunciado": "¿Qué puede existir sin ordenadores?",
+      "opciones": [
+        "Un sistema informático",
+        "Un sistema de información",
+        "Un ERP",
+        "Un TPS"
+      ],
+      "correcta": 1,
+      "explicacion": "Un **sistema de información** es el conjunto de personas, datos, procedimientos y medios que gestionan la información de una organización, y puede funcionar en papel (un archivo de expedientes). El sistema informático es su parte automatizada, y un ERP o un TPS son sistemas informatizados."
+    },
+    {
+      "id": "16",
+      "tema": 10,
+      "enunciado": "En IEEE 754 de simple precisión, el exponente ocupa:",
+      "opciones": [
+        "8 bits",
+        "11 bits",
+        "23 bits",
+        "52 bits"
+      ],
+      "correcta": 0,
+      "explicacion": "Simple precisión son 32 bits: 1 de signo + **8 de exponente** (sesgo 127) + 23 de mantisa. Los 11 bits de exponente y 52 de mantisa son de doble precisión (64 bits)."
+    },
+    {
+      "id": "17",
+      "tema": 10,
+      "enunciado": "El código Hamming permite:",
+      "opciones": [
+        "Solo detectar errores",
+        "Detectar y corregir errores de un bit",
+        "Comprimir datos",
+        "Cifrar datos"
+      ],
+      "correcta": 1,
+      "explicacion": "Hamming **detecta y corrige** errores de un bit; por eso se usa en las memorias ECC. El bit de paridad solo detecta errores de un bit, y el CRC detecta errores en ráfagas, pero ninguno de los dos corrige."
+    },
+    {
+      "id": "18",
+      "tema": 10,
+      "enunciado": "La comprobación del hardware al encender el equipo se llama:",
+      "opciones": [
+        "POST",
+        "CMOS",
+        "DMI",
+        "TDP"
+      ],
+      "correcta": 0,
+      "explicacion": "**POST** (Power-On Self-Test) es la autoprueba que hace la BIOS o UEFI al arrancar. La CMOS es la memoria donde se guarda la configuración, DMI es el enlace entre la CPU y el chipset (PCH) y el TDP es el calor máximo que debe disipar el sistema."
+    },
+    {
+      "id": "19",
+      "tema": 10,
+      "enunciado": "Para arrancar desde un disco de 4 TB con todo su espacio en una partición se necesita:",
+      "opciones": [
+        "BIOS y MBR",
+        "UEFI y GPT",
+        "BIOS y FAT32",
+        "Basta con MBR"
+      ],
+      "correcta": 1,
+      "explicacion": "MBR solo llega a **2 TiB** por disco y 4 particiones primarias, así que un disco de 4 TB entero necesita tabla **GPT**, y para arrancar Windows desde GPT hace falta **UEFI**. FAT32 es un sistema de archivos, no una tabla de particiones."
+    },
+    {
+      "id": "20",
+      "tema": 10,
+      "enunciado": "El número decimal 45 en binario es:",
+      "opciones": [
+        "101011",
+        "110101",
+        "101101",
+        "100101"
+      ],
+      "correcta": 2,
+      "explicacion": "45 = 32 + 8 + 4 + 1, es decir, **101101**. Comprobación de las otras: 101011 = 43, 110101 = 53 y 100101 = 37. Truco: divide entre 2 y lee los restos de abajo arriba."
+    },
+    {
+      "id": "21",
+      "tema": 10,
+      "enunciado": "El valor «38,5», aislado y sin contexto, es un ejemplo de:",
+      "opciones": [
+        "Información",
+        "Dato",
+        "Conocimiento",
+        "Sistema de información"
+      ],
+      "correcta": 1,
+      "explicacion": "Un **dato** es una representación simbólica de un hecho **sin significado por sí sola**. Se convierte en **información** cuando se procesa y se le da contexto («el paciente tiene 38,5 ºC de fiebre»), y en **conocimiento** cuando se interpreta y aplica («hay que darle un antitérmico»)."
+    },
+    {
+      "id": "22",
+      "tema": 10,
+      "enunciado": "En un sistema de información, la salida que vuelve a entrar en el sistema para controlarlo o corregirlo se denomina:",
+      "opciones": [
+        "Procesamiento",
+        "Almacenamiento",
+        "Distribución",
+        "Retroalimentación"
+      ],
+      "correcta": 3,
+      "explicacion": "La **retroalimentación** (feedback) es la salida que vuelve como entrada para controlar o corregir el sistema, y se añade a las cuatro funciones básicas: entrada, almacenamiento, procesamiento y salida o distribución. Procesar es transformar los datos, almacenar es guardarlos y distribuir es entregar la salida."
+    },
+    {
+      "id": "23",
+      "tema": 10,
+      "enunciado": "El sistema de información orientado a los mandos intermedios (nivel táctico), que les proporciona informes periódicos para el control, es el:",
+      "opciones": [
+        "MIS",
+        "TPS",
+        "EIS",
+        "CRM"
+      ],
+      "correcta": 0,
+      "explicacion": "El **MIS** (sistema de información de gestión) da **informes periódicos** al **nivel táctico**. El TPS registra las transacciones diarias del nivel operativo, el EIS ofrece indicadores resumidos a la alta dirección (nivel estratégico) y el CRM gestiona la relación con los clientes. Truco: de abajo arriba, TPS, MIS, DSS, EIS."
+    },
+    {
+      "id": "24",
+      "tema": 10,
+      "enunciado": "¿Cuál de los siguientes NO es un elemento del modelo clásico de comunicación de Shannon?",
+      "opciones": [
+        "Canal",
+        "Ruido",
+        "Compilador",
+        "Código"
+      ],
+      "correcta": 2,
+      "explicacion": "El modelo de Shannon tiene **emisor, mensaje, código, canal, receptor y ruido**. Un **compilador** es un programa traductor de lenguajes de programación y no forma parte del modelo. En informática el código es binario y el canal puede ser un bus o una red."
+    },
+    {
+      "id": "25",
+      "tema": 10,
+      "enunciado": "Los elementos de un sistema informático, en su definición clásica, son:",
+      "opciones": [
+        "Solo hardware y software",
+        "Datos, normas y procedimientos en papel",
+        "Hardware, software y personas",
+        "Emisor, canal y receptor"
+      ],
+      "correcta": 2,
+      "explicacion": "El **sistema informático** es la parte automatizada del sistema de información y está formado por **hardware, software y personas** (usuarios y técnicos); algunos autores añaden los datos. Quitar a las personas es el error típico. Normas y procedimientos en papel pertenecen al SI en sentido amplio, y emisor, canal y receptor son elementos del modelo de comunicación."
+    },
+    {
+      "id": "26",
+      "tema": 10,
+      "enunciado": "Una conexión de 100 Mbps transfiere, como máximo, aproximadamente:",
+      "opciones": [
+        "12,5 MB/s",
+        "100 MB/s",
+        "800 MB/s",
+        "1,25 MB/s"
+      ],
+      "correcta": 0,
+      "explicacion": "Las velocidades de red se dan en **bits** por segundo y un byte son 8 bits: 100 Mbps ÷ 8 = **12,5 MB/s**. 100 MB/s confunde bits con bytes, 800 MB/s multiplica en lugar de dividir y 1,25 MB/s divide entre 80. Truco: «b» minúscula es bit, «B» mayúscula es byte."
+    },
+    {
+      "id": "27",
+      "tema": 10,
+      "enunciado": "Un disco duro vendido como de 1 TB (10¹² bytes) aparece en Windows con una capacidad de unos:",
+      "opciones": [
+        "1.024 «GB»",
+        "1.000 «GB»",
+        "976 «GB»",
+        "931 «GB» (en realidad GiB)"
+      ],
+      "correcta": 3,
+      "explicacion": "El fabricante usa prefijos **decimales** (1 TB = 10¹² B) y Windows muestra prefijos **binarios** aunque escriba «GB»: 10¹² ÷ 2³⁰ ≈ **931 GiB**. 1.024 sería al revés (inflar el tamaño), 1.000 ignora la diferencia y 976 sale de dividir solo una vez entre 1.024."
+    },
+    {
+      "id": "28",
+      "tema": 10,
+      "enunciado": "El número binario 11010110 en hexadecimal es:",
+      "opciones": [
+        "6D",
+        "D6",
+        "D5",
+        "214"
+      ],
+      "correcta": 1,
+      "explicacion": "Se agrupan los bits de 4 en 4 desde la derecha: 1101 = D (13) y 0110 = 6, luego **D6**. 6D invierte el orden de los grupos, D5 es un error al convertir el segundo grupo, y 214 es el valor del número en **decimal**, no en hexadecimal."
+    },
+    {
+      "id": "29",
+      "tema": 10,
+      "enunciado": "El número binario 110111 en octal es:",
+      "opciones": [
+        "67",
+        "76",
+        "55",
+        "37"
+      ],
+      "correcta": 0,
+      "explicacion": "Para pasar a octal se agrupan los bits de **3 en 3 desde la derecha**: 110 = 6 y 111 = 7, luego **67**. 76 invierte los grupos, 55 es el valor del número en **decimal** (32 + 16 + 4 + 2 + 1) y 37 es un error al convertir el primer grupo."
+    },
+    {
+      "id": "30",
+      "tema": 10,
+      "enunciado": "La representación del número −5 en complemento a 2 con 8 bits es:",
+      "opciones": [
+        "11111010",
+        "11111011",
+        "10000101",
+        "00000101"
+      ],
+      "correcta": 1,
+      "explicacion": "Se parte de 5 = 00000101, se invierten los bits (11111010, que es el **complemento a 1**) y se suma 1: **11111011**. 10000101 es −5 en **signo-magnitud** y 00000101 es +5. Truco: en complemento a 2 los negativos pequeños están llenos de unos."
+    },
+    {
+      "id": "31",
+      "tema": 10,
+      "enunciado": "¿Cuál es el rango de valores de un entero de 16 bits en complemento a 2?",
+      "opciones": [
+        "De −32.767 a 32.767",
+        "De 0 a 65.535",
+        "De −32.768 a 32.768",
+        "De −32.768 a 32.767"
+      ],
+      "correcta": 3,
+      "explicacion": "Con n bits el rango en complemento a 2 va de **−2ⁿ⁻¹ a 2ⁿ⁻¹ − 1**: con 16 bits, de **−32.768 a 32.767**. El rango simétrico −32.767 a 32.767 es el de signo-magnitud o complemento a 1 (dos ceros); de 0 a 65.535 es sin signo, y +32.768 no cabe."
+    },
+    {
+      "id": "32",
+      "tema": 10,
+      "enunciado": "En BCD (decimal codificado en binario), el número decimal 93 se representa como:",
+      "opciones": [
+        "0101 1101",
+        "1001 0010",
+        "1001 0011",
+        "0011 1001"
+      ],
+      "correcta": 2,
+      "explicacion": "En **BCD** cada cifra decimal se codifica por separado en 4 bits: 9 = 1001 y 3 = 0011, luego **1001 0011**. 0101 1101 es 93 en **binario puro**, 1001 0010 sería 92 y 0011 1001 sería 39 (cifras al revés)."
+    },
+    {
+      "id": "33",
+      "tema": 10,
+      "enunciado": "En el formato IEEE 754 de doble precisión (64 bits), el sesgo del exponente es:",
+      "opciones": [
+        "1023",
+        "127",
+        "1024",
+        "2047"
+      ],
+      "correcta": 0,
+      "explicacion": "La doble precisión usa 1 bit de signo, **11 de exponente** y 52 de mantisa, con sesgo **1023** (2¹⁰ − 1). 127 es el sesgo de la simple precisión (8 bits de exponente), 1024 es una potencia de 2 que se confunde con él y 2047 es el máximo valor de 11 bits."
+    },
+    {
+      "id": "34",
+      "tema": 10,
+      "enunciado": "¿Qué juego de caracteres de 8 bits añade el símbolo del euro (€) respecto a ISO 8859-1 (Latin-1)?",
+      "opciones": [
+        "ASCII",
+        "ISO 8859-15",
+        "EBCDIC",
+        "UTF-16"
+      ],
+      "correcta": 1,
+      "explicacion": "**ISO 8859-15** es la revisión de Latin-1 que **añade el símbolo €**. ASCII tiene 7 bits y no incluye ni ñ ni tildes, EBCDIC es el código de 8 bits de IBM para mainframes y UTF-16 es una codificación Unicode de 2 o 4 bytes, no un juego de 8 bits."
+    },
+    {
+      "id": "35",
+      "tema": 10,
+      "enunciado": "El código en el que dos valores consecutivos solo se diferencian en un bit, usado en sensores y codificadores de posición, es el código:",
+      "opciones": [
+        "BCD",
+        "Hamming",
+        "CRC",
+        "Gray"
+      ],
+      "correcta": 3,
+      "explicacion": "En el **código Gray** dos valores seguidos **cambian en un solo bit**, lo que evita lecturas erróneas en sensores y codificadores. BCD codifica cifras decimales en 4 bits, Hamming detecta y corrige errores de un bit y CRC detecta errores en ráfagas."
+    },
+    {
+      "id": "36",
+      "tema": 10,
+      "enunciado": "Se transmiten los 7 bits de datos 1011001 con paridad par. El bit de paridad que se añade es:",
+      "opciones": [
+        "0",
+        "1",
+        "El mismo que el bit más significativo",
+        "Ninguno, porque la paridad necesita 8 bits de datos"
+      ],
+      "correcta": 0,
+      "explicacion": "Con **paridad par** el total de unos (datos + paridad) debe ser par. 1011001 tiene **cuatro unos**, que ya es par, así que el bit de paridad es **0**. Con paridad impar sería 1. La paridad no depende del bit más significativo y funciona con cualquier número de bits."
+    },
+    {
+      "id": "37",
+      "tema": 10,
+      "enunciado": "¿Cuántos bits se necesitan como mínimo para representar 1.000 valores distintos?",
+      "opciones": [
+        "9",
+        "8",
+        "10",
+        "1.000"
+      ],
+      "correcta": 2,
+      "explicacion": "Con n bits se representan **2ⁿ** valores: 2⁹ = 512 no llega y **2¹⁰ = 1.024** ya cubre 1.000, así que hacen falta **10 bits**. 8 bits solo dan 256 valores y 1.000 bits confunde valores con bits."
+    },
+    {
+      "id": "38",
+      "tema": 10,
+      "enunciado": "El llamado «cuello de botella de Von Neumann» se debe a que:",
+      "opciones": [
+        "La memoria caché está separada en instrucciones y datos",
+        "La ALU solo puede realizar operaciones lógicas",
+        "Existe un único camino entre la CPU y la memoria para instrucciones y datos",
+        "Los buses paralelos se sustituyeron por buses serie"
+      ],
+      "correcta": 2,
+      "explicacion": "En Von Neumann, programa y datos están en la **misma memoria** y comparten **un solo camino** con la CPU, que no puede leer instrucción y dato a la vez. Separar la caché en instrucciones y datos es justamente la solución de la Harvard modificada; las otras opciones no tienen relación con el problema."
+    },
+    {
+      "id": "39",
+      "tema": 10,
+      "enunciado": "Los procesadores actuales de propósito general siguen una arquitectura «Harvard modificada», que consiste en:",
+      "opciones": [
+        "Memorias principales separadas para instrucciones y para datos",
+        "Memoria principal común (Von Neumann) con caché L1 separada en instrucciones y datos",
+        "Un único bus para instrucciones, datos y direcciones",
+        "Ejecutar instrucciones CISC traducidas a RISC en la caché L3"
+      ],
+      "correcta": 1,
+      "explicacion": "La **Harvard modificada** mantiene la memoria principal común, como en Von Neumann, pero **divide la caché L1** en **L1i** (instrucciones) y **L1d** (datos), para leer ambas a la vez. Las memorias principales totalmente separadas son la Harvard pura, propia de microcontroladores y DSP."
+    },
+    {
+      "id": "40",
+      "tema": 10,
+      "enunciado": "El registro que contiene el dato leído de memoria o el dato que se va a escribir en ella es el:",
+      "opciones": [
+        "MAR",
+        "IR",
+        "PC",
+        "MDR (o MBR)"
+      ],
+      "correcta": 3,
+      "explicacion": "El **MDR o MBR** (registro de datos o buffer de memoria) guarda el **dato** leído o por escribir. El **MAR** guarda la **dirección**, el IR la instrucción en curso y el PC la dirección de la siguiente instrucción. Truco: MAR = «A» de Address; MDR = «D» de Data."
+    },
+    {
+      "id": "41",
+      "tema": 10,
+      "enunciado": "Los indicadores de cero, signo, acarreo y desbordamiento (overflow) que genera la ALU se guardan en:",
+      "opciones": [
+        "El registro de estado (flags)",
+        "El acumulador",
+        "El contador de programa",
+        "El registro de dirección de memoria"
+      ],
+      "correcta": 0,
+      "explicacion": "El **registro de estado** o de **flags** guarda los indicadores del último resultado de la ALU (cero, signo, acarreo, desbordamiento). El **acumulador** guarda el resultado intermedio en sí, el contador de programa la dirección de la siguiente instrucción y el MAR la dirección de memoria que se va a usar."
+    },
+    {
+      "id": "42",
+      "tema": 10,
+      "enunciado": "En la fase de búsqueda (fetch) del ciclo de instrucción:",
+      "opciones": [
+        "La unidad de control interpreta el código de operación y los operandos",
+        "El PC pasa al MAR, se lee la instrucción, se carga en el IR y el PC se incrementa",
+        "La ALU opera con los operandos y guarda el resultado",
+        "La CPU comprueba si hay interrupciones pendientes"
+      ],
+      "correcta": 1,
+      "explicacion": "En la **búsqueda**, la dirección del **PC** pasa al **MAR**, la instrucción leída entra en el **IR** y el PC se incrementa. Interpretar el código de operación es la **decodificación**, operar en la ALU es la **ejecución**, y las **interrupciones** se comprueban al acabar la instrucción."
+    },
+    {
+      "id": "43",
+      "tema": 10,
+      "enunciado": "La técnica que solapa las fases de varias instrucciones, como en una cadena de montaje, se denomina:",
+      "opciones": [
+        "Arquitectura superescalar",
+        "Multihilo simultáneo (SMT)",
+        "Predicción de saltos",
+        "Segmentación (pipeline)"
+      ],
+      "correcta": 3,
+      "explicacion": "La **segmentación o pipeline** divide la ejecución en fases y **solapa** las de varias instrucciones, como una cadena de montaje. Una arquitectura **superescalar** va más allá y lanza varias instrucciones por ciclo con varias unidades; SMT ejecuta dos hilos por núcleo y la predicción de saltos adivina el camino de una bifurcación."
+    },
+    {
+      "id": "44",
+      "tema": 10,
+      "enunciado": "En una arquitectura RISC, ¿qué instrucciones acceden a la memoria?",
+      "opciones": [
+        "Solo las de carga y almacenamiento (load y store)",
+        "Todas las instrucciones aritméticas y lógicas",
+        "Solo las instrucciones de salto",
+        "Ninguna: RISC trabaja solo con la caché"
+      ],
+      "correcta": 0,
+      "explicacion": "RISC es una arquitectura **load/store**: **solo load y store** acceden a memoria, y el resto opera sobre sus muchos registros. Que muchas instrucciones operen directamente sobre memoria es propio de **CISC** (x86). Los saltos cambian el PC, y la caché es transparente, no sustituye a la memoria."
+    },
+    {
+      "id": "45",
+      "tema": 10,
+      "enunciado": "Señale la característica que NO corresponde a una arquitectura CISC:",
+      "opciones": [
+        "Gran número de instrucciones complejas",
+        "Muchas instrucciones operan sobre memoria",
+        "Instrucciones de longitud fija",
+        "Pocos registros"
+      ],
+      "correcta": 2,
+      "explicacion": "Las **instrucciones de longitud fija** son propias de **RISC**. CISC (Complex Instruction Set Computer, como x86 y x86-64) tiene **muchas instrucciones complejas de longitud variable**, muchas operan sobre memoria y dispone de pocos registros."
+    },
+    {
+      "id": "46",
+      "tema": 10,
+      "enunciado": "Según la taxonomía de Flynn, un procesador multinúcleo o un clúster de ordenadores es un sistema:",
+      "opciones": [
+        "SISD",
+        "MIMD",
+        "SIMD",
+        "MISD"
+      ],
+      "correcta": 1,
+      "explicacion": "Un multinúcleo o un clúster ejecuta **varias instrucciones sobre varios datos** a la vez: **MIMD**. SISD es el procesador clásico de un núcleo, SIMD es una instrucción sobre muchos datos (GPU, SSE, AVX) y MISD es rara (sistemas redundantes tolerantes a fallos)."
+    },
+    {
+      "id": "47",
+      "tema": 10,
+      "enunciado": "La arquitectura multiprocesador en la que cada procesador accede más rápido a su memoria local que a la de los demás se denomina:",
+      "opciones": [
+        "SMP",
+        "SoC",
+        "NUMA",
+        "SISD"
+      ],
+      "correcta": 2,
+      "explicacion": "En **NUMA** (Non-Uniform Memory Access) el tiempo de acceso depende de dónde esté la memoria: la **local es más rápida**. En **SMP** todos los procesadores comparten la memoria con acceso simétrico; un SoC integra CPU, GPU y más en un chip, y SISD es una categoría de Flynn."
+    },
+    {
+      "id": "48",
+      "tema": 10,
+      "enunciado": "Un programa recorre un vector leyendo sus posiciones consecutivas. ¿Qué principio aprovecha la memoria caché en ese caso?",
+      "opciones": [
+        "Localidad temporal",
+        "Correspondencia directa",
+        "Escritura diferida (write-back)",
+        "Localidad espacial"
+      ],
+      "correcta": 3,
+      "explicacion": "La **localidad espacial** dice que, tras usar una posición, se usarán las **cercanas**, y la caché trae bloques enteros. La **temporal** se refiere a volver a usar **lo mismo** que se usó hace poco (por ejemplo, una variable dentro de un bucle). Correspondencia directa y write-back son políticas de caché, no principios."
+    },
+    {
+      "id": "49",
+      "tema": 10,
+      "enunciado": "La celda de memoria de una DRAM está formada por:",
+      "opciones": [
+        "Un condensador y un transistor",
+        "Un biestable de unos seis transistores",
+        "Una puerta flotante que no pierde la carga",
+        "Dos condensadores en serie sin transistor"
+      ],
+      "correcta": 0,
+      "explicacion": "La **DRAM** guarda cada bit en **un condensador** controlado por **un transistor**; como el condensador se descarga, necesita refresco. El **biestable de unos seis transistores** es la celda de la **SRAM** (la de la caché), y la puerta flotante es la base de la memoria flash, que no es volátil."
+    },
+    {
+      "id": "50",
+      "tema": 10,
+      "enunciado": "La memoria DDR (Double Data Rate) se caracteriza por:",
+      "opciones": [
+        "Tener dos módulos que trabajan siempre en paralelo",
+        "Transferir datos en los dos flancos de la señal de reloj",
+        "Duplicar la capacidad de cada módulo respecto a SDRAM",
+        "Ser compatible con las ranuras de cualquier generación DDR"
+      ],
+      "correcta": 1,
+      "explicacion": "**DDR** transfiere en los **dos flancos** (subida y bajada) del reloj, el doble de datos por ciclo que la SDRAM. Dos módulos en paralelo es el **doble canal**, que es otra cosa, y las generaciones DDR a DDR5 **no son compatibles** entre sí: cada una tiene su ranura."
+    },
+    {
+      "id": "51",
+      "tema": 10,
+      "enunciado": "¿Cuántos bits por celda almacena una memoria flash NAND de tipo TLC?",
+      "opciones": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "correcta": 3,
+      "explicacion": "**TLC** (Triple-Level Cell) guarda **3 bits** por celda. SLC guarda 1, MLC 2 y QLC 4. Más bits por celda da más capacidad, pero menos velocidad y menos duración. Truco: S-M-T-Q = single, multi (2), triple, quad."
+    },
+    {
+      "id": "52",
+      "tema": 10,
+      "enunciado": "La memoria no volátil que se borra eléctricamente por bloques, presente en SSD y pendrives, es:",
+      "opciones": [
+        "Flash",
+        "EEPROM",
+        "EPROM",
+        "PROM"
+      ],
+      "correcta": 0,
+      "explicacion": "La **flash** se borra **eléctricamente por bloques**, lo que la hace más rápida y densa. La **EEPROM** también se borra eléctricamente, pero **byte a byte**; la EPROM se borra con luz ultravioleta y la PROM solo se programa una vez y no se borra."
+    },
+    {
+      "id": "53",
+      "tema": 10,
+      "enunciado": "En una memoria caché con correspondencia directa:",
+      "opciones": [
+        "Cada bloque puede ubicarse en cualquier línea de la caché",
+        "Cada bloque puede ubicarse en cualquier línea dentro de un conjunto",
+        "Cada bloque de memoria principal solo puede ubicarse en una línea concreta de la caché",
+        "Los bloques se escriben a la vez en caché y en memoria principal"
+      ],
+      "correcta": 2,
+      "explicacion": "En la **correspondencia directa** cada bloque de RAM tiene **una única línea** posible. En la **totalmente asociativa** puede ir a cualquier línea, y en la **asociativa por conjuntos** (la más usada) a cualquiera dentro de un conjunto. Escribir a la vez en caché y RAM es la política de escritura write-through."
+    },
+    {
+      "id": "54",
+      "tema": 10,
+      "enunciado": "La política de reemplazo de caché LRU sustituye:",
+      "opciones": [
+        "El bloque que entró primero en la caché",
+        "El bloque que se usó hace más tiempo",
+        "Un bloque elegido al azar",
+        "El bloque que se ha usado menos veces"
+      ],
+      "correcta": 1,
+      "explicacion": "**LRU** (Least Recently Used) sustituye el bloque **usado hace más tiempo**. Sustituir el que entró primero es **FIFO**, elegir al azar es la política **aleatoria**, y sustituir el que se ha usado menos veces es LFU, que es distinto de LRU."
+    },
+    {
+      "id": "55",
+      "tema": 10,
+      "enunciado": "En un zócalo de tipo LGA:",
+      "opciones": [
+        "Los pines están en la placa base y el procesador tiene contactos planos",
+        "Los pines están en el procesador y se insertan en la placa",
+        "El procesador va soldado directamente a la placa",
+        "El procesador se conecta mediante una ranura PCIe"
+      ],
+      "correcta": 0,
+      "explicacion": "En **LGA** (Land Grid Array) los **pines están en la placa** y el procesador tiene contactos planos; lo usan Intel actual y AMD AM5. Pines en el procesador es **PGA** (AMD AM4 y anteriores) y el procesador soldado es **BGA** (portátiles y móviles)."
+    },
+    {
+      "id": "56",
+      "tema": 10,
+      "enunciado": "En el esquema clásico del chipset, el puente norte (northbridge) se encargaba de comunicar:",
+      "opciones": [
+        "Los discos, los puertos USB y el audio",
+        "La fuente de alimentación con la placa base",
+        "La BIOS con la memoria CMOS",
+        "La CPU con la memoria RAM y la tarjeta gráfica"
+      ],
+      "correcta": 3,
+      "explicacion": "El **puente norte** unía los componentes **rápidos**: CPU, RAM y gráfica. El **puente sur** gestionaba los **lentos**: discos, USB y audio. Hoy el controlador de memoria y las líneas PCIe principales están dentro de la CPU y queda un solo chip (el PCH de Intel, unido por DMI)."
+    },
+    {
+      "id": "57",
+      "tema": 10,
+      "enunciado": "Un bus de datos de 64 bits funciona a 100 MHz y realiza 2 transferencias por ciclo. Su ancho de banda es:",
+      "opciones": [
+        "0,8 GB/s",
+        "12,8 GB/s",
+        "1,6 GB/s",
+        "3,2 GB/s"
+      ],
+      "correcta": 2,
+      "explicacion": "Ancho de banda = anchura × frecuencia × transferencias por ciclo: 64 bits = **8 bytes**; 8 B × 100 millones × 2 = 1.600 MB/s = **1,6 GB/s**. 0,8 GB/s olvida las 2 transferencias por ciclo, 12,8 sería el resultado en gigabits (sin dividir entre 8) y 3,2 GB/s supondría 4 transferencias por ciclo."
+    },
+    {
+      "id": "58",
+      "tema": 10,
+      "enunciado": "Un procesador con un bus de direcciones de 36 líneas puede direccionar, como máximo (memoria direccionable por bytes):",
+      "opciones": [
+        "36 GiB",
+        "64 GiB",
+        "16 GiB",
+        "128 GiB"
+      ],
+      "correcta": 1,
+      "explicacion": "Con n líneas se direccionan **2ⁿ posiciones**: 2³⁶ = 2⁶ × 2³⁰ = **64 GiB**. 36 GiB confunde líneas con gigas; 16 GiB serían 34 líneas y 128 GiB serían 37. Truco: 32 líneas = 4 GiB y cada línea más duplica."
+    },
+    {
+      "id": "59",
+      "tema": 10,
+      "enunciado": "NVMe es:",
+      "opciones": [
+        "Un factor de forma de tarjeta para portátiles",
+        "La versión III del bus SATA",
+        "Un tipo de memoria RAM de bajo consumo",
+        "Un protocolo de acceso a almacenamiento que funciona sobre PCIe"
+      ],
+      "correcta": 3,
+      "explicacion": "**NVMe** es el **protocolo** para SSD de alto rendimiento que funciona **sobre PCIe** y alcanza varios GB/s. El factor de forma es **M.2** (que puede llevar SSD SATA o NVMe), SATA III es otra interfaz (6 Gb/s) y la RAM de bajo consumo es LPDDR."
+    },
+    {
+      "id": "60",
+      "tema": 10,
+      "enunciado": "Un equipo antiguo pierde la fecha y la hora cada vez que se desconecta de la corriente. La causa más probable es:",
+      "opciones": [
+        "Que el POST ha detectado un fallo en la memoria RAM",
+        "Que el disco usa una tabla de particiones MBR",
+        "Que se ha agotado la pila que alimenta la memoria CMOS",
+        "Que la fuente de alimentación no tiene certificación 80 PLUS"
+      ],
+      "correcta": 2,
+      "explicacion": "La configuración de la BIOS (fecha, orden de arranque) se guarda en una memoria **CMOS** alimentada por una **pila de botón** (CR2032); si se agota, se pierden **fecha y ajustes** al desenchufar. Un fallo de RAM lo avisaría el POST, MBR solo limita discos y particiones, y 80 PLUS mide la eficiencia de la fuente."
+    }
   ]
 }

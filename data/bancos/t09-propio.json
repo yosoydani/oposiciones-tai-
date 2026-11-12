@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 09 · test",
+  "fuente": "propio",
+  "tema": 9,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 9. Instrumentos para el acceso electrónico a las Administraciones públicas»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 9,
+      "enunciado": "La sede electrónica se define en:",
+      "opciones": [
+        "Art. 38 Ley 40/2015",
+        "Art. 39 Ley 40/2015",
+        "Art. 13 Ley 39/2015",
+        "Art. 16 Ley 39/2015"
+      ],
+      "correcta": 0,
+      "explicacion": "La **sede electrónica** se define en el **art. 38.1 Ley 40/2015**. El art. 39 de la misma ley regula el portal de internet, el art. 13 Ley 39/2015 recoge los derechos de las personas y el art. 16 Ley 39/2015 los registros. Truco: 38 sede, 39 portal; van seguidos y por ese orden."
+    },
+    {
+      "id": "02",
+      "tema": 9,
+      "enunciado": "Para identificarse y garantizar comunicaciones seguras, la sede utiliza (art. 38.6 Ley 40/2015):",
+      "opciones": [
+        "Un sello de tiempo",
+        "Certificados cualificados de autenticación de sitio web o medio equivalente",
+        "Un CSV",
+        "Cl@ve Permanente"
+      ],
+      "correcta": 1,
+      "explicacion": "El art. 38.6 Ley 40/2015 exige **certificados cualificados de autenticación de sitio web o medio equivalente** para identificar la sede y cifrar la comunicación. El sello de tiempo acredita fecha y hora (TS@), el CSV sirve para comprobar documentos y Cl@ve Permanente identifica a ciudadanos, no a la sede."
+    },
+    {
+      "id": "03",
+      "tema": 9,
+      "enunciado": "Según el art. 10 del RD 203/2021, las sedes asociadas:",
+      "opciones": [
+        "Solo informan, no permiten tramitar",
+        "Tienen la consideración de sede a todos los efectos",
+        "Solo existen en las entidades locales",
+        "Requieren ley para su creación"
+      ],
+      "correcta": 1,
+      "explicacion": "El art. 10.1 RD 203/2021 permite crear sedes asociadas por razones técnicas u organizativas y les da la **consideración de sede a todos los efectos**. Limitarse a informar es lo propio del portal; pueden crearlas todas las Administraciones, y en la AGE basta una orden o resolución (art. 10.3), no una ley."
+    },
+    {
+      "id": "04",
+      "tema": 9,
+      "enunciado": "El dominio de los portales de internet del ámbito estatal debe incluir (art. 6 RD 203/2021):",
+      "opciones": [
+        "«.es»",
+        "«.gob.es»",
+        "«.age.es»",
+        "«.gov»"
+      ],
+      "correcta": 1,
+      "explicacion": "El art. 6 RD 203/2021 obliga a que el dominio de los portales estatales incluya **«.gob.es»** y a que el portal figure en el PAGe. «.es» es el dominio genérico de España, «.age.es» no es el dominio oficial y «.gov» es el dominio de la Administración de Estados Unidos."
+    },
+    {
+      "id": "05",
+      "tema": 9,
+      "enunciado": "NO forma parte del contenido mínimo de la sede (art. 11.1 RD 203/2021):",
+      "opciones": [
+        "Sistemas de identificación y firma admitidos",
+        "Fecha y hora oficial",
+        "Relación de actuaciones administrativas automatizadas",
+        "Currículum de los titulares de los órganos"
+      ],
+      "correcta": 3,
+      "explicacion": "El **currículum de los titulares** no figura en el art. 11.1 RD 203/2021. Sí forman parte del contenido mínimo, entre otros, los sistemas de identificación y firma admitidos, la fecha y hora oficial y la relación de actuaciones administrativas automatizadas, además de la identificación de la sede, su instrumento de creación, el mapa y la información sobre incidencias técnicas."
+    },
+    {
+      "id": "06",
+      "tema": 9,
+      "enunciado": "La Carpeta Ciudadana es, según el art. 8 RD 203/2021:",
+      "opciones": [
+        "Un registro de apoderamientos",
+        "El área personalizada del sector público estatal accesible desde la sede del PAGe",
+        "La sede de la AEAT",
+        "Un archivo definitivo"
+      ],
+      "correcta": 1,
+      "explicacion": "El art. 8 RD 203/2021 define la Carpeta Ciudadana como el **área personalizada del sector público estatal, accesible desde la sede del PAGe**. El Registro Electrónico de Apoderamientos es otro instrumento (art. 6 Ley 39/2015), la AEAT tiene su propia sede y el archivo definitivo de expedientes es la solución Archive."
+    },
+    {
+      "id": "07",
+      "tema": 9,
+      "enunciado": "Los órganos y organismos estatales practican sus notificaciones electrónicas a través de:",
+      "opciones": [
+        "La DEHú",
+        "El BOE",
+        "El correo electrónico del interesado",
+        "ORVE"
+      ],
+      "correcta": 0,
+      "explicacion": "Según el **art. 42.5 RD 203/2021**, los órganos y organismos estatales notifican por medios electrónicos a través de la **DEHú** (Dirección Electrónica Habilitada única). El BOE solo se usa para el anuncio cuando la notificación no ha podido practicarse, el correo electrónico sirve únicamente de aviso y ORVE es un servicio de registro, no de notificación."
+    },
+    {
+      "id": "08",
+      "tema": 9,
+      "enunciado": "Según el art. 9.2.c) Ley 39/2015, un sistema de identificación distinto de los certificados cualificados adquiere eficacia jurídica:",
+      "opciones": [
+        "Inmediatamente",
+        "Transcurridos dos meses desde la comunicación a la SGAD",
+        "Tras autorización del Consejo de Ministros",
+        "A los seis meses de su publicación"
+      ],
+      "correcta": 1,
+      "explicacion": "Los sistemas del art. 9.2.c) exigen registro previo del usuario y comunicación a la SGAD con declaración responsable, y su eficacia jurídica llega **transcurridos dos meses desde esa comunicación**. No es inmediata ni depende del Consejo de Ministros: en esos dos meses el Estado puede acudir a la vía jurisdiccional por motivos de seguridad pública."
+    },
+    {
+      "id": "09",
+      "tema": 9,
+      "enunciado": "Los recursos técnicos de los sistemas del art. 9.2.c) que traten categorías especiales de datos deben ubicarse en:",
+      "opciones": [
+        "Cualquier país con decisión de adecuación",
+        "El Espacio Económico Europeo",
+        "Territorio español",
+        "Cualquier Estado de la OCDE"
+      ],
+      "correcta": 2,
+      "explicacion": "El art. 9.3 Ley 39/2015 exige que esos recursos estén en territorio de la Unión Europea y, si tratan **categorías especiales de datos** (art. 9 RGPD), en **territorio español**. Ni la decisión de adecuación, ni el EEE, ni la OCDE bastan. Truco: datos normales, UE; datos especiales, España."
+    },
+    {
+      "id": "10",
+      "tema": 9,
+      "enunciado": "Según el art. 11.2 Ley 39/2015, NO es obligatoria la firma para:",
+      "opciones": [
+        "Interponer recursos",
+        "Formular solicitudes",
+        "Renunciar a derechos",
+        "Consultar el estado de tramitación de un expediente"
+      ],
+      "correcta": 3,
+      "explicacion": "El art. 11.2 Ley 39/2015 solo exige firma para formular solicitudes, presentar declaraciones responsables o comunicaciones, interponer recursos, desistir de acciones y renunciar a derechos. **Consultar el estado de tramitación** no está en la lista, así que basta con identificarse (art. 11.1)."
+    },
+    {
+      "id": "11",
+      "tema": 9,
+      "enunciado": "Cl@ve es un sistema de identificación basado en:",
+      "opciones": [
+        "Biometría",
+        "Claves concertadas",
+        "Tarjetas criptográficas exclusivamente",
+        "Blockchain"
+      ],
+      "correcta": 1,
+      "explicacion": "Cl@ve es el sistema común de identificación, autenticación y firma del sector público estatal basado en **claves concertadas** (Resolución de 14 de diciembre de 2015), y es un ejemplo del art. 9.2.c) Ley 39/2015. Integra también el DNIe y los certificados, pero no se basa exclusivamente en tarjetas criptográficas, ni en biometría ni en blockchain."
+    },
+    {
+      "id": "12",
+      "tema": 9,
+      "enunciado": "Para usar Cl@ve Firma (certificados en la nube) se requiere un registro en Cl@ve de nivel:",
+      "opciones": [
+        "Básico",
+        "Avanzado",
+        "Cualquiera",
+        "No requiere registro"
+      ],
+      "correcta": 1,
+      "explicacion": "Cl@ve Firma exige **registro de nivel avanzado** (por revisión manual de la videoidentificación, con certificado o DNIe, o presencialmente). El nivel básico, obtenido por videoidentificación automática o carta de invitación, no permite usar Cl@ve Firma ni todos los trámites."
+    },
+    {
+      "id": "13",
+      "tema": 9,
+      "enunciado": "La vigencia máxima de los certificados cualificados según la Ley 6/2020 es de:",
+      "opciones": [
+        "Dos años",
+        "Tres años",
+        "Cinco años",
+        "Diez años"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 4.2 Ley 6/2020** fija que la vigencia de los certificados cualificados **no será superior a cinco años**. Dos o tres años son vigencias habituales en la práctica, pero no el máximo legal; diez años no está permitido."
+    },
+    {
+      "id": "14",
+      "tema": 9,
+      "enunciado": "La Ley 6/2020 derogó:",
+      "opciones": [
+        "La Ley 11/2007",
+        "La Ley 59/2003, de firma electrónica",
+        "La Ley 30/1992",
+        "El Reglamento eIDAS"
+      ],
+      "correcta": 1,
+      "explicacion": "La Ley 6/2020 **deroga la Ley 59/2003, de firma electrónica**. Las Leyes 11/2007 y 30/1992 fueron derogadas por las Leyes 39 y 40/2015, y el Reglamento eIDAS es una norma de la UE que la Ley 6/2020 no puede derogar: lo **complementa** (art. 1)."
+    },
+    {
+      "id": "15",
+      "tema": 9,
+      "enunciado": "Según el art. 21 RD 203/2021, la verificación de documentos por CSV:",
+      "opciones": [
+        "Es gratuita y el CSV debe estar disponible al menos 5 años",
+        "Requiere certificado",
+        "Cuesta una tasa",
+        "Solo es posible en papel"
+      ],
+      "correcta": 0,
+      "explicacion": "El art. 21 RD 203/2021 establece que la comprobación por CSV en la sede es **gratuita** y que el código debe estar **disponible al menos 5 años**. No hace falta certificado: basta introducir el código en la sede; tampoco hay tasa, y la verificación es electrónica."
+    },
+    {
+      "id": "16",
+      "tema": 9,
+      "enunciado": "La Red SARA conecta con las instituciones europeas a través de:",
+      "opciones": [
+        "RedIRIS",
+        "sTESTA",
+        "GEANT",
+        "Internet público sin cifrar"
+      ],
+      "correcta": 1,
+      "explicacion": "La Red SARA enlaza con las instituciones de la UE mediante la red **sTESTA**. RedIRIS es la red académica y de investigación española y GÉANT la red europea de investigación; además el tráfico de SARA va cifrado, así que la última opción es incorrecta por partida doble."
+    },
+    {
+      "id": "17",
+      "tema": 9,
+      "enunciado": "La plataforma de la SGAD para validar certificados y firmas electrónicas es:",
+      "opciones": [
+        "@firma",
+        "FACe",
+        "GEISER",
+        "DIR3"
+      ],
+      "correcta": 0,
+      "explicacion": "**@firma** es la plataforma de **validación de certificados y firmas** electrónicas, integrable en los servicios de administración electrónica. FACe es el punto de entrada de facturas, GEISER gestiona registros de entrada y salida y DIR3 es el directorio común de unidades y oficinas."
+    },
+    {
+      "id": "18",
+      "tema": 9,
+      "enunciado": "El servicio en la nube que digitaliza la documentación presentada en papel en registro y la envía electrónicamente a su destino es:",
+      "opciones": [
+        "InSide",
+        "ORVE",
+        "TS@",
+        "Archive"
+      ],
+      "correcta": 1,
+      "explicacion": "**ORVE** digitaliza el papel presentado en la oficina de registro y lo **envía electrónicamente** a su destino a través del SIR. InSide gestiona documentos y expedientes electrónicos, TS@ es el sellado de tiempo y Archive el archivo definitivo."
+    },
+    {
+      "id": "19",
+      "tema": 9,
+      "enunciado": "Según el art. 157.3 Ley 40/2015, antes de adquirir o desarrollar una aplicación, las Administraciones deben:",
+      "opciones": [
+        "Pedir autorización al CCN",
+        "Consultar el directorio general de aplicaciones",
+        "Licitar siempre un contrato",
+        "Informar al Tribunal de Cuentas"
+      ],
+      "correcta": 1,
+      "explicacion": "El art. 157.3 Ley 40/2015 obliga a **consultar el directorio general de aplicaciones** (el CTT) antes de adquirir, desarrollar o mantener una aplicación; si hay una solución reutilizable, hay que usarla salvo justificación de eficiencia. No intervienen el CCN ni el Tribunal de Cuentas, y la idea es precisamente evitar contratar lo que ya existe."
+    },
+    {
+      "id": "20",
+      "tema": 9,
+      "enunciado": "La licencia que el ENI recomienda procurar para las aplicaciones de fuentes abiertas es:",
+      "opciones": [
+        "GPL v3",
+        "EUPL",
+        "Apache 2.0",
+        "Creative Commons BY"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 16 ENI** (RD 4/2010) dice que se procurará la **EUPL** (European Union Public Licence). GPL v3 y Apache 2.0 son licencias libres válidas, pero no las que nombra el ENI, y Creative Commons BY está pensada para contenidos, no para software."
+    },
+    {
+      "id": "21",
+      "tema": 9,
+      "enunciado": "Según su artículo 1, la Ley 6/2020, de 11 de noviembre, de servicios electrónicos de confianza:",
+      "opciones": [
+        "Traspone al derecho español el Reglamento eIDAS",
+        "Sustituye al Reglamento eIDAS en España",
+        "Complementa el Reglamento (UE) 910/2014 (eIDAS)",
+        "Desarrolla reglamentariamente la Ley 39/2015"
+      ],
+      "correcta": 2,
+      "explicacion": "La Ley 6/2020 **complementa el Reglamento (UE) 910/2014 (eIDAS)** en los aspectos que este deja a los Estados. Un reglamento de la UE es directamente aplicable: no se traspone ni puede ser sustituido por una ley nacional (eso pasa con las directivas). Tampoco es desarrollo de la Ley 39/2015."
+    },
+    {
+      "id": "22",
+      "tema": 9,
+      "enunciado": "La Comisión Sectorial de Administración Electrónica (DA 9.ª Ley 40/2015) es un órgano técnico de cooperación de la AGE, las CCAA y las EELL que depende de:",
+      "opciones": [
+        "La Conferencia Sectorial de Administración Pública",
+        "La Secretaría General de Administración Digital",
+        "El Consejo Superior de Administración Electrónica",
+        "La Comisión Ministerial de Administración Digital"
+      ],
+      "correcta": 0,
+      "explicacion": "Según la DA 9.ª Ley 40/2015, la Comisión Sectorial de Administración Electrónica depende de la **Conferencia Sectorial de Administración Pública**, porque es un órgano de cooperación entre las tres Administraciones. La SGAD es un órgano de la AGE y las Comisiones Ministeriales de Administración Digital son órganos internos de cada ministerio."
+    },
+    {
+      "id": "23",
+      "tema": 9,
+      "enunciado": "Según el art. 38.1 Ley 40/2015, la titularidad de una sede electrónica corresponde a:",
+      "opciones": [
+        "El ministerio competente en transformación digital, para todo el sector público estatal",
+        "Un prestador cualificado de servicios electrónicos de confianza inscrito en la lista",
+        "La Secretaría General de Administración Digital, que la gestiona para toda la AGE",
+        "Una Administración Pública, o uno o varios organismos o entidades de derecho público, en el ejercicio de sus competencias"
+      ],
+      "correcta": 3,
+      "explicacion": "El art. 38.1 Ley 40/2015 atribuye la titularidad de la sede a **una Administración Pública o a uno o varios organismos públicos o entidades de derecho público en el ejercicio de sus competencias**. Cada titular tiene su sede; no hay una sede única de la SGAD ni la titularidad recae en un prestador privado de servicios de confianza."
+    },
+    {
+      "id": "24",
+      "tema": 9,
+      "enunciado": "El establecimiento de una sede electrónica conlleva la responsabilidad del titular respecto de:",
+      "opciones": [
+        "La confidencialidad, trazabilidad y autenticidad de los datos personales",
+        "La integridad, veracidad y actualización de la información y los servicios",
+        "La disponibilidad, rapidez y gratuidad de todos los trámites",
+        "La interoperabilidad, reutilización y licencia de las aplicaciones"
+      ],
+      "correcta": 1,
+      "explicacion": "El art. 38 Ley 40/2015, desarrollado por el art. 12 RD 203/2021, hace responsable al titular de la **integridad, veracidad y actualización** de la información y servicios de la sede. Las otras ternas mezclan dimensiones de seguridad o principios de reutilización que no son el objeto de esa responsabilidad. Truco: «IVA» (Integridad, Veracidad, Actualización)."
+    },
+    {
+      "id": "25",
+      "tema": 9,
+      "enunciado": "Señale cuál NO es uno de los principios de creación y gestión de las sedes electrónicas que enumera el art. 38 Ley 40/2015:",
+      "opciones": [
+        "Proporcionalidad",
+        "Neutralidad",
+        "Accesibilidad",
+        "Interoperabilidad"
+      ],
+      "correcta": 0,
+      "explicacion": "Los principios del art. 38 Ley 40/2015 son **transparencia, publicidad, responsabilidad, calidad, seguridad, disponibilidad, accesibilidad, neutralidad e interoperabilidad**. La **proporcionalidad** no está en la lista, aunque sea un principio general del derecho administrativo. Neutralidad, accesibilidad e interoperabilidad sí figuran."
+    },
+    {
+      "id": "26",
+      "tema": 9,
+      "enunciado": "En el ámbito estatal, según el art. 10.3 RD 203/2021, la creación de una sede electrónica de un departamento ministerial se realiza mediante:",
+      "opciones": [
+        "Real decreto aprobado por el Consejo de Ministros",
+        "Ley ordinaria de las Cortes Generales",
+        "Orden de la persona titular del departamento",
+        "Instrucción de la Secretaría General de Administración Digital"
+      ],
+      "correcta": 2,
+      "explicacion": "El art. 10.3 RD 203/2021 prevé la creación o supresión por **orden** del departamento (o **resolución** si es un organismo), con informe previo favorable de los ministerios competentes en función pública y en transformación digital. No hace falta real decreto ni ley, y la SGAD no crea sedes ajenas por instrucción."
+    },
+    {
+      "id": "27",
+      "tema": 9,
+      "enunciado": "Según el art. 11.2 RD 203/2021, ¿cuál de los siguientes es un SERVICIO mínimo de la sede, y no un elemento de su contenido mínimo?",
+      "opciones": [
+        "La fecha y hora oficial",
+        "La comprobación de documentos mediante CSV",
+        "El mapa de la sede",
+        "El instrumento de creación de la sede"
+      ],
+      "correcta": 1,
+      "explicacion": "La **comprobación de documentos mediante CSV** está entre los **servicios mínimos** del art. 11.2, junto con el acceso a los trámites y sus plazos, las quejas y sugerencias, la verificación de certificados y sellos y el directorio de oficinas de registro. La fecha y hora oficial, el mapa y el instrumento de creación son **contenido mínimo** (art. 11.1). Truco: el contenido se «lee», los servicios se «usan»."
+    },
+    {
+      "id": "28",
+      "tema": 9,
+      "enunciado": "¿Cuál es la diferencia esencial entre el portal de internet (art. 39 Ley 40/2015) y la sede electrónica (art. 38)?",
+      "opciones": [
+        "El portal exige certificado cualificado de sitio web y la sede no lo exige",
+        "El portal es propio de las CCAA y la sede es propia de la AGE",
+        "El portal se crea por ley y la sede por orden del departamento",
+        "El portal da acceso a la información publicada; en la sede se tramita con efectos jurídicos"
+      ],
+      "correcta": 3,
+      "explicacion": "El **portal** es un punto de acceso a la **información publicada** (y, en su caso, a la sede); la **sede** permite además **tramitar con efectos jurídicos**. Es al revés de lo que dice una de las opciones: la ley exige el certificado cualificado de sitio web a la sede (38.6), no al portal. Ambos existen en todas las Administraciones y ninguno requiere ley."
+    },
+    {
+      "id": "29",
+      "tema": 9,
+      "enunciado": "Según el RD 203/2021, la creación de un portal de internet en el ámbito estatal requiere el informe favorable de:",
+      "opciones": [
+        "La Agencia Española de Protección de Datos",
+        "El Centro Criptológico Nacional",
+        "La Comisión Sectorial de Administración Electrónica",
+        "La Comisión Ministerial de Administración Digital del departamento"
+      ],
+      "correcta": 3,
+      "explicacion": "Los portales estatales se crean o suprimen por orden ministerial o resolución del órgano superior, con informe favorable de la **Comisión Ministerial de Administración Digital** del departamento. La Comisión Sectorial de Administración Electrónica es un órgano de cooperación entre Administraciones, no interviene en cada portal; la AEPD y el CCN tampoco."
+    },
+    {
+      "id": "30",
+      "tema": 9,
+      "enunciado": "Además de usar un dominio con «.gob.es», todo portal de internet del ámbito estatal debe, según el art. 6 RD 203/2021:",
+      "opciones": [
+        "Figurar en el Punto de Acceso General electrónico",
+        "Estar alojado en los servidores de la Red SARA",
+        "Disponer de un certificado cualificado de sello",
+        "Inscribirse en el Registro Electrónico General"
+      ],
+      "correcta": 0,
+      "explicacion": "El art. 6 RD 203/2021 exige el dominio «.gob.es» y que el portal **figure en el PAGe**, que actúa como puerta única de la AGE. La Red SARA es una red entre Administraciones, no un alojamiento obligatorio; el sello electrónico sirve para identificar actuaciones, y el Registro Electrónico General recoge asientos, no portales."
+    },
+    {
+      "id": "31",
+      "tema": 9,
+      "enunciado": "Según el art. 13.a) Ley 39/2015, comunicarse con las Administraciones a través de un Punto de Acceso General electrónico es:",
+      "opciones": [
+        "Una obligación de todas las personas jurídicas",
+        "Un derecho de las personas en sus relaciones con las Administraciones",
+        "Una facultad discrecional del órgano instructor",
+        "Un servicio mínimo exclusivo de las sedes asociadas"
+      ],
+      "correcta": 1,
+      "explicacion": "El art. 13.a) Ley 39/2015 lo configura como un **derecho** de las personas. La obligación de relacionarse electrónicamente de las personas jurídicas está en el art. 14.2, que es otra cosa; no es una facultad del instructor ni un servicio de las sedes asociadas."
+    },
+    {
+      "id": "32",
+      "tema": 9,
+      "enunciado": "Según el art. 8 RD 203/2021, ¿quién puede acceder a la Carpeta Ciudadana de un interesado?",
+      "opciones": [
+        "Solo el propio interesado, identificado con un certificado cualificado de firma",
+        "El interesado y cualquier funcionario habilitado de una oficina de registro",
+        "El interesado, sus representantes legales y quien tenga un poder general inscrito en el Registro Electrónico de Apoderamientos",
+        "El interesado y cualquier persona que disponga del CSV de sus documentos"
+      ],
+      "correcta": 2,
+      "explicacion": "Pueden acceder el **interesado**, sus **representantes legales** y quien tenga un **poder general inscrito** en el Registro Electrónico de Apoderamientos. No está limitado al certificado cualificado (sirve cualquier sistema del art. 9.2 Ley 39/2015), el funcionario habilitado actúa en trámites concretos con consentimiento, y el CSV solo sirve para comprobar un documento."
+    },
+    {
+      "id": "33",
+      "tema": 9,
+      "enunciado": "Una persona tiene la misma notificación disponible en la sede del organismo emisor y en la DEHú. Según el art. 42.1 RD 203/2021, a efectos jurídicos se tiene en cuenta:",
+      "opciones": [
+        "El primer acceso o rechazo que se produzca",
+        "El último acceso que se produzca",
+        "Siempre el acceso realizado en la DEHú",
+        "Siempre el acceso realizado en la sede"
+      ],
+      "correcta": 0,
+      "explicacion": "Cuando se notifica a la vez por varios canales electrónicos, cuenta **el primer acceso o rechazo** (art. 42.1 RD 203/2021), con independencia del canal. Elegir siempre un canal o el último acceso permitiría alargar los plazos a voluntad del interesado."
+    },
+    {
+      "id": "34",
+      "tema": 9,
+      "enunciado": "Según el art. 12.2 Ley 39/2015, para que un funcionario habilitado pueda identificar o firmar en nombre de un interesado es necesario que este:",
+      "opciones": [
+        "Esté obligado a relacionarse electrónicamente y carezca de certificado",
+        "Haya inscrito antes un poder notarial en el Registro de Apoderamientos",
+        "Obtenga una autorización previa de la Secretaría General de Administración Digital",
+        "No esté obligado a relacionarse electrónicamente, lo solicite y preste su consentimiento expreso"
+      ],
+      "correcta": 3,
+      "explicacion": "La asistencia del art. 12.2 se presta a los interesados **no obligados** a relacionarse electrónicamente que la **pidan**; el funcionario usa su propio sistema y el interesado debe identificarse y prestar **consentimiento expreso**. Los obligados no pueden ampararse en ella, y no se exige poder ni autorización de la SGAD."
+    },
+    {
+      "id": "35",
+      "tema": 9,
+      "enunciado": "El Registro de Funcionarios Habilitados (art. 31 RD 203/2021) recoge habilitaciones en tres ámbitos. ¿Cuál NO es uno de ellos?",
+      "opciones": [
+        "La identificación y firma en nombre del interesado",
+        "La expedición de copias auténticas",
+        "La práctica de notificaciones en papel",
+        "Las oficinas de registro"
+      ],
+      "correcta": 2,
+      "explicacion": "Los tres ámbitos de habilitación son la **identificación y firma** en nombre del interesado, la **expedición de copias auténticas** y las **oficinas de registro**. La práctica de notificaciones en papel no es una habilitación del registro: la canaliza Notific@ hacia los centros de impresión y ensobrado."
+    },
+    {
+      "id": "36",
+      "tema": 9,
+      "enunciado": "Según el art. 11.1 Ley 39/2015, con carácter general, para realizar cualquier actuación prevista en el procedimiento administrativo es suficiente con que los interesados:",
+      "opciones": [
+        "Firmen con firma electrónica cualificada",
+        "Acrediten previamente su identidad",
+        "Usen un sello electrónico avanzado",
+        "Comparezcan en una oficina de registro"
+      ],
+      "correcta": 1,
+      "explicacion": "La regla general del art. 11.1 es que **basta con identificarse**; la firma solo se exige en los cinco supuestos del art. 11.2 (solicitudes, declaraciones responsables o comunicaciones, recursos, desistimiento y renuncia). Exigir siempre firma cualificada o comparecencia presencial iría contra esa regla."
+    },
+    {
+      "id": "37",
+      "tema": 9,
+      "enunciado": "Jurídicamente, la firma electrónica, a diferencia de la mera identificación, permite acreditar además:",
+      "opciones": [
+        "La capacidad de obrar del firmante",
+        "La voluntad y el consentimiento del firmante",
+        "La nacionalidad y residencia del firmante",
+        "Que el firmante no tiene deudas con la Administración"
+      ],
+      "correcta": 1,
+      "explicacion": "**Identificarse** acredita quién eres; **firmar** acredita además tu **voluntad y consentimiento** sobre el contenido. La capacidad de obrar, la residencia o la situación de deudas no se prueban con la firma: se comprueban por otras vías (por ejemplo, con la Plataforma de Intermediación de Datos)."
+    },
+    {
+      "id": "38",
+      "tema": 9,
+      "enunciado": "Según el art. 9.2.a) Ley 39/2015, los certificados cualificados de firma electrónica válidos para identificarse deben estar expedidos por prestadores incluidos en:",
+      "opciones": [
+        "La «Lista de confianza de prestadores de servicios de certificación»",
+        "El Registro de Funcionarios Habilitados",
+        "El Directorio Común de Unidades (DIR3)",
+        "El directorio del Centro de Transferencia de Tecnología"
+      ],
+      "correcta": 0,
+      "explicacion": "El art. 9.2.a) admite los sistemas basados en certificados cualificados expedidos por prestadores incluidos en la **«Lista de confianza de prestadores de servicios de certificación»** (la TSL). El Registro de Funcionarios Habilitados recoge empleados públicos, DIR3 unidades y oficinas, y el CTT aplicaciones reutilizables."
+    },
+    {
+      "id": "39",
+      "tema": 9,
+      "enunciado": "Durante los dos meses siguientes a la comunicación de un sistema del art. 9.2.c) Ley 39/2015, el órgano estatal competente puede acudir a la vía jurisdiccional por motivos de seguridad pública previo informe vinculante de:",
+      "opciones": [
+        "El Centro Criptológico Nacional",
+        "La Agencia Española de Protección de Datos",
+        "La Secretaría General de Administración Digital",
+        "La Secretaría de Estado de Seguridad"
+      ],
+      "correcta": 3,
+      "explicacion": "El informe vinculante lo emite la **Secretaría de Estado de Seguridad** (en 10 días), porque el motivo es la **seguridad pública**. La SGAD es quien recibe la comunicación del sistema; el CCN y la AEPD no intervienen en este trámite concreto."
+    },
+    {
+      "id": "40",
+      "tema": 9,
+      "enunciado": "Los recursos técnicos de un sistema de identificación del art. 9.2.c) Ley 39/2015 que no trata categorías especiales de datos deben situarse en:",
+      "opciones": [
+        "Territorio español en todo caso",
+        "Cualquier Estado miembro de la OCDE",
+        "Territorio de la Unión Europea",
+        "Cualquier país con certificación del ENS"
+      ],
+      "correcta": 2,
+      "explicacion": "El art. 9.3 Ley 39/2015 exige con carácter general que los recursos técnicos estén en **territorio de la Unión Europea**; solo si tratan categorías especiales de datos (art. 9 RGPD) deben estar en **territorio español**. La OCDE no es criterio, y el ENS certifica sistemas, no países."
+    },
+    {
+      "id": "41",
+      "tema": 9,
+      "enunciado": "Según el art. 10.2 Ley 39/2015, la letra b) admite como sistema de firma de los interesados:",
+      "opciones": [
+        "Los sellos electrónicos cualificados y avanzados basados en certificados cualificados de sello",
+        "Los sistemas de clave concertada previamente registrados",
+        "El código seguro de verificación del documento",
+        "La firma manuscrita digitalizada en una tableta"
+      ],
+      "correcta": 0,
+      "explicacion": "El art. 10.2 enumera: a) firma electrónica cualificada y avanzada basada en certificados cualificados; b) **sello electrónico cualificado y avanzado** basado en certificados cualificados de sello; c) cualquier otro sistema válido en las condiciones del 9.2.c). Las claves concertadas encajarían en la letra c), y el CSV es un sistema de firma de las Administraciones (art. 42 Ley 40/2015), no de los interesados."
+    },
+    {
+      "id": "42",
+      "tema": 9,
+      "enunciado": "Según el art. 10.4 Ley 39/2015, las Administraciones pueden admitir los sistemas de identificación como sistema de firma:",
+      "opciones": [
+        "Siempre que el interesado no esté obligado a relacionarse electrónicamente",
+        "Solo en procedimientos cuya cuantía no supere el límite fijado por la SGAD",
+        "Cuando lo disponga expresamente la normativa y permitan acreditar la voluntad y el consentimiento",
+        "Únicamente si el sistema se basa en un certificado cualificado de sello"
+      ],
+      "correcta": 2,
+      "explicacion": "El art. 10.4 lo permite **cuando así lo disponga expresamente la normativa reguladora** y el sistema permita **acreditar la autenticidad de la expresión de la voluntad y el consentimiento**. No depende de estar o no obligado, de cuantías ni del tipo de certificado."
+    },
+    {
+      "id": "43",
+      "tema": 9,
+      "enunciado": "Un ciudadano se ha registrado en Cl@ve por internet con una carta de invitación. ¿Qué nivel de registro tiene y qué limitación le afecta?",
+      "opciones": [
+        "Nivel avanzado; puede usar todos los servicios sin limitación",
+        "Nivel avanzado; puede hacerlo todo salvo usar Cl@ve Firma",
+        "Nivel básico; solo puede consultar sus notificaciones en la DEHú",
+        "Nivel básico; no puede usar Cl@ve Firma ni realizar todos los trámites"
+      ],
+      "correcta": 3,
+      "explicacion": "El registro por **carta de invitación** (o por videoidentificación automática) da **nivel básico**, que **no permite Cl@ve Firma ni todos los trámites**. El nivel avanzado se obtiene tras revisión manual de la videoidentificación, con certificado o DNIe, o presencialmente en una oficina. El nivel básico no se limita a la DEHú."
+    },
+    {
+      "id": "44",
+      "tema": 9,
+      "enunciado": "En la modalidad Cl@ve Permanente, el modo «reforzado» añade a la contraseña:",
+      "opciones": [
+        "La lectura del chip del DNIe mediante NFC",
+        "Un código de un solo uso (OTP) enviado al teléfono móvil",
+        "El escaneo de un código QR con la app",
+        "Una cita previa en la oficina de registro"
+      ],
+      "correcta": 1,
+      "explicacion": "Cl@ve Permanente usa usuario (DNI/NIE) y **contraseña** duradera; en modo **reforzado** se añade un **código de un solo uso (OTP)** al móvil. El escaneo de un código QR es propio de Cl@ve Móvil, y el DNIe es un método distinto integrado en la pasarela Cl@ve."
+    },
+    {
+      "id": "45",
+      "tema": 9,
+      "enunciado": "Los certificados electrónicos incorporados en el chip del DNIe los expide:",
+      "opciones": [
+        "La Fábrica Nacional de Moneda y Timbre",
+        "La Agencia Estatal de Administración Tributaria",
+        "La Dirección General de la Policía",
+        "La Secretaría General de Administración Digital"
+      ],
+      "correcta": 2,
+      "explicacion": "Los certificados del **DNIe** los expide la **Dirección General de la Policía**, que es quien expide el propio documento. La **FNMT** expide otros certificados, como el certificado software de ciudadano; la AEAT y la SGAD no emiten los certificados del DNIe."
+    },
+    {
+      "id": "46",
+      "tema": 9,
+      "enunciado": "¿Qué consecuencia tiene el Nodo español de interoperabilidad de la identificación electrónica (Nodo eIDAS) creado por el RD 203/2021?",
+      "opciones": [
+        "Hay que aceptar los sistemas de identificación notificados por otros Estados miembros con el nivel de seguridad exigido",
+        "Solo se admiten en España los certificados expedidos por prestadores españoles",
+        "Los ciudadanos europeos deben obtener un DNIe para hacer trámites en España",
+        "Se aceptan los certificados de cualquier país sin comprobar su nivel de seguridad"
+      ],
+      "correcta": 0,
+      "explicacion": "El Nodo eIDAS permite que funcionen en España las identidades electrónicas europeas: hay que **aceptar los sistemas notificados por otros Estados miembros** con el **nivel de seguridad exigido**. Lo contrario (solo prestadores españoles, exigir DNIe) va contra eIDAS, y la aceptación no es para cualquier país ni sin control del nivel."
+    },
+    {
+      "id": "47",
+      "tema": 9,
+      "enunciado": "Según el art. 42 Ley 40/2015, en la actuación administrativa automatizada cada Administración puede usar como sistemas de firma:",
+      "opciones": [
+        "Cl@ve PIN y Cl@ve Permanente",
+        "El sello electrónico y el código seguro de verificación",
+        "La firma manuscrita y el sello de tiempo",
+        "El certificado de sitio web y el DNIe del titular"
+      ],
+      "correcta": 1,
+      "explicacion": "Para la actuación automatizada, el art. 42 Ley 40/2015 prevé el **sello electrónico** (letra a) y el **CSV** (letra b). Cl@ve sirve a los ciudadanos, el sello de tiempo acredita fecha y hora pero no firma, y el certificado de sitio web identifica la sede."
+    },
+    {
+      "id": "48",
+      "tema": 9,
+      "enunciado": "Según el art. 43 Ley 40/2015, por razones de seguridad pública, los sistemas de firma electrónica del personal al servicio de las Administraciones pueden referirse solo a:",
+      "opciones": [
+        "El código DIR3 de la unidad en la que presta servicios",
+        "El código seguro de verificación del documento",
+        "El sello electrónico del órgano al que pertenece",
+        "El número de identificación profesional del empleado público"
+      ],
+      "correcta": 3,
+      "explicacion": "El art. 43 Ley 40/2015 permite que, por **seguridad pública**, la firma muestre solo el **número de identificación profesional** del empleado, sin su nombre (por ejemplo, en cuerpos policiales). El código DIR3 identifica unidades, el CSV identifica documentos y el sello identifica al órgano, no a la persona."
+    },
+    {
+      "id": "49",
+      "tema": 9,
+      "enunciado": "¿Qué significan las siglas de la Red SARA?",
+      "opciones": [
+        "Sistemas de Aplicaciones y Redes para las Administraciones",
+        "Servicio de Acceso Remoto a las Administraciones",
+        "Sistema Avanzado de Registro Administrativo",
+        "Servicios de Autenticación y Redes de la AGE"
+      ],
+      "correcta": 0,
+      "explicacion": "**SARA** = **Sistemas de Aplicaciones y Redes para las Administraciones**: una infraestructura de comunicaciones y servicios básicos que interconecta las redes de las Administraciones españolas y enlaza con la UE por sTESTA. Las demás siglas son inventadas a partir de palabras del tema."
+    },
+    {
+      "id": "50",
+      "tema": 9,
+      "enunciado": "Según el art. 13 del Esquema Nacional de Interoperabilidad (RD 4/2010), para comunicarse entre sí las Administraciones utilizarán preferentemente:",
+      "opciones": [
+        "Internet con redes privadas virtuales propias",
+        "La red sTESTA",
+        "La red RedIRIS",
+        "La Red SARA"
+      ],
+      "correcta": 3,
+      "explicacion": "El art. 13 ENI ordena usar **preferentemente la Red SARA** para las comunicaciones entre Administraciones. sTESTA es la red con la que SARA enlaza con las instituciones europeas, y RedIRIS es la red académica y de investigación."
+    },
+    {
+      "id": "51",
+      "tema": 9,
+      "enunciado": "¿Qué servicio común canaliza las notificaciones de los organismos emisores hacia la DEHú, la Carpeta Ciudadana, la sede o el papel (centros de impresión y ensobrado)?",
+      "opciones": [
+        "La DEHú",
+        "Notific@",
+        "El SIR",
+        "ORVE"
+      ],
+      "correcta": 1,
+      "explicacion": "**Notific@** es el servicio compartido de **gestión de notificaciones** del lado de los organismos: las reparte por los canales y genera CSV y PDF/A. La **DEHú** es el punto donde el **ciudadano** accede a sus notificaciones. SIR y ORVE son servicios de registro. Truco: Notific@ envía, DEHú recibe."
+    },
+    {
+      "id": "52",
+      "tema": 9,
+      "enunciado": "La Plataforma de Intermediación de Datos permite a las Administraciones consultar y verificar datos de otras Administraciones para hacer efectivo el derecho del art. 28.2 Ley 39/2015, que consiste en:",
+      "opciones": [
+        "Obtener copias auténticas gratuitas de cualquier documento",
+        "Conocer en todo momento el estado de tramitación del expediente",
+        "No aportar documentos que ya obren en poder de las Administraciones",
+        "Ser asistido en el uso de los medios electrónicos"
+      ],
+      "correcta": 2,
+      "explicacion": "La Plataforma de Intermediación hace que el ciudadano **no tenga que aportar documentos o certificados** que ya tiene la Administración (art. 28.2 Ley 39/2015), apoyándose en las transmisiones de datos del art. 155 Ley 40/2015. Conocer el estado del expediente y la asistencia son otros derechos (art. 53 y art. 13 Ley 39/2015)."
+    },
+    {
+      "id": "53",
+      "tema": 9,
+      "enunciado": "La solución de la SGAD para la gestión de documentos y expedientes electrónicos conforme al Esquema Nacional de Interoperabilidad es:",
+      "opciones": [
+        "InSide",
+        "Archive",
+        "GEISER",
+        "ACCEDA"
+      ],
+      "correcta": 0,
+      "explicacion": "**InSide** sirve para la **gestión de documentos y expedientes electrónicos** conforme al ENI. **Archive** es el archivo **definitivo**, cuando el expediente ya está cerrado; GEISER gestiona registros de entrada y salida, y ACCEDA es una plataforma para montar una sede y tramitar."
+    },
+    {
+      "id": "54",
+      "tema": 9,
+      "enunciado": "El inventario de procedimientos y servicios de las Administraciones es:",
+      "opciones": [
+        "El DIR3 (Directorio Común de Unidades)",
+        "El SIA (Sistema de Información Administrativa)",
+        "El SIR (Sistema de Interconexión de Registros)",
+        "El CTT (Centro de Transferencia de Tecnología)"
+      ],
+      "correcta": 1,
+      "explicacion": "El **SIA** es el inventario de **procedimientos y servicios**. **DIR3** es el inventario de **unidades orgánicas y oficinas**; el SIR intercambia asientos registrales y el CTT es el directorio de aplicaciones reutilizables. Truco: SIA, «Servicios e Información Administrativa»; DIR3, «DIRectorio» de unidades."
+    },
+    {
+      "id": "55",
+      "tema": 9,
+      "enunciado": "¿Qué plataforma común acredita la fecha y la hora de una operación electrónica, sincronizada con la hora oficial?",
+      "opciones": [
+        "@firma",
+        "VALIDe",
+        "Port@firmas",
+        "TS@"
+      ],
+      "correcta": 3,
+      "explicacion": "**TS@** es la plataforma de **sellado de tiempo** (time stamp), sincronizada con la hora oficial. @firma valida certificados y firmas, VALIDe es el servicio en línea para validar y firmar, y Port@firmas integra la firma en los flujos de trabajo."
+    },
+    {
+      "id": "56",
+      "tema": 9,
+      "enunciado": "FACe es:",
+      "opciones": [
+        "La plataforma de validación de certificados y firmas de la SGAD",
+        "El servicio de digitalización del papel presentado en las oficinas de registro",
+        "El Punto General de Entrada de Facturas Electrónicas de la AGE para proveedores",
+        "El directorio común de unidades orgánicas y oficinas"
+      ],
+      "correcta": 2,
+      "explicacion": "**FACe** es el **Punto General de Entrada de Facturas Electrónicas** de la AGE, por donde los proveedores presentan sus facturas. La validación de firmas es @firma, la digitalización en registro es ORVE y el directorio de unidades es DIR3."
+    },
+    {
+      "id": "57",
+      "tema": 9,
+      "enunciado": "Según el art. 157.1 Ley 40/2015, las Administraciones pondrán a disposición de cualquier Administración que lo solicite las aplicaciones de su propiedad, salvo que:",
+      "opciones": [
+        "Se hayan desarrollado con fondos europeos",
+        "Lleven menos de cinco años en producción",
+        "Estén declaradas de fuentes abiertas",
+        "La información asociada a ellas sea objeto de especial protección"
+      ],
+      "correcta": 3,
+      "explicacion": "La excepción del art. 157.1 es que la **información asociada sea objeto de especial protección** por una norma; además, pueden acordar repercutir el coste. Las aplicaciones de fuentes abiertas (157.2) son justamente las más fáciles de compartir, y la ley no excluye por financiación ni antigüedad."
+    },
+    {
+      "id": "58",
+      "tema": 9,
+      "enunciado": "Según el art. 157.3 Ley 40/2015, si en el directorio general existe una solución reutilizable, la Administración puede no usarla:",
+      "opciones": [
+        "Si lo justifica en términos de eficiencia",
+        "Si la aplicación pertenece a otra comunidad autónoma",
+        "Si prefiere contratar una solución comercial",
+        "Si la solución lleva más de cinco años publicada"
+      ],
+      "correcta": 0,
+      "explicacion": "El art. 157.3 obliga a usar la solución reutilizable disponible **salvo que la decisión de no hacerlo se justifique en términos de eficiencia**. Que la solución sea de otra Administración es lo normal en la reutilización, y la mera preferencia o la antigüedad no son motivos legales."
+    },
+    {
+      "id": "59",
+      "tema": 9,
+      "enunciado": "Según el art. 155 Ley 40/2015, si la Administración cesionaria quiere tratar los datos recibidos para una finalidad ulterior compatible, la cedente puede oponerse en el plazo de:",
+      "opciones": [
+        "Cinco días",
+        "Quince días",
+        "Diez días",
+        "Un mes"
+      ],
+      "correcta": 2,
+      "explicacion": "El art. 155 Ley 40/2015 obliga a la cesionaria a comunicarlo a la cedente, que puede **oponerse en diez días**. Cinco y quince días son plazos cercanos que aparecen en otros trámites, y un mes no es el plazo de este artículo."
+    },
+    {
+      "id": "60",
+      "tema": 9,
+      "enunciado": "Según el art. 16 ENI, las condiciones de licenciamiento de las aplicaciones de las Administraciones prevén por defecto su uso:",
+      "opciones": [
+        "Mediante convenio previo y pago del coste de desarrollo",
+        "Sin contraprestación y sin necesidad de convenio",
+        "Solo dentro de la misma Administración titular",
+        "Previa autorización de la Comisión Sectorial de Administración Electrónica"
+      ],
+      "correcta": 1,
+      "explicacion": "El art. 16 ENI establece que, por defecto, la reutilización se hace **sin contraprestación y sin necesidad de convenio**, con licencias que permitan ejecutar, estudiar, modificar y redistribuir (preferentemente la EUPL). La posibilidad de repercutir costes del art. 157.1 Ley 40/2015 es excepcional, y no hace falta autorización de ningún órgano."
+    }
+  ]
+}

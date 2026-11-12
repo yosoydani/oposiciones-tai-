@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 06 · test",
+  "fuente": "propio",
+  "tema": 6,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 6. Sociedad de la información, identidad y firma electrónica, DNIe y Agenda Digital»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 6,
+      "enunciado": "La Ley de servicios de la sociedad de la información y de comercio electrónico es:",
+      "opciones": [
+        "Ley 59/2003, de 19 de diciembre",
+        "Ley 34/2002, de 11 de julio",
+        "Ley 6/2020, de 11 de noviembre",
+        "Ley 39/2015, de 1 de octubre"
+      ],
+      "correcta": 1,
+      "explicacion": "La LSSI es la **Ley 34/2002, de 11 de julio**. La Ley 59/2003 era la antigua ley de firma electrónica (derogada por la Ley 6/2020); la Ley 6/2020 regula los servicios electrónicos de confianza, y la Ley 39/2015 es la del procedimiento administrativo común."
+    },
+    {
+      "id": "02",
+      "tema": 6,
+      "enunciado": "Según el art. 28 LSSI, el oferente debe confirmar la recepción de la aceptación mediante acuse de recibo en el plazo de:",
+      "opciones": [
+        "48 horas",
+        "72 horas",
+        "24 horas",
+        "10 días"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 28 LSSI** obliga a enviar el acuse de recibo en las **24 horas** siguientes a la recepción de la aceptación, o a confirmarla por un medio equivalente al terminar el procedimiento de contratación, si el aceptante puede archivarla. 48 y 72 horas son distractores habituales."
+    },
+    {
+      "id": "03",
+      "tema": 6,
+      "enunciado": "La multa máxima por infracción muy grave de la LSSI es de:",
+      "opciones": [
+        "150.000 €",
+        "300.000 €",
+        "30.000 €",
+        "600.000 €"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 39 LSSI** sanciona las muy graves con multa de **150.001 a 600.000 €**. 150.000 € es el tope de las graves y 30.000 € el de las leves. 300.000 € es el máximo de la Ley 6/2020, la confusión más típica."
+    },
+    {
+      "id": "04",
+      "tema": 6,
+      "enunciado": "Según el RD 255/2025, los certificados electrónicos contenidos en el DNI tienen una validez de:",
+      "opciones": [
+        "2 años",
+        "30 meses",
+        "5 años",
+        "La misma que el documento"
+      ],
+      "correcta": 0,
+      "explicacion": "Según el **art. 11 RD 255/2025**, los certificados del chip del DNI tienen una vigencia de **2 años**, más corta que la del propio documento. Los 30 meses eran el plazo de la normativa anterior (RD 1553/2005, ya derogado), y 5 años es el máximo de los certificados cualificados en general (art. 4 Ley 6/2020)."
+    },
+    {
+      "id": "05",
+      "tema": 6,
+      "enunciado": "¿Qué órgano sanciona el uso de cookies sin consentimiento previsto en la LSSI?",
+      "opciones": [
+        "La CNMC",
+        "La Agencia Española de Protección de Datos",
+        "El Ministerio del Interior",
+        "El Instituto Nacional de Ciberseguridad"
+      ],
+      "correcta": 1,
+      "explicacion": "Según el **art. 43 LSSI**, la **AEPD** sanciona las infracciones de los arts. 21 (comunicaciones comerciales electrónicas no solicitadas) y 22 (cookies). Las demás las sanciona el Ministerio competente en sociedad de la información. Ni la CNMC ni el INCIBE tienen esa potestad."
+    },
+    {
+      "id": "06",
+      "tema": 6,
+      "enunciado": "Un contrato electrónico en el que interviene un consumidor se presume celebrado:",
+      "opciones": [
+        "En el lugar de residencia habitual del consumidor",
+        "Donde esté establecido el prestador",
+        "Donde esté el servidor",
+        "En Madrid"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 29 LSSI** presume celebrados los contratos con consumidores en el lugar de su **residencia habitual**, para protegerlos. El lugar de establecimiento del prestador solo rige entre empresarios y salvo pacto. La ubicación del servidor no es criterio."
+    },
+    {
+      "id": "07",
+      "tema": 6,
+      "enunciado": "El prestador de alojamiento de datos no responde de la información almacenada si:",
+      "opciones": [
+        "Cobra por el servicio",
+        "Está establecido fuera de la UE",
+        "No tiene conocimiento efectivo de su ilicitud o, si lo tiene, actúa con diligencia para retirarla",
+        "El usuario es consumidor"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 16 LSSI** exime al prestador de alojamiento si **no tiene conocimiento efectivo** de la ilicitud o, si lo tiene, **actúa con diligencia** para retirar los datos o impedir el acceso. Cobrar, estar fuera de la UE o que el usuario sea consumidor no influyen en la exención."
+    },
+    {
+      "id": "08",
+      "tema": 6,
+      "enunciado": "El Reglamento (UE) 910/2014 (eIDAS) es aplicable con carácter general desde:",
+      "opciones": [
+        "El 17 de septiembre de 2014",
+        "El 29 de septiembre de 2018",
+        "El 25 de mayo de 2018",
+        "El 1 de julio de 2016"
+      ],
+      "correcta": 3,
+      "explicacion": "Según el **art. 52 eIDAS**, el Reglamento entró en vigor a los 20 días de su publicación (el 17-9-2014), pero es **aplicable con carácter general desde el 1-7-2016**. El 29-9-2018 es la fecha del reconocimiento mutuo obligatorio de la identificación electrónica, y el 25-5-2018 la de aplicación del RGPD."
+    },
+    {
+      "id": "09",
+      "tema": 6,
+      "enunciado": "Según el art. 25.2 eIDAS, tiene un efecto jurídico equivalente al de la firma manuscrita:",
+      "opciones": [
+        "Toda firma electrónica",
+        "La firma electrónica cualificada",
+        "La firma electrónica avanzada",
+        "El sello electrónico"
+      ],
+      "correcta": 1,
+      "explicacion": "Solo la **firma electrónica cualificada** tiene efecto jurídico equivalente al de la firma manuscrita (**art. 25.2 eIDAS**). A las demás firmas no se les pueden negar efectos ni admisibilidad como prueba (art. 25.1), pero no hay equivalencia automática. El sello es de personas jurídicas y tiene sus propias presunciones (art. 35)."
+    },
+    {
+      "id": "10",
+      "tema": 6,
+      "enunciado": "NO es un requisito de la firma electrónica avanzada del art. 26 eIDAS:",
+      "opciones": [
+        "Estar basada en un certificado cualificado",
+        "Estar vinculada al firmante de manera única",
+        "Permitir identificar al firmante",
+        "Permitir detectar cualquier modificación ulterior"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 26 eIDAS** exige a la firma avanzada vínculo único con el firmante, que permita identificarlo, que se cree con datos bajo su control exclusivo y que detecte cualquier modificación posterior. **Basarse en un certificado cualificado** es requisito de la firma **cualificada**, no de la avanzada. Truco: cualificada = avanzada + certificado cualificado + dispositivo cualificado."
+    },
+    {
+      "id": "11",
+      "tema": 6,
+      "enunciado": "El sello electrónico corresponde a:",
+      "opciones": [
+        "Un empleado público",
+        "Cualquier persona física",
+        "Una persona jurídica",
+        "Un menor de edad"
+      ],
+      "correcta": 2,
+      "explicacion": "Según el art. 3.24-25 eIDAS, el creador de un sello es una **persona jurídica**; el sello garantiza el origen y la integridad de los datos. Las personas físicas, incluidos los empleados públicos, firman; no sellan."
+    },
+    {
+      "id": "12",
+      "tema": 6,
+      "enunciado": "Los niveles de seguridad de los sistemas de identificación electrónica del art. 8 eIDAS son:",
+      "opciones": [
+        "Básico, medio y alto",
+        "Simple, avanzado y cualificado",
+        "Bajo, medio y crítico",
+        "Bajo, sustancial y alto"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 8 eIDAS** fija tres niveles de seguridad: **bajo, sustancial y alto**. «Simple, avanzada y cualificada» son los tipos de firma, no niveles de identificación. «Básico, medio y alto» recuerda a las categorías del ENS, otro tema."
+    },
+    {
+      "id": "13",
+      "tema": 6,
+      "enunciado": "La cartera europea de identidad digital se crea por:",
+      "opciones": [
+        "El Reglamento (UE) 2024/1183",
+        "El Reglamento (UE) 2016/679",
+        "La Directiva 1999/93/CE",
+        "El Reglamento (UE) 2019/1157"
+      ],
+      "correcta": 0,
+      "explicacion": "El **Reglamento (UE) 2024/1183 (eIDAS2)** añade el art. 5 bis al Reglamento 910/2014 y crea la **cartera europea de identidad digital**. El 2016/679 es el RGPD, la Directiva 1999/93/CE es la antigua norma de firma electrónica y el 2019/1157 trata de la seguridad de los documentos de identidad."
+    },
+    {
+      "id": "14",
+      "tema": 6,
+      "enunciado": "¿Cuál de estos servicios de confianza NO es una novedad de eIDAS2?",
+      "opciones": [
+        "Archivo electrónico",
+        "Sello de tiempo electrónico",
+        "Libro mayor electrónico",
+        "Declaración electrónica de atributos"
+      ],
+      "correcta": 1,
+      "explicacion": "El **sello de tiempo electrónico** ya existía en el texto original de 2014 (art. 3.33). eIDAS2 añade como nuevos servicios la **declaración electrónica de atributos**, el **archivo electrónico** y el **libro mayor electrónico**."
+    },
+    {
+      "id": "15",
+      "tema": 6,
+      "enunciado": "La Ley 6/2020 derogó:",
+      "opciones": [
+        "La Ley 34/2002 completa",
+        "El Reglamento eIDAS",
+        "La Ley 59/2003, de firma electrónica",
+        "El RD 1553/2005"
+      ],
+      "correcta": 2,
+      "explicacion": "La disposición derogatoria de la **Ley 6/2020** deroga la **Ley 59/2003, de firma electrónica**. De la LSSI solo deroga el **art. 25** (terceros de confianza), no la ley entera. Una ley nacional no puede derogar un reglamento de la UE, y el RD 1553/2005 lo derogó el RD 255/2025."
+    },
+    {
+      "id": "16",
+      "tema": 6,
+      "enunciado": "Según la Ley 6/2020, el período de vigencia de los certificados cualificados no puede superar:",
+      "opciones": [
+        "2 años",
+        "3 años",
+        "10 años",
+        "5 años"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 4 Ley 6/2020** limita la vigencia de los certificados cualificados a un máximo de **5 años**. Los 2 años son la vigencia de los certificados del DNI (RD 255/2025), un dato que se suele cruzar en los tests."
+    },
+    {
+      "id": "17",
+      "tema": 6,
+      "enunciado": "La sanción máxima por infracción muy grave de la Ley 6/2020 es de:",
+      "opciones": [
+        "300.000 €",
+        "600.000 €",
+        "150.000 €",
+        "1.500.000 €"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 19 Ley 6/2020** sanciona las muy graves con multa de **150.001 a 300.000 €**. 600.000 € es el tope de la LSSI y 1.500.000 € es el seguro mínimo de responsabilidad que deben tener los prestadores cualificados (art. 9)."
+    },
+    {
+      "id": "18",
+      "tema": 6,
+      "enunciado": "La norma que regula hoy el DNI en sus versiones física y digital es:",
+      "opciones": [
+        "El RD 1553/2005",
+        "El RD 255/2025",
+        "La Ley 6/2020",
+        "La LO 4/2015"
+      ],
+      "correcta": 1,
+      "explicacion": "El DNI se rige por el **RD 255/2025, de 1 de abril**, que entró en vigor el mismo día de su publicación (2-4-2025) y **deroga el RD 1553/2005**. La LO 4/2015 (seguridad ciudadana) recoge con rango de ley el derecho y el deber de obtenerlo, pero el régimen completo del documento está en el real decreto; la Ley 6/2020 trata de los servicios de confianza."
+    },
+    {
+      "id": "19",
+      "tema": 6,
+      "enunciado": "A una persona de 45 años se le expide el DNI con una validez de:",
+      "opciones": [
+        "5 años",
+        "Permanente",
+        "10 años",
+        "15 años"
+      ],
+      "correcta": 2,
+      "explicacion": "Según el **art. 7 RD 255/2025**, de **30 a menos de 70 años** el DNI vale **10 años**. 5 años es para quien tiene de 5 a menos de 30, y desde los 70 la validez es superior a 10 años, pero con fecha consignada, así que tampoco es «permanente»."
+    },
+    {
+      "id": "20",
+      "tema": 6,
+      "enunciado": "Los dos ejes transversales añadidos por España Digital 2026 son:",
+      "opciones": [
+        "5G y ciberseguridad",
+        "Kit Digital y ENIA",
+        "Conectividad y competencias digitales",
+        "PERTE y RETECH"
+      ],
+      "correcta": 3,
+      "explicacion": "España Digital 2026 se organiza en 10 ejes más 2 transversales: los **PERTE** (Proyectos Estratégicos para la Recuperación y Transformación Económica) y las **RETECH** (Redes Territoriales de Especialización Tecnológica). 5G, ciberseguridad, conectividad y competencias son ejes ordinarios, y Kit Digital y ENIA son planes que la desarrollan."
+    },
+    {
+      "id": "21",
+      "tema": 6,
+      "enunciado": "Según el Anexo de la LSSI, es servicio de la sociedad de la información todo servicio prestado normalmente a título oneroso, a distancia, por vía electrónica y:",
+      "opciones": [
+        "A petición individual del destinatario",
+        "De forma simultánea a una pluralidad de destinatarios",
+        "Previa autorización administrativa",
+        "Exclusivamente a consumidores"
+      ],
+      "correcta": 0,
+      "explicacion": "La definición tiene cuatro notas: **a título oneroso, a distancia, por vía electrónica y a petición individual del destinatario**. Por eso no encaja la difusión simultánea a muchos destinatarios (como la televisión), no se exige autorización (art. 6) y los destinatarios pueden ser profesionales o no."
+    },
+    {
+      "id": "22",
+      "tema": 6,
+      "enunciado": "Según el Anexo de la LSSI, ¿qué NO tiene, por sí solo, la consideración de comunicación comercial?",
+      "opciones": [
+        "Un banner que promociona un producto de la empresa",
+        "Un correo electrónico con ofertas de la empresa",
+        "El nombre de dominio o la dirección de correo electrónico",
+        "Un SMS promocional de la empresa"
+      ],
+      "correcta": 2,
+      "explicacion": "La LSSI aclara que **no son comunicaciones comerciales**, por sí solos, los datos que permiten acceder directamente a la actividad de una empresa, como el **nombre de dominio** o la **dirección de correo electrónico**. El banner, el correo con ofertas y el SMS promocional sí lo son, porque buscan promocionar bienes o servicios."
+    },
+    {
+      "id": "23",
+      "tema": 6,
+      "enunciado": "Según el Anexo de la LSSI, ¿cuál de los siguientes es un servicio de intermediación?",
+      "opciones": [
+        "La contratación de bienes o servicios por vía electrónica",
+        "La organización de subastas por medios electrónicos",
+        "El envío de comunicaciones comerciales",
+        "El alojamiento de datos facilitados por el destinatario"
+      ],
+      "correcta": 3,
+      "explicacion": "El **alojamiento** es un servicio de intermediación, igual que la provisión de acceso a Internet, la transmisión de datos, la copia temporal y los buscadores y enlaces. La contratación electrónica, las subastas y el envío de comunicaciones comerciales son servicios de la sociedad de la información, pero no de intermediación. Truco: el intermediario facilita el acceso a otros servicios o a la información; no vende."
+    },
+    {
+      "id": "24",
+      "tema": 6,
+      "enunciado": "Según el art. 2 LSSI, la ley se aplica a los prestadores residentes en España y también a los residentes en otro Estado que ofrezcan servicios a través de:",
+      "opciones": [
+        "Un servidor alojado en España",
+        "Un establecimiento permanente situado en España",
+        "Un nombre de dominio «.es»",
+        "Una cuenta bancaria abierta en España"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 2 LSSI** extiende la ley a quienes actúan mediante un **establecimiento permanente** en España. Ni la ubicación del servidor, ni el dominio «.es» ni una cuenta bancaria determinan por sí solos la aplicación de la ley. A los establecidos en otro Estado de la UE se les aplica solo en materias concretas (art. 3)."
+    },
+    {
+      "id": "25",
+      "tema": 6,
+      "enunciado": "Según el art. 6 LSSI, la prestación de servicios de la sociedad de la información:",
+      "opciones": [
+        "No está sujeta a autorización previa",
+        "Requiere autorización del ministerio competente",
+        "Requiere inscripción previa en el Registro Mercantil",
+        "Requiere comunicación previa a la CNMC"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 6 LSSI** consagra el **principio de no autorización previa**. La inscripción en el Registro Mercantil, si existe, solo se debe informar (art. 10). Otra cosa es que una actividad concreta necesite autorización por su propia normativa sectorial."
+    },
+    {
+      "id": "26",
+      "tema": 6,
+      "enunciado": "¿Cuál de los siguientes datos NO figura entre la información general que el prestador debe facilitar según el art. 10 LSSI?",
+      "opciones": [
+        "El número de identificación fiscal",
+        "Los datos de inscripción en el Registro Mercantil",
+        "Los códigos de conducta a los que esté adherido",
+        "La cifra de negocio del último ejercicio"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 10 LSSI** exige el nombre o denominación, domicilio y correo electrónico, los datos registrales, el NIF, los datos profesionales si es una profesión regulada, los precios y los códigos de conducta. La **cifra de negocio** no es información obligatoria. Toda la información debe ofrecerse de forma permanente, fácil, directa y gratuita."
+    },
+    {
+      "id": "27",
+      "tema": 6,
+      "enunciado": "Un operador de red que se limita a transmitir los datos facilitados por el destinatario del servicio queda exento de responsabilidad, según el art. 14 LSSI, si:",
+      "opciones": [
+        "Informa en sus condiciones generales de que no controla los contenidos",
+        "Cobra al usuario una tarifa plana",
+        "No ha originado la transmisión ni modificado los datos ni seleccionado a estos o a sus destinatarios",
+        "Está establecido fuera de la Unión Europea"
+      ],
+      "correcta": 2,
+      "explicacion": "El **art. 14 LSSI** exime a operadores de redes y proveedores de acceso si **no originan la transmisión, no modifican los datos ni seleccionan** los datos o a los destinatarios: son un mero conducto. Un aviso en las condiciones generales o la forma de cobro no excluyen la responsabilidad, y el lugar de establecimiento no es el criterio."
+    },
+    {
+      "id": "28",
+      "tema": 6,
+      "enunciado": "¿Cuál es el elemento común de la exención de responsabilidad de los prestadores de alojamiento (art. 16 LSSI) y de enlaces y buscadores (art. 17 LSSI)?",
+      "opciones": [
+        "La gratuidad del servicio",
+        "La falta de conocimiento efectivo de la ilicitud, o la retirada diligente si lo tienen",
+        "Que el prestador esté establecido en la UE",
+        "La existencia de un contrato previo con el autor del contenido"
+      ],
+      "correcta": 1,
+      "explicacion": "En ambos casos la clave es el **conocimiento efectivo**: no responden si no saben que la información es ilícita o si, cuando lo saben, actúan con diligencia para retirarla o hacer imposible el acceso. El art. 17 sigue un régimen similar al del art. 16. Gratuidad, establecimiento o contrato previo no influyen."
+    },
+    {
+      "id": "29",
+      "tema": 6,
+      "enunciado": "Según el art. 14 Ley 6/2020, la supervisión de los prestadores de servicios electrónicos de confianza corresponde:",
+      "opciones": [
+        "A la Agencia Española de Protección de Datos",
+        "A la Comisión Nacional de los Mercados y la Competencia",
+        "Al Ministerio del Interior",
+        "Al Ministerio para la Transformación Digital y de la Función Pública"
+      ],
+      "correcta": 3,
+      "explicacion": "La supervisión corresponde al ministerio competente en transformación digital, hoy el **Ministerio para la Transformación Digital y de la Función Pública**, que además publica la lista de confianza (art. 16). El Ministerio del Interior es competente para el DNI, y la AEPD para el spam y las cookies de la LSSI."
+    },
+    {
+      "id": "30",
+      "tema": 6,
+      "enunciado": "Una tienda en línea envía por correo electrónico publicidad de productos similares a los que compró un cliente hace unos meses, cuyos datos obtuvo lícitamente en esa compra. Según el art. 21 LSSI:",
+      "opciones": [
+        "Es lícito, siempre que le ofrezca un medio sencillo y gratuito para oponerse",
+        "Es ilícito si no tiene su consentimiento expreso previo",
+        "Solo es lícito si los productos son idénticos a los comprados",
+        "Necesita una autorización previa de la AEPD"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la **excepción del art. 21.2 LSSI**: hay **relación contractual previa**, datos obtenidos lícitamente y productos **similares** de la propia empresa, así que no hace falta consentimiento expreso. Pero siempre hay que ofrecer un medio **sencillo y gratuito** para oponerse. La ley no exige que los productos sean idénticos ni una autorización de la AEPD."
+    },
+    {
+      "id": "31",
+      "tema": 6,
+      "enunciado": "Según el art. 22.2 LSSI, NO requieren el consentimiento del usuario las cookies:",
+      "opciones": [
+        "De publicidad comportamental",
+        "De seguimiento de redes sociales",
+        "Estrictamente necesarias para prestar un servicio expresamente solicitado por el usuario",
+        "De origen propio, cualquiera que sea su finalidad"
+      ],
+      "correcta": 2,
+      "explicacion": "Quedan exentas las cookies y técnicas **estrictamente necesarias** para transmitir la comunicación o prestar un servicio **expresamente solicitado**. Las publicitarias y de seguimiento necesitan consentimiento, y lo que cuenta es la finalidad, no que la cookie sea propia o de terceros. El consentimiento puede darse con los parámetros del navegador."
+    },
+    {
+      "id": "32",
+      "tema": 6,
+      "enunciado": "¿Cuál de los siguientes contratos queda excluido del régimen de contratación electrónica de la LSSI (art. 23)?",
+      "opciones": [
+        "La compraventa de libros en una tienda en línea",
+        "Los contratos de Derecho de familia y sucesiones",
+        "La reserva de un viaje por Internet",
+        "La suscripción a una plataforma de contenidos"
+      ],
+      "correcta": 1,
+      "explicacion": "El art. 23 LSSI excluye los contratos de **Derecho de familia y sucesiones** y los que exigen forma pública o intervención de notarios, registradores o tribunales. Las compras, reservas y suscripciones en línea son el caso típico de contrato electrónico válido."
+    },
+    {
+      "id": "33",
+      "tema": 6,
+      "enunciado": "Según el art. 29 LSSI, un contrato electrónico celebrado entre dos empresarios, si no hay pacto entre ellos, se presume celebrado:",
+      "opciones": [
+        "En el lugar de residencia habitual del adquirente",
+        "En el lugar en que esté establecido el prestador de servicios",
+        "En el lugar donde esté ubicado el servidor",
+        "En el lugar desde el que se emita la aceptación"
+      ],
+      "correcta": 1,
+      "explicacion": "Entre empresarios, salvo pacto, rige el **lugar de establecimiento del prestador**. La residencia habitual es el criterio cuando hay un consumidor. La ubicación del servidor y el lugar de la aceptación no son criterios de la LSSI."
+    },
+    {
+      "id": "34",
+      "tema": 6,
+      "enunciado": "Según el art. 45 LSSI, las infracciones leves prescriben a los:",
+      "opciones": [
+        "1 año",
+        "2 años",
+        "3 años",
+        "6 meses"
+      ],
+      "correcta": 3,
+      "explicacion": "En la LSSI las infracciones prescriben a los 3 años (muy graves), 2 años (graves) y **6 meses (leves)**. La trampa es el año: es el plazo de prescripción de las **sanciones** leves, no de las infracciones."
+    },
+    {
+      "id": "35",
+      "tema": 6,
+      "enunciado": "Según el art. 38 LSSI, el envío masivo de comunicaciones comerciales por correo electrónico que incumplan los requisitos del art. 21 es una infracción:",
+      "opciones": [
+        "Grave",
+        "Muy grave",
+        "Leve",
+        "No constituye infracción, solo falta de diligencia"
+      ],
+      "correcta": 0,
+      "explicacion": "El **envío masivo** de spam que incumple el art. 21 es infracción **grave**, sancionada con 30.001 a 150.000 € por la AEPD. Muy grave es, por ejemplo, incumplir una orden de suspensión de un servicio de intermediación (art. 11), y leve, incumplir el deber de identificación del art. 20."
+    },
+    {
+      "id": "36",
+      "tema": 6,
+      "enunciado": "En la LSSI, ¿quién impone las sanciones por infracciones muy graves, salvo las relativas a comunicaciones comerciales electrónicas y cookies?",
+      "opciones": [
+        "El Secretario de Estado competente",
+        "La Agencia Española de Protección de Datos",
+        "El titular del Ministerio competente en sociedad de la información",
+        "La Comisión Nacional de los Mercados y la Competencia"
+      ],
+      "correcta": 2,
+      "explicacion": "Según el **art. 43 LSSI**, las muy graves las impone el **titular del Ministerio** competente, y las graves y leves, el **Secretario de Estado**. La AEPD solo sanciona las de los arts. 21 y 22 (spam y cookies)."
+    },
+    {
+      "id": "37",
+      "tema": 6,
+      "enunciado": "El Reglamento (UE) 910/2014 (eIDAS) derogó:",
+      "opciones": [
+        "La Directiva 95/46/CE",
+        "La Directiva 2000/31/CE",
+        "La Ley 59/2003, de firma electrónica",
+        "La Directiva 1999/93/CE"
+      ],
+      "correcta": 3,
+      "explicacion": "Según su **art. 50**, eIDAS deroga la **Directiva 1999/93/CE** de firma electrónica, con efectos desde el 1-7-2016. La Directiva 95/46/CE la derogó el RGPD; la 2000/31/CE es la de comercio electrónico (que traspone la LSSI) y la Ley 59/2003 la derogó la Ley 6/2020."
+    },
+    {
+      "id": "38",
+      "tema": 6,
+      "enunciado": "Según eIDAS, desde el 29 de septiembre de 2018 es obligatorio el reconocimiento mutuo de los medios de identificación electrónica notificados por otros Estados cuando el servicio público en línea exija un nivel de seguridad:",
+      "opciones": [
+        "Sustancial o alto",
+        "Solo alto",
+        "Cualquiera, incluido el bajo",
+        "Bajo o sustancial"
+      ],
+      "correcta": 0,
+      "explicacion": "El reconocimiento mutuo es **obligatorio** desde el **29-9-2018** cuando el servicio en línea exige nivel **sustancial o alto**. Para el nivel bajo el reconocimiento es voluntario. Recuerda que la cartera europea de eIDAS2 debe cumplir el nivel alto."
+    },
+    {
+      "id": "39",
+      "tema": 6,
+      "enunciado": "Según el art. 35.2 eIDAS, el sello electrónico cualificado disfruta de la presunción de:",
+      "opciones": [
+        "Exactitud de la fecha y la hora que indica",
+        "Integridad de los datos y exactitud de su origen",
+        "Envío y recepción de los datos por las partes",
+        "Efecto equivalente al de la firma manuscrita"
+      ],
+      "correcta": 1,
+      "explicacion": "El sello cualificado se presume **íntegro** y con **origen exacto** (art. 35.2). La exactitud de fecha y hora es la presunción del sello de tiempo cualificado (art. 41.2); envío y recepción son las de la entrega certificada (art. 43.2), y la equivalencia con la firma manuscrita es propia de la firma cualificada (art. 25.2)."
+    },
+    {
+      "id": "40",
+      "tema": 6,
+      "enunciado": "Según el art. 3.12 eIDAS, la firma electrónica cualificada es:",
+      "opciones": [
+        "Una firma avanzada basada en un certificado cualificado, creada con cualquier dispositivo",
+        "Una firma simple creada mediante un dispositivo cualificado de creación de firma",
+        "Una firma avanzada creada mediante un dispositivo cualificado de creación de firma y basada en un certificado cualificado",
+        "Cualquier firma emitida por un prestador que figure en la lista de confianza"
+      ],
+      "correcta": 2,
+      "explicacion": "La firma cualificada exige tres cosas a la vez: ser **avanzada**, crearse con un **dispositivo cualificado de creación de firma** y basarse en un **certificado cualificado**. Las otras opciones omiten alguno de esos elementos. Figurar el prestador en la lista de confianza no basta por sí solo."
+    },
+    {
+      "id": "41",
+      "tema": 6,
+      "enunciado": "Un juez debe valorar un documento firmado con una firma electrónica simple, que no es avanzada ni cualificada. Según el art. 25.1 eIDAS:",
+      "opciones": [
+        "No se le pueden negar efectos jurídicos ni admisibilidad como prueba por el solo hecho de ser electrónica o no ser cualificada",
+        "Carece de efectos jurídicos",
+        "Tiene el mismo efecto que una firma manuscrita",
+        "Solo surte efectos si la ratifica un notario"
+      ],
+      "correcta": 0,
+      "explicacion": "El **art. 25.1 eIDAS** establece el principio de **no discriminación**: a ninguna firma se le niegan efectos ni admisibilidad como prueba por ser electrónica o no cumplir los requisitos de la cualificada. Eso no significa que equivalga a la manuscrita: esa equivalencia solo la tiene la cualificada (art. 25.2). El juez la valorará con el resto de pruebas."
+    },
+    {
+      "id": "42",
+      "tema": 6,
+      "enunciado": "Según el art. 3.38 eIDAS, la declaración que permite autenticar un sitio web y lo vincula con la persona física o jurídica a quien se ha expedido es:",
+      "opciones": [
+        "El sello electrónico",
+        "El sello de tiempo electrónico",
+        "El servicio de entrega electrónica certificada",
+        "El certificado de autenticación de sitio web"
+      ],
+      "correcta": 3,
+      "explicacion": "Es el **certificado de autenticación de sitio web** (art. 3.38). El sello electrónico garantiza el origen y la integridad de los datos de una persona jurídica; el sello de tiempo vincula datos con un instante, y la entrega certificada prueba el envío y la recepción."
+    },
+    {
+      "id": "43",
+      "tema": 6,
+      "enunciado": "Según eIDAS2, la cartera europea de identidad digital debe cumplir el nivel de seguridad del art. 8:",
+      "opciones": [
+        "Bajo",
+        "Sustancial",
+        "Alto",
+        "Cualificado"
+      ],
+      "correcta": 2,
+      "explicacion": "La cartera debe cumplir el **nivel alto**, el máximo de los tres del art. 8 (bajo, sustancial y alto). «Cualificado» no es un nivel de identificación, sino una categoría de servicios de confianza, firmas y certificados."
+    },
+    {
+      "id": "44",
+      "tema": 6,
+      "enunciado": "Según eIDAS2, la firma electrónica cualificada realizada desde la cartera europea de identidad digital:",
+      "opciones": [
+        "Es gratuita para todos los usuarios, incluidas las empresas",
+        "Es gratuita para las personas físicas con fines no profesionales",
+        "Es siempre de pago, según la tarifa del prestador",
+        "Solo está disponible para los empleados públicos"
+      ],
+      "correcta": 1,
+      "explicacion": "eIDAS2 garantiza que la firma cualificada desde la cartera sea **gratuita para personas físicas con fines no profesionales**. El uso profesional o empresarial no tiene garantizada la gratuidad. La cartera es para toda la ciudadanía, no solo para empleados públicos."
+    },
+    {
+      "id": "45",
+      "tema": 6,
+      "enunciado": "Según eIDAS2, el uso de la cartera europea de identidad digital por los ciudadanos:",
+      "opciones": [
+        "Es obligatorio para relacionarse con las Administraciones públicas",
+        "Es obligatorio desde finales de 2026",
+        "Es voluntario",
+        "Es obligatorio para los mayores de edad"
+      ],
+      "correcta": 2,
+      "explicacion": "El uso de la cartera es **voluntario**: nadie puede ser obligado a usarla para acceder a servicios. Lo obligatorio es que cada Estado la **ofrezca** (antes de finales de 2026) y que ciertas partes usuarias, como las plataformas en línea de muy gran tamaño, la **acepten**."
+    },
+    {
+      "id": "46",
+      "tema": 6,
+      "enunciado": "El Reglamento (UE) 2024/1183 (eIDAS2) entró en vigor el:",
+      "opciones": [
+        "20 de mayo de 2024",
+        "30 de abril de 2024",
+        "11 de abril de 2024",
+        "28 de noviembre de 2024"
+      ],
+      "correcta": 0,
+      "explicacion": "eIDAS2 es de **11-4-2024**, se publicó en el DOUE el **30-4-2024** y entró en vigor el **20-5-2024**. El 28-11-2024 es la fecha de los primeros actos de ejecución, de los que cuentan los 24 meses para ofrecer la cartera. Truco por orden: aprobación, publicación, vigor y actos de ejecución."
+    },
+    {
+      "id": "47",
+      "tema": 6,
+      "enunciado": "Según eIDAS2, la secuencia de registros electrónicos de datos que garantiza su integridad y la exactitud de su orden cronológico es el:",
+      "opciones": [
+        "Archivo electrónico",
+        "Declaración electrónica de atributos",
+        "Servicio de entrega electrónica certificada",
+        "Libro mayor electrónico"
+      ],
+      "correcta": 3,
+      "explicacion": "Es el **libro mayor electrónico** (ledger), uno de los nuevos servicios de confianza de eIDAS2. El archivo electrónico se ocupa de recibir, almacenar, recuperar y eliminar datos y documentos; la declaración de atributos acredita atributos de una persona, y la entrega certificada prueba envío y recepción."
+    },
+    {
+      "id": "48",
+      "tema": 6,
+      "enunciado": "Según el art. 9 Ley 6/2020, los prestadores cualificados de servicios electrónicos de confianza deben conservar la información relativa a los servicios prestados durante:",
+      "opciones": [
+        "10 años",
+        "15 años",
+        "20 años",
+        "25 años"
+      ],
+      "correcta": 1,
+      "explicacion": "El **art. 9 Ley 6/2020** fija un plazo de conservación de **15 años**. Otros datos del mismo artículo que conviene asociar: seguro mínimo de 1.500.000 € y aviso del cese de actividad con 2 meses de antelación."
+    },
+    {
+      "id": "49",
+      "tema": 6,
+      "enunciado": "Un prestador privado ofrece tres tipos distintos de servicios cualificados de confianza. Según el art. 9 Ley 6/2020, ¿cuál es la garantía mínima de responsabilidad que debe tener?",
+      "opciones": [
+        "1.500.000 €",
+        "2.500.000 €",
+        "3.000.000 €",
+        "4.500.000 €"
+      ],
+      "correcta": 1,
+      "explicacion": "La garantía mínima es de **1.500.000 €**, más **500.000 €** por cada servicio cualificado adicional. Con tres servicios: 1.500.000 + 2 × 500.000 = **2.500.000 €**. El error típico es sumar 500.000 por cada uno de los tres (3.000.000 €) o multiplicar la base (4.500.000 €). Al sector público no se le exige."
+    },
+    {
+      "id": "50",
+      "tema": 6,
+      "enunciado": "Según el art. 7 Ley 6/2020, para expedir un certificado cualificado la identidad del solicitante se comprueba:",
+      "opciones": [
+        "Únicamente mediante su presencia física ante el prestador",
+        "Con cualquier método que elija libremente el prestador",
+        "Mediante presencia física u otros métodos de seguridad equivalente reconocidos por Orden ministerial, como la vídeo-identificación",
+        "Mediante una declaración responsable del solicitante"
+      ],
+      "correcta": 2,
+      "explicacion": "La regla es la **presencia física** (o la firma legitimada ante notario), pero el art. 7 admite **otros métodos** de seguridad equivalente, como la **vídeo-identificación**, reconocidos por **Orden ministerial**. Por eso no es «únicamente» presencial, ni vale cualquier método o una simple declaración. No hace falta comprobarla si hubo identificación en una relación previa de menos de 5 años."
+    },
+    {
+      "id": "51",
+      "tema": 6,
+      "enunciado": "Según el art. 3 RD 255/2025, el DNI:",
+      "opciones": [
+        "Es uno de los varios documentos que acreditan por sí solos la identidad, junto con el carné de conducir",
+        "Solo acredita la nacionalidad española del titular",
+        "Solo permite la identificación física, no la electrónica",
+        "Es el único documento con suficiente valor por sí solo para acreditar la identidad y los datos personales del titular"
+      ],
+      "correcta": 3,
+      "explicacion": "El **art. 3 RD 255/2025** dice que el DNI es el **único documento con suficiente valor por sí solo** para acreditar la identidad y los datos personales del titular. Además permite la identificación electrónica y la firma electrónica de documentos, así que no se limita a la identificación física."
+    },
+    {
+      "id": "52",
+      "tema": 6,
+      "enunciado": "Según el art. 4 RD 255/2025, el DNI es obligatorio para los españoles residentes en España a partir de los:",
+      "opciones": [
+        "14 años",
+        "12 años",
+        "16 años",
+        "18 años"
+      ],
+      "correcta": 0,
+      "explicacion": "El DNI es **obligatorio desde los 14 años** para los residentes en España, y también para quienes, con esa edad, se trasladen a España al menos 6 meses. Antes de los 14 es un derecho, no una obligación: un bebé puede tenerlo (con validez de 2 años)."
+    },
+    {
+      "id": "53",
+      "tema": 6,
+      "enunciado": "Señale la respuesta INCORRECTA sobre la versión digital del DNI regulada en el RD 255/2025:",
+      "opciones": [
+        "Tiene la misma eficacia jurídica a efectos de identificación que el DNI físico",
+        "Solo se genera si el titular tiene el DNI físico vigente",
+        "Sustituye al DNI físico, que deja de ser necesario",
+        "Se usa a través de la aplicación oficial y gratuita MiDNI"
+      ],
+      "correcta": 2,
+      "explicacion": "El DNI digital **no sustituye** al físico: se genera solo si el titular tiene el DNI físico vigente y caduca con él. Las demás afirmaciones son correctas: tiene la misma eficacia a efectos de identificación y se usa con la app **MiDNI** de la Policía Nacional."
+    },
+    {
+      "id": "54",
+      "tema": 6,
+      "enunciado": "¿Qué modalidad de verificación de la app MiDNI muestra únicamente que el titular es mayor de edad, junto con su fotografía?",
+      "opciones": [
+        "DNI SIMPLE",
+        "DNI EDAD",
+        "DNI COMPLETO",
+        "DNI BÁSICO"
+      ],
+      "correcta": 1,
+      "explicacion": "**DNI EDAD** muestra solo que el titular es **mayor de edad**, con foto. DNI SIMPLE añade nombre completo, fecha de nacimiento, sexo y validez, y DNI COMPLETO muestra todos los datos (con aviso previo). «DNI BÁSICO» no existe. En todas se usa un código QR que solo vale unos segundos."
+    },
+    {
+      "id": "55",
+      "tema": 6,
+      "enunciado": "Según el art. 7 RD 255/2025, a un niño de 4 años se le expide el DNI con una validez de:",
+      "opciones": [
+        "2 años",
+        "5 años",
+        "1 año",
+        "10 años"
+      ],
+      "correcta": 0,
+      "explicacion": "Para **menores de 5 años** la validez es de **2 años**; de 5 a menos de 30, 5 años, y de 30 a menos de 70, 10 años. La validez de 1 año es excepcional, por ejemplo si no se pueden tomar las huellas temporalmente."
+    },
+    {
+      "id": "56",
+      "tema": 6,
+      "enunciado": "Según el RD 255/2025, el DNI lo expide:",
+      "opciones": [
+        "La Fábrica Nacional de Moneda y Timbre",
+        "El Ministerio de Justicia, a través del Registro Civil",
+        "El Ministerio para la Transformación Digital y de la Función Pública",
+        "El Ministerio del Interior, a través de la Dirección General de la Policía"
+      ],
+      "correcta": 3,
+      "explicacion": "El DNI lo emite el **Ministerio del Interior** a través de la **Dirección General de la Policía**, que es también responsable del tratamiento de los datos y redacta la Declaración de Prácticas de Certificación. El Ministerio para la Transformación Digital solo supervisa sus obligaciones como prestador de servicios de confianza."
+    },
+    {
+      "id": "57",
+      "tema": 6,
+      "enunciado": "España Digital 2026 es la actualización, aprobada en 2022, de la agenda España Digital 2025, que el Gobierno presentó en:",
+      "opciones": [
+        "Enero de 2019",
+        "Diciembre de 2021",
+        "Julio de 2020",
+        "Marzo de 2023"
+      ],
+      "correcta": 2,
+      "explicacion": "**España Digital 2025** se lanzó en **julio de 2020** y en **2022** se actualizó como España Digital 2026. Es el eje de digitalización del Plan de Recuperación, Transformación y Resiliencia (fondos Next Generation EU)."
+    },
+    {
+      "id": "58",
+      "tema": 6,
+      "enunciado": "Entre las metas de España Digital, la de conectividad prevé para 2025 una cobertura de banda ancha para el 100 % de la población de:",
+      "opciones": [
+        "30 Mbps",
+        "100 Mbps",
+        "300 Mbps",
+        "1 Gbps"
+      ],
+      "correcta": 1,
+      "explicacion": "La meta de conectividad es banda ancha de **100 Mbps** para el **100 % de la población en 2025**. No confundir con la meta del 5G: 75 % de cobertura poblacional en 2025 en las bandas prioritarias y 100 % en 2030."
+    },
+    {
+      "id": "59",
+      "tema": 6,
+      "enunciado": "Los cuatro puntos cardinales de la Brújula Digital 2030 de la UE, a la que contribuye España Digital 2026, son:",
+      "opciones": [
+        "Conectividad, 5G, ciberseguridad e inteligencia artificial",
+        "Datos, inteligencia artificial, nube y ciberseguridad",
+        "Ciudadanía, empresas, Administración y territorio",
+        "Capacidades, infraestructuras digitales, empresas y Gobiernos"
+      ],
+      "correcta": 3,
+      "explicacion": "Los cuatro puntos cardinales son **capacidades** (competencias digitales), **infraestructuras digitales**, **transformación digital de las empresas** y **digitalización de los servicios públicos** (Gobiernos). Las otras opciones mezclan ejes de España Digital o tecnologías concretas."
+    },
+    {
+      "id": "60",
+      "tema": 6,
+      "enunciado": "La Carta de Derechos Digitales:",
+      "opciones": [
+        "No es una norma jurídica vinculante: orienta futuras reformas y propuestas legales",
+        "Tiene rango de ley orgánica",
+        "Es un reglamento de la Unión Europea directamente aplicable",
+        "Es el Título X de la LO 3/2018"
+      ],
+      "correcta": 0,
+      "explicacion": "La **Carta de Derechos Digitales** **no es vinculante**: es una guía para futuras propuestas legales. Los derechos digitales con rango de ley están en el **Título X de la LO 3/2018** (tema 7), que es otra cosa."
+    }
+  ]
+}

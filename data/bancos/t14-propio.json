@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 14 · test",
+  "fuente": "propio",
+  "tema": 14,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 14. Sistemas de gestión de bases de datos»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 14,
+      "enunciado": "En la arquitectura ANSI/SPARC, el nivel que describe cómo se almacenan físicamente los datos es el:",
+      "opciones": [
+        "Externo",
+        "Conceptual",
+        "Interno",
+        "De vistas"
+      ],
+      "correcta": 2,
+      "explicacion": "El nivel **interno (físico)** describe ficheros, índices y rutas de acceso, es decir, **cómo se almacenan** los datos. El conceptual describe toda la BD de forma lógica (entidades, relaciones, restricciones) y el externo, también llamado de vistas, la parte que ve cada usuario. Truco: externo = usuario, conceptual = DBA, interno = disco."
+    },
+    {
+      "id": "02",
+      "tema": 14,
+      "enunciado": "La independencia lógica de los datos permite:",
+      "opciones": [
+        "Modificar el esquema conceptual sin afectar a los esquemas externos",
+        "Cambiar los índices sin afectar al esquema conceptual",
+        "Cambiar de SGBD sin modificar las aplicaciones",
+        "Mover la BD a otro disco sin parar el servicio"
+      ],
+      "correcta": 0,
+      "explicacion": "La **independencia lógica** permite cambiar el **esquema conceptual** sin tocar los **esquemas externos** ni las aplicaciones; es la más difícil de conseguir. Cambiar índices sin afectar al conceptual es **independencia física**. Las otras dos opciones no son tipos de independencia de ANSI/SPARC."
+    },
+    {
+      "id": "03",
+      "tema": 14,
+      "enunciado": "El grado de una relación es:",
+      "opciones": [
+        "Su número de tuplas",
+        "Su número de atributos",
+        "Su número de claves candidatas",
+        "Su forma normal"
+      ],
+      "correcta": 1,
+      "explicacion": "El **grado** es el **número de atributos (columnas)** de la relación. El número de tuplas (filas) es la **cardinalidad**. Truco: grado = ancho de la tabla, cardinalidad = alto."
+    },
+    {
+      "id": "04",
+      "tema": 14,
+      "enunciado": "La regla de integridad de entidad establece que:",
+      "opciones": [
+        "Toda clave foránea debe existir en la tabla referenciada",
+        "No puede haber filas duplicadas",
+        "Los valores deben ser atómicos",
+        "Ningún atributo de la clave primaria puede ser nulo"
+      ],
+      "correcta": 3,
+      "explicacion": "La **integridad de entidad** exige que **ningún atributo de la clave primaria sea nulo**, porque la PK identifica cada tupla. Que la clave foránea exista en la tabla referenciada es la **integridad referencial**. La ausencia de duplicados y la atomicidad son propiedades de la relación y de la 1FN."
+    },
+    {
+      "id": "05",
+      "tema": 14,
+      "enunciado": "La sentencia `GRANT` pertenece al:",
+      "opciones": [
+        "DDL",
+        "DML",
+        "DCL",
+        "TCL"
+      ],
+      "correcta": 2,
+      "explicacion": "`GRANT` y `REVOKE` forman el **DCL (lenguaje de control)**, que gestiona **privilegios**. El DDL define objetos (CREATE, ALTER, DROP), el DML consulta y modifica datos (SELECT, INSERT, UPDATE, DELETE) y el TCL controla transacciones (COMMIT, ROLLBACK, SAVEPOINT)."
+    },
+    {
+      "id": "06",
+      "tema": 14,
+      "enunciado": "La sentencia `TRUNCATE TABLE` se clasifica como:",
+      "opciones": [
+        "DDL",
+        "DML",
+        "DCL",
+        "TCL"
+      ],
+      "correcta": 0,
+      "explicacion": "`TRUNCATE` es **DDL**: vacía la tabla entera sin registrar fila a fila y, en muchos SGBD, sin posibilidad de `ROLLBACK`. Su pariente `DELETE` sí es **DML**, admite `WHERE` y puede deshacerse. Es una pregunta trampa clásica precisamente por ese parecido."
+    },
+    {
+      "id": "07",
+      "tema": 14,
+      "enunciado": "Una relación está en 2FN si está en 1FN y:",
+      "opciones": [
+        "No tiene dependencias transitivas",
+        "Todo atributo no clave depende de la clave completa",
+        "Todo determinante es clave candidata",
+        "No tiene dependencias multivaluadas"
+      ],
+      "correcta": 1,
+      "explicacion": "La **2FN** exige que todo atributo no clave dependa de la **clave completa**, sin **dependencias parciales**; si la clave es simple, una relación en 1FN ya está en 2FN. Sin dependencias transitivas es la **3FN**, todo determinante clave candidata es la **FNBC** y sin multivaluadas es la **4FN**."
+    },
+    {
+      "id": "08",
+      "tema": 14,
+      "enunciado": "Una relación está en FNBC cuando:",
+      "opciones": [
+        "Todos sus valores son atómicos",
+        "No tiene dependencias parciales",
+        "No tiene dependencias de combinación",
+        "Todo determinante es clave candidata"
+      ],
+      "correcta": 3,
+      "explicacion": "La **forma normal de Boyce-Codd** exige que **todo determinante sea clave candidata**, y es más estricta que la 3FN. Valores atómicos es la 1FN, sin dependencias parciales la 2FN y sin dependencias de combinación la 5FN."
+    },
+    {
+      "id": "09",
+      "tema": 14,
+      "enunciado": "¿Qué nivel de aislamiento SQL evita las lecturas fantasma?",
+      "opciones": [
+        "READ UNCOMMITTED",
+        "READ COMMITTED",
+        "SERIALIZABLE",
+        "REPEATABLE READ"
+      ],
+      "correcta": 2,
+      "explicacion": "En el estándar SQL solo **SERIALIZABLE** evita las **lecturas fantasma**, además de las sucias y las no repetibles. REPEATABLE READ evita las sucias y las no repetibles, pero los fantasmas siguen siendo posibles. Truco: cada nivel elimina una anomalía más, y el fantasma es la última en caer."
+    },
+    {
+      "id": "10",
+      "tema": 14,
+      "enunciado": "Una lectura sucia consiste en:",
+      "opciones": [
+        "Leer datos modificados por otra transacción que aún no ha confirmado",
+        "Ver filas nuevas al repetir una consulta",
+        "Obtener otro valor al releer una fila ya confirmada",
+        "Perder una actualización"
+      ],
+      "correcta": 0,
+      "explicacion": "La **lectura sucia (dirty read)** es leer un dato modificado por otra transacción **todavía no confirmada**, que aún puede deshacerse. Ver filas nuevas al repetir una consulta es la **lectura fantasma** y obtener otro valor al releer una fila es la **lectura no repetible**."
+    },
+    {
+      "id": "11",
+      "tema": 14,
+      "enunciado": "El protocolo de bloqueo en dos fases (2PL) garantiza:",
+      "opciones": [
+        "La ausencia de interbloqueos",
+        "La serializabilidad",
+        "La durabilidad",
+        "La consistencia eventual"
+      ],
+      "correcta": 1,
+      "explicacion": "El **2PL** (fase de crecimiento, solo adquiere; fase de decrecimiento, solo libera) **garantiza planificaciones serializables**. Pero **no evita los interbloqueos**, que el SGBD debe detectar o prevenir aparte. La durabilidad depende del gestor de recuperación y la consistencia eventual es propia de NoSQL."
+    },
+    {
+      "id": "12",
+      "tema": 14,
+      "enunciado": "La técnica WAL (*Write-Ahead Logging*) consiste en:",
+      "opciones": [
+        "Escribir los datos antes que el registro",
+        "Replicar el registro a otro nodo",
+        "Comprimir el registro",
+        "Escribir el registro en disco antes que los datos modificados"
+      ],
+      "correcta": 3,
+      "explicacion": "**WAL** significa que el **registro de transacciones se escribe en disco antes que los datos** modificados. Así, tras un fallo, el SGBD puede deshacer (UNDO) lo no confirmado y rehacer (REDO) lo confirmado. Truco: *write-ahead* = el log va «por delante»."
+    },
+    {
+      "id": "13",
+      "tema": 14,
+      "enunciado": "Una copia de seguridad diferencial contiene:",
+      "opciones": [
+        "Todos los datos",
+        "Los cambios desde la última copia de cualquier tipo",
+        "Los cambios desde la última copia completa",
+        "Solo el registro de transacciones"
+      ],
+      "correcta": 2,
+      "explicacion": "La copia **diferencial** guarda los **cambios desde la última copia completa**, por lo que crece cada día hasta la siguiente completa. Los cambios desde la última copia de cualquier tipo definen la **incremental**. Para restaurar con diferenciales bastan la completa y la última diferencial."
+    },
+    {
+      "id": "14",
+      "tema": 14,
+      "enunciado": "¿Cuál de estos operadores NO es primitivo en el álgebra relacional?",
+      "opciones": [
+        "Selección",
+        "Intersección",
+        "Proyección",
+        "Diferencia"
+      ],
+      "correcta": 1,
+      "explicacion": "La **intersección es un operador derivado**: R ∩ S = R − (R − S). Los primitivos son **selección, proyección, unión, diferencia y producto cartesiano** (más el renombrado). La combinación (join) y la división también son derivados."
+    },
+    {
+      "id": "15",
+      "tema": 14,
+      "enunciado": "En una BD orientada a objetos, el OID:",
+      "opciones": [
+        "Es independiente de los valores de los atributos del objeto",
+        "Coincide con la clave primaria",
+        "Lo asigna el programador",
+        "Cambia al modificar el objeto"
+      ],
+      "correcta": 0,
+      "explicacion": "El **OID** lo genera el **sistema**, es único e inmutable y **no depende del valor** de los atributos. Por eso se diferencia de la clave primaria relacional, que identifica por valor. Ni lo asigna el programador ni cambia al modificar el objeto."
+    },
+    {
+      "id": "16",
+      "tema": 14,
+      "enunciado": "El lenguaje de consulta del estándar ODMG es:",
+      "opciones": [
+        "SQL/XML",
+        "ODL",
+        "Cypher",
+        "OQL"
+      ],
+      "correcta": 3,
+      "explicacion": "El estándar **ODMG** define **ODL** para definir el esquema y **OQL** (*Object Query Language*) para **consultar**, con sintaxis parecida a SQL. SQL/XML es una parte del estándar SQL y Cypher es el lenguaje de Neo4j. Truco: D de definición, Q de *query*."
+    },
+    {
+      "id": "17",
+      "tema": 14,
+      "enunciado": "Según el teorema CAP, cuando se produce una partición de red un sistema distribuido debe elegir entre:",
+      "opciones": [
+        "Atomicidad y durabilidad",
+        "Consistencia y disponibilidad",
+        "Latencia y throughput",
+        "Replicación y particionado"
+      ],
+      "correcta": 1,
+      "explicacion": "Según el **teorema CAP** (Brewer), ante una **partición (P)** solo puede mantenerse la **consistencia (C)** o la **disponibilidad (A)**. Atomicidad y durabilidad son propiedades ACID. Elegir latencia frente a consistencia sin partición es la ampliación **PACELC**."
+    },
+    {
+      "id": "18",
+      "tema": 14,
+      "enunciado": "En el acrónimo BASE, la «E» significa:",
+      "opciones": [
+        "*Exclusive locking*",
+        "*Entity integrity*",
+        "*Eventual consistency*",
+        "*Encryption*"
+      ],
+      "correcta": 2,
+      "explicacion": "BASE es **B**asically **A**vailable, **S**oft state, **E**ventual consistency: la **E** es la **consistencia eventual**, según la cual las réplicas acaban convergiendo si no hay nuevas escrituras. Las demás opciones no forman parte del acrónimo. BASE se opone a ACID, que exige consistencia fuerte."
+    },
+    {
+      "id": "19",
+      "tema": 14,
+      "enunciado": "Apache Cassandra es una base de datos NoSQL de tipo:",
+      "opciones": [
+        "Familias de columnas",
+        "Documental",
+        "Grafos",
+        "Clave-valor en memoria"
+      ],
+      "correcta": 0,
+      "explicacion": "**Cassandra** es una base de **familias de columnas (*wide-column*)**, sin nodo maestro y consultada con **CQL**, como HBase o Bigtable. Documentales son MongoDB o CouchDB, de grafos Neo4j y clave-valor en memoria Redis."
+    },
+    {
+      "id": "20",
+      "tema": 14,
+      "enunciado": "El lenguaje de consulta nativo de Neo4j es:",
+      "opciones": [
+        "CQL",
+        "SPARQL",
+        "MQL",
+        "Cypher"
+      ],
+      "correcta": 3,
+      "explicacion": "**Neo4j** usa **Cypher**, un lenguaje declarativo de patrones sobre grafos de propiedades. **CQL** es el lenguaje de Cassandra, **MQL** el de MongoDB y **SPARQL** el del W3C para grafos RDF."
+    },
+    {
+      "id": "21",
+      "tema": 14,
+      "enunciado": "En un SGBD, el diccionario de datos (catálogo) contiene:",
+      "opciones": [
+        "El registro de transacciones con los valores anteriores y posteriores de cada cambio",
+        "Los metadatos que describen la propia BD: tablas, columnas, restricciones, usuarios y privilegios",
+        "Las páginas de datos más usadas, mantenidas en memoria para acelerar el acceso",
+        "El conjunto de vistas definidas para cada usuario o aplicación"
+      ],
+      "correcta": 1,
+      "explicacion": "El **diccionario de datos** guarda **metadatos**, los «datos sobre los datos»: tablas, columnas, tipos, restricciones, usuarios y privilegios. El registro con valores anteriores y posteriores es el **log** del gestor de recuperación, y las páginas en memoria son el **búfer (buffer pool)**. Las vistas se definen en el catálogo, pero no son su contenido completo."
+    },
+    {
+      "id": "22",
+      "tema": 14,
+      "enunciado": "En la arquitectura ANSI/SPARC, ¿cuántos esquemas puede haber de cada nivel?",
+      "opciones": [
+        "Un externo, varios conceptuales y un interno",
+        "Varios externos, un conceptual y un interno",
+        "Uno de cada nivel",
+        "Varios externos, varios conceptuales y un interno"
+      ],
+      "correcta": 1,
+      "explicacion": "Puede haber **muchos esquemas externos** (uno por usuario o aplicación), pero un **único esquema conceptual** y un **único esquema interno**. El conceptual describe toda la BD y el interno su almacenamiento físico, así que no tiene sentido multiplicarlos."
+    },
+    {
+      "id": "23",
+      "tema": 14,
+      "enunciado": "Crear un nuevo índice sobre una tabla sin tener que modificar el esquema conceptual ni las aplicaciones es un ejemplo de:",
+      "opciones": [
+        "Independencia lógica",
+        "Integridad referencial",
+        "Independencia física",
+        "Transparencia de replicación"
+      ],
+      "correcta": 2,
+      "explicacion": "Un índice pertenece al **nivel interno**; poder cambiarlo sin tocar el conceptual es la **independencia física**. La **independencia lógica** se refiere a cambios del esquema conceptual que no afectan a los externos. La integridad referencial es una restricción sobre claves foráneas."
+    },
+    {
+      "id": "24",
+      "tema": 14,
+      "enunciado": "En un SGBD, el componente que elige el plan de ejecución más barato para una consulta a partir de costes y estadísticas es:",
+      "opciones": [
+        "El gestor del búfer",
+        "El gestor de transacciones",
+        "El motor de ejecución",
+        "El optimizador de consultas"
+      ],
+      "correcta": 3,
+      "explicacion": "El **optimizador de consultas** compara planes alternativos y elige el más barato según **costes y estadísticas** (o según reglas). El motor de ejecución se limita a ejecutar el plan elegido, el gestor del búfer mantiene páginas en memoria y el de transacciones garantiza ACID."
+    },
+    {
+      "id": "25",
+      "tema": 14,
+      "enunciado": "¿Qué tipo de índice es el más adecuado para columnas con pocos valores distintos, como el sexo o la provincia, en un almacén de datos?",
+      "opciones": [
+        "Bitmap",
+        "Hash",
+        "Árbol B+",
+        "Agrupado (clustered)"
+      ],
+      "correcta": 0,
+      "explicacion": "Los índices **bitmap** guardan un mapa de bits por cada valor y son ideales para **columnas con pocos valores distintos**, típicas de los almacenes de datos. El **hash** solo sirve para igualdad, el **B+** es el índice general para igualdad y rangos, y el agrupado ordena físicamente la tabla."
+    },
+    {
+      "id": "26",
+      "tema": 14,
+      "enunciado": "Señale la respuesta INCORRECTA sobre los índices en un SGBD relacional:",
+      "opciones": [
+        "Un índice hash es el más adecuado para consultas por rango con BETWEEN",
+        "En un árbol B+ los datos están en las hojas, enlazadas entre sí",
+        "Los índices aceleran las búsquedas a costa de espacio y de escrituras más lentas",
+        "Un índice agrupado ordena físicamente la tabla y solo puede haber uno por tabla"
+      ],
+      "correcta": 0,
+      "explicacion": "Es falso: el índice **hash solo sirve para búsquedas por igualdad**, porque dispersa los valores sin mantener su orden. Para rangos se usa el **árbol B+**, cuyas hojas enlazadas permiten recorrer los valores en orden. Las otras tres afirmaciones son correctas."
+    },
+    {
+      "id": "27",
+      "tema": 14,
+      "enunciado": "¿Qué sentencia SQL permite borrar solo algunas filas de una tabla según una condición y deshacer el borrado con `ROLLBACK`?",
+      "opciones": [
+        "TRUNCATE",
+        "DROP",
+        "REVOKE",
+        "DELETE"
+      ],
+      "correcta": 3,
+      "explicacion": "**`DELETE`** es DML: admite **`WHERE`** y, dentro de una transacción, puede deshacerse con **`ROLLBACK`**. `TRUNCATE` vacía la tabla entera sin condición y `DROP` elimina el propio objeto; ambas son DDL. `REVOKE` retira privilegios (DCL)."
+    },
+    {
+      "id": "28",
+      "tema": 14,
+      "enunciado": "Se dice que SQL es un lenguaje de manipulación de datos:",
+      "opciones": [
+        "No procedimental o declarativo: se indica qué datos se quieren",
+        "Procedimental: se indica paso a paso cómo recorrer los registros",
+        "Navegacional, como el DML de CODASYL",
+        "Imperativo, basado obligatoriamente en cursores"
+      ],
+      "correcta": 0,
+      "explicacion": "**SQL es declarativo (no procedimental)**: el usuario dice **qué** datos quiere y el SGBD decide cómo obtenerlos. Los DML **procedimentales o navegacionales**, como el de CODASYL, obligan a indicar cómo recorrer los registros. Los cursores existen en SQL, pero son opcionales y se usan desde código procedimental."
+    },
+    {
+      "id": "29",
+      "tema": 14,
+      "enunciado": "En una base de datos distribuida, la fragmentación horizontal de una tabla consiste en repartirla:",
+      "opciones": [
+        "Por columnas (atributos) entre los nodos",
+        "Por índices, guardando cada índice en un nodo",
+        "Por filas (tuplas) entre los nodos",
+        "Copiándola completa en cada nodo"
+      ],
+      "correcta": 2,
+      "explicacion": "La **fragmentación horizontal** reparte la tabla **por filas**; la **vertical** la reparte **por columnas**. Copiar la tabla entera en cada nodo no es fragmentar sino **replicar**. Truco: horizontal = cortes «en tiras» de filas."
+    },
+    {
+      "id": "30",
+      "tema": 14,
+      "enunciado": "Señale la respuesta INCORRECTA sobre las propiedades de una relación en el modelo relacional:",
+      "opciones": [
+        "No puede haber tuplas duplicadas",
+        "El orden de las tuplas forma parte de la definición de la relación",
+        "Cada valor de un atributo es atómico",
+        "Cada atributo de la relación tiene un nombre distinto"
+      ],
+      "correcta": 1,
+      "explicacion": "Es falso: en una relación **el orden de las filas y de las columnas es irrelevante**, porque es un conjunto. Las demás son propiedades reales: **sin tuplas duplicadas**, **valores atómicos** y nombres de atributo distintos."
+    },
+    {
+      "id": "31",
+      "tema": 14,
+      "enunciado": "En el modelo relacional, una clave candidata es:",
+      "opciones": [
+        "Cualquier conjunto de atributos que identifica unívocamente cada tupla",
+        "Una superclave mínima, de la que no se puede quitar ningún atributo",
+        "La clave elegida por el diseñador para identificar las tuplas",
+        "Un conjunto de atributos que referencia la clave primaria de otra relación"
+      ],
+      "correcta": 1,
+      "explicacion": "La **clave candidata** es una **superclave mínima** (irreducible). Cualquier conjunto que identifica las tuplas, aunque sobren atributos, es una **superclave**; la candidata elegida es la **clave primaria**; y la que referencia otra relación es la **clave foránea**."
+    },
+    {
+      "id": "32",
+      "tema": 14,
+      "enunciado": "Una clave foránea se ha definido con `ON DELETE CASCADE`. Si se borra la fila referenciada de la tabla padre:",
+      "opciones": [
+        "Las filas hijas quedan con la clave foránea a NULL",
+        "El SGBD rechaza el borrado mientras existan filas hijas",
+        "Las filas hijas toman el valor por defecto de la columna",
+        "Se borran también las filas de la tabla hija que la referencian"
+      ],
+      "correcta": 3,
+      "explicacion": "**`CASCADE` propaga** la operación: al borrar la fila padre se **borran sus filas hijas**. Poner la FK a nulo es **`SET NULL`**, rechazar el borrado es **`RESTRICT` / `NO ACTION`** y asignar el valor por defecto es **`SET DEFAULT`**."
+    },
+    {
+      "id": "33",
+      "tema": 14,
+      "enunciado": "La tabla `t` tiene 5 filas, y en 2 de ellas la columna `col` es nula. ¿Qué devuelve `SELECT COUNT(*), COUNT(col) FROM t;`?",
+      "opciones": [
+        "5 y 3",
+        "5 y 5",
+        "3 y 3",
+        "3 y 5"
+      ],
+      "correcta": 0,
+      "explicacion": "**`COUNT(*)` cuenta filas** (5) y **`COUNT(columna)` ignora los nulos** (5 − 2 = 3). Por eso el resultado es **5 y 3**. Los demás agregados (SUM, AVG, MIN, MAX) también ignoran los nulos."
+    },
+    {
+      "id": "34",
+      "tema": 14,
+      "enunciado": "¿Cómo se comprueba correctamente en SQL si el valor de una columna es nulo?",
+      "opciones": [
+        "`WHERE col = NULL`",
+        "`WHERE col == NULL`",
+        "`WHERE col LIKE NULL`",
+        "`WHERE col IS NULL`"
+      ],
+      "correcta": 3,
+      "explicacion": "Se usa **`IS NULL`**, porque NULL significa valor desconocido y la lógica SQL es **trivaluada**: `col = NULL` devuelve «desconocido», nunca verdadero, así que no selecciona filas. `==` no es un operador de SQL estándar y `LIKE` compara patrones de texto."
+    },
+    {
+      "id": "35",
+      "tema": 14,
+      "enunciado": "Según las reglas de Codd, la que exige que todo dato sea accesible indicando el nombre de la tabla, el valor de la clave primaria y el nombre de la columna es la regla de:",
+      "opciones": [
+        "Acceso garantizado",
+        "Información",
+        "Catálogo relacional en línea",
+        "Independencia física"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la regla 2, de **acceso garantizado** (**tabla + clave + columna**). La regla 1, de **información**, exige que todo se represente como valores en tablas; la 4 pide un **catálogo relacional en línea** consultable con el mismo lenguaje, y la 8 es la de independencia física."
+    },
+    {
+      "id": "36",
+      "tema": 14,
+      "enunciado": "La operación del álgebra relacional que obtiene las tuplas de una relación que cumplen una condición es la:",
+      "opciones": [
+        "Selección (σ)",
+        "Proyección (π)",
+        "Producto cartesiano (×)",
+        "División (÷)"
+      ],
+      "correcta": 0,
+      "explicacion": "La **selección (σ)** filtra **filas** según una condición y equivale al **`WHERE`** de SQL. La **proyección (π)** elige **columnas** (la lista del `SELECT`), el producto cartesiano combina todas las tuplas y la división responde a consultas «para todos». Truco: selección = filas, proyección = columnas."
+    },
+    {
+      "id": "37",
+      "tema": 14,
+      "enunciado": "¿Qué operador del álgebra relacional permite responder directamente a «empleados que han trabajado en todos los proyectos»?",
+      "opciones": [
+        "La intersección",
+        "La división",
+        "La unión",
+        "La combinación natural"
+      ],
+      "correcta": 1,
+      "explicacion": "La **división (÷)** devuelve los valores que se relacionan con **todos** los de otra relación: es el operador de las consultas «para todos». La intersección da tuplas comunes a dos relaciones, la unión las de cualquiera de ellas y la combinación natural empareja por atributos comunes."
+    },
+    {
+      "id": "38",
+      "tema": 14,
+      "enunciado": "La relación EMPLEADO(dni, nombre, cod_dep, nombre_dep) tiene como clave `dni`, y además se cumple `cod_dep → nombre_dep`. ¿Cuál es la forma normal más alta en la que está?",
+      "opciones": [
+        "1FN",
+        "3FN",
+        "2FN",
+        "FNBC"
+      ],
+      "correcta": 2,
+      "explicacion": "La clave es simple, así que no puede haber dependencias parciales: está en **2FN**. Pero `dni → cod_dep → nombre_dep` es una **dependencia transitiva** entre atributos no clave, que viola la **3FN** (y por tanto la FNBC). Para normalizar se separa DEPARTAMENTO(cod_dep, nombre_dep)."
+    },
+    {
+      "id": "39",
+      "tema": 14,
+      "enunciado": "La relación LINEA(num_pedido, cod_producto, cantidad, desc_producto) tiene como clave (num_pedido, cod_producto), y se cumple `cod_producto → desc_producto`. ¿Qué incumple?",
+      "opciones": [
+        "La 1FN, por tener valores no atómicos",
+        "La 3FN, por una dependencia transitiva entre atributos no clave",
+        "Ninguna, porque ya está en FNBC",
+        "La 2FN, por una dependencia parcial de la clave"
+      ],
+      "correcta": 3,
+      "explicacion": "`desc_producto` depende solo de una **parte de la clave** (`cod_producto`), no de la clave completa: es una **dependencia parcial**, que incumple la **2FN**. Los valores son atómicos, así que sí está en 1FN. Para corregirlo se lleva `desc_producto` a una tabla PRODUCTO."
+    },
+    {
+      "id": "40",
+      "tema": 14,
+      "enunciado": "La cuarta forma normal (4FN) elimina las dependencias:",
+      "opciones": [
+        "De combinación (join)",
+        "Multivaluadas no triviales",
+        "Transitivas",
+        "Parciales"
+      ],
+      "correcta": 1,
+      "explicacion": "La **4FN** exige FNBC y que no haya **dependencias multivaluadas** no triviales. Las de **combinación** las elimina la **5FN**, las **transitivas** la **3FN** y las **parciales** la **2FN**."
+    },
+    {
+      "id": "41",
+      "tema": 14,
+      "enunciado": "Al pasar al modelo relacional una relación N:M entre ALUMNO y ASIGNATURA, lo correcto es:",
+      "opciones": [
+        "Crear una tabla intermedia con las claves primarias de ambas entidades",
+        "Añadir la clave de ASIGNATURA como clave foránea en ALUMNO",
+        "Añadir la clave de ALUMNO como clave foránea en ASIGNATURA",
+        "Fusionar ALUMNO y ASIGNATURA en una sola tabla"
+      ],
+      "correcta": 0,
+      "explicacion": "Una relación **N:M** siempre genera una **tabla intermedia** cuya clave está formada por las claves de las dos entidades (y que puede llevar atributos propios, como la nota). Poner una clave foránea en uno de los lados solo sirve para relaciones 1:N. Fusionar las tablas crearía redundancia."
+    },
+    {
+      "id": "42",
+      "tema": 14,
+      "enunciado": "¿Qué propiedad ACID garantiza que los cambios de una transacción confirmada persisten aunque después falle el sistema?",
+      "opciones": [
+        "Atomicidad",
+        "Consistencia",
+        "Durabilidad",
+        "Aislamiento"
+      ],
+      "correcta": 2,
+      "explicacion": "La **durabilidad** asegura que **lo confirmado persiste** pese a los fallos, gracias al registro *redo* y al WAL. La **atomicidad** es «todo o nada», la **consistencia** lleva la BD de un estado válido a otro y el **aislamiento** evita interferencias entre transacciones concurrentes."
+    },
+    {
+      "id": "43",
+      "tema": 14,
+      "enunciado": "Una transacción lee una fila; otra transacción la modifica y confirma; al releerla, la primera obtiene un valor distinto. Esta anomalía es:",
+      "opciones": [
+        "Una lectura sucia",
+        "Una lectura fantasma",
+        "Una lectura no repetible",
+        "Una actualización perdida"
+      ],
+      "correcta": 2,
+      "explicacion": "Es una **lectura no repetible**: la **misma fila** cambia de valor entre dos lecturas porque otra transacción la modificó **y confirmó**. No es sucia porque el dato estaba confirmado, y no es fantasma porque no aparecen ni desaparecen filas. La evita el nivel REPEATABLE READ."
+    },
+    {
+      "id": "44",
+      "tema": 14,
+      "enunciado": "Una transacción tiene un bloqueo compartido (S) sobre una fila. Otra transacción que quiera bloquear esa misma fila:",
+      "opciones": [
+        "Puede obtener otro bloqueo compartido, pero no uno exclusivo",
+        "Puede obtener un bloqueo exclusivo sin esperar",
+        "No puede obtener ningún tipo de bloqueo",
+        "Solo puede obtener un bloqueo exclusivo si es más antigua"
+      ],
+      "correcta": 0,
+      "explicacion": "El **bloqueo compartido (S)**, de lectura, es **compatible con otros S**, pero **incompatible con el exclusivo (X)**, que necesita la escritura. Por eso varias transacciones pueden leer a la vez, pero ninguna puede escribir hasta que se liberen los S. El X es incompatible con todos."
+    },
+    {
+      "id": "45",
+      "tema": 14,
+      "enunciado": "¿Qué técnica de control de concurrencia ofrece a cada transacción una instantánea de los datos, de modo que los lectores no bloquean a los escritores?",
+      "opciones": [
+        "Bloqueo en dos fases estricto",
+        "Escalada de bloqueos",
+        "MVCC (control de concurrencia multiversión)",
+        "Grafo de espera"
+      ],
+      "correcta": 2,
+      "explicacion": "**MVCC** mantiene varias versiones de los datos: cada transacción ve una **instantánea** y **los lectores no bloquean a los escritores**. Lo usan PostgreSQL, Oracle y MySQL InnoDB. El 2PL estricto sí bloquea, la escalada sube la granularidad del bloqueo y el grafo de espera sirve para detectar interbloqueos."
+    },
+    {
+      "id": "46",
+      "tema": 14,
+      "enunciado": "El protocolo de confirmación en dos fases (2PC) se utiliza para:",
+      "opciones": [
+        "Adquirir y liberar bloqueos de forma que la planificación sea serializable",
+        "Escribir el registro de transacciones en disco antes que los datos",
+        "Combinar copias completas con copias incrementales",
+        "Confirmar o anular de forma atómica una transacción distribuida entre varios nodos"
+      ],
+      "correcta": 3,
+      "explicacion": "El **2PC** coordina **transacciones distribuidas**: en la fase de **preparación** cada participante vota y en la segunda el coordinador ordena **confirmar o anular** en todos. No confundir con el **2PL** (bloqueo en dos fases), que garantiza la serializabilidad. Escribir antes el registro es **WAL**."
+    },
+    {
+      "id": "47",
+      "tema": 14,
+      "enunciado": "Se hace una copia completa el domingo y copias incrementales de lunes a sábado. El jueves por la mañana falla el disco. Para recuperar el estado del miércoles por la noche se necesitan:",
+      "opciones": [
+        "La completa del domingo y solo la incremental del miércoles",
+        "Solo la incremental del miércoles",
+        "Las incrementales del lunes, martes y miércoles, sin la completa",
+        "La completa del domingo y las incrementales del lunes, martes y miércoles"
+      ],
+      "correcta": 3,
+      "explicacion": "Cada **incremental** guarda solo los cambios desde la **última copia de cualquier tipo**, así que hay que aplicar la **completa y todas las incrementales en orden** (lunes, martes y miércoles). Con **diferenciales** bastaría la completa y la diferencial del miércoles. Sin la completa no hay base sobre la que aplicar los cambios."
+    },
+    {
+      "id": "48",
+      "tema": 14,
+      "enunciado": "¿Por qué la consulta `SELECT id_dep FROM empleado WHERE AVG(salario) > 2000 GROUP BY id_dep;` es incorrecta?",
+      "opciones": [
+        "Porque WHERE se evalúa antes de agrupar; la condición sobre el agregado debe ir en HAVING",
+        "Porque AVG solo puede utilizarse en la cláusula ORDER BY",
+        "Porque HAVING se evalúa antes que WHERE y debe ir primero",
+        "Porque WHERE solo admite condiciones sobre columnas indexadas"
+      ],
+      "correcta": 0,
+      "explicacion": "El orden lógico es **FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY**: cuando se evalúa `WHERE` aún no hay grupos, así que **no admite agregados**. La condición sobre `AVG` debe ir en **`HAVING`**, que filtra grupos. WHERE filtra filas y HAVING grupos."
+    },
+    {
+      "id": "49",
+      "tema": 14,
+      "enunciado": "Hay 4 departamentos, uno de ellos sin empleados, y 6 empleados, todos con un `id_dep` válido. ¿Cuántas filas devuelve `SELECT d.nombre, e.nombre FROM departamento d LEFT JOIN empleado e ON e.id_dep = d.id;`?",
+      "opciones": [
+        "6",
+        "7",
+        "4",
+        "24"
+      ],
+      "correcta": 1,
+      "explicacion": "El `INNER JOIN` daría **6 filas** (una por empleado). El **`LEFT JOIN` conserva además los departamentos sin pareja**, con `e.nombre` a NULL: 6 + 1 = **7**. 24 sería el producto cartesiano (`CROSS JOIN`, 4 × 6)."
+    },
+    {
+      "id": "50",
+      "tema": 14,
+      "enunciado": "¿Qué SGBD es embebido, funciona sin servidor, guarda toda la base de datos en un único fichero y viene incluido en Android e iOS?",
+      "opciones": [
+        "MariaDB",
+        "PostgreSQL",
+        "IBM Db2",
+        "SQLite"
+      ],
+      "correcta": 3,
+      "explicacion": "**SQLite** es una BD **embebida**: una biblioteca sin proceso servidor que guarda la BD en **un único fichero**, y es de dominio público. Está en Android, iOS y los navegadores. MariaDB, PostgreSQL y Db2 son SGBD cliente/servidor."
+    },
+    {
+      "id": "51",
+      "tema": 14,
+      "enunciado": "Los SGBD orientados a objetos surgieron sobre todo para eliminar:",
+      "opciones": [
+        "La necesidad de un control de concurrencia",
+        "La redundancia que introduce la normalización",
+        "El desajuste de impedancia entre el modelo de objetos de los programas y el de tablas",
+        "La dependencia de un diccionario de datos"
+      ],
+      "correcta": 2,
+      "explicacion": "Los SGBDOO buscan eliminar el **desajuste de impedancia (impedance mismatch)**: la diferencia entre los **objetos** que maneja el programa y las **tablas** relacionales. Siguen necesitando concurrencia y catálogo, y la normalización reduce la redundancia, no la crea. En la práctica, ese desajuste se resuelve casi siempre con un **ORM**."
+    },
+    {
+      "id": "52",
+      "tema": 14,
+      "enunciado": "En las BD orientadas a objetos, la persistencia por alcanzabilidad significa que:",
+      "opciones": [
+        "Persiste todo objeto accesible desde una raíz persistente",
+        "Persisten solo los objetos de clases que heredan de una clase persistente",
+        "Persisten solo los objetos marcados explícitamente por el programador",
+        "Persisten los objetos hasta que termina el programa que los creó"
+      ],
+      "correcta": 0,
+      "explicacion": "En la **persistencia por alcanzabilidad** se guarda **todo lo que se puede alcanzar desde una raíz persistente**, siguiendo las referencias. Heredar de una clase persistente o marcar explícitamente los objetos son los otros dos modelos de persistencia. Un objeto que muere con el programa es, por definición, transitorio."
+    },
+    {
+      "id": "53",
+      "tema": 14,
+      "enunciado": "El Manifiesto de las bases de datos orientadas a objetos (Atkinson y otros, 1989) fija:",
+      "opciones": [
+        "12 reglas numeradas del 0 al 11, como las de Codd",
+        "8 características obligatorias, todas de orientación a objetos",
+        "13 características obligatorias: 8 de orientación a objetos y 5 de SGBD",
+        "13 características obligatorias: 5 de orientación a objetos y 8 de SGBD"
+      ],
+      "correcta": 2,
+      "explicacion": "El Manifiesto de 1989 fija **13 características obligatorias**: **8 de orientación a objetos** (objetos complejos, identidad, encapsulamiento, clases, herencia, sobrecarga y ligadura tardía, completitud computacional, extensibilidad) y **5 de SGBD** (persistencia, almacenamiento secundario, concurrencia, recuperación y consultas *ad hoc*). La última opción invierte el reparto. Las reglas de Codd son otra cosa (del 0 al 12)."
+    },
+    {
+      "id": "54",
+      "tema": 14,
+      "enunciado": "En las bases de datos NoSQL, el reparto de los datos entre los nodos de un clúster según su clave se denomina:",
+      "opciones": [
+        "Replicación",
+        "Desnormalización",
+        "MapReduce",
+        "Particionado (sharding)"
+      ],
+      "correcta": 3,
+      "explicacion": "El **sharding** reparte los datos **entre nodos por clave**, a menudo con hash consistente, y permite el **escalado horizontal**. La **replicación** copia los mismos datos en varios nodos, la desnormalización duplica datos para evitar *joins* y MapReduce es un modelo de procesamiento masivo."
+    },
+    {
+      "id": "55",
+      "tema": 14,
+      "enunciado": "Un sistema NoSQL tiene N = 3 réplicas de cada dato. ¿Qué configuración de quórum garantiza que cada lectura vea la última escritura?",
+      "opciones": [
+        "R = 1 y W = 2",
+        "R = 2 y W = 2",
+        "R = 1 y W = 1",
+        "R = 2 y W = 1"
+      ],
+      "correcta": 1,
+      "explicacion": "La condición es **R + W > N**: con **R = 2 y W = 2**, 2 + 2 = 4 > 3, así que el conjunto de réplicas leídas siempre se solapa con el de las escritas. En las otras opciones R + W vale 3 o 2, que no supera N, y la lectura podría tocar solo réplicas desactualizadas."
+    },
+    {
+      "id": "56",
+      "tema": 14,
+      "enunciado": "¿Cuál de los siguientes sistemas se clasifica habitualmente como AP según el teorema CAP?",
+      "opciones": [
+        "HBase",
+        "CouchDB",
+        "etcd",
+        "ZooKeeper"
+      ],
+      "correcta": 1,
+      "explicacion": "**CouchDB**, como Cassandra o Riak, **prioriza la disponibilidad** ante una partición: es **AP**. **HBase**, **etcd** y **ZooKeeper** priorizan la **consistencia**: son **CP**."
+    },
+    {
+      "id": "57",
+      "tema": 14,
+      "enunciado": "MongoDB almacena sus documentos en formato:",
+      "opciones": [
+        "XML",
+        "CSV",
+        "Parquet",
+        "BSON"
+      ],
+      "correcta": 3,
+      "explicacion": "**MongoDB** guarda los documentos en **BSON**, una representación **binaria de JSON** con tipos adicionales. XML lo usan otras BD documentales y CSV es un formato plano sin anidamiento. Parquet es un formato columnar para analítica."
+    },
+    {
+      "id": "58",
+      "tema": 14,
+      "enunciado": "¿Qué lenguaje, normalizado por el W3C, se utiliza para consultar grafos RDF formados por tripletas sujeto-predicado-objeto?",
+      "opciones": [
+        "Cypher",
+        "Gremlin",
+        "SPARQL",
+        "OQL"
+      ],
+      "correcta": 2,
+      "explicacion": "**SPARQL** es el lenguaje del **W3C** para grafos **RDF**. **Cypher** (Neo4j) y **Gremlin** (Apache TinkerPop) trabajan sobre **grafos de propiedades**. OQL es el lenguaje de consulta de las BD orientadas a objetos (ODMG)."
+    },
+    {
+      "id": "59",
+      "tema": 14,
+      "enunciado": "Señale la respuesta INCORRECTA sobre las bases de datos de familias de columnas:",
+      "opciones": [
+        "HBase funciona sobre Hadoop y su sistema de ficheros HDFS",
+        "Cassandra no tiene nodo maestro",
+        "ClickHouse y Amazon Redshift son NoSQL de familias de columnas, como Cassandra",
+        "Cassandra se consulta con el lenguaje CQL"
+      ],
+      "correcta": 2,
+      "explicacion": "Es falso: **ClickHouse y Redshift** son **SGBD relacionales columnares** para analítica (OLAP), que almacenan por columnas; no son NoSQL de **familias de columnas** como **Cassandra o HBase**. Es una confusión típica por el nombre. Las otras tres afirmaciones son correctas."
+    },
+    {
+      "id": "60",
+      "tema": 14,
+      "enunciado": "Google Spanner, CockroachDB y TiDB son ejemplos de SGBD:",
+      "opciones": [
+        "Orientados a objetos que cumplen el estándar ODMG",
+        "NewSQL: relacionales distribuidos con ACID y escalado horizontal",
+        "Documentales con esquema flexible y consistencia eventual",
+        "Jerárquicos derivados de IBM IMS"
+      ],
+      "correcta": 1,
+      "explicacion": "Spanner, CockroachDB y TiDB son **NewSQL**: mantienen el **modelo relacional, SQL y ACID** y añaden el **escalado horizontal** propio de NoSQL. No son documentales ni orientados a objetos. IMS es el ejemplo clásico del modelo jerárquico de los años 60."
+    }
+  ]
+}

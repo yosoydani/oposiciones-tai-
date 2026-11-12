@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 26 · test",
+  "fuente": "propio",
+  "tema": 26,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 26. Servidores de correo electrónico, contenedores y microservicios»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 26,
+      "enunciado": "El puerto estándar para que un cliente de correo envíe mensajes autenticados a su servidor usando STARTTLS es:",
+      "opciones": [
+        "25",
+        "110",
+        "587",
+        "993"
+      ],
+      "correcta": 2,
+      "explicacion": "El puerto **587** es el de *submission* (RFC 6409): el cliente se autentica y pasa a TLS con STARTTLS. El 25 es para la retransmisión entre servidores (MTA–MTA), el 110 es POP3 y el 993 es IMAP con TLS implícito."
+    },
+    {
+      "id": "02",
+      "tema": 26,
+      "enunciado": "IMAP sobre TLS implícito (IMAPS) usa el puerto:",
+      "opciones": [
+        "993",
+        "995",
+        "143",
+        "465"
+      ],
+      "correcta": 0,
+      "explicacion": "IMAPS usa el **993**. El 995 es POP3S, el 143 es IMAP en claro o con STARTTLS y el 465 es el envío de usuarios con TLS implícito. Truco: los dos que empiezan por 99 son los de lectura con TLS (IMAP 993, POP3 995)."
+    },
+    {
+      "id": "03",
+      "tema": 26,
+      "enunciado": "Un dominio tiene `MX 10 mx1` y `MX 20 mx2`. Un servidor remitente intentará entregar primero en:",
+      "opciones": [
+        "mx2, por tener el valor más alto",
+        "Cualquiera al azar",
+        "En los dos a la vez",
+        "mx1, por tener el valor más bajo"
+      ],
+      "correcta": 3,
+      "explicacion": "En los registros MX **el valor de preferencia más bajo tiene mayor prioridad**, así que se intenta primero mx1 (10); mx2 (20) queda de respaldo. Solo se reparte al azar entre registros que tienen la misma preferencia."
+    },
+    {
+      "id": "04",
+      "tema": 26,
+      "enunciado": "Frente a POP3, IMAP:",
+      "opciones": [
+        "Descarga y borra siempre los mensajes del servidor",
+        "Mantiene los mensajes y carpetas en el servidor y sincroniza su estado entre dispositivos",
+        "Solo permite acceder a la bandeja de entrada",
+        "Se usa para enviar correo entre servidores"
+      ],
+      "correcta": 1,
+      "explicacion": "**IMAP** deja los mensajes **en el servidor**, con carpetas y estado sincronizado (leído, marcado), por eso funciona bien con varios dispositivos. Descargar y borrar y trabajar solo con la bandeja de entrada es propio de POP3, y el envío entre servidores es SMTP."
+    },
+    {
+      "id": "05",
+      "tema": 26,
+      "enunciado": "Un servidor SMTP responde con un código de la clase 4xx. Esto indica:",
+      "opciones": [
+        "Éxito",
+        "Que debe enviarse el cuerpo del mensaje",
+        "Un error temporal: el emisor reintentará más tarde",
+        "Un error permanente que genera rebote inmediato"
+      ],
+      "correcta": 2,
+      "explicacion": "Los códigos **4xx** son **errores temporales**: el emisor guarda el mensaje en cola y **reintenta** (en eso se basa el *greylisting*). Los 2xx son éxito, el 354 pide el cuerpo del mensaje y los 5xx son errores permanentes que generan rebote."
+    },
+    {
+      "id": "06",
+      "tema": 26,
+      "enunciado": "En un registro SPF, el mecanismo `~all` significa:",
+      "opciones": [
+        "Fallo suave (*softfail*): no autorizado, pero se acepta marcándolo",
+        "Fallo (*fail*): rechazar",
+        "Neutro",
+        "Aceptar todo"
+      ],
+      "correcta": 0,
+      "explicacion": "El calificador **`~`** es **fallo suave** (*softfail*): el emisor no está autorizado, pero se acepta marcándolo. `-all` es fallo (rechazar), `?all` neutro y `+all` aceptaría a cualquiera. Truco: la tilde «ondula», es un no blando."
+    },
+    {
+      "id": "07",
+      "tema": 26,
+      "enunciado": "En DKIM, la clave pública del dominio se publica:",
+      "opciones": [
+        "En la cabecera `From`",
+        "En un registro MX",
+        "En el certificado TLS del servidor",
+        "En un registro TXT de `selector._domainkey.dominio`"
+      ],
+      "correcta": 3,
+      "explicacion": "La clave pública DKIM se publica en un **registro TXT** en **`selector._domainkey.dominio`** (RFC 6376); el receptor la consulta para verificar la firma de la cabecera `DKIM-Signature`. La cabecera `From` es lo que alinea DMARC, y el MX solo indica los servidores de correo entrante."
+    },
+    {
+      "id": "08",
+      "tema": 26,
+      "enunciado": "Una política DMARC `p=quarantine` indica al receptor que los mensajes que no superen DMARC:",
+      "opciones": [
+        "Se entreguen normalmente",
+        "Se traten como sospechosos (por ejemplo, a la carpeta de spam)",
+        "Se rechacen en la sesión SMTP",
+        "Se reenvíen al administrador"
+      ],
+      "correcta": 1,
+      "explicacion": "Con **`p=quarantine`** el mensaje se trata **como sospechoso** (cuarentena o carpeta de spam). `p=none` solo monitoriza y entrega normalmente, y `p=reject` lo rechaza en la sesión SMTP. El orden de despliegue recomendado es none, quarantine y reject."
+    },
+    {
+      "id": "09",
+      "tema": 26,
+      "enunciado": "El registro DMARC de `ejemplo.es` se publica en:",
+      "opciones": [
+        "`ejemplo.es` como registro MX",
+        "`dmarc.ejemplo.es` como registro A",
+        "`_dmarc.ejemplo.es` como registro TXT",
+        "`_domainkey.ejemplo.es` como registro TXT"
+      ],
+      "correcta": 2,
+      "explicacion": "DMARC se publica en un **registro TXT** en **`_dmarc.<dominio>`**, con guion bajo. Bajo `_domainkey` va la clave pública de DKIM (precedida del selector), y SPF, DKIM y DMARC usan siempre registros TXT, nunca MX ni A."
+    },
+    {
+      "id": "10",
+      "tema": 26,
+      "enunciado": "Thunderbird u Outlook actúan como:",
+      "opciones": [
+        "MUA",
+        "MTA",
+        "MDA",
+        "DNSBL"
+      ],
+      "correcta": 0,
+      "explicacion": "Son clientes de correo, es decir, **MUA** (*Mail User Agent*): redactan, envían al MSA y leen por POP3 o IMAP. El MTA transfiere correo entre servidores (Postfix, Exim), el MDA lo deposita en el buzón y una DNSBL es una lista negra en DNS."
+    },
+    {
+      "id": "11",
+      "tema": 26,
+      "enunciado": "El fichero de configuración principal de Postfix es:",
+      "opciones": [
+        "`/etc/postfix/master.cf`",
+        "`/etc/mail/sendmail.cf`",
+        "`/etc/dovecot/dovecot.conf`",
+        "`/etc/postfix/main.cf`"
+      ],
+      "correcta": 3,
+      "explicacion": "**`/etc/postfix/main.cf`** contiene los parámetros principales (`myhostname`, `mydestination`, `mynetworks`…). `master.cf` define los servicios y procesos (por ejemplo, activar el 587), `sendmail.cf` es de Sendmail y `dovecot.conf` es de Dovecot."
+    },
+    {
+      "id": "12",
+      "tema": 26,
+      "enunciado": "Un «relé abierto» es un servidor de correo que:",
+      "opciones": [
+        "Solo admite conexiones cifradas",
+        "Retransmite correo de cualquier remitente hacia cualquier destino sin autenticación",
+        "Tiene el puerto 25 cerrado",
+        "Publica un registro DMARC con `p=none`"
+      ],
+      "correcta": 1,
+      "explicacion": "El **relé abierto** **retransmite correo de cualquiera a cualquiera** sin autenticación; lo explotan los emisores de spam y acaba en listas negras. Un MTA solo debe aceptar correo para sus dominios o de usuarios autenticados o redes de confianza."
+    },
+    {
+      "id": "13",
+      "tema": 26,
+      "enunciado": "En Exchange Server (desde la versión 2016) los roles de servidor son:",
+      "opciones": [
+        "Buzón y Transporte perimetral",
+        "Acceso de clientes, Hub Transport y Buzón",
+        "Front-end y Back-end SQL",
+        "MTA y MDA"
+      ],
+      "correcta": 0,
+      "explicacion": "Desde Exchange 2016 solo hay dos roles: **Buzón** (*Mailbox*, que incluye acceso de clientes y transporte) y **Transporte perimetral** (*Edge Transport*). Acceso de clientes, Hub Transport y Buzón eran roles separados en Exchange 2007/2010."
+    },
+    {
+      "id": "14",
+      "tema": 26,
+      "enunciado": "En Docker, la diferencia entre imagen y contenedor es:",
+      "opciones": [
+        "Son sinónimos",
+        "El contenedor es la plantilla y la imagen su ejecución",
+        "La imagen es una plantilla inmutable por capas y el contenedor es una instancia en ejecución de ella",
+        "La imagen solo existe en el registro"
+      ],
+      "correcta": 2,
+      "explicacion": "La **imagen** es una **plantilla inmutable de solo lectura por capas** y el **contenedor** es una **instancia en ejecución** de ella, con una capa de escritura que se pierde al borrarlo. La opción b los invierte, y las imágenes también se guardan localmente (`docker images`)."
+    },
+    {
+      "id": "15",
+      "tema": 26,
+      "enunciado": "En un Dockerfile, la instrucción que se ejecuta durante la construcción de la imagen es:",
+      "opciones": [
+        "`CMD`",
+        "`ENTRYPOINT`",
+        "`EXPOSE`",
+        "`RUN`"
+      ],
+      "correcta": 3,
+      "explicacion": "**`RUN`** se ejecuta **al construir** la imagen y crea una capa. `CMD` y `ENTRYPOINT` actúan al arrancar el contenedor, y `EXPOSE` solo documenta el puerto, sin publicarlo."
+    },
+    {
+      "id": "16",
+      "tema": 26,
+      "enunciado": "En `docker run -p 8080:80 nginx`:",
+      "opciones": [
+        "El contenedor escucha en el 8080 y el anfitrión en el 80",
+        "El puerto 8080 del anfitrión se redirige al puerto 80 del contenedor",
+        "Se abren los puertos 8080 a 80",
+        "Se limita el contenedor a 80 MB"
+      ],
+      "correcta": 1,
+      "explicacion": "El formato es **`-p puerto_anfitrión:puerto_contenedor`**: las conexiones al **8080 del anfitrión** llegan al **80 del contenedor**, donde escucha nginx. La opción a lo invierte. Truco: primero lo de fuera, luego lo de dentro."
+    },
+    {
+      "id": "17",
+      "tema": 26,
+      "enunciado": "El componente de Kubernetes que almacena todo el estado del clúster es:",
+      "opciones": [
+        "etcd",
+        "kube-scheduler",
+        "kube-proxy",
+        "kubelet"
+      ],
+      "correcta": 0,
+      "explicacion": "**etcd** es el almacén **clave-valor** distribuido y consistente (Raft) con **todo el estado del clúster**, y hay que hacerle copia. El kube-scheduler decide en qué nodo va cada pod, kube-proxy implementa los Services en cada nodo y kubelet es el agente de nodo."
+    },
+    {
+      "id": "18",
+      "tema": 26,
+      "enunciado": "El agente que se ejecuta en cada nodo de Kubernetes y asegura que los contenedores de los pods están en marcha es:",
+      "opciones": [
+        "kube-apiserver",
+        "kube-controller-manager",
+        "kubelet",
+        "CoreDNS"
+      ],
+      "correcta": 2,
+      "explicacion": "El **kubelet** es el **agente de cada nodo**: recibe las especificaciones de los pods y asegura que sus contenedores están en marcha y sanos. kube-apiserver y kube-controller-manager forman parte del plano de control, y CoreDNS da el DNS interno del clúster."
+    },
+    {
+      "id": "19",
+      "tema": 26,
+      "enunciado": "El tipo de Service de Kubernetes que se crea por defecto y solo es accesible dentro del clúster es:",
+      "opciones": [
+        "NodePort",
+        "LoadBalancer",
+        "ExternalName",
+        "ClusterIP"
+      ],
+      "correcta": 3,
+      "explicacion": "**ClusterIP** es el tipo **por defecto** y solo es accesible **dentro del clúster**. NodePort abre un puerto en cada nodo (30000-32767), LoadBalancer pide un balanceador externo a la nube y ExternalName es un alias DNS."
+    },
+    {
+      "id": "20",
+      "tema": 26,
+      "enunciado": "Un *service mesh*:",
+      "opciones": [
+        "Sustituye al API gateway en el tráfico de clientes externos",
+        "Gestiona la comunicación entre microservicios (este-oeste) mediante *proxies sidecar* y ofrece mTLS, reintentos y observabilidad",
+        "Es un registro de imágenes",
+        "Es una base de datos distribuida"
+      ],
+      "correcta": 1,
+      "explicacion": "El **service mesh** gestiona el tráfico **este-oeste** (entre servicios) con *proxies* **sidecar** (normalmente Envoy): mTLS, reintentos, cortacircuitos y observabilidad. El tráfico de clientes externos (norte-sur) lo gestiona el **API gateway**; no se sustituyen, se complementan."
+    },
+    {
+      "id": "21",
+      "tema": 26,
+      "enunciado": "En la arquitectura del correo electrónico, ¿qué agente deposita el mensaje en el buzón del usuario y puede aplicar filtros?",
+      "opciones": [
+        "MUA",
+        "MTA",
+        "MDA",
+        "MSA"
+      ],
+      "correcta": 2,
+      "explicacion": "El **MDA** (*Mail Delivery Agent*) **entrega el mensaje en el buzón** y aplica filtros (Dovecot LDA/LMTP, Procmail). El MUA es el cliente, el MTA transfiere el correo entre servidores por SMTP y el MSA recibe el envío autenticado del usuario (587/465)."
+    },
+    {
+      "id": "22",
+      "tema": 26,
+      "enunciado": "¿Qué formato de buzón guarda cada mensaje en un fichero independiente?",
+      "opciones": [
+        "mbox",
+        "Maildir",
+        "MIME",
+        "LMTP"
+      ],
+      "correcta": 1,
+      "explicacion": "**Maildir** usa **un fichero por mensaje**; **mbox** guarda todo el buzón en un único fichero. MIME es el estándar de formato de contenido y adjuntos, y LMTP es el protocolo de entrega local del MTA al MDA."
+    },
+    {
+      "id": "23",
+      "tema": 26,
+      "enunciado": "Sobre los registros MX, señale la afirmación INCORRECTA:",
+      "opciones": [
+        "El valor de preferencia más bajo indica la mayor prioridad",
+        "Si un dominio no tiene MX, el remitente intenta entregar en su registro A/AAAA",
+        "Un registro MX puede apuntar directamente a una dirección IP",
+        "Un MX nulo (`MX 0 .`) declara que el dominio no acepta correo"
+      ],
+      "correcta": 2,
+      "explicacion": "Es falso: un MX **debe apuntar a un nombre**, **no a una IP ni a un CNAME**; ese nombre se resuelve después con su registro A/AAAA. Las demás son correctas: menor valor = más prioridad, el MX implícito usa el A/AAAA del dominio y el MX nulo está definido en la RFC 7505."
+    },
+    {
+      "id": "24",
+      "tema": 26,
+      "enunciado": "¿Qué registro DNS asocia la dirección IP del servidor emisor con un nombre y suelen comprobar los receptores de correo?",
+      "opciones": [
+        "PTR",
+        "MX",
+        "SRV",
+        "TXT"
+      ],
+      "correcta": 0,
+      "explicacion": "El registro **PTR** (DNS inverso) da el nombre asociado a una IP; muchos receptores rechazan IP sin un PTR coherente (FCrDNS). MX indica los servidores entrantes, SRV sirve para el autodescubrimiento y TXT publica SPF, DKIM y DMARC."
+    },
+    {
+      "id": "25",
+      "tema": 26,
+      "enunciado": "¿Qué cabecera de un mensaje de correo no se transmite a los destinatarios?",
+      "opciones": [
+        "Cc",
+        "Bcc",
+        "Reply-To",
+        "Message-ID"
+      ],
+      "correcta": 1,
+      "explicacion": "La cabecera **Bcc** (copia oculta) **no se transmite** a los destinatarios: por eso ninguno ve quién la recibió en copia oculta. Cc sí es visible, Reply-To indica a quién responder y Message-ID identifica el mensaje de forma única."
+    },
+    {
+      "id": "26",
+      "tema": 26,
+      "enunciado": "Al codificar un adjunto en Base64 dentro de un mensaje MIME, su tamaño aumenta aproximadamente en:",
+      "opciones": [
+        "Un 10 %",
+        "Un 25 %",
+        "Un 33 %",
+        "Un 50 %"
+      ],
+      "correcta": 2,
+      "explicacion": "Base64 representa cada 3 bytes con 4 caracteres, así que el tamaño crece en torno a **un 33 %** (4/3). Por eso un adjunto de 15 MB ocupa unos 20 MB en el mensaje y puede superar el tamaño máximo permitido."
+    },
+    {
+      "id": "27",
+      "tema": 26,
+      "enunciado": "¿Qué comprueba el mecanismo SPF?",
+      "opciones": [
+        "La firma criptográfica de las cabeceras y del cuerpo del mensaje",
+        "La alineación del dominio del `From` visible con el dominio autenticado",
+        "Que el certificado TLS del servidor emisor es válido",
+        "Que la IP que envía está autorizada por el dominio del sobre (`MAIL FROM`)"
+      ],
+      "correcta": 3,
+      "explicacion": "**SPF** (RFC 7208) comprueba que la **IP emisora está autorizada** por el dominio del **sobre** (`MAIL FROM`/`Return-Path`). La firma criptográfica es DKIM y la alineación con el `From` visible es DMARC. Como depende de la IP, SPF no sobrevive al reenvío."
+    },
+    {
+      "id": "28",
+      "tema": 26,
+      "enunciado": "Según la RFC 8314, el puerto 465 se utiliza actualmente para:",
+      "opciones": [
+        "La retransmisión SMTP entre servidores",
+        "El acceso POP3 con TLS implícito",
+        "El acceso IMAP con STARTTLS",
+        "El envío de correo de los usuarios con TLS implícito (*submissions*)"
+      ],
+      "correcta": 3,
+      "explicacion": "La **RFC 8314 (2018)** recuperó el **465** para el **envío de usuarios con TLS implícito**, y recomienda TLS implícito para el acceso de clientes. La retransmisión entre servidores usa el 25, POP3 con TLS el 995 e IMAP con STARTTLS el 143."
+    },
+    {
+      "id": "29",
+      "tema": 26,
+      "enunciado": "En SMTP, ¿cómo se indica el final del contenido del mensaje enviado tras el comando `DATA`?",
+      "opciones": [
+        "Con una línea que contiene solo un punto (`.`)",
+        "Con el comando `QUIT`",
+        "Con una línea en blanco",
+        "Con el código de respuesta 354"
+      ],
+      "correcta": 0,
+      "explicacion": "El contenido tras `DATA` **termina con una línea que contiene solo un punto**. La línea en blanco separa cabeceras y cuerpo (RFC 5322), `QUIT` cierra la sesión y el **354** es la respuesta del servidor a `DATA` pidiendo que se envíe el mensaje."
+    },
+    {
+      "id": "30",
+      "tema": 26,
+      "enunciado": "¿Cuál es el orden correcto de comandos en una sesión SMTP para enviar un mensaje?",
+      "opciones": [
+        "MAIL FROM, EHLO, RCPT TO, DATA, QUIT",
+        "EHLO, RCPT TO, MAIL FROM, DATA, QUIT",
+        "EHLO, MAIL FROM, RCPT TO, DATA, QUIT",
+        "EHLO, DATA, MAIL FROM, RCPT TO, QUIT"
+      ],
+      "correcta": 2,
+      "explicacion": "Primero el saludo (**EHLO**), luego el remitente del sobre (**MAIL FROM**), uno o varios destinatarios (**RCPT TO**), el contenido (**DATA**) y el cierre (**QUIT**). El remitente siempre va antes que los destinatarios, y el contenido al final."
+    },
+    {
+      "id": "31",
+      "tema": 26,
+      "enunciado": "Un servidor SMTP responde `550` a un comando `RCPT TO`. Esto significa que:",
+      "opciones": [
+        "Hay un error temporal y el emisor reintentará más tarde",
+        "Hay un error permanente, por ejemplo un buzón inexistente, y se generará un rebote",
+        "La acción se ha completado con éxito",
+        "El servidor espera que se envíe el contenido del mensaje"
+      ],
+      "correcta": 1,
+      "explicacion": "El **550** es un **error permanente** (clase 5xx), típicamente buzón inexistente o rechazado: no se reintenta y se genera un aviso de no entrega (**rebote**). Los temporales son 4xx, el éxito es 250 y el 354 pide el contenido."
+    },
+    {
+      "id": "32",
+      "tema": 26,
+      "enunciado": "En POP3, el comando `DELE`:",
+      "opciones": [
+        "Marca el mensaje, que se borra al cerrar la sesión con `QUIT`",
+        "Borra el mensaje de forma inmediata e irreversible",
+        "Mueve el mensaje a una carpeta de papelera en el servidor",
+        "Descarga el mensaje y lo borra a continuación"
+      ],
+      "correcta": 0,
+      "explicacion": "**`DELE` marca** el mensaje y el borrado se hace **al terminar con `QUIT`**; si la sesión se corta antes, el mensaje no se borra. POP3 no tiene carpetas, y la descarga se hace con `RETR`."
+    },
+    {
+      "id": "33",
+      "tema": 26,
+      "enunciado": "¿Qué comando de IMAP permite al servidor notificar de inmediato al cliente la llegada de mensajes nuevos (*push*)?",
+      "opciones": [
+        "`FETCH`",
+        "`SELECT`",
+        "`IDLE`",
+        "`EXPUNGE`"
+      ],
+      "correcta": 2,
+      "explicacion": "**`IDLE`** deja la conexión abierta para que el servidor avise al instante (*push*); POP3 no tiene nada equivalente. `FETCH` recupera mensajes o partes, `SELECT` abre una carpeta y `EXPUNGE` borra definitivamente los marcados con `\\Deleted`."
+    },
+    {
+      "id": "34",
+      "tema": 26,
+      "enunciado": "¿Qué mecanismo publica en DNS, mediante registros TLSA protegidos con DNSSEC, qué certificado debe usarse para el SMTP entre servidores?",
+      "opciones": [
+        "MTA-STS",
+        "TLS-RPT",
+        "STARTTLS",
+        "DANE"
+      ],
+      "correcta": 3,
+      "explicacion": "**DANE** para SMTP (RFC 7672) publica en DNS registros **TLSA** con **DNSSEC**. **MTA-STS** (RFC 8461) logra un fin parecido pero publicando la política **por HTTPS**; TLS-RPT envía informes de fallos de TLS, y STARTTLS por sí solo es oportunista."
+    },
+    {
+      "id": "35",
+      "tema": 26,
+      "enunciado": "¿Cuántas consultas DNS como máximo puede provocar la evaluación de un registro SPF antes de devolver *permerror*?",
+      "opciones": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "correcta": 1,
+      "explicacion": "SPF limita a **10 consultas DNS** por evaluación (`include`, `a`, `mx`, `exists`, `redirect`); superarlo da *permerror*. Por eso hay que vigilar los `include` de proveedores, que a su vez encadenan otras consultas. Además solo puede haber un registro SPF por dominio."
+    },
+    {
+      "id": "36",
+      "tema": 26,
+      "enunciado": "El dominio `ejemplo.es` publica `v=spf1 mx ip4:203.0.113.10 -all`. Llega un mensaje con ese dominio en el sobre desde la IP 198.51.100.7, que no es ningún MX del dominio. El resultado SPF es:",
+      "opciones": [
+        "*Pass*",
+        "*Softfail*",
+        "*Fail*",
+        "*Neutral*"
+      ],
+      "correcta": 2,
+      "explicacion": "La IP no coincide con los `mx` ni con `ip4:203.0.113.10`, así que se aplica el último mecanismo, **`-all`**, que da **fallo** (*fail*). Con `~all` sería *softfail* y con `?all` neutro. Solo daría *pass* si la IP fuera uno de los MX o la 203.0.113.10."
+    },
+    {
+      "id": "37",
+      "tema": 26,
+      "enunciado": "¿Qué mecanismo de autenticación del correo sigue siendo válido cuando el mensaje se reenvía sin modificarlo?",
+      "opciones": [
+        "SPF",
+        "DKIM",
+        "DANE",
+        "MTA-STS"
+      ],
+      "correcta": 1,
+      "explicacion": "**DKIM** firma cabeceras y cuerpo, así que la firma **sobrevive al reenvío** si no se modifica el mensaje. **SPF no**, porque el reenviador envía desde otra IP. DANE y MTA-STS protegen el cifrado del transporte, no autentican al remitente."
+    },
+    {
+      "id": "38",
+      "tema": 26,
+      "enunciado": "Según DMARC, un mensaje supera la comprobación cuando:",
+      "opciones": [
+        "SPF y DKIM pasan los dos, aunque no estén alineados",
+        "SPF o DKIM pasan y están alineados con el dominio del `From` visible",
+        "El servidor emisor tiene un registro PTR coherente",
+        "El dominio publica una política `p=none`"
+      ],
+      "correcta": 1,
+      "explicacion": "DMARC **pasa si SPF o DKIM pasan y están alineados** con el dominio del `From` visible; basta uno de los dos. No exige ambos, y que pasen sin alineación no basta. `p=none` solo indica qué hacer si falla (monitorizar), no hace que pase."
+    },
+    {
+      "id": "39",
+      "tema": 26,
+      "enunciado": "¿Qué técnica antispam rechaza con un código 4xx el primer intento de entrega de un remitente desconocido, aprovechando que los servidores legítimos reintentan?",
+      "opciones": [
+        "*Greylisting*",
+        "Listas negras DNS (DNSBL)",
+        "Listas blancas",
+        "Filtrado bayesiano"
+      ],
+      "correcta": 0,
+      "explicacion": "El **greylisting** da un **rechazo temporal 4xx** al primer intento: los servidores legítimos reintentan y muchos emisores de spam no. Las DNSBL bloquean por reputación de la IP y el filtrado bayesiano puntúa el contenido."
+    },
+    {
+      "id": "40",
+      "tema": 26,
+      "enunciado": "¿Hasta cuántos servidores de buzones puede incluir un grupo de disponibilidad de bases de datos (DAG) de Exchange Server?",
+      "opciones": [
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "correcta": 2,
+      "explicacion": "Un **DAG** admite **hasta 16** servidores con copias de las bases de datos de buzones, sobre un clúster de conmutación por error y con **servidor testigo**. Truco: 16 servidores = 16 posibles copias de cada base de datos."
+    },
+    {
+      "id": "41",
+      "tema": 26,
+      "enunciado": "En Exchange Server, el rol de Transporte perimetral (*Edge Transport*):",
+      "opciones": [
+        "Se sitúa en la red perimetral, no está unido al dominio y filtra el correo de Internet",
+        "Aloja las bases de datos de buzones de la organización",
+        "Sirve Outlook en la web (OWA) y ActiveSync a los usuarios",
+        "Es obligatorio en toda organización con Exchange"
+      ],
+      "correcta": 0,
+      "explicacion": "El **Transporte perimetral** está **en la DMZ**, **no unido al dominio**, y **filtra el correo de Internet**. Las bases de datos, OWA y ActiveSync son del rol **Buzón**. Es un rol opcional: muchas organizaciones usan en su lugar una pasarela de correo seguro."
+    },
+    {
+      "id": "42",
+      "tema": 26,
+      "enunciado": "¿Qué cmdlet del Exchange Management Shell permite hacer el seguimiento de los mensajes entregados o enviados?",
+      "opciones": [
+        "`Get-Queue`",
+        "`Get-Mailbox`",
+        "`Set-Mailbox -ProhibitSendQuota`",
+        "`Get-MessageTrackingLog`"
+      ],
+      "correcta": 3,
+      "explicacion": "**`Get-MessageTrackingLog`** consulta el registro de seguimiento de mensajes (*message trace*). `Get-Queue` muestra las colas de transporte, `Get-Mailbox` lista buzones y `Set-Mailbox -ProhibitSendQuota` fija la cuota a partir de la cual el usuario no puede enviar."
+    },
+    {
+      "id": "43",
+      "tema": 26,
+      "enunciado": "En Postfix, ¿qué orden muestra los mensajes que hay en la cola de correo?",
+      "opciones": [
+        "`postsuper -d ALL`",
+        "`postconf -n`",
+        "`postmap`",
+        "`postqueue -p`"
+      ],
+      "correcta": 3,
+      "explicacion": "**`postqueue -p`** (equivalente a **`mailq`**) muestra la cola; `postqueue -f` fuerza el reenvío. `postsuper -d ALL` borra todos los mensajes de la cola (¡cuidado!), `postconf -n` muestra los parámetros distintos de los de por defecto y `postmap` genera tablas de búsqueda."
+    },
+    {
+      "id": "44",
+      "tema": 26,
+      "enunciado": "En Postfix, ¿qué restricción de `smtpd_relay_restrictions` impide que el servidor actúe como relé abierto?",
+      "opciones": [
+        "`permit_mynetworks`",
+        "`reject_unauth_destination`",
+        "`permit_sasl_authenticated`",
+        "`permit_auth_destination`"
+      ],
+      "correcta": 1,
+      "explicacion": "**`reject_unauth_destination`** rechaza el correo cuyo destino no es un dominio propio, salvo que antes se haya permitido por red de confianza o autenticación: así **se evita el relé abierto**. `permit_mynetworks` y `permit_sasl_authenticated` *permiten* retransmitir a redes de confianza y usuarios autenticados."
+    },
+    {
+      "id": "45",
+      "tema": 26,
+      "enunciado": "¿Qué tecnología del kernel Linux permite limitar y contabilizar la CPU, la memoria y la E/S que consume un contenedor?",
+      "opciones": [
+        "*Namespaces*",
+        "*cgroups*",
+        "OverlayFS",
+        "seccomp"
+      ],
+      "correcta": 1,
+      "explicacion": "Los **cgroups** **limitan y contabilizan** CPU, memoria y E/S. Los **namespaces** **aíslan** lo que ve el proceso (PID, red, montajes, usuarios), OverlayFS da el sistema de ficheros por capas y seccomp restringe las llamadas al sistema. Truco: namespaces = qué ves; cgroups = cuánto gastas."
+    },
+    {
+      "id": "46",
+      "tema": 26,
+      "enunciado": "Respecto a los contenedores frente a las máquinas virtuales, señale la afirmación INCORRECTA:",
+      "opciones": [
+        "Los contenedores comparten el kernel del sistema anfitrión",
+        "Los contenedores arrancan en segundos o menos",
+        "Los contenedores ofrecen un aislamiento más fuerte que las máquinas virtuales",
+        "Los contenedores permiten mayor densidad en un mismo servidor"
+      ],
+      "correcta": 2,
+      "explicacion": "Es falso: el **aislamiento es más fuerte en la máquina virtual**, que tiene hardware virtual y su propio SO; el contenedor **comparte el kernel**, que es un punto común de ataque. A cambio, el contenedor ocupa MB, arranca en segundos y da mucha más densidad."
+    },
+    {
+      "id": "47",
+      "tema": 26,
+      "enunciado": "Si un Dockerfile contiene varias instrucciones `CMD`:",
+      "opciones": [
+        "Se ejecutan todas en orden al arrancar el contenedor",
+        "Solo tiene efecto la primera",
+        "Se produce un error al construir la imagen",
+        "Solo tiene efecto la última"
+      ],
+      "correcta": 3,
+      "explicacion": "Si hay varios `CMD`, **solo vale el último**. `CMD` fija la orden por defecto al arrancar y se sustituye con los argumentos de `docker run`; para ejecutar varias órdenes al construir se usan varias `RUN`."
+    },
+    {
+      "id": "48",
+      "tema": 26,
+      "enunciado": "¿Qué instrucción de Dockerfile, además de copiar ficheros, descomprime archivos `tar` locales y admite URL como origen?",
+      "opciones": [
+        "`ADD`",
+        "`COPY`",
+        "`RUN`",
+        "`ARG`"
+      ],
+      "correcta": 0,
+      "explicacion": "**`ADD`** copia y además **descomprime `tar` locales** y **admite URL**; aun así se prefiere **`COPY`**, que solo copia y es más predecible. `RUN` ejecuta órdenes al construir y `ARG` define variables que solo existen durante la construcción."
+    },
+    {
+      "id": "49",
+      "tema": 26,
+      "enunciado": "¿Para qué sirve una construcción multietapa (*multi-stage*) en Docker?",
+      "opciones": [
+        "Para ejecutar varios procesos dentro de un mismo contenedor",
+        "Para desplegar la imagen en varios nodos de Docker Swarm",
+        "Para compilar en una etapa y copiar solo el resultado a una imagen final mínima",
+        "Para encadenar varios contenedores en un fichero `compose.yaml`"
+      ],
+      "correcta": 2,
+      "explicacion": "La **construcción multietapa** usa **varios `FROM`**: se compila en una etapa con todas las herramientas y **se copia solo el resultado** a una imagen final pequeña, con menos superficie de ataque. Las aplicaciones multicontenedor se definen con Docker Compose, y lo recomendable es un proceso por contenedor."
+    },
+    {
+      "id": "50",
+      "tema": 26,
+      "enunciado": "Se ejecuta `docker run -d --name web -v datos:/data nginx` y después `docker rm -f web`. ¿Qué ocurre con lo que el contenedor escribió en `/data`?",
+      "opciones": [
+        "Se pierde, porque estaba en la capa de escritura del contenedor",
+        "Se conserva en el volumen `datos`, que es independiente del ciclo de vida del contenedor",
+        "Se copia automáticamente a la imagen nginx",
+        "Se guarda en el registro Docker Hub"
+      ],
+      "correcta": 1,
+      "explicacion": "`/data` está montado sobre el **volumen `datos`**, que es **persistente** e independiente del contenedor: al borrar el contenedor el volumen sigue existiendo. Lo que se pierde es lo escrito en la **capa de escritura** fuera de volúmenes. La imagen es inmutable y no recibe esos datos."
+    },
+    {
+      "id": "51",
+      "tema": 26,
+      "enunciado": "¿Qué herramienta de contenedores, impulsada por Red Hat, funciona sin demonio, en modo *rootless* y con comandos compatibles con Docker?",
+      "opciones": [
+        "containerd",
+        "CRI-O",
+        "Docker Swarm",
+        "Podman"
+      ],
+      "correcta": 3,
+      "explicacion": "**Podman** es la alternativa **sin demonio** y *rootless*, con comandos compatibles con `docker`. containerd y CRI-O son *runtimes* (CRI-O, pensado para Kubernetes), y Docker Swarm es el orquestador sencillo de Docker. Gracias al estándar **OCI** las mismas imágenes funcionan en todos."
+    },
+    {
+      "id": "52",
+      "tema": 26,
+      "enunciado": "¿Qué componente del plano de control de Kubernetes decide en qué nodo se ejecuta cada pod nuevo?",
+      "opciones": [
+        "kube-scheduler",
+        "kube-controller-manager",
+        "kubelet",
+        "kube-proxy"
+      ],
+      "correcta": 0,
+      "explicacion": "El **kube-scheduler** **asigna cada pod nuevo a un nodo**. El controller-manager ejecuta los controladores (réplicas, nodos), el kubelet arranca los contenedores en su nodo una vez asignado el pod y kube-proxy configura las reglas de red de los Services."
+    },
+    {
+      "id": "53",
+      "tema": 26,
+      "enunciado": "¿Qué objeto de Kubernetes garantiza que se ejecute un pod en cada nodo del clúster, por ejemplo para agentes de logs o de monitorización?",
+      "opciones": [
+        "Deployment",
+        "StatefulSet",
+        "DaemonSet",
+        "CronJob"
+      ],
+      "correcta": 2,
+      "explicacion": "El **DaemonSet** ejecuta **un pod en cada nodo**, ideal para agentes de logs o monitorización. El Deployment gestiona réplicas de aplicaciones sin estado, el StatefulSet aplicaciones con estado con identidad estable y el CronJob tareas programadas."
+    },
+    {
+      "id": "54",
+      "tema": 26,
+      "enunciado": "¿En qué rango de puertos abre Kubernetes por defecto un Service de tipo NodePort?",
+      "opciones": [
+        "1024-49151",
+        "30000-32767",
+        "8000-8999",
+        "49152-65535"
+      ],
+      "correcta": 1,
+      "explicacion": "Un Service **NodePort** abre en cada nodo un puerto del rango **30000-32767**. 1024-49151 son los puertos registrados de IANA y 49152-65535 los dinámicos o efímeros."
+    },
+    {
+      "id": "55",
+      "tema": 26,
+      "enunciado": "Respecto a los objetos Secret de Kubernetes, es correcto que:",
+      "opciones": [
+        "Se guardan codificados en Base64, que no es cifrado, por lo que conviene activar el cifrado en reposo de etcd",
+        "Se cifran siempre con AES-256 antes de guardarse en etcd",
+        "Se almacenan en el kubelet de cada nodo y no en etcd",
+        "Solo pueden utilizarse en el namespace kube-system"
+      ],
+      "correcta": 0,
+      "explicacion": "Los **Secret** se guardan en **Base64**, que es una **codificación, no un cifrado**: cualquiera con acceso puede decodificarlos. Por eso hay que **activar el cifrado en reposo de etcd** y restringirlos con RBAC. No se cifran por defecto y pueden usarse en cualquier namespace."
+    },
+    {
+      "id": "56",
+      "tema": 26,
+      "enunciado": "En Kubernetes, ¿qué ocurre cuando falla la sonda *readiness* de un contenedor?",
+      "opciones": [
+        "Se reinicia el contenedor",
+        "Se elimina el pod y se crea otro en un nodo distinto",
+        "El contenedor pasa al estado OOMKilled",
+        "El pod deja de recibir tráfico del Service"
+      ],
+      "correcta": 3,
+      "explicacion": "Si falla la **readiness**, el pod **deja de recibir tráfico** del Service, pero no se reinicia. **Reiniciar el contenedor** es lo que provoca un fallo de la **liveness**. OOMKilled aparece al superar el límite de memoria. Truco: *ready* = listo para recibir tráfico; *live* = vivo."
+    },
+    {
+      "id": "57",
+      "tema": 26,
+      "enunciado": "En una arquitectura de microservicios, ¿qué patrón mantiene la consistencia de una operación que afecta a varios servicios mediante una secuencia de transacciones locales con acciones compensatorias?",
+      "opciones": [
+        "Saga",
+        "CQRS",
+        "*Bulkhead*",
+        "*Circuit breaker*"
+      ],
+      "correcta": 0,
+      "explicacion": "Como no hay transacciones ACID entre servicios, el patrón **Saga** encadena **transacciones locales** y, si una falla, ejecuta **acciones compensatorias** (consistencia eventual). CQRS separa lecturas y escrituras, y *bulkhead* y *circuit breaker* son patrones de resiliencia."
+    },
+    {
+      "id": "58",
+      "tema": 26,
+      "enunciado": "¿Cómo se denomina el patrón que utiliza un API gateway específico para cada tipo de cliente, como web o móvil?",
+      "opciones": [
+        "Saga",
+        "*Service mesh*",
+        "*Sidecar*",
+        "BFF (*Backend for Frontend*)"
+      ],
+      "correcta": 3,
+      "explicacion": "El patrón **BFF** (*Backend for Frontend*) pone **un gateway por tipo de cliente**, adaptado a sus necesidades. El *service mesh* gestiona el tráfico interno entre servicios mediante *proxies* *sidecar*, y Saga es un patrón de consistencia de datos."
+    },
+    {
+      "id": "59",
+      "tema": 26,
+      "enunciado": "¿Qué patrón de resiliencia deja de llamar a un servicio que está fallando y responde rápido con un error o una alternativa, en lugar de esperar?",
+      "opciones": [
+        "Reintentos con espera exponencial",
+        "*Bulkhead*",
+        "*Timeout*",
+        "*Circuit breaker*"
+      ],
+      "correcta": 3,
+      "explicacion": "El **circuit breaker** (cortacircuitos) «abre el circuito» tras varios fallos y **deja de llamar** al servicio, respondiendo rápido, hasta que comprueba que se ha recuperado. Los reintentos insisten, el *timeout* limita la espera de cada llamada y el *bulkhead* aísla recursos para que un fallo no se propague."
+    },
+    {
+      "id": "60",
+      "tema": 26,
+      "enunciado": "¿Qué estrategia de despliegue ofrece primero la nueva versión a un pequeño porcentaje de usuarios antes de extenderla a todos?",
+      "opciones": [
+        "Canario",
+        "*Blue-green*",
+        "*Rolling update*",
+        "Recreación completa"
+      ],
+      "correcta": 0,
+      "explicacion": "El despliegue **canario** expone la nueva versión a **un pequeño porcentaje de usuarios** y la amplía si va bien. *Blue-green* mantiene dos entornos y cambia todo el tráfico de golpe, y *rolling update* sustituye las instancias de forma gradual, sin elegir usuarios."
+    }
+  ]
+}

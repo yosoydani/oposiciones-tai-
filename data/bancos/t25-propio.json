@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 25 · test",
+  "fuente": "propio",
+  "tema": 25,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 25. Bases de datos, almacenamiento, backup y virtualización»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 25,
+      "enunciado": "El número mínimo de discos para montar un RAID 5 es:",
+      "opciones": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correcta": 1,
+      "explicacion": "RAID 5 reparte datos y **paridad distribuida** entre los discos, así que necesita **al menos 3**. Con 2 discos solo caben RAID 0 o RAID 1, y 4 es el mínimo de RAID 6 y RAID 10. Truco: RAID 5 = mínimo 3, RAID 6 = mínimo 4."
+    },
+    {
+      "id": "02",
+      "tema": 25,
+      "enunciado": "Con 8 discos de 2 TB en RAID 6, la capacidad útil es:",
+      "opciones": [
+        "16 TB",
+        "14 TB",
+        "12 TB",
+        "8 TB"
+      ],
+      "correcta": 2,
+      "explicacion": "RAID 6 dedica el equivalente a dos discos a la doble paridad: **(n−2) × C = 6 × 2 TB = 12 TB**. 16 TB sería RAID 0 (sin paridad), 14 TB RAID 5 (n−1) y 8 TB RAID 10 (la mitad)."
+    },
+    {
+      "id": "03",
+      "tema": 25,
+      "enunciado": "¿Qué nivel RAID no ofrece ninguna tolerancia a fallos?",
+      "opciones": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 10"
+      ],
+      "correcta": 0,
+      "explicacion": "**RAID 0** solo hace *striping* sin paridad ni espejo: si falla un disco se pierde todo el conjunto. RAID 1 y RAID 10 tienen espejo y RAID 5 tiene paridad, por lo que toleran al menos un fallo."
+    },
+    {
+      "id": "04",
+      "tema": 25,
+      "enunciado": "Un NAS se caracteriza por:",
+      "opciones": [
+        "Conectarse directamente al servidor por SAS",
+        "Ofrecer acceso por bloques mediante Fibre Channel",
+        "Requerir HBA en cada cliente",
+        "Ofrecer acceso a nivel de ficheros por la red IP mediante NFS o SMB"
+      ],
+      "correcta": 3,
+      "explicacion": "El NAS sirve **ficheros por la red IP** con **NFS o SMB/CIFS** y el sistema de ficheros reside en el propio NAS. La conexión directa por SAS es DAS, y el acceso por bloques con Fibre Channel y HBA es propio de la SAN."
+    },
+    {
+      "id": "05",
+      "tema": 25,
+      "enunciado": "El puerto TCP por defecto de iSCSI es:",
+      "opciones": [
+        "445",
+        "3260",
+        "2049",
+        "3389"
+      ],
+      "correcta": 1,
+      "explicacion": "iSCSI encapsula SCSI sobre TCP/IP en el puerto **3260**. El 445 es SMB, el 2049 es NFS y el 3389 es RDP (escritorio remoto)."
+    },
+    {
+      "id": "06",
+      "tema": 25,
+      "enunciado": "Se hace copia completa el domingo e incrementales de lunes a sábado. Si el viernes por la mañana se pierde todo, hay que restaurar:",
+      "opciones": [
+        "Solo la completa del domingo",
+        "La completa y la incremental del jueves",
+        "La completa y las incrementales de lunes a jueves",
+        "Solo la incremental del jueves"
+      ],
+      "correcta": 2,
+      "explicacion": "Cada incremental guarda solo lo cambiado desde la copia anterior de cualquier tipo, así que hay que restaurar **la completa + todas las incrementales posteriores** (lunes a jueves; la del viernes aún no se ha hecho). Restaurar la completa y solo la última copia es lo que se hace con diferenciales."
+    },
+    {
+      "id": "07",
+      "tema": 25,
+      "enunciado": "La copia diferencial contiene:",
+      "opciones": [
+        "Los cambios desde la última copia completa",
+        "Los cambios desde la última copia de cualquier tipo",
+        "Todos los datos",
+        "Solo los ficheros borrados"
+      ],
+      "correcta": 0,
+      "explicacion": "La diferencial copia lo cambiado **desde la última copia completa**, por eso crece cada día y no desmarca el bit de archivo. Lo cambiado desde la última copia de cualquier tipo es la incremental, y todos los datos es la completa."
+    },
+    {
+      "id": "08",
+      "tema": 25,
+      "enunciado": "El RPO (*Recovery Point Objective*) es:",
+      "opciones": [
+        "El tiempo máximo para restablecer el servicio",
+        "El tiempo medio entre fallos",
+        "La duración de la ventana de backup",
+        "La cantidad máxima de datos, medida en tiempo, que se puede perder"
+      ],
+      "correcta": 3,
+      "explicacion": "El RPO es la **pérdida máxima de datos tolerable, medida en tiempo hacia atrás**, y fija la frecuencia de las copias. El tiempo máximo para restablecer el servicio es el RTO y el tiempo medio entre fallos es el MTBF. Truco: RP**O** = punto (datos), RT**O** = tiempo (servicio)."
+    },
+    {
+      "id": "09",
+      "tema": 25,
+      "enunciado": "La regla 3-2-1 de copias de seguridad indica:",
+      "opciones": [
+        "3 copias diarias, 2 semanales y 1 mensual",
+        "3 copias de los datos, en 2 soportes distintos y 1 fuera de las instalaciones",
+        "3 discos, 2 de paridad y 1 de reserva",
+        "3 sedes, 2 cabinas y 1 cinta"
+      ],
+      "correcta": 1,
+      "explicacion": "La regla es **3 copias** de los datos (original + 2), en **2 soportes** o tipos de almacenamiento distintos y **1 fuera de las instalaciones** (*off-site*). Las copias diarias, semanales y mensuales recuerdan a la rotación GFS, que es otra cosa."
+    },
+    {
+      "id": "10",
+      "tema": 25,
+      "enunciado": "La técnica que asigna espacio físico a un volumen solo cuando se escriben datos es:",
+      "opciones": [
+        "*Thin provisioning*",
+        "*Thick provisioning eager zeroed*",
+        "Deduplicación",
+        "*Tiering*"
+      ],
+      "correcta": 0,
+      "explicacion": "El **thin provisioning** asigna espacio físico **solo al escribir** y permite presentar más capacidad de la que existe. El *thick provisioning* reserva todo al crear el volumen, la deduplicación elimina bloques repetidos y el *tiering* mueve datos entre niveles."
+    },
+    {
+      "id": "11",
+      "tema": 25,
+      "enunciado": "En una *snapshot* de tipo *copy-on-write*:",
+      "opciones": [
+        "Se copia el volumen completo al crearla",
+        "Las nuevas escrituras se redirigen a bloques nuevos",
+        "Antes de sobrescribir un bloque se copia su contenido original al área de la instantánea",
+        "No se puede revertir el volumen"
+      ],
+      "correcta": 2,
+      "explicacion": "En **COW**, **antes de sobrescribir un bloque se copia el original** al área de la *snapshot*, lo que penaliza las escrituras. Redirigir las nuevas escrituras a bloques nuevos es *redirect-on-write* (ROW). Copiar el volumen entero es un clon, no una *snapshot*."
+    },
+    {
+      "id": "12",
+      "tema": 25,
+      "enunciado": "Respecto a la compatibilidad de las unidades LTO-10:",
+      "opciones": [
+        "Leen y escriben LTO-9",
+        "Leen LTO-8 y LTO-9",
+        "Solo leen LTO-9",
+        "No leen ni escriben cartuchos de generaciones anteriores"
+      ],
+      "correcta": 3,
+      "explicacion": "Según el LTO Program, LTO-10 **no tiene compatibilidad hacia atrás**: no lee ni escribe LTO-9. Es una ruptura con la norma de LTO-8 y LTO-9, que sí leen y escriben la generación anterior (por eso las otras opciones parecen razonables)."
+    },
+    {
+      "id": "13",
+      "tema": 25,
+      "enunciado": "Es un hipervisor de tipo 2:",
+      "opciones": [
+        "VMware ESXi",
+        "Oracle VirtualBox",
+        "Microsoft Hyper-V",
+        "KVM"
+      ],
+      "correcta": 1,
+      "explicacion": "**Oracle VirtualBox** se instala como aplicación sobre un SO anfitrión, que es lo que define al tipo 2 (alojado). ESXi, Hyper-V y KVM se ejecutan directamente sobre el hardware o forman parte del núcleo, así que son de tipo 1."
+    },
+    {
+      "id": "14",
+      "tema": 25,
+      "enunciado": "La función de VMware que mueve una VM encendida de un host a otro sin parada es:",
+      "opciones": [
+        "vMotion",
+        "vSphere HA",
+        "Storage DRS",
+        "Site Recovery Manager"
+      ],
+      "correcta": 0,
+      "explicacion": "**vMotion** es la migración en caliente de una VM entre hosts sin parada (en Hyper-V, Live Migration). vSphere HA reinicia la VM en otro host tras un fallo, Storage DRS reparte almacenamiento y Site Recovery Manager orquesta la recuperación en otra sede."
+    },
+    {
+      "id": "15",
+      "tema": 25,
+      "enunciado": "Diferencia entre vSphere HA y Fault Tolerance:",
+      "opciones": [
+        "HA no necesita clúster",
+        "FT reinicia la VM en otro host",
+        "HA reinicia la VM en otro host tras el fallo; FT mantiene una copia sincronizada que toma el relevo sin parada",
+        "Son la misma función"
+      ],
+      "correcta": 2,
+      "explicacion": "**HA reinicia** la VM en otro host, con una breve interrupción; **FT** mantiene una VM secundaria sincronizada que toma el relevo **sin parada**. HA sí necesita clúster, y reiniciar la VM es lo que hace HA, no FT."
+    },
+    {
+      "id": "16",
+      "tema": 25,
+      "enunciado": "En VDI, un escritorio no persistente:",
+      "opciones": [
+        "Conserva todos los cambios del usuario en la VM",
+        "Requiere un hipervisor tipo 2",
+        "Se instala en el equipo local",
+        "Vuelve al estado de la imagen maestra al cerrar sesión"
+      ],
+      "correcta": 3,
+      "explicacion": "El escritorio no persistente (*pooled*) **vuelve al estado de la imagen maestra al cerrar sesión**; el perfil y los datos se guardan aparte (FSLogix, perfiles móviles). Conservar los cambios es propio del persistente, y la VDI no exige un hipervisor tipo 2: los escritorios suelen ejecutarse en hipervisores del CPD."
+    },
+    {
+      "id": "17",
+      "tema": 25,
+      "enunciado": "Las sentencias `GRANT` y `REVOKE` pertenecen al:",
+      "opciones": [
+        "DDL",
+        "DCL",
+        "DML",
+        "TCL"
+      ],
+      "correcta": 1,
+      "explicacion": "`GRANT` y `REVOKE` forman el **DCL** (lenguaje de control de datos), que gestiona permisos. El DDL define estructuras (`CREATE`, `ALTER`), el DML manipula datos (`SELECT`, `INSERT`) y el TCL controla transacciones (`COMMIT`, `ROLLBACK`)."
+    },
+    {
+      "id": "18",
+      "tema": 25,
+      "enunciado": "El tipo de índice más adecuado para una columna con muy pocos valores distintos en un entorno de consulta es:",
+      "opciones": [
+        "Bitmap",
+        "Hash",
+        "Árbol B agrupado",
+        "Texto completo"
+      ],
+      "correcta": 0,
+      "explicacion": "El índice **bitmap** es eficiente con **baja cardinalidad** y pocas escrituras, típico de entornos de consulta. El hash solo sirve para igualdad, el árbol B es el de uso general y el de texto completo es para buscar palabras en textos."
+    },
+    {
+      "id": "19",
+      "tema": 25,
+      "enunciado": "En VMware, la tecnología que permite copias incrementales de VM copiando solo los bloques modificados es:",
+      "opciones": [
+        "VAAI",
+        "EVC",
+        "CBT (*Changed Block Tracking*)",
+        "DRS"
+      ],
+      "correcta": 2,
+      "explicacion": "**CBT** registra los **bloques cambiados** de los discos virtuales para hacer incrementales rápidas (en Hyper-V, RCT). VAAI descarga operaciones de copia en la cabina, EVC hace compatibles las CPU para vMotion y DRS reparte la carga."
+    },
+    {
+      "id": "20",
+      "tema": 25,
+      "enunciado": "En el Esquema Nacional de Seguridad (RD 311/2022), la medida dedicada a las copias de seguridad es:",
+      "opciones": [
+        "op.exp.2",
+        "mp.si.1",
+        "org.1",
+        "mp.info.6"
+      ],
+      "correcta": 3,
+      "explicacion": "La medida es **mp.info.6 «Copias de seguridad»**: medidas de protección (mp), grupo de protección de la información (info). Las de marco organizativo empiezan por org y las del marco operacional por op; mp.si corresponde a los soportes de información."
+    },
+    {
+      "id": "21",
+      "tema": 25,
+      "enunciado": "¿Qué figura define las políticas, el modelo y el significado de los datos a nivel organizativo, sin ocuparse de su implantación técnica?",
+      "opciones": [
+        "El administrador de bases de datos (DBA)",
+        "El administrador de datos (DA)",
+        "El administrador de sistemas",
+        "El desarrollador de aplicaciones"
+      ],
+      "correcta": 1,
+      "explicacion": "El **administrador de datos (DA)** fija políticas, modelo y significado de los datos a nivel organizativo. El **DBA** las implanta técnicamente y vela por la disponibilidad, integridad, seguridad y rendimiento del SGBD. Truco: el DA decide qué datos y para qué; el DBA, cómo funcionan."
+    },
+    {
+      "id": "22",
+      "tema": 25,
+      "enunciado": "¿Qué nivel de aislamiento SQL permite las lecturas sucias?",
+      "opciones": [
+        "READ COMMITTED",
+        "REPEATABLE READ",
+        "SERIALIZABLE",
+        "READ UNCOMMITTED"
+      ],
+      "correcta": 3,
+      "explicacion": "**READ UNCOMMITTED** es el nivel más bajo y permite leer datos aún no confirmados (lecturas sucias). De menor a mayor siguen READ COMMITTED, REPEATABLE READ y SERIALIZABLE, que ya impiden las lecturas sucias."
+    },
+    {
+      "id": "23",
+      "tema": 25,
+      "enunciado": "Tras ejecutar `GRANT SELECT ON expedientes TO ana WITH GRANT OPTION;`, la usuaria ana:",
+      "opciones": [
+        "Puede consultar expedientes y además conceder ese mismo privilegio a otros usuarios",
+        "Obtiene todos los privilegios de objeto sobre la tabla expedientes",
+        "Puede consultar expedientes, pero solo a través de un rol",
+        "Puede consultar y modificar las filas de la tabla expedientes"
+      ],
+      "correcta": 0,
+      "explicacion": "**WITH GRANT OPTION** permite al receptor **conceder a otros** el privilegio recibido; aquí solo es `SELECT`. No otorga todos los privilegios ni permite modificar filas (eso exigiría `UPDATE`), y no tiene nada que ver con roles."
+    },
+    {
+      "id": "24",
+      "tema": 25,
+      "enunciado": "¿Qué tipo de índice solo es útil para búsquedas por igualdad y no sirve para consultas por rango?",
+      "opciones": [
+        "Árbol B+",
+        "Bitmap",
+        "Hash",
+        "Agrupado (*clustered*)"
+      ],
+      "correcta": 2,
+      "explicacion": "El índice **hash** calcula una función sobre la clave y solo resuelve **igualdades**. El árbol B/B+ sirve para igualdad y rangos y es el más común; el bitmap es para columnas con pocos valores distintos, y el agrupado ordena físicamente la tabla."
+    },
+    {
+      "id": "25",
+      "tema": 25,
+      "enunciado": "En PostgreSQL, ¿qué comando recupera el espacio ocupado por las filas muertas?",
+      "opciones": [
+        "ANALYZE",
+        "VACUUM",
+        "UPDATE STATISTICS",
+        "CHECKPOINT"
+      ],
+      "correcta": 1,
+      "explicacion": "**VACUUM** recupera el espacio de las filas muertas en PostgreSQL. `ANALYZE` actualiza las estadísticas para el optimizador, `UPDATE STATISTICS` es el equivalente en SQL Server, y `CHECKPOINT` fuerza el volcado a disco de las páginas modificadas."
+    },
+    {
+      "id": "26",
+      "tema": 25,
+      "enunciado": "Una ventaja de la replicación síncrona de bases de datos frente a la asíncrona es que:",
+      "opciones": [
+        "Añade menos latencia a cada escritura",
+        "Es la más adecuada para largas distancias",
+        "Garantiza un RPO de 0, sin perder las últimas transacciones",
+        "No replica los borrados ni la corrupción lógica"
+      ],
+      "correcta": 2,
+      "explicacion": "La replicación **síncrona** confirma la escritura en ambos extremos, así que da **RPO 0**, a cambio de **más latencia** (por eso es para distancias cortas). La asíncrona tiene menos latencia y sirve para largas distancias, pero puede perder las últimas transacciones. Ninguna de las dos evita replicar borrados o corrupción."
+    },
+    {
+      "id": "27",
+      "tema": 25,
+      "enunciado": "¿Qué es NVMe?",
+      "opciones": [
+        "Una interfaz para discos mecánicos basada en SAS",
+        "Un nivel RAID optimizado para discos flash",
+        "Un protocolo de red para compartir ficheros entre clientes",
+        "Un protocolo para SSD sobre PCIe, con colas múltiples, que sustituye a AHCI"
+      ],
+      "correcta": 3,
+      "explicacion": "**NVMe** es el protocolo para **SSD sobre PCIe**, con múltiples colas y muy baja latencia, que sustituye a AHCI (pensado para discos SATA). No es un nivel RAID ni un protocolo de ficheros; su extensión por red es NVMe-oF, que da acceso por bloques."
+    },
+    {
+      "id": "28",
+      "tema": 25,
+      "enunciado": "¿Cuál es la penalización de escritura de RAID 5, en operaciones de E/S por cada escritura lógica?",
+      "opciones": [
+        "1",
+        "2",
+        "4",
+        "6"
+      ],
+      "correcta": 2,
+      "explicacion": "En RAID 5 cada escritura exige **4 E/S**: leer dato y paridad antiguos y escribir dato y paridad nuevos. RAID 1/10 tiene penalización 2 (se escribe en los dos espejos) y RAID 6 tiene 6 por la doble paridad."
+    },
+    {
+      "id": "29",
+      "tema": 25,
+      "enunciado": "¿Qué capacidad útil se obtiene con 5 discos de 4 TB en RAID 5?",
+      "opciones": [
+        "20 TB",
+        "16 TB",
+        "12 TB",
+        "10 TB"
+      ],
+      "correcta": 1,
+      "explicacion": "En RAID 5 la paridad ocupa el equivalente a un disco: **(n−1) × C = 4 × 4 TB = 16 TB**. 20 TB sería RAID 0, 12 TB RAID 6 (n−2) y 10 TB la mitad, como en un espejo."
+    },
+    {
+      "id": "30",
+      "tema": 25,
+      "enunciado": "¿Qué capacidad útil se obtiene con 8 discos de 2 TB en RAID 10?",
+      "opciones": [
+        "8 TB",
+        "12 TB",
+        "14 TB",
+        "16 TB"
+      ],
+      "correcta": 0,
+      "explicacion": "En RAID 10 cada dato está en un espejo, así que la capacidad es **n/2 × C = 4 × 2 TB = 8 TB**. 12 TB sería RAID 6, 14 TB RAID 5 y 16 TB RAID 0 con esos mismos discos."
+    },
+    {
+      "id": "31",
+      "tema": 25,
+      "enunciado": "En una SAN Fibre Channel, el control realizado en los conmutadores FC para decidir qué servidores ven qué puertos de la cabina se denomina:",
+      "opciones": [
+        "LUN masking",
+        "Multipath (MPIO)",
+        "Thin provisioning",
+        "Zoning"
+      ],
+      "correcta": 3,
+      "explicacion": "El **zoning** se configura **en los conmutadores FC**. El **LUN masking** hace un control parecido pero **en la cabina**, decidiendo qué LUN ve cada servidor. MPIO da varios caminos al mismo LUN y el *thin provisioning* es una técnica de asignación de espacio."
+    },
+    {
+      "id": "32",
+      "tema": 25,
+      "enunciado": "El almacenamiento de objetos se caracteriza por:",
+      "opciones": [
+        "Ofrecer acceso por bloques mediante iSCSI",
+        "Exportar un sistema de ficheros jerárquico por NFS",
+        "Guardar datos, metadatos e identificador en un espacio plano, con acceso por API HTTP como S3",
+        "Presentar LUN a los servidores mediante Fibre Channel"
+      ],
+      "correcta": 2,
+      "explicacion": "El almacenamiento de objetos guarda **datos + metadatos + identificador** en un espacio plano y se accede por **API HTTP**, con **S3** como estándar de facto (MinIO, Ceph). El acceso por bloques con iSCSI o FC es de la SAN, y el sistema de ficheros por NFS es del NAS."
+    },
+    {
+      "id": "33",
+      "tema": 25,
+      "enunciado": "En iSCSI, los iniciadores y los destinos se identifican mediante nombres con formato:",
+      "opciones": [
+        "WWPN",
+        "WWNN",
+        "LUN",
+        "IQN"
+      ],
+      "correcta": 3,
+      "explicacion": "iSCSI identifica iniciadores y destinos con nombres **IQN** y autentica con CHAP. WWPN y WWNN son los identificadores WWN de **Fibre Channel** (por puerto y por nodo), y el LUN es el volumen lógico que presenta la cabina, no un nombre de nodo."
+    },
+    {
+      "id": "34",
+      "tema": 25,
+      "enunciado": "En LVM de Linux, ¿qué efecto tiene la opción `-r` en `lvextend -r -L +50G /dev/datos/lv_bd`?",
+      "opciones": [
+        "Amplía también el sistema de ficheros del volumen lógico",
+        "Reduce el volumen lógico en 50 GB",
+        "Crea una *snapshot* de 50 GB del volumen",
+        "Mueve los datos del volumen a otro volumen físico"
+      ],
+      "correcta": 0,
+      "explicacion": "Con **`-r`** (*resizefs*), `lvextend` **amplía también el sistema de ficheros** además del volumen lógico; `-L +50G` indica que se añaden 50 GB. Reducir sería `lvreduce`, una *snapshot* se crea con `lvcreate -s` y mover datos entre discos es `pvmove`."
+    },
+    {
+      "id": "35",
+      "tema": 25,
+      "enunciado": "¿Cuál es el principal riesgo del *thin provisioning*?",
+      "opciones": [
+        "Que reserva todo el espacio al crear el volumen y lo desperdicia",
+        "Que, si se agota el *pool* físico, fallan las escrituras",
+        "Que impide hacer *snapshots* de los volúmenes",
+        "Que no se puede combinar con la deduplicación"
+      ],
+      "correcta": 1,
+      "explicacion": "Como se presenta más capacidad de la que existe (*overcommit*), **si el pool físico se llena fallan las escrituras**; por eso hay que vigilar su ocupación. Reservar todo al crear el volumen es justo lo contrario: el *thick provisioning*."
+    },
+    {
+      "id": "36",
+      "tema": 25,
+      "enunciado": "La deduplicación que se realiza en el mismo momento en que se escriben los datos se denomina:",
+      "opciones": [
+        "*Inline*",
+        "*Post-process*",
+        "Compresión sin pérdida",
+        "*Tiering* automático"
+      ],
+      "correcta": 0,
+      "explicacion": "La deduplicación **inline** se hace **al escribir**; la *post-process* se hace después, sobre datos ya guardados. La compresión reduce el tamaño con algoritmos, sin buscar bloques repetidos, y el *tiering* mueve datos entre niveles."
+    },
+    {
+      "id": "37",
+      "tema": 25,
+      "enunciado": "La hiperconvergencia (HCI) consiste en:",
+      "opciones": [
+        "Agrupar varias cabinas heterogéneas mediante un *appliance* de virtualización en la red",
+        "Servir acceso por bloques y por ficheros desde una misma cabina",
+        "Integrar cómputo, almacenamiento definido por software y red en los mismos nodos x86, que escalan añadiendo nodos",
+        "Conectar cada servidor a la cabina mediante dos *fabrics* FC redundantes"
+      ],
+      "correcta": 2,
+      "explicacion": "La **HCI** junta **cómputo, almacenamiento SDS y red en los mismos nodos x86** gestionados como un todo, y **escala añadiendo nodos** (vSAN, Nutanix, Azure Local, Proxmox con Ceph). Servir bloques y ficheros desde una cabina es el almacenamiento unificado, y agrupar cabinas con un *appliance* es virtualización en la red."
+    },
+    {
+      "id": "38",
+      "tema": 25,
+      "enunciado": "Las funciones VAAI (VMware) y ODX (Windows) sirven para:",
+      "opciones": [
+        "Cifrar en reposo los datos de la cabina",
+        "Limitar las IOPS de cada volumen",
+        "Replicar los volúmenes a otra sede",
+        "Descargar en la cabina las operaciones de copia"
+      ],
+      "correcta": 3,
+      "explicacion": "**VAAI** y **ODX** integran el hipervisor o el SO con la cabina para que esta **haga las operaciones de copia**, sin pasar los datos por el servidor. Limitar IOPS es la QoS de almacenamiento y el cifrado en reposo lo hacen los discos SED o la controladora."
+    },
+    {
+      "id": "39",
+      "tema": 25,
+      "enunciado": "Una organización establece que no puede perder más de una hora de datos de su sistema de expedientes. Este requisito:",
+      "opciones": [
+        "Es un RTO de 1 hora y determina la tecnología de recuperación",
+        "Es un RPO de 1 hora y obliga a copiar o replicar los datos al menos cada hora",
+        "Es un MTPD de 1 hora y fija la duración de la ventana de backup",
+        "Es una retención de 1 hora para cada copia de seguridad"
+      ],
+      "correcta": 1,
+      "explicacion": "La pérdida máxima de datos tolerable es el **RPO**, y este determina la **frecuencia** de las copias: con RPO de 1 h hay que copiar o replicar al menos cada hora. El RTO es el tiempo para restablecer el servicio, el MTPD el periodo máximo tolerable de interrupción y la retención cuánto se guarda cada copia."
+    },
+    {
+      "id": "40",
+      "tema": 25,
+      "enunciado": "Según el análisis de impacto (BIA), ¿qué relación debe cumplirse?",
+      "opciones": [
+        "El RPO debe ser siempre mayor que el RTO",
+        "El MTPD debe ser menor que el RTO",
+        "El RTO y el RPO deben coincidir",
+        "El RTO debe ser menor que el MTPD"
+      ],
+      "correcta": 3,
+      "explicacion": "El servicio debe recuperarse antes de llegar al periodo máximo tolerable de interrupción: **RTO < MTPD**. RTO y RPO miden cosas distintas (tiempo de recuperación y pérdida de datos) y no tienen por qué coincidir ni guardar un orden fijo."
+    },
+    {
+      "id": "41",
+      "tema": 25,
+      "enunciado": "Se hace copia completa el lunes y diferenciales cada noche de martes a viernes. Si el sábado se pierden los datos, ¿qué hay que restaurar?",
+      "opciones": [
+        "La completa del lunes y la diferencial del viernes",
+        "La completa del lunes y todas las diferenciales de martes a viernes",
+        "Solo la diferencial del viernes",
+        "Solo la completa del lunes"
+      ],
+      "correcta": 0,
+      "explicacion": "Cada diferencial contiene todo lo cambiado desde la última completa, así que basta **la completa + la última diferencial** (la del viernes). Restaurar todas las copias posteriores es lo que exige la incremental. La diferencial sola no sirve porque no incluye lo que no ha cambiado."
+    },
+    {
+      "id": "42",
+      "tema": 25,
+      "enunciado": "Respecto al bit de archivo, señale la afirmación correcta:",
+      "opciones": [
+        "La copia incremental no desmarca el bit de archivo",
+        "La copia completa lo desmarca y la diferencial no lo desmarca",
+        "La copia diferencial desmarca el bit de archivo",
+        "La copia completa no modifica el bit de archivo"
+      ],
+      "correcta": 1,
+      "explicacion": "La **completa y la incremental desmarcan** el bit de archivo; la **diferencial no** lo desmarca, y por eso cada diferencial vuelve a copiar todo lo cambiado desde la última completa. Truco: si la diferencial lo desmarcara, se comportaría como una incremental."
+    },
+    {
+      "id": "43",
+      "tema": 25,
+      "enunciado": "¿Cómo se denomina la copia completa que se construye en el servidor de copias combinando la última completa y las incrementales, sin volver a leer el origen?",
+      "opciones": [
+        "Copia sintética completa",
+        "Copia continua (CDP)",
+        "Copia diferencial",
+        "Copia espejo"
+      ],
+      "correcta": 0,
+      "explicacion": "La **copia sintética completa** se arma **en el servidor de copias** a partir de la completa y las incrementales, sin impacto en producción, y se restaura como una completa. CDP registra cada cambio de forma continua, y la copia espejo es una réplica exacta que también replica los borrados."
+    },
+    {
+      "id": "44",
+      "tema": 25,
+      "enunciado": "En la variante 3-2-1-1-0 de la regla de copias, los dos últimos dígitos significan:",
+      "opciones": [
+        "1 copia en la nube y 0 copias en cinta",
+        "1 copia diaria y 0 copias sin cifrar",
+        "1 copia inmutable o desconectada y 0 errores en la verificación de la restauración",
+        "1 disco de reserva y 0 discos sin paridad"
+      ],
+      "correcta": 2,
+      "explicacion": "La variante añade **1 copia inmutable o desconectada** (*air gap*) y **0 errores** al verificar la restauración. Responde sobre todo al *ransomware*: una copia que no se puede borrar y la certeza de que se puede restaurar."
+    },
+    {
+      "id": "45",
+      "tema": 25,
+      "enunciado": "En el esquema de rotación GFS (abuelo-padre-hijo), las copias «padre» son las:",
+      "opciones": [
+        "Diarias",
+        "Semanales",
+        "Mensuales",
+        "Anuales"
+      ],
+      "correcta": 1,
+      "explicacion": "En **GFS** el hijo es la copia **diaria**, el **padre la semanal** y el abuelo la **mensual**, cada una con su propia retención. Truco: de menor a mayor edad, hijo, padre y abuelo, igual que de menor a mayor periodo."
+    },
+    {
+      "id": "46",
+      "tema": 25,
+      "enunciado": "En un plan de recuperación ante desastres, el centro alternativo que está listo para operar de inmediato se denomina:",
+      "opciones": [
+        "Sala caliente (*hot site*)",
+        "Sala templada (*warm site*)",
+        "Sala fría (*cold site*)",
+        "Repositorio de copias inmutable"
+      ],
+      "correcta": 0,
+      "explicacion": "La **sala caliente** (*hot site*) está **lista para operar**. La templada está parcialmente equipada y la fría solo tiene la infraestructura básica (espacio, energía, climatización). Un repositorio inmutable protege copias, pero no es un centro donde ejecutar el servicio."
+    },
+    {
+      "id": "47",
+      "tema": 25,
+      "enunciado": "En Windows, ¿qué servicio permite obtener instantáneas coherentes de volúmenes en uso, con la colaboración de *writers* de aplicaciones como SQL Server o Exchange?",
+      "opciones": [
+        "wbadmin",
+        "ODX",
+        "RCT",
+        "VSS"
+      ],
+      "correcta": 3,
+      "explicacion": "**VSS** (*Volume Shadow Copy Service*) crea instantáneas coherentes de volúmenes en uso; los *writers* dejan los datos de cada aplicación consistentes. `wbadmin` es la herramienta de Copias de seguridad de Windows Server (que usa VSS), ODX descarga copias en la cabina y RCT es el seguimiento de cambios de Hyper-V."
+    },
+    {
+      "id": "48",
+      "tema": 25,
+      "enunciado": "En una red de copias, ¿cómo se llama la configuración en la que el servidor escribe directamente en la librería de cintas a través de la SAN?",
+      "opciones": [
+        "Server-free",
+        "LAN-free",
+        "Recuperación *bare metal*",
+        "Copia continua (CDP)"
+      ],
+      "correcta": 1,
+      "explicacion": "En la copia **LAN-free** el servidor envía los datos a la librería **por la SAN**, sin cargar la LAN. En la *server-free* es la cabina la que copia directamente, sin pasar por el servidor. *Bare metal* es una forma de restaurar y CDP un tipo de copia."
+    },
+    {
+      "id": "49",
+      "tema": 25,
+      "enunciado": "¿Cuál es la herramienta propia de Oracle para hacer copias de seguridad y recuperación de la base de datos?",
+      "opciones": [
+        "pg_basebackup",
+        "mysqldump",
+        "RMAN",
+        "wbadmin"
+      ],
+      "correcta": 2,
+      "explicacion": "**RMAN** (*Recovery Manager*) es la herramienta de copias de **Oracle**. `pg_basebackup` es de PostgreSQL, `mysqldump` hace copias lógicas en MySQL y `wbadmin` es la utilidad de copias de Windows Server."
+    },
+    {
+      "id": "50",
+      "tema": 25,
+      "enunciado": "En Hyper-V, la función equivalente al CBT de VMware, que permite copias incrementales rápidas de las VM, es:",
+      "opciones": [
+        "VADP",
+        "VSS",
+        "DRS",
+        "RCT (*Resilient Change Tracking*)"
+      ],
+      "correcta": 3,
+      "explicacion": "**RCT** (*Resilient Change Tracking*) registra en Hyper-V los bloques cambiados, igual que **CBT** en VMware. VADP son las API de protección de datos de vSphere, VSS el servicio de instantáneas de Windows y DRS el reparto de carga de VMware."
+    },
+    {
+      "id": "51",
+      "tema": 25,
+      "enunciado": "Para copiar una VM que aloja una base de datos, ¿qué tipo de consistencia es preferible?",
+      "opciones": [
+        "*Crash-consistent*, equivalente a un corte de luz",
+        "Una *snapshot* de la VM conservada en el mismo almacenamiento",
+        "*Application-consistent*, gracias a VSS o a los *guest tools*",
+        "Una copia espejo que replica los cambios al instante"
+      ],
+      "correcta": 2,
+      "explicacion": "La copia **application-consistent** hace que las aplicaciones vuelquen sus datos (**VSS** o *guest tools*) antes de la instantánea, y es la **preferible para bases de datos**. La *crash-consistent* deja la BD como tras un corte de luz. Una *snapshot* en el mismo almacenamiento o un espejo no son copias de seguridad."
+    },
+    {
+      "id": "52",
+      "tema": 25,
+      "enunciado": "Sobre las *snapshots* de máquinas virtuales, señale la afirmación INCORRECTA:",
+      "opciones": [
+        "Sustituyen a la copia de seguridad, porque se crean casi al instante",
+        "Dependen de los discos virtuales originales",
+        "Si se mantienen mucho tiempo crecen y degradan el rendimiento",
+        "La copia sin agente usa una *snapshot* temporal para copiar los discos virtuales"
+      ],
+      "correcta": 0,
+      "explicacion": "Es falso que sustituyan a la copia: **una snapshot de VM no es una copia de seguridad**, porque **depende de los discos originales**; si se pierden, se pierde también la *snapshot*. Además crece con el tiempo y degrada el rendimiento. La copia sin agente sí pide una *snapshot* temporal al hipervisor para copiar los discos."
+    },
+    {
+      "id": "53",
+      "tema": 25,
+      "enunciado": "¿Qué herramienta de línea de comandos permite gestionar máquinas virtuales KVM a través de libvirt?",
+      "opciones": [
+        "vzdump",
+        "virsh",
+        "esxcli",
+        "wbadmin"
+      ],
+      "correcta": 1,
+      "explicacion": "**virsh** es la consola de **libvirt**, con la que se gestionan las VM de KVM (su versión gráfica es `virt-manager`). `vzdump` hace copias en Proxmox VE, `esxcli` administra hosts VMware ESXi y `wbadmin` hace copias en Windows Server."
+    },
+    {
+      "id": "54",
+      "tema": 25,
+      "enunciado": "La técnica de virtualización en la que el sistema operativo invitado se modifica o usa controladores especiales, como *virtio*, para colaborar con el hipervisor es:",
+      "opciones": [
+        "La virtualización completa con traducción binaria",
+        "La virtualización a nivel de sistema operativo",
+        "La virtualización asistida por hardware",
+        "La paravirtualización"
+      ],
+      "correcta": 3,
+      "explicacion": "En la **paravirtualización** el invitado se modifica o usa controladores como **virtio**, VMware Tools o los servicios de integración, y es más eficiente. En la virtualización completa el invitado no se modifica; la asistida por hardware usa extensiones de CPU y la de nivel de SO son los contenedores."
+    },
+    {
+      "id": "55",
+      "tema": 25,
+      "enunciado": "Las extensiones del procesador Intel VT-x y AMD-V se utilizan en la:",
+      "opciones": [
+        "Virtualización asistida por hardware",
+        "Paravirtualización",
+        "Virtualización completa por traducción binaria",
+        "Virtualización de aplicaciones"
+      ],
+      "correcta": 0,
+      "explicacion": "**Intel VT-x** y **AMD-V** son la base de la **virtualización asistida por hardware**; para la memoria se añaden EPT/RVI y para la E/S VT-d/AMD-Vi y SR-IOV. La traducción binaria es justo lo que hacía el hipervisor por software cuando no existían esas extensiones."
+    },
+    {
+      "id": "56",
+      "tema": 25,
+      "enunciado": "¿Qué función de VMware reparte automáticamente la carga de las VM entre los hosts de un clúster?",
+      "opciones": [
+        "vSphere HA",
+        "Fault Tolerance",
+        "DRS",
+        "vMotion"
+      ],
+      "correcta": 2,
+      "explicacion": "**DRS** (*Distributed Resource Scheduler*) **reparte la carga** automáticamente, moviendo VM con vMotion. vMotion es solo el mecanismo de migración en caliente, HA reinicia VM tras un fallo y FT mantiene una copia sincronizada sin parada."
+    },
+    {
+      "id": "57",
+      "tema": 25,
+      "enunciado": "En un clúster de virtualización, el quórum sirve para:",
+      "opciones": [
+        "Repartir la carga de las VM entre los hosts",
+        "Evitar el *split-brain*, mediante un número impar de votos o un testigo",
+        "Mover las VM en caliente de un host a otro",
+        "Mantener una VM secundaria sincronizada con la principal"
+      ],
+      "correcta": 1,
+      "explicacion": "El **quórum** **evita el split-brain** (que dos partes del clúster crean ser la buena) con un **número impar de votos o un testigo** (*witness*). Repartir carga es DRS, mover VM en caliente es vMotion o Live Migration y la VM secundaria sincronizada es Fault Tolerance."
+    },
+    {
+      "id": "58",
+      "tema": 25,
+      "enunciado": "La modalidad de virtualización del puesto en la que varios usuarios comparten un mismo Windows Server con sesiones independientes es:",
+      "opciones": [
+        "El escritorio basado en sesión (RDSH)",
+        "La VDI con escritorios persistentes",
+        "La virtualización de aplicaciones",
+        "El escritorio como servicio (DaaS)"
+      ],
+      "correcta": 0,
+      "explicacion": "En el **escritorio basado en sesión** (RDSH, *Server-Based Computing*) **varios usuarios comparten un mismo Windows Server**: más densidad y menos aislamiento. En VDI cada usuario tiene su propia VM de escritorio, y DaaS ofrece escritorios virtuales como servicio en la nube."
+    },
+    {
+      "id": "59",
+      "tema": 25,
+      "enunciado": "La modalidad en la que la aplicación se ejecuta en el equipo local pero aislada del sistema operativo, sin instalarse, como App-V o MSIX app attach, es:",
+      "opciones": [
+        "La publicación de aplicaciones (RemoteApp)",
+        "La VDI no persistente",
+        "El escritorio basado en sesión",
+        "La virtualización de aplicaciones"
+      ],
+      "correcta": 3,
+      "explicacion": "En la **virtualización de aplicaciones** la aplicación **se ejecuta localmente pero aislada del SO**, sin instalarse (App-V, ThinApp, MSIX app attach). En la publicación de aplicaciones, como RemoteApp, la aplicación se ejecuta en el servidor y solo se ve en remoto. Truco: publicar = se ejecuta lejos; virtualizar la aplicación = se ejecuta aquí, en una burbuja."
+    },
+    {
+      "id": "60",
+      "tema": 25,
+      "enunciado": "En una infraestructura de escritorios virtuales, el componente que autentica al usuario y le asigna un escritorio es:",
+      "opciones": [
+        "La pasarela de acceso seguro",
+        "El cliente ligero (*thin client*)",
+        "El gestor de conexiones (*broker*)",
+        "El hipervisor del CPD"
+      ],
+      "correcta": 2,
+      "explicacion": "El **gestor de conexiones** (*broker*) **autentica y asigna el escritorio**. La pasarela da acceso seguro desde Internet, el cliente ligero es el dispositivo desde el que se conecta el usuario y el hipervisor ejecuta las VM de escritorio."
+    }
+  ]
+}

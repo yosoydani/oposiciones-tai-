@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 33 · test",
+  "fuente": "propio",
+  "tema": 33,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 33. Redes locales»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 33,
+      "enunciado": "¿En qué topología un corte en el cable principal deja sin servicio a toda la red?",
+      "opciones": [
+        "Bus",
+        "Estrella",
+        "Malla completa",
+        "Árbol con enlaces redundantes"
+      ],
+      "correcta": 0,
+      "explicacion": "En la topología en **bus** todos los equipos comparten **un único cable** con terminadores; un corte lo deja inservible y **para toda la red**. En estrella un fallo de cable solo afecta a un equipo (el punto débil es el nodo central), y la malla y el árbol con redundancia tienen caminos alternativos."
+    },
+    {
+      "id": "02",
+      "tema": 33,
+      "enunciado": "Una red Ethernet construida con un hub tiene topología:",
+      "opciones": [
+        "Física en bus y lógica en estrella",
+        "Física y lógica en anillo",
+        "Física en estrella y lógica en bus",
+        "Física en malla y lógica en árbol"
+      ],
+      "correcta": 2,
+      "explicacion": "Con **hub** el cableado es una **estrella física**, pero el hub reenvía lo recibido por todos los puertos y el medio se comparte como en un **bus lógico**. La primera opción lo dice al revés. El caso análogo es Token Ring con MAU: estrella física y anillo lógico."
+    },
+    {
+      "id": "03",
+      "tema": 33,
+      "enunciado": "¿Cuántos enlaces necesita una malla completa de 6 nodos?",
+      "opciones": [
+        "6",
+        "15",
+        "30",
+        "36"
+      ],
+      "correcta": 1,
+      "explicacion": "En una malla completa el total de enlaces es **n(n − 1)/2** = 6 · 5 / 2 = **15**. 30 sale de olvidar dividir entre 2 (cada enlace se contaría dos veces) y 36 de hacer n². Cada nodo tiene n − 1 = 5 enlaces."
+    },
+    {
+      "id": "04",
+      "tema": 33,
+      "enunciado": "La codificación Manchester se utiliza en:",
+      "opciones": [
+        "1000BASE-T",
+        "100BASE-TX",
+        "10GBASE-T",
+        "10BASE-T"
+      ],
+      "correcta": 3,
+      "explicacion": "**Manchester** es la codificación de **Ethernet a 10 Mbit/s** (10BASE-T, 10BASE2, 10BASE5). 100BASE-TX usa 4B/5B con MLT-3, 1000BASE-T usa PAM-5 y 10GBASE-T, PAM-16."
+    },
+    {
+      "id": "05",
+      "tema": 33,
+      "enunciado": "100BASE-TX utiliza la codificación:",
+      "opciones": [
+        "4B/5B con MLT-3",
+        "8B/10B",
+        "PAM-5",
+        "Manchester diferencial"
+      ],
+      "correcta": 0,
+      "explicacion": "**100BASE-TX** codifica en **4B/5B** y transmite en línea con **MLT-3** (tres niveles). 8B/10B es la de 1000BASE-X, PAM-5 la de 1000BASE-T y Manchester diferencial la de Token Ring."
+    },
+    {
+      "id": "06",
+      "tema": 33,
+      "enunciado": "En la transmisión en banda base:",
+      "opciones": [
+        "Se modulan varias portadoras analógicas",
+        "La señal digital ocupa todo el ancho de banda del medio",
+        "Se multiplexan varios canales por frecuencia",
+        "Solo se usa en fibra óptica"
+      ],
+      "correcta": 1,
+      "explicacion": "En **banda base** la señal es **digital, sin modular**, y **ocupa todo el ancho de banda** del medio, con un solo canal a la vez; es la de Ethernet (el «BASE» de 10BASE-T). Modular portadoras y multiplexar por frecuencia (FDM) describe la banda ancha. Se usa tanto en cobre como en fibra."
+    },
+    {
+      "id": "07",
+      "tema": 33,
+      "enunciado": "El método de acceso CSMA/CD es propio de:",
+      "opciones": [
+        "IEEE 802.11",
+        "IEEE 802.5",
+        "IEEE 802.3 en semidúplex",
+        "FDDI"
+      ],
+      "correcta": 2,
+      "explicacion": "**CSMA/CD** es el método de acceso de **Ethernet (IEEE 802.3) en semidúplex**, es decir, en medio compartido. IEEE 802.11 (Wi-Fi) usa CSMA/CA, y 802.5 (Token Ring) y FDDI usan paso de testigo. En dúplex completo con switch no hay colisiones y CSMA/CD no actúa."
+    },
+    {
+      "id": "08",
+      "tema": 33,
+      "enunciado": "La trama Ethernet tiene un tamaño mínimo de 64 bytes para:",
+      "opciones": [
+        "Reducir el consumo eléctrico",
+        "Poder incluir la etiqueta 802.1Q",
+        "Cifrar la carga útil",
+        "Garantizar que el emisor detecte una colisión mientras aún transmite"
+      ],
+      "correcta": 3,
+      "explicacion": "La **trama mínima de 64 bytes** asegura que la estación **sigue transmitiendo** cuando le llega la noticia de una colisión ocurrida en el extremo más lejano, así puede **detectarla**. Nada tiene que ver con el consumo, con la etiqueta 802.1Q (que alarga la trama máxima a 1522 bytes) ni con el cifrado, que Ethernet no hace."
+    },
+    {
+      "id": "09",
+      "tema": 33,
+      "enunciado": "En IEEE 802.11, el mecanismo RTS/CTS sirve sobre todo para mitigar:",
+      "opciones": [
+        "El problema del nodo oculto",
+        "La atenuación en el cable",
+        "Los bucles de capa 2",
+        "La falta de direcciones IP"
+      ],
+      "correcta": 0,
+      "explicacion": "**RTS/CTS** reserva el canal antes de transmitir y avisa también a las estaciones que no se oyen entre sí, por eso mitiga el **problema del nodo oculto**. La atenuación es un problema del medio físico, los bucles de capa 2 se evitan con STP y la falta de direcciones IP no es cosa de la capa 2."
+    },
+    {
+      "id": "10",
+      "tema": 33,
+      "enunciado": "Una característica del paso de testigo es que:",
+      "opciones": [
+        "Es probabilístico",
+        "Es determinista y no produce colisiones",
+        "Necesita señal de atasco",
+        "Solo funciona en redes inalámbricas"
+      ],
+      "correcta": 1,
+      "explicacion": "En el **paso de testigo** solo transmite quien posee el testigo, así que **no hay colisiones** y el tiempo de espera está acotado: es **determinista**. Los métodos probabilísticos son los de contienda (CSMA). La señal de atasco (jam) es propia de CSMA/CD, y el testigo se ha usado en redes cableadas como Token Ring y FDDI."
+    },
+    {
+      "id": "11",
+      "tema": 33,
+      "enunciado": "El campo FCS de la trama Ethernet:",
+      "opciones": [
+        "Contiene la dirección de destino",
+        "Corrige los errores detectados",
+        "Es un CRC-32 de 4 bytes que detecta errores",
+        "Indica el tipo de protocolo transportado"
+      ],
+      "correcta": 2,
+      "explicacion": "El **FCS** es un **CRC-32 de 4 bytes** que permite **detectar** errores; **no los corrige**: la trama errónea se descarta y la recuperación queda para capas superiores como TCP. La dirección de destino va en el campo MAC destino y el protocolo transportado en el campo Tipo (EtherType)."
+    },
+    {
+      "id": "12",
+      "tema": 33,
+      "enunciado": "La carga útil máxima (MTU) de una trama Ethernet estándar es de:",
+      "opciones": [
+        "46 bytes",
+        "1518 bytes",
+        "9000 bytes",
+        "1500 bytes"
+      ],
+      "correcta": 3,
+      "explicacion": "La **MTU** de Ethernet es de **1500 bytes** de carga útil, que puede ir de 46 a 1500. 46 es la carga **mínima**, 1518 es el tamaño máximo de la **trama completa** (cabeceras y FCS incluidos) y unos 9000 bytes son las tramas jumbo, que no son estándar IEEE."
+    },
+    {
+      "id": "13",
+      "tema": 33,
+      "enunciado": "Para 10GBASE-T a 100 m se requiere como mínimo cable de categoría:",
+      "opciones": [
+        "6A",
+        "5e",
+        "6",
+        "3"
+      ],
+      "correcta": 0,
+      "explicacion": "**10GBASE-T** (IEEE 802.3an) alcanza los **100 m** con cable de **categoría 6A** como mínimo; con categoría 6 la distancia se reduce. Cat 5e se queda en 1000BASE-T y 2.5GBASE-T, y Cat 3 solo sirve para 10BASE-T."
+    },
+    {
+      "id": "14",
+      "tema": 33,
+      "enunciado": "¿Cuántos pares del cable utiliza 1000BASE-T?",
+      "opciones": [
+        "1",
+        "4",
+        "2",
+        "3"
+      ],
+      "correcta": 1,
+      "explicacion": "**1000BASE-T** usa los **cuatro pares** del cable, y en ambos sentidos a la vez. Los dos pares (uno para transmitir y otro para recibir) son los de 10BASE-T y 100BASE-TX. Ningún estándar Ethernet de par trenzado usa uno o tres pares."
+    },
+    {
+      "id": "15",
+      "tema": 33,
+      "enunciado": "La denominación comercial Wi-Fi 6 corresponde a la norma:",
+      "opciones": [
+        "IEEE 802.11n",
+        "IEEE 802.11ac",
+        "IEEE 802.11ax",
+        "IEEE 802.11be"
+      ],
+      "correcta": 2,
+      "explicacion": "**Wi-Fi 6** es **IEEE 802.11ax** (OFDMA, 1024-QAM). Para recordarlo en orden: Wi-Fi 4 = 802.11**n**, Wi-Fi 5 = 802.11**ac**, Wi-Fi 6 = 802.11**ax** y Wi-Fi 7 = 802.11**be**."
+    },
+    {
+      "id": "16",
+      "tema": 33,
+      "enunciado": "Es una novedad de Wi-Fi 7 (IEEE 802.11be):",
+      "opciones": [
+        "La introducción de OFDM",
+        "El uso exclusivo de 2,4 GHz",
+        "La primera aparición de MIMO",
+        "La operación multienlace (MLO) y los canales de 320 MHz"
+      ],
+      "correcta": 3,
+      "explicacion": "**Wi-Fi 7** aporta la **operación multienlace (MLO)**, los **canales de 320 MHz** y la modulación 4096-QAM. OFDM ya estaba en 802.11a y 802.11g, y MIMO llegó con 802.11n (Wi-Fi 4). Wi-Fi 7 usa las tres bandas: 2,4, 5 y 6 GHz."
+    },
+    {
+      "id": "17",
+      "tema": 33,
+      "enunciado": "¿Qué dispositivo separa dominios de difusión?",
+      "opciones": [
+        "Router",
+        "Hub",
+        "Repetidor",
+        "Switch de capa 2 sin VLAN"
+      ],
+      "correcta": 0,
+      "explicacion": "El **router** (capa 3) **no reenvía las difusiones** entre sus interfaces, así que cada interfaz es un dominio de difusión distinto. El hub y el repetidor (capa 1) no separan ni siquiera los dominios de colisión. El switch de capa 2 separa colisiones por puerto, pero sin VLAN todo él es un único dominio de difusión."
+    },
+    {
+      "id": "18",
+      "tema": 33,
+      "enunciado": "Un switch que trabaja en modo cut-through:",
+      "opciones": [
+        "Comprueba el FCS antes de reenviar",
+        "Reenvía la trama tras leer la dirección MAC de destino",
+        "Espera a recibir los 64 primeros bytes",
+        "Funciona en la capa 3"
+      ],
+      "correcta": 1,
+      "explicacion": "En **cut-through** el switch **reenvía en cuanto lee la MAC de destino** (los 6 primeros bytes de la trama), con la latencia mínima, aunque propaga tramas erróneas. Comprobar el FCS es lo propio de store-and-forward y esperar a los 64 primeros bytes lo hace fragment-free. Los tres son métodos de capa 2."
+    },
+    {
+      "id": "19",
+      "tema": 33,
+      "enunciado": "En la etiqueta IEEE 802.1Q, el identificador de VLAN (VID) ocupa:",
+      "opciones": [
+        "3 bits",
+        "16 bits",
+        "12 bits",
+        "8 bits"
+      ],
+      "correcta": 2,
+      "explicacion": "El **VID** ocupa **12 bits**: 4096 valores, de los que el 0 y el 4095 están reservados, así que se usan del **1 al 4094**. 3 bits son los del campo de prioridad PCP (802.1p) y 16 bits los del TPID, que vale 0x8100."
+    },
+    {
+      "id": "20",
+      "tema": 33,
+      "enunciado": "La potencia máxima que entrega el PSE en PoE+ (IEEE 802.3at) es:",
+      "opciones": [
+        "15,4 W",
+        "60 W",
+        "90 W",
+        "30 W"
+      ],
+      "correcta": 3,
+      "explicacion": "**PoE+ (IEEE 802.3at)** entrega **30 W** en el PSE, de los que llegan 25,5 W al dispositivo alimentado. 15,4 W es el PoE original (802.3af) y 60 W y 90 W son los tipos 3 y 4 de 802.3bt."
+    },
+    {
+      "id": "21",
+      "tema": 33,
+      "enunciado": "En el modelo IEEE 802, la subcapa de control de enlace lógico (LLC), común a todas las tecnologías, se define en la norma:",
+      "opciones": [
+        "IEEE 802.1",
+        "IEEE 802.3",
+        "IEEE 802.2",
+        "IEEE 802.11"
+      ],
+      "correcta": 2,
+      "explicacion": "La subcapa **LLC** se define en **IEEE 802.2** y es independiente del medio: ofrece una interfaz común con la capa de red. 802.1 trata arquitectura, puentes y gestión (STP, VLAN, 802.1X), mientras que 802.3 (Ethernet) y 802.11 (Wi-Fi) definen cada una su propia subcapa MAC y su capa física."
+    },
+    {
+      "id": "22",
+      "tema": 33,
+      "enunciado": "¿Qué subcapa del modelo IEEE 802 se encarga del direccionamiento físico, el entramado y el control de acceso al medio?",
+      "opciones": [
+        "LLC",
+        "La capa física",
+        "La capa de red",
+        "MAC"
+      ],
+      "correcta": 3,
+      "explicacion": "La subcapa **MAC** (*Medium Access Control*) se ocupa del **direccionamiento físico**, el entramado y el **control de acceso al medio**, y es propia de cada tecnología. LLC es la parte común de la capa 2 que da servicio a la capa de red. IEEE 802 divide la capa 2 de OSI en esas dos subcapas."
+    },
+    {
+      "id": "23",
+      "tema": 33,
+      "enunciado": "¿Qué norma IEEE define las redes de área local virtuales (VLAN) y su etiquetado de tramas?",
+      "opciones": [
+        "IEEE 802.1D",
+        "IEEE 802.1X",
+        "IEEE 802.3ad",
+        "IEEE 802.1Q"
+      ],
+      "correcta": 3,
+      "explicacion": "Las **VLAN** y su etiqueta de 4 bytes se definen en **IEEE 802.1Q**. 802.1D define los puentes y STP, 802.1X el control de acceso a la red basado en puertos y 802.3ad la agregación de enlaces (LACP)."
+    },
+    {
+      "id": "24",
+      "tema": 33,
+      "enunciado": "La norma IEEE 802.1w define:",
+      "opciones": [
+        "El STP clásico",
+        "MSTP, con una instancia de árbol por grupo de VLAN",
+        "El control de acceso a la red basado en puertos",
+        "RSTP, una versión del árbol de expansión de convergencia rápida"
+      ],
+      "correcta": 3,
+      "explicacion": "**IEEE 802.1w** es **RSTP** (*Rapid Spanning Tree Protocol*), que converge en pocos segundos frente al STP clásico de **IEEE 802.1D**. MSTP es 802.1s y el control de acceso por puertos es 802.1X. Resumen: 802.1D clásico, 802.1w rápido, 802.1s múltiple."
+    },
+    {
+      "id": "25",
+      "tema": 33,
+      "enunciado": "Una red dedicada a dar acceso al almacenamiento, basada en tecnologías como Fibre Channel o iSCSI, se denomina:",
+      "opciones": [
+        "CAN",
+        "SAN",
+        "MAN",
+        "PAN"
+      ],
+      "correcta": 1,
+      "explicacion": "Una **SAN** (*Storage Area Network*) es una red dedicada al **almacenamiento**, con Fibre Channel o iSCSI. CAN es una red de campus, MAN una red metropolitana (p. ej., WiMAX, IEEE 802.16) y PAN una red personal de unos metros (p. ej., Bluetooth, IEEE 802.15.1)."
+    },
+    {
+      "id": "26",
+      "tema": 33,
+      "enunciado": "¿Cuántos enlaces necesita una malla completa de 8 nodos?",
+      "opciones": [
+        "8",
+        "16",
+        "28",
+        "56"
+      ],
+      "correcta": 2,
+      "explicacion": "El total de enlaces de una malla completa es **n(n − 1)/2** = 8 · 7 / 2 = **28**; cada nodo tiene n − 1 = 7 enlaces. 56 sale de olvidar dividir entre 2 (contaría cada enlace por ambos extremos) y 8 o 16 confunden enlaces con nodos."
+    },
+    {
+      "id": "27",
+      "tema": 33,
+      "enunciado": "Señale la afirmación INCORRECTA sobre la topología en estrella:",
+      "opciones": [
+        "Es fácil de instalar, ampliar y diagnosticar",
+        "Un fallo en el cable de un equipo deja sin servicio a toda la red",
+        "El nodo central es un punto único de fallo",
+        "Es la topología física de Ethernet desde 10BASE-T"
+      ],
+      "correcta": 1,
+      "explicacion": "En **estrella** cada equipo tiene su propio cable hasta el nodo central, así que un fallo de cable **solo afecta a ese equipo**; dejar sin servicio a toda la red por un corte es lo propio del **bus**. Lo que sí es cierto es que el nodo central (hub o switch) es **punto único de fallo**, que es fácil de ampliar y diagnosticar y que es la topología de Ethernet desde 10BASE-T."
+    },
+    {
+      "id": "28",
+      "tema": 33,
+      "enunciado": "Una red Token Ring cuyos equipos se conectan a una MAU tiene topología:",
+      "opciones": [
+        "Física en anillo y lógica en bus",
+        "Física en estrella y lógica en anillo",
+        "Física y lógica en bus",
+        "Física en malla y lógica en estrella"
+      ],
+      "correcta": 1,
+      "explicacion": "En **Token Ring** los equipos se cablean a una **MAU**, que forma una **estrella física**, pero el testigo circula de una estación a la siguiente en un **anillo lógico**. Es el caso paralelo al de Ethernet con hub, que es estrella física y bus lógico."
+    },
+    {
+      "id": "29",
+      "tema": 33,
+      "enunciado": "¿Qué tecnología LAN histórica, normalizada por ANSI, utiliza un doble anillo de fibra óptica con paso de testigo a 100 Mbit/s?",
+      "opciones": [
+        "Token Bus (IEEE 802.4)",
+        "10BASE5",
+        "FDDI",
+        "Token Ring (IEEE 802.5)"
+      ],
+      "correcta": 2,
+      "explicacion": "**FDDI** (norma ANSI) usa un **doble anillo de fibra** con paso de testigo a **100 Mbit/s**: el anillo secundario gira en sentido contrario y permite tolerar fallos. Token Bus es un bus físico con anillo lógico, 10BASE5 es Ethernet sobre coaxial grueso en bus y Token Ring es un anillo de 4 o 16 Mbit/s sobre cobre."
+    },
+    {
+      "id": "30",
+      "tema": 33,
+      "enunciado": "En el cableado estructurado, el subsistema horizontal, que va del armario de planta a la toma del usuario, admite:",
+      "opciones": [
+        "100 m de cable fijo y 110 m de canal con los latiguillos",
+        "90 m de cable fijo y un máximo de 100 m de canal con los latiguillos",
+        "185 m de cable fijo, como el coaxial fino",
+        "500 m de canal, como en la troncal de campus"
+      ],
+      "correcta": 1,
+      "explicacion": "El **subsistema horizontal** admite **90 m de cable fijo** más los latiguillos, con un **canal máximo de 100 m**, que es el límite del par trenzado. 185 m y 500 m son las longitudes de los segmentos coaxiales 10BASE2 y 10BASE5, ya en desuso; la troncal de campus suele ir en fibra."
+    },
+    {
+      "id": "31",
+      "tema": 33,
+      "enunciado": "En el modelo jerárquico de red de tres capas, ¿qué capa aplica las políticas y realiza el enrutamiento entre VLAN?",
+      "opciones": [
+        "Acceso",
+        "Núcleo",
+        "Área de trabajo",
+        "Distribución"
+      ],
+      "correcta": 3,
+      "explicacion": "La capa de **distribución** aplica **políticas** y hace el **enrutamiento entre VLAN**. La de acceso conecta a los usuarios y la de núcleo (*core*) se dedica a la conmutación rápida; en redes pequeñas distribución y núcleo se juntan en un núcleo colapsado. El área de trabajo es un subsistema del cableado estructurado, no una capa del modelo lógico."
+    },
+    {
+      "id": "32",
+      "tema": 33,
+      "enunciado": "En la nomenclatura IEEE 802.3, la denominación 10BASE2 indica:",
+      "opciones": [
+        "10 Mbit/s, banda base y coaxial fino con segmentos de unos 185 m",
+        "10 Mbit/s, banda base y dos pares trenzados",
+        "10 Mbit/s, banda ancha y dos canales",
+        "100 Mbit/s, banda base y fibra de 2 km"
+      ],
+      "correcta": 0,
+      "explicacion": "En 802.3, **10** es la velocidad en Mbit/s, **BASE** indica **banda base** y el **2** se refiere al **coaxial fino** de unos **185 m** (redondeado a 200); en 10BASE5 el 5 son los 500 m del coaxial grueso. El par trenzado se indica con **T**, como en 10BASE-T, y la fibra con **F**."
+    },
+    {
+      "id": "33",
+      "tema": 33,
+      "enunciado": "Un equipo conectado a un puerto de switch configurado en dúplex completo:",
+      "opciones": [
+        "Transmite y recibe a la vez y no sufre colisiones",
+        "Transmite y recibe por turnos y usa CSMA/CD",
+        "Solo puede transmitir en un sentido",
+        "Comparte el dominio de colisión con el resto de puertos"
+      ],
+      "correcta": 0,
+      "explicacion": "En **dúplex completo** cada extremo **transmite y recibe a la vez** por el enlace dedicado del puerto del switch, así que **no hay colisiones** y CSMA/CD no es necesario. Transmitir por turnos es el **semidúplex** (el de un hub) y en un solo sentido es el **símplex**. En un switch cada puerto es su propio dominio de colisión."
+    },
+    {
+      "id": "34",
+      "tema": 33,
+      "enunciado": "Ethernet a 10 Mbit/s usa codificación Manchester. ¿Qué velocidad de modulación necesita en la línea?",
+      "opciones": [
+        "5 Mbaudios",
+        "10 Mbaudios",
+        "20 Mbaudios",
+        "40 Mbaudios"
+      ],
+      "correcta": 2,
+      "explicacion": "**Manchester** pone una **transición en mitad de cada bit**, por lo que cada bit ocupa dos semiperiodos de señal y la velocidad de modulación es el **doble** de la binaria: 10 Mbit/s requieren **20 Mbaudios**. Es el precio de garantizar la sincronización, y por eso las versiones más rápidas de Ethernet usan codificaciones más eficientes."
+    },
+    {
+      "id": "35",
+      "tema": 33,
+      "enunciado": "100BASE-TX codifica los datos con 4B/5B. ¿A qué tasa hay que transmitir los bits codificados para ofrecer 100 Mbit/s de datos útiles?",
+      "opciones": [
+        "100 Mbit/s",
+        "120 Mbit/s",
+        "125 Mbit/s",
+        "200 Mbit/s"
+      ],
+      "correcta": 2,
+      "explicacion": "**4B/5B** envía cada 4 bits de datos como 5, con una eficiencia del **80 %**: 100 × 5/4 = **125 Mbit/s** en la línea. 200 Mbit/s sería duplicar, como hace Manchester, y 100 Mbit/s supondría que la codificación no añade nada. Luego MLT-3 es la señal de tres niveles que lleva esos bits por el cable."
+    },
+    {
+      "id": "36",
+      "tema": 33,
+      "enunciado": "¿Qué codificación de línea utiliza 1000BASE-T?",
+      "opciones": [
+        "8B/10B",
+        "MLT-3",
+        "Manchester",
+        "PAM-5"
+      ],
+      "correcta": 3,
+      "explicacion": "**1000BASE-T** usa **PAM-5** (cinco niveles de amplitud) sobre los cuatro pares. 8B/10B es la de **1000BASE-X** (SX, LX, sobre fibra), MLT-3 la de 100BASE-TX y Manchester la de 10 Mbit/s. Cuidado con la trampa: ambos son Gigabit, pero «-T» es cobre y «-X» fibra."
+    },
+    {
+      "id": "37",
+      "tema": 33,
+      "enunciado": "¿Qué característica corresponde a la fibra óptica monomodo frente a la multimodo?",
+      "opciones": [
+        "Núcleo de 50 o 62,5 µm y fuente LED o VCSEL de 850 nm",
+        "Núcleo de unos 9 µm, láser de 1310 o 1550 nm y alcance de kilómetros",
+        "Clasificación OM1 a OM5",
+        "Uso típico dentro del edificio, con alcance de cientos de metros"
+      ],
+      "correcta": 1,
+      "explicacion": "La fibra **monomodo** tiene un **núcleo de unos 9 µm**, usa **láser de 1310 o 1550 nm** y llega a **kilómetros** (clases OS1 y OS2), por eso se usa en campus, troncales y WAN. El núcleo de 50 o 62,5 µm, la luz de 850 nm, las clases OM1 a OM5 y el alcance de cientos de metros son propios de la **multimodo**."
+    },
+    {
+      "id": "38",
+      "tema": 33,
+      "enunciado": "Un cable de par trenzado con el esquema T568A en un extremo y T568B en el otro es un cable:",
+      "opciones": [
+        "Directo",
+        "Apantallado S/FTP",
+        "Coaxial",
+        "Cruzado"
+      ],
+      "correcta": 3,
+      "explicacion": "Con **T568A** en un extremo y **T568B** en el otro se obtiene un **cable cruzado**, usado tradicionalmente para unir equipo con equipo. El **directo** lleva el mismo esquema en ambos extremos (equipo con switch). Hoy **Auto-MDI/MDI-X** detecta y cruza automáticamente, y el apantallamiento no depende del esquema de conexionado."
+    },
+    {
+      "id": "39",
+      "tema": 33,
+      "enunciado": "¿Cuál es la longitud máxima de un segmento 1000BASE-T sobre par trenzado?",
+      "opciones": [
+        "55 m",
+        "100 m",
+        "185 m",
+        "500 m"
+      ],
+      "correcta": 1,
+      "explicacion": "En **par trenzado** la distancia máxima por segmento es de **100 m**, para 10BASE-T, 100BASE-TX, 1000BASE-T y 10GBASE-T con el cable adecuado. 185 m y 500 m son los segmentos coaxiales 10BASE2 y 10BASE5. Regla de oro: par trenzado = 100 m."
+    },
+    {
+      "id": "40",
+      "tema": 33,
+      "enunciado": "¿Cuál es el rendimiento máximo teórico del protocolo ALOHA ranurado?",
+      "opciones": [
+        "18,4 %",
+        "36,8 %",
+        "50 %",
+        "100 %"
+      ],
+      "correcta": 1,
+      "explicacion": "El **ALOHA ranurado** alcanza como máximo un **36,8 %** (1/e) porque solo se transmite al inicio de cada ranura, lo que reduce a la mitad el periodo vulnerable. El **ALOHA puro**, en el que se transmite en cualquier momento, se queda en el **18,4 %**, justo la mitad. Truco: el ranurado duplica al puro."
+    },
+    {
+      "id": "41",
+      "tema": 33,
+      "enunciado": "¿Qué familia de métodos de acceso al medio tiene carácter probabilístico y no garantiza un tiempo máximo de acceso?",
+      "opciones": [
+        "Paso de testigo",
+        "Sondeo",
+        "Reparto fijo (TDMA, FDMA)",
+        "Contienda (acceso aleatorio)"
+      ],
+      "correcta": 3,
+      "explicacion": "Los métodos de **contienda** (ALOHA, CSMA, CSMA/CD, CSMA/CA) son **probabilísticos**: las estaciones compiten por el medio y no hay tiempo de acceso garantizado. El paso de testigo es determinista, el sondeo lo controla una estación principal y el reparto fijo divide el canal de antemano."
+    },
+    {
+      "id": "42",
+      "tema": 33,
+      "enunciado": "Un método de acceso en el que una estación principal pregunta por turno a las demás si tienen datos que enviar es el:",
+      "opciones": [
+        "Paso de testigo",
+        "ALOHA ranurado",
+        "Sondeo (polling)",
+        "CSMA/CA"
+      ],
+      "correcta": 2,
+      "explicacion": "En el **sondeo** (*polling*) una **estación principal** pregunta por turno a las secundarias: es un método **centralizado**, como en las redes maestro-esclavo. En el paso de testigo el permiso circula entre estaciones sin un coordinador central, y ALOHA y CSMA/CA son métodos de contienda."
+    },
+    {
+      "id": "43",
+      "tema": 33,
+      "enunciado": "En una red Token Ring (IEEE 802.5), ¿qué estación regenera el testigo si se pierde y retira las tramas huérfanas?",
+      "opciones": [
+        "El puente raíz",
+        "El monitor activo",
+        "La MAU",
+        "La estación principal de sondeo"
+      ],
+      "correcta": 1,
+      "explicacion": "En **Token Ring** una estación actúa como **monitor activo**: regenera el testigo perdido y retira las tramas huérfanas que darían vueltas sin fin. El puente raíz es un concepto de STP en redes de switches, la MAU es el concentrador al que se cablean las estaciones y la estación principal pertenece al método de sondeo."
+    },
+    {
+      "id": "44",
+      "tema": 33,
+      "enunciado": "Las redes Wi-Fi (IEEE 802.11) usan CSMA/CA en lugar del CSMA/CD de Ethernet (IEEE 802.3) porque:",
+      "opciones": [
+        "Las tramas 802.11 no llevan direcciones MAC",
+        "En el medio radio no se producen colisiones",
+        "802.11 se basa en el paso de testigo",
+        "Una estación de radio no puede detectar colisiones mientras transmite"
+      ],
+      "correcta": 3,
+      "explicacion": "En radio una estación **no puede detectar colisiones mientras transmite** (su propia señal tapa las demás) y además existe el problema del nodo oculto, por eso 802.11 intenta **evitarlas** (*collision avoidance*) y confirma cada trama con un ACK. En radio sí hay colisiones, las tramas 802.11 llevan direcciones MAC y su método es de contienda, no de testigo."
+    },
+    {
+      "id": "45",
+      "tema": 33,
+      "enunciado": "¿Qué campo de la trama Ethernet, de 1 byte con el valor 10101011, marca el inicio de la trama?",
+      "opciones": [
+        "SFD (delimitador de inicio de trama)",
+        "Preámbulo",
+        "FCS",
+        "Tipo/Longitud"
+      ],
+      "correcta": 0,
+      "explicacion": "El **SFD** (*Start Frame Delimiter*) es **1 byte 10101011** que marca dónde empieza la trama. Va justo después del **preámbulo**, que son **7 bytes** 1010… para sincronizar relojes. El FCS es el CRC-32 final y el campo Tipo/Longitud indica el protocolo o la longitud."
+    },
+    {
+      "id": "46",
+      "tema": 33,
+      "enunciado": "En una trama Ethernet II, el valor 0x0806 en el campo EtherType indica que la carga útil es:",
+      "opciones": [
+        "ARP",
+        "IPv4",
+        "IPv6",
+        "Una trama con etiqueta 802.1Q"
+      ],
+      "correcta": 0,
+      "explicacion": "**0x0806** es el EtherType de **ARP**. Los otros valores frecuentes son **0x0800** para IPv4, **0x86DD** para IPv6 y **0x8100** para una trama con etiqueta 802.1Q (el TPID)."
+    },
+    {
+      "id": "47",
+      "tema": 33,
+      "enunciado": "En la trama Ethernet, si el campo Tipo/Longitud contiene el valor decimal 1500 (0x05DC), se interpreta como:",
+      "opciones": [
+        "La longitud de los datos, según el formato IEEE 802.3",
+        "Un EtherType que identifica IPv4",
+        "El TPID de una etiqueta 802.1Q",
+        "Un valor de relleno sin significado"
+      ],
+      "correcta": 0,
+      "explicacion": "Si el valor es **menor o igual que 1500** se interpreta como **longitud** de los datos (formato IEEE 802.3); si es **mayor o igual que 0x0600 (1536)**, es un **EtherType** (Ethernet II). IPv4 sería 0x0800 y el TPID de 802.1Q, 0x8100, ambos por encima de 1536. Por eso los dos formatos pueden convivir en la misma red."
+    },
+    {
+      "id": "48",
+      "tema": 33,
+      "enunciado": "¿Cuál es el tamaño máximo de una trama Ethernet que lleva etiqueta IEEE 802.1Q, sin contar preámbulo ni SFD?",
+      "opciones": [
+        "1500 bytes",
+        "1518 bytes",
+        "1522 bytes",
+        "1526 bytes"
+      ],
+      "correcta": 2,
+      "explicacion": "La trama Ethernet máxima es de **1518 bytes**, y la etiqueta **802.1Q** añade **4 bytes**: **1522 bytes**. 1500 es la carga útil máxima (MTU) y 1526 sería sumar además preámbulo y SFD a la trama de 1518, que no se cuentan."
+    },
+    {
+      "id": "49",
+      "tema": 33,
+      "enunciado": "Un equipo envía una trama Ethernet con solo 20 bytes de datos. ¿Cuántos bytes de relleno (padding) se añaden?",
+      "opciones": [
+        "0",
+        "26",
+        "44",
+        "46"
+      ],
+      "correcta": 1,
+      "explicacion": "La carga útil mínima es de **46 bytes** (64 bytes de trama mínima − 14 de cabecera − 4 de FCS), así que hay que añadir 46 − 20 = **26 bytes** de relleno. 44 resulta de restar 20 a 64, olvidando cabecera y FCS, y 46 confunde el relleno con la carga mínima."
+    },
+    {
+      "id": "50",
+      "tema": 33,
+      "enunciado": "¿Qué tipo de dirección es la MAC 01:00:5E:00:00:01?",
+      "opciones": [
+        "Multicast",
+        "Unicast administrada universalmente",
+        "Broadcast",
+        "Unicast administrada localmente"
+      ],
+      "correcta": 0,
+      "explicacion": "El primer byte es 0x01 y su **bit de menor peso (I/G) vale 1**, así que es una dirección de **grupo (multicast)**; además, **01:00:5E** es el prefijo del **multicast IPv4** sobre Ethernet. No es broadcast, que es FF:FF:FF:FF:FF:FF, y no puede ser unicast porque el bit I/G de una unicast vale 0."
+    },
+    {
+      "id": "51",
+      "tema": 33,
+      "enunciado": "La versión Fast Ethernet 100BASE-TX se definió en la norma:",
+      "opciones": [
+        "IEEE 802.3u",
+        "IEEE 802.3i",
+        "IEEE 802.3ab",
+        "IEEE 802.3an"
+      ],
+      "correcta": 0,
+      "explicacion": "**100BASE-TX** (Fast Ethernet) es **IEEE 802.3u** (1995). 802.3i es 10BASE-T, 802.3ab es 1000BASE-T y 802.3an es 10GBASE-T. Orden para recordarlo: i (10), u (100), ab (1000), an (10G)."
+    },
+    {
+      "id": "52",
+      "tema": 33,
+      "enunciado": "Wi-Fi 5 (IEEE 802.11ac) opera en la banda de:",
+      "opciones": [
+        "2,4 GHz únicamente",
+        "2,4 y 5 GHz",
+        "6 GHz",
+        "5 GHz únicamente"
+      ],
+      "correcta": 3,
+      "explicacion": "**802.11ac** (Wi-Fi 5) trabaja **solo en 5 GHz**, de ahí sus canales de 80 y 160 MHz. 802.11n (Wi-Fi 4) y 802.11ax (Wi-Fi 6) usan 2,4 y 5 GHz, y la banda de 6 GHz llega con Wi-Fi 6E."
+    },
+    {
+      "id": "53",
+      "tema": 33,
+      "enunciado": "En la banda de 2,4 GHz, ¿qué canales de 20 MHz no se solapan entre sí?",
+      "opciones": [
+        "1, 5 y 9",
+        "2, 7 y 12",
+        "1, 6 y 11",
+        "1, 4, 8 y 12"
+      ],
+      "correcta": 2,
+      "explicacion": "En **2,4 GHz** los canales están separados 5 MHz pero ocupan unos 20 MHz, así que solo **1, 6 y 11** quedan sin solaparse. Por eso esta banda está saturada, mientras que 5 y 6 GHz ofrecen muchos más canales independientes, aunque con menor alcance."
+    },
+    {
+      "id": "54",
+      "tema": 33,
+      "enunciado": "En una red IEEE 802.11, el BSSID es:",
+      "opciones": [
+        "El nombre de la red, de hasta 32 caracteres",
+        "El conjunto de varios BSS unidos por un sistema de distribución",
+        "El número de canal en el que emite el punto de acceso",
+        "La dirección MAC del punto de acceso que identifica el BSS"
+      ],
+      "correcta": 3,
+      "explicacion": "El **BSSID** identifica un **BSS** (el conjunto de estaciones asociadas a un AP) y es la **dirección MAC del punto de acceso**. El nombre de la red es el **SSID**, y varios BSS con el mismo SSID unidos por un sistema de distribución forman un **ESS**, que permite la itinerancia."
+    },
+    {
+      "id": "55",
+      "tema": 33,
+      "enunciado": "¿Cómo se denomina en IEEE 802.11 el modo en que las estaciones se comunican directamente entre sí, sin punto de acceso?",
+      "opciones": [
+        "ESS",
+        "BSS de infraestructura",
+        "IBSS (ad hoc)",
+        "Malla 802.11s"
+      ],
+      "correcta": 2,
+      "explicacion": "El **IBSS** o modo **ad hoc** comunica estaciones **directamente**, sin AP. El BSS de infraestructura gira en torno a un AP, el ESS agrupa varios BSS con el mismo SSID y en la malla 802.11s son los AP los que se enlazan entre sí por radio."
+    },
+    {
+      "id": "56",
+      "tema": 33,
+      "enunciado": "Un router tiene dos interfaces. En una hay un switch con 12 equipos conectados más el enlace al router; en la otra, un hub con 6 equipos. ¿Cuántos dominios de colisión y de difusión hay en total?",
+      "opciones": [
+        "14 de colisión y 2 de difusión",
+        "3 de colisión y 2 de difusión",
+        "14 de colisión y 1 de difusión",
+        "19 de colisión y 2 de difusión"
+      ],
+      "correcta": 0,
+      "explicacion": "En el switch **cada puerto** es un dominio de colisión: 12 equipos + 1 enlace al router = 13; el hub y su enlace al router son **uno solo**: total **14**. Los dominios de **difusión** los separa el router: uno por interfaz, **2**. 19 sale de contar cada equipo del hub por separado, y 1 de difusión olvidaría que el router no reenvía broadcasts."
+    },
+    {
+      "id": "57",
+      "tema": 33,
+      "enunciado": "¿Qué método de conmutación recibe la trama completa y comprueba el FCS antes de reenviarla, descartando las tramas erróneas?",
+      "opciones": [
+        "Almacenamiento y reenvío (store-and-forward)",
+        "Corte (cut-through)",
+        "Libre de fragmentos (fragment-free)",
+        "Inundación (flooding)"
+      ],
+      "correcta": 0,
+      "explicacion": "En **store-and-forward** el switch recibe la trama **completa**, comprueba el **FCS** y **descarta** las erróneas, a cambio de más latencia. Cut-through reenvía tras leer la MAC de destino y fragment-free tras los 64 primeros bytes, por lo que no validan el FCS. La inundación no es un método de conmutación, sino lo que hace el switch con destinos desconocidos."
+    },
+    {
+      "id": "58",
+      "tema": 33,
+      "enunciado": "Un switch recibe una trama unicast cuya dirección MAC de destino no figura en su tabla MAC. ¿Qué hace?",
+      "opciones": [
+        "La descarta",
+        "La devuelve al equipo de origen",
+        "La reenvía por todos los puertos salvo por el que llegó",
+        "La envía únicamente a la puerta de enlace predeterminada"
+      ],
+      "correcta": 2,
+      "explicacion": "Con un destino **desconocido** el switch **inunda** (*flooding*): reenvía la trama por **todos los puertos salvo el de entrada**, igual que con un broadcast. Cuando el destino responda, el switch **aprenderá** su MAC de origen y a partir de ahí filtrará. El switch no descarta tramas por desconocer el destino ni conoce la puerta de enlace, que es un concepto de capa 3."
+    },
+    {
+      "id": "59",
+      "tema": 33,
+      "enunciado": "En un troncal IEEE 802.1Q, ¿qué VLAN viaja sin etiqueta por defecto?",
+      "opciones": [
+        "VLAN 0",
+        "VLAN 1",
+        "VLAN 4094",
+        "VLAN 4095"
+      ],
+      "correcta": 1,
+      "explicacion": "La **VLAN nativa** es la que viaja **sin etiqueta** por el troncal y por defecto es la **VLAN 1**. Los valores 0 y 4095 del VID están **reservados**, y 4094 es la última VLAN utilizable, no la nativa por defecto."
+    },
+    {
+      "id": "60",
+      "tema": 33,
+      "enunciado": "¿Cuál es la función del protocolo STP definido en IEEE 802.1D?",
+      "opciones": [
+        "Evitar bucles de capa 2 bloqueando lógicamente los enlaces redundantes entre switches",
+        "Agrupar varios enlaces físicos en uno lógico para sumar capacidad",
+        "Etiquetar las tramas con el identificador de VLAN",
+        "Autenticar los equipos antes de habilitar el puerto del switch"
+      ],
+      "correcta": 0,
+      "explicacion": "**STP** (**IEEE 802.1D**) **bloquea lógicamente los enlaces redundantes** para dejar una topología en árbol **sin bucles**, porque la trama Ethernet no tiene TTL y un bucle provoca tormentas de difusión; si cae un enlace activo, habilita uno de reserva. Agrupar enlaces es LACP, etiquetar VLAN es 802.1Q y autenticar en el puerto es 802.1X. Su versión rápida es RSTP (802.1w)."
+    }
+  ]
+}

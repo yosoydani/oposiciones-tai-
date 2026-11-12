@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 31 · test",
+  "fuente": "propio",
+  "tema": 31,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 31. Internet, HTTP, HTTPS y SSL/TLS»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 31,
+      "enunciado": "¿En qué año se pusieron en marcha los primeros nodos de ARPANET?",
+      "opciones": [
+        "1965",
+        "1969",
+        "1974",
+        "1983"
+      ],
+      "correcta": 1,
+      "explicacion": "ARPANET arrancó en **1969**, con el primer mensaje entre UCLA y SRI el 29 de octubre de 1969. 1974 es el año del artículo de Cerf y Kahn sobre TCP y 1983 el del paso de ARPANET a TCP/IP."
+    },
+    {
+      "id": "02",
+      "tema": 31,
+      "enunciado": "¿Qué organismo elabora los estándares de Internet que se publican como RFC?",
+      "opciones": [
+        "W3C",
+        "ICANN",
+        "IETF",
+        "UIT"
+      ],
+      "correcta": 2,
+      "explicacion": "El **IETF** (*Internet Engineering Task Force*) elabora los estándares técnicos de Internet y los publica como **RFC**. El W3C hace los estándares de la Web, la ICANN coordina los nombres de dominio y la UIT las normas de telecomunicaciones, sin gobernar Internet."
+    },
+    {
+      "id": "03",
+      "tema": 31,
+      "enunciado": "¿Qué registro regional de Internet (RIR) asigna direcciones IP en España?",
+      "opciones": [
+        "ARIN",
+        "APNIC",
+        "LACNIC",
+        "RIPE NCC"
+      ],
+      "correcta": 3,
+      "explicacion": "El **RIPE NCC**, con sede en Ámsterdam, cubre Europa, Oriente Próximo y Asia central. ARIN es el de Norteamérica, APNIC el de Asia-Pacífico y LACNIC el de Latinoamérica y el Caribe; el quinto es AFRINIC (África)."
+    },
+    {
+      "id": "04",
+      "tema": 31,
+      "enunciado": "¿Quién propuso en el CERN, en 1989, el sistema que dio origen a la World Wide Web?",
+      "opciones": [
+        "Tim Berners-Lee",
+        "Vinton Cerf",
+        "Jon Postel",
+        "Marc Andreessen"
+      ],
+      "correcta": 0,
+      "explicacion": "Fue **Tim Berners-Lee**, en marzo de 1989, en el CERN. Vinton Cerf es coautor de TCP/IP, Jon Postel está ligado a la IANA y Marc Andreessen al navegador Mosaic y a Netscape."
+    },
+    {
+      "id": "05",
+      "tema": 31,
+      "enunciado": "ARPANET sustituyó NCP por TCP/IP el:",
+      "opciones": [
+        "1 de enero de 1981",
+        "29 de octubre de 1969",
+        "30 de abril de 1993",
+        "1 de enero de 1983"
+      ],
+      "correcta": 3,
+      "explicacion": "El cambio fue el **1 de enero de 1983** (*flag day*). En 1981 se publicaron los RFC 791 (IPv4) y 793 (TCP), el 29 de octubre de 1969 se envió el primer mensaje de ARPANET y el 30 de abril de 1993 el CERN liberó el software de la Web."
+    },
+    {
+      "id": "06",
+      "tema": 31,
+      "enunciado": "La infraestructura donde muchos operadores se interconectan directamente para intercambiar tráfico se llama:",
+      "opciones": [
+        "CDN",
+        "IXP (punto neutro)",
+        "Servidor raíz",
+        "LIR"
+      ],
+      "correcta": 1,
+      "explicacion": "Un **IXP** o punto neutro de intercambio es donde muchos operadores se interconectan directamente (en España, ESPANIX o CATNIX). Una CDN distribuye copias de contenidos cerca de los usuarios, un servidor raíz forma parte del DNS y un LIR reparte direcciones a usuarios finales."
+    },
+    {
+      "id": "07",
+      "tema": 31,
+      "enunciado": "¿Qué protocolo permite leer el correo dejándolo en el servidor y sincronizando las carpetas entre dispositivos?",
+      "opciones": [
+        "SMTP",
+        "POP3",
+        "IMAP",
+        "MIME"
+      ],
+      "correcta": 2,
+      "explicacion": "**IMAP** sincroniza las carpetas y conserva el correo en el servidor, por lo que sirve para varios dispositivos. POP3 descarga el correo y suele borrarlo del servidor, SMTP envía y MIME es un formato para adjuntos y caracteres no ASCII, no un protocolo de acceso."
+    },
+    {
+      "id": "08",
+      "tema": 31,
+      "enunciado": "¿Cuál es el puerto por defecto de HTTPS?",
+      "opciones": [
+        "443",
+        "80",
+        "8080",
+        "8443"
+      ],
+      "correcta": 0,
+      "explicacion": "HTTPS usa el puerto **443**; HTTP en claro, el 80. 8080 y 8443 son puertos alternativos habituales en servidores de pruebas o proxies, pero no los oficiales."
+    },
+    {
+      "id": "09",
+      "tema": 31,
+      "enunciado": "¿Cuál de estos métodos HTTP NO es idempotente?",
+      "opciones": [
+        "GET",
+        "PUT",
+        "DELETE",
+        "POST"
+      ],
+      "correcta": 3,
+      "explicacion": "**POST** no es idempotente: repetirlo puede crear varios recursos. GET, PUT y DELETE sí lo son según el RFC 9110: repetirlos produce el mismo efecto que hacerlo una vez (PUT sustituye siempre por lo mismo y DELETE borra el mismo recurso)."
+    },
+    {
+      "id": "10",
+      "tema": 31,
+      "enunciado": "El código de estado HTTP 404 indica:",
+      "opciones": [
+        "Error interno del servidor",
+        "Recurso no encontrado",
+        "Redirección permanente",
+        "Acceso prohibido"
+      ],
+      "correcta": 1,
+      "explicacion": "**404 Not Found** significa recurso no encontrado, un error del cliente (4xx). El error interno del servidor es 500, la redirección permanente 301 y el acceso prohibido 403."
+    },
+    {
+      "id": "11",
+      "tema": 31,
+      "enunciado": "¿Qué código devuelve el servidor cuando el cliente está identificado pero no tiene permiso sobre el recurso?",
+      "opciones": [
+        "401",
+        "407",
+        "403",
+        "500"
+      ],
+      "correcta": 2,
+      "explicacion": "**403 Forbidden**: el cliente está identificado, pero no tiene permiso. 401 Unauthorized indica que falta autenticarse, 407 que hay que autenticarse ante el proxy y 500 es un error interno del servidor. Truco: 401 = ¿quién eres?; 403 = sé quién eres y no puedes."
+    },
+    {
+      "id": "12",
+      "tema": 31,
+      "enunciado": "¿Qué cabecera es obligatoria en toda petición HTTP/1.1?",
+      "opciones": [
+        "Host",
+        "User-Agent",
+        "Cookie",
+        "Accept"
+      ],
+      "correcta": 0,
+      "explicacion": "La cabecera **Host** es obligatoria en HTTP/1.1 y permite el alojamiento virtual: varios sitios en una misma IP. User-Agent, Cookie y Accept son opcionales."
+    },
+    {
+      "id": "13",
+      "tema": 31,
+      "enunciado": "HTTP/3 funciona sobre:",
+      "opciones": [
+        "TCP con TLS 1.2",
+        "SCTP",
+        "QUIC, que va sobre UDP",
+        "TCP con compresión HPACK"
+      ],
+      "correcta": 2,
+      "explicacion": "**HTTP/3** (RFC 9114) va sobre **QUIC** (RFC 9000), que funciona sobre **UDP** e integra TLS 1.3. HTTP/1.1 y HTTP/2 usan TCP, y HPACK es la compresión de cabeceras de HTTP/2 (HTTP/3 usa QPACK)."
+    },
+    {
+      "id": "14",
+      "tema": 31,
+      "enunciado": "¿Qué RFC define actualmente HTTP/2?",
+      "opciones": [
+        "RFC 9112",
+        "RFC 9113",
+        "RFC 9114",
+        "RFC 7230"
+      ],
+      "correcta": 1,
+      "explicacion": "HTTP/2 se define en el **RFC 9113** (2022), que sustituye al RFC 7540. El RFC 9112 es HTTP/1.1, el 9114 HTTP/3 y el 7230 el antiguo HTTP/1.1. Truco: 9112, 9113, 9114 = HTTP/1.1, /2, /3."
+    },
+    {
+      "id": "15",
+      "tema": 31,
+      "enunciado": "¿Qué atributo de una cookie impide que se lea desde JavaScript?",
+      "opciones": [
+        "Secure",
+        "SameSite",
+        "Path",
+        "HttpOnly"
+      ],
+      "correcta": 3,
+      "explicacion": "**HttpOnly** hace la cookie inaccesible desde JavaScript, lo que mitiga el robo de sesión por XSS. Secure obliga a enviarla solo por HTTPS, SameSite mitiga CSRF y Path limita las rutas en las que se envía."
+    },
+    {
+      "id": "16",
+      "tema": 31,
+      "enunciado": "¿Qué RFC declaró obsoletos TLS 1.0 y TLS 1.1?",
+      "opciones": [
+        "RFC 8446",
+        "RFC 7568",
+        "RFC 8996",
+        "RFC 6176"
+      ],
+      "correcta": 2,
+      "explicacion": "El **RFC 8996** (marzo de 2021) declaró obsoletos TLS 1.0 y 1.1 (no deben usarse). El RFC 8446 es TLS 1.3, el 7568 retiró SSL 3.0 y el 6176 prohibió SSL 2.0."
+    },
+    {
+      "id": "17",
+      "tema": 31,
+      "enunciado": "¿Cuál es una característica de TLS 1.3?",
+      "opciones": [
+        "Handshake de 1 RTT y solo intercambios de clave efímeros",
+        "Permite el intercambio de claves RSA estático",
+        "Admite el cifrado RC4",
+        "Envía el certificado del servidor sin cifrar"
+      ],
+      "correcta": 0,
+      "explicacion": "TLS 1.3 tiene un **handshake de 1 RTT** y solo admite **intercambios efímeros** (ECDHE/DHE), por lo que el *forward secrecy* es obligatorio. Elimina el intercambio RSA estático y RC4, y el certificado del servidor viaja cifrado."
+    },
+    {
+      "id": "18",
+      "tema": 31,
+      "enunciado": "¿Qué mecanismo obliga al navegador a conectarse siempre por HTTPS a un sitio?",
+      "opciones": [
+        "OCSP",
+        "HSTS",
+        "SNI",
+        "CRL"
+      ],
+      "correcta": 1,
+      "explicacion": "**HSTS** (RFC 6797), con la cabecera Strict-Transport-Security, obliga al navegador a usar solo HTTPS con ese sitio y protege del *SSL stripping*. OCSP y CRL sirven para comprobar la revocación de certificados y SNI indica el nombre del servidor en el ClientHello."
+    },
+    {
+      "id": "19",
+      "tema": 31,
+      "enunciado": "En una cadena de certificados, ¿cuál está autofirmado y preinstalado en el almacén de confianza?",
+      "opciones": [
+        "El de la hoja (servidor)",
+        "El intermedio",
+        "El comodín",
+        "El raíz"
+      ],
+      "correcta": 3,
+      "explicacion": "La **CA raíz** se firma a sí misma y viene preinstalada en el almacén del navegador o del sistema; desde ella se firman las intermedias, y estas al certificado hoja del servidor. Un certificado comodín (*.ejemplo.es) es un certificado de servidor, no una CA."
+    },
+    {
+      "id": "20",
+      "tema": 31,
+      "enunciado": "¿Qué entidad gestiona el registro del dominio .es?",
+      "opciones": [
+        "Red.es",
+        "RIPE NCC",
+        "ICANN",
+        "FNMT-RCM"
+      ],
+      "correcta": 0,
+      "explicacion": "El dominio .es lo gestiona **Red.es** (registro ESNIC), entidad pública adscrita al Ministerio para la Transformación Digital y de la Función Pública. El RIPE NCC reparte direcciones IP, la ICANN coordina los gTLD y la FNMT-RCM emite certificados."
+    },
+    {
+      "id": "21",
+      "tema": 31,
+      "enunciado": "Dos operadores intercambian sus tráficos directamente, normalmente sin pago entre ellos y a menudo en un IXP. Esta relación se denomina:",
+      "opciones": [
+        "Tránsito",
+        "Multihoming",
+        "Anycast",
+        "Peering"
+      ],
+      "correcta": 3,
+      "explicacion": "Es **peering**: intercambio directo de tráfico entre operadores, normalmente sin pago. En el **tránsito**, en cambio, un operador paga a otro para llegar a todo Internet. Anycast es un modo de direccionamiento y multihoming es conectarse a varios proveedores a la vez."
+    },
+    {
+      "id": "22",
+      "tema": 31,
+      "enunciado": "¿Qué organismo coordina la zona raíz del DNS, los bloques de direcciones IP y ASN que reparte a los RIR y los registros de parámetros de protocolos, como los puertos?",
+      "opciones": [
+        "ICANN",
+        "IANA",
+        "IETF",
+        "ISOC"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la **IANA** (*Internet Assigned Numbers Authority*), que desde 2016 opera PTI, filial de ICANN. La ICANN coordina el sistema de nombres de dominio y acredita a los registradores de gTLD, el IETF elabora los RFC y la ISOC promueve Internet y da cobertura institucional al IETF."
+    },
+    {
+      "id": "23",
+      "tema": 31,
+      "enunciado": "¿Qué organismo elabora los estándares CSS y las pautas de accesibilidad WCAG?",
+      "opciones": [
+        "W3C",
+        "IETF",
+        "WHATWG",
+        "ISO"
+      ],
+      "correcta": 0,
+      "explicacion": "El **W3C** (*World Wide Web Consortium*, 1994) elabora los estándares de la Web: CSS, XML, las pautas **WCAG** y HTML junto con WHATWG. El WHATWG mantiene el HTML Living Standard, pero no CSS ni WCAG, y el IETF normaliza protocolos (RFC)."
+    },
+    {
+      "id": "24",
+      "tema": 31,
+      "enunciado": "¿Cuál es el orden correcto en la jerarquía de reparto de direcciones IP?",
+      "opciones": [
+        "RIR → IANA → LIR/ISP → usuario final",
+        "IANA → LIR/ISP → RIR → usuario final",
+        "IANA → RIR → LIR/ISP → usuario final",
+        "ICANN → IANA → RIR → usuario final"
+      ],
+      "correcta": 2,
+      "explicacion": "El reparto es **IANA → RIR → LIR/ISP → usuario final**: la IANA entrega bloques a los cinco RIR (como el RIPE NCC), estos a los LIR y proveedores, y ellos a sus clientes. La ICANN coordina los nombres de dominio, no está en la cadena de reparto de direcciones."
+    },
+    {
+      "id": "25",
+      "tema": 31,
+      "enunciado": "El principio extremo a extremo (end-to-end) de Internet establece que:",
+      "opciones": [
+        "Cada comunicación reserva un circuito entre los extremos",
+        "La red solo transporta paquetes y la inteligencia está en los equipos finales",
+        "Los routers garantizan la entrega fiable de cada paquete",
+        "Todo el tráfico debe pasar por un punto central de control"
+      ],
+      "correcta": 1,
+      "explicacion": "Según el **principio extremo a extremo**, la red solo transporta paquetes con el mejor esfuerzo (*best effort*) y la **inteligencia** (fiabilidad, aplicaciones) está en los equipos finales. Internet no reserva circuitos (es conmutación de paquetes), los routers no garantizan la entrega y no tiene centro ni dueño único."
+    },
+    {
+      "id": "26",
+      "tema": 31,
+      "enunciado": "ESPANIX es:",
+      "opciones": [
+        "Un registro regional de Internet para España y Portugal",
+        "La red académica española de universidades",
+        "Una red de distribución de contenidos (CDN) pública",
+        "Un punto neutro de intercambio de tráfico (IXP) en Madrid"
+      ],
+      "correcta": 3,
+      "explicacion": "**ESPANIX** es un **IXP** o punto neutro de Madrid, donde los operadores intercambian tráfico directamente; en Barcelona está CATNIX. La red académica española es RedIRIS, y en España no hay RIR propio: el que corresponde es el RIPE NCC."
+    },
+    {
+      "id": "27",
+      "tema": 31,
+      "enunciado": "¿Cuál de las siguientes instituciones NO fue uno de los cuatro primeros nodos de ARPANET en 1969?",
+      "opciones": [
+        "MIT",
+        "UCLA",
+        "SRI",
+        "Universidad de Utah"
+      ],
+      "correcta": 0,
+      "explicacion": "Los cuatro primeros nodos fueron **UCLA, SRI, UCSB y la Universidad de Utah**, unidos por IMP de BBN. El **MIT** no fue uno de ellos, aunque allí trabajó Leonard Kleinrock en la teoría de la conmutación de paquetes, lo que lo hace un distractor verosímil."
+    },
+    {
+      "id": "28",
+      "tema": 31,
+      "enunciado": "¿Quién envió en 1971 el primer correo electrónico entre máquinas e introdujo el uso de la arroba (@)?",
+      "opciones": [
+        "Jon Postel",
+        "Paul Mockapetris",
+        "Ray Tomlinson",
+        "Robert Kahn"
+      ],
+      "correcta": 2,
+      "explicacion": "Fue **Ray Tomlinson**, en **1971**. Paul Mockapetris diseñó el DNS en 1983, Robert Kahn es coautor de TCP con Vinton Cerf y Jon Postel está ligado a la IANA."
+    },
+    {
+      "id": "29",
+      "tema": 31,
+      "enunciado": "El sistema de nombres de dominio (DNS) fue diseñado en 1983 por:",
+      "opciones": [
+        "Vinton Cerf",
+        "Tim Berners-Lee",
+        "Paul Mockapetris",
+        "Leonard Kleinrock"
+      ],
+      "correcta": 2,
+      "explicacion": "El **DNS** lo diseñó **Paul Mockapetris** en **1983**, el mismo año del paso de ARPANET a TCP/IP. Cerf es coautor de TCP, Berners-Lee creó la Web en el CERN y Kleinrock trabajó en la teoría de la conmutación de paquetes."
+    },
+    {
+      "id": "30",
+      "tema": 31,
+      "enunciado": "¿En qué año se cerró NSFNET y pasó Internet a ser comercial?",
+      "opciones": [
+        "1995",
+        "1990",
+        "1991",
+        "1998"
+      ],
+      "correcta": 0,
+      "explicacion": "NSFNET, la troncal académica de la NSF nacida en 1986, se cerró en **1995** y Internet pasó a ser **comercial**. En 1990 se cerró ARPANET, en 1991 se abrió la Web al mundo y en 1998 nació la ICANN."
+    },
+    {
+      "id": "31",
+      "tema": 31,
+      "enunciado": "El navegador Mosaic, que popularizó la Web en 1993, se desarrolló en:",
+      "opciones": [
+        "El CERN",
+        "Netscape",
+        "El W3C",
+        "El NCSA"
+      ],
+      "correcta": 3,
+      "explicacion": "**Mosaic** se desarrolló en el **NCSA** en **1993**; uno de sus autores, Marc Andreessen, fundó después Netscape. En el CERN nacieron el primer servidor y el primer navegador (WorldWideWeb), y el W3C no se fundó hasta 1994."
+    },
+    {
+      "id": "32",
+      "tema": 31,
+      "enunciado": "El RIPE NCC, registro regional que corresponde a España, entregó su último bloque libre de direcciones IPv4 en:",
+      "opciones": [
+        "Febrero de 2011",
+        "Noviembre de 2019",
+        "Junio de 2012",
+        "Marzo de 2021"
+      ],
+      "correcta": 1,
+      "explicacion": "El RIPE NCC agotó su IPv4 libre el **25 de noviembre de 2019**; desde entonces solo reparte direcciones recuperadas, con lista de espera. Febrero de 2011 es cuando agotó su reserva la **IANA**, junio de 2012 el lanzamiento mundial de IPv6 y marzo de 2021 la fecha del RFC 8996."
+    },
+    {
+      "id": "33",
+      "tema": 31,
+      "enunciado": "¿Desde qué año cualquier persona puede registrar un dominio .es sin acreditar un derecho previo sobre el nombre?",
+      "opciones": [
+        "1988",
+        "2005",
+        "1998",
+        "2012"
+      ],
+      "correcta": 1,
+      "explicacion": "El .es se **liberalizó en 2005**: desde entonces cualquiera puede registrarlo sin acreditar derecho previo sobre el nombre. 1988 es el año de creación del dominio (14 de abril), 1998 el de nacimiento de la ICANN y 2012 el del lanzamiento mundial de IPv6."
+    },
+    {
+      "id": "34",
+      "tema": 31,
+      "enunciado": "¿Qué puerto se usa para el envío de correo desde el cliente al servidor con autenticación (submission)?",
+      "opciones": [
+        "25",
+        "110",
+        "143",
+        "587"
+      ],
+      "correcta": 3,
+      "explicacion": "El envío autenticado del cliente (*submission*) usa el puerto **587**. El **25** es SMTP entre servidores, el 110 es POP3 y el 143 IMAP, que sirven para recibir correo, no para enviarlo."
+    },
+    {
+      "id": "35",
+      "tema": 31,
+      "enunciado": "En FTP en modo pasivo, la conexión de datos:",
+      "opciones": [
+        "La abre el servidor desde su puerto 20 hacia el cliente",
+        "Va por la misma conexión de control del puerto 21",
+        "La abre el cliente hacia un puerto que le indica el servidor",
+        "Se cifra siempre con TLS"
+      ],
+      "correcta": 2,
+      "explicacion": "En **modo pasivo** la conexión de datos la **abre el cliente**, por eso funciona mejor con cortafuegos y NAT. En modo **activo** es el servidor quien la abre (desde el puerto 20). FTP usa conexiones separadas de control (21) y datos, y no cifra nada salvo en FTPS."
+    },
+    {
+      "id": "36",
+      "tema": 31,
+      "enunciado": "SFTP es un protocolo de transferencia de ficheros que funciona:",
+      "opciones": [
+        "Sobre SSH, en el puerto 22",
+        "Sobre TLS, en el puerto 990",
+        "Sobre UDP, en el puerto 69",
+        "Sobre FTP, en el puerto 21"
+      ],
+      "correcta": 0,
+      "explicacion": "**SFTP** funciona **sobre SSH**, en el puerto **22**. No debe confundirse con **FTPS**, que es FTP sobre TLS, ni con TFTP, que usa UDP 69. FTP clásico usa el 21 y manda la contraseña en claro."
+    },
+    {
+      "id": "37",
+      "tema": 31,
+      "enunciado": "En una llamada de voz sobre IP, ¿qué protocolo transporta el audio y el vídeo?",
+      "opciones": [
+        "RTP",
+        "SIP",
+        "SNMP",
+        "H.323"
+      ],
+      "correcta": 0,
+      "explicacion": "**RTP**, sobre UDP, transporta el audio y el vídeo. **SIP** (puerto 5060) solo **señaliza**: establece, modifica y termina la llamada. H.323 es una familia de normas de la UIT para la señalización y SNMP es para gestión de red."
+    },
+    {
+      "id": "38",
+      "tema": 31,
+      "enunciado": "En la URL https://sede.ejemplo.es:8443/tramites/alta.php?exp=25#paso2, ¿qué parte NO se envía al servidor?",
+      "opciones": [
+        "El puerto 8443",
+        "La consulta exp=25",
+        "El fragmento paso2",
+        "La ruta /tramites/alta.php"
+      ],
+      "correcta": 2,
+      "explicacion": "El **fragmento** (lo que va tras **#**, aquí paso2) lo usa solo el navegador para situarse en la página y **no se envía al servidor**. El puerto determina a dónde se conecta y la ruta y la consulta van en la línea de petición HTTP (GET /tramites/alta.php?exp=25)."
+    },
+    {
+      "id": "39",
+      "tema": 31,
+      "enunciado": "Una conexión WebSocket empieza con una petición HTTP con la cabecera Upgrade. ¿Qué código de estado responde el servidor al aceptar el cambio?",
+      "opciones": [
+        "200 OK",
+        "301 Moved Permanently",
+        "426 Upgrade Required",
+        "101 Switching Protocols"
+      ],
+      "correcta": 3,
+      "explicacion": "El servidor responde **101 Switching Protocols**, un código informativo (1xx), y la conexión pasa a ser WebSocket (RFC 6455), bidireccional y persistente. 200 indica éxito normal sin cambio de protocolo y 301 una redirección permanente. 426 pide al cliente que cambie de protocolo, lo contrario de aceptarlo."
+    },
+    {
+      "id": "40",
+      "tema": 31,
+      "enunciado": "Un servidor intermediario situado delante de los servidores web, que reparte la carga, termina TLS y hace caché, es un:",
+      "opciones": [
+        "Proxy directo",
+        "Proxy inverso",
+        "Servidor DNS recursivo",
+        "Punto neutro (IXP)"
+      ],
+      "correcta": 1,
+      "explicacion": "Es un **proxy inverso**: está **delante de los servidores** y hace balanceo, terminación TLS y caché. El **proxy** directo es el intermediario del cliente (caché, filtrado de la navegación). Un resolutor DNS traduce nombres y un IXP interconecta operadores."
+    },
+    {
+      "id": "41",
+      "tema": 31,
+      "enunciado": "Que HTTP sea un protocolo sin estado (stateless) significa que:",
+      "opciones": [
+        "No puede usar conexiones persistentes",
+        "No admite métodos que modifiquen datos",
+        "Cada petición es independiente, y el estado se añade con cookies o tokens",
+        "El servidor no devuelve códigos de estado"
+      ],
+      "correcta": 2,
+      "explicacion": "**Sin estado** significa que **cada petición es independiente**: el servidor no recuerda las anteriores, y el estado (por ejemplo, la sesión) se añade con **cookies** o *tokens*. Nada de eso impide las conexiones persistentes de HTTP/1.1, los métodos que modifican datos ni los códigos de estado."
+    },
+    {
+      "id": "42",
+      "tema": 31,
+      "enunciado": "¿Qué característica distingue a HTTP/1.0 frente a HTTP/1.1?",
+      "opciones": [
+        "Usa una conexión TCP por cada petición",
+        "Es un protocolo binario multiplexado",
+        "Exige la cabecera Host en todas las peticiones",
+        "Funciona sobre QUIC"
+      ],
+      "correcta": 0,
+      "explicacion": "**HTTP/1.0** (RFC 1945) abre **una conexión por petición**; HTTP/1.1 introdujo las **conexiones persistentes** por defecto y la cabecera Host obligatoria. El protocolo binario y multiplexado es HTTP/2 y QUIC es el transporte de HTTP/3."
+    },
+    {
+      "id": "43",
+      "tema": 31,
+      "enunciado": "¿Qué mecanismo de compresión de cabeceras utiliza HTTP/3?",
+      "opciones": [
+        "HPACK",
+        "gzip",
+        "Brotli",
+        "QPACK"
+      ],
+      "correcta": 3,
+      "explicacion": "HTTP/3 usa **QPACK**, adaptado a QUIC para evitar el bloqueo de cabeza de línea entre flujos. **HPACK** es el de HTTP/2. gzip y Brotli comprimen el cuerpo del mensaje (Content-Encoding), no las cabeceras."
+    },
+    {
+      "id": "44",
+      "tema": 31,
+      "enunciado": "¿Cuál de estos métodos HTTP NO es seguro, es decir, puede cambiar el estado del servidor?",
+      "opciones": [
+        "GET",
+        "PUT",
+        "HEAD",
+        "OPTIONS"
+      ],
+      "correcta": 1,
+      "explicacion": "**PUT** no es seguro: crea o sustituye el recurso de la URI, aunque sí es idempotente. GET, HEAD, OPTIONS (y TRACE) son **seguros**, porque no cambian el estado del servidor. Recuerda: todo método seguro es idempotente, pero no al revés."
+    },
+    {
+      "id": "45",
+      "tema": 31,
+      "enunciado": "En una API REST, ¿qué método HTTP se usa para una modificación parcial de un recurso?",
+      "opciones": [
+        "PATCH",
+        "PUT",
+        "POST",
+        "CONNECT"
+      ],
+      "correcta": 0,
+      "explicacion": "**PATCH** (RFC 5789) hace una **modificación parcial**. **PUT** sustituye el recurso completo, POST crea recursos o envía datos para procesar y CONNECT abre un túnel a través de un proxy."
+    },
+    {
+      "id": "46",
+      "tema": 31,
+      "enunciado": "Un navegador repite una petición GET con la cabecera If-None-Match y la ETag que recibió antes. Si el recurso no ha cambiado, el servidor responde:",
+      "opciones": [
+        "200 OK",
+        "302 Found",
+        "304 Not Modified",
+        "204 No Content"
+      ],
+      "correcta": 2,
+      "explicacion": "Es una petición **condicional**: si la ETag coincide, el servidor responde **304 Not Modified**, sin cuerpo, y el navegador usa su copia en caché. 200 enviaría el recurso completo, 302 es una redirección temporal y 204 indica éxito sin contenido."
+    },
+    {
+      "id": "47",
+      "tema": 31,
+      "enunciado": "¿Qué código de estado HTTP corresponde a una redirección temporal?",
+      "opciones": [
+        "301 Moved Permanently",
+        "302 Found",
+        "304 Not Modified",
+        "308 Permanent Redirect"
+      ],
+      "correcta": 1,
+      "explicacion": "**302 Found** es la redirección **temporal** (también 307 Temporary Redirect). 301 y 308 son redirecciones **permanentes**, y 304 no es una redirección, sino la indicación de que se use la copia en caché."
+    },
+    {
+      "id": "48",
+      "tema": 31,
+      "enunciado": "Un proxy inverso devuelve un error porque ha recibido una respuesta no válida del servidor de origen al que reenvió la petición. ¿Qué código de estado corresponde?",
+      "opciones": [
+        "500 Internal Server Error",
+        "503 Service Unavailable",
+        "504 Gateway Timeout",
+        "502 Bad Gateway"
+      ],
+      "correcta": 3,
+      "explicacion": "**502 Bad Gateway** indica que un intermediario (pasarela o proxy) recibió una respuesta **no válida** del servidor de origen. 504 se da cuando el origen **no responde a tiempo**, 503 cuando el servicio no está disponible (sobrecarga o mantenimiento) y 500 es un error interno del propio servidor."
+    },
+    {
+      "id": "49",
+      "tema": 31,
+      "enunciado": "Una cookie que se crea sin los atributos Expires ni Max-Age es:",
+      "opciones": [
+        "Una cookie persistente que dura un año",
+        "Una cookie de terceros",
+        "Una cookie accesible solo por HTTPS",
+        "Una cookie de sesión, que se borra al cerrar el navegador"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin **Expires** ni **Max-Age** la cookie es **de sesión** y se borra al cerrar el navegador; con ellos es **persistente**. Ser de terceros depende del dominio que la crea, no de su caducidad, y el envío solo por HTTPS lo marca el atributo Secure."
+    },
+    {
+      "id": "50",
+      "tema": 31,
+      "enunciado": "En España, la obligación de informar y obtener el consentimiento para instalar cookies no necesarias para prestar el servicio la establece:",
+      "opciones": [
+        "El artículo 22.2 de la Ley 34/2002 (LSSI)",
+        "El RFC 6265",
+        "La Ley 11/2022, General de Telecomunicaciones",
+        "El Reglamento eIDAS"
+      ],
+      "correcta": 0,
+      "explicacion": "La establece el **artículo 22.2 de la LSSI (Ley 34/2002)**. El RFC 6265 es la norma técnica de las cookies, sin obligaciones legales, la Ley General de Telecomunicaciones regula las redes y el espectro y el Reglamento eIDAS regula los servicios de confianza."
+    },
+    {
+      "id": "51",
+      "tema": 31,
+      "enunciado": "¿Qué atributo de una cookie protege frente a ataques CSRF al limitar su envío en peticiones originadas desde otros sitios?",
+      "opciones": [
+        "HttpOnly",
+        "Domain",
+        "SameSite",
+        "Max-Age"
+      ],
+      "correcta": 2,
+      "explicacion": "**SameSite** (Strict, Lax o None) limita el envío de la cookie en peticiones entre sitios y protege frente a **CSRF**. **HttpOnly** protege frente a XSS, porque impide leerla desde JavaScript; Domain define a qué dominios se envía y Max-Age su caducidad."
+    },
+    {
+      "id": "52",
+      "tema": 31,
+      "enunciado": "TLS es un sistema criptográfico híbrido porque:",
+      "opciones": [
+        "Combina el cifrado de flujo con el cifrado por bloques en los mismos datos",
+        "Usa criptografía asimétrica en el handshake para acordar claves y cifrado simétrico para los datos",
+        "Cifra los datos con la clave pública del servidor y los firma con la del cliente",
+        "Alterna SSL y TLS según la versión que admita el navegador"
+      ],
+      "correcta": 1,
+      "explicacion": "La criptografía **asimétrica** (lenta) solo se usa en el handshake para **acordar claves**, y los datos van con cifrado **simétrico** (rápido), como AES-GCM o ChaCha20-Poly1305. Cifrar todos los datos con la clave pública sería muy lento, y TLS no alterna SSL y TLS."
+    },
+    {
+      "id": "53",
+      "tema": 31,
+      "enunciado": "La propiedad de secreto perfecto hacia adelante (forward secrecy) de TLS consiste en que:",
+      "opciones": [
+        "El certificado del servidor nunca caduca mientras haya sesiones abiertas",
+        "Si después se roba la clave privada del servidor, no se pueden descifrar las sesiones pasadas",
+        "El cliente puede reanudar la sesión sin un nuevo handshake",
+        "Los datos se cifran dos veces con claves distintas"
+      ],
+      "correcta": 1,
+      "explicacion": "Con claves **efímeras** (ECDHE/DHE), robar más tarde la clave privada del servidor **no permite descifrar sesiones pasadas**, porque cada sesión usó una clave que ya no existe. En TLS 1.3 es obligatorio. Reanudar sin handshake completo es otra función (reanudación y 0-RTT)."
+    },
+    {
+      "id": "54",
+      "tema": 31,
+      "enunciado": "SSL 3.0 se declaró obsoleto en 2015 (RFC 7568) tras el ataque:",
+      "opciones": [
+        "Heartbleed",
+        "BEAST",
+        "KRACK",
+        "POODLE"
+      ],
+      "correcta": 3,
+      "explicacion": "**POODLE** (2014) atacó **SSL 3.0** y llevó a declararlo obsoleto en el **RFC 7568**. BEAST (2011) afectaba a TLS 1.0, Heartbleed (2014) fue un fallo de la implementación OpenSSL, no del protocolo, y KRACK es un ataque contra WPA2 en Wi-Fi."
+    },
+    {
+      "id": "55",
+      "tema": 31,
+      "enunciado": "¿Qué riesgo introduce el modo 0-RTT de TLS 1.3 al reanudar una sesión?",
+      "opciones": [
+        "Ataques de repetición (replay) de los datos enviados",
+        "La pérdida del forward secrecy en todas las sesiones",
+        "El uso obligatorio de RC4",
+        "El envío del certificado del servidor sin cifrar"
+      ],
+      "correcta": 0,
+      "explicacion": "El **0-RTT** permite enviar datos en el primer mensaje al reanudar sesión, pero esos datos pueden sufrir **ataques de repetición**, por lo que solo deben usarse para peticiones idempotentes. TLS 1.3 eliminó RC4 y cifra el certificado del servidor."
+    },
+    {
+      "id": "56",
+      "tema": 31,
+      "enunciado": "¿Qué extensión del ClientHello de TLS indica el nombre del servidor al que se quiere conectar, lo que permite alojar varios sitios HTTPS en una misma IP?",
+      "opciones": [
+        "OCSP stapling",
+        "HSTS",
+        "SNI",
+        "ALPN"
+      ],
+      "correcta": 2,
+      "explicacion": "**SNI** (*Server Name Indication*) va en el ClientHello e indica el nombre del servidor, para que este presente el certificado adecuado entre varios sitios de la misma IP. OCSP stapling adjunta el estado de revocación, HSTS es una cabecera HTTP y ALPN negocia el protocolo de aplicación (por ejemplo, HTTP/2)."
+    },
+    {
+      "id": "57",
+      "tema": 31,
+      "enunciado": "Let's Encrypt emite certificados gratuitos de validación de dominio (DV) automatizando el proceso con el protocolo:",
+      "opciones": [
+        "OCSP",
+        "SCEP",
+        "ACME",
+        "CRL"
+      ],
+      "correcta": 2,
+      "explicacion": "**ACME** (RFC 8555) automatiza la emisión y renovación de certificados, y lo usa **Let's Encrypt** para sus certificados **DV** gratuitos. OCSP y las CRL sirven para consultar la revocación, y SCEP es otro protocolo de inscripción de certificados que Let's Encrypt no usa."
+    },
+    {
+      "id": "58",
+      "tema": 31,
+      "enunciado": "La vulnerabilidad Heartbleed (2014) fue:",
+      "opciones": [
+        "Un fallo de la implementación OpenSSL, no del protocolo TLS",
+        "Un fallo de diseño de TLS 1.3",
+        "Un ataque de degradación a SSL 3.0",
+        "Un ataque contra el algoritmo RC4"
+      ],
+      "correcta": 0,
+      "explicacion": "**Heartbleed** fue un fallo de la **implementación OpenSSL**, no del protocolo: permitía leer memoria del servidor, por lo que había que actualizar y renovar claves y certificados. El ataque contra SSL 3.0 fue POODLE, y TLS 1.3 es de 2018, posterior a Heartbleed."
+    },
+    {
+      "id": "59",
+      "tema": 31,
+      "enunciado": "Según la votación SC-081 del CA/Browser Forum, ¿cuál es la validez máxima de los certificados TLS públicos emitidos desde el 15 de marzo de 2026?",
+      "opciones": [
+        "398 días",
+        "100 días",
+        "47 días",
+        "200 días"
+      ],
+      "correcta": 3,
+      "explicacion": "Desde el **15-3-2026** la validez máxima es de **200 días**; bajará a **100 días** el 15-3-2027 y a **47 días** el 15-3-2029. 398 días era el máximo anterior, que la votación SC-081 reduce por etapas."
+    },
+    {
+      "id": "60",
+      "tema": 31,
+      "enunciado": "Al acceder a una sede electrónica con un certificado de la FNMT-RCM o con el DNIe, el cliente también presenta un certificado. Este esquema se denomina:",
+      "opciones": [
+        "Certificate Transparency",
+        "TLS mutuo (mTLS)",
+        "OCSP stapling",
+        "DTLS"
+      ],
+      "correcta": 1,
+      "explicacion": "Es **TLS mutuo (mTLS)**: además del servidor, el **cliente** se autentica con su certificado. Certificate Transparency son los registros públicos de certificados emitidos, OCSP stapling adjunta la respuesta de revocación y DTLS es la variante de TLS para UDP."
+    }
+  ]
+}

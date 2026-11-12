@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 30 · test",
+  "fuente": "propio",
+  "tema": 30,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 30. Modelos TCP/IP y OSI»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 30,
+      "enunciado": "¿Qué capa del modelo OSI se encarga del encaminamiento entre redes?",
+      "opciones": [
+        "Enlace de datos",
+        "Transporte",
+        "Sesión",
+        "Red"
+      ],
+      "correcta": 3,
+      "explicacion": "La **capa 3 (red)** hace el direccionamiento lógico y el **encaminamiento** entre redes; en ella trabajan IP y el router. La de enlace entrega tramas dentro de un mismo enlace con direcciones MAC, la de transporte comunica procesos extremo a extremo y la de sesión gestiona el diálogo."
+    },
+    {
+      "id": "02",
+      "tema": 30,
+      "enunciado": "¿Cuál es la PDU de la capa de enlace de datos?",
+      "opciones": [
+        "Segmento",
+        "Paquete",
+        "Trama",
+        "Bit"
+      ],
+      "correcta": 2,
+      "explicacion": "La PDU de la capa de enlace es la **trama**. El segmento es la de transporte, el paquete la de red y el bit la unidad de la capa física. Truco de abajo arriba: bit, trama, paquete, segmento."
+    },
+    {
+      "id": "03",
+      "tema": 30,
+      "enunciado": "Según el RFC 1122, ¿cuántas capas tiene el modelo TCP/IP?",
+      "opciones": [
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "correcta": 1,
+      "explicacion": "El **RFC 1122** define **4 capas**: acceso a red (enlace), Internet, transporte y aplicación. El modelo de 5 capas es un modelo híbrido de los manuales, que separa la capa física, y 7 son las capas de OSI."
+    },
+    {
+      "id": "04",
+      "tema": 30,
+      "enunciado": "BGP utiliza como transporte:",
+      "opciones": [
+        "UDP, puerto 520",
+        "TCP, puerto 179",
+        "IP directamente, protocolo 89",
+        "UDP, puerto 179"
+      ],
+      "correcta": 1,
+      "explicacion": "BGP abre sus sesiones sobre **TCP en el puerto 179**, porque necesita un transporte fiable entre vecinos. UDP 520 es el de RIP y el protocolo IP 89 es OSPF, que va directamente sobre IP. La d mezcla el puerto correcto con el transporte equivocado."
+    },
+    {
+      "id": "05",
+      "tema": 30,
+      "enunciado": "Las reglas que gobiernan la comunicación entre entidades pares de una misma capa en sistemas distintos son:",
+      "opciones": [
+        "La interfaz",
+        "El servicio",
+        "El SAP",
+        "El protocolo"
+      ],
+      "correcta": 3,
+      "explicacion": "El **protocolo** son las reglas entre **entidades pares**: comunicación horizontal. El servicio (lo que una capa ofrece a la superior) y la interfaz (frontera entre capas adyacentes) son relaciones verticales, y el SAP es un punto de acceso dentro de la interfaz."
+    },
+    {
+      "id": "06",
+      "tema": 30,
+      "enunciado": "¿Cuál es la dirección de red de 192.168.10.77/26?",
+      "opciones": [
+        "192.168.10.0",
+        "192.168.10.64",
+        "192.168.10.72",
+        "192.168.10.128"
+      ],
+      "correcta": 1,
+      "explicacion": "Un /26 es 255.255.255.192: bloque de 256 − 192 = 64 en el 4.º octeto, con redes en 0, 64, 128 y 192. El 77 cae entre 64 y 127, así que la red es **192.168.10.64** (difusión .127). En binario: 77 AND 192 = 0100 1101 AND 1100 0000 = 64."
+    },
+    {
+      "id": "07",
+      "tema": 30,
+      "enunciado": "¿Cuál es la dirección de difusión de la red a la que pertenece 172.16.45.200/20?",
+      "opciones": [
+        "172.16.45.255",
+        "172.16.63.255",
+        "172.16.47.255",
+        "172.16.32.255"
+      ],
+      "correcta": 2,
+      "explicacion": "Un /20 es 255.255.240.0: bloque de 16 en el 3.er octeto. El 45 cae entre 32 y 47, así que la red es 172.16.32.0 y la difusión **172.16.47.255** (último valor del bloque y el 4.º octeto a 255). 172.16.45.255 sería la difusión de un /24, y 172.16.63.255 la de un /19."
+    },
+    {
+      "id": "08",
+      "tema": 30,
+      "enunciado": "¿Cuántos hosts útiles admite una subred con máscara 255.255.255.224?",
+      "opciones": [
+        "30",
+        "32",
+        "62",
+        "14"
+      ],
+      "correcta": 0,
+      "explicacion": "255.255.255.224 es un **/27**: quedan 5 bits de host, 2^5 − 2 = **30** hosts útiles. 32 son las direcciones totales (sin restar red y difusión), 62 corresponde a un /26 y 14 a un /28."
+    },
+    {
+      "id": "09",
+      "tema": 30,
+      "enunciado": "¿Cuál de estas direcciones NO es privada según el RFC 1918?",
+      "opciones": [
+        "10.200.1.1",
+        "172.20.5.5",
+        "172.32.1.1",
+        "192.168.100.1"
+      ],
+      "correcta": 2,
+      "explicacion": "El bloque privado **172.16.0.0/12** va de 172.16.0.0 a **172.31.255.255**, así que **172.32.1.1** es pública. 10.200.1.1 está en 10.0.0.0/8, 172.20.5.5 en 172.16.0.0/12 y 192.168.100.1 en 192.168.0.0/16. Truco: en el bloque 172 el segundo octeto va de 16 a 31."
+    },
+    {
+      "id": "10",
+      "tema": 30,
+      "enunciado": "¿Qué prefijo es el más ajustado para una subred que debe alojar 500 hosts?",
+      "opciones": [
+        "/22",
+        "/23",
+        "/24",
+        "/25"
+      ],
+      "correcta": 1,
+      "explicacion": "Hacen falta 9 bits de host, porque 2^9 − 2 = 510 ≥ 500 y 2^8 − 2 = 254 se queda corto: 32 − 9 = **/23**. Un /24 solo da 254 hosts y un /25 126; un /22 (1022) sirve, pero desperdicia más de la mitad."
+    },
+    {
+      "id": "11",
+      "tema": 30,
+      "enunciado": "La ruta resumida que agrupa 192.168.0.0/24, 192.168.1.0/24, 192.168.2.0/24 y 192.168.3.0/24 es 192.168.0.0 con prefijo:",
+      "opciones": [
+        "/21",
+        "/23",
+        "/24",
+        "/22"
+      ],
+      "correcta": 3,
+      "explicacion": "Los terceros octetos 0, 1, 2 y 3 (0000 0000 a 0000 0011) comparten sus 6 primeros bits: 16 + 6 = **/22** (255.255.252.0). Un /23 solo agruparía dos redes /24 y un /21 abarcaría ocho (de la 0 a la 7). Regla rápida: 4 redes = 2² → se restan 2 bits al /24."
+    },
+    {
+      "id": "12",
+      "tema": 30,
+      "enunciado": "¿Cuál es una abreviatura válida de 2001:0db8:0000:0000:0000:0000:0000:0001?",
+      "opciones": [
+        "2001:db8::1",
+        "2001:db8:::1",
+        "2001::db8::1",
+        "2001:db8:0::0::1"
+      ],
+      "correcta": 0,
+      "explicacion": "Se quitan los ceros a la izquierda de cada grupo y se sustituyen los 6 grupos a cero por **::**, una sola vez: **2001:db8::1**. «:::» no es una notación válida y «::» no puede aparecer dos veces en la misma dirección, porque sería ambiguo cuántos ceros representa cada uno."
+    },
+    {
+      "id": "13",
+      "tema": 30,
+      "enunciado": "¿Qué tipo de dirección NO existe en IPv6?",
+      "opciones": [
+        "Anycast",
+        "Multicast",
+        "Broadcast",
+        "Unicast"
+      ],
+      "correcta": 2,
+      "explicacion": "IPv6 **suprime la difusión (broadcast)**; la sustituye la multidifusión, por ejemplo ff02::1 para todos los nodos del enlace. Unicast, multicast y anycast sí existen en IPv6."
+    },
+    {
+      "id": "14",
+      "tema": 30,
+      "enunciado": "Las direcciones IPv6 de enlace local pertenecen al prefijo:",
+      "opciones": [
+        "fc00::/7",
+        "fe80::/10",
+        "ff00::/8",
+        "2000::/3"
+      ],
+      "correcta": 1,
+      "explicacion": "El enlace local (*link-local*) es **fe80::/10**, obligatorio en toda interfaz IPv6 y equivalente a 169.254.0.0/16 de IPv4. fc00::/7 son las locales únicas (ULA), ff00::/8 la multidifusión y 2000::/3 la unidifusión global."
+    },
+    {
+      "id": "15",
+      "tema": 30,
+      "enunciado": "La función del protocolo ARP es:",
+      "opciones": [
+        "Traducir nombres de dominio a direcciones IP",
+        "Asignar direcciones IP automáticamente",
+        "Notificar errores de entrega",
+        "Obtener la dirección MAC que corresponde a una IPv4"
+      ],
+      "correcta": 3,
+      "explicacion": "**ARP** (RFC 826) obtiene la **dirección MAC que corresponde a una IPv4** de la red local, con una petición en difusión y una respuesta en unidifusión. Traducir nombres es tarea de DNS, asignar direcciones de DHCP y notificar errores de ICMP."
+    },
+    {
+      "id": "16",
+      "tema": 30,
+      "enunciado": "La orden traceroute se basa en los mensajes ICMP de tipo:",
+      "opciones": [
+        "Echo Reply",
+        "Redirect",
+        "Time Exceeded",
+        "Source Quench"
+      ],
+      "correcta": 2,
+      "explicacion": "traceroute envía paquetes con TTL creciente (1, 2, 3...) y cada router que agota el TTL responde con **Time Exceeded (tipo 11)**, lo que revela cada salto. Echo Reply (tipo 0) es la respuesta de ping, Redirect (tipo 5) indica una ruta mejor y Source Quench es un antiguo mensaje de control de congestión."
+    },
+    {
+      "id": "17",
+      "tema": 30,
+      "enunciado": "¿Qué registro DNS indica el servidor de correo de un dominio?",
+      "opciones": [
+        "MX",
+        "PTR",
+        "CNAME",
+        "SOA"
+      ],
+      "correcta": 0,
+      "explicacion": "El registro **MX** (*mail exchanger*) indica el servidor de correo del dominio, con una prioridad (gana el número menor). PTR sirve para la resolución inversa, CNAME define un alias y SOA el inicio de autoridad de la zona."
+    },
+    {
+      "id": "18",
+      "tema": 30,
+      "enunciado": "En el establecimiento de una conexión TCP, el segundo segmento que se intercambia lleva los flags:",
+      "opciones": [
+        "ACK",
+        "SYN",
+        "SYN y ACK",
+        "FIN y ACK"
+      ],
+      "correcta": 2,
+      "explicacion": "El *three-way handshake* es **SYN → SYN+ACK → ACK**: el segundo segmento, del servidor, lleva **SYN y ACK** (confirma el SYN del cliente y abre su propio sentido). ACK solo es el tercero, SYN solo el primero, y FIN con ACK se usa en el cierre."
+    },
+    {
+      "id": "19",
+      "tema": 30,
+      "enunciado": "¿Qué tamaño tiene la cabecera UDP?",
+      "opciones": [
+        "8 bytes",
+        "20 bytes",
+        "40 bytes",
+        "60 bytes"
+      ],
+      "correcta": 0,
+      "explicacion": "La cabecera UDP tiene **8 bytes** fijos: 4 campos de 2 bytes (puerto origen, puerto destino, longitud y suma de comprobación). 20 bytes es el mínimo de TCP y de IPv4, 40 bytes la cabecera fija de IPv6 y 60 bytes el máximo de TCP y de IPv4."
+    },
+    {
+      "id": "20",
+      "tema": 30,
+      "enunciado": "¿Qué algoritmo usa OSPF para calcular las rutas?",
+      "opciones": [
+        "Bellman-Ford",
+        "DUAL",
+        "Vector de rutas",
+        "Dijkstra (SPF)"
+      ],
+      "correcta": 3,
+      "explicacion": "OSPF es de estado de enlace y calcula las rutas con **Dijkstra (SPF)** sobre el mapa completo de la topología. Bellman-Ford es el algoritmo de vector distancia (RIP), DUAL el de EIGRP y vector de rutas es el tipo de protocolo de BGP."
+    },
+    {
+      "id": "21",
+      "tema": 30,
+      "enunciado": "En el modelo OSI, la PDU de una capa está formada por:",
+      "opciones": [
+        "La SDU de la capa inferior más un SAP",
+        "La primitiva de servicio más la interfaz",
+        "La PCI (información de control) más la SDU recibida de la capa superior",
+        "Únicamente los datos de usuario de la capa de aplicación"
+      ],
+      "correcta": 2,
+      "explicacion": "La **PDU = PCI + SDU**: la capa añade su información de control (cabecera, PCI) a la SDU que le entrega la capa superior. El SAP es un punto de acceso dentro de la interfaz, no parte de la PDU, y las primitivas son las operaciones del servicio."
+    },
+    {
+      "id": "22",
+      "tema": 30,
+      "enunciado": "En un servicio no confirmado, ¿qué primitivas de servicio intervienen?",
+      "opciones": [
+        "Request e Indication",
+        "Request y Confirm",
+        "Indication y Response",
+        "Request, Indication, Response y Confirm"
+      ],
+      "correcta": 0,
+      "explicacion": "Un servicio **no confirmado** usa solo **Request** (el usuario que inicia lo solicita) e **Indication** (se notifica al usuario remoto). El servicio confirmado añade **Response** y **Confirm**, las cuatro primitivas de la d."
+    },
+    {
+      "id": "23",
+      "tema": 30,
+      "enunciado": "¿Qué capa del modelo OSI se ocupa de la sintaxis y la semántica de los datos, como la codificación, la compresión y el cifrado?",
+      "opciones": [
+        "Sesión",
+        "Aplicación",
+        "Transporte",
+        "Presentación"
+      ],
+      "correcta": 3,
+      "explicacion": "La **capa 6, presentación**, trata la sintaxis y la semántica: codificación (ASN.1, XDR), compresión y cifrado. La de sesión gestiona el diálogo y los puntos de control, la de aplicación ofrece servicios al usuario y la de transporte la comunicación extremo a extremo."
+    },
+    {
+      "id": "24",
+      "tema": 30,
+      "enunciado": "La gestión del diálogo entre aplicaciones, con turnos y puntos de control para la sincronización, corresponde en OSI a la capa de:",
+      "opciones": [
+        "Transporte",
+        "Sesión",
+        "Presentación",
+        "Red"
+      ],
+      "correcta": 1,
+      "explicacion": "La **capa 5, sesión**, organiza el diálogo, los turnos y la **sincronización con puntos de control** (por ejemplo, RPC o NetBIOS). La de transporte asegura la fiabilidad extremo a extremo, la de presentación la representación de los datos y la de red el encaminamiento."
+    },
+    {
+      "id": "25",
+      "tema": 30,
+      "enunciado": "En las redes locales IEEE 802, la capa de enlace de datos se divide en las subcapas:",
+      "opciones": [
+        "LLC (IEEE 802.2), la superior, y MAC, la inferior",
+        "MAC, la superior, y LLC (IEEE 802.2), la inferior",
+        "LLC y PHY, ambas dentro de la capa física",
+        "SAP y PCI, definidas en IEEE 802.3"
+      ],
+      "correcta": 0,
+      "explicacion": "En IEEE 802 la capa de enlace se divide en **LLC** (*Logical Link Control*, **IEEE 802.2**), la **superior**, y **MAC** (*Medium Access Control*), la **inferior**, junto al medio. La b invierte el orden; SAP y PCI son conceptos generales del modelo, no subcapas."
+    },
+    {
+      "id": "26",
+      "tema": 30,
+      "enunciado": "En una trama Ethernet, ¿qué valor del campo EtherType indica que transporta un datagrama IPv6?",
+      "opciones": [
+        "0x0800",
+        "0x0806",
+        "0x86DD",
+        "0x8100"
+      ],
+      "correcta": 2,
+      "explicacion": "El EtherType **0x86DD** identifica **IPv6**. 0x0800 es IPv4 y 0x0806 es ARP. 0x8100 es el valor que marca una trama con etiqueta VLAN IEEE 802.1Q."
+    },
+    {
+      "id": "27",
+      "tema": 30,
+      "enunciado": "En la cabecera IPv4, el campo Protocolo con valor 17 indica que el datagrama transporta:",
+      "opciones": [
+        "TCP",
+        "ICMP",
+        "OSPF",
+        "UDP"
+      ],
+      "correcta": 3,
+      "explicacion": "El campo Protocolo vale **17 para UDP**, 6 para TCP y 1 para ICMP. OSPF va directamente sobre IP con el número 89. Este campo (en IPv6, «siguiente cabecera») le dice a la capa de red a qué protocolo entregar los datos."
+    },
+    {
+      "id": "28",
+      "tema": 30,
+      "enunciado": "Señale la afirmación INCORRECTA sobre las diferencias entre los modelos OSI y TCP/IP:",
+      "opciones": [
+        "OSI distingue con claridad servicio, interfaz y protocolo; TCP/IP no",
+        "En TCP/IP la capa de red ofrece servicio con y sin conexión, como en OSI",
+        "En TCP/IP la fiabilidad se concentra en los extremos",
+        "TCP/IP fue primero una pila implementada y su modelo se describió después"
+      ],
+      "correcta": 1,
+      "explicacion": "Es incorrecta la b: en **TCP/IP la capa de red (IP) es solo sin conexión**; es OSI la que admite servicio de red con y sin conexión. Las demás son ciertas: OSI distingue muy bien servicio, interfaz y protocolo, TCP/IP sigue el principio extremo a extremo y su modelo se describió después de los protocolos."
+    },
+    {
+      "id": "29",
+      "tema": 30,
+      "enunciado": "Un datagrama IPv4 tiene el campo IHL con valor 6. ¿Cuál es la longitud de su cabecera?",
+      "opciones": [
+        "6 bytes",
+        "20 bytes",
+        "24 bytes",
+        "48 bytes"
+      ],
+      "correcta": 2,
+      "explicacion": "El IHL cuenta **palabras de 32 bits (4 bytes)**: 6 × 4 = **24 bytes**, es decir, la cabecera mínima de 20 bytes (IHL = 5) más 4 bytes de opciones. 6 bytes confunde palabras con bytes y 48 bytes usa palabras de 8 bytes. El máximo es IHL = 15, 60 bytes."
+    },
+    {
+      "id": "30",
+      "tema": 30,
+      "enunciado": "En el direccionamiento con clases, la dirección 191.168.1.1 pertenece a la clase:",
+      "opciones": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "correcta": 0,
+      "explicacion": "La clase **B** abarca el primer octeto de **128 a 191** (bits iniciales 10): 191 = 1011 1111 es todavía clase B. La C empieza en 192, la A llega hasta 126 y la D (multidifusión) va de 224 a 239. El parecido con 192.168 es la trampa."
+    },
+    {
+      "id": "31",
+      "tema": 30,
+      "enunciado": "Un equipo Windows que no recibe respuesta de ningún servidor DHCP se autoasigna una dirección del bloque:",
+      "opciones": [
+        "10.0.0.0/8",
+        "100.64.0.0/10",
+        "127.0.0.0/8",
+        "169.254.0.0/16"
+      ],
+      "correcta": 3,
+      "explicacion": "Sin respuesta DHCP, Windows usa **APIPA** y toma una dirección de **169.254.0.0/16**, el bloque de enlace local. 10.0.0.0/8 es privado (RFC 1918), 100.64.0.0/10 el espacio compartido de CGNAT y 127.0.0.0/8 el bucle local."
+    },
+    {
+      "id": "32",
+      "tema": 30,
+      "enunciado": "El bloque 100.64.0.0/10 (RFC 6598) está reservado para:",
+      "opciones": [
+        "Documentación y ejemplos",
+        "El espacio compartido del CGNAT de los operadores",
+        "Direcciones privadas de clase B",
+        "La autoconfiguración de enlace local"
+      ],
+      "correcta": 1,
+      "explicacion": "**100.64.0.0/10** es el espacio compartido para el **CGNAT** de los operadores, entre el router del cliente y el NAT del operador. La documentación usa 192.0.2.0/24, 198.51.100.0/24 y 203.0.113.0/24; el privado del rango 172 es 172.16.0.0/12 y el enlace local 169.254.0.0/16."
+    },
+    {
+      "id": "33",
+      "tema": 30,
+      "enunciado": "En el router doméstico, muchos equipos con direcciones privadas salen a Internet con una única dirección pública. ¿Cómo distingue el router las conexiones de cada equipo?",
+      "opciones": [
+        "Por el número de puerto (PAT o NAPT)",
+        "Por la dirección MAC de cada equipo",
+        "Por el campo TTL de cada datagrama",
+        "Asignando a cada equipo una pública de un pool"
+      ],
+      "correcta": 0,
+      "explicacion": "Es **PAT** (NAPT, sobrecarga o *masquerading*): las conexiones de los equipos internos se distinguen por el **puerto**. La MAC no sale de la red local y el TTL no identifica conexiones. Asignar a cada equipo una pública de un conjunto es NAT dinámica, que necesita varias públicas."
+    },
+    {
+      "id": "34",
+      "tema": 30,
+      "enunciado": "¿Qué tipo de NAT establece una correspondencia fija 1:1 entre una dirección privada y una pública, y permite así publicar un servidor interno?",
+      "opciones": [
+        "NAT dinámica",
+        "PAT",
+        "NAT estática",
+        "CGNAT"
+      ],
+      "correcta": 2,
+      "explicacion": "La **NAT estática** asocia de forma fija una privada con una pública (1:1), lo que permite publicar un servidor. La dinámica toma una pública de un conjunto mientras dura la sesión, PAT comparte una pública por puertos y CGNAT es NAT en la red del operador."
+    },
+    {
+      "id": "35",
+      "tema": 30,
+      "enunciado": "¿Cuál es el último host útil de la subred a la que pertenece 192.168.5.130/27?",
+      "opciones": [
+        "192.168.5.159",
+        "192.168.5.158",
+        "192.168.5.190",
+        "192.168.5.126"
+      ],
+      "correcta": 1,
+      "explicacion": "Un /27 es 255.255.255.224: bloque de 256 − 224 = 32, con redes en 0, 32, 64, 96, 128, 160... El 130 cae en 128-159: red 192.168.5.128 y difusión .159, así que el **último host es 192.168.5.158**. .159 es la difusión y .126 el último host de la subred anterior."
+    },
+    {
+      "id": "36",
+      "tema": 30,
+      "enunciado": "¿Cuál es la dirección de red de 172.20.100.5/18?",
+      "opciones": [
+        "172.20.96.0",
+        "172.20.100.0",
+        "172.20.0.0",
+        "172.20.64.0"
+      ],
+      "correcta": 3,
+      "explicacion": "Un /18 es 255.255.192.0: el octeto interesante es el 3.º, con bloque de 256 − 192 = 64 (redes en 0, 64, 128, 192). El 100 cae en 64-127, así que la red es **172.20.64.0** (difusión 172.20.127.255). 172.20.96.0 sería la red con un /19, y 172.20.100.0 con un /24."
+    },
+    {
+      "id": "37",
+      "tema": 30,
+      "enunciado": "¿Cuál es la dirección de difusión de la red a la que pertenece 10.45.200.17/13?",
+      "opciones": [
+        "10.47.255.255",
+        "10.45.255.255",
+        "10.63.255.255",
+        "10.40.255.255"
+      ],
+      "correcta": 0,
+      "explicacion": "Un /13 es 255.248.0.0: el octeto interesante es el 2.º, con bloque de 256 − 248 = 8 (redes en 40, 48...). El 45 cae en 40-47: red 10.40.0.0 y **difusión 10.47.255.255** (último valor del bloque y el resto a 255). 10.45.255.255 sería la difusión de un /16 y 10.63.255.255 la de un /11."
+    },
+    {
+      "id": "38",
+      "tema": 30,
+      "enunciado": "¿Cuántos hosts útiles admite una red con máscara 255.255.192.0?",
+      "opciones": [
+        "16 384",
+        "8190",
+        "16 382",
+        "32 766"
+      ],
+      "correcta": 2,
+      "explicacion": "255.255.192.0 son 8 + 8 + 2 = 18 bits a 1: un **/18**, con 32 − 18 = 14 bits de host. Hosts = 2^14 − 2 = **16 382**. 16 384 son las direcciones totales sin restar red y difusión; 8190 corresponde a un /19 y 32 766 a un /17."
+    },
+    {
+      "id": "39",
+      "tema": 30,
+      "enunciado": "Se quiere dividir 172.16.0.0/16 en al menos 50 subredes del mismo tamaño. Con el prefijo más corto que lo permite, ¿qué prefijo se obtiene y cuántos hosts útiles tiene cada subred?",
+      "opciones": [
+        "/21 con 2046 hosts",
+        "/24 con 254 hosts",
+        "/23 con 510 hosts",
+        "/22 con 1022 hosts"
+      ],
+      "correcta": 3,
+      "explicacion": "Con 5 bits prestados salen 2^5 = 32 subredes, insuficientes; con **6 bits**, 2^6 = 64 ≥ 50. El prefijo pasa de /16 a **/22**, con 32 − 22 = 10 bits de host: 2^10 − 2 = **1022 hosts**. /21 solo da 32 subredes y /23 o /24 sirven, pero desperdician subredes y reducen hosts sin necesidad."
+    },
+    {
+      "id": "40",
+      "tema": 30,
+      "enunciado": "¿Cuál de las siguientes direcciones está en la misma subred que 192.168.1.100/28?",
+      "opciones": [
+        "192.168.1.95",
+        "192.168.1.110",
+        "192.168.1.112",
+        "192.168.1.120"
+      ],
+      "correcta": 1,
+      "explicacion": "Un /28 tiene bloques de 16: 96-111 es la subred de .100 (red .96, difusión .111). **192.168.1.110** está dentro y es además su último host. .95 pertenece a la subred 80-95 y .112 y .120 a la 112-127, por lo que necesitarían un router."
+    },
+    {
+      "id": "41",
+      "tema": 30,
+      "enunciado": "¿Cuál es la ruta resumida más específica que agrupa las redes 172.16.8.0/24 a 172.16.15.0/24, ambas incluidas?",
+      "opciones": [
+        "172.16.8.0/21",
+        "172.16.8.0/22",
+        "172.16.0.0/20",
+        "172.16.8.0/20"
+      ],
+      "correcta": 0,
+      "explicacion": "Son 8 redes /24 consecutivas = 2³, así que se restan 3 bits: 24 − 3 = **/21**. En binario, 8 = 0000 1000 y 15 = 0000 1111 comparten los 5 primeros bits del 3.er octeto: 16 + 5 = 21, y 8 es múltiplo de 8, luego **172.16.8.0/21** es válida. /22 solo cubre 8-11; 172.16.0.0/20 incluye además de la 0 a la 7, y 172.16.8.0/20 no es una dirección de red válida."
+    },
+    {
+      "id": "42",
+      "tema": 30,
+      "enunciado": "Con VLSM sobre 192.168.20.0/24 se asigna, de mayor a menor, 192.168.20.0/25 a una LAN de 120 hosts y 192.168.20.128/26 a otra de 50. ¿Qué subred se asigna a continuación a una LAN de 25 hosts?",
+      "opciones": [
+        "192.168.20.160/27",
+        "192.168.20.224/27",
+        "192.168.20.192/27",
+        "192.168.20.192/26"
+      ],
+      "correcta": 2,
+      "explicacion": "25 hosts necesitan 5 bits de host (2^5 − 2 = 30): un **/27**. La primera dirección libre es la siguiente a la difusión de 192.168.20.128/26 (.191), así que se asigna **192.168.20.192/27** (hosts .193-.222). .160 está dentro de la /26 ya asignada y un /26 desperdiciaría 32 direcciones."
+    },
+    {
+      "id": "43",
+      "tema": 30,
+      "enunciado": "¿Cuál de las siguientes direcciones NO puede asignarse a un host?",
+      "opciones": [
+        "172.16.16.255/20",
+        "172.16.31.255/20",
+        "172.16.20.0/20",
+        "192.168.1.64/25"
+      ],
+      "correcta": 1,
+      "explicacion": "Un /20 tiene bloques de 16 en el 3.er octeto: 172.16.16.0 a 172.16.31.255. **172.16.31.255 es la difusión** de esa red y no puede asignarse. 172.16.16.255 y 172.16.20.0 son hosts válidos dentro de ella (no tener 0 o 255 en el último octeto no basta para juzgar) y 192.168.1.64/25 es un host de la red 192.168.1.0/25."
+    },
+    {
+      "id": "44",
+      "tema": 30,
+      "enunciado": "Señale qué característica corresponde a la cabecera IPv6 frente a la de IPv4:",
+      "opciones": [
+        "Cabecera variable de 20 a 60 bytes con suma de comprobación",
+        "Cabecera fija de 40 bytes con suma de comprobación",
+        "Cabecera variable de 40 a 80 bytes sin suma de comprobación",
+        "Cabecera fija de 40 bytes sin suma de comprobación"
+      ],
+      "correcta": 3,
+      "explicacion": "IPv6 tiene una **cabecera fija de 40 bytes** y **sin suma de comprobación**: las opciones van en cabeceras de extensión encadenadas y la detección de errores queda para otras capas. La cabecera variable de 20 a 60 bytes con suma de comprobación es la de IPv4."
+    },
+    {
+      "id": "45",
+      "tema": 30,
+      "enunciado": "¿Cuál es la MTU mínima que debe admitir cualquier enlace en IPv6?",
+      "opciones": [
+        "1280 bytes",
+        "576 bytes",
+        "1500 bytes",
+        "68 bytes"
+      ],
+      "correcta": 0,
+      "explicacion": "IPv6 exige una **MTU mínima de 1280 bytes**; como los routers no fragmentan, el origen se apoya en el descubrimiento de MTU de la ruta (PMTUD). 1500 bytes es la MTU típica de Ethernet, y 576 y 68 bytes son valores de IPv4 (datagrama que todo host debe aceptar y MTU mínima, respectivamente)."
+    },
+    {
+      "id": "46",
+      "tema": 30,
+      "enunciado": "Las direcciones IPv6 locales únicas (ULA), equivalentes a las privadas del RFC 1918, pertenecen al prefijo:",
+      "opciones": [
+        "fe80::/10",
+        "2000::/3",
+        "fc00::/7",
+        "ff00::/8"
+      ],
+      "correcta": 2,
+      "explicacion": "Las **ULA** están en **fc00::/7** (en la práctica, fd00::/8) y equivalen a las privadas de IPv4. fe80::/10 es el enlace local (como 169.254.0.0/16), 2000::/3 la unidifusión global y ff00::/8 la multidifusión."
+    },
+    {
+      "id": "47",
+      "tema": 30,
+      "enunciado": "En IPv6, la resolución de direcciones que en IPv4 hace ARP la realiza:",
+      "opciones": [
+        "DHCPv6",
+        "NDP, mediante mensajes ICMPv6",
+        "RARP",
+        "SLAAC, mediante el identificador EUI-64"
+      ],
+      "correcta": 1,
+      "explicacion": "**NDP** (*Neighbor Discovery Protocol*, RFC 4861), con mensajes **ICMPv6** NS y NA, sustituye a ARP en IPv6. DHCPv6 asigna configuración, RARP era la resolución inversa de IPv4 (MAC → IP) y SLAAC es la autoconfiguración de direcciones, que usa los RA de NDP."
+    },
+    {
+      "id": "48",
+      "tema": 30,
+      "enunciado": "¿Cuál es el orden correcto de los mensajes en la obtención de una dirección por DHCP?",
+      "opciones": [
+        "Request, Offer, Discover, Ack",
+        "Discover, Request, Offer, Ack",
+        "Offer, Discover, Request, Ack",
+        "Discover, Offer, Request, Ack"
+      ],
+      "correcta": 3,
+      "explicacion": "El proceso es **DORA: Discover, Offer, Request, Ack**. El cliente busca servidores en difusión, un servidor ofrece una dirección, el cliente solicita la oferta elegida y el servidor confirma la concesión (o responde NAK si la rechaza)."
+    },
+    {
+      "id": "49",
+      "tema": 30,
+      "enunciado": "Un cliente DHCP obtiene una concesión de 8 horas. ¿Cuándo intenta renovarla por primera vez (T1)?",
+      "opciones": [
+        "A las 4 horas",
+        "A las 7 horas",
+        "A las 2 horas",
+        "Al terminar las 8 horas"
+      ],
+      "correcta": 0,
+      "explicacion": "La primera renovación (**T1**) se intenta al **50 %** de la concesión: 8 × 0,5 = **4 horas**. Si no lo consigue, lo vuelve a intentar en **T2**, al 87,5 %: 8 × 0,875 = 7 horas, que es el distractor."
+    },
+    {
+      "id": "50",
+      "tema": 30,
+      "enunciado": "¿Qué nombre se consulta en el DNS para obtener, mediante un registro PTR, el nombre asociado a la dirección 203.0.113.25?",
+      "opciones": [
+        "203.0.113.25.in-addr.arpa",
+        "25.113.0.203.ip6.arpa",
+        "25.113.0.203.in-addr.arpa",
+        "203.0.113.in-addr.arpa"
+      ],
+      "correcta": 2,
+      "explicacion": "La resolución inversa de IPv4 usa la zona **in-addr.arpa** con los octetos **invertidos**: **25.113.0.203.in-addr.arpa**. La a no invierte los octetos, ip6.arpa es la zona inversa de IPv6 y la d omite el último octeto, por lo que nombra una zona y no una dirección."
+    },
+    {
+      "id": "51",
+      "tema": 30,
+      "enunciado": "DNS sobre TLS (DoT) utiliza el puerto:",
+      "opciones": [
+        "443",
+        "853",
+        "53",
+        "993"
+      ],
+      "correcta": 1,
+      "explicacion": "**DoT** usa el puerto **853** (TCP). DoH (DNS sobre HTTPS) va por el 443, el DNS clásico sin cifrar por el 53 (UDP y TCP) y el 993 es IMAPS."
+    },
+    {
+      "id": "52",
+      "tema": 30,
+      "enunciado": "Un host con dirección 192.168.1.10/24 y puerta de enlace 192.168.1.1 quiere enviar un paquete a 8.8.8.8 y su caché ARP está vacía. ¿Qué dirección pregunta en el ARP Request?",
+      "opciones": [
+        "La de 8.8.8.8",
+        "La de 255.255.255.255",
+        "La del servidor DNS configurado",
+        "La de 192.168.1.1"
+      ],
+      "correcta": 3,
+      "explicacion": "Como el destino está en otra red, el host envía la trama a su **puerta de enlace** y, por tanto, pide por ARP la MAC de **192.168.1.1**. ARP solo resuelve direcciones de la red local, así que nunca preguntaría por 8.8.8.8. 255.255.255.255 es una IP de difusión, no algo que se resuelva."
+    },
+    {
+      "id": "53",
+      "tema": 30,
+      "enunciado": "En el establecimiento de una conexión TCP, el cliente envía un SYN con número de secuencia 1000 y el servidor responde con un SYN+ACK con número de secuencia 5000. ¿Qué número de confirmación lleva el ACK final del cliente?",
+      "opciones": [
+        "1001",
+        "5000",
+        "5001",
+        "1000"
+      ],
+      "correcta": 2,
+      "explicacion": "En el *three-way handshake* cada lado confirma el número de secuencia del otro más 1, porque el SYN consume un número. El servidor confirma 1000 + 1 = 1001 y el cliente confirma **5000 + 1 = 5001**. 1001 es la confirmación que lleva el SYN+ACK, no el ACK del cliente."
+    },
+    {
+      "id": "54",
+      "tema": 30,
+      "enunciado": "Sobre Ethernet con MTU de 1500 bytes y cabeceras IPv4 y TCP sin opciones, ¿cuál es el MSS típico?",
+      "opciones": [
+        "1460 bytes",
+        "1480 bytes",
+        "1500 bytes",
+        "1440 bytes"
+      ],
+      "correcta": 0,
+      "explicacion": "El MSS es la carga útil de TCP: **1500 − 20 (IPv4) − 20 (TCP) = 1460 bytes**. 1480 resta solo la cabecera IP, 1500 es la MTU completa y 1440 restaría 40 bytes de IPv6 más los 20 de TCP."
+    },
+    {
+      "id": "55",
+      "tema": 30,
+      "enunciado": "Según la IANA (RFC 6335), el rango de puertos dinámicos o privados, usado para los puertos efímeros, es:",
+      "opciones": [
+        "0-1023",
+        "1024-49151",
+        "1024-65535",
+        "49152-65535"
+      ],
+      "correcta": 3,
+      "explicacion": "Los puertos **dinámicos o privados** (efímeros) son los **49152-65535**. 0-1023 son los bien conocidos o de sistema y 1024-49151 los registrados. La opción 1024-65535 junta dos rangos distintos."
+    },
+    {
+      "id": "56",
+      "tema": 30,
+      "enunciado": "Un router tiene en su tabla las rutas 0.0.0.0/0, 10.0.0.0/8, 10.1.0.0/16 y 10.1.2.0/24. ¿Cuál usa para un paquete con destino 10.1.3.7?",
+      "opciones": [
+        "10.1.2.0/24",
+        "10.1.0.0/16",
+        "10.0.0.0/8",
+        "0.0.0.0/0"
+      ],
+      "correcta": 1,
+      "explicacion": "Se aplica la **coincidencia del prefijo más largo**: 10.1.2.0/24 no contiene a 10.1.3.7 (abarca solo 10.1.2.0-10.1.2.255), así que la ruta más específica que sí lo contiene es **10.1.0.0/16**. 10.0.0.0/8 y la ruta por defecto también coinciden, pero con prefijos más cortos."
+    },
+    {
+      "id": "57",
+      "tema": 30,
+      "enunciado": "Un router Cisco conoce la misma red por RIP y por OSPF, y no tiene ninguna ruta estática ni conectada hacia ella. Según la distancia administrativa, ¿qué ruta instala en la tabla?",
+      "opciones": [
+        "La de RIP, porque su distancia administrativa es 120",
+        "Las dos, repartiendo la carga entre ellas",
+        "La de OSPF, porque su distancia administrativa es 110",
+        "La de menor número de saltos, sea cual sea el protocolo"
+      ],
+      "correcta": 2,
+      "explicacion": "Para un mismo prefijo gana la menor **distancia administrativa**: **OSPF (110)** frente a RIP (120). Las métricas de protocolos distintos (saltos de RIP, coste de OSPF) no se comparan entre sí, y el reparto de carga solo se hace entre rutas de igual distancia y métrica."
+    },
+    {
+      "id": "58",
+      "tema": 30,
+      "enunciado": "La técnica de los protocolos de vector distancia que impide que un router anuncie una ruta por la misma interfaz por la que la aprendió se denomina:",
+      "opciones": [
+        "Horizonte dividido (split horizon)",
+        "Temporizador de retención (hold-down)",
+        "Actualización desencadenada",
+        "Inundación de LSA"
+      ],
+      "correcta": 0,
+      "explicacion": "El **horizonte dividido** (*split horizon*) evita anunciar una ruta por la interfaz por la que se aprendió, para prevenir bucles y la cuenta al infinito. El *hold-down* ignora durante un tiempo la información sobre una ruta caída, las actualizaciones desencadenadas se envían en cuanto hay un cambio y la inundación de LSA es propia del estado de enlace."
+    },
+    {
+      "id": "59",
+      "tema": 30,
+      "enunciado": "En OSPF, el área a la que deben conectarse todas las demás áreas es:",
+      "opciones": [
+        "El área 1",
+        "El área de stub",
+        "Cualquiera que contenga un ASBR",
+        "El área 0 (backbone)"
+      ],
+      "correcta": 3,
+      "explicacion": "El **área 0** es el **troncal** (*backbone*) de OSPF, y todas las demás áreas deben conectarse a ella mediante routers ABR. El ASBR es el router de frontera con otro sistema autónomo y no define el troncal; el área 1 o un área *stub* son áreas normales o especiales sin ese papel."
+    },
+    {
+      "id": "60",
+      "tema": 30,
+      "enunciado": "RIP envía sus actualizaciones periódicas:",
+      "opciones": [
+        "Cada 90 segundos, sobre TCP en el puerto 179",
+        "Cada 30 segundos, sobre UDP en el puerto 520",
+        "Solo ante cambios, directamente sobre IP con el protocolo 89",
+        "Cada 30 segundos, sobre UDP en el puerto 53"
+      ],
+      "correcta": 1,
+      "explicacion": "RIP envía su tabla **cada 30 segundos** sobre **UDP en el puerto 520**. TCP 179 es BGP; el envío solo ante cambios directamente sobre IP (protocolo 89) es OSPF, y UDP 53 es DNS."
+    }
+  ]
+}

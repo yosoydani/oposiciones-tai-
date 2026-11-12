@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 15 · test",
+  "fuente": "propio",
+  "tema": 15,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 15. Modelado de datos y diseño de bases de datos»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 15,
+      "enunciado": "¿Quién propuso el modelo Entidad/Relación y en qué año?",
+      "opciones": [
+        "E. F. Codd, 1970",
+        "P. P. Chen, 1976",
+        "R. Fagin, 1977",
+        "C. J. Date, 1981"
+      ],
+      "correcta": 1,
+      "explicacion": "El modelo **Entidad/Relación** lo propuso **Peter P. Chen en 1976** en *ACM TODS*. **Codd** propuso en **1970** el modelo **relacional**, y Fagin es el autor de la 4FN (1977). Truco: primero llegó el relacional (1970) y seis años después el E/R para diseñar sobre él."
+    },
+    {
+      "id": "02",
+      "tema": 15,
+      "enunciado": "En la notación de Chen, una entidad débil se representa con:",
+      "opciones": [
+        "Un rombo doble",
+        "Una elipse discontinua",
+        "Un rectángulo doble",
+        "Un triángulo"
+      ],
+      "correcta": 2,
+      "explicacion": "La **entidad débil** se dibuja con un **rectángulo doble**. El **rombo doble** es la relación que la identifica, la **elipse discontinua** un atributo derivado y el **triángulo** la jerarquía de generalización. Truco: la débil «necesita refuerzo», de ahí el doble trazo."
+    },
+    {
+      "id": "03",
+      "tema": 15,
+      "enunciado": "En la arquitectura ANSI/SPARC, el nivel del que puede haber varios esquemas es el:",
+      "opciones": [
+        "Externo",
+        "Conceptual",
+        "Interno",
+        "Físico"
+      ],
+      "correcta": 0,
+      "explicacion": "Del nivel **externo** hay **un esquema por usuario o aplicación** (vistas), así que puede haber varios. Los niveles **conceptual** e **interno** (este último también llamado físico) son **únicos** para toda la BD."
+    },
+    {
+      "id": "04",
+      "tema": 15,
+      "enunciado": "Poder crear un índice sin modificar el esquema conceptual es un ejemplo de:",
+      "opciones": [
+        "Independencia lógica",
+        "Integridad referencial",
+        "Independencia de la distribución",
+        "Independencia física"
+      ],
+      "correcta": 3,
+      "explicacion": "Un índice pertenece al **nivel interno**; cambiarlo sin afectar al conceptual es **independencia física**. La **independencia lógica** se refiere a cambios del esquema conceptual que no afectan a los externos. La independencia de la distribución es otra de las reglas de Codd (la 11)."
+    },
+    {
+      "id": "05",
+      "tema": 15,
+      "enunciado": "Al pasar al modelo relacional una relación N:M entre dos entidades:",
+      "opciones": [
+        "Se propaga la clave del lado N al lado M",
+        "Se crea una tabla nueva con las claves de ambas entidades",
+        "Se fusionan ambas entidades en una tabla",
+        "No se representa"
+      ],
+      "correcta": 1,
+      "explicacion": "Toda relación **N:M** genera **siempre una tabla nueva** con las PK de ambas entidades como FK; su clave es la combinación de ambas y en ella van los atributos de la relación. Propagar una clave solo sirve para las 1:N, y fusionar tablas es una opción de algunas 1:1."
+    },
+    {
+      "id": "06",
+      "tema": 15,
+      "enunciado": "En una relación 1:N entre DEPARTAMENTO (1) y EMPLEADO (N), la clave ajena se coloca en:",
+      "opciones": [
+        "DEPARTAMENTO",
+        "Una tabla intermedia obligatoria",
+        "EMPLEADO",
+        "Ambas tablas"
+      ],
+      "correcta": 2,
+      "explicacion": "En una **1:N** la PK del lado **1** (DEPARTAMENTO) pasa como **FK al lado N** (EMPLEADO), y no se crea tabla nueva. Ponerla en DEPARTAMENTO obligaría a guardar varios empleados en una celda, lo que viola la 1FN. Truco: la FK «viaja hacia los muchos»."
+    },
+    {
+      "id": "07",
+      "tema": 15,
+      "enunciado": "Un atributo multivaluado se transforma en el modelo relacional en:",
+      "opciones": [
+        "Una tabla nueva con la clave de la entidad y el atributo",
+        "Varias columnas en la misma tabla",
+        "Una vista",
+        "Un índice único"
+      ],
+      "correcta": 0,
+      "explicacion": "La **1FN** exige valores atómicos, así que el multivaluado (p. ej., teléfonos) va a una **tabla nueva** con la **PK de la entidad + el atributo**, que juntos forman la clave. Varias columnas (telefono1, telefono2…) es un grupo repetitivo que limita el número de valores. Una vista o un índice no almacenan datos nuevos."
+    },
+    {
+      "id": "08",
+      "tema": 15,
+      "enunciado": "La regla de integridad de entidad establece que:",
+      "opciones": [
+        "Toda clave ajena debe existir en la tabla referenciada",
+        "Ningún atributo de la clave primaria puede ser nulo",
+        "No puede haber atributos derivados",
+        "Toda entidad debe participar en una relación"
+      ],
+      "correcta": 1,
+      "explicacion": "La **integridad de entidad** exige que **ningún atributo de la clave primaria sea nulo**. Que la clave ajena exista en la tabla referenciada (o sea nula) es la **integridad referencial**. Las otras dos no son reglas de integridad del modelo."
+    },
+    {
+      "id": "09",
+      "tema": 15,
+      "enunciado": "Una clave candidata es:",
+      "opciones": [
+        "Cualquier conjunto de atributos que identifica una tupla",
+        "La clave elegida por el diseñador",
+        "Un atributo que referencia otra tabla",
+        "Una superclave mínima"
+      ],
+      "correcta": 3,
+      "explicacion": "La **clave candidata** es una **superclave mínima** (irreducible): si se le quita un atributo deja de identificar. Cualquier conjunto que identifica es una **superclave**, la candidata elegida es la **primaria** y la que referencia otra tabla es la **clave ajena**."
+    },
+    {
+      "id": "10",
+      "tema": 15,
+      "enunciado": "¿Cuántas reglas publicó Codd en 1985 contando la regla 0?",
+      "opciones": [
+        "10",
+        "12",
+        "13",
+        "14"
+      ],
+      "correcta": 2,
+      "explicacion": "Se conocen como «las **12 reglas de Codd**», pero están numeradas **de 0 a 12**: contando la regla 0 (fundamental) son **13**. Por eso 12 es el distractor típico. La regla 12 es la de **no subversión**."
+    },
+    {
+      "id": "11",
+      "tema": 15,
+      "enunciado": "¿Cuál de estos operadores del álgebra relacional NO es básico (primitivo)?",
+      "opciones": [
+        "Intersección",
+        "Diferencia",
+        "Producto cartesiano",
+        "Unión"
+      ],
+      "correcta": 0,
+      "explicacion": "La **intersección es derivada**: R ∩ S = R − (R − S). Los **cinco básicos** son selección, proyección, unión, diferencia y producto cartesiano (más el renombrado como auxiliar). Combinación y división también son derivados."
+    },
+    {
+      "id": "12",
+      "tema": 15,
+      "enunciado": "La proyección (π) del álgebra relacional equivale en SQL a:",
+      "opciones": [
+        "`WHERE`",
+        "`SELECT DISTINCT` con las columnas indicadas",
+        "`GROUP BY`",
+        "`CROSS JOIN`"
+      ],
+      "correcta": 1,
+      "explicacion": "La **proyección** elige **columnas** y, como el resultado es un conjunto, **elimina duplicados**: equivale a **`SELECT DISTINCT`** con esas columnas. `WHERE` corresponde a la **selección (σ)** y `CROSS JOIN` al producto cartesiano."
+    },
+    {
+      "id": "13",
+      "tema": 15,
+      "enunciado": "Si R tiene 3 tuplas y 2 atributos y S tiene 4 tuplas y 3 atributos, R × S tiene:",
+      "opciones": [
+        "7 tuplas y 5 atributos",
+        "12 tuplas y 6 atributos",
+        "12 tuplas y 5 atributos",
+        "7 tuplas y 6 atributos"
+      ],
+      "correcta": 2,
+      "explicacion": "En el producto cartesiano la **cardinalidad se multiplica** (3 × 4 = **12** tuplas) y el **grado se suma** (2 + 3 = **5** atributos). Las otras opciones mezclan las dos reglas. Truco: filas por filas, columnas más columnas."
+    },
+    {
+      "id": "14",
+      "tema": 15,
+      "enunciado": "La segunda forma normal (2FN) elimina:",
+      "opciones": [
+        "Las dependencias transitivas",
+        "Los grupos repetitivos",
+        "Las dependencias multivaluadas",
+        "Las dependencias parciales respecto de la clave"
+      ],
+      "correcta": 3,
+      "explicacion": "La **2FN** exige que los atributos no primos dependan de la **clave completa**: elimina las **dependencias parciales**. Las **transitivas** las elimina la **3FN**, los **grupos repetitivos** la **1FN** y las **multivaluadas** la **4FN**."
+    },
+    {
+      "id": "15",
+      "tema": 15,
+      "enunciado": "Una relación está en FNBC cuando:",
+      "opciones": [
+        "Todo determinante es clave candidata",
+        "No tiene dependencias multivaluadas",
+        "Sus atributos son atómicos",
+        "No tiene claves compuestas"
+      ],
+      "correcta": 0,
+      "explicacion": "La **FNBC** (Boyce y Codd, 1974) exige que **todo determinante** de una DF no trivial sea **superclave (clave candidata)**. Sin dependencias multivaluadas es la **4FN** y con atributos atómicos la **1FN**. Tener claves compuestas no impide estar en FNBC."
+    },
+    {
+      "id": "16",
+      "tema": 15,
+      "enunciado": "La cuarta forma normal (4FN) trata las:",
+      "opciones": [
+        "Dependencias de combinación",
+        "Dependencias multivaluadas",
+        "Dependencias parciales",
+        "Dependencias transitivas"
+      ],
+      "correcta": 1,
+      "explicacion": "La **4FN** (Fagin, 1977) elimina las **dependencias multivaluadas** no triviales. Las de **combinación** son cosa de la **5FN**, las **parciales** de la **2FN** y las **transitivas** de la **3FN**."
+    },
+    {
+      "id": "17",
+      "tema": 15,
+      "enunciado": "Una relación en 1FN cuya clave primaria está formada por un solo atributo:",
+      "opciones": [
+        "Está necesariamente en 3FN",
+        "Está necesariamente en FNBC",
+        "Está necesariamente en 2FN",
+        "No puede estar en 2FN"
+      ],
+      "correcta": 2,
+      "explicacion": "Con una clave **simple** no existe una «parte» de la clave de la que depender, así que no puede haber **dependencias parciales**: está en **2FN** (en rigor, siempre que no haya otra clave candidata compuesta). En cambio, sí puede tener **dependencias transitivas**, por lo que no está necesariamente en 3FN ni en FNBC."
+    },
+    {
+      "id": "18",
+      "tema": 15,
+      "enunciado": "¿Cuál NO es un axioma de Armstrong?",
+      "opciones": [
+        "Reflexividad",
+        "Aumentatividad",
+        "Transitividad",
+        "Conmutatividad"
+      ],
+      "correcta": 3,
+      "explicacion": "Los **axiomas de Armstrong** son **reflexividad, aumentatividad y transitividad**, correctos y completos para inferir dependencias funcionales. La **conmutatividad** no es uno de ellos: X → Y no implica Y → X. Unión, descomposición y pseudotransitividad son reglas derivadas."
+    },
+    {
+      "id": "19",
+      "tema": 15,
+      "enunciado": "Respecto a las descomposiciones, es cierto que:",
+      "opciones": [
+        "A FNBC siempre se puede llegar sin pérdida y conservando todas las dependencias",
+        "A 3FN siempre se puede llegar sin pérdida y conservando las dependencias",
+        "La 5FN elimina las dependencias parciales",
+        "La desnormalización es propia del diseño conceptual"
+      ],
+      "correcta": 1,
+      "explicacion": "Hasta **3FN** siempre existe una descomposición **sin pérdida y que conserva las dependencias** (algoritmo de síntesis de Bernstein). A **FNBC** siempre se llega sin pérdida, pero **no siempre conservando las dependencias**. La 5FN trata dependencias de combinación y la desnormalización es del diseño **físico**."
+    },
+    {
+      "id": "20",
+      "tema": 15,
+      "enunciado": "La acción referencial que aplica el estándar SQL si no se indica ninguna en `ON DELETE` es:",
+      "opciones": [
+        "`CASCADE`",
+        "`SET NULL`",
+        "`NO ACTION`",
+        "`SET DEFAULT`"
+      ],
+      "correcta": 2,
+      "explicacion": "Si no se indica nada, el estándar SQL aplica **`NO ACTION`**: rechaza el borrado si deja filas huérfanas, comprobándolo al final de la sentencia. `CASCADE`, `SET NULL` y `SET DEFAULT` hay que declararlas explícitamente."
+    },
+    {
+      "id": "21",
+      "tema": 15,
+      "enunciado": "En una base de datos, la descripción de su estructura, que cambia poco (la «intensión»), se denomina:",
+      "opciones": [
+        "Instancia",
+        "Ocurrencia",
+        "Extensión",
+        "Esquema"
+      ],
+      "correcta": 3,
+      "explicacion": "El **esquema** (intensión) describe la **estructura** y apenas cambia. La **instancia** o **extensión** son los datos almacenados en un momento dado y cambian continuamente. Una **ocurrencia** es cada elemento concreto de un tipo de entidad."
+    },
+    {
+      "id": "22",
+      "tema": 15,
+      "enunciado": "¿Cuál de los siguientes es un modelo de datos conceptual, independiente del SGBD?",
+      "opciones": [
+        "El modelo relacional",
+        "El modelo jerárquico",
+        "El modelo Entidad/Relación",
+        "El modelo en red (CODASYL)"
+      ],
+      "correcta": 2,
+      "explicacion": "El **modelo E/R** (y los diagramas de clases UML) es **conceptual**: de alto nivel e **independiente del SGBD**. El **relacional**, el **jerárquico** y el **en red** son modelos **lógicos**: dependen del tipo de SGBD, aunque no del producto concreto."
+    },
+    {
+      "id": "23",
+      "tema": 15,
+      "enunciado": "¿En qué fase del diseño de una base de datos se aplica la normalización?",
+      "opciones": [
+        "En el diseño conceptual",
+        "En el diseño lógico",
+        "En el diseño físico",
+        "En la recogida y análisis de requisitos"
+      ],
+      "correcta": 1,
+      "explicacion": "La **normalización** forma parte del **diseño lógico**, junto con el paso del esquema E/R al modelo relacional. El **conceptual** produce el diagrama E/R y el **físico** decide índices, particiones y, en su caso, la desnormalización controlada."
+    },
+    {
+      "id": "24",
+      "tema": 15,
+      "enunciado": "En Métrica versión 3, el diseño físico de datos se elabora en el proceso:",
+      "opciones": [
+        "ASI (Análisis del Sistema de Información)",
+        "DSI (Diseño del Sistema de Información)",
+        "EVS (Estudio de Viabilidad del Sistema)",
+        "CSI (Construcción del Sistema de Información)"
+      ],
+      "correcta": 1,
+      "explicacion": "En **Métrica v3**, el modelo **conceptual y lógico** de datos se elabora en **ASI** y el **diseño físico** de datos en **DSI**. EVS es el estudio de viabilidad y CSI la construcción. Truco: el **A**nálisis dice qué datos hay y el **D**iseño cómo se almacenan."
+    },
+    {
+      "id": "25",
+      "tema": 15,
+      "enunciado": "¿Qué estrategia de diseño conceptual parte de un concepto central y va añadiendo los conceptos que lo rodean?",
+      "opciones": [
+        "Dentro-fuera (inside-out)",
+        "Descendente (top-down)",
+        "Ascendente (bottom-up)",
+        "Mixta"
+      ],
+      "correcta": 0,
+      "explicacion": "La estrategia **dentro-fuera (inside-out)** arranca de un **concepto central** y se extiende a su alrededor. La **descendente** va de lo general al detalle, la **ascendente** parte de atributos sueltos para construir entidades y relaciones, y la **mixta** combina varias."
+    },
+    {
+      "id": "26",
+      "tema": 15,
+      "enunciado": "En la notación de Chen, un atributo derivado, como la edad calculada a partir de la fecha de nacimiento, se representa con:",
+      "opciones": [
+        "Una elipse doble",
+        "Una elipse con el nombre subrayado",
+        "Una elipse discontinua",
+        "Un rombo"
+      ],
+      "correcta": 2,
+      "explicacion": "El atributo **derivado** se dibuja con **elipse discontinua**. La **elipse doble** es un atributo **multivaluado**, el nombre **subrayado** marca el **identificador** y el **rombo** representa una relación. Truco: discontinua porque «no se guarda del todo», se calcula."
+    },
+    {
+      "id": "27",
+      "tema": 15,
+      "enunciado": "La relación «EMPLEADO supervisa a EMPLEADO» es una relación de grado:",
+      "opciones": [
+        "2 (binaria), porque participan dos empleados",
+        "3 (ternaria)",
+        "1 (unaria o reflexiva)",
+        "N (n-aria)"
+      ],
+      "correcta": 2,
+      "explicacion": "El **grado** es el número de **entidades distintas** que participan: aquí solo EMPLEADO, así que es **unaria o reflexiva (grado 1)**, aunque cada ocurrencia se asocie con otra. Que haya dos ocurrencias implicadas es el error típico que lleva a decir «binaria»."
+    },
+    {
+      "id": "28",
+      "tema": 15,
+      "enunciado": "En la cardinalidad de participación (mínima, máxima), una mínima de 0 indica:",
+      "opciones": [
+        "Participación obligatoria (total)",
+        "Participación opcional (parcial)",
+        "Que la relación es N:M",
+        "Que la entidad es débil"
+      ],
+      "correcta": 1,
+      "explicacion": "Una **mínima 0** significa **participación opcional (parcial)**: puede haber ocurrencias de la entidad que no se relacionen. Una mínima **1** es participación **obligatoria (total)**. El tipo de correspondencia (1:1, 1:N, N:M) depende de las **máximas**."
+    },
+    {
+      "id": "29",
+      "tema": 15,
+      "enunciado": "«Cada expediente lo presenta un único ciudadano; un ciudadano puede presentar varios expedientes o ninguno». ¿Qué tipo de correspondencia hay entre CIUDADANO y EXPEDIENTE?",
+      "opciones": [
+        "1:1",
+        "N:M",
+        "1:N",
+        "N:1 con participación obligatoria del ciudadano"
+      ],
+      "correcta": 2,
+      "explicacion": "Por cada expediente hay **un** ciudadano (1,1) y cada ciudadano tiene **(0,N)** expedientes: la correspondencia es **1:N**. En el paso a tablas, la PK de CIUDADANO va como FK `NOT NULL` en EXPEDIENTE. La participación del ciudadano es **opcional** (mínima 0), no obligatoria."
+    },
+    {
+      "id": "30",
+      "tema": 15,
+      "enunciado": "Señale la respuesta INCORRECTA sobre las entidades débiles:",
+      "opciones": [
+        "Toda dependencia en identificación implica dependencia en existencia",
+        "El discriminante o clave parcial distingue las ocurrencias de la débil dentro de su entidad fuerte",
+        "Toda dependencia en existencia implica dependencia en identificación",
+        "LÍNEA_FACTURA, identificada por num_factura + num_línea, depende en identificación de FACTURA"
+      ],
+      "correcta": 2,
+      "explicacion": "Es falso: la implicación va solo en un sentido. **Toda dependencia en identificación implica dependencia en existencia, pero no al revés**: FAMILIAR puede depender en existencia de EMPLEADO y tener identificador propio. Las demás afirmaciones son correctas."
+    },
+    {
+      "id": "31",
+      "tema": 15,
+      "enunciado": "En una jerarquía de generalización, una ocurrencia del supertipo puede pertenecer a varios subtipos a la vez y también puede no pertenecer a ninguno. La jerarquía es:",
+      "opciones": [
+        "Exclusiva (disjunta) y total",
+        "Inclusiva (solapada) y total",
+        "Exclusiva (disjunta) y parcial",
+        "Inclusiva (solapada) y parcial"
+      ],
+      "correcta": 3,
+      "explicacion": "Pertenecer a **varios subtipos** a la vez es una jerarquía **inclusiva (solapada)**, y poder **no estar en ninguno** es completitud **parcial**. Exclusiva significa un único subtipo como máximo y total que toda ocurrencia está en alguno. Truco: disyunción = ¿cuántos subtipos?; completitud = ¿es obligatorio alguno?"
+    },
+    {
+      "id": "32",
+      "tema": 15,
+      "enunciado": "En el modelo E/R extendido, la generalización es:",
+      "opciones": [
+        "Un proceso descendente: se parte del supertipo para obtener los subtipos",
+        "La conversión de una relación con sus entidades en una entidad",
+        "La dependencia de una entidad débil respecto de una fuerte",
+        "Un proceso ascendente: se parte de los subtipos para obtener el supertipo común"
+      ],
+      "correcta": 3,
+      "explicacion": "La **generalización** es **ascendente**: de varios subtipos (ALUMNO, PROFESOR) se obtiene el supertipo común (PERSONA). La **especialización** es el proceso **descendente** inverso. Tratar una relación como entidad es la **agregación**."
+    },
+    {
+      "id": "33",
+      "tema": 15,
+      "enunciado": "En el modelo E/R extendido, tratar una relación junto con sus entidades como si fuera una entidad, para relacionarla con otra, se denomina:",
+      "opciones": [
+        "Agregación",
+        "Generalización",
+        "Especialización",
+        "Dependencia en identificación"
+      ],
+      "correcta": 0,
+      "explicacion": "La **agregación** permite tratar una **relación (con sus entidades) como una entidad** de nivel superior y relacionarla con otras. La **generalización** y la **especialización** construyen jerarquías ES-UN, y la dependencia en identificación caracteriza a las entidades débiles."
+    },
+    {
+      "id": "34",
+      "tema": 15,
+      "enunciado": "En la notación de pata de gallo (crow's foot), el símbolo del tridente en el extremo de una línea indica:",
+      "opciones": [
+        "Muchos",
+        "Cero",
+        "Uno",
+        "Entidad débil"
+      ],
+      "correcta": 0,
+      "explicacion": "En pata de gallo, el **tridente** significa **muchos**, el **círculo** significa **cero** y la **raya** significa **uno**. Combinando dos símbolos se expresan mínimo y máximo (círculo + tridente = 0..N). La notación no tiene un símbolo de entidad débil en el extremo de las líneas."
+    },
+    {
+      "id": "35",
+      "tema": 15,
+      "enunciado": "En un diagrama de clases UML, la multiplicidad `1..*` significa:",
+      "opciones": [
+        "Cero o más",
+        "Exactamente uno",
+        "Uno o más",
+        "Cero o uno"
+      ],
+      "correcta": 2,
+      "explicacion": "**`1..*`** es **uno o más** (mínimo 1, máximo muchos), equivalente a (1,N). Cero o más es `0..*`, exactamente uno es `1` y cero o uno es `0..1`."
+    },
+    {
+      "id": "36",
+      "tema": 15,
+      "enunciado": "A diferencia de una relación del modelo relacional teórico, una tabla SQL:",
+      "opciones": [
+        "No admite valores nulos en ninguna columna",
+        "Puede contener filas duplicadas si no se declara una clave",
+        "Debe tener siempre una clave primaria declarada",
+        "Solo admite columnas de tipo numérico o texto"
+      ],
+      "correcta": 1,
+      "explicacion": "Una **relación teórica es un conjunto** y no admite tuplas duplicadas, pero una **tabla SQL sí puede tener filas repetidas** si no se declara clave primaria ni `UNIQUE`. Por eso SQL tiene `DISTINCT`. Las tablas SQL admiten nulos, no exigen PK y tienen muchos más tipos de datos."
+    },
+    {
+      "id": "37",
+      "tema": 15,
+      "enunciado": "Un identificador sin significado de negocio, como un contador autonumérico (`IDENTITY`), es una clave:",
+      "opciones": [
+        "Natural",
+        "Alternativa",
+        "Ajena",
+        "Subrogada o artificial"
+      ],
+      "correcta": 3,
+      "explicacion": "La clave **subrogada (artificial)** es un identificador **sin significado**, generado por el sistema. La **natural** tiene significado en el negocio (DNI, NIF), la **alternativa** es una candidata no elegida como primaria y la **ajena** referencia otra tabla."
+    },
+    {
+      "id": "38",
+      "tema": 15,
+      "enunciado": "¿Qué diferencia hay entre las acciones referenciales `RESTRICT` y `NO ACTION` en SQL?",
+      "opciones": [
+        "`RESTRICT` rechaza la operación de inmediato y `NO ACTION` lo comprueba al final de la sentencia",
+        "`RESTRICT` propaga el borrado y `NO ACTION` lo rechaza",
+        "`NO ACTION` pone la clave ajena a nulo y `RESTRICT` la deja como está",
+        "`RESTRICT` es la acción por defecto del estándar y `NO ACTION` debe indicarse"
+      ],
+      "correcta": 0,
+      "explicacion": "Las dos rechazan la operación si deja huérfanos, pero **`RESTRICT` lo hace de inmediato** y **`NO ACTION` comprueba al final de la sentencia**; además, `NO ACTION` es la acción **por defecto** del estándar. Propagar es `CASCADE` y poner a nulo, `SET NULL`."
+    },
+    {
+      "id": "39",
+      "tema": 15,
+      "enunciado": "¿Qué acción referencial pone a nulo la clave ajena de las filas hijas cuando se borra la fila padre a la que referencian?",
+      "opciones": [
+        "`SET DEFAULT`",
+        "`CASCADE`",
+        "`RESTRICT`",
+        "`SET NULL`"
+      ],
+      "correcta": 3,
+      "explicacion": "**`SET NULL`** deja a **nulo** la FK de las filas que referenciaban la fila borrada; solo es posible si la FK admite nulos. `SET DEFAULT` pone el valor por defecto, `CASCADE` borra también las hijas y `RESTRICT` impide el borrado."
+    },
+    {
+      "id": "40",
+      "tema": 15,
+      "enunciado": "Con la lógica trivaluada de SQL, ¿cuál es el resultado de `(FALSO OR DESCONOCIDO) AND VERDADERO`?",
+      "opciones": [
+        "VERDADERO",
+        "DESCONOCIDO",
+        "FALSO",
+        "Un error, porque no se puede operar con desconocidos"
+      ],
+      "correcta": 1,
+      "explicacion": "Paso a paso: **FALSO OR DESCONOCIDO = DESCONOCIDO** (el OR solo es seguro si hay un verdadero) y después **DESCONOCIDO AND VERDADERO = DESCONOCIDO**. FALSO saldría solo si algún operando del AND fuera falso. SQL opera con DESCONOCIDO sin error; en un `WHERE`, la fila simplemente no se selecciona."
+    },
+    {
+      "id": "41",
+      "tema": 15,
+      "enunciado": "La regla de Codd que impide que un lenguaje de bajo nivel (registro a registro) pueda saltarse las reglas de integridad es la de:",
+      "opciones": [
+        "Independencia de la integridad",
+        "Regla fundamental",
+        "No subversión",
+        "Independencia de la distribución"
+      ],
+      "correcta": 2,
+      "explicacion": "La regla 12, de **no subversión**, impide que un **lenguaje de bajo nivel** eluda las restricciones de integridad. La 10, de **independencia de la integridad**, exige que las restricciones estén en el catálogo y no en los programas; la 0 es la fundamental y la 11 la de independencia de la distribución."
+    },
+    {
+      "id": "42",
+      "tema": 15,
+      "enunciado": "¿Cuál de las siguientes decisiones pertenece al diseño físico de una base de datos?",
+      "opciones": [
+        "Identificar las entidades y relaciones del sistema",
+        "Elegir las claves primarias y ajenas de cada tabla",
+        "Normalizar las tablas hasta la 3FN",
+        "Crear índices bitmap y particionar una tabla por rango de fechas"
+      ],
+      "correcta": 3,
+      "explicacion": "El **diseño físico** depende del SGBD concreto y decide **cómo se almacena** la información: **índices**, **particionado**, *tablespaces*, vistas materializadas. Identificar entidades es diseño **conceptual**, y elegir PK y FK o normalizar es diseño **lógico**."
+    },
+    {
+      "id": "43",
+      "tema": 15,
+      "enunciado": "En una relación 1:1 en la que una entidad participa de forma obligatoria y la otra de forma opcional, lo recomendable al pasar a tablas es:",
+      "opciones": [
+        "Propagar la clave como FK `UNIQUE` a la tabla de la entidad con participación opcional",
+        "Crear siempre una tabla intermedia con las dos claves",
+        "Fusionar siempre las dos entidades en una sola tabla",
+        "Propagar la clave como FK `UNIQUE` a la tabla de la entidad con participación obligatoria"
+      ],
+      "correcta": 3,
+      "explicacion": "En una 1:1 se propaga una PK como **FK `UNIQUE`**, y conviene hacerlo **hacia la entidad con participación obligatoria**: todas sus filas tendrán valor y se **evitan los nulos**. Si se pusiera en el lado opcional, muchas filas quedarían con la FK a nulo. La fusión solo es natural cuando ambas participaciones son (1,1)."
+    },
+    {
+      "id": "44",
+      "tema": 15,
+      "enunciado": "Al pasar a tablas una entidad débil en identificación, su clave primaria está formada por:",
+      "opciones": [
+        "Solo el discriminante de la entidad débil",
+        "Solo la clave primaria de la entidad fuerte",
+        "La clave primaria de la entidad fuerte más el discriminante",
+        "Una clave subrogada sin relación con la entidad fuerte"
+      ],
+      "correcta": 2,
+      "explicacion": "La tabla de la débil tiene como **PK la de la fuerte + el discriminante** (p. ej., num_factura + num_línea), y la parte de la fuerte es además **FK**, normalmente con `ON DELETE CASCADE`. El discriminante solo no basta, porque se repite entre ocurrencias de distintas fuertes."
+    },
+    {
+      "id": "45",
+      "tema": 15,
+      "enunciado": "Al transformar una jerarquía de generalización, la opción de crear solo tablas para los subtipos (cada una repitiendo los atributos del supertipo) es adecuada cuando la jerarquía es:",
+      "opciones": [
+        "Parcial e inclusiva",
+        "Parcial y exclusiva",
+        "Total e inclusiva",
+        "Total y exclusiva"
+      ],
+      "correcta": 3,
+      "explicacion": "Solo tablas de subtipos funciona si la jerarquía es **total** (toda ocurrencia está en algún subtipo, así que no se pierde ninguna) y **exclusiva** (está en uno solo, así que no se duplican datos). Si fuera parcial, las ocurrencias sin subtipo no tendrían tabla, y si fuera inclusiva se repetirían en varias."
+    },
+    {
+      "id": "46",
+      "tema": 15,
+      "enunciado": "Un esquema E/R tiene 4 entidades fuertes, 2 relaciones 1:N, 1 relación N:M y 1 atributo multivaluado. ¿Cuántas tablas tendrá como mínimo el modelo relacional?",
+      "opciones": [
+        "6",
+        "8",
+        "7",
+        "5"
+      ],
+      "correcta": 0,
+      "explicacion": "Mínimo de tablas = **entidades + relaciones N:M + atributos multivaluados** = 4 + 1 + 1 = **6**. Las **1:N no generan tabla**: se resuelven con una FK en el lado N. 8 saldría contando también las dos 1:N."
+    },
+    {
+      "id": "47",
+      "tema": 15,
+      "enunciado": "La relación ternaria N:M:P entre PROFESOR, ASIGNATURA y AULA se transforma en una tabla cuya clave primaria está formada por:",
+      "opciones": [
+        "Las claves de dos de las tres entidades, elegidas libremente",
+        "Las claves primarias de las tres entidades",
+        "Solo la clave de la entidad con más ocurrencias",
+        "Una clave subrogada, obligatoria en las relaciones ternarias"
+      ],
+      "correcta": 1,
+      "explicacion": "Una ternaria genera una **tabla nueva** con las PK de todas las entidades, y la clave depende de las cardinalidades: en una **N:M:P** la forman **las tres claves**. Solo cuando algún lado es 1 puede bastar con un subconjunto. Una clave subrogada es posible, pero nunca obligatoria."
+    },
+    {
+      "id": "48",
+      "tema": 15,
+      "enunciado": "Un EMPLEADO trabaja en (1,1) DEPARTAMENTO. Al pasar a tablas, la clave ajena `cod_dpto` de EMPLEADO debe declararse:",
+      "opciones": [
+        "`NOT NULL`",
+        "`UNIQUE`",
+        "`PRIMARY KEY`",
+        "Sin restricciones adicionales"
+      ],
+      "correcta": 0,
+      "explicacion": "La **cardinalidad mínima 1** en el lado que recibe la FK se traduce en **`NOT NULL`**: todo empleado debe tener departamento. `UNIQUE` impediría que dos empleados compartieran departamento, convirtiendo la relación en 1:1. Sin restricción, la participación sería opcional."
+    },
+    {
+      "id": "49",
+      "tema": 15,
+      "enunciado": "Señale la afirmación correcta sobre el álgebra y el cálculo relacional:",
+      "opciones": [
+        "El álgebra es declarativa y el cálculo es procedimental",
+        "El cálculo tiene más capacidad expresiva que el álgebra",
+        "Ambos son declarativos, pero solo el álgebra es relacionalmente completa",
+        "El álgebra es procedimental, el cálculo es declarativo y ambos tienen la misma capacidad expresiva"
+      ],
+      "correcta": 3,
+      "explicacion": "El **álgebra** es **procedimental** (indica cómo obtener el resultado) y el **cálculo** es **declarativo** (indica qué se quiere). Codd demostró que tienen **la misma capacidad expresiva**; un lenguaje con esa capacidad se llama relacionalmente completo, como SQL."
+    },
+    {
+      "id": "50",
+      "tema": 15,
+      "enunciado": "La propiedad por la que toda operación del álgebra relacional toma relaciones y devuelve una relación, lo que permite anidar operaciones, se denomina:",
+      "opciones": [
+        "Completitud relacional",
+        "Propiedad de cierre",
+        "Compatibilidad de unión",
+        "Independencia lógica"
+      ],
+      "correcta": 1,
+      "explicacion": "La **propiedad de cierre** garantiza que el resultado de cada operación es otra **relación**, así que las operaciones se pueden **anidar**. La completitud relacional mide la capacidad expresiva de un lenguaje y la compatibilidad de unión es el requisito para unir, restar o intersecar relaciones."
+    },
+    {
+      "id": "51",
+      "tema": 15,
+      "enunciado": "En el álgebra relacional, la combinación natural (natural join) entre R y S:",
+      "opciones": [
+        "Admite cualquier comparador (<, >, ≠) en la condición",
+        "Conserva las tuplas sin pareja rellenándolas con nulos",
+        "Empareja por los atributos del mismo nombre y elimina las columnas repetidas",
+        "Devuelve solo los atributos de R que tienen pareja en S"
+      ],
+      "correcta": 2,
+      "explicacion": "El **natural join** es un equi-join sobre los **atributos del mismo nombre** que **elimina las columnas repetidas**. Admitir cualquier comparador es el **theta-join**, conservar tuplas sin pareja es el **outer join** y devolver solo los atributos de R con pareja es el **semi-join**."
+    },
+    {
+      "id": "52",
+      "tema": 15,
+      "enunciado": "Con `EMPLEADO(dni, nombre, salario, cod_dpto)` y `DEPARTAMENTO(cod_dpto, nombre_dpto, ciudad)`, la expresión π cod_dpto (DEPARTAMENTO) − π cod_dpto (EMPLEADO) obtiene:",
+      "opciones": [
+        "Los códigos de los departamentos que no tienen empleados",
+        "Los códigos de los departamentos que tienen algún empleado",
+        "Los empleados que no tienen departamento asignado",
+        "Los códigos de todos los departamentos sin repeticiones"
+      ],
+      "correcta": 0,
+      "explicacion": "Se toman todos los códigos de departamento y se les **restan** los que aparecen en EMPLEADO: quedan los **departamentos sin empleados**. Los que tienen algún empleado saldrían con la **intersección**. Recuerda que la diferencia es un operador básico y no conmutativo: R − S no es S − R."
+    },
+    {
+      "id": "53",
+      "tema": 15,
+      "enunciado": "El cálculo relacional de dominios es la base del lenguaje:",
+      "opciones": [
+        "QBE (Query By Example)",
+        "SQL",
+        "QUEL",
+        "OQL"
+      ],
+      "correcta": 0,
+      "explicacion": "El **cálculo de dominios**, cuyas variables recorren valores, es la base de **QBE** (IBM, M. Zloof). El **cálculo de tuplas** es la base de **QUEL** (Ingres) y de **SQL**. OQL es el lenguaje de consulta de las BD orientadas a objetos (ODMG)."
+    },
+    {
+      "id": "54",
+      "tema": 15,
+      "enunciado": "En la tabla `EMP_DPTO(dni, nombre, cod_dpto, nombre_dpto)`, al borrar el último empleado de un departamento se pierde el nombre del departamento. Es una anomalía de:",
+      "opciones": [
+        "Inserción",
+        "Borrado",
+        "Modificación",
+        "Integridad referencial"
+      ],
+      "correcta": 1,
+      "explicacion": "Perder información al **eliminar** una fila es una **anomalía de borrado**. No poder dar de alta un departamento sin empleados sería una anomalía de **inserción**, y tener que cambiar el nombre del departamento en muchas filas, una de **modificación**. Las tres se resuelven separando DEPARTAMENTO (3FN)."
+    },
+    {
+      "id": "55",
+      "tema": 15,
+      "enunciado": "A partir de las dependencias X → Y y WY → Z se puede deducir WX → Z. Esta regla derivada de los axiomas de Armstrong se llama:",
+      "opciones": [
+        "Unión",
+        "Pseudotransitividad",
+        "Descomposición",
+        "Aumentatividad"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la **pseudotransitividad**. La **unión** deduce X → YZ de X → Y y X → Z, y la **descomposición** hace lo contrario. La **aumentatividad** es un axioma (de X → Y se deduce XZ → YZ), no una regla derivada."
+    },
+    {
+      "id": "56",
+      "tema": 15,
+      "enunciado": "En R(A, B, C, D, E) se cumplen A → B, B → C y CD → E. ¿Cuál es el cierre del conjunto de atributos (AD)⁺?",
+      "opciones": [
+        "{A, B, C, D}",
+        "{A, B, D}",
+        "{A, B, C, D, E}",
+        "{A, D, E}"
+      ],
+      "correcta": 2,
+      "explicacion": "Se parte de {A, D}: con A → B se añade **B**; con B → C, **C**; y como ya están C y D, con CD → E se añade **E**. El cierre es **{A, B, C, D, E}**, todos los atributos, así que **AD es superclave** de R. Quedarse en {A, B, C, D} es olvidar aplicar CD → E."
+    },
+    {
+      "id": "57",
+      "tema": 15,
+      "enunciado": "La relación IMPARTE(alumno, asignatura, profesor) cumple (alumno, asignatura) → profesor y profesor → asignatura. ¿Qué se puede afirmar?",
+      "opciones": [
+        "Está en 3FN pero no en FNBC, porque profesor es determinante y no es superclave",
+        "No está en 2FN, porque hay una dependencia parcial de la clave",
+        "Está en FNBC, porque todos sus atributos son primos",
+        "Solo está en 1FN, porque la clave tiene más de un atributo"
+      ],
+      "correcta": 0,
+      "explicacion": "Las claves candidatas son (alumno, asignatura) y (alumno, profesor), así que **todos los atributos son primos** y la relación está en **3FN**. Pero **profesor** determina asignatura **sin ser superclave**, y eso incumple la **FNBC**. Que todos los atributos sean primos basta para la 3FN, no para la FNBC."
+    },
+    {
+      "id": "58",
+      "tema": 15,
+      "enunciado": "Según el teorema de Heath, la descomposición de R en R1 y R2 es sin pérdida de información si:",
+      "opciones": [
+        "R1 y R2 tienen el mismo grado",
+        "R1 ∩ R2 → R1 o R1 ∩ R2 → R2",
+        "R1 ∩ R2 es el conjunto vacío",
+        "R1 y R2 tienen la misma cardinalidad"
+      ],
+      "correcta": 1,
+      "explicacion": "La descomposición es **sin pérdida** si los atributos comunes **determinan funcionalmente R1 o R2**, es decir, si R1 ∩ R2 es superclave de alguna de las dos. Si la intersección fuera vacía, la combinación sería un producto cartesiano lleno de **tuplas espurias**. El grado y la cardinalidad no influyen."
+    },
+    {
+      "id": "59",
+      "tema": 15,
+      "enunciado": "En SUMINISTRO(proveedor, pieza, proyecto) existe una regla cíclica entre proveedores, piezas y proyectos que genera una dependencia de combinación. Para llevarla a 5FN:",
+      "opciones": [
+        "Se descompone sin pérdida en dos proyecciones binarias",
+        "No admite ninguna descomposición sin pérdida",
+        "Se elimina una dependencia transitiva entre atributos no primos",
+        "Se descompone sin pérdida en tres proyecciones binarias, pero no en dos"
+      ],
+      "correcta": 3,
+      "explicacion": "La **5FN** trata las **dependencias de combinación**: esta relación no se puede descomponer sin pérdida en **dos** proyecciones, pero sí en **tres**: (proveedor, pieza), (pieza, proyecto) y (proveedor, proyecto). Eliminar transitivas es tarea de la 3FN."
+    },
+    {
+      "id": "60",
+      "tema": 15,
+      "enunciado": "¿Qué forma normal, definida por Fagin en 1981, exige que toda restricción sea consecuencia lógica de los dominios y las claves?",
+      "opciones": [
+        "FNDC (forma normal dominio-clave)",
+        "5FN (de proyección-combinación)",
+        "FNBC (Boyce-Codd)",
+        "4FN"
+      ],
+      "correcta": 0,
+      "explicacion": "La **FNDC (dominio-clave)**, de Fagin (1981), exige que **toda restricción se deduzca de dominios y claves**, y elimina cualquier anomalía. La **5FN** (Fagin, 1979) trata las dependencias de combinación, la **4FN** (Fagin, 1977) las multivaluadas y la **FNBC** (1974) los determinantes que no son clave."
+    }
+  ]
+}

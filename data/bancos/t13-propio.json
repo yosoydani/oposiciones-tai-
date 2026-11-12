@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 13 · test",
+  "fuente": "propio",
+  "tema": 13,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 13. Sistemas operativos»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 13,
+      "enunciado": "¿Cuál de las siguientes NO es una de las condiciones de Coffman para el interbloqueo?",
+      "opciones": [
+        "Exclusión mutua",
+        "Retención y espera",
+        "Expropiación de recursos",
+        "Espera circular"
+      ],
+      "correcta": 2,
+      "explicacion": "La condición de Coffman es la **no expropiación**: el recurso solo lo libera quien lo tiene. Si el sistema puede expropiar recursos, esa condición se rompe y el interbloqueo deja de ser posible. Exclusión mutua, retención y espera y espera circular sí son condiciones; truco: las cuatro son «negativas para compartir» (no se comparte, se retiene, no se quita, se espera en círculo)."
+    },
+    {
+      "id": "02",
+      "tema": 13,
+      "enunciado": "El algoritmo de planificación que minimiza el tiempo medio de espera es:",
+      "opciones": [
+        "FCFS",
+        "SJF",
+        "Round Robin",
+        "Prioridades sin envejecimiento"
+      ],
+      "correcta": 1,
+      "explicacion": "**SJF** (trabajo más corto primero) es **óptimo en tiempo medio de espera**, aunque necesita estimar la ráfaga y puede provocar inanición de los procesos largos. FCFS sufre el efecto convoy y Round Robin mejora el tiempo de respuesta, no la espera media. Las prioridades sin envejecimiento además causan inanición."
+    },
+    {
+      "id": "03",
+      "tema": 13,
+      "enunciado": "Si en Round Robin el cuanto es muy grande, el algoritmo se comporta como:",
+      "opciones": [
+        "SJF",
+        "SRTF",
+        "FCFS",
+        "Colas multinivel"
+      ],
+      "correcta": 2,
+      "explicacion": "Si el cuanto supera todas las ráfagas, ningún proceso es expropiado y se atienden por **orden de llegada**: Round Robin degenera en **FCFS**. SJF y SRTF eligen por duración de ráfaga, algo que RR nunca mira. En el otro extremo, un cuanto muy pequeño dispara los cambios de contexto."
+    },
+    {
+      "id": "04",
+      "tema": 13,
+      "enunciado": "La anomalía de Belady aparece en el algoritmo de reemplazo:",
+      "opciones": [
+        "LRU",
+        "Óptimo",
+        "Reloj con bit de modificado",
+        "FIFO"
+      ],
+      "correcta": 3,
+      "explicacion": "La **anomalía de Belady** es que con **FIFO** dar más marcos puede producir más fallos de página (cadena 1,2,3,4,1,2,5,1,2,3,4,5: 9 fallos con 3 marcos y 10 con 4). LRU y Óptimo son algoritmos de pila y no la sufren. Truco: Belady y FIFO, «la cola que se porta mal»."
+    },
+    {
+      "id": "05",
+      "tema": 13,
+      "enunciado": "La paginación pura:",
+      "opciones": [
+        "Elimina la fragmentación externa, pero puede producir fragmentación interna",
+        "Elimina ambas fragmentaciones",
+        "Produce solo fragmentación externa",
+        "Necesita compactación periódica"
+      ],
+      "correcta": 0,
+      "explicacion": "Páginas y marcos tienen el mismo tamaño, así que cualquier marco libre sirve: **no hay fragmentación externa**, pero la última página del proceso se aprovecha en parte (**fragmentación interna**). La fragmentación externa y la compactación son propias de las particiones variables y la segmentación. Por eso no elimina ambas."
+    },
+    {
+      "id": "06",
+      "tema": 13,
+      "enunciado": "¿Qué información NO se guarda en el i-nodo de un fichero en Unix?",
+      "opciones": [
+        "Permisos",
+        "Nombre del fichero",
+        "Tamaño",
+        "Número de enlaces"
+      ],
+      "correcta": 1,
+      "explicacion": "El i-nodo guarda **todos los metadatos excepto el nombre**: tipo, permisos, propietario, tamaño, fechas, contador de enlaces y punteros a bloques. El **nombre** está en la **entrada del directorio**, que asocia nombre e i-nodo. Por eso un mismo i-nodo puede tener varios nombres (enlaces duros)."
+    },
+    {
+      "id": "07",
+      "tema": 13,
+      "enunciado": "Tras `chmod 640 informe.txt`, los permisos son:",
+      "opciones": [
+        "rw-r-----",
+        "rwxr-----",
+        "rw-rw----",
+        "r--rw----"
+      ],
+      "correcta": 0,
+      "explicacion": "Cada cifra es la suma de **r = 4, w = 2, x = 1**: 6 = rw- (propietario), 4 = r-- (grupo) y 0 = --- (otros), es decir **rw-r-----**. rwxr----- sería 740 y rw-rw---- sería 660. r--rw---- (460) invierte las dos primeras cifras."
+    },
+    {
+      "id": "08",
+      "tema": 13,
+      "enunciado": "Con `umask 027`, un directorio nuevo se crea con permisos:",
+      "opciones": [
+        "640",
+        "755",
+        "750",
+        "027"
+      ],
+      "correcta": 2,
+      "explicacion": "Los directorios parten de **777** y la umask quita bits: 777 − 027 = **750** (rwxr-x---). 640 sería el resultado para un fichero (666 − 027 → 640). 755 corresponde a la umask habitual 022."
+    },
+    {
+      "id": "09",
+      "tema": 13,
+      "enunciado": "¿Qué señal de Unix no puede ser capturada ni ignorada por el proceso?",
+      "opciones": [
+        "SIGTERM",
+        "SIGINT",
+        "SIGHUP",
+        "SIGKILL"
+      ],
+      "correcta": 3,
+      "explicacion": "**SIGKILL (9)**, igual que SIGSTOP, no se puede capturar, bloquear ni ignorar: el núcleo mata el proceso sin preguntar. SIGTERM (15, la que envía `kill` por defecto), SIGINT (2, Ctrl+C) y SIGHUP (1) sí pueden tener manejador. Por eso `kill -9` es el último recurso."
+    },
+    {
+      "id": "10",
+      "tema": 13,
+      "enunciado": "El núcleo de Windows 11 se clasifica como:",
+      "opciones": [
+        "Monolítico puro",
+        "Híbrido",
+        "Exonúcleo",
+        "Micronúcleo puro"
+      ],
+      "correcta": 1,
+      "explicacion": "Windows 11 pertenece a la **familia NT**, cuyo núcleo es **híbrido**: un micronúcleo modificado con muchos servicios (Ejecutivo, drivers, Win32k) en espacio de núcleo. Monolítico es Linux; micronúcleos puros son Mach, MINIX 3 o QNX. El exonúcleo es un modelo de investigación."
+    },
+    {
+      "id": "11",
+      "tema": 13,
+      "enunciado": "En el registro de Windows, la configuración del usuario con sesión iniciada está en:",
+      "opciones": [
+        "HKEY_LOCAL_MACHINE",
+        "HKEY_CLASSES_ROOT",
+        "HKEY_CURRENT_USER",
+        "HKEY_CURRENT_CONFIG"
+      ],
+      "correcta": 2,
+      "explicacion": "**HKEY_CURRENT_USER (HKCU)** apunta al perfil del usuario actual, cargado de su **NTUSER.DAT**. HKLM guarda la configuración del equipo, HKCR las asociaciones de ficheros y objetos COM, y HKCC el perfil de hardware actual. Truco: «CURRENT_USER» = el que está sentado delante."
+    },
+    {
+      "id": "12",
+      "tema": 13,
+      "enunciado": "El tamaño máximo de un fichero en FAT32 es:",
+      "opciones": [
+        "2 GiB",
+        "4 GiB menos 1 byte",
+        "16 TiB",
+        "Sin límite práctico"
+      ],
+      "correcta": 1,
+      "explicacion": "FAT32 guarda el tamaño del fichero en un campo de 32 bits, así que el máximo es **2^32 − 1 bytes = 4 GiB − 1 byte**. 16 TiB es el máximo de fichero en ext4 con bloques de 4 KiB. Por este límite se usa exFAT o NTFS para ficheros grandes."
+    },
+    {
+      "id": "13",
+      "tema": 13,
+      "enunciado": "Tres procesos llegan en t = 0 con ráfagas 24, 3 y 3 ms. Con SJF, el tiempo medio de espera es:",
+      "opciones": [
+        "3 ms",
+        "17 ms",
+        "5,67 ms",
+        "10 ms"
+      ],
+      "correcta": 0,
+      "explicacion": "SJF ejecuta en orden 3, 3, 24: las esperas son 0, 3 y 6 ms, y la media es 9/3 = **3 ms**. 17 ms es lo que da FCFS (0, 24, 27) y 5,67 ms lo que da Round Robin con cuanto 4. Es el ejemplo clásico que demuestra que SJF es óptimo."
+    },
+    {
+      "id": "14",
+      "tema": 13,
+      "enunciado": "El soporte ordinario de Windows 10 finalizó el:",
+      "opciones": [
+        "14 de enero de 2020",
+        "10 de octubre de 2023",
+        "14 de octubre de 2025",
+        "13 de octubre de 2026"
+      ],
+      "correcta": 2,
+      "explicacion": "Microsoft fijó el fin de soporte de Windows 10 el **14 de octubre de 2025**; desde entonces solo recibe parches con el programa de pago **ESU**. El 14 de enero de 2020 fue el fin de soporte de Windows 7. Las otras fechas no corresponden a Windows 10."
+    },
+    {
+      "id": "15",
+      "tema": 13,
+      "enunciado": "En Android, el entorno de ejecución que sustituyó a Dalvik es:",
+      "opciones": [
+        "ART",
+        "JVM HotSpot",
+        "Bionic",
+        "Binder"
+      ],
+      "correcta": 0,
+      "explicacion": "**ART (Android Runtime)** sustituyó a Dalvik en **Android 5.0**; compila con AOT y JIT y ejecuta bytecode DEX. **Bionic** es la libc de Android y **Binder** el mecanismo de IPC del núcleo. Android nunca ha usado la JVM HotSpot."
+    },
+    {
+      "id": "16",
+      "tema": 13,
+      "enunciado": "El núcleo de iOS es:",
+      "opciones": [
+        "Linux",
+        "NT",
+        "XNU",
+        "MINIX"
+      ],
+      "correcta": 2,
+      "explicacion": "iOS se basa en **Darwin**, igual que macOS, con el núcleo **híbrido XNU** (Mach + BSD). Linux es el núcleo de Android y NT el de Windows. MINIX es un micronúcleo docente."
+    },
+    {
+      "id": "17",
+      "tema": 13,
+      "enunciado": "Los hilos de un mismo proceso comparten:",
+      "opciones": [
+        "La pila",
+        "El contador de programa",
+        "Los registros de la CPU",
+        "El espacio de direcciones"
+      ],
+      "correcta": 3,
+      "explicacion": "Los hilos de un proceso comparten **código, datos, ficheros abiertos y espacio de direcciones**. Cada hilo tiene en cambio su **propia pila, registros y contador de programa**, porque cada uno sigue su propio flujo de ejecución. Truco: se comparte la «casa» (memoria), no el «cuaderno de trabajo» (pila y registros)."
+    },
+    {
+      "id": "18",
+      "tema": 13,
+      "enunciado": "Es un hipervisor de tipo 1 (bare-metal):",
+      "opciones": [
+        "VMware ESXi",
+        "Oracle VirtualBox",
+        "VMware Workstation",
+        "Parallels Desktop"
+      ],
+      "correcta": 0,
+      "explicacion": "**VMware ESXi** se instala directamente sobre el hardware: es un hipervisor **tipo 1**, como Hyper-V, Xen o KVM. VirtualBox, VMware Workstation y Parallels Desktop se ejecutan sobre un SO anfitrión: son de **tipo 2**."
+    },
+    {
+      "id": "19",
+      "tema": 13,
+      "enunciado": "En el modelo de cinco estados, ¿qué transición NO es posible?",
+      "opciones": [
+        "Ejecución → Bloqueado",
+        "Bloqueado → Ejecución",
+        "Listo → Ejecución",
+        "Bloqueado → Listo"
+      ],
+      "correcta": 1,
+      "explicacion": "Cuando ocurre el evento que esperaba, el proceso bloqueado pasa a **Listo** y debe esperar a que el planificador lo elija: **no existe Bloqueado → Ejecución**. Ejecución → Bloqueado (espera E/S), Listo → Ejecución (dispatch) y Bloqueado → Listo (llega el evento) son transiciones normales."
+    },
+    {
+      "id": "20",
+      "tema": 13,
+      "enunciado": "Con systemd, para que un servicio arranque automáticamente con el sistema se usa:",
+      "opciones": [
+        "`systemctl start`",
+        "`systemctl enable`",
+        "`service on`",
+        "`journalctl -u`"
+      ],
+      "correcta": 1,
+      "explicacion": "**`systemctl enable`** crea los enlaces para que la unidad se inicie en el arranque. `systemctl start` solo lo inicia en ese momento, sin hacerlo persistente. `journalctl -u` consulta los registros de una unidad y `service on` no existe."
+    },
+    {
+      "id": "21",
+      "tema": 13,
+      "enunciado": "En un sistema operativo, el bloque de control de proceso (BCP o PCB) es:",
+      "opciones": [
+        "La estructura del núcleo que guarda el PID, el estado, los registros y los recursos de cada proceso",
+        "La tabla que asocia cada página lógica del proceso con un marco de memoria física",
+        "La caché asociativa que guarda las traducciones de direcciones más recientes",
+        "La cola circular en la que esperan los procesos listos para usar la CPU"
+      ],
+      "correcta": 0,
+      "explicacion": "El **PCB** es la estructura del núcleo con la información de cada proceso: **PID, estado, contador de programa, registros, prioridad, memoria y ficheros abiertos**. En el cambio de contexto se guarda el PCB del proceso saliente y se carga el del entrante. La tabla página → marco es la tabla de páginas y la caché de traducciones es la TLB."
+    },
+    {
+      "id": "22",
+      "tema": 13,
+      "enunciado": "En Linux, los contenedores (Docker, Podman) se apoyan en dos mecanismos del núcleo para aislar y limitar recursos:",
+      "opciones": [
+        "chroot y swap",
+        "SELinux y AppArmor",
+        "namespaces y cgroups",
+        "KVM y QEMU"
+      ],
+      "correcta": 2,
+      "explicacion": "Los contenedores comparten el núcleo del anfitrión y se basan en **namespaces** (aislamiento de lo que ve cada contenedor) y **cgroups** (limitación de CPU, memoria, E/S). SELinux y AppArmor son control de acceso obligatorio, y KVM/QEMU sirven para máquinas virtuales completas. Truco: namespaces = «qué veo», cgroups = «cuánto gasto»."
+    },
+    {
+      "id": "23",
+      "tema": 13,
+      "enunciado": "En Unix, ¿qué valor devuelve la llamada `fork()` al proceso hijo cuando tiene éxito?",
+      "opciones": [
+        "El PID del padre",
+        "El PID del hijo",
+        "−1",
+        "0"
+      ],
+      "correcta": 3,
+      "explicacion": "`fork()` devuelve **0 al hijo** y el **PID del hijo al padre**; así cada uno sabe qué papel tiene tras la copia. −1 solo se devuelve (al padre) si la creación falla. El hijo puede obtener el PID de su padre con `getppid()`, pero no es lo que devuelve `fork()`."
+    },
+    {
+      "id": "24",
+      "tema": 13,
+      "enunciado": "¿Qué componente hardware traduce las direcciones lógicas (virtuales) en direcciones físicas?",
+      "opciones": [
+        "El controlador DMA",
+        "La MMU (Memory Management Unit)",
+        "La HAL",
+        "El vector de interrupciones"
+      ],
+      "correcta": 1,
+      "explicacion": "La **MMU** es el hardware que traduce **direcciones lógicas en físicas** usando la tabla de páginas y la TLB. El controlador DMA transfiere datos entre dispositivos y memoria, la HAL es una capa software de Windows y el vector de interrupciones indica qué rutina atiende cada interrupción."
+    },
+    {
+      "id": "25",
+      "tema": 13,
+      "enunciado": "Con páginas de 4 KiB, la dirección lógica hexadecimal 0x5A3C corresponde a:",
+      "opciones": [
+        "Página 5, desplazamiento 0xA3C",
+        "Página 0x5A, desplazamiento 0x3C",
+        "Página 0x5A3, desplazamiento 0xC",
+        "Página 2, desplazamiento 0x1A3C"
+      ],
+      "correcta": 0,
+      "explicacion": "Con 4 KiB = 2^12 bytes, los **12 bits bajos** (3 cifras hexadecimales) son el desplazamiento y el resto es el número de página: 0x5A3C → **página 0x5, desplazamiento 0xA3C**. Separar 2 cifras (0x3C) correspondería a páginas de 256 bytes y separar 1 (0xC) a páginas de 16 bytes. Truco: cada cifra hexadecimal son 4 bits."
+    },
+    {
+      "id": "26",
+      "tema": 13,
+      "enunciado": "La TLB (Translation Lookaside Buffer) es:",
+      "opciones": [
+        "Un búfer de disco para escrituras diferidas",
+        "Una tabla de páginas con una entrada por marco físico",
+        "Una caché asociativa de traducciones de página a marco",
+        "Un par de registros base y límite para proteger la memoria"
+      ],
+      "correcta": 2,
+      "explicacion": "La **TLB** es una **caché asociativa de traducciones** página → marco que evita consultar la tabla de páginas en cada acceso a memoria. La tabla con una entrada por marco físico es la **tabla de páginas invertida**. Los registros base y límite son un mecanismo de protección más antiguo."
+    },
+    {
+      "id": "27",
+      "tema": 13,
+      "enunciado": "La hiperpaginación (thrashing), en la que el sistema pasa más tiempo paginando que ejecutando, se combate:",
+      "opciones": [
+        "Aumentando el grado de multiprogramación para aprovechar la CPU ociosa",
+        "Con el modelo del conjunto de trabajo o reduciendo el grado de multiprogramación",
+        "Sustituyendo LRU por FIFO como algoritmo de reemplazo",
+        "Reduciendo el tamaño de la TLB para liberar memoria"
+      ],
+      "correcta": 1,
+      "explicacion": "El thrashing aparece cuando los procesos no tienen en RAM las páginas que usan; se combate con el **modelo del conjunto de trabajo (working set)** o **reduciendo la multiprogramación**. Aumentarla es precisamente lo que lo empeora, porque reparte aún menos marcos. Cambiar a FIFO no ayuda (además sufre la anomalía de Belady)."
+    },
+    {
+      "id": "28",
+      "tema": 13,
+      "enunciado": "Tras `fork()`, padre e hijo comparten las páginas de memoria hasta que uno de ellos escribe en ellas. Esta técnica se denomina:",
+      "opciones": [
+        "Paginación por demanda",
+        "Copia en escritura (copy-on-write)",
+        "Intercambio (swapping)",
+        "Registro por diario (journaling)"
+      ],
+      "correcta": 1,
+      "explicacion": "La **copia en escritura (copy-on-write)** retrasa la copia de cada página hasta el momento en que alguien la modifica, lo que abarata mucho `fork()`. La paginación por demanda carga una página solo cuando se referencia, y el swapping mueve procesos completos entre RAM y disco. El journaling pertenece a los sistemas de ficheros."
+    },
+    {
+      "id": "29",
+      "tema": 13,
+      "enunciado": "La segmentación pura, con segmentos de tamaño variable (código, datos, pila), produce fragmentación:",
+      "opciones": [
+        "Solo interna, en el último segmento",
+        "Ninguna, porque cada segmento mide lo que necesita",
+        "Interna y externa en la misma medida",
+        "Externa"
+      ],
+      "correcta": 3,
+      "explicacion": "Al ser de tamaño variable, los segmentos dejan **huecos entre ellos en memoria**: la segmentación produce **fragmentación externa**, igual que las particiones variables. La fragmentación interna es la típica de la paginación y de las particiones fijas. Truco: tamaño fijo → interna; tamaño variable → externa."
+    },
+    {
+      "id": "30",
+      "tema": 13,
+      "enunciado": "En la asignación de memoria con particiones variables, el algoritmo que elige el hueco libre más pequeño en el que cabe el proceso es:",
+      "opciones": [
+        "Mejor ajuste (best fit)",
+        "Primer ajuste (first fit)",
+        "Peor ajuste (worst fit)",
+        "Siguiente ajuste (next fit)"
+      ],
+      "correcta": 0,
+      "explicacion": "El **mejor ajuste (best fit)** busca el **hueco más pequeño suficiente**, con el inconveniente de dejar huecos minúsculos. El primer ajuste toma el primer hueco que vale (es el más rápido), el peor ajuste el mayor y el siguiente ajuste sigue buscando desde la última asignación."
+    },
+    {
+      "id": "31",
+      "tema": 13,
+      "enunciado": "¿Qué técnica de E/S permite transferir bloques completos entre el dispositivo y la memoria sin intervención de la CPU, que solo recibe una interrupción al final?",
+      "opciones": [
+        "E/S programada o por sondeo (polling)",
+        "DMA (Direct Memory Access)",
+        "E/S por interrupciones",
+        "Spooling"
+      ],
+      "correcta": 1,
+      "explicacion": "Con **DMA** el controlador DMA mueve el bloque completo a memoria y **solo interrumpe al final**, liberando a la CPU. En el sondeo la CPU pregunta continuamente al dispositivo y en la E/S por interrupciones la CPU interviene en cada transferencia. El spooling es una cola en disco para dispositivos no compartibles, como impresoras."
+    },
+    {
+      "id": "32",
+      "tema": 13,
+      "enunciado": "¿Qué algoritmo de planificación de disco se conoce como «algoritmo del ascensor»?",
+      "opciones": [
+        "SSTF",
+        "SCAN",
+        "FCFS",
+        "C-LOOK"
+      ],
+      "correcta": 1,
+      "explicacion": "**SCAN** mueve el cabezal de un extremo a otro del disco atendiendo peticiones por el camino, como un **ascensor**. SSTF atiende la petición más cercana (y puede causar inanición) y C-LOOK es la variante circular que solo llega hasta la última petición. FCFS atiende por orden de llegada."
+    },
+    {
+      "id": "33",
+      "tema": 13,
+      "enunciado": "Señale la respuesta INCORRECTA sobre los enlaces en sistemas Unix:",
+      "opciones": [
+        "Un enlace simbólico queda roto si se borra el fichero original",
+        "Un enlace duro es otra entrada de directorio que apunta al mismo i-nodo",
+        "Un enlace duro puede apuntar a un fichero situado en otro sistema de ficheros",
+        "`ln -s origen destino` crea un enlace simbólico"
+      ],
+      "correcta": 2,
+      "explicacion": "Es falso que un enlace duro cruce sistemas de ficheros: **apunta a un número de i-nodo**, que solo tiene sentido dentro de su propio sistema de ficheros. El **enlace simbólico** guarda una ruta, por eso sí puede cruzarlos y queda roto si se borra el original. Las otras tres afirmaciones son correctas."
+    },
+    {
+      "id": "34",
+      "tema": 13,
+      "enunciado": "En NTFS, la estructura que contiene al menos un registro por cada fichero y directorio del volumen es:",
+      "opciones": [
+        "La FAT (File Allocation Table)",
+        "La tabla de i-nodos",
+        "La MFT (Master File Table)",
+        "La partición ESP"
+      ],
+      "correcta": 2,
+      "explicacion": "NTFS organiza todo el volumen en torno a la **MFT (Master File Table)**, con un registro por fichero y directorio. La FAT es la tabla de FAT16/FAT32, la tabla de i-nodos es propia de los sistemas Unix (ext4) y la ESP es la partición de arranque UEFI."
+    },
+    {
+      "id": "35",
+      "tema": 13,
+      "enunciado": "¿Qué sistema de ficheros de Linux se basa en copy-on-write y ofrece instantáneas (snapshots), subvolúmenes, sumas de verificación y RAID integrado?",
+      "opciones": [
+        "Btrfs",
+        "ext3",
+        "XFS",
+        "exFAT"
+      ],
+      "correcta": 0,
+      "explicacion": "**Btrfs** es el sistema de ficheros de Linux con **copy-on-write**, snapshots, subvolúmenes, checksums y RAID integrado. ext3 se limitó a añadir journaling a ext2, XFS destaca por rendimiento con ficheros grandes (y es el predeterminado en RHEL) y exFAT es de Microsoft para memorias flash, sin journaling."
+    },
+    {
+      "id": "36",
+      "tema": 13,
+      "enunciado": "Con el esquema de particionado MBR y sectores de 512 bytes, un disco admite como máximo:",
+      "opciones": [
+        "4 particiones primarias y un tamaño de 2 TiB",
+        "128 particiones primarias y un tamaño de 2 TiB",
+        "4 particiones primarias y un tamaño de 16 TiB",
+        "8 particiones primarias y un tamaño de 2 TiB"
+      ],
+      "correcta": 0,
+      "explicacion": "**MBR** admite **4 particiones primarias** (o 3 primarias + 1 extendida con lógicas) y discos de hasta **2 TiB** con sectores de 512 B. Las 128 particiones son el valor por defecto de **GPT** en Windows. Truco: MBR es el «viejo» de los números pequeños (4 y 2)."
+    },
+    {
+      "id": "37",
+      "tema": 13,
+      "enunciado": "El sistema operativo UNIX fue creado en 1969 en los Bell Labs de AT&T por:",
+      "opciones": [
+        "Linus Torvalds y Richard Stallman",
+        "Andrew Tanenbaum y Edsger Dijkstra",
+        "Bill Gates y Paul Allen",
+        "Ken Thompson y Dennis Ritchie"
+      ],
+      "correcta": 3,
+      "explicacion": "**Ken Thompson y Dennis Ritchie** crearon UNIX en **1969** en Bell Labs; en 1973 lo reescribieron en C, lo que lo hizo portable. Torvalds creó el núcleo Linux (1991) y Stallman el proyecto GNU (1983). Tanenbaum es el autor de MINIX y Gates y Allen fundaron Microsoft."
+    },
+    {
+      "id": "38",
+      "tema": 13,
+      "enunciado": "En la arquitectura de Windows NT, la capa que aísla al núcleo y al Ejecutivo de las particularidades del hardware concreto es:",
+      "opciones": [
+        "El Ejecutivo",
+        "La HAL (hal.dll)",
+        "Win32k.sys",
+        "ntdll.dll"
+      ],
+      "correcta": 1,
+      "explicacion": "La **HAL (Hardware Abstraction Layer, `hal.dll`)** es la capa de abstracción de hardware que esconde las diferencias entre placas. El Ejecutivo agrupa los administradores (objetos, procesos, memoria, E/S), **Win32k.sys** gestiona ventanas y gráficos, y `ntdll.dll` expone la API nativa en modo usuario."
+    },
+    {
+      "id": "39",
+      "tema": 13,
+      "enunciado": "¿Qué proceso de Windows, en modo usuario, se encarga de la autenticación de usuarios y de aplicar la política de seguridad local?",
+      "opciones": [
+        "csrss.exe",
+        "services.exe",
+        "smss.exe",
+        "lsass.exe"
+      ],
+      "correcta": 3,
+      "explicacion": "**`lsass.exe`** (Local Security Authority Subsystem Service) gestiona la **autenticación y la política de seguridad**. `csrss.exe` es el subsistema de entorno Win32, `services.exe` controla los servicios y `smss.exe` es el gestor de sesiones, el primer proceso de usuario del arranque."
+    },
+    {
+      "id": "40",
+      "tema": 13,
+      "enunciado": "¿En qué orden se aplican las directivas de grupo (GPO) en un dominio de Active Directory?",
+      "opciones": [
+        "Dominio, sitio, unidad organizativa y local",
+        "Local, dominio, sitio y unidad organizativa",
+        "Local, sitio, dominio y unidad organizativa",
+        "Unidad organizativa, dominio, sitio y local"
+      ],
+      "correcta": 2,
+      "explicacion": "Las GPO se aplican en orden **LSDOU: Local, Sitio, Dominio y Unidad Organizativa**. Como la última que se aplica prevalece en caso de conflicto, la de la OU es la que más pesa. Truco: de lo más general a lo más cercano al objeto, empezando por el propio equipo."
+    },
+    {
+      "id": "41",
+      "tema": 13,
+      "enunciado": "En Active Directory Domain Services, el protocolo de autenticación utilizado por defecto es:",
+      "opciones": [
+        "Kerberos",
+        "NTLM",
+        "LDAP",
+        "RADIUS"
+      ],
+      "correcta": 0,
+      "explicacion": "AD DS usa **Kerberos** como protocolo de **autenticación por defecto**, basado en tickets. NTLM es el protocolo heredado que queda como alternativa, **LDAP** es el protocolo de acceso al directorio (consultas, no autenticación por tickets) y RADIUS se usa en accesos de red."
+    },
+    {
+      "id": "42",
+      "tema": 13,
+      "enunciado": "En la multitarea cooperativa, propia de Windows 3.x y del Mac OS clásico:",
+      "opciones": [
+        "El sistema operativo retira la CPU al proceso cuando vence su cuanto",
+        "Varios procesadores ejecutan procesos distintos al mismo tiempo",
+        "Una CPU maestra reparte el trabajo entre las demás",
+        "Cada proceso cede voluntariamente la CPU"
+      ],
+      "correcta": 3,
+      "explicacion": "En la **multitarea cooperativa** es el propio **proceso el que cede la CPU**; si se cuelga, bloquea todo el sistema. Que el SO retire la CPU es la **multitarea apropiativa** (Windows NT, Unix, Linux), apoyada en el reloj. Varias CPU a la vez es multiproceso y la CPU maestra corresponde al multiprocesamiento asimétrico (AMP)."
+    },
+    {
+      "id": "43",
+      "tema": 13,
+      "enunciado": "A diferencia de los shells clásicos como `cmd.exe` o `bash`, PowerShell pasa entre órdenes de una tubería:",
+      "opciones": [
+        "Objetos .NET",
+        "Texto plano",
+        "Flujos binarios sin estructura",
+        "Ficheros temporales en disco"
+      ],
+      "correcta": 0,
+      "explicacion": "**PowerShell** es un shell **orientado a objetos** basado en .NET: cada cmdlet (con forma Verbo-Sustantivo, como `Get-Process`) entrega objetos con propiedades al siguiente. Los shells tradicionales como bash o cmd encadenan **texto**. Los ficheros temporales eran el modo de simular tuberías en MS-DOS, no el de PowerShell."
+    },
+    {
+      "id": "44",
+      "tema": 13,
+      "enunciado": "El comando `sfc /scannow` de Windows:",
+      "opciones": [
+        "Comprueba y repara los ficheros protegidos del sistema",
+        "Busca errores del sistema de ficheros y sectores defectuosos del disco",
+        "Fuerza la aplicación inmediata de las directivas de grupo",
+        "Muestra la configuración completa de todas las interfaces de red"
+      ],
+      "correcta": 0,
+      "explicacion": "**`sfc /scannow`** (System File Checker) **repara ficheros del sistema** dañados; `DISM` repara la imagen de la que se toman. Revisar el disco es tarea de `chkdsk /f`, forzar las GPO de `gpupdate /force` y ver la red de `ipconfig /all`."
+    },
+    {
+      "id": "45",
+      "tema": 13,
+      "enunciado": "Tres procesos con planificación SRTF: P1 llega en t = 0 (ráfaga 8), P2 en t = 1 (ráfaga 4) y P3 en t = 2 (ráfaga 2). ¿Cuál es el tiempo medio de espera?",
+      "opciones": [
+        "4",
+        "3,33",
+        "5",
+        "2,67"
+      ],
+      "correcta": 3,
+      "explicacion": "Con SRTF: P1 corre de 0 a 1; P2 la expropia (4 < 7) y corre de 1 a 2; P3 la expropia (2 < 3) y corre de 2 a 4; luego P2 de 4 a 7 y P1 de 7 a 14. Esperas (fin − llegada − ráfaga): P1 = 14 − 0 − 8 = 6, P2 = 7 − 1 − 4 = 2, P3 = 4 − 2 − 2 = 0 → **8/3 ≈ 2,67**. 5 sería el resultado con SJF no apropiativo (P1, P3, P2)."
+    },
+    {
+      "id": "46",
+      "tema": 13,
+      "enunciado": "¿En qué fichero de Linux se almacenan los hash de las contraseñas de los usuarios?",
+      "opciones": [
+        "/etc/passwd",
+        "/etc/group",
+        "/etc/shadow",
+        "/etc/sudoers"
+      ],
+      "correcta": 2,
+      "explicacion": "Los hash de las contraseñas están en **`/etc/shadow`**, legible solo por root. `/etc/passwd` es legible por todos y guarda usuario, UID, GID, directorio y shell, con una `x` en lugar de la contraseña. `/etc/group` define los grupos y `/etc/sudoers` quién puede usar `sudo`."
+    },
+    {
+      "id": "47",
+      "tema": 13,
+      "enunciado": "Tras ejecutar `chmod 4755 prog`, el fichero `prog`:",
+      "opciones": [
+        "Se ejecuta con el GID del grupo propietario del fichero",
+        "Solo puede ser borrado por su propietario aunque otros tengan escritura",
+        "Se ejecuta con el UID de su propietario, sea quien sea quien lo lance",
+        "Pasa a tener permisos de lectura, escritura y ejecución para todos"
+      ],
+      "correcta": 2,
+      "explicacion": "La cifra inicial **4** activa el bit **SUID (4000)**: el programa se ejecuta con el **UID del propietario**, como `/usr/bin/passwd`, que necesita escribir en `/etc/shadow`. El GID del grupo sería SGID (2000) y la restricción de borrado el sticky bit (1000). El resto (755) son los permisos normales rwxr-xr-x."
+    },
+    {
+      "id": "48",
+      "tema": 13,
+      "enunciado": "En una shell de Linux, `orden > salida.txt 2>&1` hace que:",
+      "opciones": [
+        "Solo la salida de errores vaya a salida.txt",
+        "La salida estándar vaya a salida.txt y los errores sigan en pantalla",
+        "La salida estándar se añada al final de salida.txt sin sobrescribirlo",
+        "La salida estándar y la de errores vayan a salida.txt"
+      ],
+      "correcta": 3,
+      "explicacion": "`>` redirige la **salida estándar (descriptor 1)** al fichero y `2>&1` envía los **errores (descriptor 2)** al mismo destino que la 1: **ambas van a salida.txt**. Sin `2>&1` los errores seguirían en pantalla, y para añadir sin sobrescribir haría falta `>>`. Truco: 0 = stdin, 1 = stdout, 2 = stderr."
+    },
+    {
+      "id": "49",
+      "tema": 13,
+      "enunciado": "¿Cuándo se ejecuta la siguiente línea de crontab? `30 2 * * 1 /usr/local/bin/copia.sh`",
+      "opciones": [
+        "El día 1 de cada mes a las 02:30",
+        "Todos los días a las 02:30 durante enero",
+        "Todos los lunes a las 02:30",
+        "Cada 30 minutos durante las dos primeras horas del lunes"
+      ],
+      "correcta": 2,
+      "explicacion": "Los campos son **minuto, hora, día del mes, mes y día de la semana**: 30 2 * * 1 = minuto 30, hora 2, cualquier día y mes, **día de la semana 1 (lunes)**. Para el día 1 de cada mes haría falta `30 2 1 * *` y para enero `30 2 * 1 *`. Truco: «min hora día mes día_semana»."
+    },
+    {
+      "id": "50",
+      "tema": 13,
+      "enunciado": "En Linux, el valor *nice* de un proceso:",
+      "opciones": [
+        "Va de −20 a 19, y un valor mayor da más prioridad",
+        "Va de 0 a 31, y un valor mayor da más prioridad",
+        "Va de −20 a 19, y un valor menor da más prioridad",
+        "Va de −19 a 20, y un valor menor da más prioridad"
+      ],
+      "correcta": 2,
+      "explicacion": "El *nice* va de **−20 a 19** y cuanto **menor** es, **más prioridad** tiene el proceso (es «menos amable» con los demás). Solo root puede bajarlo por debajo de 0. Los 32 niveles (0–31) con mayor = más prioridad son los de Windows."
+    },
+    {
+      "id": "51",
+      "tema": 13,
+      "enunciado": "¿Qué gestor de paquetes de alto nivel usan las distribuciones actuales de la familia Red Hat (RHEL, Fedora, Rocky Linux)?",
+      "opciones": [
+        "apt",
+        "dnf",
+        "zypper",
+        "pacman"
+      ],
+      "correcta": 1,
+      "explicacion": "La familia Red Hat usa paquetes **.rpm** con el gestor **`dnf`**, que sustituyó a `yum`. `apt` es de la familia Debian (Ubuntu, Mint), `zypper` de SUSE y `pacman` de Arch Linux."
+    },
+    {
+      "id": "52",
+      "tema": 13,
+      "enunciado": "En systemd, el antiguo nivel de ejecución 3 de SysV (multiusuario en modo texto) corresponde al target:",
+      "opciones": [
+        "graphical.target",
+        "multi-user.target",
+        "rescue.target",
+        "poweroff.target"
+      ],
+      "correcta": 1,
+      "explicacion": "El runlevel 3 equivale a **`multi-user.target`**. El 5 (entorno gráfico) es `graphical.target`, el 1 (monousuario) es `rescue.target` y el 0 (apagar) es `poweroff.target`."
+    },
+    {
+      "id": "53",
+      "tema": 13,
+      "enunciado": "En Android, el componente de una aplicación que responde a eventos difundidos por el sistema, como batería baja o cambio de conectividad, es:",
+      "opciones": [
+        "Broadcast Receiver",
+        "Content Provider",
+        "Service",
+        "Activity"
+      ],
+      "correcta": 0,
+      "explicacion": "El **Broadcast Receiver** **responde a eventos del sistema** o de otras apps. La **Activity** es una pantalla, el **Service** una tarea en segundo plano y el **Content Provider** comparte datos con otras apps. Todos se comunican mediante Intents y se declaran en `AndroidManifest.xml`."
+    },
+    {
+      "id": "54",
+      "tema": 13,
+      "enunciado": "Señale la respuesta INCORRECTA sobre el modelo de seguridad de Android:",
+      "opciones": [
+        "Desde Android 6.0 los permisos se conceden en tiempo de ejecución",
+        "Todas las aplicaciones comparten un mismo UID de Linux para facilitar su comunicación",
+        "SELinux funciona en modo enforcing",
+        "Cada aplicación se ejecuta en su propio proceso, aislada en un sandbox"
+      ],
+      "correcta": 1,
+      "explicacion": "Es falso: en Android **cada app tiene su propio UID de Linux** y su propio proceso, que es la base del **sandbox**. Las demás afirmaciones son ciertas: permisos en tiempo de ejecución desde **Android 6.0** y SELinux en modo *enforcing*. La comunicación entre apps se hace con Intents y Binder, no compartiendo UID."
+    },
+    {
+      "id": "55",
+      "tema": 13,
+      "enunciado": "En la arquitectura de iOS, la capa que incluye UIKit y gestiona la interfaz y los eventos táctiles es:",
+      "opciones": [
+        "Core OS",
+        "Core Services",
+        "Cocoa Touch",
+        "Media"
+      ],
+      "correcta": 2,
+      "explicacion": "**Cocoa Touch** es la capa superior de iOS, con **UIKit**, la interfaz y los eventos táctiles. Por debajo están **Media** (Core Graphics, Core Audio, Metal), **Core Services** (Foundation, Core Data, iCloud) y **Core OS** (núcleo, seguridad, energía)."
+    },
+    {
+      "id": "56",
+      "tema": 13,
+      "enunciado": "¿Cuál de los siguientes sistemas tiene una arquitectura de micronúcleo?",
+      "opciones": [
+        "QNX",
+        "Linux",
+        "Windows NT",
+        "MS-DOS"
+      ],
+      "correcta": 0,
+      "explicacion": "**QNX**, como Mach, MINIX 3 o seL4, es un **micronúcleo**: núcleo mínimo con el resto de servicios en modo usuario. Linux y MS-DOS son monolíticos (Linux, además, modular) y Windows NT es híbrido."
+    },
+    {
+      "id": "57",
+      "tema": 13,
+      "enunciado": "Un fallo de página (page fault) es un ejemplo de:",
+      "opciones": [
+        "Interrupción hardware asíncrona generada por un dispositivo",
+        "Señal Unix enviada por otro proceso",
+        "Interrupción periódica del reloj del sistema",
+        "Excepción síncrona provocada por la instrucción en curso"
+      ],
+      "correcta": 3,
+      "explicacion": "El fallo de página es una **excepción (trap) síncrona**: lo causa la propia instrucción al acceder a una página no presente, y tras traerla el SO reintenta la instrucción. Las **interrupciones hardware** (fin de E/S, reloj) son **asíncronas** y vienen de dispositivos. Las señales Unix son un mecanismo de IPC entre procesos."
+    },
+    {
+      "id": "58",
+      "tema": 13,
+      "enunciado": "En un semáforo de Dijkstra, la operación P (wait o down):",
+      "opciones": [
+        "Incrementa el valor y despierta a un proceso bloqueado",
+        "Decrementa el valor y bloquea al proceso si el resultado es negativo",
+        "Consulta el valor sin modificarlo",
+        "Libera la exclusión mutua implícita de un monitor"
+      ],
+      "correcta": 1,
+      "explicacion": "**P / wait / down** **decrementa** el semáforo y **bloquea** al proceso si el valor queda por debajo de 0. Incrementar y despertar es la operación **V / signal / up**. La exclusión mutua implícita es propia de los **monitores**, no de los semáforos."
+    },
+    {
+      "id": "59",
+      "tema": 13,
+      "enunciado": "El algoritmo del banquero de Dijkstra es una técnica de tratamiento del interbloqueo basada en:",
+      "opciones": [
+        "La prevención: se elimina una de las cuatro condiciones de Coffman",
+        "La detección y recuperación: se buscan ciclos y se matan procesos",
+        "La estrategia del avestruz: se ignora el problema",
+        "La evitación: solo se concede un recurso si el sistema queda en estado seguro"
+      ],
+      "correcta": 3,
+      "explicacion": "El **algoritmo del banquero** es de **evitación**: antes de conceder un recurso comprueba que el sistema siga en **estado seguro**. La prevención rompe una condición de Coffman (p. ej., ordenando recursos), la detección busca ciclos a posteriori y el avestruz, que es lo que hacen en la práctica Unix y Windows, lo ignora."
+    },
+    {
+      "id": "60",
+      "tema": 13,
+      "enunciado": "Un proceso de baja prioridad retiene un recurso que necesita otro de alta prioridad, que queda esperando. La solución habitual a este problema es:",
+      "opciones": [
+        "El envejecimiento (aging)",
+        "El algoritmo del banquero",
+        "Reducir el cuanto de Round Robin",
+        "La herencia de prioridad"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la **inversión de prioridades** y se resuelve con la **herencia de prioridad**: el proceso de baja prioridad hereda temporalmente la alta mientras retiene el recurso. El envejecimiento resuelve la **inanición** en la planificación por prioridades y el banquero evita interbloqueos."
+    }
+  ]
+}

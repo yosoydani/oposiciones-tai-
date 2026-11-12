@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 18 · test",
+  "fuente": "propio",
+  "tema": 18,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 18. Programación orientada a objetos, patrones y UML»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 18,
+      "enunciado": "¿Qué lenguaje introdujo por primera vez los conceptos de clase, objeto y herencia?",
+      "opciones": [
+        "Smalltalk",
+        "Simula 67",
+        "C++",
+        "Eiffel"
+      ],
+      "correcta": 1,
+      "explicacion": "**Simula 67** (Dahl y Nygaard, Noruega) fue el primer lenguaje con clases, objetos, herencia y subclases. Smalltalk (Alan Kay) llegó después y popularizó la POO «pura»; C++ (1985) llevó la POO a C y Eiffel (1986) aportó el diseño por contrato."
+    },
+    {
+      "id": "02",
+      "tema": 18,
+      "enunciado": "La sobrecarga de métodos se resuelve:",
+      "opciones": [
+        "En tiempo de ejecución",
+        "Al cargar la clase",
+        "En tiempo de compilación",
+        "Mediante ligadura dinámica"
+      ],
+      "correcta": 2,
+      "explicacion": "La sobrecarga usa **ligadura estática**: el **compilador** elige el método según la lista de parámetros de la llamada. La resolución en ejecución (ligadura dinámica) es propia de la sobrescritura. Truco: sobre**c**arga = **c**ompilación."
+    },
+    {
+      "id": "03",
+      "tema": 18,
+      "enunciado": "En Java, para sobrecargar un método es necesario:",
+      "opciones": [
+        "Cambiar la lista de parámetros",
+        "Cambiar solo el tipo de retorno",
+        "Cambiar solo la visibilidad",
+        "Añadir la anotación `@Override`"
+      ],
+      "correcta": 0,
+      "explicacion": "Sobrecargar exige **variar el número, el tipo o el orden de los parámetros**. El tipo de retorno o la visibilidad por sí solos no bastan (el compilador no podría distinguir las llamadas), y `@Override` marca la sobrescritura, no la sobrecarga."
+    },
+    {
+      "id": "04",
+      "tema": 18,
+      "enunciado": "En un diagrama de clases UML, un rombo relleno en un extremo de la asociación indica:",
+      "opciones": [
+        "Agregación",
+        "Composición",
+        "Dependencia",
+        "Realización"
+      ],
+      "correcta": 1,
+      "explicacion": "El **rombo relleno (negro) es la composición**: la parte pertenece a un solo todo y muere con él. El rombo vacío es la agregación (todo-parte débil); la dependencia es una línea discontinua con flecha abierta y la realización, discontinua con triángulo vacío."
+    },
+    {
+      "id": "05",
+      "tema": 18,
+      "enunciado": "La relación de realización entre una clase y una interfaz se dibuja con:",
+      "opciones": [
+        "Línea continua y triángulo vacío",
+        "Línea discontinua y flecha abierta",
+        "Línea discontinua y triángulo vacío",
+        "Línea continua y rombo vacío"
+      ],
+      "correcta": 2,
+      "explicacion": "La **realización** se dibuja con **línea discontinua y triángulo vacío** apuntando a la interfaz. Con línea continua y triángulo sería generalización (herencia); discontinua con flecha abierta es dependencia y el rombo vacío, agregación."
+    },
+    {
+      "id": "06",
+      "tema": 18,
+      "enunciado": "¿Cuántos tipos de diagrama define UML 2.5?",
+      "opciones": [
+        "9",
+        "12",
+        "13",
+        "14"
+      ],
+      "correcta": 3,
+      "explicacion": "UML 2.5 define **14 diagramas: 7 de estructura y 7 de comportamiento** (4 de ellos de interacción). 9 eran los de UML 1.x y 13 los de UML 2.0; el diagrama de perfiles (UML 2.2) completó los 14."
+    },
+    {
+      "id": "07",
+      "tema": 18,
+      "enunciado": "¿Cuál de los siguientes NO es un diagrama de interacción de UML 2.5?",
+      "opciones": [
+        "Secuencia",
+        "Tiempos",
+        "Máquina de estados",
+        "Comunicación"
+      ],
+      "correcta": 2,
+      "explicacion": "La **máquina de estados** es un diagrama de comportamiento, pero **no de interacción**. Los cuatro de interacción son secuencia, comunicación, tiempos y visión global de la interacción."
+    },
+    {
+      "id": "08",
+      "tema": 18,
+      "enunciado": "¿Qué patrón garantiza que una clase tenga una única instancia con un punto de acceso global?",
+      "opciones": [
+        "Singleton",
+        "Prototype",
+        "Flyweight",
+        "Facade"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la intención del **Singleton** (creacional), que suele implementarse con constructor privado y un método `getInstance()`. Prototype crea objetos clonando, Flyweight comparte muchos objetos pequeños y Facade simplifica un subsistema."
+    },
+    {
+      "id": "09",
+      "tema": 18,
+      "enunciado": "¿Cuál de estos patrones GoF es estructural?",
+      "opciones": [
+        "Observer",
+        "Strategy",
+        "Builder",
+        "Decorator"
+      ],
+      "correcta": 3,
+      "explicacion": "**Decorator** es **estructural**: añade responsabilidades a un objeto de forma dinámica. Observer y Strategy son de comportamiento y Builder es creacional."
+    },
+    {
+      "id": "10",
+      "tema": 18,
+      "enunciado": "El patrón que define una dependencia uno-a-muchos para notificar los cambios de un objeto a sus dependientes es:",
+      "opciones": [
+        "Mediator",
+        "Observer",
+        "Command",
+        "Visitor"
+      ],
+      "correcta": 1,
+      "explicacion": "**Observer** establece una relación **uno-a-muchos**: cuando el sujeto cambia, notifica a sus observadores (publicar-suscribir). Mediator centraliza la comunicación entre objetos, Command encapsula peticiones y Visitor añade operaciones a una estructura."
+    },
+    {
+      "id": "11",
+      "tema": 18,
+      "enunciado": "«Las entidades software deben estar abiertas a la extensión y cerradas a la modificación» es el principio:",
+      "opciones": [
+        "De responsabilidad única",
+        "De sustitución de Liskov",
+        "Abierto/cerrado",
+        "De inversión de dependencias"
+      ],
+      "correcta": 2,
+      "explicacion": "Es el **principio abierto/cerrado (OCP)**, formulado por Bertrand Meyer, la «O» de SOLID. Responsabilidad única es «un solo motivo para cambiar», Liskov trata de la sustitución de subtipos y la inversión de dependencias, de depender de abstracciones."
+    },
+    {
+      "id": "12",
+      "tema": 18,
+      "enunciado": "En Java, un miembro `protected` es accesible desde:",
+      "opciones": [
+        "Solo la propia clase",
+        "Las subclases y las clases del mismo paquete",
+        "Solo las subclases",
+        "Cualquier clase"
+      ],
+      "correcta": 1,
+      "explicacion": "En **Java**, `protected` da acceso a las **subclases y además a todo el paquete**. «Solo las subclases» es el `protected` de C#, la trampa típica. Solo la propia clase es `private` y cualquier clase, `public`."
+    },
+    {
+      "id": "13",
+      "tema": 18,
+      "enunciado": "En UML, el símbolo `#` delante de un atributo indica visibilidad:",
+      "opciones": [
+        "Protegida",
+        "De paquete",
+        "Privada",
+        "Pública"
+      ],
+      "correcta": 0,
+      "explicacion": "En UML: **+ público, − privado, # protegido** y **~ paquete**. Truco: la almohadilla `#` es como una «valla» que solo cruzan los hijos."
+    },
+    {
+      "id": "14",
+      "tema": 18,
+      "enunciado": "¿Qué lenguaje admite herencia múltiple de clases?",
+      "opciones": [
+        "Java",
+        "C#",
+        "Kotlin",
+        "C++"
+      ],
+      "correcta": 3,
+      "explicacion": "**C++** permite **herencia múltiple** de clases (y resuelve el problema del diamante con herencia virtual). Java, C# y Kotlin solo tienen herencia simple de clases y simulan la múltiple implementando varias interfaces."
+    },
+    {
+      "id": "15",
+      "tema": 18,
+      "enunciado": "En un diagrama de casos de uso, la relación `«include»` indica:",
+      "opciones": [
+        "Comportamiento opcional insertado en un punto de extensión",
+        "Una flecha que va del caso incluido al caso base",
+        "Comportamiento que el caso base incorpora siempre",
+        "Una generalización entre actores"
+      ],
+      "correcta": 2,
+      "explicacion": "`«include»` indica que el caso base **siempre incorpora** el comportamiento del incluido, y la flecha va **del base al incluido**. Lo opcional en un punto de extensión es `«extend»`, y la generalización se dibuja con triángulo vacío."
+    },
+    {
+      "id": "16",
+      "tema": 18,
+      "enunciado": "¿Cuántos patrones de comportamiento recoge el catálogo GoF?",
+      "opciones": [
+        "11",
+        "5",
+        "7",
+        "23"
+      ],
+      "correcta": 0,
+      "explicacion": "El catálogo GoF tiene **23 patrones = 5 creacionales + 7 estructurales + 11 de comportamiento**. 5 y 7 son las otras dos categorías y 23 es el total."
+    },
+    {
+      "id": "17",
+      "tema": 18,
+      "enunciado": "El desajuste de impedancia objeto-relacional se aborda habitualmente con:",
+      "opciones": [
+        "Patrón Singleton",
+        "Sobrecarga de operadores",
+        "Diagramas de despliegue",
+        "Herramientas ORM"
+      ],
+      "correcta": 3,
+      "explicacion": "Las herramientas **ORM** (JPA/Hibernate, Entity Framework) traducen los objetos a tablas relacionales y resuelven el **desajuste de impedancia**. Singleton, la sobrecarga de operadores y los diagramas de despliegue no tienen relación con ese problema."
+    },
+    {
+      "id": "18",
+      "tema": 18,
+      "enunciado": "¿Qué tipo de cohesión es el más deseable en un módulo?",
+      "opciones": [
+        "Lógica",
+        "Temporal",
+        "Coincidental",
+        "Funcional"
+      ],
+      "correcta": 3,
+      "explicacion": "La **cohesión funcional** (el módulo hace una única tarea bien definida) es la mejor; la **coincidental** es la peor. Lógica y temporal están en la parte baja de la escala (coincidental, lógica, temporal, procedimental, comunicacional, secuencial, funcional)."
+    },
+    {
+      "id": "19",
+      "tema": 18,
+      "enunciado": "Sobre una clase abstracta en Java, es correcto que:",
+      "opciones": [
+        "Puede tener constructores y atributos de instancia",
+        "Puede instanciarse con `new`",
+        "Una clase puede extender varias",
+        "Todos sus métodos deben ser abstractos"
+      ],
+      "correcta": 0,
+      "explicacion": "Una clase abstracta **puede tener estado (atributos de instancia) y constructores**, que usan sus subclases. No se puede instanciar con `new`, Java solo permite extender una clase y puede mezclar métodos abstractos y concretos."
+    },
+    {
+      "id": "20",
+      "tema": 18,
+      "enunciado": "La versión vigente de la especificación UML del OMG es:",
+      "opciones": [
+        "2.0",
+        "2.4.1",
+        "2.5.1",
+        "3.0"
+      ],
+      "correcta": 2,
+      "explicacion": "La versión vigente es **UML 2.5.1 (diciembre de 2017)**. UML 2.0 (2005) amplió los diagramas y UML 2.4.1 es la que se publicó como norma ISO/IEC 19505; no existe UML 3.0."
+    },
+    {
+      "id": "21",
+      "tema": 18,
+      "enunciado": "El **diseño por contrato** (precondiciones, postcondiciones e invariantes) se asocia al lenguaje:",
+      "opciones": [
+        "Smalltalk, de Alan Kay",
+        "Eiffel, de Bertrand Meyer",
+        "C++, de Bjarne Stroustrup",
+        "Simula 67, de Dahl y Nygaard"
+      ],
+      "correcta": 1,
+      "explicacion": "El **diseño por contrato** lo introdujo **Bertrand Meyer en Eiffel** (1986). Smalltalk es la POO pura y el origen de MVC, C++ aportó la POO sobre C con herencia múltiple y Simula 67 fue el primer lenguaje con clases."
+    },
+    {
+      "id": "22",
+      "tema": 18,
+      "enunciado": "¿Qué pilar de la POO consiste en representar solo las características esenciales de una entidad, ignorando lo irrelevante?",
+      "opciones": [
+        "Encapsulamiento",
+        "Abstracción",
+        "Herencia",
+        "Polimorfismo"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la **abstracción**, que se concreta en clases, clases abstractas e interfaces. El encapsulamiento oculta el estado interno, la herencia reutiliza y especializa clases y el polimorfismo hace que un mismo mensaje dé comportamientos distintos."
+    },
+    {
+      "id": "23",
+      "tema": 18,
+      "enunciado": "En Java, ¿cuál de estas llamadas se resuelve mediante ligadura dinámica?",
+      "opciones": [
+        "Un método de instancia sobrescrito, invocado a través de una referencia de la superclase",
+        "Un método `static` invocado con el nombre de la clase",
+        "Un método `private` invocado desde la propia clase",
+        "Un método `final` invocado sobre un objeto"
+      ],
+      "correcta": 0,
+      "explicacion": "La **ligadura dinámica** elige el método **en ejecución** según el tipo real del objeto, y se aplica a los métodos de instancia **sobrescritos**. Los métodos `static`, `private` y `final` no se pueden redefinir, así que se resuelven en compilación (ligadura estática)."
+    },
+    {
+      "id": "24",
+      "tema": 18,
+      "enunciado": "¿Cuáles son las fases del Proceso Unificado (RUP)?",
+      "opciones": [
+        "Análisis, Diseño, Implementación y Pruebas",
+        "Planificación, Análisis de riesgos, Ingeniería y Evaluación",
+        "Requisitos, Diseño, Construcción y Despliegue",
+        "Inicio, Elaboración, Construcción y Transición"
+      ],
+      "correcta": 3,
+      "explicacion": "El **Proceso Unificado** es iterativo e incremental, dirigido por casos de uso y centrado en la arquitectura, con las fases **Inicio, Elaboración, Construcción y Transición**. Análisis-Diseño-Implementación-Pruebas son actividades (o el modelo en cascada) y Planificación-Riesgos-Ingeniería-Evaluación son los cuadrantes del modelo en espiral."
+    },
+    {
+      "id": "25",
+      "tema": 18,
+      "enunciado": "¿Cuál de los siguientes NO es un patrón GRASP de Craig Larman?",
+      "opciones": [
+        "Experto en información",
+        "Creador",
+        "Singleton",
+        "Fabricación pura"
+      ],
+      "correcta": 2,
+      "explicacion": "**Singleton es un patrón GoF** (creacional), no GRASP. Los GRASP asignan responsabilidades: **Experto en información, Creador, Controlador, Bajo acoplamiento, Alta cohesión, Polimorfismo, Fabricación pura, Indirección y Variaciones protegidas**."
+    },
+    {
+      "id": "26",
+      "tema": 18,
+      "enunciado": "En una clase Java solo se ha escrito un constructor con parámetros, `Expediente(String id)`. ¿Qué ocurre con `new Expediente()`?",
+      "opciones": [
+        "Funciona, porque el compilador siempre genera un constructor sin parámetros",
+        "Da error de compilación, porque el compilador ya no genera el constructor por defecto",
+        "Funciona e inicializa `id` con la cadena vacía",
+        "Compila, pero lanza una excepción en tiempo de ejecución"
+      ],
+      "correcta": 1,
+      "explicacion": "El compilador solo genera el **constructor por defecto** sin parámetros **si no se escribe ninguno**; en cuanto hay uno, deja de generarlo, así que `new Expediente()` **no compila**. Si se quiere esa forma, hay que declarar también el constructor sin parámetros."
+    },
+    {
+      "id": "27",
+      "tema": 18,
+      "enunciado": "Un atributo declarado `static` en una clase Java:",
+      "opciones": [
+        "Tiene una copia independiente en cada objeto",
+        "No puede modificarse una vez asignado",
+        "Solo es accesible desde las subclases",
+        "Es compartido por todas las instancias de la clase"
+      ],
+      "correcta": 3,
+      "explicacion": "Un atributo **static es de clase**: hay **una sola copia compartida** por todas las instancias (como el `contador` de expedientes). Una copia por objeto es un atributo de instancia, lo que no se puede modificar es lo `final` y el acceso desde subclases depende de la visibilidad."
+    },
+    {
+      "id": "28",
+      "tema": 18,
+      "enunciado": "En C#, ¿qué modificador limita el acceso a un miembro a las clases del mismo ensamblado?",
+      "opciones": [
+        "`protected`",
+        "`private`",
+        "`internal`",
+        "`sealed`"
+      ],
+      "correcta": 2,
+      "explicacion": "En C#, **`internal`** da acceso **dentro del mismo ensamblado**, el equivalente aproximado al acceso de paquete de Java. `protected` en C# es solo para subclases, `private` para la propia clase y `sealed` no es un modificador de visibilidad: impide heredar."
+    },
+    {
+      "id": "29",
+      "tema": 18,
+      "enunciado": "Un miembro de una clase Java declarado sin modificador de visibilidad (*package-private*) se representa en UML con el símbolo:",
+      "opciones": [
+        "#",
+        "~",
+        "−",
+        "+"
+      ],
+      "correcta": 1,
+      "explicacion": "Sin modificador, en Java el miembro tiene **visibilidad de paquete**, que en UML se marca con **~**. `#` es protegido, `−` privado y `+` público."
+    },
+    {
+      "id": "30",
+      "tema": 18,
+      "enunciado": "Desde Java 8, una interfaz puede contener:",
+      "opciones": [
+        "Atributos de instancia",
+        "Métodos `default` y `static` con cuerpo",
+        "Constructores",
+        "Métodos `protected`"
+      ],
+      "correcta": 1,
+      "explicacion": "Java 8 permitió **métodos `default` y `static` con cuerpo** en las interfaces (y Java 9, métodos `private`). Las interfaces siguen sin tener atributos de instancia (solo constantes `public static final`) ni constructores, y sus miembros no pueden ser `protected`."
+    },
+    {
+      "id": "31",
+      "tema": 18,
+      "enunciado": "Según la convención de JavaBeans, un JavaBean debe:",
+      "opciones": [
+        "Heredar de una clase EJB y ejecutarse en un contenedor",
+        "Ser inmutable, con todos sus atributos `final`",
+        "Tener un constructor sin argumentos, propiedades con métodos get/set y ser serializable",
+        "Implementar una interfaz remota para invocarse por la red"
+      ],
+      "correcta": 2,
+      "explicacion": "Un **JavaBean** es un componente con **constructor sin argumentos**, **propiedades accesibles con get/set** y **serializable**. No tiene relación obligatoria con los EJB, no tiene por qué ser inmutable (los *setters* lo modifican) ni ser remoto."
+    },
+    {
+      "id": "32",
+      "tema": 18,
+      "enunciado": "¿Qué relación expresan, respectivamente, la herencia y la composición?",
+      "opciones": [
+        "«Tiene-un» y «es-un»",
+        "«Usa-un» y «es-un»",
+        "«Es-un» y «tiene-un»",
+        "«Es-un» y «usa-un»"
+      ],
+      "correcta": 2,
+      "explicacion": "La **herencia** es una relación **«es-un»** (un `Funcionario` es una `Persona`) y la **composición, «tiene-un»** (una `Factura` tiene líneas). La relación de uso temporal es la dependencia. El GoF recomienda favorecer la composición frente a la herencia."
+    },
+    {
+      "id": "33",
+      "tema": 18,
+      "enunciado": "¿Cómo resuelve Python el problema del diamante en la herencia múltiple?",
+      "opciones": [
+        "Con herencia virtual, declarando como `virtual` las clases base",
+        "Prohibiendo la herencia múltiple de clases",
+        "Obligando a redefinir el método en la clase hija",
+        "Con el orden de resolución de métodos (MRO), basado en la linealización C3"
+      ],
+      "correcta": 3,
+      "explicacion": "Python usa el **MRO** (*Method Resolution Order*) calculado con la **linealización C3**, que fija en qué orden se buscan los métodos. La **herencia virtual** es la solución de **C++**; Python sí admite herencia múltiple y no obliga a redefinir."
+    },
+    {
+      "id": "34",
+      "tema": 18,
+      "enunciado": "Sobre el *downcasting* en Java, es correcto que:",
+      "opciones": [
+        "Es explícito y puede lanzar `ClassCastException`, por lo que conviene comprobar antes con `instanceof`",
+        "Es implícito y siempre seguro",
+        "Convierte una referencia de la subclase en una de la superclase",
+        "Solo puede aplicarse a tipos primitivos"
+      ],
+      "correcta": 0,
+      "explicacion": "El **downcasting** convierte a la **subclase**, es **explícito** y puede fallar con **ClassCastException** si el objeto no es de ese tipo. Lo implícito y siempre seguro es el *upcasting*, que convierte de subclase a superclase."
+    },
+    {
+      "id": "35",
+      "tema": 18,
+      "enunciado": "¿Qué imprime este código Java? `class A { void m() { System.out.print(\"A\"); } }` `class B extends A { @Override void m() { System.out.print(\"B\"); } }` `A x = new B(); x.m();`",
+      "opciones": [
+        "B",
+        "A",
+        "No compila, porque `x` es de tipo `A`",
+        "Lanza `ClassCastException` en ejecución"
+      ],
+      "correcta": 0,
+      "explicacion": "Por **ligadura dinámica**, el método se elige según el **tipo real del objeto** (`B`), no según el tipo de la referencia (`A`): imprime **B**. Compila porque `A` declara `m()`, y no hay ningún *cast* que pueda fallar (es un *upcasting* implícito)."
+    },
+    {
+      "id": "36",
+      "tema": 18,
+      "enunciado": "Si una subclase Java declara un método `static` con la misma firma que un método `static` de su superclase:",
+      "opciones": [
+        "Lo sobrescribe y el método se elige en ejecución",
+        "Se produce un error de compilación",
+        "Lo oculta (*hiding*): el método se elige en compilación según el tipo de la referencia",
+        "Se considera una sobrecarga del método"
+      ],
+      "correcta": 2,
+      "explicacion": "Los métodos **static no se sobrescriben: se ocultan** (*hiding*), y la llamada se resuelve en compilación por el tipo de la referencia, no del objeto. No es error ni sobrecarga, porque la firma es la misma."
+    },
+    {
+      "id": "37",
+      "tema": 18,
+      "enunciado": "En C#, para que un método de una clase base pueda redefinirse en la clase derivada:",
+      "opciones": [
+        "Basta con escribir `override` en la derivada",
+        "No hace falta nada, porque todos los métodos son virtuales por defecto",
+        "Se marca `new` en la base y `override` en la derivada",
+        "Se marca `virtual` en la base y `override` en la derivada"
+      ],
+      "correcta": 3,
+      "explicacion": "En **C# los métodos no son virtuales por defecto**: hay que marcar **`virtual` en la base y `override` en la derivada**. `new` en la derivada **oculta** el método en vez de redefinirlo. El que tiene todos los métodos de instancia virtuales por defecto es Java."
+    },
+    {
+      "id": "38",
+      "tema": 18,
+      "enunciado": "¿Cuál de estos lenguajes NO permite al programador sobrecargar operadores?",
+      "opciones": [
+        "C++",
+        "Java",
+        "C#",
+        "Python"
+      ],
+      "correcta": 1,
+      "explicacion": "**Java no admite la sobrecarga de operadores** (el `+` para concatenar `String` viene predefinido por el lenguaje). C++, C# y Python (con métodos como `__add__`) sí la permiten."
+    },
+    {
+      "id": "39",
+      "tema": 18,
+      "enunciado": "¿Qué tipo de acoplamiento entre módulos es el más deseable?",
+      "opciones": [
+        "De control",
+        "Común",
+        "De datos",
+        "De contenido"
+      ],
+      "correcta": 2,
+      "explicacion": "El mejor es el **acoplamiento de datos** (los módulos solo se pasan los datos que necesitan). La escala de peor a mejor es: de contenido, común, externo, de control, de estampado y de datos. Se busca **bajo acoplamiento y alta cohesión**."
+    },
+    {
+      "id": "40",
+      "tema": 18,
+      "enunciado": "Una llamada como `a.getB().getC().hacer()` incumple:",
+      "opciones": [
+        "El principio de responsabilidad única",
+        "La Ley de Demeter",
+        "El principio abierto/cerrado",
+        "El principio DRY"
+      ],
+      "correcta": 1,
+      "explicacion": "La **Ley de Demeter** («principio del mínimo conocimiento») dice que un objeto solo debe hablar con sus «amigos» inmediatos, no navegar por la estructura interna de otros. SRP trata de los motivos de cambio, OCP de extender sin modificar y DRY de no repetir código."
+    },
+    {
+      "id": "41",
+      "tema": 18,
+      "enunciado": "Una clase `Factura` calcula importes, genera el PDF y guarda los datos en la base de datos. ¿Qué principio SOLID incumple?",
+      "opciones": [
+        "Responsabilidad única",
+        "Segregación de interfaces",
+        "Abierto/cerrado",
+        "Inversión de dependencias"
+      ],
+      "correcta": 0,
+      "explicacion": "El **principio de responsabilidad única (SRP)** exige que una clase tenga **un solo motivo para cambiar**; aquí tiene tres (cálculo, presentación y persistencia). La segregación de interfaces se refiere a interfaces demasiado grandes y la inversión de dependencias, a depender de concreciones."
+    },
+    {
+      "id": "42",
+      "tema": 18,
+      "enunciado": "Hacer que `Cuadrado` herede de `Rectangulo` y que `setAncho()` cambie también el alto rompe el código que usa rectángulos. Es el ejemplo clásico de violación del principio:",
+      "opciones": [
+        "Abierto/cerrado",
+        "De segregación de interfaces",
+        "De responsabilidad única",
+        "De sustitución de Liskov"
+      ],
+      "correcta": 3,
+      "explicacion": "El **principio de sustitución de Liskov (LSP)** exige que un subtipo pueda **sustituir** a su tipo base sin alterar el comportamiento esperado; un cuadrado no se comporta como un rectángulo al cambiar el ancho. Es la «L» de SOLID."
+    },
+    {
+      "id": "43",
+      "tema": 18,
+      "enunciado": "El «principio de Hollywood» («no nos llames, ya te llamaremos») describe:",
+      "opciones": [
+        "La segregación de interfaces",
+        "La Ley de Demeter",
+        "La inversión de control",
+        "La sustitución de Liskov"
+      ],
+      "correcta": 2,
+      "explicacion": "El principio de Hollywood describe la **inversión de control (IoC)**: es el *framework* el que llama a tu código. La inyección de dependencias (CDI, Spring) es una forma de IoC. Los otros tres principios no hablan de quién controla el flujo."
+    },
+    {
+      "id": "44",
+      "tema": 18,
+      "enunciado": "¿Qué lenguaje orientado a objetos está basado en prototipos y no en clases, aunque tenga sintaxis `class` desde ES2015?",
+      "opciones": [
+        "Java",
+        "C#",
+        "C++",
+        "JavaScript"
+      ],
+      "correcta": 3,
+      "explicacion": "**JavaScript** está **basado en prototipos**: los objetos se crean a partir de otros objetos, y la sintaxis `class` de ES2015/ES6 es azúcar sintáctico sobre ese mecanismo. Java, C# y C++ están basados en clases."
+    },
+    {
+      "id": "45",
+      "tema": 18,
+      "enunciado": "En Kotlin, las clases son, por defecto:",
+      "opciones": [
+        "Abiertas a la herencia, como en Java",
+        "`final`: para poder heredar de ellas hay que declararlas `open`",
+        "Abstractas, por lo que no se pueden instanciar",
+        "Selladas, y solo pueden heredar las clases del mismo archivo"
+      ],
+      "correcta": 1,
+      "explicacion": "En **Kotlin las clases son `final` por defecto** y hay que marcarlas **`open`** para permitir la herencia. Es justo lo contrario que en Java, donde una clase se puede heredar salvo que se declare `final`."
+    },
+    {
+      "id": "46",
+      "tema": 18,
+      "enunciado": "Al compilar un programa en C#, el compilador genera:",
+      "opciones": [
+        "*Bytecode* para la máquina virtual Java",
+        "Código máquina nativo del procesador",
+        "Código intermedio CIL, que ejecuta el CLR",
+        "Código fuente JavaScript para el navegador"
+      ],
+      "correcta": 2,
+      "explicacion": "C# se compila a **CIL** (*Common Intermediate Language*), que ejecuta el **CLR** de .NET, igual que Java se compila a *bytecode* para la **JVM**. La compilación directa a código nativo es la típica de C++ o Swift."
+    },
+    {
+      "id": "47",
+      "tema": 18,
+      "enunciado": "¿Qué patrón convierte la interfaz de una clase en otra que el cliente espera?",
+      "opciones": [
+        "Adapter",
+        "Facade",
+        "Bridge",
+        "Decorator"
+      ],
+      "correcta": 0,
+      "explicacion": "**Adapter** cambia la interfaz para que encaje con la que espera el cliente. **Facade** ofrece una interfaz simplificada a todo un subsistema, Bridge desacopla abstracción e implementación y Decorator mantiene la interfaz añadiendo funciones."
+    },
+    {
+      "id": "48",
+      "tema": 18,
+      "enunciado": "¿Qué patrón proporciona un sustituto que controla el acceso a otro objeto, por ejemplo remoto, de carga diferida o de protección?",
+      "opciones": [
+        "Decorator",
+        "Proxy",
+        "Adapter",
+        "Flyweight"
+      ],
+      "correcta": 1,
+      "explicacion": "**Proxy** (apoderado) **mantiene la interfaz y controla el acceso** al objeto real (proxy remoto, virtual o de protección). Decorator también mantiene la interfaz pero añade responsabilidades, Adapter la cambia y Flyweight comparte objetos pequeños."
+    },
+    {
+      "id": "49",
+      "tema": 18,
+      "enunciado": "¿Qué patrón define una familia de algoritmos intercambiables que el cliente puede elegir en tiempo de ejecución?",
+      "opciones": [
+        "Strategy",
+        "State",
+        "Template Method",
+        "Iterator"
+      ],
+      "correcta": 0,
+      "explicacion": "**Strategy** encapsula algoritmos intercambiables y **lo elige el cliente**. En **State** el comportamiento cambia solo según el estado interno del objeto; Template Method fija el esqueleto de un algoritmo en la superclase e Iterator recorre colecciones."
+    },
+    {
+      "id": "50",
+      "tema": 18,
+      "enunciado": "¿Qué patrón encapsula una petición como un objeto, lo que permite encolarla, registrarla o deshacerla?",
+      "opciones": [
+        "Memento",
+        "Chain of Responsibility",
+        "Mediator",
+        "Command"
+      ],
+      "correcta": 3,
+      "explicacion": "**Command** (orden) **encapsula una petición como objeto**, la base de las colas de tareas y del «deshacer». Memento captura y restaura el estado de un objeto, Chain of Responsibility pasa la petición por una cadena de manejadores y Mediator centraliza la comunicación."
+    },
+    {
+      "id": "51",
+      "tema": 18,
+      "enunciado": "¿Qué patrón creacional permite crear **familias** de objetos relacionados sin especificar sus clases concretas?",
+      "opciones": [
+        "Factory Method",
+        "Builder",
+        "Prototype",
+        "Abstract Factory"
+      ],
+      "correcta": 3,
+      "explicacion": "**Abstract Factory** crea **familias** de objetos relacionados mediante un objeto fábrica (composición). **Factory Method** deja que una subclase decida qué clase instanciar (herencia, un solo producto), Builder construye paso a paso un objeto complejo y Prototype clona."
+    },
+    {
+      "id": "52",
+      "tema": 18,
+      "enunciado": "Según el GoF, ¿cuál de estos patrones es de ámbito **de clase** (basado en herencia) y no de objeto?",
+      "opciones": [
+        "Template Method",
+        "Observer",
+        "Strategy",
+        "Composite"
+      ],
+      "correcta": 0,
+      "explicacion": "Los patrones **de clase** se basan en la herencia y se fijan en compilación: **Factory Method, Adapter de clase, Interpreter y Template Method**. Observer, Strategy y Composite son de objeto: se apoyan en la composición y pueden cambiar en ejecución."
+    },
+    {
+      "id": "53",
+      "tema": 18,
+      "enunciado": "¿Qué patrón permite añadir nuevas operaciones a una estructura de objetos sin modificar las clases de sus elementos?",
+      "opciones": [
+        "Decorator",
+        "Visitor",
+        "Iterator",
+        "Template Method"
+      ],
+      "correcta": 1,
+      "explicacion": "**Visitor** separa las operaciones de la estructura: cada operación nueva es un visitante que recorre los elementos sin tocar sus clases. Decorator añade responsabilidades a un objeto concreto, Iterator recorre una colección y Template Method define el esqueleto de un algoritmo."
+    },
+    {
+      "id": "54",
+      "tema": 18,
+      "enunciado": "Un único punto de entrada que recibe todas las peticiones web de una aplicación, como el `DispatcherServlet` de Spring MVC o el `FacesServlet` de JSF, sigue el patrón:",
+      "opciones": [
+        "Facade",
+        "DAO",
+        "Front Controller",
+        "Mediator"
+      ],
+      "correcta": 2,
+      "explicacion": "Es el patrón **Front Controller**: un **único punto de entrada** para todas las peticiones, que luego las reparte. Facade simplifica un subsistema (no recibe peticiones web), DAO aísla el acceso a datos y Mediator coordina la interacción entre objetos."
+    },
+    {
+      "id": "55",
+      "tema": 18,
+      "enunciado": "Señale la afirmación INCORRECTA sobre UML:",
+      "opciones": [
+        "Lo mantiene el OMG (*Object Management Group*)",
+        "Es independiente del lenguaje de programación",
+        "Sirve para especificar, visualizar, construir y documentar sistemas software",
+        "Es una metodología de desarrollo que define las fases y actividades del proyecto"
+      ],
+      "correcta": 3,
+      "explicacion": "**UML no es una metodología** ni un proceso: es una **notación** gráfica. Las fases y actividades las define un proceso como RUP. Las otras tres afirmaciones son ciertas: lo mantiene el OMG, es independiente del lenguaje y sirve para especificar, visualizar, construir y documentar."
+    },
+    {
+      "id": "56",
+      "tema": 18,
+      "enunciado": "¿Qué diagrama UML muestra los nodos físicos (hardware, entornos de ejecución) y los artefactos desplegados en ellos?",
+      "opciones": [
+        "De despliegue",
+        "De componentes",
+        "De paquetes",
+        "De estructura compuesta"
+      ],
+      "correcta": 0,
+      "explicacion": "El diagrama de **despliegue** representa **nodos y artefactos**. El de componentes muestra componentes software y sus interfaces, el de paquetes la agrupación lógica de elementos y el de estructura compuesta, la estructura interna de una clase."
+    },
+    {
+      "id": "57",
+      "tema": 18,
+      "enunciado": "En UML 1.x, el diagrama que hoy se llama de **comunicación** recibía el nombre de diagrama de:",
+      "opciones": [
+        "Secuencia",
+        "Interacción",
+        "Colaboración",
+        "Objetos"
+      ],
+      "correcta": 2,
+      "explicacion": "El diagrama de **comunicación** se llamaba de **colaboración** en UML 1.x. Muestra mensajes numerados centrándose en los enlaces entre objetos y es semánticamente equivalente al de **secuencia**, que destaca el orden temporal."
+    },
+    {
+      "id": "58",
+      "tema": 18,
+      "enunciado": "En un diagrama de casos de uso, la flecha de la relación `«extend»` va:",
+      "opciones": [
+        "Del caso base al caso extensor",
+        "Del actor al caso de uso extensor",
+        "En ambos sentidos, porque la relación es bidireccional",
+        "Del caso de uso extensor al caso base"
+      ],
+      "correcta": 3,
+      "explicacion": "En **`«extend»`** la flecha va **del extensor al base**, que no sabe nada de la extensión (comportamiento opcional en un punto de extensión). En `«include»` es al revés: del base al incluido. Truco: la flecha sale del caso que depende del otro: en include el base depende del incluido; en extend, el extensor depende del base."
+    },
+    {
+      "id": "59",
+      "tema": 18,
+      "enunciado": "En el modelado con UML, OCL (*Object Constraint Language*) es:",
+      "opciones": [
+        "Un lenguaje formal para expresar restricciones, invariantes y pre y postcondiciones",
+        "Un formato XML para intercambiar modelos entre herramientas",
+        "El metametamodelo de la arquitectura de cuatro capas del OMG",
+        "Un tipo de diagrama para definir perfiles y estereotipos"
+      ],
+      "correcta": 0,
+      "explicacion": "**OCL** es el **lenguaje formal de restricciones** de UML (invariantes, pre y postcondiciones). El formato XML de intercambio es **XMI**, el metametamodelo es **MOF** y los estereotipos se agrupan en el diagrama de perfiles."
+    },
+    {
+      "id": "60",
+      "tema": 18,
+      "enunciado": "En la transición de una máquina de estados `pagar [saldo >= importe] / emitirRecibo()`, la parte entre corchetes es:",
+      "opciones": [
+        "La condición de guarda",
+        "El evento que dispara la transición",
+        "La acción que se ejecuta",
+        "El estado de destino"
+      ],
+      "correcta": 0,
+      "explicacion": "La notación de una transición es **`evento [guarda] / acción`**: `pagar` es el evento, **`[saldo >= importe]` la guarda** (condición que debe cumplirse para que la transición ocurra) y `emitirRecibo()` la acción. El estado destino es el extremo de la flecha, no aparece en la etiqueta."
+    }
+  ]
+}

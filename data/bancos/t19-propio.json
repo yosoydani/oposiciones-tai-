@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 19 · test",
+  "fuente": "propio",
+  "tema": 19,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 19. Arquitectura Java EE/Jakarta EE y plataforma .NET»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 19,
+      "enunciado": "¿Qué novedad principal introdujo Jakarta EE 9?",
+      "opciones": [
+        "El Core Profile",
+        "El cambio del espacio de nombres `javax.*` a `jakarta.*`",
+        "Jakarta Data",
+        "La especificación CDI"
+      ],
+      "correcta": 1,
+      "explicacion": "Jakarta EE 9 (diciembre de 2020) **renombró los paquetes de `javax.*` a `jakarta.*`**, rompiendo la compatibilidad. El Core Profile llegó en EE 10, Jakarta Data en EE 11 y CDI existe desde Java EE 6."
+    },
+    {
+      "id": "02",
+      "tema": 19,
+      "enunciado": "¿Cuál es la versión mínima de Java SE que exige Jakarta EE 11?",
+      "opciones": [
+        "Java 8",
+        "Java 11",
+        "Java 17",
+        "Java 21"
+      ],
+      "correcta": 2,
+      "explicacion": "Jakarta EE 11 requiere **Java SE 17** o superior. Java 11 era el mínimo de Jakarta EE 10 y Java 21 será el mínimo de Jakarta EE 12, aún en desarrollo."
+    },
+    {
+      "id": "03",
+      "tema": 19,
+      "enunciado": "En el ciclo de vida de un servlet, el método que el contenedor invoca una sola vez al crear la instancia es:",
+      "opciones": [
+        "`init()`",
+        "`service()`",
+        "`doGet()`",
+        "`destroy()`"
+      ],
+      "correcta": 0,
+      "explicacion": "El ciclo es **`init()`** (una vez, al crear la instancia) → `service()` (en cada petición, que despacha a `doGet()`, `doPost()`…) → `destroy()` (una vez, al retirar el servlet). `destroy()` también se llama una sola vez, pero al final, no al crear."
+    },
+    {
+      "id": "04",
+      "tema": 19,
+      "enunciado": "El descriptor de despliegue de una aplicación web (WAR) es:",
+      "opciones": [
+        "`application.xml`",
+        "`persistence.xml`",
+        "`web.xml`",
+        "`ejb-jar.xml`"
+      ],
+      "correcta": 2,
+      "explicacion": "El WAR usa **`WEB-INF/web.xml`** (opcional desde Servlet 3.0 gracias a las anotaciones). `application.xml` es del EAR, `persistence.xml` configura la unidad de persistencia JPA y `ejb-jar.xml` describe los EJB."
+    },
+    {
+      "id": "05",
+      "tema": 19,
+      "enunciado": "¿Qué tipo de EJB consume mensajes asíncronos de JMS?",
+      "opciones": [
+        "*Stateless session bean*",
+        "*Stateful session bean*",
+        "*Singleton bean*",
+        "*Message-driven bean*"
+      ],
+      "correcta": 3,
+      "explicacion": "Los ***message-driven beans*** (`@MessageDriven`) consumen mensajes JMS de forma asíncrona implementando `onMessage()`. Los *session beans* (sin estado, con estado o *singleton*) se invocan de forma síncrona por sus clientes."
+    },
+    {
+      "id": "06",
+      "tema": 19,
+      "enunciado": "En JMS, el modelo en el que cada mensaje lo consume un único receptor es:",
+      "opciones": [
+        "Tema (*topic*)",
+        "Cola (*queue*)",
+        "Suscripción duradera",
+        "Difusión (*multicast*)"
+      ],
+      "correcta": 1,
+      "explicacion": "En la **cola** (modelo **punto a punto**) cada mensaje lo consume **un solo receptor**. En el **tema** (publicación/suscripción) lo reciben todos los suscriptores; la suscripción duradera es una variante del tema."
+    },
+    {
+      "id": "07",
+      "tema": 19,
+      "enunciado": "En Jakarta Persistence, la interfaz que permite persistir, buscar y eliminar entidades es:",
+      "opciones": [
+        "`DataSource`",
+        "`Session`",
+        "`EntityManager`",
+        "`DbContext`"
+      ],
+      "correcta": 2,
+      "explicacion": "**`EntityManager`** ofrece `persist()`, `find()`, `merge()` y `remove()`. `Session` es la interfaz nativa de Hibernate, `DbContext` es su equivalente en Entity Framework y `DataSource` solo proporciona conexiones JDBC."
+    },
+    {
+      "id": "08",
+      "tema": 19,
+      "enunciado": "Las consultas JPQL se formulan sobre:",
+      "opciones": [
+        "Entidades y sus atributos",
+        "Tablas y columnas",
+        "Ficheros XML",
+        "Documentos JSON"
+      ],
+      "correcta": 0,
+      "explicacion": "**JPQL** consulta **entidades y sus atributos**, no tablas: `SELECT e FROM Expediente e WHERE e.estado = :est`. El proveedor JPA traduce la consulta al SQL de la base de datos; trabajar con tablas y columnas es propio de SQL nativo."
+    },
+    {
+      "id": "09",
+      "tema": 19,
+      "enunciado": "¿Cuál es el atributo de transacción por defecto en un EJB con transacciones gestionadas por el contenedor?",
+      "opciones": [
+        "`REQUIRES_NEW`",
+        "`MANDATORY`",
+        "`SUPPORTS`",
+        "`REQUIRED`"
+      ],
+      "correcta": 3,
+      "explicacion": "Por defecto es **`REQUIRED`**: el método se une a la transacción existente o crea una nueva si no la hay. `REQUIRES_NEW` siempre crea una nueva, `MANDATORY` exige una existente y `SUPPORTS` usa la que haya sin crearla."
+    },
+    {
+      "id": "10",
+      "tema": 19,
+      "enunciado": "¿Cuál de los siguientes es solo un contenedor web y no un servidor de aplicaciones Jakarta EE completo?",
+      "opciones": [
+        "WildFly",
+        "Apache Tomcat",
+        "Eclipse GlassFish",
+        "Oracle WebLogic"
+      ],
+      "correcta": 1,
+      "explicacion": "**Apache Tomcat** implementa Servlet, Pages (JSP) y WebSocket, pero **no la plataforma completa** (no tiene EJB ni JMS, por ejemplo). WildFly, GlassFish y WebLogic son servidores de aplicaciones completos."
+    },
+    {
+      "id": "11",
+      "tema": 19,
+      "enunciado": "El método de autenticación web que usa el certificado X.509 del usuario es:",
+      "opciones": [
+        "BASIC",
+        "FORM",
+        "DIGEST",
+        "CLIENT-CERT"
+      ],
+      "correcta": 3,
+      "explicacion": "**CLIENT-CERT** exige TLS mutuo con el **certificado X.509 del cliente** (como el DNIe o los de la FNMT). BASIC envía usuario y contraseña en Base64, DIGEST envía un resumen de la contraseña y FORM usa un formulario propio."
+    },
+    {
+      "id": "12",
+      "tema": 19,
+      "enunciado": "¿Cuál es el ámbito CDI por defecto de un *bean* sin anotación de ámbito?",
+      "opciones": [
+        "`@RequestScoped`",
+        "`@ApplicationScoped`",
+        "`@Dependent`",
+        "`@SessionScoped`"
+      ],
+      "correcta": 2,
+      "explicacion": "El ámbito por defecto es **`@Dependent`**: el *bean* vive lo que vive el objeto en el que se inyecta. Los otros tres hay que declararlos de forma explícita (por petición, por aplicación y por sesión)."
+    },
+    {
+      "id": "13",
+      "tema": 19,
+      "enunciado": "En .NET, el código intermedio al que compilan todos los lenguajes se denomina:",
+      "opciones": [
+        "*Bytecode*",
+        "CIL",
+        "LLVM IR",
+        "*P-code*"
+      ],
+      "correcta": 1,
+      "explicacion": "Todos los lenguajes .NET compilan a **CIL** (*Common Intermediate Language*, antes MSIL), que el JIT del CLR traduce a código máquina. El *bytecode* es el código intermedio de la JVM."
+    },
+    {
+      "id": "14",
+      "tema": 19,
+      "enunciado": "El conjunto de reglas de .NET que garantiza la interoperabilidad entre lenguajes es:",
+      "opciones": [
+        "CTS",
+        "CLR",
+        "BCL",
+        "CLS"
+      ],
+      "correcta": 3,
+      "explicacion": "La **CLS** (*Common Language Specification*) es el subconjunto de reglas que asegura la **interoperabilidad entre lenguajes**. El CTS define el sistema de tipos común, el CLR es el entorno de ejecución y la BCL la biblioteca de clases. Truco: CL**S** = e**S**pecificación."
+    },
+    {
+      "id": "15",
+      "tema": 19,
+      "enunciado": "A noviembre de 2026, la versión LTS vigente de .NET es:",
+      "opciones": [
+        ".NET 8",
+        ".NET 9",
+        ".NET 10",
+        ".NET 11"
+      ],
+      "correcta": 2,
+      "explicacion": "**.NET 10** (noviembre de 2025, soporte hasta noviembre de 2028) es la LTS vigente. En .NET las versiones **pares son LTS** y las impares STS: .NET 9 y .NET 11 son STS, y .NET 8 es la LTS anterior."
+    },
+    {
+      "id": "16",
+      "tema": 19,
+      "enunciado": "El ORM oficial de la plataforma .NET es:",
+      "opciones": [
+        "ADO.NET",
+        "Kestrel",
+        "NuGet",
+        "Entity Framework Core"
+      ],
+      "correcta": 3,
+      "explicacion": "El ORM de .NET es **Entity Framework Core** (equivalente a JPA). ADO.NET es el acceso a datos de bajo nivel (equivalente a JDBC), Kestrel es el servidor web y NuGet el gestor de paquetes."
+    },
+    {
+      "id": "17",
+      "tema": 19,
+      "enunciado": "El servidor web integrado y multiplataforma de ASP.NET Core es:",
+      "opciones": [
+        "Kestrel",
+        "IIS",
+        "Tomcat",
+        "Jetty"
+      ],
+      "correcta": 0,
+      "explicacion": "**Kestrel** es el servidor web integrado y multiplataforma de ASP.NET Core. IIS es solo de Windows y puede ponerse delante como *proxy* inverso; Tomcat y Jetty son contenedores de servlets de Java."
+    },
+    {
+      "id": "18",
+      "tema": 19,
+      "enunciado": "En ADO.NET, el objeto que trabaja en modo desconectado es:",
+      "opciones": [
+        "`DataReader`",
+        "`SqlCommand`",
+        "`DataSet`",
+        "`SqlConnection`"
+      ],
+      "correcta": 2,
+      "explicacion": "El **`DataSet`** (que se llena con un `DataAdapter`) guarda los datos en memoria y trabaja **desconectado**. `DataReader` es conectado, de solo lectura y solo avance; `SqlCommand` y `SqlConnection` también requieren la conexión abierta."
+    },
+    {
+      "id": "19",
+      "tema": 19,
+      "enunciado": "La tecnología de escritorio de .NET basada en XAML y en el patrón MVVM es:",
+      "opciones": [
+        "Windows Forms",
+        "WPF",
+        "ASP.NET Web Forms",
+        "Swing"
+      ],
+      "correcta": 1,
+      "explicacion": "**WPF** usa **XAML**, enlace de datos y el patrón **MVVM**. Windows Forms es la tecnología de escritorio clásica sin XAML, ASP.NET Web Forms es web y Swing es de Java."
+    },
+    {
+      "id": "20",
+      "tema": 19,
+      "enunciado": "En el contenedor de inyección de dependencias de ASP.NET Core, un servicio con una instancia por petición HTTP se registra con:",
+      "opciones": [
+        "`AddScoped`",
+        "`AddSingleton`",
+        "`AddTransient`",
+        "`AddHostedService`"
+      ],
+      "correcta": 0,
+      "explicacion": "**`AddScoped`** crea **una instancia por petición HTTP**. `AddSingleton` crea una para toda la aplicación y `AddTransient` una nueva cada vez que se solicita el servicio; `AddHostedService` registra servicios en segundo plano."
+    },
+    {
+      "id": "21",
+      "tema": 19,
+      "enunciado": "Una diferencia esencial entre Jakarta EE y .NET es que:",
+      "opciones": [
+        "Jakarta EE solo funciona en Windows, y .NET es multiplataforma desde su origen",
+        "Jakarta EE es software propietario de Oracle, y .NET tiene licencia MIT",
+        "Jakarta EE no usa código intermedio, y .NET compila a CIL",
+        "Jakarta EE es un conjunto de especificaciones con varias implementaciones, y .NET una plataforma con una implementación de referencia única"
+      ],
+      "correcta": 3,
+      "explicacion": "**Jakarta EE son especificaciones** que implementan varios productos (GlassFish, WildFly, Open Liberty, Payara…), mientras que **.NET es una plataforma** (*runtime* + SDK) de Microsoft y la .NET Foundation. Java es multiplataforma desde el origen, Jakarta EE lo gestiona la Eclipse Foundation y Java también usa código intermedio (*bytecode*)."
+    },
+    {
+      "id": "22",
+      "tema": 19,
+      "enunciado": "Según la política de soporte de .NET, las versiones con número par (como .NET 8 o .NET 10) son:",
+      "opciones": [
+        "STS, con 24 meses de soporte",
+        "Versiones preliminares sin soporte",
+        "LTS, con 3 años de soporte",
+        "Versiones exclusivas para Windows"
+      ],
+      "correcta": 2,
+      "explicacion": "En .NET, **las versiones pares son LTS** (soporte a largo plazo, **3 años**) y las impares STS (soporte estándar, 24 meses desde .NET 9). Se publica una versión cada noviembre y todas son multiplataforma."
+    },
+    {
+      "id": "23",
+      "tema": 19,
+      "enunciado": "¿Qué organización gestiona actualmente la plataforma Jakarta EE?",
+      "opciones": [
+        "Oracle, a través del JCP",
+        "La Apache Software Foundation",
+        "Red Hat",
+        "La Eclipse Foundation"
+      ],
+      "correcta": 3,
+      "explicacion": "Jakarta EE lo gestiona la **Eclipse Foundation** (Jakarta EE Working Group) desde que Oracle cedió Java EE en 2017. El JCP era el proceso de Sun/Oracle; Apache mantiene Tomcat y TomEE y Red Hat, WildFly, pero ninguno dirige la plataforma."
+    },
+    {
+      "id": "24",
+      "tema": 19,
+      "enunciado": "¿Qué perfil de Jakarta EE, introducido en Jakarta EE 10, está pensado para microservicios y ejecución nativa ligera?",
+      "opciones": [
+        "Web Profile",
+        "Platform (perfil completo)",
+        "Core Profile",
+        "MicroProfile"
+      ],
+      "correcta": 2,
+      "explicacion": "El **Core Profile** llegó con **Jakarta EE 10** (incluye CDI Lite, REST, JSON-P y JSON-B). El Web Profile existe desde Java EE 6, el perfil completo desde J2EE y **MicroProfile** no es un perfil de Jakarta EE, sino un proyecto aparte de la Eclipse Foundation que lo complementa."
+    },
+    {
+      "id": "25",
+      "tema": 19,
+      "enunciado": "Señale la afirmación INCORRECTA sobre el cambio de espacio de nombres `javax.*` → `jakarta.*`:",
+      "opciones": [
+        "También cambiaron los paquetes de Java SE, como `javax.sql` o `javax.swing`",
+        "Se produjo en Jakarta EE 9, publicada en diciembre de 2020",
+        "Se debió a que Oracle conservó la marca «Java» y el espacio de nombres `javax`",
+        "Obliga a cambiar los `import javax.servlet...` por `import jakarta.servlet...`"
+      ],
+      "correcta": 0,
+      "explicacion": "Es falso que cambiara todo `javax`: **los paquetes de Java SE siguen siendo `javax`** (`javax.sql`, `javax.swing`, `javax.crypto`); solo cambiaron los de la plataforma empresarial. Las otras tres afirmaciones son ciertas."
+    },
+    {
+      "id": "26",
+      "tema": 19,
+      "enunciado": "¿Qué archivo de despliegue agrupa varios módulos WAR y JAR y usa el descriptor `META-INF/application.xml`?",
+      "opciones": [
+        "EAR",
+        "RAR",
+        "WAR",
+        "JAR"
+      ],
+      "correcta": 0,
+      "explicacion": "El **EAR** (*Enterprise Archive*) empaqueta una aplicación empresarial completa con varios módulos y el descriptor `application.xml`. El WAR es una aplicación web (`web.xml`), el JAR contiene clases o EJB y el RAR es un adaptador de recursos JCA (`ra.xml`)."
+    },
+    {
+      "id": "27",
+      "tema": 19,
+      "enunciado": "¿Qué incorporó Java EE 5 (2006)?",
+      "opciones": [
+        "CDI 1.0, JAX-RS 1.1 y el Web Profile",
+        "WebSocket, JSON-P y Batch",
+        "Anotaciones, EJB 3.0 y JPA 1.0",
+        "El Core Profile y CDI Lite"
+      ],
+      "correcta": 2,
+      "explicacion": "**Java EE 5** trajo las **anotaciones**, **EJB 3.0** y **JPA 1.0**, que simplificaron los pesados EJB 2.x. CDI, JAX-RS y el Web Profile son de Java EE 6; WebSocket, JSON-P y Batch, de Java EE 7; y el Core Profile, de Jakarta EE 10."
+    },
+    {
+      "id": "28",
+      "tema": 19,
+      "enunciado": "¿Qué proceso se usa para gestionar las especificaciones de Jakarta EE?",
+      "opciones": [
+        "El Java Community Process (JCP), mediante JSR",
+        "El Jakarta EE Specification Process (JESP), que sustituye al JCP",
+        "El Technology Compatibility Kit (TCK)",
+        "El proceso de MicroProfile de la Eclipse Foundation"
+      ],
+      "correcta": 1,
+      "explicacion": "Las especificaciones de Jakarta EE se gestionan con el **JESP**, que **sustituye al JCP** y a sus JSR. El **TCK** no es un proceso, sino el conjunto de pruebas que debe superar un producto para ser compatible; MicroProfile es otro proyecto."
+    },
+    {
+      "id": "29",
+      "tema": 19,
+      "enunciado": "¿Qué API usan los componentes Jakarta EE para localizar recursos del servidor, como un `DataSource` o una cola JMS?",
+      "opciones": [
+        "JCA",
+        "JTA",
+        "JAXB",
+        "JNDI"
+      ],
+      "correcta": 3,
+      "explicacion": "Los contenedores dan acceso a los recursos por **JNDI** (servicio de nombres y directorio). JCA conecta con sistemas EIS, JTA gestiona transacciones y JAXB convierte objetos en XML."
+    },
+    {
+      "id": "30",
+      "tema": 19,
+      "enunciado": "Sobre las instancias de un servlet en el contenedor, es correcto que:",
+      "opciones": [
+        "Una única instancia atiende las peticiones concurrentes en hilos distintos, por lo que no debe guardar el estado de usuario en atributos",
+        "Se crea una instancia nueva por cada petición HTTP",
+        "Se crea una instancia por cada sesión de usuario",
+        "Las peticiones a un mismo servlet se atienden de una en una, sin concurrencia"
+      ],
+      "correcta": 0,
+      "explicacion": "El contenedor suele crear **una sola instancia** del servlet y atiende cada petición en **un hilo distinto**; por eso no se debe guardar estado de usuario en sus atributos (se usa `HttpSession` o variables locales). No hay una instancia por petición ni por sesión."
+    },
+    {
+      "id": "31",
+      "tema": 19,
+      "enunciado": "¿Qué diferencia hay entre `response.sendRedirect()` y `RequestDispatcher.forward()`?",
+      "opciones": [
+        "`forward` hace que el navegador lance una petición nueva; `sendRedirect` reenvía dentro del servidor",
+        "Ambos reenvían la petición dentro del servidor; solo cambia el código de estado",
+        "Ambos obligan al navegador a hacer una petición nueva; solo cambia la URL mostrada",
+        "`sendRedirect` hace que el navegador lance una petición nueva a otra URL; `forward` reenvía la petición dentro del servidor sin que el cliente lo note"
+      ],
+      "correcta": 3,
+      "explicacion": "**`sendRedirect`** es una **redirección en el cliente**: el navegador recibe la respuesta y pide la nueva URL (cambia la barra de direcciones). **`forward`** se resuelve **en el servidor** con el mismo objeto de petición, sin que el cliente lo sepa."
+    },
+    {
+      "id": "32",
+      "tema": 19,
+      "enunciado": "La primera vez que se solicita una página JSP, el contenedor web:",
+      "opciones": [
+        "La interpreta línea a línea en cada petición",
+        "Envía el código Java al navegador para que lo ejecute",
+        "La traduce a un servlet y lo compila",
+        "La convierte en una vista Facelets"
+      ],
+      "correcta": 2,
+      "explicacion": "Una **JSP se traduce a un servlet** y se compila la primera vez; las siguientes peticiones usan ese servlet ya compilado. El código Java nunca llega al navegador, que solo recibe HTML. Facelets es la tecnología de vistas de JSF, no un paso intermedio de JSP."
+    },
+    {
+      "id": "33",
+      "tema": 19,
+      "enunciado": "En el ciclo de vida de JSF, ¿qué fase va inmediatamente después de «Procesar validaciones»?",
+      "opciones": [
+        "Invocar la aplicación",
+        "Aplicar valores de la petición",
+        "Renderizar la respuesta",
+        "Actualizar valores del modelo"
+      ],
+      "correcta": 3,
+      "explicacion": "Las 6 fases de JSF son: 1) Restaurar vista, 2) Aplicar valores de la petición, 3) Procesar validaciones, **4) Actualizar valores del modelo**, 5) Invocar la aplicación y 6) Renderizar la respuesta. Tiene lógica: solo se pasan los valores al modelo una vez validados."
+    },
+    {
+      "id": "34",
+      "tema": 19,
+      "enunciado": "Desde JSF 2.0, la tecnología de vistas por defecto de Jakarta Faces es:",
+      "opciones": [
+        "JSP, con páginas `.jsp`",
+        "Razor, con páginas `.cshtml`",
+        "Thymeleaf, con plantillas `.html`",
+        "Facelets, con páginas `.xhtml`"
+      ],
+      "correcta": 3,
+      "explicacion": "Desde JSF 2.0, las vistas se escriben con **Facelets** (`.xhtml`), que **sustituye a JSP**. Razor es la tecnología de plantillas de ASP.NET Core y Thymeleaf es el motor de plantillas habitual en Spring."
+    },
+    {
+      "id": "35",
+      "tema": 19,
+      "enunciado": "¿Qué anotación hace que un *bean* CDI sea accesible por su nombre desde una expresión EL como `#{expedienteBean.asunto}`?",
+      "opciones": [
+        "`@Inject`",
+        "`@Produces`",
+        "`@Named`",
+        "`@Qualifier`"
+      ],
+      "correcta": 2,
+      "explicacion": "**`@Named`** da al *bean* un nombre utilizable desde EL (por defecto, el de la clase con la inicial en minúscula). `@Inject` sirve para inyectar dependencias, `@Produces` define un método productor y `@Qualifier` crea cualificadores para distinguir implementaciones."
+    },
+    {
+      "id": "36",
+      "tema": 19,
+      "enunciado": "Para implementar un carrito de la compra que conserve el estado conversacional de cada cliente entre llamadas, el tipo de EJB adecuado es:",
+      "opciones": [
+        "`@Stateful`",
+        "`@Stateless`",
+        "`@Singleton`",
+        "`@MessageDriven`"
+      ],
+      "correcta": 0,
+      "explicacion": "El ***session bean* con estado** (**`@Stateful`**) conserva el estado conversacional **por cliente**, como un carrito o un asistente de varios pasos. `@Stateless` no guarda estado entre llamadas, `@Singleton` tiene una instancia compartida por toda la aplicación y `@MessageDriven` consume mensajes."
+    },
+    {
+      "id": "37",
+      "tema": 19,
+      "enunciado": "En el método JAX-RS `@GET @Path(\"/{id}\") public Expediente obtener(@X(\"id\") String id)`, la anotación `@X` que extrae el valor del segmento `{id}` de la URL es:",
+      "opciones": [
+        "`@PathParam`",
+        "`@QueryParam`",
+        "`@FormParam`",
+        "`@HeaderParam`"
+      ],
+      "correcta": 0,
+      "explicacion": "**`@PathParam`** toma el valor de una plantilla de la **ruta** (`/expedientes/2026-001`). `@QueryParam` lee parámetros de la consulta (`?id=...`), `@FormParam` campos de un formulario y `@HeaderParam` cabeceras HTTP."
+    },
+    {
+      "id": "38",
+      "tema": 19,
+      "enunciado": "En JMS, ¿qué modo de entrega garantiza que un mensaje sobreviva a una caída del proveedor de mensajería?",
+      "opciones": [
+        "`NON_PERSISTENT`",
+        "`AUTO_ACKNOWLEDGE`",
+        "`DUPS_OK_ACKNOWLEDGE`",
+        "`PERSISTENT`"
+      ],
+      "correcta": 3,
+      "explicacion": "El modo **`PERSISTENT`** hace que el proveedor guarde el mensaje para que **sobreviva a caídas**; con `NON_PERSISTENT` puede perderse. `AUTO_ACKNOWLEDGE` y `DUPS_OK_ACKNOWLEDGE` son modos de acuse de recibo, no de entrega."
+    },
+    {
+      "id": "39",
+      "tema": 19,
+      "enunciado": "En JDBC, para invocar un procedimiento almacenado de la base de datos se usa:",
+      "opciones": [
+        "`PreparedStatement`",
+        "`Statement`",
+        "`CallableStatement`",
+        "`ResultSet`"
+      ],
+      "correcta": 2,
+      "explicacion": "**`CallableStatement`** sirve para llamar a **procedimientos almacenados**. `PreparedStatement` es una sentencia precompilada con parámetros `?` (la que evita la inyección SQL), `Statement` ejecuta SQL simple y `ResultSet` recoge el resultado de una consulta."
+    },
+    {
+      "id": "40",
+      "tema": 19,
+      "enunciado": "En JPA, ¿qué estrategia de carga se aplica por defecto a una relación `@OneToMany`?",
+      "opciones": [
+        "`EAGER` (ansiosa)",
+        "`LAZY` (perezosa)",
+        "Ninguna: la especificación la deja en manos del proveedor",
+        "Ninguna: la relación solo se carga con `JOIN FETCH`"
+      ],
+      "correcta": 1,
+      "explicacion": "Por defecto, las relaciones **`*ToMany` son `LAZY`** y las `*ToOne` son `EAGER`. Truco: cargar «muchos» por adelantado sería caro, así que se cargan cuando hacen falta. `JOIN FETCH` sirve para forzar la carga y evitar el problema N+1, pero no es la estrategia por defecto."
+    },
+    {
+      "id": "41",
+      "tema": 19,
+      "enunciado": "¿Cuál es la estrategia de herencia por defecto en JPA cuando se usa `@Inheritance` sin indicar estrategia?",
+      "opciones": [
+        "`JOINED`",
+        "`TABLE_PER_CLASS`",
+        "`SINGLE_TABLE`",
+        "`@MappedSuperclass`"
+      ],
+      "correcta": 2,
+      "explicacion": "Por defecto es **`SINGLE_TABLE`**: una sola tabla para toda la jerarquía, con una **columna discriminadora**. `JOINED` usa una tabla por clase unida por la clave y `TABLE_PER_CLASS` una tabla por clase concreta. `@MappedSuperclass` no es una estrategia: sirve para heredar atributos comunes sin crear entidad."
+    },
+    {
+      "id": "42",
+      "tema": 19,
+      "enunciado": "Una entidad JPA que estaba gestionada por un contexto de persistencia que ya se ha cerrado se encuentra en estado:",
+      "opciones": [
+        "Separada (*detached*)",
+        "Gestionada (*managed*)",
+        "Nueva (*new/transient*)",
+        "Eliminada (*removed*)"
+      ],
+      "correcta": 0,
+      "explicacion": "Al cerrarse el contexto de persistencia, la entidad pasa a estar **separada (*detached*)**: tiene identidad, pero sus cambios ya no se sincronizan; se vuelve a gestionar con `merge()`. Nueva es la que nunca se persistió y eliminada, la marcada con `remove()`."
+    },
+    {
+      "id": "43",
+      "tema": 19,
+      "enunciado": "JTA coordina las transacciones distribuidas entre varios recursos XA mediante:",
+      "opciones": [
+        "El bloqueo en dos fases (2PL)",
+        "El control de concurrencia multiversión (MVCC)",
+        "La confirmación en dos fases (2PC)",
+        "El bloqueo optimista con `@Version`"
+      ],
+      "correcta": 2,
+      "explicacion": "JTA usa la **confirmación en dos fases (2PC, *two-phase commit*)**: primero todos los recursos se preparan y luego todos confirman o todos deshacen. El **2PL** (*two-phase locking*) es una técnica de bloqueos para la serializabilidad, no de coordinación distribuida; es la confusión típica."
+    },
+    {
+      "id": "44",
+      "tema": 19,
+      "enunciado": "¿Qué atributo de transacción exige que ya exista una transacción activa y lanza una excepción si no la hay?",
+      "opciones": [
+        "`REQUIRED`",
+        "`MANDATORY`",
+        "`REQUIRES_NEW`",
+        "`NEVER`"
+      ],
+      "correcta": 1,
+      "explicacion": "**`MANDATORY`** exige una transacción existente y, si no la hay, lanza excepción. `REQUIRED` crea una si no existe, `REQUIRES_NEW` siempre crea una nueva y `NEVER` hace lo contrario: lanza excepción si **hay** transacción."
+    },
+    {
+      "id": "45",
+      "tema": 19,
+      "enunciado": "¿Qué especificación, nueva en Jakarta EE 11, permite declarar repositorios (interfaces que extienden `CrudRepository`) cuya implementación genera el proveedor?",
+      "opciones": [
+        "Jakarta Persistence",
+        "Jakarta Data",
+        "Jakarta Batch",
+        "Jakarta Connectors"
+      ],
+      "correcta": 1,
+      "explicacion": "**Jakarta Data** (novedad de **Jakarta EE 11**) define repositorios declarativos con `@Repository`, `CrudRepository` o `BasicRepository`, paginación y su propio lenguaje JDQL; la idea es similar a Spring Data. Jakarta Persistence es el ORM sobre el que puede funcionar, Batch es para procesos por lotes y Connectors para sistemas EIS."
+    },
+    {
+      "id": "46",
+      "tema": 19,
+      "enunciado": "Comprobar qué operaciones puede realizar un usuario ya identificado se denomina:",
+      "opciones": [
+        "Autenticación",
+        "Confidencialidad",
+        "Autorización",
+        "Integridad"
+      ],
+      "correcta": 2,
+      "explicacion": "La **autorización** decide **qué puede hacer** el usuario (en Jakarta EE, control de acceso por roles). La autenticación comprueba **quién** es; la confidencialidad y la integridad del transporte se consiguen cifrando con TLS."
+    },
+    {
+      "id": "47",
+      "tema": 19,
+      "enunciado": "En `web.xml`, una `<user-data-constraint>` con `<transport-guarantee>CONFIDENTIAL</transport-guarantee>`:",
+      "opciones": [
+        "Exige autenticación con certificado de cliente",
+        "Restringe el recurso a los usuarios con rol de administrador",
+        "Obliga a acceder al recurso por HTTPS",
+        "Cifra los datos del recurso cuando se guardan en la base de datos"
+      ],
+      "correcta": 2,
+      "explicacion": "**`CONFIDENTIAL`** obliga a usar un transporte cifrado, es decir, **HTTPS (TLS)**. El certificado de cliente se exige con el método de *login* CLIENT-CERT y los roles se fijan en `<auth-constraint>`; no tiene relación con el cifrado en la base de datos."
+    },
+    {
+      "id": "48",
+      "tema": 19,
+      "enunciado": "Sobre el método de autenticación HTTP BASIC, es correcto que:",
+      "opciones": [
+        "Envía solo un resumen (*hash*) de la contraseña",
+        "Envía usuario y contraseña codificados en Base64, sin cifrar, por lo que solo debe usarse sobre TLS",
+        "Identifica al usuario con su certificado X.509",
+        "Usa un formulario propio que envía los datos a `j_security_check`"
+      ],
+      "correcta": 1,
+      "explicacion": "**BASIC** envía `usuario:contraseña` en **Base64**, que es una codificación, no un cifrado: hay que usarlo **siempre con TLS**. El resumen de la contraseña es DIGEST, el certificado es CLIENT-CERT y el formulario con `j_security_check` es FORM."
+    },
+    {
+      "id": "49",
+      "tema": 19,
+      "enunciado": "¿Qué anotación de Jakarta impide que cualquier rol invoque un método?",
+      "opciones": [
+        "`@PermitAll`",
+        "`@DenyAll`",
+        "`@DeclareRoles`",
+        "`@RunAs`"
+      ],
+      "correcta": 1,
+      "explicacion": "**`@DenyAll`** prohíbe el acceso a todos. `@PermitAll` lo permite a todos, `@DeclareRoles` declara los roles que usa la aplicación y `@RunAs` hace que el componente se ejecute con un rol determinado. Para restringir a ciertos roles se usa `@RolesAllowed`."
+    },
+    {
+      "id": "50",
+      "tema": 19,
+      "enunciado": "En el sistema de tipos común (CTS) de .NET, un `struct` de C# es:",
+      "opciones": [
+        "Un tipo valor",
+        "Un tipo referencia",
+        "Un tipo genérico reificado",
+        "Un delegado"
+      ],
+      "correcta": 0,
+      "explicacion": "En el CTS, **`struct` es un tipo valor** (como `int`), que habitualmente se almacena en la pila y se copia al asignarlo; **`class` es un tipo referencia**, que vive en el *heap*. Los delegados son tipos referencia que apuntan a métodos."
+    },
+    {
+      "id": "51",
+      "tema": 19,
+      "enunciado": "En .NET, un ensamblado (*assembly*) contiene:",
+      "opciones": [
+        "Solo código máquina nativo del procesador",
+        "El código fuente C# y su archivo de proyecto",
+        "Solo la lista de dependencias NuGet de la aplicación",
+        "Código CIL, metadatos y un manifiesto"
+      ],
+      "correcta": 3,
+      "explicacion": "El **ensamblado** (`.dll` o `.exe`) es la unidad de despliegue y versionado de .NET: contiene **CIL + metadatos + manifiesto**. El código máquina lo genera el JIT en ejecución; el fuente y las dependencias NuGet están en el proyecto, no en el ensamblado."
+    },
+    {
+      "id": "52",
+      "tema": 19,
+      "enunciado": "En .NET, Native AOT consiste en:",
+      "opciones": [
+        "Compilar la aplicación por completo a código nativo antes de ejecutarla, sin JIT",
+        "Compilar el código a CIL e interpretarlo instrucción a instrucción",
+        "Precompilar solo una parte del código y dejar el resto al JIT",
+        "Ejecutar el código C# en el navegador mediante JavaScript"
+      ],
+      "correcta": 0,
+      "explicacion": "**Native AOT** (*ahead-of-time*) compila **toda la aplicación a código nativo antes de ejecutarla**, sin JIT, y arranca más rápido. La precompilación parcial que sigue usando JIT es **ReadyToRun**. El CLR no interpreta CIL: lo compila con JIT."
+    },
+    {
+      "id": "53",
+      "tema": 19,
+      "enunciado": "A diferencia de Java, los genéricos de C#:",
+      "opciones": [
+        "Se conservan en tiempo de ejecución (son reificados), mientras que Java aplica borrado de tipos",
+        "Se borran al compilar, mientras que en Java se conservan en ejecución",
+        "No admiten tipos valor como `int`",
+        "Solo pueden usarse en colecciones de la BCL"
+      ],
+      "correcta": 0,
+      "explicacion": "Los genéricos de C# son **reificados**: la información del tipo **se conserva en ejecución**, mientras que Java hace **borrado de tipos** (*type erasure*). Además, C# admite tipos valor como argumentos (`List<int>`) y se pueden usar en cualquier clase o método."
+    },
+    {
+      "id": "54",
+      "tema": 19,
+      "enunciado": "En .NET, LINQ (*Language Integrated Query*) es:",
+      "opciones": [
+        "El servidor web integrado de ASP.NET Core",
+        "Una sintaxis de consultas integrada en el lenguaje para colecciones, XML o bases de datos",
+        "El gestor de paquetes de la plataforma",
+        "El compilador de C# a CIL"
+      ],
+      "correcta": 1,
+      "explicacion": "**LINQ** permite escribir **consultas integradas en el lenguaje** (`from e in expedientes where e.Abierto select e`) sobre colecciones, XML o bases de datos (LINQ to Entities en EF Core). El servidor web es Kestrel, el gestor de paquetes NuGet y el compilador, Roslyn."
+    },
+    {
+      "id": "55",
+      "tema": 19,
+      "enunciado": "Blazor, dentro de ASP.NET Core, permite:",
+      "opciones": [
+        "Definir servicios RPC sobre HTTP/2 con Protocol Buffers",
+        "Crear interfaces web interactivas en C# que se ejecutan en el servidor (con SignalR) o en el navegador con WebAssembly",
+        "Mapear clases C# a tablas de una base de datos relacional",
+        "Desarrollar aplicaciones de escritorio para Windows con XAML"
+      ],
+      "correcta": 1,
+      "explicacion": "**Blazor** sirve para crear **interfaces web interactivas en C#** en lugar de JavaScript, en el servidor (conexión **SignalR**) o en el navegador con **WebAssembly**. Los servicios RPC con Protocol Buffers son gRPC, el mapeo a tablas es EF Core y el escritorio con XAML es WPF."
+    },
+    {
+      "id": "56",
+      "tema": 19,
+      "enunciado": "En ASP.NET Core, la canalización de *middleware* (`UseRouting`, `UseAuthentication`, `UseAuthorization`…) equivale en Java a:",
+      "opciones": [
+        "Los *message-driven beans*",
+        "Las unidades de persistencia de JPA",
+        "Los descriptores `web.xml`",
+        "Los filtros de servlets"
+      ],
+      "correcta": 3,
+      "explicacion": "Cada petición atraviesa los componentes de *middleware* en orden, igual que los **filtros** (`Filter`, `@WebFilter`) de servlets interceptan peticiones y respuestas. Los MDB consumen mensajes, la unidad de persistencia configura JPA y `web.xml` es un descriptor de despliegue."
+    },
+    {
+      "id": "57",
+      "tema": 19,
+      "enunciado": "En Entity Framework Core, la clase equivalente al `EntityManager` de JPA es:",
+      "opciones": [
+        "`DbContext`",
+        "`DbSet<T>`",
+        "`DataAdapter`",
+        "`SqlConnection`"
+      ],
+      "correcta": 0,
+      "explicacion": "**`DbContext`** representa la sesión con la base de datos (como `EntityManager`): consulta, sigue los cambios y guarda con `SaveChanges()`. `DbSet<T>` equivale a una tabla o colección de entidades; `DataAdapter` y `SqlConnection` son de ADO.NET."
+    },
+    {
+      "id": "58",
+      "tema": 19,
+      "enunciado": "¿Cuál de estas tecnologías NO está disponible en .NET moderno (.NET 5 y posteriores)?",
+      "opciones": [
+        "Razor Pages",
+        "ASP.NET Web Forms",
+        "Blazor",
+        "gRPC"
+      ],
+      "correcta": 1,
+      "explicacion": "**ASP.NET Web Forms** se quedó en **.NET Framework** y no pasó a .NET Core ni a .NET moderno (tampoco WCF en servidor ni .NET Remoting). Razor Pages, Blazor y gRPC sí forman parte de ASP.NET Core."
+    },
+    {
+      "id": "59",
+      "tema": 19,
+      "enunciado": "En Java, frente a AWT, los componentes de Swing (paquete `javax.swing`):",
+      "opciones": [
+        "Son «pesados»: usan directamente los componentes nativos del sistema operativo",
+        "Son «ligeros»: se dibujan en Java en lugar de usar los componentes nativos del sistema",
+        "Se definen con FXML y se les da estilo con CSS",
+        "Solo funcionan en Windows"
+      ],
+      "correcta": 1,
+      "explicacion": "Los componentes de **Swing son «ligeros»**, dibujados por Java; los de **AWT son «pesados»**, porque usan los componentes nativos del sistema. FXML y CSS son de JavaFX, y Swing es multiplataforma."
+    },
+    {
+      "id": "60",
+      "tema": 19,
+      "enunciado": "En el patrón MVVM de WPF o .NET MAUI, la VistaModelo avisa a la vista de que una propiedad ha cambiado implementando la interfaz:",
+      "opciones": [
+        "`ICommand`",
+        "`IDisposable`",
+        "`ActionListener`",
+        "`INotifyPropertyChanged`"
+      ],
+      "correcta": 3,
+      "explicacion": "La VistaModelo implementa **`INotifyPropertyChanged`** para que el enlace de datos actualice la vista. **`ICommand`** representa las acciones (comandos) que lanza la vista, `IDisposable` sirve para liberar recursos y `ActionListener` es la interfaz de eventos de Swing."
+    }
+  ]
+}

@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 32 · test",
+  "fuente": "propio",
+  "tema": 32,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 32. Seguridad en redes, perímetro, VPN y puesto de usuario»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 32,
+      "enunciado": "¿Qué tipo de cortafuegos mantiene una tabla con las conexiones establecidas para permitir el tráfico de respuesta?",
+      "opciones": [
+        "Filtrado de paquetes sin estado",
+        "Inspección de estado (stateful)",
+        "Router de filtrado con ACL estáticas",
+        "Diodo de datos"
+      ],
+      "correcta": 1,
+      "explicacion": "El cortafuegos de **inspección de estado (stateful)** guarda una **tabla de estados** y solo deja pasar el tráfico de vuelta que pertenece a una sesión iniciada. El filtrado sin estado y las ACL estáticas de un router miran cada paquete aislado, sin memoria de la conexión. El diodo de datos ni siquiera permite respuesta: el flujo va en un solo sentido."
+    },
+    {
+      "id": "02",
+      "tema": 32,
+      "enunciado": "¿Qué protocolo de IPsec proporciona confidencialidad mediante cifrado?",
+      "opciones": [
+        "ESP",
+        "AH",
+        "IKE",
+        "ISAKMP"
+      ],
+      "correcta": 0,
+      "explicacion": "**ESP** (*Encapsulating Security Payload*, protocolo IP 50) es el único que **cifra**, además de dar integridad y autenticación. AH aporta integridad y autenticación del origen, pero no cifra. IKE e ISAKMP no protegen datos: negocian las asociaciones de seguridad y las claves. Truco: ESP = «E» de encriptar."
+    },
+    {
+      "id": "03",
+      "tema": 32,
+      "enunciado": "Sobre el protocolo AH de IPsec, es correcto que:",
+      "opciones": [
+        "Cifra la carga útil con AES",
+        "Se transporta sobre UDP 4500",
+        "Autentica también campos de la cabecera IP, por lo que no es compatible con NAT",
+        "Es el protocolo que negocia las claves"
+      ],
+      "correcta": 2,
+      "explicacion": "AH autentica también los campos inmutables de la **cabecera IP**; como NAT cambia la dirección, la comprobación falla y por eso AH es **incompatible con NAT**. AH no cifra (es el protocolo IP 51). UDP 4500 es el puerto de NAT-T para encapsular ESP, y quien negocia las claves es IKE."
+    },
+    {
+      "id": "04",
+      "tema": 32,
+      "enunciado": "En IPsec, el modo túnel:",
+      "opciones": [
+        "Solo protege la carga útil y conserva la cabecera original",
+        "Solo se usa entre dos hosts finales",
+        "No admite ESP",
+        "Protege el paquete IP completo y añade una nueva cabecera IP exterior"
+      ],
+      "correcta": 3,
+      "explicacion": "El **modo túnel** encapsula el **paquete IP completo** bajo una **nueva cabecera IP exterior**, de modo que oculta las direcciones internas. Proteger solo la carga útil conservando la cabecera original es el modo transporte, típico de host a host. El modo túnel se usa entre pasarelas y en acceso remoto, y la combinación habitual es justamente ESP en modo túnel."
+    },
+    {
+      "id": "05",
+      "tema": 32,
+      "enunciado": "¿Qué puerto utiliza IPsec cuando aplica NAT Traversal (NAT-T)?",
+      "opciones": [
+        "TCP 443",
+        "UDP 4500",
+        "UDP 1194",
+        "TCP 1723"
+      ],
+      "correcta": 1,
+      "explicacion": "NAT-T encapsula ESP en **UDP 4500** para que atraviese los dispositivos NAT; IKE sin NAT usa UDP 500. TCP 443 es el puerto habitual de las VPN SSL/TLS, UDP 1194 el de OpenVPN por defecto y TCP 1723 el de PPTP."
+    },
+    {
+      "id": "06",
+      "tema": 32,
+      "enunciado": "La arquitectura que sitúa la DMZ entre un cortafuegos exterior y otro interior se denomina:",
+      "opciones": [
+        "Subred apantallada (screened subnet)",
+        "Host de doble base (dual-homed)",
+        "Host apantallado (screened host)",
+        "Router de filtrado"
+      ],
+      "correcta": 0,
+      "explicacion": "La **subred apantallada** (*screened subnet*) usa **dos** cortafuegos o routers con la **DMZ** en medio; es la arquitectura clásica más segura. El host de doble base es un único equipo con dos interfaces y encaminamiento desactivado; el host apantallado combina un router de filtrado con un bastión dentro de la LAN, sin DMZ propia; y el router de filtrado es la opción más simple y débil."
+    },
+    {
+      "id": "07",
+      "tema": 32,
+      "enunciado": "Un IDS basado en anomalías, frente a uno basado en firmas:",
+      "opciones": [
+        "Solo detecta ataques conocidos",
+        "No genera falsos positivos",
+        "Necesita estar en línea para funcionar",
+        "Puede detectar ataques desconocidos, pero genera más falsos positivos"
+      ],
+      "correcta": 3,
+      "explicacion": "El IDS de **anomalías** aprende un perfil de comportamiento normal y alerta de las desviaciones, así que **puede detectar ataques desconocidos** (día cero), a costa de **más falsos positivos**. Detectar solo lo conocido es lo propio de las firmas. Estar en línea no depende del método de detección, sino de que sea IPS en vez de IDS."
+    },
+    {
+      "id": "08",
+      "tema": 32,
+      "enunciado": "En la evaluación de un IDS, el resultado más peligroso es:",
+      "opciones": [
+        "Verdadero positivo",
+        "Falso positivo",
+        "Falso negativo",
+        "Verdadero negativo"
+      ],
+      "correcta": 2,
+      "explicacion": "El **falso negativo** es un **ataque real que pasa sin alerta**, por eso es el más peligroso. El falso positivo es una alerta sin ataque: molesta y genera ruido, pero no deja pasar nada. Los verdaderos (positivo y negativo) son aciertos del sistema."
+    },
+    {
+      "id": "09",
+      "tema": 32,
+      "enunciado": "En IEEE 802.1X, el switch o punto de acceso desempeña el papel de:",
+      "opciones": [
+        "Suplicante",
+        "Autenticador",
+        "Servidor de autenticación",
+        "Autoridad de certificación"
+      ],
+      "correcta": 1,
+      "explicacion": "En 802.1X el switch o el punto de acceso es el **autenticador**: mantiene el puerto bloqueado hasta que hay autenticación y hace de intermediario. El suplicante es el equipo del usuario y el servidor de autenticación suele ser **RADIUS**. La autoridad de certificación no es un rol de 802.1X."
+    },
+    {
+      "id": "10",
+      "tema": 32,
+      "enunciado": "Un WAF está diseñado principalmente para proteger frente a:",
+      "opciones": [
+        "Inyección SQL y XSS en aplicaciones web",
+        "Ataques de desautenticación Wi-Fi",
+        "MAC flooding",
+        "Escuchas en enlaces WAN"
+      ],
+      "correcta": 0,
+      "explicacion": "El **WAF** (*Web Application Firewall*) inspecciona el tráfico **HTTP/HTTPS** hacia una aplicación web y bloquea ataques del OWASP Top 10 como la **inyección SQL** y el **XSS**. La desautenticación Wi-Fi se combate con PMF (802.11w), el MAC flooding con port security y las escuchas en la WAN con cifrado (VPN)."
+    },
+    {
+      "id": "11",
+      "tema": 32,
+      "enunciado": "Un proxy inverso:",
+      "opciones": [
+        "Representa a los usuarios internos cuando navegan por Internet",
+        "Solo hace caché en el navegador",
+        "Representa a los servidores y puede terminar TLS y balancear carga",
+        "Sustituye al servidor DNS"
+      ],
+      "correcta": 2,
+      "explicacion": "El **proxy inverso** se sitúa delante de los **servidores** y los representa: termina TLS, balancea carga, hace caché, puede integrar un WAF y oculta los servidores reales (p. ej., NGINX o HAProxy). Representar a los usuarios internos que navegan es la función del proxy directo, como Squid."
+    },
+    {
+      "id": "12",
+      "tema": 32,
+      "enunciado": "WPA3-Personal sustituye la autenticación PSK de WPA2 por:",
+      "opciones": [
+        "TKIP",
+        "WEP",
+        "EAP-TLS",
+        "SAE"
+      ],
+      "correcta": 3,
+      "explicacion": "WPA3-Personal usa **SAE** (*Simultaneous Authentication of Equals*, intercambio «Dragonfly»), que resiste los **ataques de diccionario fuera de línea** y aporta secreto hacia adelante. TKIP es el cifrado de WPA y WEP el mecanismo roto original. EAP-TLS es un método de autenticación del modo empresarial, no del personal."
+    },
+    {
+      "id": "13",
+      "tema": 32,
+      "enunciado": "En la banda de 6 GHz (Wi-Fi 6E):",
+      "opciones": [
+        "Se permite WPA2-Personal",
+        "WPA3 es obligatorio y WPA2 no está permitido",
+        "Solo se permiten redes abiertas",
+        "Se usa WEP por compatibilidad"
+      ],
+      "correcta": 1,
+      "explicacion": "En la banda de **6 GHz** (Wi-Fi 6E y Wi-Fi 7) **WPA3 es obligatorio** y **WPA2 no está permitido**; las redes abiertas tienen que usar OWE. Por eso no cabe WPA2-Personal, y menos aún WEP, que está roto."
+    },
+    {
+      "id": "14",
+      "tema": 32,
+      "enunciado": "La principal diferencia de ZTNA frente a una VPN tradicional es que ZTNA:",
+      "opciones": [
+        "Da acceso a aplicaciones concretas tras verificar de forma continua identidad y dispositivo",
+        "Da acceso a toda la red interna",
+        "No requiere autenticación",
+        "Solo funciona en la red local"
+      ],
+      "correcta": 0,
+      "explicacion": "**ZTNA** concede acceso **por aplicación**, con **evaluación continua** de identidad y estado del dispositivo, y mantiene las aplicaciones ocultas hasta autorizar. Dar acceso a toda la red es lo que hace la VPN tradicional, y por eso permite el movimiento lateral. ZTNA exige más autenticación, no menos, y está pensado precisamente para el acceso remoto."
+    },
+    {
+      "id": "15",
+      "tema": 32,
+      "enunciado": "¿Cuál NO es un componente núcleo de SASE según Gartner?",
+      "opciones": [
+        "SD-WAN",
+        "CASB",
+        "ZTNA",
+        "HIDS"
+      ],
+      "correcta": 3,
+      "explicacion": "Los componentes núcleo de **SASE** son **SD-WAN, SWG, CASB, ZTNA y FWaaS**, prestados desde la nube. El **HIDS** es un sistema de detección de intrusiones que se instala en un equipo concreto (p. ej., OSSEC o Wazuh) y no forma parte de SASE."
+    },
+    {
+      "id": "16",
+      "tema": 32,
+      "enunciado": "En la arquitectura NIST SP 800-207, el componente que toma la decisión final de conceder o denegar el acceso es:",
+      "opciones": [
+        "Policy Enforcement Point",
+        "Policy Administrator",
+        "Policy Engine",
+        "Servidor RADIUS"
+      ],
+      "correcta": 2,
+      "explicacion": "En NIST SP 800-207 el **Policy Engine (PE)** toma la **decisión** de conceder, denegar o revocar el acceso. El Policy Administrator ejecuta esa decisión ordenando al PEP abrir o cerrar la ruta, y el PEP la aplica sobre la conexión. RADIUS no es un componente de esa arquitectura. Truco: Engine decide, Administrator ordena, Enforcement aplica."
+    },
+    {
+      "id": "17",
+      "tema": 32,
+      "enunciado": "WireGuard:",
+      "opciones": [
+        "Funciona solo sobre TCP 443",
+        "Funciona sobre UDP y usa Curve25519 y ChaCha20-Poly1305",
+        "Es una variante de PPTP",
+        "Necesita IKEv2 para negociar claves"
+      ],
+      "correcta": 1,
+      "explicacion": "**WireGuard** funciona **solo sobre UDP** (51820 habitual) con criptografía fija: **Curve25519**, **ChaCha20-Poly1305** y BLAKE2s, sobre el marco Noise. No usa TCP 443 (eso es típico de las VPN SSL/TLS), no deriva de PPTP y no usa IKEv2, que es propio de IPsec."
+    },
+    {
+      "id": "18",
+      "tema": 32,
+      "enunciado": "¿Cuál de estas combinaciones es autenticación multifactor?",
+      "opciones": [
+        "Contraseña y token físico",
+        "Contraseña y PIN",
+        "Dos contraseñas distintas",
+        "Contraseña y pregunta de seguridad"
+      ],
+      "correcta": 0,
+      "explicacion": "Hay MFA cuando se combinan factores de **categorías distintas**: la contraseña es algo que **sabes** y el token físico algo que **tienes**. Contraseña y PIN, dos contraseñas o contraseña y pregunta de seguridad son todos «algo que sabes», así que son un único factor repetido."
+    },
+    {
+      "id": "19",
+      "tema": 32,
+      "enunciado": "Un EDR se diferencia de un antivirus clásico en que:",
+      "opciones": [
+        "Solo usa firmas",
+        "Solo protege servidores de correo",
+        "Recoge telemetría continua, detecta por comportamiento y permite responder, por ejemplo aislando el equipo",
+        "Sustituye al cortafuegos perimetral"
+      ],
+      "correcta": 2,
+      "explicacion": "El **EDR** (*Endpoint Detection and Response*) recoge **telemetría continua** del equipo, detecta por **comportamiento** e indicadores de compromiso y permite **responder**: aislar el equipo, investigar o revertir. Depender solo de firmas es la limitación del antivirus clásico. El EDR protege el puesto, no el correo ni el perímetro."
+    },
+    {
+      "id": "20",
+      "tema": 32,
+      "enunciado": "En el ENS (RD 311/2022), la medida «Protección frente a código dañino» es:",
+      "opciones": [
+        "mp.com.1",
+        "op.acc.6",
+        "mp.eq.3",
+        "op.exp.6"
+      ],
+      "correcta": 3,
+      "explicacion": "En el ENS la **protección frente a código dañino** es la medida **op.exp.6**, del grupo de explotación. mp.com.1 es «Perímetro seguro», op.acc.6 es «Mecanismo de autenticación (usuarios de la organización)» y mp.eq.3 es «Protección de dispositivos portátiles»."
+    },
+    {
+      "id": "21",
+      "tema": 32,
+      "enunciado": "Según el Esquema Nacional de Seguridad (RD 311/2022), ¿cuál de las siguientes NO es una de las dimensiones de seguridad con las que se valoran los sistemas?",
+      "opciones": [
+        "Trazabilidad",
+        "No repudio",
+        "Autenticidad",
+        "Disponibilidad"
+      ],
+      "correcta": 1,
+      "explicacion": "Las cinco dimensiones del ENS son **confidencialidad, integridad, disponibilidad, autenticidad y trazabilidad** (regla **C-I-D-A-T**). El **no repudio** es un servicio de seguridad que se consigue, por ejemplo, con firma electrónica, pero no es una de esas dimensiones. Trazabilidad y autenticidad son precisamente las dos que el ENS añade a la tríada clásica CIA."
+    },
+    {
+      "id": "22",
+      "tema": 32,
+      "enunciado": "Un ataque de interceptación, como la captura de tráfico con un sniffer, afecta principalmente a la:",
+      "opciones": [
+        "Disponibilidad",
+        "Integridad",
+        "Autenticidad",
+        "Confidencialidad"
+      ],
+      "correcta": 3,
+      "explicacion": "La **interceptación** (sniffing, escucha pasiva) compromete la **confidencialidad**: alguien no autorizado lee la información. La interrupción afecta a la disponibilidad (DoS), la modificación a la integridad (MitM) y la fabricación a la autenticidad (spoofing)."
+    },
+    {
+      "id": "23",
+      "tema": 32,
+      "enunciado": "¿Qué medida es la más adecuada para protegerse de un ataque pasivo de escucha del tráfico?",
+      "opciones": [
+        "Instalar un sistema de detección de intrusiones",
+        "Activar SYN cookies en los servidores",
+        "Cifrar las comunicaciones",
+        "Aplicar límites de tasa en el router frontera"
+      ],
+      "correcta": 2,
+      "explicacion": "Un **ataque pasivo** solo observa y no altera nada, por lo que es muy difícil de detectar; la defensa eficaz es el **cifrado**, que vuelve inútil lo capturado. La detección (IDS) y la integridad son la respuesta a los ataques activos. SYN cookies y límites de tasa sirven contra inundaciones como el SYN flood."
+    },
+    {
+      "id": "24",
+      "tema": 32,
+      "enunciado": "Un atacante envía miles de tramas con direcciones MAC de origen falsas hasta llenar la tabla CAM del switch, que empieza a inundar el tráfico por todos los puertos como un hub. ¿Qué contramedida es la adecuada?",
+      "opciones": [
+        "DHCP snooping",
+        "Dynamic ARP Inspection",
+        "Port security",
+        "DNSSEC"
+      ],
+      "correcta": 2,
+      "explicacion": "Es un **MAC flooding** y se combate con **port security**, que limita qué direcciones MAC o cuántas puede usar cada puerto. DHCP snooping frena los servidores DHCP falsos, Dynamic ARP Inspection el ARP spoofing y DNSSEC el envenenamiento de la caché DNS."
+    },
+    {
+      "id": "25",
+      "tema": 32,
+      "enunciado": "El ataque SYN flood, que agota las conexiones semiabiertas de un servidor, actúa en la capa OSI:",
+      "opciones": [
+        "2",
+        "3",
+        "4",
+        "7"
+      ],
+      "correcta": 2,
+      "explicacion": "El **SYN flood** abusa del saludo en tres pasos de **TCP**, que es un protocolo de **capa 4** (transporte): envía SYN sin completar la conexión hasta llenar la cola de conexiones semiabiertas. Se mitiga con **SYN cookies** y límites de tasa. La capa 2 es la de ARP o MAC flooding, la 3 la del IP spoofing y la 7 la de ataques como el DNS spoofing."
+    },
+    {
+      "id": "26",
+      "tema": 32,
+      "enunciado": "En un cortafuegos configurado con política restrictiva, el tráfico que no coincide con ninguna regla explícita:",
+      "opciones": [
+        "Se deniega",
+        "Se permite y se registra",
+        "Se reenvía al IDS para que decida",
+        "Se permite solo si es TCP"
+      ],
+      "correcta": 0,
+      "explicacion": "La política **restrictiva** (*default deny*) **deniega todo lo que no está expresamente permitido**, y es la recomendada. Permitir lo no listado es la política permisiva (*default allow*). Por eso es habitual una regla final implícita de «denegar todo»."
+    },
+    {
+      "id": "27",
+      "tema": 32,
+      "enunciado": "Un cortafuegos tiene estas reglas, evaluadas en orden:\n1. Permitir TCP de cualquier origen a 192.0.2.10, puerto 443\n2. Denegar cualquier tráfico hacia 192.0.2.0/24\n3. Permitir TCP de cualquier origen a 192.0.2.10, puerto 22\n4. (Implícita) Denegar todo\nLlega una conexión TCP al puerto 22 de 192.0.2.10. ¿Qué ocurre?",
+      "opciones": [
+        "Se permite por la regla 1",
+        "Se deniega por la regla 2",
+        "Se permite por la regla 3",
+        "Se deniega por la regla implícita"
+      ],
+      "correcta": 1,
+      "explicacion": "Las reglas se evalúan **de arriba abajo** y se aplica la **primera coincidencia**. El paquete no encaja en la regla 1 (es el puerto 22, no el 443), pero sí en la **regla 2**, porque 192.0.2.10 está dentro de 192.0.2.0/24; se deniega y la regla 3 nunca llega a evaluarse. Moraleja: las reglas más específicas deben ir antes que las generales."
+    },
+    {
+      "id": "28",
+      "tema": 32,
+      "enunciado": "¿Qué tipo de cortafuegos trabaja en la capa 5 validando que la sesión TCP es legítima, sin inspeccionar el contenido, como hace SOCKS?",
+      "opciones": [
+        "Proxy de aplicación",
+        "Filtrado de paquetes sin estado",
+        "WAF",
+        "Pasarela de circuito (circuit-level gateway)"
+      ],
+      "correcta": 3,
+      "explicacion": "La **pasarela de circuito** trabaja en la **capa 5** y comprueba la validez de la sesión TCP (p. ej., **SOCKS**), ocultando la red interna, pero **no inspecciona el contenido**. El proxy de aplicación sí analiza el protocolo concreto en capa 7, el filtrado de paquetes se queda en las capas 3-4 y el WAF se limita al tráfico web."
+    },
+    {
+      "id": "29",
+      "tema": 32,
+      "enunciado": "¿Qué característica distingue a un NGFW (Next-Generation Firewall) de un cortafuegos de inspección de estado convencional?",
+      "opciones": [
+        "Identifica aplicaciones y usuarios mediante inspección profunda de paquetes (DPI)",
+        "Mantiene una tabla de estados de las conexiones",
+        "Filtra por dirección IP y puerto",
+        "Se implementa mediante ACL en el router"
+      ],
+      "correcta": 0,
+      "explicacion": "El **NGFW** añade al stateful la **DPI** y la identificación de **aplicaciones** y **usuarios**, además de IPS integrado e inspección TLS; así controla por aplicación y no solo por puerto. La tabla de estados ya la tiene cualquier cortafuegos stateful, y el filtrado por IP y puerto o las ACL de router son propios del filtrado de paquetes."
+    },
+    {
+      "id": "30",
+      "tema": 32,
+      "enunciado": "¿Cuál de estas direcciones NO pertenece a ninguno de los rangos privados del RFC 1918?",
+      "opciones": [
+        "172.32.0.1",
+        "10.200.1.1",
+        "172.20.5.5",
+        "192.168.100.1"
+      ],
+      "correcta": 0,
+      "explicacion": "Los rangos privados del RFC 1918 son **10.0.0.0/8**, **172.16.0.0/12** y **192.168.0.0/16**. El /12 de 172.16 abarca de **172.16.0.0 a 172.31.255.255**, así que **172.32.0.1** queda fuera y es pública. 172.20.5.5 sí está dentro de ese bloque. Truco: con /12 el segundo octeto varía de 16 a 31 (16 valores)."
+    },
+    {
+      "id": "31",
+      "tema": 32,
+      "enunciado": "¿Qué dispositivo del perímetro permite el flujo de información en un solo sentido y se usa para interconectar redes clasificadas?",
+      "opciones": [
+        "Router frontera",
+        "Diodo de datos",
+        "Proxy transparente",
+        "Pasarela de correo seguro"
+      ],
+      "correcta": 1,
+      "explicacion": "El **diodo de datos** garantiza físicamente que la información fluye en **un solo sentido**, por eso se usa para conectar redes clasificadas. El router frontera es el primer filtro con ACL anti-spoofing, el proxy transparente intercepta tráfico sin configurar el cliente y la pasarela de correo filtra spam y malware en SMTP; los tres admiten tráfico en ambos sentidos."
+    },
+    {
+      "id": "32",
+      "tema": 32,
+      "enunciado": "En una arquitectura con DMZ bien diseñada, ¿qué flujo debe estar denegado?",
+      "opciones": [
+        "De Internet a la DMZ por el puerto 443 del servidor web",
+        "De la LAN a la DMZ, de forma controlada, para administración",
+        "De Internet a la LAN interna",
+        "De la LAN a Internet a través del proxy"
+      ],
+      "correcta": 2,
+      "explicacion": "El tráfico **de Internet a la LAN interna** se **deniega**: lo que debe verse desde fuera se publica en la DMZ. Desde Internet solo se permiten los puertos publicados en la DMZ (como el 443 del servidor web), la LAN accede a la DMZ de forma controlada y sale a Internet según la política, a menudo a través de proxy."
+    },
+    {
+      "id": "33",
+      "tema": 32,
+      "enunciado": "Un host bastión de doble base (dual-homed host) se caracteriza por:",
+      "opciones": [
+        "Tener dos interfaces, externa e interna, con el encaminamiento IP desactivado",
+        "Tener tres interfaces: Internet, DMZ y LAN",
+        "Ser un router con ACL entre Internet y la LAN",
+        "Situarse en la red interna detrás de un router de filtrado"
+      ],
+      "correcta": 0,
+      "explicacion": "El **dual-homed host** tiene **dos interfaces** y el **encaminamiento IP desactivado**, de modo que el tráfico solo cruza a través de sus proxies. Tres interfaces es el cortafuegos de tres patas, un router con ACL es el *screening router* y el bastión detrás de un router de filtrado es el *screened host*."
+    },
+    {
+      "id": "34",
+      "tema": 32,
+      "enunciado": "¿Cuál es la principal desventaja de la arquitectura de cortafuegos de tres patas (three-legged)?",
+      "opciones": [
+        "Necesita dos cortafuegos de fabricantes distintos",
+        "No permite crear una DMZ",
+        "Solo filtra tráfico en la capa 7",
+        "Constituye un punto único de fallo"
+      ],
+      "correcta": 3,
+      "explicacion": "El cortafuegos de **tres patas** usa un **único** equipo con interfaces hacia Internet, DMZ y LAN: es barato, pero si cae o se compromete, todo queda expuesto (**punto único de fallo**). Sí crea una DMZ, en su tercera interfaz. Recomendar dos cortafuegos de fabricantes distintos es lo propio de la subred apantallada."
+    },
+    {
+      "id": "35",
+      "tema": 32,
+      "enunciado": "¿Qué afirmación es correcta sobre un IPS frente a un IDS?",
+      "opciones": [
+        "El IPS recibe una copia del tráfico por un puerto espejo (SPAN)",
+        "El IPS solo genera alertas, sin intervenir en el tráfico",
+        "El IPS no puede producir falsos positivos",
+        "El IPS se sitúa en línea y puede bloquear el tráfico, pero si falla puede cortar el servicio"
+      ],
+      "correcta": 3,
+      "explicacion": "El **IPS** va **en línea** (*inline*): el tráfico lo atraviesa, así que puede **bloquear**, pero un fallo puede cortar el servicio (de ahí los modos *fail-open* y *fail-closed*). Recibir copia por SPAN o TAP y limitarse a alertar es lo propio del IDS. Un IPS sí tiene falsos positivos, y en su caso son peores: bloquea tráfico legítimo."
+    },
+    {
+      "id": "36",
+      "tema": 32,
+      "enunciado": "¿Cuál de las siguientes herramientas es un sistema de detección de intrusiones de host (HIDS)?",
+      "opciones": [
+        "Wazuh",
+        "Snort",
+        "Suricata",
+        "Zeek"
+      ],
+      "correcta": 0,
+      "explicacion": "**Wazuh** (como OSSEC, del que deriva) es un **HIDS**: se instala en el equipo y analiza registros, integridad de ficheros y llamadas al sistema. **Snort**, **Suricata** y **Zeek** son NIDS de software libre que analizan el tráfico de un segmento de red."
+    },
+    {
+      "id": "37",
+      "tema": 32,
+      "enunciado": "Un sistema NAC detecta que un portátil que intenta conectarse no tiene el antivirus actualizado. ¿Cuál es la actuación típica?",
+      "opciones": [
+        "Concederle acceso completo y registrar el incidente",
+        "Asignarlo a una VLAN de cuarentena o remediación",
+        "Desactivar el switch al que se conecta",
+        "Cambiarle la dirección MAC"
+      ],
+      "correcta": 1,
+      "explicacion": "**NAC** decide el acceso según la identidad y el **estado de seguridad** (*posture*) del equipo; si no cumple, lo envía a una **VLAN de cuarentena** o de remediación hasta que se corrija. Dar acceso completo anularía el control, y apagar el switch dejaría sin red a todos los demás equipos."
+    },
+    {
+      "id": "38",
+      "tema": 32,
+      "enunciado": "En IEEE 802.1X, ¿qué encapsulación se usa entre el suplicante y el autenticador?",
+      "opciones": [
+        "EAP encapsulado en RADIUS",
+        "LDAP",
+        "IKE",
+        "EAP sobre LAN (EAPOL)"
+      ],
+      "correcta": 3,
+      "explicacion": "Entre el suplicante (equipo) y el autenticador (switch o AP) viaja **EAPOL**, EAP sobre LAN. Entre el autenticador y el servidor de autenticación, EAP va **encapsulado en RADIUS**. LDAP es un protocolo de directorio e IKE negocia claves en IPsec."
+    },
+    {
+      "id": "39",
+      "tema": 32,
+      "enunciado": "¿Qué método EAP exige certificado tanto en el cliente como en el servidor y se considera el más robusto?",
+      "opciones": [
+        "PEAP",
+        "EAP-TTLS",
+        "EAP-TLS",
+        "MAB"
+      ],
+      "correcta": 2,
+      "explicacion": "**EAP-TLS** usa **certificado en cliente y servidor**, y es el más robusto. **PEAP** y **EAP-TTLS** montan un túnel TLS con certificado **solo en el servidor** y envían dentro las credenciales del usuario. MAB no es un método EAP, sino autenticación por MAC para equipos sin suplicante, y es débil."
+    },
+    {
+      "id": "40",
+      "tema": 32,
+      "enunciado": "Una VPN que une la red de la sede central de un ministerio con la de una delegación provincial mediante dos pasarelas es una VPN:",
+      "opciones": [
+        "De acceso remoto",
+        "Sitio a sitio",
+        "Extranet",
+        "Sin cliente (clientless)"
+      ],
+      "correcta": 1,
+      "explicacion": "La VPN **sitio a sitio** (LAN a LAN) conecta **dos redes completas** mediante **pasarelas**. La de acceso remoto conecta un equipo individual (teletrabajo), la extranet une redes de organizaciones distintas y el acceso sin cliente es un portal web de las VPN SSL/TLS."
+    },
+    {
+      "id": "41",
+      "tema": 32,
+      "enunciado": "Señale la afirmación INCORRECTA sobre el túnel dividido (split tunneling) en una VPN de acceso remoto:",
+      "opciones": [
+        "Solo el tráfico corporativo va por la VPN",
+        "Ahorra ancho de banda en la red corporativa",
+        "Deja el equipo menos controlado por la organización",
+        "Es más seguro que el túnel completo porque el tráfico de Internet no pasa por la VPN"
+      ],
+      "correcta": 3,
+      "explicacion": "Con **split tunneling** solo el tráfico corporativo va por la VPN y el resto sale directo a Internet: ahorra ancho de banda, pero ese tráfico escapa a los controles corporativos. Por eso el **túnel completo** (*full tunnel*), en el que **todo** pasa por la VPN, es la opción **más segura**, y no al revés."
+    },
+    {
+      "id": "42",
+      "tema": 32,
+      "enunciado": "Una VPN MPLS contratada al operador (VPN «de confianza»):",
+      "opciones": [
+        "Cifra el tráfico con IPsec de forma obligatoria",
+        "Funciona siempre sobre TCP 443",
+        "Es un tipo de VPN SSL/TLS sin cliente",
+        "Aísla el tráfico de cada cliente, pero no lo cifra"
+      ],
+      "correcta": 3,
+      "explicacion": "La **VPN MPLS** del operador es una VPN «de confianza»: **aísla** el tráfico de cada cliente en la red del operador, pero **no lo cifra**. Las VPN «seguras» son las que cifran, como IPsec o TLS. Si se necesita confidencialidad sobre MPLS, hay que añadir cifrado (p. ej., IPsec)."
+    },
+    {
+      "id": "43",
+      "tema": 32,
+      "enunciado": "Sobre el protocolo de túnel L2TP, es correcto que:",
+      "opciones": [
+        "Trabaja en la capa 3 y cifra con ESP",
+        "Usa criptografía fija basada en ChaCha20-Poly1305",
+        "Es la versión segura de PPTP y no necesita otro protocolo",
+        "No cifra por sí mismo, por lo que se combina con IPsec (L2TP/IPsec)"
+      ],
+      "correcta": 3,
+      "explicacion": "**L2TP** es un protocolo de túnel de **capa 2** que **no cifra**; para dar confidencialidad se combina con IPsec (**L2TP/IPsec**). ESP es de IPsec, ChaCha20-Poly1305 es la criptografía fija de WireGuard y PPTP está obsoleto e inseguro."
+    },
+    {
+      "id": "44",
+      "tema": 32,
+      "enunciado": "Las asociaciones de seguridad (SA) de IPsec son unidireccionales. ¿Cuántas SA de ESP se necesitan como mínimo para proteger el tráfico en ambos sentidos entre dos pasarelas?",
+      "opciones": [
+        "Una",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada **SA** es un acuerdo **unidireccional** sobre algoritmos y claves, identificado por su **SPI**; para el tráfico de ida y el de vuelta hacen falta **dos**. Saldrían cuatro solo si se usaran a la vez AH y ESP (dos por protocolo). Las SA se guardan en la SAD, y la SPD dice qué tráfico proteger."
+    },
+    {
+      "id": "45",
+      "tema": 32,
+      "enunciado": "¿Qué garantiza Perfect Forward Secrecy (PFS) en una VPN IPsec?",
+      "opciones": [
+        "Que el túnel se mantenga aunque cambie la IP del cliente",
+        "Que ESP atraviese dispositivos NAT encapsulado en UDP",
+        "Que, si se compromete una clave, no se puedan descifrar las sesiones pasadas",
+        "Que los extremos se autentiquen con certificados X.509"
+      ],
+      "correcta": 2,
+      "explicacion": "Con **PFS** se hace un **nuevo intercambio Diffie-Hellman** por sesión, de modo que comprometer una clave **no permite descifrar las sesiones pasadas**. Mantener el túnel al cambiar de IP es MOBIKE, atravesar NAT es NAT-T y la autenticación con certificados X.509 es una opción de autenticación de los extremos, no PFS."
+    },
+    {
+      "id": "46",
+      "tema": 32,
+      "enunciado": "¿Qué funcionalidad de IKEv2 permite mantener el túnel cuando cambia la dirección IP del cliente, algo útil en dispositivos móviles?",
+      "opciones": [
+        "NAT-T",
+        "MOBIKE",
+        "ISAKMP",
+        "Modo agresivo"
+      ],
+      "correcta": 1,
+      "explicacion": "**MOBIKE** es la extensión de **IKEv2** (RFC 7296 es la norma de IKEv2) que mantiene el túnel cuando cambia la IP del cliente. NAT-T sirve para atravesar NAT, ISAKMP es el marco de la fase 1 de IKEv1 y el modo agresivo es una variante de esa fase 1 de IKEv1."
+    },
+    {
+      "id": "47",
+      "tema": 32,
+      "enunciado": "Dos servidores de la misma red necesitan garantizar la integridad y el origen de los datos que intercambian, sin cifrarlos y comunicándose directamente de host a host. ¿Qué opción de las siguientes es la adecuada?",
+      "opciones": [
+        "IPsec AH en modo transporte",
+        "IPsec ESP en modo túnel entre dos pasarelas",
+        "L2TP sin IPsec",
+        "GRE sin IPsec"
+      ],
+      "correcta": 0,
+      "explicacion": "**AH en modo transporte** da **integridad y autenticación del origen sin cifrado** y protege la comunicación **extremo a extremo** entre dos hosts. ESP en modo túnel entre pasarelas es la VPN sitio a sitio típica y además cifra. L2TP y GRE sin IPsec solo encapsulan: no aportan ni cifrado ni integridad."
+    },
+    {
+      "id": "48",
+      "tema": 32,
+      "enunciado": "¿Qué mecanismo de cifrado utiliza WPA2 (IEEE 802.11i)?",
+      "opciones": [
+        "TKIP con RC4",
+        "RC4 con claves estáticas",
+        "ChaCha20-Poly1305",
+        "CCMP con AES"
+      ],
+      "correcta": 3,
+      "explicacion": "**WPA2**, basado en **IEEE 802.11i**, cifra con **CCMP-AES**. TKIP sobre RC4 es el de WPA (medida transitoria y obsoleta) y RC4 con claves estáticas es WEP, que está roto. ChaCha20-Poly1305 es de WireGuard, no de Wi-Fi."
+    },
+    {
+      "id": "49",
+      "tema": 32,
+      "enunciado": "¿Qué estándar IEEE protege las tramas de gestión Wi-Fi frente a ataques de desautenticación y es obligatorio en WPA3?",
+      "opciones": [
+        "IEEE 802.11w (PMF)",
+        "IEEE 802.11i",
+        "IEEE 802.1X",
+        "IEEE 802.11ax"
+      ],
+      "correcta": 0,
+      "explicacion": "**PMF** (*Protected Management Frames*, **IEEE 802.11w**) protege las tramas de gestión y es **obligatorio en WPA3**, lo que evita los ataques de desautenticación. 802.11i es la base de WPA2, 802.1X es el control de acceso por puerto y 802.11ax es Wi-Fi 6, una norma de capa física, no de seguridad."
+    },
+    {
+      "id": "50",
+      "tema": 32,
+      "enunciado": "¿Cuál de las siguientes medidas NO es eficaz para proteger una red Wi-Fi?",
+      "opciones": [
+        "Usar WPA3-Enterprise con 802.1X",
+        "Ocultar el SSID",
+        "Desactivar WPS",
+        "Separar la red de invitados en una VLAN propia"
+      ],
+      "correcta": 1,
+      "explicacion": "**Ocultar el SSID** no protege: el nombre de la red sigue apareciendo en otras tramas y cualquiera con un analizador lo ve (lo mismo pasa con el filtrado por MAC, porque la MAC se falsifica). WPA3-Enterprise con 802.1X, desactivar **WPS** (su PIN de 8 dígitos se ataca por fuerza bruta) y aislar a los invitados sí son buenas prácticas."
+    },
+    {
+      "id": "51",
+      "tema": 32,
+      "enunciado": "¿Qué tecnología, comercializada como «Enhanced Open», cifra las redes Wi-Fi abiertas sin contraseña mediante Diffie-Hellman?",
+      "opciones": [
+        "SAE",
+        "WPS",
+        "OWE",
+        "TKIP"
+      ],
+      "correcta": 2,
+      "explicacion": "**OWE** (*Opportunistic Wireless Encryption*), comercializado como **Enhanced Open**, cifra las redes abiertas con un intercambio Diffie-Hellman, aunque no autentica a nadie. SAE es el sustituto de la PSK en WPA3-Personal (sí hay contraseña), WPS es un mecanismo de conexión inseguro y TKIP el cifrado obsoleto de WPA."
+    },
+    {
+      "id": "52",
+      "tema": 32,
+      "enunciado": "Un atacante instala un punto de acceso falso con el mismo SSID que la red corporativa para que los usuarios se conecten a él. ¿Cómo se denomina el ataque y qué medida lo mitiga?",
+      "opciones": [
+        "Rogue AP; ocultar el SSID de la red corporativa",
+        "Wardriving; filtrar las conexiones por dirección MAC",
+        "Evil twin; 802.1X con validación del certificado del servidor",
+        "Desautenticación; desactivar WPS en los puntos de acceso"
+      ],
+      "correcta": 2,
+      "explicacion": "Es un **evil twin** (gemelo malvado), y se mitiga con **802.1X** en el que el cliente **valida el certificado del servidor**, de modo que no entrega credenciales a un AP impostor. El rogue AP es un punto de acceso no autorizado enchufado a la red interna, el wardriving es rastrear redes desde un vehículo y la desautenticación se combate con PMF; además, ocultar el SSID y filtrar por MAC no son medidas eficaces."
+    },
+    {
+      "id": "53",
+      "tema": 32,
+      "enunciado": "En la arquitectura Zero Trust de NIST SP 800-207, ¿qué componente ejecuta la decisión del motor de políticas ordenando al punto de aplicación que abra o cierre la ruta y generando las credenciales de sesión?",
+      "opciones": [
+        "Policy Administrator (PA)",
+        "Policy Engine (PE)",
+        "Policy Enforcement Point (PEP)",
+        "Cloud Access Security Broker (CASB)"
+      ],
+      "correcta": 0,
+      "explicacion": "El **Policy Administrator** ejecuta la decisión: ordena al PEP abrir o cerrar la ruta y genera las credenciales de sesión. El Policy Engine es quien decide (juntos, PE y PA forman el PDP) y el PEP aplica la decisión sobre la conexión. El CASB es un componente de SASE, no de NIST SP 800-207."
+    },
+    {
+      "id": "54",
+      "tema": 32,
+      "enunciado": "¿Qué es SSE (Security Service Edge)?",
+      "opciones": [
+        "SASE más un SD-WAN instalado en el centro de datos",
+        "Un cortafuegos de host para puestos de usuario",
+        "Un método de autenticación EAP para redes Wi-Fi",
+        "La parte de seguridad de SASE (SWG, CASB, ZTNA y a menudo FWaaS), sin SD-WAN"
+      ],
+      "correcta": 3,
+      "explicacion": "**SSE** es la parte de **seguridad** de SASE: SWG, CASB, ZTNA y a menudo FWaaS, **sin SD-WAN**. SASE es el concepto completo que une red WAN y seguridad en la nube, definido por Gartner en 2019. Truco: SASE = SSE + SD-WAN."
+    },
+    {
+      "id": "55",
+      "tema": 32,
+      "enunciado": "¿Cuál de los siguientes es un principio del modelo Zero Trust?",
+      "opciones": [
+        "Confiar en los equipos por estar conectados a la red interna",
+        "Asumir la brecha y microsegmentar para frenar el movimiento lateral",
+        "Autenticar al usuario una sola vez al inicio de la jornada",
+        "Conceder acceso a toda la red tras superar la autenticación"
+      ],
+      "correcta": 1,
+      "explicacion": "Zero Trust parte de **«nunca confíes, verifica siempre»**: **asume la brecha** y **microsegmenta** como si el atacante ya estuviera dentro. Confiar por estar en la red interna es el modelo de «castillo y foso» que Zero Trust rechaza; la verificación es explícita y continua por solicitud, y el acceso es por recurso y con mínimo privilegio, no a toda la red."
+    },
+    {
+      "id": "56",
+      "tema": 32,
+      "enunciado": "Según el ENS (RD 311/2022), la medida mp.eq.2 corresponde a:",
+      "opciones": [
+        "Bloqueo de puesto de trabajo",
+        "Puesto de trabajo despejado",
+        "Protección de dispositivos portátiles",
+        "Configuración de seguridad"
+      ],
+      "correcta": 0,
+      "explicacion": "**mp.eq.2** es el **bloqueo de puesto de trabajo**: la sesión se bloquea automáticamente tras un periodo de inactividad. mp.eq.1 es «Puesto de trabajo despejado», mp.eq.3 «Protección de dispositivos portátiles» y op.exp.2 «Configuración de seguridad». Truco: el grupo mp.eq va en orden 1 despejado, 2 bloqueo, 3 portátiles."
+    },
+    {
+      "id": "57",
+      "tema": 32,
+      "enunciado": "¿Qué sistema se utiliza para puntuar la gravedad de una vulnerabilidad en una escala de 0 a 10?",
+      "opciones": [
+        "CVSS",
+        "CVE",
+        "WSUS",
+        "SIEM"
+      ],
+      "correcta": 0,
+      "explicacion": "**CVSS** puntúa la **gravedad** de una vulnerabilidad **de 0 a 10**, y sirve para priorizar los parches. **CVE** es el identificador de la vulnerabilidad (no la puntúa), WSUS es la herramienta de Microsoft para distribuir actualizaciones y un SIEM correlaciona eventos de seguridad."
+    },
+    {
+      "id": "58",
+      "tema": 32,
+      "enunciado": "La clave de recuperación de BitLocker que debe custodiarse (por ejemplo, en Active Directory o Entra ID) es un número de:",
+      "opciones": [
+        "24 dígitos",
+        "32 dígitos",
+        "48 dígitos",
+        "64 dígitos"
+      ],
+      "correcta": 2,
+      "explicacion": "La **clave de recuperación de BitLocker** tiene **48 dígitos**. BitLocker cifra el disco con AES (modo XTS-AES) y guarda las claves en el chip **TPM**, que además comprueba la integridad del arranque; la clave de recuperación permite acceder si falla esa comprobación o se olvida el PIN."
+    },
+    {
+      "id": "59",
+      "tema": 32,
+      "enunciado": "¿Qué solución asigna a cada equipo una contraseña de administrador local única y que se rota, para evitar el movimiento lateral con una misma clave?",
+      "opciones": [
+        "UAC",
+        "LAPS",
+        "AppLocker",
+        "WSUS"
+      ],
+      "correcta": 1,
+      "explicacion": "**LAPS** gestiona una **contraseña de administrador local única y rotada** en cada equipo, de modo que robar la de uno no sirve para entrar en los demás. UAC pide elevación para acciones privilegiadas, AppLocker es una lista blanca de aplicaciones y WSUS distribuye actualizaciones."
+    },
+    {
+      "id": "60",
+      "tema": 32,
+      "enunciado": "Según la regla 3-2-1 de copias de seguridad, se deben mantener:",
+      "opciones": [
+        "3 soportes distintos, 2 copias cifradas y 1 en la nube",
+        "3 copias diarias, 2 semanales y 1 mensual",
+        "3 copias de los datos, en 2 soportes distintos, con 1 fuera de la sede",
+        "3 copias en el mismo soporte, 2 de ellas cifradas y 1 en local"
+      ],
+      "correcta": 2,
+      "explicacion": "La regla **3-2-1** exige **3 copias** de los datos, en **2 soportes distintos**, y **1 fuera de la sede**, para sobrevivir tanto a la avería de un soporte como a un desastre en el edificio o a un ransomware. La rotación diaria, semanal y mensual es otro esquema (abuelo-padre-hijo), y guardar todas las copias en el mismo soporte contradice la regla."
+    }
+  ]
+}

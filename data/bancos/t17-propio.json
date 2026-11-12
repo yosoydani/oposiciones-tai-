@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 17 · test",
+  "fuente": "propio",
+  "tema": 17,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 17. SQL, procedimientos almacenados y disparadores»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 17,
+      "enunciado": "La edición vigente del estándar ISO/IEC 9075 es:",
+      "opciones": [
+        "SQL:2016",
+        "SQL:2019",
+        "SQL:2023",
+        "SQL:2011"
+      ],
+      "correcta": 2,
+      "explicacion": "La edición vigente es **ISO/IEC 9075:2023 (SQL:2023)**, que añade la parte 16 SQL/PGQ y el tipo JSON; la siguiente edición aún está en borrador. SQL:2016 trajo las funciones SQL/JSON, SQL:2019 solo la parte 15 (arrays multidimensionales) y SQL:2011 los datos temporales: son ediciones anteriores."
+    },
+    {
+      "id": "02",
+      "tema": 17,
+      "enunciado": "La sentencia `TRUNCATE TABLE` se clasifica como:",
+      "opciones": [
+        "DDL",
+        "DML",
+        "DCL",
+        "TCL"
+      ],
+      "correcta": 0,
+      "explicacion": "`TRUNCATE` vacía la tabla actuando sobre su almacenamiento, por eso es **DDL**: no admite `WHERE`, no dispara triggers de fila y en Oracle hace COMMIT implícito. Se confunde con DML porque el efecto se parece a un `DELETE` sin `WHERE`. DCL es para permisos y TCL para transacciones."
+    },
+    {
+      "id": "03",
+      "tema": 17,
+      "enunciado": "`GRANT` y `REVOKE` pertenecen al:",
+      "opciones": [
+        "DDL",
+        "DCL",
+        "TCL",
+        "DML"
+      ],
+      "correcta": 1,
+      "explicacion": "Conceder y retirar privilegios es tarea del **DCL** (*Data Control Language*). El DDL define estructuras (CREATE, ALTER, DROP), el DML consulta y modifica datos y el TCL controla transacciones (COMMIT, ROLLBACK). Truco: «C» de DCL = **C**ontrol de accesos."
+    },
+    {
+      "id": "04",
+      "tema": 17,
+      "enunciado": "Para filtrar grupos por el resultado de una función de agregado se usa:",
+      "opciones": [
+        "`WHERE`",
+        "`ORDER BY`",
+        "`GROUP BY`",
+        "`HAVING`"
+      ],
+      "correcta": 3,
+      "explicacion": "**HAVING** filtra los grupos después de `GROUP BY` y admite agregados (`HAVING COUNT(*) > 5`). `WHERE` se evalúa antes de agrupar y no admite funciones de agregado; `GROUP BY` forma los grupos pero no los filtra y `ORDER BY` solo ordena."
+    },
+    {
+      "id": "05",
+      "tema": 17,
+      "enunciado": "Una tabla tiene 10 filas y la columna `email` es nula en 3. `SELECT COUNT(*), COUNT(email)` devuelve:",
+      "opciones": [
+        "10 y 10",
+        "10 y 7",
+        "7 y 7",
+        "7 y 10"
+      ],
+      "correcta": 1,
+      "explicacion": "**COUNT(*)** cuenta todas las filas (10), tengan o no nulos; **COUNT(email)** solo cuenta los valores no nulos: 10 − 3 = 7. Las demás opciones confunden cuál de las dos formas ignora los nulos."
+    },
+    {
+      "id": "06",
+      "tema": 17,
+      "enunciado": "`salario BETWEEN 1000 AND 2000` selecciona los salarios:",
+      "opciones": [
+        "De 1000 a 2000, ambos incluidos",
+        "Mayores que 1000 y menores que 2000",
+        "De 1000 a 2000, sin incluir 2000",
+        "De 1001 a 1999"
+      ],
+      "correcta": 0,
+      "explicacion": "`BETWEEN a AND b` equivale a `>= a AND <= b`: es **inclusivo en ambos extremos**. Las otras opciones excluyen uno o los dos límites; además, «de 1001 a 1999» dejaría fuera salarios con decimales como 1000,50."
+    },
+    {
+      "id": "07",
+      "tema": 17,
+      "enunciado": "`nombre LIKE '_a%'` selecciona los nombres que:",
+      "opciones": [
+        "Empiezan por «a»",
+        "Terminan en «a»",
+        "Tienen «a» como segunda letra",
+        "Contienen «_a»"
+      ],
+      "correcta": 2,
+      "explicacion": "En `LIKE`, **`_` representa exactamente un carácter** y `%` cualquier cadena (incluso vacía): `'_a%'` es «un carácter cualquiera, una a y lo que sea»; es decir, **a como segunda letra**. «Empieza por a» sería `'a%'`, «termina en a» `'%a'`, y `_` no se toma como literal salvo que se escape."
+    },
+    {
+      "id": "08",
+      "tema": 17,
+      "enunciado": "`A LEFT JOIN B ON ...` devuelve:",
+      "opciones": [
+        "Solo las filas con pareja en ambas tablas",
+        "Todas las filas de B",
+        "El producto cartesiano",
+        "Todas las filas de A y las coincidentes de B"
+      ],
+      "correcta": 3,
+      "explicacion": "El `LEFT [OUTER] JOIN` conserva **todas las filas de la tabla izquierda (A)** y añade las coincidentes de B, con nulos cuando no hay pareja. Solo las parejas es el INNER JOIN, todas las de B sería el RIGHT JOIN y el producto cartesiano es el CROSS JOIN."
+    },
+    {
+      "id": "09",
+      "tema": 17,
+      "enunciado": "Si la subconsulta de `WHERE x NOT IN (SELECT y FROM t)` devuelve algún NULL, la consulta:",
+      "opciones": [
+        "Ignora el NULL",
+        "No devuelve ninguna fila",
+        "Da error",
+        "Devuelve todas las filas"
+      ],
+      "correcta": 1,
+      "explicacion": "`NOT IN` equivale a `x <> y1 AND x <> y2 AND ...`; la comparación con NULL da **DESCONOCIDO**, así que ninguna fila cumple la condición y la consulta **no devuelve filas**. No da error ni ignora el nulo. Para evitar la trampa se usa `NOT EXISTS`."
+    },
+    {
+      "id": "10",
+      "tema": 17,
+      "enunciado": "Respecto a `UNION` y `UNION ALL`:",
+      "opciones": [
+        "`UNION ALL` conserva los duplicados",
+        "`UNION` conserva los duplicados",
+        "Ambas eliminan duplicados",
+        "`UNION ALL` exige ordenar"
+      ],
+      "correcta": 0,
+      "explicacion": "**`UNION ALL` mantiene los duplicados** (y por eso es más rápida); `UNION` los elimina. Ninguna de las dos exige ordenar: `ORDER BY` es opcional y solo puede ir al final. Truco: ALL = «todas las filas, también las repetidas»."
+    },
+    {
+      "id": "11",
+      "tema": 17,
+      "enunciado": "¿Qué nivel de aislamiento evita las lecturas sucias pero permite las lecturas no repetibles?",
+      "opciones": [
+        "READ UNCOMMITTED",
+        "SERIALIZABLE",
+        "READ COMMITTED",
+        "REPEATABLE READ"
+      ],
+      "correcta": 2,
+      "explicacion": "**READ COMMITTED** solo lee datos ya confirmados (evita la lectura sucia), pero si otra transacción modifica y confirma una fila, releerla puede dar otro valor. READ UNCOMMITTED permite lecturas sucias; REPEATABLE READ ya evita la no repetible y SERIALIZABLE evita también los fantasmas."
+    },
+    {
+      "id": "12",
+      "tema": 17,
+      "enunciado": "Según el estándar SQL, el nivel de aislamiento por defecto es:",
+      "opciones": [
+        "READ COMMITTED",
+        "READ UNCOMMITTED",
+        "REPEATABLE READ",
+        "SERIALIZABLE"
+      ],
+      "correcta": 3,
+      "explicacion": "El estándar fija **SERIALIZABLE** como nivel por defecto. READ COMMITTED es el que usan en la práctica Oracle, PostgreSQL y SQL Server, y REPEATABLE READ el de MySQL (InnoDB): son defectos de productos, no del estándar."
+    },
+    {
+      "id": "13",
+      "tema": 17,
+      "enunciado": "El fenómeno «fantasma» consiste en que:",
+      "opciones": [
+        "Se lee un dato no confirmado",
+        "Al repetir una consulta aparecen filas nuevas insertadas por otra transacción",
+        "Una actualización sobrescribe otra",
+        "Dos transacciones se bloquean mutuamente"
+      ],
+      "correcta": 1,
+      "explicacion": "El **fantasma** aparece al repetir una consulta con condición y obtener **filas nuevas** que otra transacción insertó y confirmó. Leer un dato no confirmado es la lectura sucia, que una actualización sobrescriba otra es la actualización perdida y el bloqueo mutuo es el interbloqueo (*deadlock*)."
+    },
+    {
+      "id": "14",
+      "tema": 17,
+      "enunciado": "En ACID, la «I» significa:",
+      "opciones": [
+        "Aislamiento",
+        "Integridad",
+        "Independencia",
+        "Inmediatez"
+      ],
+      "correcta": 0,
+      "explicacion": "ACID = Atomicidad, Consistencia, **Aislamiento** (*Isolation*) y Durabilidad. «Integridad» es el distractor típico, pero lo que la garantiza (las restricciones) está dentro de la Consistencia. Independencia e Inmediatez no forman parte del acrónimo."
+    },
+    {
+      "id": "15",
+      "tema": 17,
+      "enunciado": "En el estándar SQL/PSM, un procedimiento almacenado se invoca con:",
+      "opciones": [
+        "`EXEC`",
+        "`RUN`",
+        "`CALL`",
+        "`PERFORM`"
+      ],
+      "correcta": 2,
+      "explicacion": "La sentencia estándar es **`CALL`** (`CALL subir_salario(10, 2.5, @n)`). `EXEC` es propia de T-SQL (SQL Server) y `PERFORM` se usa en PL/pgSQL para ejecutar una consulta descartando el resultado; `RUN` no es sentencia SQL."
+    },
+    {
+      "id": "16",
+      "tema": 17,
+      "enunciado": "Un trigger `BEFORE ... FOR EACH ROW` es especialmente adecuado para:",
+      "opciones": [
+        "Actualizar una vista no actualizable",
+        "Ejecutar tareas cada noche",
+        "Hacer `COMMIT` de la transacción",
+        "Validar o modificar los valores `NEW` antes de guardarlos"
+      ],
+      "correcta": 3,
+      "explicacion": "El trigger **BEFORE de fila** actúa antes de escribir cada fila y puede **validar o cambiar `NEW`** (por ejemplo, `SET NEW.nombre = UPPER(NEW.nombre)`). Las vistas no actualizables se resuelven con `INSTEAD OF`, las tareas nocturnas son eventos programados y un trigger normalmente no puede hacer COMMIT."
+    },
+    {
+      "id": "17",
+      "tema": 17,
+      "enunciado": "En un trigger de fila asociado a `DELETE` está disponible:",
+      "opciones": [
+        "Solo `NEW`",
+        "Solo `OLD`",
+        "`OLD` y `NEW`",
+        "Ninguno"
+      ],
+      "correcta": 1,
+      "explicacion": "En un DELETE la fila deja de existir, así que **solo existe `OLD`** (la fila borrada). En INSERT solo hay `NEW` y en UPDATE hay ambos. Truco: lo que se borra es «lo viejo»."
+    },
+    {
+      "id": "18",
+      "tema": 17,
+      "enunciado": "Los triggers `INSTEAD OF` se definen normalmente sobre:",
+      "opciones": [
+        "Vistas",
+        "Índices",
+        "Secuencias",
+        "Procedimientos"
+      ],
+      "correcta": 0,
+      "explicacion": "Los triggers **INSTEAD OF** sustituyen la operación y se usan sobre **vistas** para hacerlas actualizables (SQL:2008). Índices, secuencias y procedimientos no reciben operaciones INSERT/UPDATE/DELETE que se puedan interceptar."
+    },
+    {
+      "id": "19",
+      "tema": 17,
+      "enunciado": "Los disparadores se incorporaron al estándar SQL en:",
+      "opciones": [
+        "SQL-86",
+        "SQL-92",
+        "SQL:1999",
+        "SQL:2011"
+      ],
+      "correcta": 2,
+      "explicacion": "Los triggers entraron en **SQL:1999 (SQL3)**, junto con las consultas recursivas y las características objeto-relacionales. SQL-86 fue el primer estándar, SQL-92 trajo los JOIN explícitos y los niveles de aislamiento, y SQL:2011 los datos temporales."
+    },
+    {
+      "id": "20",
+      "tema": 17,
+      "enunciado": "En MySQL, `CREATE EVENT ... ON SCHEDULE EVERY 1 DAY` sirve para:",
+      "opciones": [
+        "Crear un trigger de sentencia",
+        "Registrar los accesos de los usuarios",
+        "Definir una restricción temporal",
+        "Ejecutar una tarea de forma programada"
+      ],
+      "correcta": 3,
+      "explicacion": "`CREATE EVENT` crea un **evento programado** que el *Event Scheduler* ejecuta según un calendario (aquí, una vez al día), como un *cron* dentro de la BD. No es un trigger: no lo activa una operación sobre los datos, sino la fecha y hora."
+    },
+    {
+      "id": "21",
+      "tema": 17,
+      "enunciado": "¿Qué lenguaje de consulta para bases de datos de grafos se publicó como norma ISO/IEC 39075:2024?",
+      "opciones": [
+        "SPARQL",
+        "Cypher",
+        "GQL",
+        "XQuery"
+      ],
+      "correcta": 2,
+      "explicacion": "**GQL** (*Graph Query Language*) es la norma **ISO/IEC 39075:2024**. SPARQL es la recomendación del W3C para RDF, Cypher es el lenguaje de Neo4j (no una norma ISO) y XQuery sirve para consultar XML."
+    },
+    {
+      "id": "22",
+      "tema": 17,
+      "enunciado": "El lenguaje QBE (*Query By Example*) de IBM se basa en:",
+      "opciones": [
+        "El álgebra relacional",
+        "El cálculo relacional de dominios",
+        "El cálculo relacional de tuplas",
+        "Las reglas lógicas de Datalog"
+      ],
+      "correcta": 1,
+      "explicacion": "**QBE** se apoya en el **cálculo relacional de dominios** y es el modelo de las consultas gráficas de Access. SQL se basa en el cálculo de tuplas más el álgebra; el álgebra es el lenguaje formal procedimental y Datalog es un lenguaje lógico o deductivo."
+    },
+    {
+      "id": "23",
+      "tema": 17,
+      "enunciado": "El lenguaje SEQUEL, antecesor de SQL, fue desarrollado:",
+      "opciones": [
+        "Por E. F. Codd en Relational Software, para su primer SGBD",
+        "Por M. Stonebraker en Berkeley, para el sistema Ingres",
+        "Por el comité ANSI X3, para el estándar de 1986",
+        "Por D. Chamberlin y R. Boyce en IBM, para el prototipo System R"
+      ],
+      "correcta": 3,
+      "explicacion": "SEQUEL lo crearon **Chamberlin y Boyce en IBM** a mediados de los 70 para **System R**, y por motivos de marca pasó a llamarse SQL. Relational Software (hoy Oracle) fue la primera en comercializarlo en 1979, Ingres usaba QUEL y ANSI normalizó un lenguaje que ya existía."
+    },
+    {
+      "id": "24",
+      "tema": 17,
+      "enunciado": "¿En qué versión del estándar se incorporaron las funciones de ventana (`OVER`) y la sentencia `MERGE`?",
+      "opciones": [
+        "SQL:1999",
+        "SQL:2008",
+        "SQL:2011",
+        "SQL:2003"
+      ],
+      "correcta": 3,
+      "explicacion": "**SQL:2003** añadió las funciones de ventana, `MERGE`, las secuencias, las columnas identidad y SQL/XML. SQL:1999 trajo triggers y recursividad, SQL:2008 `TRUNCATE`, `INSTEAD OF` y `FETCH FIRST`, y SQL:2011 los datos temporales."
+    },
+    {
+      "id": "25",
+      "tema": 17,
+      "enunciado": "Las tablas versionadas por periodo (datos temporales) se incorporaron al estándar en:",
+      "opciones": [
+        "SQL:2008",
+        "SQL:2011",
+        "SQL:2016",
+        "SQL:2003"
+      ],
+      "correcta": 1,
+      "explicacion": "Los **datos temporales** son la gran novedad de **SQL:2011**. SQL:2016 se asocia a JSON y `MATCH_RECOGNIZE`, SQL:2008 a `TRUNCATE` e `INSTEAD OF` y SQL:2003 a las funciones de ventana y `MERGE`."
+    },
+    {
+      "id": "26",
+      "tema": 17,
+      "enunciado": "Una columna definida como `NUMERIC(7,2)` admite como valor máximo:",
+      "opciones": [
+        "99999,99",
+        "9999999,99",
+        "9999,99",
+        "999999,99"
+      ],
+      "correcta": 0,
+      "explicacion": "En `NUMERIC(p,s)`, **p es el total de dígitos y s los decimales**: 7 dígitos con 2 decimales dejan 5 enteros, así que el máximo es **99999,99**. El error típico es pensar que p son solo los enteros (9999999,99) o restar mal los decimales."
+    },
+    {
+      "id": "27",
+      "tema": 17,
+      "enunciado": "Si se guarda el valor `'Ana'` en una columna `CHAR(10)` y en otra `VARCHAR(10)`:",
+      "opciones": [
+        "Ambas ocupan 10 caracteres, porque n fija la longitud de las dos",
+        "La columna CHAR ocupa 10 caracteres, rellenando con espacios, y la VARCHAR solo los 3 usados",
+        "Ambas ocupan 3 caracteres, porque n es solo una longitud máxima",
+        "La columna CHAR rechaza el valor por no tener exactamente 10 caracteres"
+      ],
+      "correcta": 1,
+      "explicacion": "**CHAR(n) es de longitud fija** y rellena con espacios hasta n; **VARCHAR(n) es de longitud variable** y n es solo el máximo. CHAR no rechaza cadenas más cortas: las completa."
+    },
+    {
+      "id": "28",
+      "tema": 17,
+      "enunciado": "En SQL estándar, ¿cómo se escriben un literal de cadena y un identificador delimitado (con espacios)?",
+      "opciones": [
+        "El literal entre comillas dobles y el identificador entre comillas simples",
+        "El literal entre comillas simples y el identificador entre comillas dobles",
+        "Ambos entre comillas simples",
+        "El literal entre comillas simples y el identificador entre corchetes"
+      ],
+      "correcta": 1,
+      "explicacion": "En el estándar, los **literales van entre comillas simples** (`'Madrid'`) y los **identificadores delimitados entre comillas dobles** (`\"Nombre con espacios\"`). Los corchetes `[ ]` son una extensión de SQL Server, no del estándar."
+    },
+    {
+      "id": "29",
+      "tema": 17,
+      "enunciado": "Señale la afirmación INCORRECTA sobre la restricción `PRIMARY KEY`:",
+      "opciones": [
+        "Equivale a `UNIQUE` más `NOT NULL`",
+        "No admite valores nulos",
+        "El SGBD crea automáticamente un índice para ella",
+        "Una tabla puede tener varias claves primarias"
+      ],
+      "correcta": 3,
+      "explicacion": "Es falso que pueda haber varias: hay **una sola PRIMARY KEY por tabla**, aunque puede ser compuesta y puede haber varias claves alternativas con `UNIQUE`. Las otras tres son ciertas: PK = UNIQUE + NOT NULL, no admite nulos y los SGBD le crean un índice."
+    },
+    {
+      "id": "30",
+      "tema": 17,
+      "enunciado": "La tabla `empleado` tiene `salario NUMERIC(8,2) DEFAULT 1200 CHECK (salario > 0)`. ¿Qué ocurre con `INSERT INTO empleado (dni, nombre, salario, fecha_alta) VALUES ('11111111A', 'Luis', NULL, CURRENT_DATE)`?",
+      "opciones": [
+        "Se rechaza, porque NULL no cumple `salario > 0`",
+        "Se inserta la fila con salario 1200",
+        "Se inserta la fila con salario nulo",
+        "Se inserta la fila con salario 0"
+      ],
+      "correcta": 2,
+      "explicacion": "`NULL > 0` da DESCONOCIDO y un **CHECK solo se viola si la condición es FALSA**, así que la fila **se inserta con salario nulo**. El `DEFAULT` solo se aplica cuando la columna no se menciona en el INSERT, no cuando se da NULL de forma explícita. Para impedirlo haría falta `NOT NULL`."
+    },
+    {
+      "id": "31",
+      "tema": 17,
+      "enunciado": "Dada la restricción `FOREIGN KEY (cod_dpto) REFERENCES departamento (cod_dpto) ON DELETE SET NULL`, si se borra un departamento que tiene empleados:",
+      "opciones": [
+        "Se borran también los empleados de ese departamento",
+        "El borrado del departamento se rechaza",
+        "Los empleados toman el valor por defecto de `cod_dpto`",
+        "Los empleados de ese departamento quedan con `cod_dpto` a NULL"
+      ],
+      "correcta": 3,
+      "explicacion": "**ON DELETE SET NULL** pone a **NULL la clave ajena** de las filas hijas. Borrar también los hijos es `ON DELETE CASCADE`, rechazar el borrado es el comportamiento por defecto (`NO ACTION`/`RESTRICT`) y poner el valor por defecto es `SET DEFAULT`."
+    },
+    {
+      "id": "32",
+      "tema": 17,
+      "enunciado": "¿Qué tipo de índice es el más adecuado para una columna con pocos valores distintos (por ejemplo, provincia) en un *data warehouse*?",
+      "opciones": [
+        "Hash",
+        "Árbol B+",
+        "Bitmap",
+        "Agrupado (*clustered*)"
+      ],
+      "correcta": 2,
+      "explicacion": "Los índices **bitmap** son para columnas con **pocos valores distintos** y se usan en *data warehouse*. El hash solo sirve para igualdades, el árbol B+ es el de uso general (igualdades y rangos) y el agrupado ordena físicamente la tabla (solo uno por tabla)."
+    },
+    {
+      "id": "33",
+      "tema": 17,
+      "enunciado": "Sobre una tabla se crea `CREATE INDEX idx ON persona (apellido, nombre)`. Este índice puede usarse para búsquedas por:",
+      "opciones": [
+        "Solo `nombre`",
+        "Cualquiera de las dos columnas indistintamente",
+        "Únicamente `apellido` y `nombre` a la vez",
+        "`apellido`, o por `apellido` y `nombre`"
+      ],
+      "correcta": 3,
+      "explicacion": "Un índice **compuesto** sirve para buscar por su **prefijo izquierdo**: la primera columna sola o la primera más la segunda. No ayuda a buscar solo por `nombre`, igual que una guía ordenada por apellido no sirve para buscar por nombre de pila."
+    },
+    {
+      "id": "34",
+      "tema": 17,
+      "enunciado": "La cláusula `WITH CHECK OPTION` en la definición de una vista:",
+      "opciones": [
+        "Hace que la vista guarde físicamente sus datos y se refresque periódicamente",
+        "Impide insertar o modificar a través de la vista filas que después no serían visibles en ella",
+        "Comprueba los privilegios del usuario cada vez que consulta la vista",
+        "Convierte la vista en solo lectura, sin permitir modificaciones"
+      ],
+      "correcta": 1,
+      "explicacion": "**WITH CHECK OPTION** rechaza los INSERT o UPDATE hechos a través de la vista que dejarían la fila **fuera de su condición** (por ejemplo, cambiar la ciudad a otra que no sea Madrid en `emp_madrid`). Guardar los datos es una vista materializada y los permisos se gestionan con GRANT."
+    },
+    {
+      "id": "35",
+      "tema": 17,
+      "enunciado": "¿Cuál es la cláusula del estándar SQL (desde SQL:2008) para limitar el número de filas devueltas?",
+      "opciones": [
+        "`FETCH FIRST n ROWS ONLY`",
+        "`LIMIT n`",
+        "`TOP n`",
+        "`WHERE ROWNUM <= n`"
+      ],
+      "correcta": 0,
+      "explicacion": "La forma estándar es **`FETCH FIRST n ROWS ONLY`** (SQL:2008), combinable con `OFFSET`. `LIMIT` es de MySQL y PostgreSQL, `TOP` de SQL Server y `ROWNUM` del Oracle antiguo: son dialectos."
+    },
+    {
+      "id": "36",
+      "tema": 17,
+      "enunciado": "¿Qué ocurre al ejecutar esta consulta? `SELECT nombre, salario * 14 AS anual FROM empleado WHERE anual > 30000 ORDER BY anual;`",
+      "opciones": [
+        "Se ejecuta correctamente y devuelve los salarios anuales superiores a 30000",
+        "Da error en `ORDER BY`, porque no admite alias",
+        "Da error, porque el alias `anual` no puede usarse en `WHERE`, aunque sí en `ORDER BY`",
+        "Da error en ambas cláusulas, porque los alias solo valen en `SELECT`"
+      ],
+      "correcta": 2,
+      "explicacion": "Por el orden lógico (**FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY**), cuando se evalúa `WHERE` el alias del `SELECT` aún no existe: hay que repetir la expresión (`WHERE salario * 14 > 30000`). `ORDER BY` se evalúa después del `SELECT` y **sí admite el alias**."
+    },
+    {
+      "id": "37",
+      "tema": 17,
+      "enunciado": "¿Cómo se evalúa la condición `WHERE cod_dpto = 10 OR cod_dpto = 20 AND salario > 2000`?",
+      "opciones": [
+        "`(cod_dpto = 10 OR cod_dpto = 20) AND salario > 2000`",
+        "Solo devuelve empleados del departamento 20 con salario mayor que 2000",
+        "`cod_dpto = 10 OR (cod_dpto = 20 AND salario > 2000)`",
+        "Da error de sintaxis al mezclar AND y OR sin paréntesis"
+      ],
+      "correcta": 2,
+      "explicacion": "La precedencia es **NOT > AND > OR**, así que el AND se agrupa primero: salen **todos los del departamento 10** y los del 20 que ganen más de 2000. Para aplicar el salario a ambos departamentos hacen falta paréntesis. Mezclar AND y OR sin paréntesis no es un error."
+    },
+    {
+      "id": "38",
+      "tema": 17,
+      "enunciado": "La columna `comision` vale 100, 200 y NULL en las tres filas de una tabla. ¿Qué devuelve `SELECT AVG(comision)`?",
+      "opciones": [
+        "150",
+        "100",
+        "NULL",
+        "300"
+      ],
+      "correcta": 0,
+      "explicacion": "Las funciones de agregado **ignoran los nulos**: AVG suma 100 + 200 y divide entre los **2 valores no nulos** = **150**. 100 saldría de dividir entre 3 filas (eso sería `SUM(comision)/COUNT(*)`), 300 es la suma y AVG solo da NULL si todos los valores son nulos."
+    },
+    {
+      "id": "39",
+      "tema": 17,
+      "enunciado": "Si la tabla A tiene 4 filas y la tabla B tiene 5, `SELECT * FROM A CROSS JOIN B` devuelve:",
+      "opciones": [
+        "9 filas",
+        "5 filas",
+        "4 filas",
+        "20 filas"
+      ],
+      "correcta": 3,
+      "explicacion": "**CROSS JOIN es el producto cartesiano**: combina cada fila de A con cada fila de B, **n × m = 4 × 5 = 20** filas. 9 es la suma de filas, que no corresponde a ningún JOIN."
+    },
+    {
+      "id": "40",
+      "tema": 17,
+      "enunciado": "Dadas `empleado(dni, nombre, salario, fecha_alta, cod_dpto, jefe)` y `departamento(cod_dpto, nombre, ciudad)`, la consulta `SELECT * FROM empleado NATURAL JOIN departamento` combina las filas que:",
+      "opciones": [
+        "Coinciden a la vez en `cod_dpto` y en `nombre`",
+        "Coinciden en `cod_dpto`, por ser la clave ajena",
+        "Coinciden en `nombre`, por ser la primera columna común",
+        "Resultan del producto cartesiano, al no indicar condición"
+      ],
+      "correcta": 0,
+      "explicacion": "**NATURAL JOIN** iguala **todas las columnas con el mismo nombre**, aquí `cod_dpto` y `nombre` (del empleado y del departamento), sin mirar las claves ajenas, así que casi nunca devolverá filas. Es la trampa típica: para combinar solo por el departamento se usa `JOIN ... USING (cod_dpto)` o `ON`."
+    },
+    {
+      "id": "41",
+      "tema": 17,
+      "enunciado": "¿Qué devuelve esta consulta? `SELECT d.nombre FROM departamento d LEFT JOIN empleado e ON e.cod_dpto = d.cod_dpto WHERE e.dni IS NULL;`",
+      "opciones": [
+        "Los empleados que no tienen departamento asignado",
+        "Los departamentos con algún empleado sin DNI",
+        "Todos los departamentos, tengan o no empleados",
+        "Los departamentos que no tienen ningún empleado"
+      ],
+      "correcta": 3,
+      "explicacion": "Es un **anti-join**: el LEFT JOIN conserva todos los departamentos y, cuando uno **no tiene empleados**, las columnas de `e` vienen a NULL; el filtro `e.dni IS NULL` deja solo esos. `dni` es clave primaria, así que nunca es nulo en una fila real de empleado. Sin el WHERE saldrían todos los departamentos."
+    },
+    {
+      "id": "42",
+      "tema": 17,
+      "enunciado": "Si la subconsulta no devuelve ninguna fila, la condición `salario > ALL (subconsulta)`:",
+      "opciones": [
+        "Es verdadera para todas las filas",
+        "Es falsa para todas las filas",
+        "Da DESCONOCIDO para todas las filas",
+        "Provoca un error de ejecución"
+      ],
+      "correcta": 0,
+      "explicacion": "Sobre un conjunto vacío, **`> ALL` es verdadero** (no hay ningún valor que lo contradiga) y **`> ANY` es falso** (no hay ningún valor que lo cumpla). No da error ni DESCONOCIDO, porque no hay ninguna comparación con nulos."
+    },
+    {
+      "id": "43",
+      "tema": 17,
+      "enunciado": "Los salarios de tres empleados son 3000, 3000 y 2500. ¿Qué valor asigna `RANK() OVER (ORDER BY salario DESC)` al de 2500?",
+      "opciones": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "correcta": 3,
+      "explicacion": "**RANK deja huecos tras los empates**: los dos de 3000 reciben el 1 y el siguiente salta al **3**. El 2 lo daría `DENSE_RANK`, que no deja huecos, y `ROW_NUMBER` numeraría 1, 2 y 3 sin tener en cuenta el empate."
+    },
+    {
+      "id": "44",
+      "tema": 17,
+      "enunciado": "La sentencia `MERGE` (SQL:2003) permite:",
+      "opciones": [
+        "Actualizar las filas que coinciden e insertar las que no, en una sola sentencia",
+        "Unir el resultado de dos consultas eliminando los duplicados",
+        "Fusionar dos tablas en una vista materializada",
+        "Combinar dos esquemas en un único catálogo"
+      ],
+      "correcta": 0,
+      "explicacion": "**MERGE** es el «*upsert*»: con `WHEN MATCHED THEN UPDATE` y `WHEN NOT MATCHED THEN INSERT` **actualiza o inserta** según haya coincidencia. Unir resultados eliminando duplicados es `UNION` y las vistas materializadas no son estándar."
+    },
+    {
+      "id": "45",
+      "tema": 17,
+      "enunciado": "Tras ejecutar `GRANT SELECT ON empleado TO usuario2 WITH GRANT OPTION`, `usuario2`:",
+      "opciones": [
+        "Puede consultar y modificar la tabla, pero no conceder privilegios",
+        "Puede consultar la tabla y conceder ese mismo privilegio a otros usuarios",
+        "Recibe todos los privilegios sobre la tabla",
+        "Puede conceder privilegios de sistema y roles a otros usuarios"
+      ],
+      "correcta": 1,
+      "explicacion": "**WITH GRANT OPTION** permite **propagar el privilegio** recibido (aquí, `SELECT`) a otros usuarios; no da privilegios nuevos. Para privilegios de sistema y roles, Oracle usa `WITH ADMIN OPTION`. Si después se revoca con `CASCADE`, se revoca también lo que usuario2 concedió."
+    },
+    {
+      "id": "46",
+      "tema": 17,
+      "enunciado": "¿Qué queda confirmado tras esta secuencia? `START TRANSACTION; UPDATE A ...; SAVEPOINT s1; UPDATE B ...; ROLLBACK TO SAVEPOINT s1; COMMIT;`",
+      "opciones": [
+        "Ninguna de las dos actualizaciones",
+        "Las dos actualizaciones",
+        "Solo la actualización de A",
+        "Solo la actualización de B"
+      ],
+      "correcta": 2,
+      "explicacion": "**ROLLBACK TO SAVEPOINT s1** deshace solo lo hecho después del punto de salvaguarda (el UPDATE de B) y la transacción sigue activa; el `COMMIT` final confirma lo que queda: **solo el UPDATE de A**. Un `ROLLBACK` sin más lo habría deshecho todo."
+    },
+    {
+      "id": "47",
+      "tema": 17,
+      "enunciado": "¿Qué componente del SGBD garantiza la propiedad de **durabilidad** de las transacciones?",
+      "opciones": [
+        "El control de concurrencia, mediante bloqueos",
+        "Las restricciones de integridad definidas en el esquema",
+        "El optimizador de consultas",
+        "El gestor de recuperación, mediante el registro (*log*) en disco"
+      ],
+      "correcta": 3,
+      "explicacion": "La **durabilidad** (y la atomicidad) la asegura el **gestor de recuperación** con el *log* (*redo* para rehacer lo confirmado). El control de concurrencia garantiza el aislamiento y las restricciones, la consistencia. El optimizador solo decide cómo ejecutar las consultas."
+    },
+    {
+      "id": "48",
+      "tema": 17,
+      "enunciado": "Se produce una **lectura no repetible** cuando:",
+      "opciones": [
+        "Se lee un dato que otra transacción ha modificado pero aún no ha confirmado",
+        "Al repetir una consulta aparecen filas nuevas insertadas por otra transacción",
+        "Al releer la misma fila se obtiene otro valor, porque otra transacción la modificó y confirmó",
+        "Dos transacciones modifican el mismo dato y una sobrescribe a la otra"
+      ],
+      "correcta": 2,
+      "explicacion": "La **lectura no repetible** afecta a **la misma fila**, que otra transacción modificó y confirmó entre las dos lecturas. Si el dato no estaba confirmado es lectura sucia; si aparecen filas nuevas, fantasma; y la sobrescritura es la actualización perdida. La evita REPEATABLE READ."
+    },
+    {
+      "id": "49",
+      "tema": 17,
+      "enunciado": "¿Cuál es el nivel de aislamiento por defecto de MySQL con el motor InnoDB?",
+      "opciones": [
+        "READ COMMITTED",
+        "SERIALIZABLE",
+        "REPEATABLE READ",
+        "READ UNCOMMITTED"
+      ],
+      "correcta": 2,
+      "explicacion": "**MySQL (InnoDB) usa REPEATABLE READ** por defecto. Oracle, PostgreSQL y SQL Server usan READ COMMITTED, y SERIALIZABLE es el defecto del estándar, no de los productos."
+    },
+    {
+      "id": "50",
+      "tema": 17,
+      "enunciado": "El control de concurrencia multiversión (MVCC) se caracteriza porque:",
+      "opciones": [
+        "Cada transacción bloquea en exclusiva toda la tabla que lee",
+        "Los lectores no bloquean a los escritores, ya que se mantienen varias versiones de los datos",
+        "Ordena las transacciones solo por su marca de tiempo, sin guardar versiones",
+        "Necesita el bloqueo en dos fases para que las lecturas sean posibles"
+      ],
+      "correcta": 1,
+      "explicacion": "Con **MVCC** cada transacción lee una versión coherente de los datos, de modo que **los lectores no bloquean a los escritores** (ni al revés). Lo usan Oracle, PostgreSQL e InnoDB. Los bloqueos (con 2PL) y las marcas de tiempo son otros mecanismos de control de concurrencia."
+    },
+    {
+      "id": "51",
+      "tema": 17,
+      "enunciado": "Señale la afirmación INCORRECTA sobre los procedimientos almacenados:",
+      "opciones": [
+        "Reducen el tráfico de red, pues una llamada sustituye a muchas sentencias",
+        "Permiten conceder `EXECUTE` sin dar acceso directo a las tablas",
+        "Se pueden llevar sin cambios a los SGBD de otros fabricantes",
+        "Se ejecutan precompilados en el servidor y reutilizan el plan"
+      ],
+      "correcta": 2,
+      "explicacion": "La falsa es la portabilidad: cada SGBD tiene su **dialecto** (PL/SQL, T-SQL, PL/pgSQL), y la **dependencia del fabricante** es su principal inconveniente. Las otras tres son ventajas que recoge el tema: menos tráfico, más seguridad y mejor rendimiento."
+    },
+    {
+      "id": "52",
+      "tema": 17,
+      "enunciado": "¿Qué diferencia una función almacenada de un procedimiento almacenado?",
+      "opciones": [
+        "La función devuelve un valor con `RETURN` y puede usarse dentro de una expresión o de un `SELECT`",
+        "El procedimiento devuelve un valor con `RETURN` y la función usa parámetros `OUT`",
+        "La función se invoca con `CALL` y el procedimiento dentro de un `SELECT`",
+        "Solo los procedimientos pueden recibir parámetros de entrada"
+      ],
+      "correcta": 0,
+      "explicacion": "La **función devuelve un valor con RETURN** y se usa en expresiones (`SELECT salario_medio(cod_dpto) FROM ...`). El procedimiento no devuelve valor (da resultados mediante parámetros `OUT`) y se invoca con `CALL`. Las opciones incorrectas intercambian los papeles."
+    },
+    {
+      "id": "53",
+      "tema": 17,
+      "enunciado": "En un procedimiento SQL/PSM, un parámetro que recibe un valor del llamador y le devuelve un valor modificado se declara como:",
+      "opciones": [
+        "`INOUT`",
+        "`OUT`",
+        "`IN`",
+        "`RETURNS`"
+      ],
+      "correcta": 0,
+      "explicacion": "**INOUT** es de entrada y salida. `IN` solo recibe (es el tipo por defecto) y `OUT` solo devuelve. `RETURNS` no es un modo de parámetro: indica el tipo que devuelve una función."
+    },
+    {
+      "id": "54",
+      "tema": 17,
+      "enunciado": "¿Cuál es el orden correcto de las operaciones con un cursor?",
+      "opciones": [
+        "`OPEN` → `DECLARE` → `FETCH` → `CLOSE`",
+        "`DECLARE` → `FETCH` → `OPEN` → `CLOSE`",
+        "`OPEN` → `FETCH` → `DECLARE` → `CLOSE`",
+        "`DECLARE` → `OPEN` → `FETCH` → `CLOSE`"
+      ],
+      "correcta": 3,
+      "explicacion": "El cursor se **declara** asociado a una consulta, se **abre** (se ejecuta la consulta), se **leen sus filas** con FETCH en un bucle y se **cierra**: **DECLARE → OPEN → FETCH → CLOSE**. No se puede abrir ni leer un cursor que no se ha declarado."
+    },
+    {
+      "id": "55",
+      "tema": 17,
+      "enunciado": "En PL/SQL, si una sentencia `SELECT ... INTO v` no devuelve ninguna fila, se lanza la excepción:",
+      "opciones": [
+        "`TOO_MANY_ROWS`",
+        "`NO_DATA_FOUND`",
+        "`INVALID_CURSOR`",
+        "`ZERO_DIVIDE`"
+      ],
+      "correcta": 1,
+      "explicacion": "Un `SELECT ... INTO` sin filas lanza **NO_DATA_FOUND**; si devuelve más de una, **TOO_MANY_ROWS**. `INVALID_CURSOR` se da al operar con un cursor no abierto y `ZERO_DIVIDE` al dividir entre cero."
+    },
+    {
+      "id": "56",
+      "tema": 17,
+      "enunciado": "Una sentencia `UPDATE` modifica 50 filas de una tabla con un trigger `AFTER UPDATE ... FOR EACH ROW`. ¿Cuántas veces se ejecuta el trigger?",
+      "opciones": [
+        "1",
+        "50",
+        "51",
+        "0, porque los triggers AFTER no se ejecutan en UPDATE masivos"
+      ],
+      "correcta": 1,
+      "explicacion": "Un trigger **de fila** se ejecuta **una vez por cada fila afectada**: 50. Un trigger de sentencia (`FOR EACH STATEMENT`) se ejecutaría una sola vez, aunque la sentencia afectara a 0 filas. No hay excepción para las actualizaciones masivas."
+    },
+    {
+      "id": "57",
+      "tema": 17,
+      "enunciado": "En Oracle, el error de «tabla mutante» (ORA-04091) se produce cuando:",
+      "opciones": [
+        "Un trigger de sentencia intenta acceder a `:NEW` y `:OLD`",
+        "Un trigger intenta hacer `COMMIT` dentro de su cuerpo",
+        "Un trigger de fila consulta o modifica la misma tabla que lo ha disparado",
+        "Se modifica la estructura de una tabla que tiene triggers activos"
+      ],
+      "correcta": 2,
+      "explicacion": "La **tabla mutante** aparece cuando un **trigger de fila** lee o modifica **la misma tabla** que lo disparó mientras se está modificando. Se resuelve con un trigger de sentencia o un *compound trigger*. Usar `:NEW` en un trigger de sentencia o hacer COMMIT son errores distintos."
+    },
+    {
+      "id": "58",
+      "tema": 17,
+      "enunciado": "En Microsoft SQL Server, los valores anteriores y posteriores a la modificación se consultan en un trigger a través de:",
+      "opciones": [
+        "Las pseudofilas `:NEW` y `:OLD`",
+        "Las tablas virtuales `inserted` y `deleted`",
+        "La cláusula `REFERENCING NEW ROW AS ... OLD ROW AS`",
+        "Las variables `NEW` y `OLD` sin prefijo"
+      ],
+      "correcta": 1,
+      "explicacion": "SQL Server usa las **tablas virtuales `inserted` y `deleted`**, porque sus triggers son de sentencia (`AFTER` e `INSTEAD OF`). `:NEW`/`:OLD` son de Oracle, `REFERENCING` es la sintaxis del estándar y `NEW`/`OLD` sin prefijo, la de MySQL y PostgreSQL."
+    },
+    {
+      "id": "59",
+      "tema": 17,
+      "enunciado": "En PostgreSQL, si la función de un trigger `BEFORE ... FOR EACH ROW` devuelve `NULL`:",
+      "opciones": [
+        "Se cancela la operación sobre esa fila",
+        "La fila se guarda con todas sus columnas a NULL",
+        "Se deshace la transacción completa",
+        "El trigger se desactiva para el resto de la sesión"
+      ],
+      "correcta": 0,
+      "explicacion": "En PostgreSQL la función de un trigger BEFORE de fila debe devolver la fila que se va a guardar (normalmente `RETURN NEW`); si **devuelve NULL, se cancela la operación sobre esa fila** sin error. No pone columnas a nulo ni anula toda la transacción."
+    },
+    {
+      "id": "60",
+      "tema": 17,
+      "enunciado": "En Oracle, las tareas que se ejecutan en la base de datos según un calendario se programan con:",
+      "opciones": [
+        "El paquete `DBMS_SCHEDULER`",
+        "La sentencia `CREATE EVENT`",
+        "Los trabajos del SQL Server Agent",
+        "La extensión `pg_cron`"
+      ],
+      "correcta": 0,
+      "explicacion": "Oracle usa el paquete **DBMS_SCHEDULER** (antes `DBMS_JOB`). `CREATE EVENT` es de MySQL/MariaDB, el SQL Server Agent es de SQL Server y `pg_cron` es una extensión de PostgreSQL. Truco: cada opción es la buena… de otro SGBD."
+    }
+  ]
+}

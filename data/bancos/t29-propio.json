@@ -1,0 +1,791 @@
+{
+  "titulo": "Tema 29 · test",
+  "fuente": "propio",
+  "tema": 29,
+  "convocatoria": null,
+  "minutos": 45,
+  "origen": "Doc «Tema 29. Comunicaciones y redes»: test del doc (01-20) y preguntas nuevas sobre su contenido (21-60)",
+  "actualizado": "2026-11-12",
+  "preguntas": [
+    {
+      "id": "01",
+      "tema": 29,
+      "enunciado": "El modo de comunicación en el que se transmite en ambos sentidos, pero no simultáneamente, es:",
+      "opciones": [
+        "Símplex",
+        "Semidúplex",
+        "Dúplex",
+        "Multiplexado"
+      ],
+      "correcta": 1,
+      "explicacion": "En **semidúplex** (*half-duplex*) la información va en ambos sentidos, pero por turnos, como en un walkie-talkie o en Ethernet con hub. El símplex solo transmite en un sentido (radiodifusión) y el dúplex en ambos a la vez (teléfono). La multiplexación no es un modo de sentido, sino una forma de compartir el medio."
+    },
+    {
+      "id": "02",
+      "tema": 29,
+      "enunciado": "El diámetro típico del núcleo de una fibra monomodo es:",
+      "opciones": [
+        "62,5 µm",
+        "50 µm",
+        "9 µm",
+        "125 µm"
+      ],
+      "correcta": 2,
+      "explicacion": "La fibra monomodo es **9/125 µm**: núcleo de unos 9 µm y revestimiento de 125 µm. Los núcleos de 50 y 62,5 µm son de fibra multimodo, y 125 µm es el diámetro del revestimiento (*cladding*), común a ambos tipos. Truco: monomodo, núcleo «mono» de pequeño."
+    },
+    {
+      "id": "03",
+      "tema": 29,
+      "enunciado": "¿Qué categoría de par trenzado permite 10GBASE-T en canales de 100 m?",
+      "opciones": [
+        "Cat 5e",
+        "Cat 6",
+        "Cat 6A",
+        "Cat 3"
+      ],
+      "correcta": 2,
+      "explicacion": "La **Cat 6A** (500 MHz) soporta 10GBASE-T en el canal completo de 100 m y es la recomendada hoy para cableado horizontal nuevo. La Cat 6 (250 MHz) solo llega a 10 Gbit/s en distancias cortas, la Cat 5e se queda en 1000BASE-T y la Cat 3 es telefonía y Ethernet de 10 Mbit/s."
+    },
+    {
+      "id": "04",
+      "tema": 29,
+      "enunciado": "¿Qué equipo separa dominios de difusión?",
+      "opciones": [
+        "Hub",
+        "Switch de nivel 2",
+        "Repetidor",
+        "Router"
+      ],
+      "correcta": 3,
+      "explicacion": "El **router** (capa 3) no reenvía los broadcast, así que cada interfaz es un dominio de difusión distinto. El hub y el repetidor (capa 1) no separan nada, y el switch de nivel 2 separa dominios de colisión (uno por puerto), pero no de difusión salvo con VLAN. Regla: hub nada, switch colisiones, router difusiones."
+    },
+    {
+      "id": "05",
+      "tema": 29,
+      "enunciado": "La técnica que reserva un camino dedicado durante toda la comunicación es la conmutación de:",
+      "opciones": [
+        "Circuitos",
+        "Paquetes",
+        "Mensajes",
+        "Datagramas"
+      ],
+      "correcta": 0,
+      "explicacion": "La **conmutación de circuitos** establece un camino físico dedicado extremo a extremo durante toda la llamada (telefonía clásica, RTC), con fases de establecimiento, transferencia y liberación. En la de paquetes (y su variante de datagramas) los enlaces se comparten, y en la de mensajes cada nodo almacena el mensaje completo y lo reenvía, sin camino reservado."
+    },
+    {
+      "id": "06",
+      "tema": 29,
+      "enunciado": "El tamaño de una celda ATM es de:",
+      "opciones": [
+        "64 bytes",
+        "53 bytes",
+        "48 bytes",
+        "1500 bytes"
+      ],
+      "correcta": 1,
+      "explicacion": "La celda ATM mide **53 bytes**: 5 de cabecera y 48 de carga útil. 48 bytes es solo la carga (distractor típico), 64 bytes es la trama Ethernet mínima y 1500 bytes la MTU de Ethernet."
+    },
+    {
+      "id": "07",
+      "tema": 29,
+      "enunciado": "La velocidad nominal de bajada de GPON (ITU-T G.984) es:",
+      "opciones": [
+        "1,244 Gbit/s",
+        "10 Gbit/s",
+        "2,488 Gbit/s",
+        "155,52 Mbit/s"
+      ],
+      "correcta": 2,
+      "explicacion": "GPON ofrece **2,488 Gbit/s de bajada** y 1,244 Gbit/s de subida, compartidos entre las ONT de un mismo splitter. 1,244 Gbit/s es la subida, 10 Gbit/s corresponde a XG-PON/XGS-PON y 155,52 Mbit/s es el STM-1 de SDH. Truco: la bajada es el doble de la subida."
+    },
+    {
+      "id": "08",
+      "tema": 29,
+      "enunciado": "La denominación Wi-Fi 6 corresponde al estándar:",
+      "opciones": [
+        "IEEE 802.11ac",
+        "IEEE 802.11ax",
+        "IEEE 802.11n",
+        "IEEE 802.11be"
+      ],
+      "correcta": 1,
+      "explicacion": "**Wi-Fi 6 es 802.11ax** (y Wi-Fi 6E es la misma norma ampliada a 6 GHz). 802.11n es Wi-Fi 4, 802.11ac es Wi-Fi 5 y 802.11be es Wi-Fi 7. Truco: n, ac, ax, be en orden alfabético corresponden a 4, 5, 6 y 7."
+    },
+    {
+      "id": "09",
+      "tema": 29,
+      "enunciado": "El ancho de canal máximo introducido por Wi-Fi 7 (802.11be) es de:",
+      "opciones": [
+        "160 MHz",
+        "80 MHz",
+        "40 MHz",
+        "320 MHz"
+      ],
+      "correcta": 3,
+      "explicacion": "Wi-Fi 7 introduce canales de **320 MHz**, que solo caben en la banda de 6 GHz. 160 MHz es el máximo de Wi-Fi 5 y Wi-Fi 6, y 40 MHz el de Wi-Fi 4 (802.11n). Wi-Fi 7 también añade 4096-QAM y MLO."
+    },
+    {
+      "id": "10",
+      "tema": 29,
+      "enunciado": "El método de acceso al medio que utiliza Wi-Fi es:",
+      "opciones": [
+        "CSMA/CA",
+        "CSMA/CD",
+        "Paso de testigo",
+        "ALOHA puro"
+      ],
+      "correcta": 0,
+      "explicacion": "Wi-Fi usa **CSMA/CA** (evitación de colisiones, con ACK y RTS/CTS opcional) porque en radio una estación no puede detectar colisiones mientras transmite. CSMA/CD (detección) es de la Ethernet clásica semidúplex, el paso de testigo de Token Ring y FDDI, y ALOHA puro es un protocolo histórico de radio sin escucha previa."
+    },
+    {
+      "id": "11",
+      "tema": 29,
+      "enunciado": "Según IMT-2020, la velocidad pico de bajada exigida a 5G es:",
+      "opciones": [
+        "1 Gbit/s",
+        "10 Gbit/s",
+        "20 Gbit/s",
+        "100 Gbit/s"
+      ],
+      "correcta": 2,
+      "explicacion": "IMT-2020 exige a 5G una velocidad pico de **20 Gbit/s de bajada** y 10 Gbit/s de subida. Los 10 Gbit/s son, por tanto, la cifra de subida, el distractor que más confunde. La velocidad experimentada por el usuario es mucho menor: 100 Mbit/s de bajada."
+    },
+    {
+      "id": "12",
+      "tema": 29,
+      "enunciado": "El escenario de uso de 5G orientado al Internet de las cosas masivo es:",
+      "opciones": [
+        "mMTC",
+        "eMBB",
+        "URLLC",
+        "MEC"
+      ],
+      "correcta": 0,
+      "explicacion": "**mMTC** (*massive Machine-Type Communications*) es el escenario del IoT masivo, con hasta 10⁶ dispositivos/km². eMBB es la banda ancha móvil mejorada y URLLC las comunicaciones ultrafiables de baja latencia. MEC no es un escenario, sino la computación en el borde de la red."
+    },
+    {
+      "id": "13",
+      "tema": 29,
+      "enunciado": "GSM utiliza como técnica de acceso radio:",
+      "opciones": [
+        "WCDMA",
+        "TDMA combinada con FDMA",
+        "OFDMA",
+        "SC-FDMA"
+      ],
+      "correcta": 1,
+      "explicacion": "GSM combina **FDMA** (portadoras de 200 kHz) con **TDMA** (8 intervalos de tiempo por portadora). WCDMA es la de UMTS (3G); OFDMA se usa en la bajada de LTE y en 5G, y SC-FDMA en la subida de LTE."
+    },
+    {
+      "id": "14",
+      "tema": 29,
+      "enunciado": "¿Cuál de los siguientes es un ETCD (DCE)?",
+      "opciones": [
+        "Módem",
+        "Impresora",
+        "Servidor",
+        "Terminal de usuario"
+      ],
+      "correcta": 0,
+      "explicacion": "El **módem** es un ETCD (Equipo Terminal del Circuito de Datos): adapta la señal del ETD al medio de transmisión. La impresora, el servidor y el terminal de usuario son ETD, porque generan o consumen los datos."
+    },
+    {
+      "id": "15",
+      "tema": 29,
+      "enunciado": "El método de conmutación de un switch que recibe la trama completa y comprueba el CRC antes de reenviarla es:",
+      "opciones": [
+        "Cut-through",
+        "Fragment-free",
+        "Store-and-forward",
+        "Flooding"
+      ],
+      "correcta": 2,
+      "explicacion": "En **store-and-forward** (almacenamiento y reenvío) el switch recibe la trama completa y comprueba el CRC antes de reenviarla; es el método más usado. Cut-through reenvía en cuanto lee la MAC destino y fragment-free espera a los 64 primeros bytes. El flooding no es un método de conmutación, sino la inundación de una trama con destino desconocido."
+    },
+    {
+      "id": "16",
+      "tema": 29,
+      "enunciado": "Según el teorema de Shannon, la capacidad máxima de un canal con ruido depende de:",
+      "opciones": [
+        "Solo del número de niveles de la señal",
+        "La longitud del cable",
+        "El tipo de conector",
+        "El ancho de banda y la relación señal/ruido"
+      ],
+      "correcta": 3,
+      "explicacion": "Shannon establece **C = B log₂(1 + S/N)**: la capacidad depende del ancho de banda y de la relación señal/ruido. El número de niveles aparece en la fórmula de Nyquist (C = 2B log₂ N), válida para un canal sin ruido. La longitud del cable o el conector influyen solo de forma indirecta."
+    },
+    {
+      "id": "17",
+      "tema": 29,
+      "enunciado": "Una picored Bluetooth está formada por:",
+      "opciones": [
+        "1 maestro y hasta 7 esclavos activos",
+        "1 maestro y hasta 255 esclavos activos",
+        "2 maestros y 8 esclavos",
+        "Un número ilimitado de dispositivos activos"
+      ],
+      "correcta": 0,
+      "explicacion": "Una picored (*piconet*) tiene **1 maestro y hasta 7 esclavos activos**. Varias picoredes enlazadas forman una red dispersa (*scatternet*). Truco: 1 + 7 = 8 dispositivos activos."
+    },
+    {
+      "id": "18",
+      "tema": 29,
+      "enunciado": "MPLS encamina el tráfico basándose en:",
+      "opciones": [
+        "Celdas de tamaño fijo",
+        "Etiquetas",
+        "Identificadores DLCI",
+        "Testigos"
+      ],
+      "correcta": 1,
+      "explicacion": "MPLS conmuta por **etiquetas** (*Multiprotocol Label Switching*) que pone y quita el LER de frontera y que los LSR del núcleo intercambian. Las celdas de tamaño fijo son de ATM, los DLCI de Frame Relay y los testigos de Token Ring."
+    },
+    {
+      "id": "19",
+      "tema": 29,
+      "enunciado": "¿Qué mecanismo de seguridad Wi-Fi es el recomendado actualmente?",
+      "opciones": [
+        "WEP",
+        "WPA con TKIP",
+        "WPS con PIN",
+        "WPA3"
+      ],
+      "correcta": 3,
+      "explicacion": "Lo recomendado es **WPA3**, que sustituye la PSK por **SAE** (resistente a ataques de diccionario fuera de línea) y hace obligatorio PMF. WEP está roto, WPA con TKIP es obsoleto y WPS con PIN es inseguro y conviene desactivarlo."
+    },
+    {
+      "id": "20",
+      "tema": 29,
+      "enunciado": "ADSL es una tecnología de acceso:",
+      "opciones": [
+        "Sobre cable coaxial con DOCSIS",
+        "Simétrica sobre fibra",
+        "Por satélite",
+        "Asimétrica sobre par de cobre"
+      ],
+      "correcta": 3,
+      "explicacion": "ADSL (*Asymmetric DSL*) es un acceso **asimétrico sobre el par de cobre telefónico**: más velocidad de bajada que de subida, con voz y datos separados por splitter. DOCSIS sobre coaxial es el acceso por cable (HFC) y la fibra corresponde a FTTH."
+    },
+    {
+      "id": "21",
+      "tema": 29,
+      "enunciado": "Un módem transmite a 1200 baudios con una modulación de 16 símbolos distintos. ¿Cuál es su velocidad de transmisión?",
+      "opciones": [
+        "1200 bit/s",
+        "4800 bit/s",
+        "19 200 bit/s",
+        "2400 bit/s"
+      ],
+      "correcta": 1,
+      "explicacion": "Se aplica **Vt = Vm × log₂ N**: 1200 × log₂ 16 = 1200 × 4 = **4800 bit/s**. 1200 bit/s confunde baudios con bit/s, 19 200 multiplica por 16 en vez de por log₂ 16, y 2400 usaría solo 2 bits por símbolo. Recuerda: los baudios cuentan símbolos; cada símbolo lleva log₂ N bits."
+    },
+    {
+      "id": "22",
+      "tema": 29,
+      "enunciado": "Según el teorema de Nyquist, ¿cuál es la capacidad máxima de un canal sin ruido de 3000 Hz de ancho de banda con una señal de 4 niveles?",
+      "opciones": [
+        "6000 bit/s",
+        "3000 bit/s",
+        "24 000 bit/s",
+        "12 000 bit/s"
+      ],
+      "correcta": 3,
+      "explicacion": "Nyquist: **C = 2B log₂ N** = 2 × 3000 × log₂ 4 = 2 × 3000 × 2 = **12 000 bit/s**. 6000 bit/s olvida los 2 bits por nivel, 3000 bit/s olvida además el factor 2, y 24 000 bit/s multiplica por N en vez de por log₂ N."
+    },
+    {
+      "id": "23",
+      "tema": 29,
+      "enunciado": "Un canal tiene un ancho de banda de 1 MHz y una relación señal/ruido de 30 dB. Según Shannon, su capacidad máxima es aproximadamente:",
+      "opciones": [
+        "10 Mbit/s",
+        "30 Mbit/s",
+        "2 Mbit/s",
+        "60 Mbit/s"
+      ],
+      "correcta": 0,
+      "explicacion": "Primero se pasa la S/N a escala lineal: **30 dB = 1000**. Después, C = B log₂(1 + S/N) = 10⁶ × log₂ 1001 ≈ 10⁶ × 9,97 ≈ **10 Mbit/s**. 30 Mbit/s resulta de usar los decibelios directamente en vez del valor lineal, y 60 Mbit/s de aplicar además el factor 2 de Nyquist."
+    },
+    {
+      "id": "24",
+      "tema": 29,
+      "enunciado": "Según el teorema del muestreo, para digitalizar una señal cuya frecuencia máxima es de 4 kHz, la frecuencia mínima de muestreo es:",
+      "opciones": [
+        "4 kHz",
+        "2 kHz",
+        "8 kHz",
+        "64 kHz"
+      ],
+      "correcta": 2,
+      "explicacion": "Hay que muestrear **al menos al doble de la frecuencia máxima**: 2 × 4 kHz = **8 kHz** (8000 muestras/s, las de la telefonía). Con 8 bits por muestra salen los 64 kbit/s de un canal PCM, por eso 64 es un distractor que mezcla muestras con bits."
+    },
+    {
+      "id": "25",
+      "tema": 29,
+      "enunciado": "¿Cuántos bits transporta cada símbolo en una modulación 256-QAM?",
+      "opciones": [
+        "4",
+        "6",
+        "8",
+        "16"
+      ],
+      "correcta": 2,
+      "explicacion": "Los bits por símbolo son log₂ N: log₂ 256 = **8 bits**. Por la misma regla, 1024-QAM lleva 10 bits y 4096-QAM 12 bits. 16 confunde con el número de símbolos de 16-QAM (que lleva 4 bits)."
+    },
+    {
+      "id": "26",
+      "tema": 29,
+      "enunciado": "La técnica de multiplexación que transmite varias señales por una misma fibra óptica usando distintas longitudes de onda se denomina:",
+      "opciones": [
+        "WDM",
+        "TDM",
+        "FDM",
+        "CDM"
+      ],
+      "correcta": 0,
+      "explicacion": "**WDM** (*Wavelength Division Multiplexing*) multiplexa por longitud de onda en fibra; su variante densa es DWDM. TDM reparte el medio por intervalos de tiempo, FDM por frecuencias (típica de medios eléctricos y radio) y CDM por códigos."
+    },
+    {
+      "id": "27",
+      "tema": 29,
+      "enunciado": "En un canal Ethernet sobre par trenzado de 100 m, la norma reparte la longitud máxima en:",
+      "opciones": [
+        "80 m de cable horizontal y 20 m de latiguillos",
+        "100 m de cable horizontal sin latiguillos",
+        "95 m de cable horizontal y 5 m de latiguillos",
+        "90 m de cable horizontal y 10 m de latiguillos"
+      ],
+      "correcta": 3,
+      "explicacion": "El canal de **100 m** se compone de **90 m de cable horizontal** (enlace permanente) y **10 m de latiguillos** en ambos extremos. Las otras particiones no son las de TIA-568 ni las de ISO/IEC 11801."
+    },
+    {
+      "id": "28",
+      "tema": 29,
+      "enunciado": "La categoría 8 de par trenzado está pensada para soportar:",
+      "opciones": [
+        "10GBASE-T a 100 m en cableado horizontal",
+        "40GBASE-T en canales de 30 m, típicamente en el CPD",
+        "1000BASE-T a 100 m con 100 MHz",
+        "100GBASE-T a 100 m en el troncal del edificio"
+      ],
+      "correcta": 1,
+      "explicacion": "La **Cat 8** (2000 MHz) soporta **40GBASE-T (IEEE 802.3bq) en canales de 30 m** con 2 conectores, para enlaces entre servidores y switches en el CPD. 10GBASE-T a 100 m es lo propio de Cat 6A y 1000BASE-T a 100 MHz de Cat 5e. 100GBASE-T no existe sobre par trenzado."
+    },
+    {
+      "id": "29",
+      "tema": 29,
+      "enunciado": "¿Qué impedancia característica tiene el cable coaxial que se usa en televisión y en las redes de cable HFC?",
+      "opciones": [
+        "75 Ω",
+        "50 Ω",
+        "100 Ω",
+        "120 Ω"
+      ],
+      "correcta": 0,
+      "explicacion": "El coaxial de **75 Ω** se usa en TV y en redes HFC (DOCSIS), con conector F. El de 50 Ω era el de la Ethernet antigua (10BASE5 y 10BASE2 con conector BNC). 100 Ω es la impedancia típica del par trenzado, no del coaxial."
+    },
+    {
+      "id": "30",
+      "tema": 29,
+      "enunciado": "¿Qué tipo de fibra multimodo está pensado para la multiplexación por longitud de onda corta (SWDM)?",
+      "opciones": [
+        "OS2",
+        "OM1",
+        "OM3",
+        "OM5"
+      ],
+      "correcta": 3,
+      "explicacion": "La **OM5** está optimizada para **SWDM** y suele llevar cubierta verde lima. OM3 y OM4 son multimodo optimizadas para láser (cubierta aguamarina), OM1 es la antigua de 62,5 µm (naranja) y OS2 es monomodo, no multimodo."
+    },
+    {
+      "id": "31",
+      "tema": 29,
+      "enunciado": "Los satélites geoestacionarios (GEO) orbitan a una altitud aproximada de:",
+      "opciones": [
+        "2000 km",
+        "35 786 km",
+        "20 200 km",
+        "384 400 km"
+      ],
+      "correcta": 1,
+      "explicacion": "La órbita **GEO** está a unos **35 786 km** sobre el ecuador, lo que da un retardo de ida y vuelta de unos 0,5 s. Unos 2000 km es el límite superior aproximado de las órbitas LEO, unos 20 200 km la altitud de la órbita MEO del GPS y 384 400 km la distancia a la Luna."
+    },
+    {
+      "id": "32",
+      "tema": 29,
+      "enunciado": "Una línea serie asíncrona envía cada carácter con 1 bit de arranque, 8 bits de datos y 1 bit de parada, sin paridad. ¿Qué porcentaje de los bits transmitidos son útiles?",
+      "opciones": [
+        "70 %",
+        "90 %",
+        "80 %",
+        "100 %"
+      ],
+      "correcta": 2,
+      "explicacion": "Cada carácter ocupa 1 + 8 + 1 = 10 bits, de los que 8 son datos: 8/10 = **80 %**. Esta sobrecarga por carácter es la razón de que la transmisión **asíncrona** sea poco eficiente frente a la síncrona, que envía bloques con cabeceras de sincronismo. 90 % olvidaría uno de los bits de control."
+    },
+    {
+      "id": "33",
+      "tema": 29,
+      "enunciado": "¿Qué código de línea utiliza Ethernet a 10 Mbit/s para transmitir en banda base?",
+      "opciones": [
+        "Manchester",
+        "8B/10B",
+        "64B/66B",
+        "PAM-5"
+      ],
+      "correcta": 0,
+      "explicacion": "Ethernet de 10 Mbit/s usa el código **Manchester** (cada bit lleva una transición en mitad del intervalo, lo que facilita la sincronización). 8B/10B y 64B/66B son codificaciones de bloque de enlaces más rápidos, y PAM-5 es la modulación por amplitud de 1000BASE-T."
+    },
+    {
+      "id": "34",
+      "tema": 29,
+      "enunciado": "Señale la afirmación INCORRECTA sobre la transmisión serie y la transmisión paralelo:",
+      "opciones": [
+        "En la transmisión serie los bits viajan uno tras otro por una sola línea",
+        "USB, SATA y PCIe son interfaces de transmisión serie",
+        "La transmisión paralelo sufre desfase (skew) y diafonía entre líneas",
+        "La transmisión paralelo es la preferida a larga distancia porque envía varios bits a la vez"
+      ],
+      "correcta": 3,
+      "explicacion": "Es incorrecta la d: la transmisión **paralelo** sufre **desfase (*skew*) y diafonía**, por lo que se limita a **distancias cortas** (antiguo puerto de impresora, buses internos). A distancia se usa la transmisión **serie**, como en USB, SATA, PCIe o Ethernet. Las demás afirmaciones son ciertas."
+    },
+    {
+      "id": "35",
+      "tema": 29,
+      "enunciado": "¿Cuál de las siguientes es una técnica de control de errores por retransmisión (ARQ)?",
+      "opciones": [
+        "Código de Hamming",
+        "Retroceso N",
+        "Reed-Solomon",
+        "LDPC"
+      ],
+      "correcta": 1,
+      "explicacion": "**Retroceso N** (*go-back-N*) es una técnica **ARQ**, como la parada y espera y la repetición selectiva: el receptor pide repetir lo erróneo. Hamming, Reed-Solomon y LDPC son códigos **FEC**: el receptor corrige los errores sin retransmisión."
+    },
+    {
+      "id": "36",
+      "tema": 29,
+      "enunciado": "Una red consigue la comunicación dúplex alternando muy rápidamente la transmisión de subida y la de bajada en la misma frecuencia. Esta técnica es:",
+      "opciones": [
+        "FDD",
+        "CSMA/CD",
+        "TDD",
+        "WDM"
+      ],
+      "correcta": 2,
+      "explicacion": "**TDD** (*Time Division Duplex*) obtiene el dúplex dividiendo el tiempo: subida y bajada se alternan en la misma frecuencia. **FDD** usa frecuencias distintas para cada sentido. CSMA/CD es un método de acceso al medio y WDM una multiplexación por longitud de onda."
+    },
+    {
+      "id": "37",
+      "tema": 29,
+      "enunciado": "Un switch configurado en modo fragment-free empieza a reenviar una trama cuando ha recibido:",
+      "opciones": [
+        "Los 64 primeros bytes",
+        "Los 6 primeros bytes",
+        "La trama completa",
+        "Los 14 bytes de la cabecera"
+      ],
+      "correcta": 0,
+      "explicacion": "**Fragment-free** espera a los **64 primeros bytes**, el tamaño mínimo de trama, para descartar los fragmentos de colisión. Cut-through reenvía al leer la MAC destino (6 primeros bytes) y store-and-forward espera a la trama completa para comprobar el CRC. 14 bytes es la cabecera Ethernet, que no marca ningún modo."
+    },
+    {
+      "id": "38",
+      "tema": 29,
+      "enunciado": "Un switch recibe por el puerto 3 una trama unicast cuya MAC destino no figura en su tabla CAM. ¿Qué hace?",
+      "opciones": [
+        "La descarta y envía un mensaje de error al origen",
+        "La devuelve por el puerto 3",
+        "La reenvía solo al puerto del router por defecto",
+        "La inunda por todos los puertos menos el 3"
+      ],
+      "correcta": 3,
+      "explicacion": "Si el switch no conoce la MAC destino, **inunda** (*flooding*) la trama por todos los puertos excepto el de entrada; lo mismo hace con los broadcast. Además aprende la MAC origen y la asocia al puerto 3. Un switch de nivel 2 no descarta por destino desconocido ni conoce routers por defecto."
+    },
+    {
+      "id": "39",
+      "tema": 29,
+      "enunciado": "Un router con dos interfaces Ethernet conecta dos switches, uno en cada interfaz. Cada switch tiene además 4 ordenadores conectados. Sin VLAN, ¿cuántos dominios de colisión y de difusión hay?",
+      "opciones": [
+        "8 de colisión y 2 de difusión",
+        "10 de colisión y 2 de difusión",
+        "10 de colisión y 1 de difusión",
+        "2 de colisión y 10 de difusión"
+      ],
+      "correcta": 1,
+      "explicacion": "El switch crea un dominio de colisión por puerto: cada switch tiene 4 puertos con ordenadores y 1 hacia el router, 5 por switch, **10 en total**. El router separa difusiones: una por interfaz, **2 dominios de difusión**. 8 olvida los enlaces switch-router, y 1 de difusión ignora que el router no reenvía broadcast."
+    },
+    {
+      "id": "40",
+      "tema": 29,
+      "enunciado": "En el protocolo de encaminamiento RIP, la métrica y su valor máximo válido son:",
+      "opciones": [
+        "El ancho de banda, hasta 100 Mbit/s",
+        "El coste, hasta 65 535",
+        "Los saltos, hasta 15",
+        "El retardo, hasta 255 ms"
+      ],
+      "correcta": 2,
+      "explicacion": "**RIP** es de vector distancia y usa como métrica el **número de saltos, con un máximo de 15** (16 significa inalcanzable), lo que limita el tamaño de la red. El coste basado en el ancho de banda es la métrica de OSPF, protocolo de estado de enlace."
+    },
+    {
+      "id": "41",
+      "tema": 29,
+      "enunciado": "Señale la afirmación INCORRECTA sobre el router:",
+      "opciones": [
+        "Elige el siguiente salto por la coincidencia de prefijo más largo",
+        "Decrementa el TTL de los paquetes IPv4 que reenvía",
+        "Recalcula la suma de comprobación de la cabecera IPv4",
+        "Reenvía por defecto los broadcast que recibe a todas sus interfaces"
+      ],
+      "correcta": 3,
+      "explicacion": "Es incorrecta la d: el router **no reenvía los broadcast**, y por eso separa dominios de difusión. Las demás son ciertas: consulta su tabla con la **coincidencia de prefijo más largo**, decrementa el TTL y, como cambia la cabecera IPv4, recalcula su suma de comprobación."
+    },
+    {
+      "id": "42",
+      "tema": 29,
+      "enunciado": "Las normas ITU-T V.90 y V.92 corresponden a módems de banda vocal con una velocidad de bajada de:",
+      "opciones": [
+        "56 kbit/s",
+        "33,6 kbit/s",
+        "64 kbit/s",
+        "144 kbit/s"
+      ],
+      "correcta": 0,
+      "explicacion": "**V.90 y V.92** alcanzan **56 kbit/s de bajada**. 33,6 kbit/s es la norma anterior, V.34; 64 kbit/s es un canal telefónico digital (PCM) y 144 kbit/s el acceso básico RDSI 2B+D."
+    },
+    {
+      "id": "43",
+      "tema": 29,
+      "enunciado": "La conmutación en la que cada nodo almacena el mensaje completo antes de reenviarlo, propia de la telegrafía y el télex, es la conmutación de:",
+      "opciones": [
+        "Circuitos",
+        "Paquetes",
+        "Mensajes",
+        "Etiquetas"
+      ],
+      "correcta": 2,
+      "explicacion": "En la **conmutación de mensajes** cada nodo almacena el **mensaje completo** y lo reenvía (*store-and-forward*), con retardos grandes y variables; es histórica (telegrafía, télex). La de paquetes divide el mensaje en trozos con cabecera y la de circuitos reserva un camino dedicado. La conmutación por etiquetas es la de MPLS."
+    },
+    {
+      "id": "44",
+      "tema": 29,
+      "enunciado": "¿Cuál de las siguientes tecnologías encamina cada paquete de forma independiente, como datagrama, sin establecer antes un circuito virtual?",
+      "opciones": [
+        "X.25",
+        "IP",
+        "Frame Relay",
+        "ATM"
+      ],
+      "correcta": 1,
+      "explicacion": "**IP** usa **datagramas**: cada paquete se encamina por separado y puede llegar desordenado. X.25, Frame Relay y ATM (también MPLS) trabajan con **circuitos virtuales**: se fija antes una ruta lógica y todos los paquetes la siguen en orden."
+    },
+    {
+      "id": "45",
+      "tema": 29,
+      "enunciado": "El acceso básico RDSI (2B+D) ofrece una velocidad total de:",
+      "opciones": [
+        "128 kbit/s",
+        "64 kbit/s",
+        "2,048 Mbit/s",
+        "144 kbit/s"
+      ],
+      "correcta": 3,
+      "explicacion": "El acceso básico **2B+D** suma 2 canales B de 64 kbit/s y un canal D de 16 kbit/s: **144 kbit/s**. 128 kbit/s cuenta solo los canales B, y 2,048 Mbit/s es el acceso primario europeo 30B+D (un E1)."
+    },
+    {
+      "id": "46",
+      "tema": 29,
+      "enunciado": "En la jerarquía SDH, el nivel STM-1 tiene una velocidad de:",
+      "opciones": [
+        "155,52 Mbit/s",
+        "2,048 Mbit/s",
+        "622,08 Mbit/s",
+        "51,84 Mbit/s"
+      ],
+      "correcta": 0,
+      "explicacion": "El **STM-1** de SDH va a **155,52 Mbit/s**; los niveles superiores son STM-4, STM-16 y STM-64. 2,048 Mbit/s es el E1 de PDH, 622,08 Mbit/s es el STM-4 (4 × 155,52) y 51,84 Mbit/s es el STS-1 de SONET."
+    },
+    {
+      "id": "47",
+      "tema": 29,
+      "enunciado": "En una red MPLS, ¿cómo se llama el router de frontera que añade la etiqueta al entrar el paquete y la quita al salir?",
+      "opciones": [
+        "LSR",
+        "LSP",
+        "LER",
+        "FEC"
+      ],
+      "correcta": 2,
+      "explicacion": "El **LER** (*Label Edge Router*) está en la frontera y pone o quita la etiqueta. El **LSR** es el router del núcleo que conmuta por etiquetas, el **LSP** es el camino que siguen los paquetes y la **FEC** es la clase de tráfico que recibe el mismo tratamiento. Truco: la E de LER es de *Edge*, el borde."
+    },
+    {
+      "id": "48",
+      "tema": 29,
+      "enunciado": "En GPON, las longitudes de onda usadas para los datos son:",
+      "opciones": [
+        "1310 nm de bajada y 1490 nm de subida",
+        "1490 nm de bajada y 1310 nm de subida",
+        "850 nm de bajada y 1310 nm de subida",
+        "1550 nm de bajada y 1490 nm de subida"
+      ],
+      "correcta": 1,
+      "explicacion": "GPON usa **1490 nm de bajada y 1310 nm de subida**; los 1550 nm se reservan para vídeo RF. La primera opción invierte los sentidos, que es el error típico, y 850 nm es la ventana de la fibra multimodo, no de las redes PON."
+    },
+    {
+      "id": "49",
+      "tema": 29,
+      "enunciado": "¿Qué tecnología PON ofrece 10 Gbit/s simétricos?",
+      "opciones": [
+        "XGS-PON (ITU-T G.9807.1)",
+        "XG-PON (ITU-T G.987)",
+        "GPON (ITU-T G.984)",
+        "ADSL2+"
+      ],
+      "correcta": 0,
+      "explicacion": "**XGS-PON** (G.9807.1) da **10 Gbit/s simétricos**. XG-PON (G.987) es asimétrico (10/2,5 Gbit/s), GPON ofrece 2,488/1,244 Gbit/s y ADSL2+ es cobre, con unos 24 Mbit/s de bajada. Truco: la S de XGS es de simétrico."
+    },
+    {
+      "id": "50",
+      "tema": 29,
+      "enunciado": "La Red SARA es:",
+      "opciones": [
+        "La red de radio troncal digital del Ministerio del Interior para emergencias",
+        "La red europea que interconecta las Administraciones de los Estados miembros",
+        "La red pública de acceso por fibra de la AGE para los ciudadanos",
+        "La red privada que interconecta las Administraciones públicas españolas"
+      ],
+      "correcta": 3,
+      "explicacion": "La **Red SARA** es la red privada que interconecta las **Administraciones públicas españolas** (AGE, comunidades autónomas y entidades locales) y enlaza con la red europea **TESTA**. La red europea es TESTA, no SARA, y la radio troncal digital de emergencias del Ministerio del Interior es SIRDEE (TETRA)."
+    },
+    {
+      "id": "51",
+      "tema": 29,
+      "enunciado": "El identificador único del terminal móvil, distinto del identificador del abonado guardado en la SIM, es el:",
+      "opciones": [
+        "IMSI",
+        "MSISDN",
+        "IMEI",
+        "ICCID"
+      ],
+      "correcta": 2,
+      "explicacion": "El **IMEI** identifica el **terminal** (el aparato). El **IMSI** identifica al abonado y va en la SIM/USIM, el MSISDN es el número de teléfono y el ICCID es el número de serie de la propia tarjeta SIM."
+    },
+    {
+      "id": "52",
+      "tema": 29,
+      "enunciado": "En LTE (4G), las técnicas de acceso radio usadas en bajada y en subida son, respectivamente:",
+      "opciones": [
+        "WCDMA y TDMA",
+        "OFDMA y SC-FDMA",
+        "SC-FDMA y OFDMA",
+        "TDMA y FDMA"
+      ],
+      "correcta": 1,
+      "explicacion": "LTE usa **OFDMA en bajada** y **SC-FDMA en subida**; SC-FDMA tiene menor relación entre potencia de pico y media, lo que ahorra batería al terminal. La tercera opción invierte los sentidos, WCDMA es de UMTS (3G) y TDMA con FDMA es de GSM. 5G ya usa OFDMA en ambos sentidos."
+    },
+    {
+      "id": "53",
+      "tema": 29,
+      "enunciado": "Según IMT-2020, la latencia del plano de usuario exigida a 5G para el escenario URLLC es de:",
+      "opciones": [
+        "4 ms",
+        "10 ms",
+        "100 ms",
+        "1 ms"
+      ],
+      "correcta": 3,
+      "explicacion": "IMT-2020 fija **1 ms para URLLC** y 4 ms para eMBB, por lo que 4 ms es el distractor que más confunde. 10 ms y 100 ms son latencias propias de generaciones anteriores. Truco: URLLC, ultra baja latencia, el número más pequeño."
+    },
+    {
+      "id": "54",
+      "tema": 29,
+      "enunciado": "¿Qué modo de despliegue 5G es necesario para ofrecer network slicing y URLLC?",
+      "opciones": [
+        "SA (Standalone), con radio y núcleo 5G nativos",
+        "NSA (Non-Standalone), con anclaje en la red 4G",
+        "Cualquier despliegue 5G con MIMO masivo",
+        "Solo los despliegues en la banda de 700 MHz"
+      ],
+      "correcta": 0,
+      "explicacion": "El **network slicing** y URLLC exigen el modo **SA (Standalone)**, con radio y núcleo **5GC** nativos. El modo NSA apoya la radio 5G en el núcleo y el anclaje de 4G (EPC), que no permite esas funciones. Ni el MIMO masivo ni la banda de frecuencias determinan si hay slicing."
+    },
+    {
+      "id": "55",
+      "tema": 29,
+      "enunciado": "En España, la banda de ondas milimétricas (FR2) atribuida a 5G es la de:",
+      "opciones": [
+        "700 MHz",
+        "3,5 GHz",
+        "26 GHz",
+        "2,4 GHz"
+      ],
+      "correcta": 2,
+      "explicacion": "La banda de **26 GHz** es **FR2** (ondas milimétricas): gran capacidad y poco alcance. La de 3,5 GHz es la banda principal de 5G en España y la de 700 MHz da cobertura, pero ambas están en FR1, por debajo de unos 7 GHz. 2,4 GHz es una banda ISM (Wi-Fi, Bluetooth)."
+    },
+    {
+      "id": "56",
+      "tema": 29,
+      "enunciado": "En la banda de 2,4 GHz, ¿qué canales Wi-Fi de 20 MHz no se solapan entre sí?",
+      "opciones": [
+        "1, 7 y 13",
+        "1, 6 y 11",
+        "1, 5, 9 y 13",
+        "2, 7 y 12"
+      ],
+      "correcta": 1,
+      "explicacion": "En 2,4 GHz solo hay **3 canales no solapados: 1, 6 y 11**. En Europa existen 13 canales de 20 MHz, pero los canales están separados solo 5 MHz entre sí y se pisan; las demás combinaciones dejan canales que se solapan con los de 20 MHz."
+    },
+    {
+      "id": "57",
+      "tema": 29,
+      "enunciado": "Señale la afirmación INCORRECTA sobre los estándares Wi-Fi:",
+      "opciones": [
+        "802.11ac (Wi-Fi 5) opera en las bandas de 2,4 y 5 GHz",
+        "802.11b alcanza 11 Mbit/s en 2,4 GHz con DSSS",
+        "802.11a alcanza 54 Mbit/s en 5 GHz con OFDM",
+        "802.11n (Wi-Fi 4) introdujo MIMO con hasta 4 flujos"
+      ],
+      "correcta": 0,
+      "explicacion": "Es incorrecta la a: **802.11ac opera solo en 5 GHz**. En 2,4 y 5 GHz trabajan 802.11n y 802.11ax. Las demás son ciertas: 802.11b da 11 Mbit/s con DSSS, 802.11a 54 Mbit/s en 5 GHz con OFDM y 802.11n introdujo MIMO con hasta 4 flujos."
+    },
+    {
+      "id": "58",
+      "tema": 29,
+      "enunciado": "En una organización, la modalidad de seguridad Wi-Fi adecuada, con credenciales individuales por usuario, es la Enterprise, que se basa en:",
+      "opciones": [
+        "Una clave precompartida (PSK) común",
+        "El filtrado de direcciones MAC",
+        "La ocultación del SSID",
+        "802.1X con un servidor RADIUS"
+      ],
+      "correcta": 3,
+      "explicacion": "El modo **Enterprise** usa **802.1X con un servidor RADIUS** y credenciales propias de cada usuario. La PSK compartida es el modo Personal, y ni el filtrado por MAC ni la ocultación del SSID son medidas de seguridad eficaces."
+    },
+    {
+      "id": "59",
+      "tema": 29,
+      "enunciado": "Un dispositivo Bluetooth de clase 2 tiene una potencia máxima y un alcance aproximado de:",
+      "opciones": [
+        "100 mW y unos 100 m",
+        "1 mW y unos 1 m",
+        "2,5 mW y unos 10 m",
+        "10 mW y unos 50 m"
+      ],
+      "correcta": 2,
+      "explicacion": "La **clase 2** es de **2,5 mW y unos 10 m**, la más habitual en móviles y auriculares. La clase 1 llega a 100 mW y unos 100 m, y la clase 3 a 1 mW y alrededor de 1 m. La cuarta opción no corresponde a ninguna clase clásica."
+    },
+    {
+      "id": "60",
+      "tema": 29,
+      "enunciado": "La tecnología NFC, usada en pago móvil y en el DNIe, trabaja a una frecuencia de:",
+      "opciones": [
+        "2,4 GHz",
+        "13,56 MHz",
+        "868 MHz",
+        "5 GHz"
+      ],
+      "correcta": 1,
+      "explicacion": "**NFC** trabaja a **13,56 MHz** y su alcance es de pocos centímetros (ISO/IEC 14443 y 18092). 2,4 GHz es la banda de Wi-Fi, Bluetooth y Zigbee, 5 GHz la de Wi-Fi, y 868 MHz es la banda sub-GHz típica de LPWAN en Europa (LoRaWAN, Sigfox)."
+    }
+  ]
+}
