@@ -1,0 +1,397 @@
+{
+ "titulo": "Examen 2019 · libre · Supuesto práctico I",
+ "fuente": "oficial",
+ "examen": "TAI-L2019",
+ "parte": "supuesto1",
+ "tema": null,
+ "convocatoria": "2019 · libre",
+ "minutos": 24,
+ "origen": "OEP 2019",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/1925774/cues_1er_ejer_TAI-L_oep19_154AB89SD658.pdf/ac7ec9d6-3ac6-4457-6687-6ecf53aa158e",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/1925774/Plantilla_definitivaTAI-LEjercicionico2019_154AB89SD658.pdf/3a177074-d70b-2fda-e9ec-38cc0942944d",
+ "contextos": {
+  "s1": "En el departamento TIC, al que usted se acaba de incorporar, quiere desarrollar para la Subdirección de Selección un sistema integral de\ninformación para la gestión de los procesos selectivos y convocatorias de oposiciones de la Administración General del Estado. El\nsistema incluirá, entre otras, las siguientes funcionalidades:\n- Gestión de solicitudes de inscripción de aspirantes al proceso selectivo.\n- Gestión de colaboradores.\n- Generación de listados, estadísticas y cuadros de mando.\n- Generación de certificados para aspirantes y colaboradores.\nDada la envergadura del proyecto, y para aprovechar las aplicaciones ya implantadas en la Subdirección y la experiencia profesional del\npersonal, van a convivir diferentes lenguajes de programación, entre otros, Java, C# o Python, así como distintos gestores de Bases de\nDatos. Como repositorio de código se utiliza Git.\nA continuación se muestra un diagrama simplificado de clases que describe parte del sistema:\nSolicitud Opositor\n+IdSolicitud Presentada por +IdOpositor\n+IdOpositor 1..N 1 +NIF\n+IdProceso\n1..N\nPertenece a\n1\nProceso Ejercicio\n+IdProceso Consta +IdEjercicio\n+IdFormaAcceso 1 1..N +IdProceso\n+Duracion\nSalvo que el enunciado diga lo contrario, se asume que aquellas preguntas que contengan un fragmento de código tendrán declaradas\ncorrectamente todas las clases, librerías y variables que no aparezcan explícitamente. Del mismo modo sí se trata de lenguaje HTML, se\nda por supuesto que éste será HTML5 y será ejecutado en navegadores que soporten dicha versión. Las sentencias SQL que aparecen\nse encuentran dentro del estándar ANSI SQL. Como metodología de base el organismo aplica Métrica v3."
+ },
+ "preguntas": [
+  {
+   "id": "s101",
+   "tema": null,
+   "enunciado": "Se necesita presentar una estadística utilizando HTML5 mediante una tabla en la que una de sus columnas contendrá la descripción de cada Proceso Selectivo. Suponiendo que a dicha columna la denominamos \"Proceso\", ¿qué etiqueta deberá utilizar para definir la celda de encabezado de la tabla para dicha columna, con un formato de letra diferenciado?",
+   "opciones": [
+    "<th>Proceso</th>",
+    "<tableheader>Proceso</tableheader>",
+    "<theader>Proceso</theader>",
+    "<tableh>Proceso</tableh>"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s102",
+   "tema": 16,
+   "enunciado": "Le indican que debe presentar también una lista de opositores con las notas correspondientes a los dos primeros ejercicios. Las notas se representarán como una lista anidada para cada opositor, debiendo ser el resultado a obtener: • Opositor ◦ Nota 1 ◦ Nota 2 ¿Cuál es el código HTML5 correcto si presentamos un solo opositor?",
+   "opciones": [
+    "<ul><li>Opositor<ul><li>Nota 1</li><li>Nota 2</li></ul></li></ul>",
+    "<ul><li>Opositor</li></ul><ul><li>Nota 1</li><li>Nota 2</li></ul>",
+    "<ul><li1>Opositor</li1><li2>Nota 1</li2><li2>Nota 2</li2></ul>",
+    "<ul><li>Opositor<li>Nota 1</li><li>Nota 2</li></li></ul>"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s103",
+   "tema": 16,
+   "enunciado": "En el formulario web de inscripción se le pide forzar a la introducción del nombre del opositor como campo obligatorio. Para desarrollar esta petición, de entre las siguientes opciones de código, ¿cuál debería utilizar para incorporarlo en el fragmento de código marcado como [---------------------------------------] ? <form> <label for=\"username\">Nombre de Opositor:</label> [---------------------------------------] <input type=\"submit\" value=\"Confirmar\"/> </form>",
+   "opciones": [
+    "<input type=\"text\" name=\"username\" required/>",
+    "<input type=\"text\" name=\"username\" enforced/>",
+    "<input type=\"text\" name=\"username\" mandatory/>",
+    "<input type=\"text\" name=\"username\" compulsory/>"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s104",
+   "tema": 16,
+   "enunciado": "En la página web a la que accederán los aspirantes, se quiere aplicar el color verde a todos los elementos que tengan etiqueta <a> que sean hijos de un elemento con etiqueta <li> ¿Cuál es el código CSS adecuado?",
+   "opciones": [
+    "li.a {color: green;}",
+    "li>a {color: green;}",
+    "li#a {color: green;}",
+    "li_a {color: green;}"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s105",
+   "tema": 16,
+   "enunciado": "Un compañero le consulta la forma de aplicar el modelo de Diseño de Caja Flexible (o Flexbox) a un elemento div con id=\"principal\". De entre los siguientes, ¿cuál es el código CSS correcto que debería proponer?",
+   "opciones": [
+    "div#principal {display: flex;}",
+    "div#principal {display: flexbox;}",
+    "div#principal {display: flex-container;}",
+    "div#principal {display:flexible;}"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s106",
+   "tema": 21,
+   "enunciado": "Se han detectado varios errores en la exportación a XML de los diferentes listados de notas y le solicitan su ayuda. Sin tener en cuenta si la información está bien representada, ¿cuál de los siguientes XML está bien formado?",
+   "opciones": [
+    "<Opositor>Winston Churchill<Nota1>95</nota1><Nota2>65</nota2></opositor>",
+    "<Opositor>Winston Churchill<Nota1>95</Nota1><Nota2>65</Opositor></Nota2>",
+    "<Opositor>Winston Churchill<Nota1/>95<Nota2/>65</Opositor>",
+    "<Opositor>Winston Churchill<Nota1>95</><Nota2>65</></>"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s107",
+   "tema": null,
+   "enunciado": "En su Subdirección van a usar JSON para realizar intercambio de datos, y le preguntan, de entre los siguientes, cuál sería un fichero JSON válido.",
+   "opciones": [
+    "{\"nombre\": \"Juana\", \"apellido\": \"Ruiz\"}",
+    "{'nombre': 'Juana', 'apellido': 'Ruiz'}",
+    "{nombre: \"Juana\", apellido: \"Ruiz\"}",
+    "{nombre: \"Juana\"; apellido: \"Ruiz\"}"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s108",
+   "tema": 16,
+   "enunciado": "Dentro de las tecnologías para el desarrollo web utilizadas en su unidad, se contempla utilizar javascript. ¿Qué valor devuelve la siguiente función javascript? Function prueba() { var i = 1; var j = 0; while (i < 7) { j += i; i += 2; } return j; }",
+   "opciones": [
+    "2",
+    "9",
+    "6",
+    "0"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s109",
+   "tema": 16,
+   "enunciado": "Utilizando el lenguaje Python, a continuación se muestra la variable opositor, en la que se almacena el nombre y las puntuaciones de tres ejercicios por orden: opositor = {'nombre': 'Sandra Gomez', 'notas': [27, 36, 12]} ¿Cómo asignaría a una variable llamada notaSegundoEjercicio el valor 36?",
+   "opciones": [
+    "notaSegundoEjercicio = opositor.notas.Value.Item2",
+    "notaSegundoEjercicio = opositor['notas'][1]",
+    "notaSegundoEjercicio = opositor.Key[notas].Value[1]",
+    "notaSegundoEjercicio = opositor(notas(2))"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s110",
+   "tema": 16,
+   "enunciado": "Se está valorando la realización de otros desarrollos de Machine Learning para Python y le preguntan cuál de las siguientes podría ser una librería válida para ello.",
+   "opciones": [
+    "Keras",
+    "Yum",
+    "Mahotas",
+    "Openpyxl"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s111",
+   "tema": 16,
+   "enunciado": "Le piden opinión porque en uno de los módulos Java se detecta un bucle que concatena una cantidad muy elevada de cadenas de texto, penalizando el rendimiento. ¿Qué clase de java.lang habría que utilizar para mejorar la eficiencia?",
+   "opciones": [
+    "StringConcat",
+    "StringConstruct",
+    "StringBuilder",
+    "StringCreator"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s112",
+   "tema": 19,
+   "enunciado": "¿Cómo debe definir el equipo de desarrollo en Java una clase llamada Ejercicio si quiere impedir que se pueda heredar de la misma?",
+   "opciones": [
+    "closed class Ejercicio",
+    "final class Ejercicio",
+    "private class Ejercicio",
+    "immutable class Ejercicio"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s113",
+   "tema": 16,
+   "enunciado": "En C# debe crear un objeto de tipo SqlConnection y que se llame al método Dispose, para así liberar recursos al final del bloque de código que aparece entre llaves. ¿Qué instrucción debemos utilizar?",
+   "opciones": [
+    "using (SqlConnection conn = new SqlConnection(connString)) {conn.Open();}",
+    "scope (SqlConnection conn = new SqlConnection(connString)) {conn.Open();}",
+    "dispose (SqlConnection conn = new SqlConnection(connString)) {conn.Open();}",
+    "internal (SqlConnection conn = new SqlConnection(connString)) {conn.Open();}"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s114",
+   "tema": 19,
+   "enunciado": "Para cumplir el cometido que le ha sido asignado va a tener que definir arrays. ¿Cuál es la forma correcta de definir un array de enteros en C#?",
+   "opciones": [
+    "int[] arrayEnteros = new {1, 2, 3};",
+    "int arrayEnteros[] = new() {1, 2, 3};",
+    "int[] arrayEnteros = new[] {1, 2, 3};",
+    "int arrayEnteros[] = new {1, 2, 3};"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s115",
+   "tema": 15,
+   "enunciado": "Su equipo está estudiando la información existente dispersa en distintas fuentes de datos con el fin de consolidarla. En una base de datos antigua, hay una tabla que contiene el siguiente registro: NIF: 12345678Z Nombre: Emilia PrimerApellido: Pardo SegundoApellido: Bazán Direccion: Atocha 106 Telefonos: 916666666;917777777 ¿En qué forma normal está la tabla?",
+   "opciones": [
+    "En primera forma normal.",
+    "En segunda forma normal.",
+    "En tercera forma normal.",
+    "No está en ninguna forma normal."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s116",
+   "tema": 14,
+   "enunciado": "En la base de datos, el campo \"IdFormaAcceso\" de la tabla \"Proceso\" es de tipo char(1) y puede tomar los valores \"L\" (Ingreso Libre) y \"P\" (Promocion Interna). ¿Qué instrucción deberá utilizar para obtener un listado de todos los IdProceso de forma que aparezca el nombre descriptivo de la correspondiente Forma de Acceso?",
+   "opciones": [
+    "SELECT IdProceso, IF IdFormaAcceso = 'L' THEN 'Ingreso Libre' ELSE 'Promocion Interna' ENDIF AS FormaAcceso FROM Proceso",
+    "SELECT IdProceso, CASE IdFormaAcceso WHEN 'L' THEN 'Ingreso Libre' WHEN 'P' THEN 'Promocion Interna' END AS FormaAcceso FROM Proceso",
+    "SELECT IdProceso, SWITCH IdFormaAcceso ('L' = 'Ingreso Libre', 'P' = 'Promocion Interna') AS FormaAcceso FROM Proceso",
+    "SELECT IdProceso, IIF(IdFormaAcceso, 'L' = 'Ingreso Libre', 'P' = 'Promocion Interna') AS FormaAcceso FROM Proceso"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s117",
+   "tema": 17,
+   "enunciado": "También le consultan sobre la sentencia SQL a utilizar para obtener el listado del identificador de los opositores (IdOpositor) que tienen más de una entrada en la tabla Solicitud.",
+   "opciones": [
+    "SELECT IdOpositor, COUNT(IdSolicitud) AS NumeroSolicitudes FROM Solicitud GROUP BY IdOpositor WHERE NumeroSolicitudes > 1",
+    "SELECT IdOpositor, IdSolicitud FROM Solicitud WHERE COUNT(IdSolicitud) > 1",
+    "SELECT IdOpositor, COUNT(IdSolicitud) FROM Solicitud WHERE COUNT(IdSolicitud) > 1 GROUP BY IdOpositor",
+    "SELECT IdOpositor, COUNT(IdSolicitud) FROM Solicitud GROUP BY IdOpositor HAVING COUNT(IdSolicitud) > 1"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s118",
+   "tema": 17,
+   "enunciado": "¿Con qué instrucción ANSI SQL incrementaría un diez por ciento el valor de la columna Duracion para todos los registros de la tabla Ejercicio?",
+   "opciones": [
+    "UPDATE Duracion = Duracion + (0.10 * Duracion) FROM Ejercicio",
+    "UPDATE Ejercicio SET Duracion = Duracion * 1.1",
+    "UPDATE TABLE Ejercicio (Duracion = Duracion + 10%)",
+    "UPDATE SET Duracion *= 1.10 FROM Ejercicio"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s119",
+   "tema": 17,
+   "enunciado": "Si el campo DNI de la tabla Opositor es de tipo char(9), ¿cuál es la instrucción SQL para obtener el listado de todos los registros de la tabla Opositor cuyo DNI empieza por 3?",
+   "opciones": [
+    "SELECT * FROM Opositor WHERE DNI = 3*",
+    "SELECT * FROM Opositor WHERE DNI IN ('3.')",
+    "SELECT * FROM Opositor WHERE DNI LIKE '3%'",
+    "SELECT DNI(3*) FROM Opositor"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s120",
+   "tema": 23,
+   "enunciado": "Como repositorio de código en su unidad se utiliza Git, y le preguntan, ¿qué comando, de entre los siguientes, muestra una lista de los commits anteriores?",
+   "opciones": [
+    "git commit",
+    "git fetch",
+    "git status",
+    "git log"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r01",
+   "tema": 16,
+   "enunciado": "Dentro del código de la página web a la que acceden los opositores, se encuentra el siguiente código HTML: <html><body><h1 id=\"titulo\">Primer ejercicio TAI</h1></body></html> ¿Cuál es el código javascript para obtener la cadena \"Primer ejercicio TAI\"?",
+   "opciones": [
+    "var titulo = document.getElementById(\"titulo\").firstChild.nodeValue;",
+    "var titulo = document.titulo.InnerHTML;",
+    "var titulo = document.getElement(\"h1\").InnerText;",
+    "var titulo = document.children[0].getValue();"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r02",
+   "tema": 16,
+   "enunciado": "El equipo de proyecto está estudiando varios framework para valorar su utilización. ¿Cuál es el propósito principal del framework de javascript Jest?",
+   "opciones": [
+    "Testeado de código.",
+    "Machine learning.",
+    "Animacion y efectos gráficos.",
+    "Funciones matemáticas y tratamiento de cadenas."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r03",
+   "tema": 16,
+   "enunciado": "Entre los lenguajes contemplados para el nuevo sistema de información se encuentra Python. De entre los siguientes, ¿cuál es un framework para desarrollo web en Python?",
+   "opciones": [
+    "Django",
+    "Keras",
+    "Pip",
+    "Numpy"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r04",
+   "tema": 16,
+   "enunciado": "Se ha realizado un vídeo explicativo para los opositores y se ha publicado en una página web. ¿Qué mostrará el siguiente fragmento de código en un navegador que soporte HTML5?: <video width=\"320\" height=\"240\" controls><source src=\"movie.mp4\" type=\"video/mp4\"><source src=\"movie.ogg\" type=\"video/ogg\">No soportado</video>",
+   "opciones": [
+    "Se mostrarán los dos vídeos \"movie.mp4\" y \"movie.ogg\".",
+    "Se mostrará el mensaje \"No soportado\" en todos los casos.",
+    "Se mostrará el vídeo \"movie.mp4\" si el navegador soporta el formato mp4.",
+    "No se mostrará nada porque el código no está bien formado."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r05",
+   "tema": 14,
+   "enunciado": "Para intentar obtener información de la base de datos de aspirantes, un usuario malintencionado introduce la siguiente cadena en el campo \"Número de opositor\" de un formulario incluido en la página web de inscripciones al proceso: 100 OR 1=1 ¿Qué técnica está utilizando?",
+   "opciones": [
+    "Denial of Service.",
+    "Phishing",
+    "Malware attack.",
+    "SQL Injection."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  }
+ ]
+}

@@ -1,0 +1,398 @@
+{
+ "titulo": "Examen 2024 · libre · Supuesto práctico II",
+ "fuente": "oficial",
+ "examen": "TAI-L2024",
+ "parte": "supuesto2",
+ "tema": null,
+ "convocatoria": "2024 · libre",
+ "minutos": 23,
+ "origen": "OEP 2023 y 2024, modelo A",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/2364268/Cuestionario_TAI_LI_2024_A_M8L91VL1CL_154AB89SD658.pdf/43a5d8c6-3f74-dbca-8452-c00408125ff8",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/2364268/Plantilla+Cuestionario_TAI_LI_2024_A_definitiva.pdf/927bb295-6199-2a83-20e1-8cf970aa177e",
+ "contextos": {
+  "s2": "El Ministerio de Educación, Formación Profesional y Deportes tiene una red asignada en el Plan de Direccionamiento de la AGE\n10.9.0.0/16 y ha creado un organismo para la enseñanza online de formadores, OEOF (en adelante nos referiremos en este supuesto\nsólo como “organismo”), al que le ha correspondido la última de las subredes de las 16 en las que se ha dividido la red ministerial.\nEl sistema de enseñanza online de formadores se fundamenta en un servidor de formación accesible también desde Internet en la URL\nhttps://www.profesores.es. Los servidores de este sistema (web, http, DNS, DHCP, LDAP), se van a instalar con sistema operativo Linux\nUbuntu. El portal web está montado usando Apache Tomcat.\nEl certificado del portal (SSL) estará asociado al dominio profesores.es. Para poder gestionar el correo de los profesores, se ha instalado\nun servidor de correo con tecnología Postfix.\nLos DNS se han instalado usando el software BIND así como la asignación dinámica de direcciones IP mediante DHCP.\nHay un servidor llamado BIBLIOTECA que contiene un compendio de documentos e información de utilidad para los profesores. El\nacceso está permitido por RDP. En los elementos de configuración está permitido el acceso remoto para todos los usuarios que en el\nDirectorio Activo estén en el Grupo de Profesores. El resto no podrán conectarse. No hay elementos de red que impidan la conexión\nlibre por el puerto RDP 389 a dicho servidor, desde su misma VLAN.\nLa base de datos de la biblioteca es MySQL.\nAdemás, sobre servidores Ubuntu, se han instalado herramientas de detección de vulnerabilidades (Tenable Nessus y Nmap) y de\nmonitorización de sistemas y de aplicaciones web (Nagios).\nLos usuarios de la red (profesores) usan escritorios virtuales.\nLos switches para configurar las VLANs son CISCO (usan sistema operativo Cisco IOS).\nEl CPD principal del organismo tiene un respaldo en un CPD secundario, pero no está configurado como activo-activo y los cambios de\nlos servicios tienen que pasarse manualmente. Tiene redundancia de componentes y de suministro eléctrico y de red. El CPD es TIER\nIII.\nSalvo que se indique lo contrario en el enunciado, se supone que usted posee permisos de administrador."
+ },
+ "preguntas": [
+  {
+   "id": "s201",
+   "tema": 30,
+   "enunciado": "¿Cuántas direcciones hay disponibles para hosts en la subred del organismo?",
+   "opciones": [
+    "4094",
+    "65534",
+    "4096",
+    "65536"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s202",
+   "tema": 12,
+   "enunciado": "Al arrancar el servidor donde se aloja la web de profesores, aparecen errores en la partición sda8. ¿Qué comando hay que usar para reparar de forma automática los errores en el sistema de ficheros correspondiente, que no ha podido montarse?",
+   "opciones": [
+    "mount –T /dev/sda8",
+    "fsck -y /dev/sda8",
+    "fsck -m /dev/sda8",
+    "checkdisk /dev/sda8"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s203",
+   "tema": 31,
+   "enunciado": "Analizando la seguridad del sistema, surge la duda de si abrir o no el puerto 80 en un servidor web expuesto mediante HTTPS. El Centro Criptológico Nacional recomienda:",
+   "opciones": [
+    "Exhibir una web estática en el puerto 80 indicando que esa no es la web actual.",
+    "Cambiar el puerto HTTPS al 8892.",
+    "Utilizar un analizador de peticiones en las cabeceras HTTP en el puerto 80.",
+    "Disponer del puerto TCP/80, configurando el servidor web para que lleve a cabo una redirección automática de HTTP a HTTPS."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s204",
+   "tema": 28,
+   "enunciado": "El CPD donde está alojado el sistema tiene una puerta cuyo control de acceso es con tarjeta inteligente y PIN, que sólo conocen los operadores. Hace dos días, se supo que alguien no autorizado había entrado esperando agazapado a que alguien autorizado entrase, pasando detrás de él sin que éste advirtiera que tenía a un intruso detrás. Este incidente de ingeniería social en seguridad física se conoce con el nombre de:",
+   "opciones": [
+    "Tailgating o piggybacking.",
+    "Quid pro quo.",
+    "Pretexto.",
+    "Disrupción."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s205",
+   "tema": 32,
+   "enunciado": "El organismo tiene, para controlar la seguridad física del CPD, un circuito cerrado de televisión con cámaras que usa una red coaxial y se necesita interconectar esta red a la red local Ethernet para poder monitorizarlas. ¿Con qué dispositivo de red puede hacerlo?",
+   "opciones": [
+    "Un cortafuegos (firewall).",
+    "Una pasarela (gateway).",
+    "Un conmutador (switch).",
+    "Un repetidor (repeater)."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s206",
+   "tema": 30,
+   "enunciado": "En el sistema se utilizan los protocolos DNS y FTP seguro. De acuerdo con el modelo TCP/IP, estos protocolos se diferencian en que:",
+   "opciones": [
+    "DNS es un protocolo de usuario y FTP es un protocolo de soporte.",
+    "DNS es siempre un protocolo orientado a la conexión mientras que FTP no.",
+    "No existe diferencia entre ambos protocolos, ambos son protocolos de soporte.",
+    "FTP es un protocolo de usuario y DNS es un protocolo de soporte."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s207",
+   "tema": 33,
+   "enunciado": "En un switch Cisco que hay en la organización, se ejecuta el comando “switchport access vlan 1”. Esto permitirá:",
+   "opciones": [
+    "Asignar un puerto a la VLAN 1.",
+    "Asignar el puerto 1 del switch a la VLAN donde estamos situados en la consola del switch.",
+    "Visualizar todos los hosts asignados a la VLAN 1.",
+    "Asignar todos los hosts conectados a cualquier puerto del switch a la VLAN 1."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s208",
+   "tema": 12,
+   "enunciado": "La base de datos se ha corrompido y además, los usuarios no pueden acceder a la información. Se tiene toda la información de cómo se produjo el incidente y cuál es la persona que lo ha causado y por qué, pero, este incidente, ¿a qué dimensión o dimensiones de la seguridad afecta?",
+   "opciones": [
+    "A la disponibilidad porque no está accesible la base de datos y la integridad porque el fichero de la base de datos está corrupto.",
+    "A la confidencialidad porque los datos, una vez dañados, pueden ser accesibles por cualquiera.",
+    "Sólo a la disponibilidad porque la base de datos está temporalmente fuera de servicio hasta que se repare si es posible el fichero donde se aloja.",
+    "A la trazabilidad, porque no podremos averiguar lo que ha pasado por mucho que nos esforcemos, la seguridad es así."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s209",
+   "tema": 33,
+   "enunciado": "La red de área local está implementada con Gigabit Ethernet y, al conectar un nuevo dispositivo a la red, en su tarjeta, parpadea una luz de color naranja. ¿A qué puede deberse?",
+   "opciones": [
+    "A que está mal configurada la VLAN donde está ubicado el dispositivo.",
+    "A que la tarjeta de red del dispositivo transmite a menor velocidad de la que permite la red.",
+    "A que la tarjeta de red está estropeada y no hay conexión entre el dispositivo y la red.",
+    "A que el cable del dispositivo es coaxial y no Ethernet."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s210",
+   "tema": 13,
+   "enunciado": "Nos anuncian que hay una vulnerabilidad que afecta a una determinada versión del kernel de Linux Ubuntu. ¿Con qué comando podemos saber qué versión del kernel tiene nuestro sistema operativo Ubuntu?",
+   "opciones": [
+    "sudo dpkg -i linux*.deb",
+    "uname -r",
+    "uname -o",
+    "kexec -l"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s211",
+   "tema": 31,
+   "enunciado": "Para descargar algunos ficheros del servidor BIBLIOTECA, los administradores están sopesando entre el uso de SFTP y FTPS. Indique, de las siguientes afirmaciones, la INCORRECTA:",
+   "opciones": [
+    "SFTP usa típicamente el puerto 22 de SSH mientras que FTPS usa el puerto en el que tengamos definido el protocolo SSL/TLS.",
+    "SFTP usa autenticación con certificado (clave pública) mientras que FTPS usa autenticación con usuario y contraseña.",
+    "FTPS usa dos puertos, uno para los comandos y otro para descargarse los datos mientras que SFTP usa el mismo puerto para ambas tareas.",
+    "FTPS no contiene comandos estandarizados para manipular directorios o listar atributos, mientras que SFTP sí."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s212",
+   "tema": 28,
+   "enunciado": "Para la detección de malware complejo y movimiento lateral relacionado con APTs (Advanced Persistent Threats), se ha instalado en los PC de los profesores, la solución del CCN, CLAUDIA. ¿Cómo define el Centro Criptológico Nacional una APT?",
+   "opciones": [
+    "Es un tipo de ransomware como, por ejemplo, WannaCry, que te cifra los archivos del PC y se requiere la clave de descifrado a cambio del pago de un rescate.",
+    "Es un ataque de suplantación de identidad de un usuario corriente en un organismo para después mediante escalada de privilegios obtener las credenciales de un alto cargo de la empresa u organización.",
+    "Es un ataque selectivo de ciberespionaje o cibersabotaje llevado a cabo bajo el auspicio o la dirección de un país u organización adversaria, por razones que van más allá de las meramente financieras/delictivas o de protesta política.",
+    "Es un ataque masivo a una organización ocurrido por un fallo que no se había advertido hasta ese momento y, por tanto, no se cuenta con la salvaguarda o parche para prevenirlo."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s213",
+   "tema": 26,
+   "enunciado": "Para mejorar la escalabilidad del sistema, está estudiando implantar una arquitectura de microservicios con Kubernetes. ¿Qué protocolos para servicios pueden utilizarse con Kubernetes?",
+   "opciones": [
+    "SCTP, TCP (por defecto) y UDP.",
+    "HTTP (por defecto), HTTPS y FTP.",
+    "SSH, SFTP (por defecto) y UDP.",
+    "UDP (por defecto) y TCP."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s214",
+   "tema": 32,
+   "enunciado": "Para poder atender las llamadas de las guardias de sistemas, se han comprado veinte móviles. Su responsable le pide realizar el enrolamiento de estos móviles, pero, ¿en qué consiste esta tarea?",
+   "opciones": [
+    "Emparejar, en el sistema MDM (Mobile Device Management) de la organización, a cada usuario con su móvil.",
+    "Dar de alta en una base de datos de administración todos los dispositivos móviles.",
+    "Insertar la tarjeta SIM correspondiente a cada móvil.",
+    "Formatear a fábrica todos los dispositivos móviles."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s215",
+   "tema": 28,
+   "enunciado": "Se está instalando la nueva climatización del CPD y se plantea utilizar una toma derivada de la climatización del resto del edificio. ¿Cuál es la razón principal por la que NO se aconseja hacer eso?",
+   "opciones": [
+    "Porque la humedad recomendada para un CPD es mucho menor que la recomendada para las personas.",
+    "Porque la temperatura recomendada para un CPD es mucho mayor que la recomendada para las personas.",
+    "Porque el filtro de impurezas y polvo para las personas es mucho más sensible que lo que se recomienda para un CPD.",
+    "Porque el aire acondicionado para un CPD siempre debe provenir del techo y para las personas puede provenir lateralmente."
+   ],
+   "correcta": null,
+   "explicacion": null,
+   "anulada": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s216",
+   "tema": 28,
+   "enunciado": "Se ha descargado del sitio web del CCN-CERT una herramienta de antimalware y justo debajo aparece un hash de comprobación. ¿Qué tipo de medida de seguridad es este hash en este contexto?",
+   "opciones": [
+    "Una medida antimalware, pues el hash aplicado al fichero descargado nos sanitiza el fichero y ya se puede usar sin problemas, pues está limpio de malware, lo cual en una herramienta antimalware es altamente necesario.",
+    "Una medida para asegurar la integridad del fichero de descarga, pues si al calcular nosotros el hash del fichero descargado no coincide con el que nos aparece en la página del CCN, el fichero descargado no sería válido para su uso.",
+    "El hash es la firma del CCN como autoridad de certificación de productos que garantiza que el software descargado es apto para ser usado en sistemas categorizados como de nivel ALTO o incluso en sistemas clasificados como reservado nacional.",
+    "El hash es la firma del CCN de la página web donde se presenta la herramienta que estamos intentando descargar y es una medida para evitar que los hackers puedan manipular la página y subir otro fichero en vez del que se pretende descargar."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s217",
+   "tema": 32,
+   "enunciado": "Se ha implantado una solución VoIP que usa el protocolo SIP pero, al establecer sesiones con usuarios de fuera del organismo, la llamada se corta o congela y después, se restablece. Este problema no sucede en sesiones entre usuarios internos del organismo, ¿por qué puede ser?",
+   "opciones": [
+    "Se están usando incorrectamente los códecs.",
+    "La salida a Internet está empleando NAT.",
+    "El tráfico entre origen y destino está interceptado en el cortafuegos de Internet.",
+    "La CPU del ordenador es insuficiente y provoca estos problemas."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s218",
+   "tema": 26,
+   "enunciado": "Se ha instalado un servidor de correo con Postfix y se está decidiendo si utilizar POP3 o IMAP en los clientes de correo. ¿Cuál de las siguientes opciones es INCORRECTA?",
+   "opciones": [
+    "Con IMAP, los mensajes se almacenan en un servidor remoto y los usuarios pueden iniciar sesión en varios clientes de correo electrónico y leer los mismos mensajes.",
+    "POP3 solo admite la sincronización de correo unidireccional, lo que solo permite a los usuarios descargar correos electrónicos desde un servidor a un cliente.",
+    "Con IMAP, el correo enviado y recibido se almacena en el servidor hasta que el usuario lo elimina permanentemente.",
+    "Con POP3, si los usuarios organizan sus correos electrónicos en un dispositivo mediante carpetas, ya no tendrán que hacerlo en el resto de dispositivos porque se replica la organización en carpetas."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s219",
+   "tema": 24,
+   "enunciado": "Se necesita saber los usuarios que acceden a la base de datos de la biblioteca y desde qué host o IP. Para averiguarlo, en la consola de administración de la base de datos, ejecutará el comando:",
+   "opciones": [
+    "SELECT * FROM all_users",
+    "mysql> SELECT user FROM mysql.user",
+    "mysql> SELECT user,host FROM mysql.user",
+    "sudo mysql -u root -p"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s220",
+   "tema": 24,
+   "enunciado": "Se quiere aplicar políticas de seguridad al grupo de usuarios Profesores utilizando Directorio Activo y GPOs. Una buena práctica es definir primero:",
+   "opciones": [
+    "Una Unidad Organizativa (OU) para el grupo de usuarios Profesores.",
+    "Las ACLs (Access Control Lists) que tendrán las GPO del grupo de usuarios Profesores.",
+    "Un nuevo bosque de Directorio Activo.",
+    "Relaciones de confianza entre el Directorio Activo actual y el dominio de seguridad del grupo de usuarios Profesores."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r01",
+   "tema": 26,
+   "enunciado": "Como administrador de correo, quiere cambiar el mensaje HELO que aparece cuando se establecen conexiones al servidor SMTP. Actualmente aparece el nombre del servidor, pero quiere que muestre \"CORREOBIBLIOTECA\" y además, que el cambio se aplique en todos los servidores SMTP que existan, no solo en aquel en el que está trabajando. ¿Cómo lo haría?",
+   "opciones": [
+    "Editando el parámetro $client en el fichero /etc/postfix/main.cf y reiniciando posteriormente el servidor Postfix.",
+    "Accediendo al servidor SMTP y ejecutando EHLO -name CORREOBIBLIOTECA en la consola.",
+    "Editando el parámetro smtp_helo en el fichero /etc/postfix/master.cf y reiniciando posteriormente el servidor Postfix.",
+    "Editando el parámetro $helo_name en /etc/postfix/main.cf y reiniciando posteriormente el servidor Postfix."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r02",
+   "tema": 32,
+   "enunciado": "Como no hay suficientes tomas Ethernet en la zona física donde están los profesores, se va a instalar una red WiFi con protocolo WPA3-Enterprise. En este caso, para acceder a la red WiFi habrá que utilizar:",
+   "opciones": [
+    "Una contraseña de 64 bits.",
+    "Una contraseña de 128 bits.",
+    "Un servidor RADIUS o cualquier solución que permita EAP-TLS.",
+    "Una contraseña de 192 bits usando el algoritmo GMCP-256."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r03",
+   "tema": 14,
+   "enunciado": "En la base de datos MySQL de Profesores, nos piden que añadamos una tabla de los profesores para el curso de INGLES BASICO, que se llamará \"ProfesoresIngles\" con sus nombres y apellidos. Para ello, y tras acceder como root a MYSQL, ingresaremos el comando:",
+   "opciones": [
+    "CREATE TABLE ProfesoresIngles (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, nombre VARCHAR(30), apellido1 VARCHAR(30), apellido2 VARCHAR(30));",
+    "CREATE TABLE ProfesoresIngles KEY id, nombre, apellidos;",
+    "CREAR TABLA ProfesoresIngles KEY apellidos, nombre;",
+    "CREATE TABLE ProfesoresIngles (nombre, apellido);"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r04",
+   "tema": 24,
+   "enunciado": "Ha instalado el servicio Nagios para monitorizar los servidores y servicios en su sistema y quiere monitorizar, además, la URL de profesores (https://profesores.es), pero antes quiere comprobar que este servicio está configurado correctamente. Para ello, utilizará el comando:",
+   "opciones": [
+    "nagios –v /usr/local/nagios/etc/nagios.cfg",
+    "/mnt/nagios –check",
+    "systemctl status nagios",
+    "https://profesores.es nagios"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r05",
+   "tema": 31,
+   "enunciado": "Se ha instalado un servidor web con HTTPS y certificado SSL de servidor para proteger la conexión entre los clientes y el servidor, para lo cual la conexión usará TLS. Según las recomendaciones del Centro Criptológico Nacional, ¿cuál es la versión mínima y la recomendada a usar en TLS?",
+   "opciones": [
+    "La versión mínima aceptable es la 1.1 y se recomienda usar esa misma versión 1.1",
+    "La versión mínima aceptable es la 1.0 y se recomienda usar 1.1",
+    "La versión mínima aceptable es la 1.2 y se recomienda usar la 1.3",
+    "La versión mínima aceptable es la 1.1 y se recomienda usar la 1.3"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  }
+ ]
+}

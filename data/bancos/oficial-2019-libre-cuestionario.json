@@ -1,0 +1,1210 @@
+{
+ "titulo": "Examen 2019 · libre · Cuestionario",
+ "fuente": "oficial",
+ "examen": "TAI-L2019",
+ "parte": "cuestionario",
+ "tema": null,
+ "convocatoria": "2019 · libre",
+ "minutos": 96,
+ "origen": "OEP 2019",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/1925774/cues_1er_ejer_TAI-L_oep19_154AB89SD658.pdf/ac7ec9d6-3ac6-4457-6687-6ecf53aa158e",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/1925774/Plantilla_definitivaTAI-LEjercicionico2019_154AB89SD658.pdf/3a177074-d70b-2fda-e9ec-38cc0942944d",
+ "contextos": {},
+ "preguntas": [
+  {
+   "id": "p01",
+   "tema": 1,
+   "enunciado": "En relación a los derechos y deberes de los ciudadanos, el artículo 30 de la Constitución Española indica que:",
+   "opciones": [
+    "Mediante ley podrán ser de obligado cumplimiento los deberes de los ciudadanos en los casos de grave riesgo, catástrofe o calamidad pública.",
+    "Mediante Real Decreto podrán ser de obligado cumplimiento los deberes de los ciudadanos en los casos de grave riesgo, catástrofe o calamidad pública.",
+    "Mediante ley podrán eliminarse los deberes de los ciudadanos en los casos de grave riesgo, catástrofe o calamidad pública.",
+    "Mediante ley podrán regularse los deberes de los ciudadanos en los casos de grave riesgo, catástrofe o calamidad pública."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p02",
+   "tema": 1,
+   "enunciado": "Según el artículo 62 de la Constitución Española, ¿a quién corresponde expedir los decretos acordados en el Consejo de Ministros?",
+   "opciones": [
+    "Al Rey.",
+    "Al Presidente del Gobierno.",
+    "Al titular del Ministerio de la Presidencia.",
+    "Al Presidente de la Mesa del Congreso."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p03",
+   "tema": 2,
+   "enunciado": "Según el artículo 159 de la Constitución Española, el Tribunal Constitucional se compone de:",
+   "opciones": [
+    "Doce miembros nombrados por el Rey; de ellos, tres serán a propuesta del Congreso por mayoría de tres quintos de sus miembros.",
+    "Doce miembros nombrados por el Rey; de ellos, cuatro serán a propuesta del Congreso por mayoría de tres quintos de sus miembros.",
+    "Dieciséis miembros nombrados por el Rey; de ellos, cuatro serán a propuesta del Congreso por mayoría de tres quintos de sus miembros.",
+    "Dieciséis miembros nombrados por el Rey; de ellos, tres serán a propuesta del Congreso por mayoría de tres quintos de sus miembros."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p04",
+   "tema": 2,
+   "enunciado": "Según el artículo 68 de la Constitución Española, indique de cuántos diputados se compone el Congreso:",
+   "opciones": [
+    "De un mínimo de 250 y de un máximo de 350.",
+    "De un mínimo de 300 y de un máximo de 400.",
+    "De un mínimo de 300 y de un máximo de 350.",
+    "De un mínimo de 350 y de un máximo de 400."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p05",
+   "tema": 3,
+   "enunciado": "Según se expone en el artículo 113 de la Constitución Española, la moción de censura deberá ser propuesta por:",
+   "opciones": [
+    "Al menos la décima parte de los Diputados.",
+    "Al menos un veinte por ciento de los Diputados.",
+    "Al menos la décima parte de cada una de las Cámaras.",
+    "Al menos 20 Diputados y 20 Senadores."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p06",
+   "tema": 4,
+   "enunciado": "¿Cuál de los siguientes NO es uno de los 17 Objetivos de Desarrollo Sostenibles de la Agenda 2030?",
+   "opciones": [
+    "Hambre cero.",
+    "Educación de calidad.",
+    "Aguas residuales y saneamiento.",
+    "Trabajo decente y crecimiento económico."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p07",
+   "tema": 4,
+   "enunciado": "Según la Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno, ¿cuál de los siguientes NO es miembro de la Comisión de Transparencia y Buen Gobierno?",
+   "opciones": [
+    "Un Diputado.",
+    "Un representante de la Subsecretaria de Estado de Administraciones Públicas.",
+    "Un representante del Defensor del Pueblo.",
+    "Un representante de la Autoridad Independiente de Responsabilidad Fiscal."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p08",
+   "tema": 1,
+   "enunciado": "Indique cuál es el Título de la Constitución Española relativo a la Organización Territorial del Estado:",
+   "opciones": [
+    "Título IV.",
+    "Título VI.",
+    "Título VIII.",
+    "Título X."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p09",
+   "tema": 3,
+   "enunciado": "De acuerdo con el artículo 103.1 de la Constitución Española, la Administración Pública sirve con objetividad los intereses generales y actúa de acuerdo con los principios de:",
+   "opciones": [
+    "Eficacia, eficiencia, descentralización, desconcentración y cooperación, con sometimiento pleno a la Ley y al Derecho.",
+    "Eficacia, jerarquía, descentralización, desconcentración y coordinación, con sometimiento pleno a la ley y al Derecho.",
+    "Eficacia, jerarquía, descentralización, concentración y coordinación, con sometimiento pleno al ordenamiento jurídico.",
+    "Eficacia, jerarquía, descentralización, desconcentración y cooperación, con sometimiento pleno a la Ley y al Derecho."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p10",
+   "tema": 2,
+   "enunciado": "Según lo establecido en el artículo 82 de la Constitución Española, cuando se trate de refundir varios textos legales en uno solo, la delegación legislativa de las Cortes Generales en el Gobierno deberá otorgarse mediante:",
+   "opciones": [
+    "Una Ley de Bases.",
+    "Una Ley Orgánica.",
+    "Una Ley Ordinaria.",
+    "Un Decreto Legislativo."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p11",
+   "tema": 5,
+   "enunciado": "En el artículo 51 de la Ley Orgánica 3/2007, para la igualdad efectiva de mujeres y hombres, se definen criterios de actuación de las Administraciones públicas. ¿Cuál de los siguientes es uno de ellos?",
+   "opciones": [
+    "Facilitar la conciliación de la vida familiar y laboral, sin menoscabo de la formación profesional y acción social.",
+    "Fomentar la participación en igualdad, tanto en el acceso al empleo público como a lo largo de la carrera profesional.",
+    "Establecer medidas cautelares de protección frente al acoso sexual.",
+    "Establecer medidas efectivas para eliminar cualquier discriminación retributiva, directa o indirecta, por razón de sexo."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p12",
+   "tema": 5,
+   "enunciado": "Según el artículo 8 de la Ley Orgánica 3/2007, para la igualdad efectiva de mujeres y hombres, todo trato desfavorable a las mujeres relacionado con el embarazo o la maternidad constituye:",
+   "opciones": [
+    "Discriminación indirecta por razón de sexo.",
+    "Discriminación directa por razón de sexo.",
+    "Discriminación por asociación en razón de sexo.",
+    "Discriminación maternal por razón de sexo."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p13",
+   "tema": 5,
+   "enunciado": "Según el artículo 26 de la Ley 39/2006, de Promoción de la Autonomía Personal y Atención a las personas en situación de dependencia, señale la opción correcta en relación a la clasificación de los grados de dependencia:",
+   "opciones": [
+    "Grado I. Dependencia moderada: cuando la persona necesita ayuda para realizar varias actividades básicas de la vida diaria, al menos una vez al día o tiene necesidades de apoyo intermitente o limitado para su autonomía personal.",
+    "Grado II. Gran dependencia: cuando la persona necesita ayuda para realizar varias actividades básicas de la vida diaria una o dos veces al día, pero no quiere el apoyo permanente de un cuidador o tiene necesidades de apoyo extenso para su autonomía personal.",
+    "Grado III. Dependencia total: cuando la persona necesita ayuda para realizar varias actividades básicas de la vida diaria varias veces al día y, por su pérdida total de autonomía necesita el apoyo indispensable y continuo de otra persona o tiene necesidades de apoyo generalizado para su autonomía personal.",
+    "Grado IV. Dependencia máxima: cuando la persona necesita constantemente ayuda para realizar cualquier actividad básica de la vida diaria."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p14",
+   "tema": 6,
+   "enunciado": "En relación al DNIe v3.0, indique la respuesta correcta:",
+   "opciones": [
+    "Contiene dos certificados electrónicos de componentes: uno de Autenticación y otro de Firma.",
+    "La renovación de los certificados incluidos en la tarjeta del DNI electrónico puede realizarse en los Puntos de Actualización del DNIe y a través de Internet.",
+    "Actualmente, los certificados electrónicos de Autenticación y de Firma Electrónica que contiene tienen un plazo de validez de 24 meses.",
+    "El PIN debe tener un mínimo de 8 caracteres y un máximo de 12."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p15",
+   "tema": 6,
+   "enunciado": "La nueva Agenda Digital \"España Digital 2025\" recoge un conjunto de medidas, reformas e inversiones. ¿En cuántos ejes se articulan estas medidas?",
+   "opciones": [
+    "6",
+    "9",
+    "12",
+    "10"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p16",
+   "tema": 6,
+   "enunciado": "¿Qué algoritmos criptográficos soporta el DNIe v3.0?",
+   "opciones": [
+    "RSA, PGP y Blowfish.",
+    "RC5 y algoritmo de hash MD5.",
+    "ElGamal, algoritmo de hash MD5 y cifrado simétrico Triple DES.",
+    "RSA, algoritmo de hash SHA-256 y cifrado simétrico Triple DES y AES."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p17",
+   "tema": 7,
+   "enunciado": "Con respecto a la prescripción de las sanciones referidas a la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales, señale cuál de estas afirmaciones es correcta:",
+   "opciones": [
+    "Las sanciones por importe igual o inferior a 40.000 euros, prescriben en el plazo de diez meses.",
+    "Las sanciones por importe igual o inferior a 40.000 euros, prescriben en el plazo de un año.",
+    "Las sanciones por importe igual o inferior a 40.000 euros, prescriben en el plazo de dos años",
+    "Las sanciones por importe igual o inferior a 40.000 euros, prescriben en el plazo de tres años."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p18",
+   "tema": 7,
+   "enunciado": "Señale la respuesta correcta en relación al ámbito de aplicación material del Reglamento (UE) 2016/679 en lo que respecta al tratamiento de datos personales:",
+   "opciones": [
+    "Se aplica al tratamiento total o parcialmente automatizado de datos personales por parte de las autoridades competentes con fines de prevención, investigación, detección o enjuiciamiento de infracciones penales, o de ejecución de sanciones penales, incluida la de protección frente a amenazas a la seguridad pública y su prevención.",
+    "Se aplica al tratamiento total o parcialmente automatizado de datos personales, así como al tratamiento no automatizado de datos personales contenidos o destinados a ser incluidos en un fichero.",
+    "Se aplica al tratamiento de datos personales efectuado por una persona física en el ejercicio de actividades exclusivamente personales o domésticas.",
+    "Se aplica al tratamiento total de datos personales."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p19",
+   "tema": 8,
+   "enunciado": "Según el Esquema Nacional de Seguridad, ¿cuál de las siguientes medidas de seguridad afecta a la dimensión de Trazabilidad?",
+   "opciones": [
+    "Copias de seguridad.",
+    "Sellos de tiempo.",
+    "Cifrado.",
+    "Firma electrónica."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p20",
+   "tema": 8,
+   "enunciado": "Conforme al artículo 30 de la Ley 39/2015, de Procedimiento Administrativo Común de las Administraciones Públicas, el cómputo de plazos señalados en días, siempre que por Ley o en el Derecho de la Unión Europea no se exprese otro cómputo, se entienden como:",
+   "opciones": [
+    "Días hábiles, contados a partir del día siguiente a aquel que tenga la notificación o publicación del acto de que se trate.",
+    "Días hábiles, contados a partir del mismo día a aquel que tenga la notificación o publicación del acto de que se trate.",
+    "Días naturales, contados a partir del día siguiente a aquel que tenga la notificación o publicación del acto de que se trate.",
+    "Días naturales, contados a partir del mismo día a aquel que tenga la notificación o publicación del acto de que se trate."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p21",
+   "tema": 8,
+   "enunciado": "La guía de auditoría, que identifica los requisitos a cumplir en conformidad con el Esquema Nacional de Interoperabilidad (ENI), contiene un conjunto de controles apropiados para evaluar el cumplimiento de lo previsto en el ENI, agrupados en tres categorías:",
+   "opciones": [
+    "Marco organizativo, Marco operacional y Medidas de protección.",
+    "Marco organizativo, Marco semántico y Marco de seguridad.",
+    "Evaluación organizativa, Evaluación semántica y Evaluación temporal.",
+    "Marco organizativo, Marco operacional y Medidas técnicas."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p22",
+   "tema": 8,
+   "enunciado": "¿Cuál de las siguientes NO es una Norma Técnica de Interoperabilidad?",
+   "opciones": [
+    "Catálogo de estándares.",
+    "Modelo de Datos para el intercambio de asientos entre las Entidades Registrales.",
+    "Protocolo de gestión de recursos de la Administración.",
+    "Expediente Electrónico."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p23",
+   "tema": 8,
+   "enunciado": "Dentro de los servicios horizontales de Administración Electrónica, indique la afirmación correcta respecto a la funcionalidad principal del producto eVisor:",
+   "opciones": [
+    "Es un servicio que permite la creación de mapas interactivos para su presentación en portales web, cuadros de mando y otras aplicaciones sin necesidad de conocimientos de georreferenciación ni desarrollos adicionales.",
+    "Es una aplicación web de generación de copia auténtica en papel de documentos con firma electrónica y de justificantes de firma electrónica.",
+    "Es una herramienta basada en un Sistema de Información Territorial (GIS), que ofrece las funcionalidades necesarias para facilitar la gestión de la información de las Administraciones Públicas mediante la georreferenciación.",
+    "Es una herramienta que ofrece el Observatorio de Accesibilidad Web para realizar el servicio de diagnóstico en línea para las Administraciones Públicas."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p24",
+   "tema": 8,
+   "enunciado": "¿Qué solución común permite la gestión de la nómina de empleados públicos?",
+   "opciones": [
+    "SOROLLA2",
+    "BADARAL",
+    "NEDAES",
+    "NOMINAe"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p25",
+   "tema": 10,
+   "enunciado": "¿Qué es la arquitectura ARM?",
+   "opciones": [
+    "Una arquitectura avanzada para microprocesadores RISC.",
+    "Una arquitectura para computación en la nube, basada en el intercambio asíncrono de información entre nodos usando agentes autónomos.",
+    "Una arquitectura de almacenamiento de información basada en redes de comunicaciones de fibra óptica.",
+    "Una arquitectura de computación cuántica."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p26",
+   "tema": 11,
+   "enunciado": "Indique la velocidad máxima de transferencia del USB 4.0:",
+   "opciones": [
+    "Hasta 20 Gbps.",
+    "Hasta 30 Gbps.",
+    "Hasta 40 Gbps.",
+    "Hasta 50 Gbps."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p27",
+   "tema": 11,
+   "enunciado": "Indique cuál de las siguientes es una tecnología de interfaz hardware:",
+   "opciones": [
+    "Thunderbird",
+    "HIT",
+    "Thunderbolt",
+    "RISC"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p28",
+   "tema": 11,
+   "enunciado": "En relación con el almacenamiento, ¿qué es un SSD?",
+   "opciones": [
+    "Secure System Disk. Es un sistema de almacenamiento de datos cifrado AES 128.",
+    "Solid State Disk. Es un dispositivo de almacenamiento de datos que utiliza discos magnéticos.",
+    "Solid State Drive. Es un dispositivo de almacenamiento de datos que utiliza memoria no volátil.",
+    "Solid State Device. Es un dispositivo de almacenamiento de datos que utiliza memoria volátil."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p29",
+   "tema": 12,
+   "enunciado": "AV1 es un:",
+   "opciones": [
+    "Nuevo sistema de realidad aumentada.",
+    "Nuevo sistema operativo para la IoT.",
+    "Nuevo códec de vídeo.",
+    "Nuevo estándar de seguridad para WiFi 6."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p30",
+   "tema": 12,
+   "enunciado": "Si un árbol binario lo recorremos siguiendo el orden siguiente: raíz, subárbol izquierdo, subárbol derecho, ¿cuál de los siguientes tipos de recorrido estamos utilizando?",
+   "opciones": [
+    "Preorden",
+    "Inorden",
+    "Postorden",
+    "Reorden"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p31",
+   "tema": 13,
+   "enunciado": "En una distribución Linux, ¿qué directorio contiene, entre otros, los ficheros de configuración tanto a nivel de componentes del sistema operativo en sí, como de los programas y aplicaciones instaladas a posteriori?",
+   "opciones": [
+    "/root",
+    "/bin",
+    "/dev",
+    "/etc"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p32",
+   "tema": 24,
+   "enunciado": "En los sistemas Linux, si se ejecuta el comando chmod 640 para modificar los permisos de un archivo, ¿qué permisos estoy asignando?",
+   "opciones": [
+    "Acceso de lectura, escritura y ejecución al propietario, acceso de lectura al grupo y ningún acceso al resto de usuarios.",
+    "Acceso de lectura, escritura y ejecución al propietario, acceso de lectura y escritura al grupo, y acceso de ejecución al resto de usuarios.",
+    "Acceso de lectura y escritura al propietario, acceso de lectura al grupo, y ningún acceso al resto de usuarios.",
+    "Acceso de lectura y escritura al propietario, acceso de ejecución al grupo, y ningún acceso al resto de usuarios."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p33",
+   "tema": 14,
+   "enunciado": "¿Cuál de los siguientes NO es un ORM (Mapeador Objeto-Relacional)?",
+   "opciones": [
+    "ADO.NET Entity Framework",
+    "Ruby Hibernation",
+    "NHibernate",
+    "Hibernate"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p34",
+   "tema": 14,
+   "enunciado": "¿Cuál de las siguientes opciones NO se corresponde con una de las 12 Reglas de Codd?",
+   "opciones": [
+    "Regla de la no subversión. Si el sistema ofrece una interfaz de acceso a bajo nivel, dicho acceso no se podrá usar para subvertir el sistema (por ejemplo para sortear restricciones de integridad o seguridad).",
+    "Tratamiento sistemático de valores nulos. El sistema debe permitir que haya campos nulos. Se debe disponer de una representación de valores desconocidos y no aplicables diferente de los valores normales.",
+    "Dependencia de la distribución. Que la base de datos se almacene o gestione de forma distribuida en varios servidores afecta al uso de la misma y a la programación de las aplicaciones de usuario.",
+    "Catálogo dinámico en línea basado en el modelo relacional. El sistema debe soportar un catálogo en línea, el catálogo relacional, que da acceso a la estructura de la base de datos y que debe ser accesible a los usuarios autorizados."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p35",
+   "tema": 14,
+   "enunciado": "Indique la definición correcta en referencia a los diagramas de flujo de datos de Métrica v3:",
+   "opciones": [
+    "Almacén de datos: representa la información en movimiento utilizada por el sistema.",
+    "Proceso de control: representa procesos que coordinan y sincronizan las actividades de otros procesos del diagrama de flujo de datos.",
+    "Flujo de control: representa el flujo entre dos procesos de control.",
+    "Flujo de datos: representa el movimiento de los datos, y establece la comunicación entre dos almacenes."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p36",
+   "tema": 15,
+   "enunciado": "Una tabla se encuentra en Tercera Forma Normal (3FN) si:",
+   "opciones": [
+    "Está en 2FN y todo atributo que no forma parte de una clave candidata depende de ella al completo.",
+    "Está en 2FN y no existe ninguna dependencia transitiva de atributos no principales respecto de las claves.",
+    "Está en 2FN y no existen relaciones de dependencia de reunión no triviales que no se generen desde las claves.",
+    "Está en 2FN y los atributos que no forman parte de ninguna clave dependen de la clave principal."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p37",
+   "tema": 15,
+   "enunciado": "Según Métrica v3, en la teoría de la normalización se define el término de Dependencia Funcional como:",
+   "opciones": [
+    "Un atributo Y depende funcionalmente respecto de otro X, si depende funcionalmente de él en su totalidad, es decir, no depende de ninguno de los posibles atributos que formen parte de X.",
+    "Un atributo Y se dice que depende funcionalmente de otro X si, y sólo si, a cada valor de X le corresponde un único valor de Y.",
+    "Un atributo depende funcionalmente de otro si, y sólo si, depende de él a través de otro atributo.",
+    "Un atributo X sólo puede tomar un único valor de dominio simple."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p38",
+   "tema": 16,
+   "enunciado": "En el lenguaje C++, si hablamos de un bucle con estructura do…while:",
+   "opciones": [
+    "Sólo se ejecuta si la condición del bucle es verdadera.",
+    "Evalúa la condición del bucle y después se ejecuta al menos una vez.",
+    "Se ejecuta una vez antes de evaluar la condición del bucle.",
+    "Se ejecuta una sola vez siempre y cuando sea verdadera la condición del bucle."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p39",
+   "tema": 19,
+   "enunciado": "Señale la respuesta correcta en relación a las tecnologías y herramientas de desarrollo front-end:",
+   "opciones": [
+    "Sass, Less y Stylus, son preprocesadores de CSS.",
+    "Postman es una herramienta que sirve para probar la parte de front-end, no permitiendo validar los servicios REST.",
+    "Node js fue construido con el motor de java jre 1.9",
+    "Bootstrap es una herramienta de desarrollo que permite realizar test de los servicios REST, aislando al programador del front-end."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p40",
+   "tema": 19,
+   "enunciado": "En Java, una clase declarada como 'abstract':",
+   "opciones": [
+    "Puede no estar implementada o estarlo de manera incompleta.",
+    "Puede ser instanciada.",
+    "No puede ser extendida por subclases.",
+    "No existe el modificador abstract en Java."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p41",
+   "tema": 19,
+   "enunciado": "En la declaración de una clase en java, ¿mediante qué cláusula es posible definir un listado de uno o varios interfaces para la clase en cuestión?",
+   "opciones": [
+    "Mediante la cláusula 'interfaces'.",
+    "Mediante la cláusula 'declares'.",
+    "Mediante la cláusula 'implements'.",
+    "En Java no es posible declarar una clase con más de un interface."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p42",
+   "tema": 17,
+   "enunciado": "Teniendo una base de datos relacional, con una tabla \"Empleados\" con campos {Id, Nombre, Puesto, Salario,....}, indique cuál sería una forma válida de comenzar la creación de un Trigger en ANSI SQL, si lo que se quiere validar es un cambio de valor del campo \"Salario\":",
+   "opciones": [
+    "CREATE TRIGGER Validar_salario BEFORE UPDATE OF Salario OF TABLE Empleados",
+    "CREATE NEW TRIGGER BEFORE UPDATE OF Salario ON Empleados",
+    "CREATE TRIGGER Validar_salario IN Empleados BEFORE UPDATE OF Salario",
+    "CREATE TRIGGER Validar_salario BEFORE UPDATE OF Salario ON Empleados"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p43",
+   "tema": 17,
+   "enunciado": "Si utilizamos el gestor de base de datos Oracle (v.10g), ¿qué podríamos hacer si dentro de una transacción de la base de datos se quiere establecer un punto de recuperación?",
+   "opciones": [
+    "Utilizar la sentencia SAVEPOINT y así definir un punto de salvaguarda dentro de una transacción.",
+    "Utilizar la sentencia ROLLBACK y así definir un punto de salvaguarda dentro de una transacción",
+    "Usar los comandos GRANT para dar permisos adecuados de administrador DBA sobre las tablas.",
+    "Utilizar la sentencia RECOVERPOINT y así definir un punto de salvaguarda dentro de una transacción."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p44",
+   "tema": 18,
+   "enunciado": "Respecto a los patrones de diseño GoF (Gang of Four), indique cuál de las siguientes definiciones se corresponde con el patrón Decorator:",
+   "opciones": [
+    "Proporciona el poder agregar una nueva funcionalidad a un objeto dinámicamente.",
+    "Proporciona una interfaz unificada para un conjunto de interfaces de un subsistema.",
+    "Proporciona un sustituto o representante de otro objeto para controlar el acceso a éste.",
+    "Proporciona un modo de acceder secuencialmente a los elementos de un objeto agregado sin exponer su representación interna."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p45",
+   "tema": 18,
+   "enunciado": "Cuál de las siguientes afirmaciones NO se corresponde con el lenguaje UML:",
+   "opciones": [
+    "Una clase se representa mediante un rectángulo con tres secciones, la superior contiene el identificador o nombre de la clase, la central contiene los atributos, y la inferior, las operaciones o métodos que tienen asociados.",
+    "Las asociaciones son los elementos que representan las relaciones que existen entre los elementos estructurales que se utilizan en los modelos.",
+    "Un tipo de asociación entre elementos estructurales es la dispersión.",
+    "La agregación es un tipo de asociación entre elementos estructurales que representa una clase que es parte de otra."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p46",
+   "tema": 19,
+   "enunciado": "En JAVA, siendo x=6 e y=3 (ambas variables de tipo int), la operación x^y da como resultado:",
+   "opciones": [
+    "216",
+    "63",
+    "3",
+    "5"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p47",
+   "tema": 19,
+   "enunciado": "En el entorno de programación .Net, indique que es un NuGet:",
+   "opciones": [
+    "Una biblioteca de clases base.",
+    "Un administrador de paquetes.",
+    "Una implementación de .Net.",
+    "Un entorno de ejecución."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p48",
+   "tema": 19,
+   "enunciado": "Indique cuál de las siguientes opciones corresponde a una API de Java para el procesamiento de documentos en formato XML.",
+   "opciones": [
+    "JNA",
+    "StAX",
+    "JNI",
+    "JPaX"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p49",
+   "tema": 20,
+   "enunciado": "¿Cuál NO es una característica de los servicios REST?",
+   "opciones": [
+    "Utiliza métodos del protocolo HTTP de forma explícita.",
+    "La solicitud no requiere que el servidor recupere información de estado de la aplicación.",
+    "Son admitidos los formatos XML y JSON para la transmisión o recepción de datos.",
+    "Usa la especificación UDDI para publicar y encontrar información sobre los servicios web expuestos."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p50",
+   "tema": 16,
+   "enunciado": "Indique, de entre las siguientes afirmaciones, cuál es relativa a Ruby on Rails (RoR):",
+   "opciones": [
+    "Es un lenguaje de programación creado por G. Ruby.",
+    "Es un framework de control de versiones escrito en el lenguaje Ruby.",
+    "Es un framework de desarrollo de aplicaciones web basado en el patrón MVC.",
+    "Es un servicio de .NET."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p51",
+   "tema": 16,
+   "enunciado": "En una sentencia \"if\" en el lenguaje de programación Python, ¿cómo se identifica el bloque de código a ejecutar si la condición se cumple?",
+   "opciones": [
+    "El bloque debe estar delimitado por llaves {}",
+    "El bloque debe estar delimitado por corchetes []",
+    "El bloque debe estar delimitado por corchetes ()",
+    "Cada línea del bloque debe estar precedida por el mismo número de espacios en blanco, con la misma sangría."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p52",
+   "tema": 21,
+   "enunciado": "En el lenguaje XML, ¿cuál de las siguientes sentencias sería correcta para añadir comentarios?",
+   "opciones": [
+    "<-- Aquí va el comentario /-->",
+    "< Aquí va el comentario !>",
+    "<!-- Aquí va el comentario -->",
+    "<--! Aquí va el comentario -->"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p53",
+   "tema": 22,
+   "enunciado": "En relación con el Real Decreto 1112/2018, sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público, indique qué respuesta es INCORRECTA:",
+   "opciones": [
+    "Las entidades obligadas deberán ofrecer un mecanismo de comunicación para presentar sugerencias y quejas.",
+    "La primera revisión de accesibilidad deberá haberse realizado en el caso de los sitios web antes de dos años desde la entrada en vigor de este real decreto.",
+    "La primera revisión de accesibilidad deberá haberse realizado en el caso de las aplicaciones móviles, antes de dos años desde la entrada en vigor de este real decreto.",
+    "La entidad obligada deberá responder a la persona interesada sobre las solicitudes de información accesible y quejas, en el plazo de veinte días hábiles."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p54",
+   "tema": 22,
+   "enunciado": "Según las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.1, ¿cuál es el objetivo de que un contenido sea Distinguible?",
+   "opciones": [
+    "Crear contenido que pueda presentarse de diferentes formas (por ejemplo, con una disposición más simple) sin perder información o estructura.",
+    "Facilitar a los usuarios ver y oír el contenido, incluyendo la separación entre el primer plano y el fondo.",
+    "Proporcionar alternativas textuales para todo contenido no textual de modo que se pueda convertir a otros formatos que las personas necesiten, tales como textos ampliados, braille, voz, símbolos o en un lenguaje más simple.",
+    "Proporcionar alternativas para los medios tempodependientes."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p55",
+   "tema": 23,
+   "enunciado": "Según Métrica v3, ¿qué tipo de pruebas consiste en determinar que los tiempos de respuesta están dentro de los intervalos establecidos en las especificaciones del sistema?",
+   "opciones": [
+    "Pruebas de respuesta.",
+    "Pruebas de sobrecarga.",
+    "Pruebas de rendimiento.",
+    "Pruebas de tiempo."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p56",
+   "tema": 23,
+   "enunciado": "En el software para control de versiones GIT, hacer un 'commit' es:",
+   "opciones": [
+    "La acción de introducir comentarios iterativos entre versiones.",
+    "La acción de establecer un compromiso de uso (commitment) entre ambas partes.",
+    "La acción de descargar la rama de trabajo del repositorio central.",
+    "La acción de almacenar una nueva instantánea (snapshot) del estado del proyecto en el historial de GIT."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p57",
+   "tema": 23,
+   "enunciado": "Señale cuál de las siguientes herramientas de software libre se utiliza para realizar pruebas de carga y de estrés, permitiendo simular escenarios de concurrencia de usuarios:",
+   "opciones": [
+    "Cactus",
+    "Mockito",
+    "JMeter",
+    "Foglight"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p58",
+   "tema": 24,
+   "enunciado": "En Linux, ¿cuál de las siguientes opciones utilizaría para conocer qué puertos tiene abiertos un servidor?",
+   "opciones": [
+    "ntpq",
+    "ntport",
+    "nmap",
+    "traceroute"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p59",
+   "tema": 24,
+   "enunciado": "En sistemas Debian, ¿cuál de los siguientes comandos permitiría descargar la información de los paquetes desde todas las fuentes configuradas?",
+   "opciones": [
+    "apt update",
+    "apt upgrade",
+    "apt full-upgrade",
+    "apt list"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p60",
+   "tema": 25,
+   "enunciado": "En el contexto de la administración del almacenamiento, ¿qué es el “Thin Provisioning”?",
+   "opciones": [
+    "Es un mecanismo de despliegue de discos en red para clientes ligeros.",
+    "Es método de virtualización de almacenamiento que permite que el espacio se asigne de forma justa y puntual.",
+    "Es una tecnología que permite agregar discos físicos en caliente a las cabinas de la SAN de forma ligera.",
+    "Es un método por el que se asigna todo el espacio virtualizado disponible y se va a reduciendo (shrinking) a medida que el cliente lo descarta."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p61",
+   "tema": 25,
+   "enunciado": "En relación a los sistemas RAID, indique qué configuración permite acceso independiente con paridad distribuida:",
+   "opciones": [
+    "RAID 1",
+    "RAID 3",
+    "RAID 4",
+    "RAID 5"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p62",
+   "tema": 26,
+   "enunciado": "Considerando que tanto en el punto de origen como en el punto de destino disponemos de un ordenador de usuario con un cliente de correo electrónico instalado y un servidor de correo electrónico, ¿qué papel juegan los protocolos SMTP, POP3 e IMAP durante el envío de uno de estos correos electrónicos?",
+   "opciones": [
+    "SMTP se usa desde el ordenador del usuario de origen al servidor de correo electrónico en el origen. POP3 o IMAP se usan entre el servidor de correo en el origen y el servidor de correo en el destino. SMTP se usa de nuevo entre el servidor de correo de destino y el destinatario, para enviarle el mensaje cuando se conecte.",
+    "POP3 se usa desde el ordenador del usuario de origen al servidor de correo electrónico en el origen. IMAP se usa entre el servidor de correo en el origen y el servidor de correo en el destino. SMTP se usa entre el servidor de correo de destino y el destinatario, para enviarle el mensaje cuando se conecte.",
+    "SMTP se usa desde el ordenador del usuario de origen al servidor de correo electrónico en el origen, así como desde el servidor de origen al servidor de destino. POP3 o IMAP se usan desde el servidor de correo en el destino hasta el ordenador del destinatario, para enviarle el mensaje cuando se conecte.",
+    "POP3 o IMAP se usan desde el ordenador del usuario de origen al servidor de correo electrónico en el origen, así como desde el servidor de origen al servidor de destino. SMTP se usa desde el servidor de correo en el destino hasta el ordenador del destinatario, para enviarle el mensaje cuando se conecte."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p63",
+   "tema": 26,
+   "enunciado": "En las arquitecturas de microservicios las funcionalidades se implementan mediante la composición de distintos microservicios. Existen dos estrategias para gestionar esta composición, que son:",
+   "opciones": [
+    "Coreografía y orquestación.",
+    "Coreografía y coordinación.",
+    "Coordinación y orquestación.",
+    "Gestión y orquestación."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p64",
+   "tema": 26,
+   "enunciado": "¿Qué comando se debe ejecutar para mostrar un listado de los servicios en ejecución en un ordenador con sistema operativo Windows 10?",
+   "opciones": [
+    "Net view services",
+    "Net start process",
+    "Net start",
+    "Net start all"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p65",
+   "tema": 27,
+   "enunciado": "¿Cuál es la última versión del protocolo de administración de red SNMP?",
+   "opciones": [
+    "SNMP v2",
+    "SNMP v3",
+    "SNMP v4",
+    "SNMP v5"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p66",
+   "tema": 28,
+   "enunciado": "¿Indique la afirmación FALSA con respecto al proceso de firma digital?",
+   "opciones": [
+    "La aplicación o dispositivo digital utilizados para la firma digital crea un resumen del documento a firmar utilizando una función hash.",
+    "La aplicación cifra el documento a firmar asegurando la confidencialidad.",
+    "La aplicación cifra el resumen del documento a firmar obteniendo a su vez otro documento electrónico que corresponde con la firma electrónica.",
+    "Para cifrar el resumen, la aplicación utiliza la clave privada."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p67",
+   "tema": 28,
+   "enunciado": "Indique cuál de las siguientes opciones se corresponde con el concepto de ITIL:",
+   "opciones": [
+    "Su origen proviene de la metodología Kaizen y ofrece a las organizaciones un instrumento útil para la sistematización de las actividades que dan soporte al ciclo de vida del software.",
+    "Es una librería java, referida a la seguridad, que forma parte de la plataforma de Jakarta EE.",
+    "Es una colección de mejores prácticas de gestión de servicios de tecnologías de la información.",
+    "Es una metodología de análisis y gestión de riesgos de los sistemas de información."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p68",
+   "tema": 31,
+   "enunciado": "¿Cuál es la última versión estable del protocolo TLS?",
+   "opciones": [
+    "TLS 1.2",
+    "TLS 1.3",
+    "TLS 1.4",
+    "SSL 3.0"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p69",
+   "tema": 28,
+   "enunciado": "Señale cuál de los siguientes NO es un algoritmo asimétrico:",
+   "opciones": [
+    "RSA",
+    "GOST",
+    "ECDSA",
+    "ElGamal"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p70",
+   "tema": 28,
+   "enunciado": "Sobre redes inalámbricas, indique cuál de las siguientes afirmaciones es INCORRECTA:",
+   "opciones": [
+    "La frecuencia de 2,4 GHz presenta interferencias con algunas versiones de Bluetooth.",
+    "La seguridad del protocolo WEP es superior a la del protocolo WPA2.",
+    "El protocolo WPA3 surge, entre otros, a raiz del ataque KRACK, mejorando la modalidad de cifrado WPA2-PSK (AES).",
+    "La frecuencia de 5 GHz tiene menor alcance que la de 2,4 GHz."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p71",
+   "tema": 29,
+   "enunciado": "El estándar comercializado con el nombre de Wi-Fi 6 se corresponde con el estándar de IEEE:",
+   "opciones": [
+    "802.11ax",
+    "802.11ac",
+    "802.11ac wave 2",
+    "802.11az"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p72",
+   "tema": 30,
+   "enunciado": "¿Cuál es el prefijo para las direcciones multicast en el protocolo IPv6?",
+   "opciones": [
+    "FF80::/10",
+    "FF00::/8",
+    "FE00::/8",
+    "FE80::/10"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p73",
+   "tema": 30,
+   "enunciado": "De los siguientes protocolos de enrutamiento, ¿cuál utiliza un algoritmo de vector de distancia?",
+   "opciones": [
+    "OSPF",
+    "IGRP",
+    "IS-IS",
+    "OLSR"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p74",
+   "tema": 31,
+   "enunciado": "En el protocolo HTTP, el código de error que indica que el servicio no está disponible es el:",
+   "opciones": [
+    "500",
+    "501",
+    "502",
+    "503"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p75",
+   "tema": 31,
+   "enunciado": "¿Cuál de los siguientes registros DNS proporciona información sobre las características básicas del dominio y de la zona en la que se encuentra?",
+   "opciones": [
+    "AAAA",
+    "PTR",
+    "MX",
+    "SOA"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p76",
+   "tema": 32,
+   "enunciado": "¿Qué modalidad de gestión de dispositivos móviles se basa en permitir al usuario usar su propio dispositivo personal para tareas profesionales o educativas?",
+   "opciones": [
+    "COPE",
+    "BYOD",
+    "COBO",
+    "CYOD"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p77",
+   "tema": 32,
+   "enunciado": "La herramienta del CCN-CERT que permite realizar análisis estático de código dañino a través de múltiples motores antivirus y antimalware para plataformas Windows y Linux es:",
+   "opciones": [
+    "MARIA",
+    "PILAR",
+    "CLARA",
+    "REYES"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p78",
+   "tema": 32,
+   "enunciado": "En relación con las VPN de nivel de enlace, ¿cuál de los siguientes protocolos NO se utiliza para la implementación de dicha VPN?",
+   "opciones": [
+    "PPTP (Point-to-Point Tunneling Protocol).",
+    "L2F (Layer Two Forwarding).",
+    "L2TP (Layer Two Tunneling Protocol).",
+    "P2TP (Point two Tunneling Protocol)."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p79",
+   "tema": 33,
+   "enunciado": "¿Qué es una red Scatternet?",
+   "opciones": [
+    "Es un tipo de red MAN (Metropolitan area network).",
+    "Es una red de dispositivos WIFI en LAN (Local area network).",
+    "Es un grupo de Piconets.",
+    "Es la red utilizada para interconectar CubeSATs."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p80",
+   "tema": 33,
+   "enunciado": "En relación a TCP y UDP indique cuál de las siguientes características NO es correcta:",
+   "opciones": [
+    "TCP es fiable.",
+    "UDP obliga al nivel de red a verificar que el envío es correcto.",
+    "TCP trabaja con un flujo de bytes.",
+    "UDP es un protocolo sin conexión."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "pr01",
+   "tema": 10,
+   "enunciado": "La arquitectura de ordenadores Harvard:",
+   "opciones": [
+    "Tiene un único espacio de memoria para datos e instrucciones.",
+    "Tiene dos espacios de memoria separados, uno para datos y otro para instrucciones.",
+    "Es un tipo de arquitectura Von Neumann.",
+    "Tiene tres espacios de memoria separados, uno para datos, otro para instrucciones y otro para la memoria no volátil."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr02",
+   "tema": 7,
+   "enunciado": "¿Cuál es la funcionalidad de la herramienta \"FACILITA\"?",
+   "opciones": [
+    "Una herramienta de la Agencia Española de Protección de Datos para el tratamiento de datos personales de escaso riesgo.",
+    "Una herramienta ofrecida por la Administración Pública que facilita la adecuación del plan de actuación para ayudar a las personas con movilidad reducida.",
+    "Una aplicación de código abierto que ofrece la Administración General del Estado para que facilitar la visualización de contenidos multimedia.",
+    "Una aplicación para móviles que ofrece la Agencia Estatal de Administración Tributaria para generar y presentar la declaración de la renta."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr03",
+   "tema": 17,
+   "enunciado": "En JAVA podemos utilizar el interface PreparedStatement para:",
+   "opciones": [
+    "Inicializar las variables locales del programa con valores preestablecidos.",
+    "Preparar los valores que introduciremos en un archivo de texto externo al programa.",
+    "Permitir ejecutar muchas veces una sentencia SQL.",
+    "Administrar el consumo de memoria que utilizan los objetos creados."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr04",
+   "tema": 28,
+   "enunciado": "Para valorar el nivel de disponibilidad y seguridad de un CPD, el estándar ANSI EIA/TIA 942 estableció:",
+   "opciones": [
+    "Cuatro niveles, siendo TIER I el de mayor disponibilidad y TIER IV el de menor.",
+    "Tres niveles, siendo TIER I el de mayor disponibilidad y TIER III el de menor.",
+    "Tres niveles, siendo TIER I el de menor disponibilidad y TIER III el de mayor.",
+    "Cuatro niveles, siendo TIER I el de menor disponibilidad y TIER IV el de mayor."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr05",
+   "tema": 16,
+   "enunciado": "Indique cuál de las siguientes característica de JavaScript es INCORRECTA:",
+   "opciones": [
+    "Es imperativo y dinámico.",
+    "Proporciona funciones de segunda clase.",
+    "Es débilmente tipado.",
+    "Está basado en prototipos."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  }
+ ]
+}

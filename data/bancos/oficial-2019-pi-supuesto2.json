@@ -1,0 +1,245 @@
+{
+ "titulo": "Examen 2019 · promoción interna · Supuesto práctico II",
+ "fuente": "oficial",
+ "examen": "TAI-PI2019",
+ "parte": "supuesto2",
+ "tema": null,
+ "convocatoria": "2019 · promoción interna",
+ "minutos": 14,
+ "origen": "OEP 2019",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/1925806/cues_1er_ejer_TAI-P_oep19_154AB89SD658.pdf/69f68075-790a-96eb-fe71-68758f73f4de",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/1925806/Plantilla_definitivaTAI-PEjercicionico2019_154AB89SD658.pdf/7d5f23e1-b935-d873-bd2a-61cd84b65602",
+ "contextos": {
+  "s2": "Debido a la pandemia ocasionada por el SARS-CoV-2, más conocido como Coronavirus, las Administraciones Publicas se han visto\nobligadas a impulsar el teletrabajo y a cambiar su estrategia en el ámbito de las TIC.\nEn este sentido ha sido asignado en la integración de dos organismos en su departamento, los cuales no tienen capacidad para asumir\nlas nuevas demandas de servicios y conexiones.\nUno de los centros es la Demarcación de Carreteras de Madrid (DCM) y el otro es la Confederación Hidrográfica del Tajo (CHT).\nLa DCM tiene máquinas físicas RedHat Enterprise Linux (RHEL). Su estructura consiste en tres áreas y en cada una de ellas trabajan 20\npersonas.\nLa CHT tiene máquinas físicas Solaris. Su estructura consiste en 5 áreas y en cada una de ellas trabajan 50 personas.\nAmbos organismos tienen bastantes máquinas Windows 10, además de equipamiento específico, para el desarrollo de sus actividades,\nque tendrá que ser trasladado a su CPD.\nEs crucial la salvaguarda de los datos, la pérdida o inconsistencia de los mismos durante el proceso es algo inasumible.\nSalvo que el enunciado de la propia pregunta diga lo contrario, debe suponer que dispone de los permisos adecuados, tanto a nivel de\nsistema operativo como de conexión de red."
+ },
+ "preguntas": [
+  {
+   "id": "s201",
+   "tema": 30,
+   "enunciado": "El equipo de comunicaciones le asigna la red 10.0.4.0 con la máscara 255.255.255.128 para el direccionamiento de la DCM. ¿Cuantos bits tiene la máscara de red?",
+   "opciones": [
+    "24",
+    "26",
+    "25",
+    "23"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s202",
+   "tema": null,
+   "enunciado": "También le preguntan a qué Clase pertenece la red asignada (10.0.4.0).",
+   "opciones": [
+    "Clase A.",
+    "Clase B.",
+    "Clase C.",
+    "Clase D."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s203",
+   "tema": 30,
+   "enunciado": "Para la CHT los compañeros de redes le asignan el direccionamiento 10.0.0.0/21. ¿Cuál es el número máximo de hosts disponible?",
+   "opciones": [
+    "1024",
+    "2046",
+    "32",
+    "256"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s204",
+   "tema": 24,
+   "enunciado": "La DCM no es capaz de especificarle la versión de RHEL que tienen sus máquinas, por lo que debe decirles el comando a ejecutar. ¿Cuál de los siguientes sería?",
+   "opciones": [
+    "rm -f /etc/redhat-release",
+    "cat /etc/redhat-version",
+    "cat /etc/redhat-release",
+    "mv /etc/redhat-release"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s205",
+   "tema": 14,
+   "enunciado": "Una pieza crucial en cualquier sistema informático son las BBDD. Le han informado que tanto la DCM como la CHT utilizan Oracle, pero no le han dicho la versión. ¿Qué consulta podría hacer en la base de datos para conocer esta información?",
+   "opciones": [
+    "SELECT * FROM V$VERSION",
+    "SELECT * FROM V$VERSIONADO",
+    "SELECT * FROM V$VERSIONDB",
+    "SELECT * FROM V$VERSIONTABLE"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s206",
+   "tema": 25,
+   "enunciado": "Relacionado con los sistemas de backup, le preguntan por una técnica que mejore la eficiencia del almacenamiento y reduzca su coste medio. ¿Cuál propondría?",
+   "opciones": [
+    "RTO",
+    "Deduplicación",
+    "RPO",
+    "Vaulting"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s207",
+   "tema": 11,
+   "enunciado": "Desde su unidad también se está valorando el uso de RAID 10, ¿cuántos discos duros son necesarios para crearlo?",
+   "opciones": [
+    "2 discos duros.",
+    "3 discos duros.",
+    "Al menos 4 discos duros.",
+    "Es indiferente."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s208",
+   "tema": 25,
+   "enunciado": "Se está hablando sobre el uso de máquinas virtuales, y le piden indicar cuál de los siguientes NO es un software de virtualización.",
+   "opciones": [
+    "Vmware",
+    "VirtualBox",
+    "Hyper-V",
+    "LVM"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s209",
+   "tema": 26,
+   "enunciado": "En su unidad se ha decidido utilizar Docker. ¿Cuál de los siguientes comandos deberá utilizar para mostrar la información que tiene todo el sistema sobre la instalación de Docker (nº de contenedores, las imágenes…)?",
+   "opciones": [
+    "docker ps",
+    "docker info",
+    "docker inspect",
+    "docker systeminfo"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s210",
+   "tema": 14,
+   "enunciado": "En una reunión se habla del Directorio Activo. Defina en qué consiste este concepto.",
+   "opciones": [
+    "Es el usuario que está logado actualmente en el sistema.",
+    "Es el conjunto de políticas de grupo que se aplican a los usuarios de una red Novell.",
+    "Es un almacén de datos estructurado que permite almacenar información sobre los objetos o recursos de una red para facilitar su localización y administración.",
+    "Es un almacén de datos que contiene información de los programas software instalados en la red por la organización."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s211",
+   "tema": 24,
+   "enunciado": "Le preguntan sobre las cuentas de usuario que pertenecen al grupo Administradores locales de una máquina, ¿qué comando de Windows debería utilizar?",
+   "opciones": [
+    "net local administradores",
+    "net localgroup admin",
+    "net local admin",
+    "net localgroup administradores"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s212",
+   "tema": 25,
+   "enunciado": "Debido al elevado volumen de peticiones e incidencias que se esperan durante la integración, se está valorando implantar un sistema de gestión específico.El único requerimiento que tienen es que sea Open Source. ¿Cuál propondría?",
+   "opciones": [
+    "Remedy",
+    "Ticket2.0",
+    "Nagios",
+    "osTicket"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r01",
+   "tema": 32,
+   "enunciado": "Con el objetivo de recabar información sobre los equipos Windows, disponen de un software de inventariado que necesita acceso por el puerto 4433 (TCP) en los equipos destino. ¿Qué comando utilizaría en estos últimos para añadir la regla al firewall?",
+   "opciones": [
+    "netsh advfirewall firewall create rule name= \"Inventariado\" dir=in action=allow protocol=TCP localport=4433",
+    "netsh advfirewall firewall add rule name= \"Inventariado\" dir=in action=permit protocol=TCP localport=4433",
+    "netsh advfirewall firewall add rule name= \"Inventariado\" dir=in action=allow protocol=TCP localport=4433",
+    "netsh advfirewall firewall new rule name= \"Inventariado\" dir=in action=allow protocol=TCP localport=4433"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r02",
+   "tema": 25,
+   "enunciado": "Durante el proceso de traslado, uno de los equipos Windows más importantes de la DCM da problemas de corrupción de datos y han decidido restaurar la copia de seguridad. Le indican que el dispositivo está cifrado. ¿Qué necesita que le proporcionen para poder restaurar la copia?",
+   "opciones": [
+    "El certificado digital.",
+    "La clave de BitLocker.",
+    "La clave privada.",
+    "La clave de sesión."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r03",
+   "tema": 32,
+   "enunciado": "Muchas de las comunicaciones se van a realizar mediante conexiones ssh y tiene que solicitar las reglas de firewall al equipo de comunicaciones. ¿Cuál es el puerto que debe solicitar?",
+   "opciones": [
+    "21",
+    "63",
+    "69",
+    "22"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  }
+ ]
+}

@@ -1,0 +1,791 @@
+{
+ "titulo": "Examen 2025 · promoción interna · Cuestionario",
+ "fuente": "oficial",
+ "examen": "TAI-PI2025",
+ "parte": "cuestionario",
+ "tema": null,
+ "convocatoria": "2025 · promoción interna",
+ "minutos": 60,
+ "origen": "Convocatoria 2025, modelo A",
+ "url_cuestionario": "https://sede.inap.gob.es/sites/sede/files/public/2026-05/Cuestionario%20TAI-P-ModeloA.pdf",
+ "url_plantilla": "https://sede.inap.gob.es/sites/sede/files/public/2026-09/Plantilla%20respuestas%20Def%20TAI-P-A.pdf",
+ "contextos": {},
+ "preguntas": [
+  {
+   "id": "p01",
+   "tema": 6,
+   "enunciado": "¿Qué información está almacenada en la zona de seguridad del DNI electrónico, accesible en lectura por el ciudadano en los Puntos de Actualización del DNIe?",
+   "opciones": [
+    "El certificado de Firma (No Repudio).",
+    "El certificado de Autenticación (Digital Signature).",
+    "El certificado CA intermedia emisora.",
+    "La imagen de la fotografía."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p02",
+   "tema": 7,
+   "enunciado": "De conformidad con el artículo 96 de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, ¿a qué hace referencia el derecho al testamento digital?",
+   "opciones": [
+    "A la transmisión automática de activos financieros digitales de personas fallecidas.",
+    "Al acceso a contenidos gestionados por prestadores de servicios de la sociedad de la información sobre personas fallecidas.",
+    "A la herencia de dispositivos digitales físicos del fallecido.",
+    "A la supresión automática y obligatoria de los datos personales del fallecido."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p03",
+   "tema": 7,
+   "enunciado": "En España, según el artículo 7 de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, ¿a partir de qué edad puede un menor prestar por sí solo consentimiento para el tratamiento de sus datos personales?",
+   "opciones": [
+    "13 años.",
+    "14 años.",
+    "15 años.",
+    "16 años."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p04",
+   "tema": 8,
+   "enunciado": "Con base en el Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad, ¿cuál de las siguientes medidas de seguridad afecta a la dimensión de disponibilidad?",
+   "opciones": [
+    "Registro de la actividad.",
+    "Análisis de impacto.",
+    "Requisitos de acceso.",
+    "Bloqueo de puesto de trabajo."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p05",
+   "tema": 8,
+   "enunciado": "Con base en el Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad, indique qué se define como un incidente de seguridad en el que, debido a una violación de las medidas técnicas u organizativas de seguridad, una información o un servicio quedan expuestos, o potencialmente expuestos, a un acceso no autorizado.",
+   "opciones": [
+    "Ciberincidente.",
+    "Ciberataque.",
+    "Compromiso de la seguridad.",
+    "Categoría de seguridad de un sistema."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p06",
+   "tema": 9,
+   "enunciado": "De conformidad con el artículo 17 del Real Decreto 209/2003, de 21 de febrero, por el que se regulan los registros y las notificaciones telemáticas, así como la utilización de medios telemáticos para la sustitución de la aportación de certificados por los ciudadanos, ¿cuándo podrá realizarse la presentación de solicitudes, escritos y comunicaciones en los registros telemáticos?",
+   "opciones": [
+    "Durante las 24 horas de todos los días del año.",
+    "Durante las 24 horas de todos los días del año, excepto sábados y domingos.",
+    "Durante las 24 horas de todos los días del año, excepto los días declarados como inhábiles en el ámbito de la Administración General del Estado para todo el territorio nacional.",
+    "Durante las 24 horas de todos los días del año, excepto los días declarados como inhábiles en cada ámbito territorial y los declarados como inhábiles para todo el territorio nacional."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p07",
+   "tema": 4,
+   "enunciado": "Dentro del marco de la Agenda 2030, señale cuál de los siguientes es el Objetivo de Desarrollo Sostenible número 1:",
+   "opciones": [
+    "Lucha contra el hambre.",
+    "Consumo responsable.",
+    "Paz y justicia.",
+    "Erradicación de la pobreza."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "modificada_en_definitiva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "p08",
+   "tema": 4,
+   "enunciado": "Según establece la Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno, señale cuál de los siguientes es miembro de la Comisión de Transparencia y Buen Gobierno:",
+   "opciones": [
+    "Un representante del Defensor del Pueblo.",
+    "Un representante de la Subsecretaría de Estado del Ministerio de Hacienda.",
+    "Un representante del Tribunal Constitucional.",
+    "Un representante de la Agencia Estatal de Administración Tributaria."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p09",
+   "tema": 5,
+   "enunciado": "De conformidad con el artículo 4.2 del Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se aprueba el Texto Refundido de la Ley General de derechos de las personas con discapacidad y de su inclusión social, a los efectos de esta ley, ¿cuál es el grado minimo reconocido a partir del cual se tiene la consideración de persona con discapacidad?",
+   "opciones": [
+    "30 por ciento.",
+    "33 por ciento.",
+    "35 por ciento.",
+    "38 por ciento."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p10",
+   "tema": 5,
+   "enunciado": "De conformidad con el artículo 6 de la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres, indique la opción correcta:",
+   "opciones": [
+    "Se considera discriminación directa por razón de sexo la situación en que se encuentra una persona que sea, haya sido o pudiera ser tratada, en atención a su sexo, de manera menos favorable que otra en situación comparable.",
+    "Se considera discriminación indirecta por razón de sexo la situación en que se encuentra una persona que sea, haya sido o pudiera ser tratada, en atención a su sexo, de manera menos favorable que otra en situación comparable.",
+    "Se considera acoso por razón de sexo la situación en que se encuentra una persona que sea, haya sido o pudiera ser tratada, en atención a su sexo, de manera menos favorable que otra en situación comparable.",
+    "Se considera acoso sexual la situación en que se encuentra una persona que sea, haya sido o pudiera ser tratada, en atención a su sexo, de manera menos favorable que otra en situación comparable."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p11",
+   "tema": 10,
+   "enunciado": "¿Cuál de las siguientes características describe correctamente una unidad de estado sólido (SSD)?",
+   "opciones": [
+    "Almacena datos en discos magnéticos giratorios de alta densidad.",
+    "Utiliza memoria RAM volátil para el almacenamiento persistente de datos.",
+    "Es un dispositivo para almacenar datos en memoria no volátil sin partes móviles.",
+    "Requiere cabezales de lectura mecánicos para acceder a los datos almacenados."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p12",
+   "tema": 10,
+   "enunciado": "En relación con los componentes de un ordenador, ¿cuál es la función principal del bus del sistema?",
+   "opciones": [
+    "Ejecutar las instrucciones del sistema almacenadas en memoria.",
+    "Suministrar energía eléctrica del sistema a todos los componentes del ordenador.",
+    "Almacenar de forma permanente el sistema operativo y los datos del usuario.",
+    "Transferir datos, direcciones y señales de control entre la CPU, la memoria y los periféricos."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p13",
+   "tema": 12,
+   "enunciado": "En el formato de ficheros CSV, descrito en RFC 4180, ¿qué regla es correcta?",
+   "opciones": [
+    "Las comillas dobles están prohibidas, solo se permiten comillas simples.",
+    "Cada registro va en una línea separada por CRLF; y los campos que contengan caracteres coma, comillas o saltos de línea deben ir con comillas dobles.",
+    "Los campos nunca pueden contener comas, aunque estén delimitados por comillas dobles.",
+    "El tipo MIME registrado para CSV es “application/csv”."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p14",
+   "tema": 12,
+   "enunciado": "Según la definición estándar de JSON, RFC 8259, un valor JSON debe pertenecer a uno de estos tipos o literales. ¿Cuál es el conjunto correcto?",
+   "opciones": [
+    "object, array, number, string, date y undefined.",
+    "object, array, number, string, boolean y function.",
+    "object, array, number, string, true, false y null.",
+    "object, array, number, string, boolean y NaN."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p15",
+   "tema": 13,
+   "enunciado": "¿Cuál es el kernel sobre el que se basa Android?",
+   "opciones": [
+    "Mach Kernel.",
+    "Windows NT Kernel.",
+    "Kernel de Linux.",
+    "Microkernel L4."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p16",
+   "tema": 13,
+   "enunciado": "En el sistema operativo Linux, ¿cuál es la función principal del comando chmod?",
+   "opciones": [
+    "Cambiar el propietario de un archivo.",
+    "Crear un enlace simbólico.",
+    "Modificar el grupo al que pertenece un usuario.",
+    "Cambiar los permisos de acceso de un archivo o directorio."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p17",
+   "tema": 15,
+   "enunciado": "En una entidad de base de datos con 4 columnas y 7 filas:",
+   "opciones": [
+    "El grado es 4 y la cardinalidad 7.",
+    "La cardinalidad es 4 y el grado 7.",
+    "El grado es 4 y el dominio 7.",
+    "El dominio es 4 y la cardinalidad 7."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p18",
+   "tema": 15,
+   "enunciado": "Un atributo representado con una elipse discontinua en un diagrama entidad-relación significa que es un atributo:",
+   "opciones": [
+    "Clave primaria.",
+    "Compuesto.",
+    "Multivaluado.",
+    "Derivado."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p19",
+   "tema": 15,
+   "enunciado": "¿Cómo se llama el bloque de un programa donde se incluyen instrucciones iterativas?",
+   "opciones": [
+    "Cabecera.",
+    "Declaraciones.",
+    "Asignaciones.",
+    "Control."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p20",
+   "tema": 15,
+   "enunciado": "El slice de un array es:",
+   "opciones": [
+    "Su longitud.",
+    "Una subestructura del array.",
+    "Su primer elemento.",
+    "Su último elemento."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p21",
+   "tema": 15,
+   "enunciado": "Una cola se caracteriza por:",
+   "opciones": [
+    "Tener cabecera y cola.",
+    "Seguir una política LIFO.",
+    "Permitir sacar un elemento independientemente de su posición en ella.",
+    "Permitir insertar un elemento en cualquier posición."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p22",
+   "tema": 17,
+   "enunciado": "En relación a SQL, indique cuál de los siguientes comandos permite asignar permisos a las tablas:",
+   "opciones": [
+    "ALTER TABLE",
+    "GRANT",
+    "PERMISSION",
+    "ALLOW"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p23",
+   "tema": 17,
+   "enunciado": "En SQL, si se quiere restituir todas las modificaciones de datos realizadas desde el inicio de una transacción, o desde un punto de retorno, se debe usar la sentencia:",
+   "opciones": [
+    "SAVEPOINT",
+    "DELETE",
+    "ROLLBACK",
+    "RETURNBACK"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p24",
+   "tema": 17,
+   "enunciado": "En una base de datos relacional existe una tabla \"Departamento\". Si lo que se quiere validar es un cambio antes del evento, indique cuál sería una forma válida de comenzar la creación de un Trigger en el estándar ANSI SQL:",
+   "opciones": [
+    "CREATE TRIGGER Validar_cambio BEFORE UPDATE OF TABLE Departamento",
+    "CREATE NEW TRIGGER Validar_cambio OF Departamento BEFORE UPDATE",
+    "CREATE TRIGGER Validar_cambio ON TABLE Departamento BEFORE UPDATE",
+    "CREATE TRIGGER Validar_cambio BEFORE UPDATE ON Departamento"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p25",
+   "tema": 17,
+   "enunciado": "En el contexto de la relación entre clases y objetos, ¿cuál es la definición técnica más precisa de una instancia?",
+   "opciones": [
+    "Es el código fuente escrito en el lenguaje de programación que define los atributos.",
+    "Es un ejemplar concreto e individualizado de una clase que posee su propio estado.",
+    "Es un método estático que se ejecuta sin necesidad de crear el objeto en memoria.",
+    "Es el conjunto de todas las clases que pertenecen a un mismo paquete o espacio de nombres."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p26",
+   "tema": 19,
+   "enunciado": "Dentro de la plataforma .NET, ¿cómo se denomina el componente encargado de ejecutar el manejo de excepciones y la recolección de basura (Garbage Collection)?",
+   "opciones": [
+    "MSBuild.",
+    "Kestrel.",
+    "CLR (Common Language Runtime).",
+    "NuGet."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p27",
+   "tema": 20,
+   "enunciado": "En una arquitectura microservicios con Jakarta EE, ¿qué especificación se utiliza para crear servicios REST?",
+   "opciones": [
+    "Jakarta Mail.",
+    "Jakarta RESTful Web Services.",
+    "Jakarta Web Services Metadata.",
+    "Jakarta Pages."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p28",
+   "tema": 20,
+   "enunciado": "¿Cuál de los siguientes NO es un producto orientado a las pruebas de software?",
+   "opciones": [
+    "Avocado.",
+    "Cucumber.",
+    "TestLink.",
+    "OneTrust."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p29",
+   "tema": 20,
+   "enunciado": "¿Cuál es la finalidad de WSDL 2.0, según la especificación del W3C?",
+   "opciones": [
+    "Ser un lenguaje XML para describir servicios web, permitiendo describir el servicio a partir de un modelo abstracto de lo que ofrece.",
+    "Ser un protocolo de mensajería que define un “envelope” y reglas de codificación para invocaciones remotas.",
+    "Ser un protocolo de aplicación que define métodos (GET, POST, PUT, DELETE) y códigos de estado para operar sobre recursos.",
+    "Ser un protocolo de comunicación bidireccional con “handshake” y “framing” sobre TCP para tiempo real."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p30",
+   "tema": 23,
+   "enunciado": "En el ámbito de los sistemas de control de versiones como Git, ¿qué se entiende por un repositorio?",
+   "opciones": [
+    "Un servidor central donde se compila el código fuente de las aplicaciones web y distribuye la última versión ejecutable al navegador del usuario.",
+    "Un espacio que contiene el conjunto de archivos de un proyecto y el historial completo de cambios de cada uno de ellos, permitiendo almacenar, versionar y gestionar su evolución a lo largo del tiempo.",
+    "Un entorno de ejecución aislado que se utiliza para desplegar aplicaciones en producción y monitorizar su rendimiento.",
+    "Un archivo comprimido y cifrado que contiene la última versión estable del código fuente, conocida como “release candidate”."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p31",
+   "tema": 21,
+   "enunciado": "Según el HTML Living Standard de WHATWG, ¿en qué posición debe aparecer la declaración DOCTYPE dentro de la estructura de un documento HTML?",
+   "opciones": [
+    "En la primera línea, antes del elemento raíz <html>.",
+    "Dentro del elemento <head>, como primera instrucción antes de cualquier metadato.",
+    "Dentro del elemento raíz <html>, como primera instrucción.",
+    "Al inicio del elemento <body>, antes de cualquier contenido visible."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p32",
+   "tema": 22,
+   "enunciado": "De acuerdo con el artículo 3 del Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público, indique la opción correcta acerca del contenido accesible de sitios web y apps móviles:",
+   "opciones": [
+    "Incluye la información textual y no textual, documentos y formularios descargables y contenidos multimedia pregrabados, así como el diseño de los dispositivos de interacción como pantallas, teclados y ratones.",
+    "Incluye la información textual y no textual, documentos y formularios descargables, contenidos multimedia pregrabados, interacción bidireccional y la cumplimentación de procesos de identificación, autenticación, firma y pago.",
+    "Los documentos y formularios descargables no están incluidos, por la posibilidad de tratarse de contenidos de terceros que no están bajo el control del sujeto obligado.",
+    "La cumplimentación de procesos de identificación, autenticación, firma y pago no están incluidos, por gestionarse generalmente a través de sistemas de terceros."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p33",
+   "tema": 22,
+   "enunciado": "De acuerdo con el CCN-CERT, ¿cuál de los siguientes NO se considera un mecanismo de Autenticación Multi-Factor (MFA)?",
+   "opciones": [
+    "Contraseña + Token OTP (One Time Password).",
+    "Escáner de Iris + Huella dactilar.",
+    "Contraseña + Escáner de Iris.",
+    "Tarjeta de identificación + Reconocimiento facial."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p34",
+   "tema": 24,
+   "enunciado": "En Linux, para ver en tiempo real el contenido de un fichero de registro a medida que crece, se puede usar el comando:",
+   "opciones": [
+    "tail -r",
+    "tail -f",
+    "tail -w",
+    "tail -u"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p35",
+   "tema": 14,
+   "enunciado": "En el contexto de las transacciones en bases de datos, la propiedad de aislamiento implica que:",
+   "opciones": [
+    "Una transacción debe ejecutarse completamente o no ejecutarse en absoluto.",
+    "Los cambios confirmados por una transacción deben mantenerse incluso ante fallos del sistema.",
+    "Las transacciones concurrentes no deben interferir entre sí de forma que se comprometa la consistencia de los datos.",
+    "Tras finalizar una transacción, los datos deben cumplir todas las restricciones definidas en la base de datos."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p36",
+   "tema": 15,
+   "enunciado": "En una base de datos relacional, la regla de integridad referencial establece que:",
+   "opciones": [
+    "Todo valor no nulo de la clave ajena debe existir en la clave referenciada.",
+    "Todo valor de la clave ajena debe ser único dentro de la tabla.",
+    "Toda clave primaria debe existir previamente en la tabla que la referencia.",
+    "La clave referenciada debe contener únicamente valores no nulos."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p37",
+   "tema": 26,
+   "enunciado": "¿Qué comando de Docker permite crear e iniciar un nuevo contenedor, descargando la imagen si es necesario, y ejecutar en el contenedor un comando especificado?",
+   "opciones": [
+    "docker run",
+    "docker start",
+    "docker exec",
+    "docker play"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p38",
+   "tema": 26,
+   "enunciado": "¿Qué registro DNS permite a los propietarios de dominios firmar automáticamente los correos electrónicos de su dominio?",
+   "opciones": [
+    "DKIM.",
+    "SPF.",
+    "DMARC.",
+    "CNAME."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p39",
+   "tema": 26,
+   "enunciado": "Según el modelo de referencia para redes locales de la IEEE, la capa de enlace de datos se divide en dos subcapas. ¿Cuál de ellas se encarga de la sincronización de tramas, control de flujo y la detección de errores de transmisión independientemente del medio físico?",
+   "opciones": [
+    "Subcapa de Control de Acceso al Medio (MAC).",
+    "Subcapa de Convergencia de Datos (DCS).",
+    "Subcapa de Control de Enlace Lógico (LLC).",
+    "Subcapa de Interfaz de Dependencia del Medio (MDI)."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p40",
+   "tema": 28,
+   "enunciado": "De acuerdo con las recomendaciones del CCN-CERT, un requisito para una contraseña robusta es:",
+   "opciones": [
+    "Tener al menos 7 caracteres.",
+    "Incluir datos del usuario, como su nombre o fecha de nacimiento.",
+    "Usar frases cortas sin sentido.",
+    "Apuntar la contraseña en un papel guardado en un bolso o cartera personal."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p41",
+   "tema": 28,
+   "enunciado": "Según el estándar ANSI/TIA 942-B, la zona de un Centro de Procesamiento de Datos donde se ubican elementos finales, como un servidor o un mainframe, se denomina:",
+   "opciones": [
+    "MDA (Main Distribution Area).",
+    "EDA (Equipment Distribution Area).",
+    "HDA (Horizontal Distribution Area).",
+    "IDA (Intermediate Distribution Area)."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p42",
+   "tema": 28,
+   "enunciado": "¿Cómo se denomina a la degradación de la señal que consiste en la pérdida de energía de la misma a medida que se propaga por el medio de transmisión?",
+   "opciones": [
+    "Distorsión de retardo.",
+    "Diafonía.",
+    "Ruido térmico.",
+    "Atenuación."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p43",
+   "tema": 30,
+   "enunciado": "¿Qué dispositivo de interconexión de redes es capaz de segmentar los dominios de colisión, pero mantiene un único dominio de difusión?",
+   "opciones": [
+    "Un router.",
+    "Un switch.",
+    "Un hub.",
+    "Un gateway."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p44",
+   "tema": 30,
+   "enunciado": "Dentro del modelo de referencia OSI, ¿qué capa tiene como función principal la negociación de la sintaxis de transferencia y la aplicación de transformaciones de datos tales como el cifrado y la compresión?",
+   "opciones": [
+    "Capa de sesión.",
+    "Capa de presentación.",
+    "Capa de aplicación.",
+    "Capa de transporte."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p45",
+   "tema": 30,
+   "enunciado": "En el saludo de tres vías (Three-way handshake) de TCP, ¿qué flag o flags se activan en el segundo paso?",
+   "opciones": [
+    "Solo INIT.",
+    "Solo ACK.",
+    "SYN y ACK.",
+    "SYN y FIN."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p46",
+   "tema": 30,
+   "enunciado": "Según establece la RFC 8200, ¿cuál es el propósito del campo \"Hop Limit\" en la cabecera fija de IPv6?",
+   "opciones": [
+    "Determinar la prioridad de la calidad de servicio (QoS) del paquete.",
+    "Indicar el número máximo de saltos que un paquete puede dar antes de ser descartado.",
+    "Especificar el tamaño total de la carga útil del paquete.",
+    "Identificar el tipo de cabecera de extensión que sigue a la cabecera fija."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p47",
+   "tema": 31,
+   "enunciado": "Dentro de la arquitectura de servicios de Internet, ¿cuál es la función técnica destacada del servicio DNS?",
+   "opciones": [
+    "Garantizar que los paquetes de datos sigan la ruta más corta entre el origen y el destino.",
+    "Encriptar el contenido de los correos electrónicos antes de ser enviados por SMTP.",
+    "Traducir direcciones lógicas (IP) a direcciones físicas (MAC).",
+    "Traducir nombres de dominio legibles para humanos en direcciones IP numéricas que las máquinas pueden procesar."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p48",
+   "tema": 31,
+   "enunciado": "En una interacción cliente-servidor mediante HTTP, ¿qué clase de códigos de estado indican que se ha producido un error por parte del cliente?",
+   "opciones": [
+    "Códigos 2xx",
+    "Códigos 3xx",
+    "Códigos 4xx",
+    "Códigos 5xx"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p49",
+   "tema": 8,
+   "enunciado": "En el contexto de la seguridad del puesto de trabajo, ¿en qué consiste el principio de mínimo privilegio que debe aplicarse a los usuarios de un sistema informático según el Esquema Nacional de Seguridad (ENS) regulado en el Real Decreto 311/2022, de 3 de mayo?",
+   "opciones": [
+    "En garantizar la trazabilidad completa de las acciones realizadas por los administradores de sistemas mediante el uso de cuentas genéricas de alta prioridad.",
+    "En conceder a cada usuario únicamente los permisos estrictamente necesarios para el desempeño de sus funciones.",
+    "En implementar un control de acceso basado exclusivamente en la ubicación física del puesto de usuario, independientemente del rol desempeñado.",
+    "En obligar a los usuarios a compartir sus credenciales con sus responsables directos para garantizar la continuidad del servicio."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p50",
+   "tema": 32,
+   "enunciado": "En el diseño de una arquitectura de red segura, ¿qué configuración perimetral permite aislar los servidores que ofrecen servicios al exterior, impidiendo que una intrusión en estos comprometa directamente la red interna?",
+   "opciones": [
+    "La implementación de una red privada virtual (VPN) de acceso remoto para todos los usuarios externos.",
+    "La creación de una zona desmilitarizada (DMZ) mediante el uso de cortafuegos que segmenten el tráfico.",
+    "El uso de un único sistema de detección de intrusiones (IDS) configurado en modo promiscuo en el núcleo de la red.",
+    "La asignación de direcciones IP públicas directamente a los terminales de los usuarios internos."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "pr01",
+   "tema": 6,
+   "enunciado": "En relación con la Agenda España Digital 2026, indique la respuesta correcta:",
+   "opciones": [
+    "La Dirección General del Dato es la entidad ejecutora de las iniciativas propuestas en los distintos ejes de acción del Plan de Impulso de los Espacios de Datos Sectoriales.",
+    "Una de las prioridades de la Estrategia de Tecnologías Cuánticas de España es demostrar el impacto de la sensórica y metrología cuánticas.",
+    "La coordinación del Proyecto ALIA está a cargo de la Agencia Española de Supervisión de la Inteligencia Artificial.",
+    "Actúa en dos dimensiones fundamentales: infraestructuras y tecnología, y servicios públicos."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr02",
+   "tema": 28,
+   "enunciado": "De acuerdo con el CCN-CERT, solo se autorizan los métodos de Key Exchange que proporcionen una fortaleza de seguridad de, al menos:",
+   "opciones": [
+    "192 bits.",
+    "128 bits.",
+    "112 bits.",
+    "256 bits."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr03",
+   "tema": 5,
+   "enunciado": "De conformidad con el artículo 79 de la Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI, ¿cuál de las siguientes infracciones se califica como grave?",
+   "opciones": [
+    "La obstrucción o negativa absoluta a la actuación de los servicios de inspección correspondientes en el cumplimiento de los mandatos establecidos en esta ley.",
+    "El acoso discriminatorio, cuando no constituya infracción penal, por razón de orientación e identidad sexual, expresión de género o características sexuales.",
+    "La elaboración, utilización o difusión en centros educativos de libros de texto y materiales didácticos que presenten a las personas como superiores o inferiores en dignidad humana en función de su orientación e identidad sexual, expresión de género o características sexuales.",
+    "La victimización secundaria, entendida como el incumplimiento por parte de las Administraciones públicas de las obligaciones de atención previstas en esta ley que den lugar a un nuevo daño psicológico para la víctima."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr04",
+   "tema": 12,
+   "enunciado": "¿Cuál de los siguientes algoritmos de ordenación se ejecuta en tiempo lineal?",
+   "opciones": [
+    "Heapsort.",
+    "Mergesort.",
+    "Radix.",
+    "Quicksort."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr05",
+   "tema": 29,
+   "enunciado": "¿Cuántos canales Bluetooth Low Energy (LE) utiliza el mecanismo Extended Advertising introducido en Bluetooth Core 5.0?",
+   "opciones": [
+    "3 canales.",
+    "22 canales.",
+    "37 canales.",
+    "40 canales."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  }
+ ]
+}

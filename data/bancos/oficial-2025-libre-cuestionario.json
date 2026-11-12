@@ -1,0 +1,1211 @@
+{
+ "titulo": "Examen 2025 · libre · Cuestionario",
+ "fuente": "oficial",
+ "examen": "TAI-L2025",
+ "parte": "cuestionario",
+ "tema": null,
+ "convocatoria": "2025 · libre",
+ "minutos": 95,
+ "origen": "Convocatoria 2025 (OEP 2023-2025), modelo A",
+ "url_cuestionario": "https://sede.inap.gob.es/sites/sede/files/public/2026-05/Cuestionario%20TAI-L-ModeloA.pdf",
+ "url_plantilla": "https://sede.inap.gob.es/sites/sede/files/public/2026-10/PlantillarespuestasDefTAI-L-A_G4WN8WY1M8_154AB89SD658.pdf",
+ "contextos": {},
+ "preguntas": [
+  {
+   "id": "p01",
+   "tema": 1,
+   "enunciado": "En la Constitución Española de 1978, en relación con la sucesión al trono se prefiere siempre:",
+   "opciones": [
+    "En la misma línea, el grado más lejano al más próximo.",
+    "En el mismo grado, la línea anterior a las posteriores.",
+    "En la misma línea, el grado más próximo al más remoto.",
+    "En el mismo grado, la línea posterior a las anteriores."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p02",
+   "tema": 1,
+   "enunciado": "Indique cuál de los siguientes principios se garantiza en el artículo 9 de la Constitución Española de 1978:",
+   "opciones": [
+    "La retroactividad de disposiciones sancionadoras no favorables o restrictivas de derechos individuales.",
+    "La retroactividad de disposiciones sancionadoras favorables.",
+    "La interdicción de la arbitrariedad de los poderes públicos.",
+    "La irretroactividad de disposiciones sancionadoras favorables o restrictivas de derechos colectivos."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p03",
+   "tema": 2,
+   "enunciado": "¿Cuál de las siguientes afirmaciones sobre la Diputación Permanente es correcta, según el artículo 78 de la Constitución Española de 1978?",
+   "opciones": [
+    "Cada Cámara contará con una Diputación Permanente de al menos quince miembros, elegidos por sufragio directo de entre los parlamentarios de cada grupo.",
+    "La Diputación Permanente del Congreso será presidida por el Presidente del Senado, y la del Senado por el Presidente del Congreso.",
+    "En cada Cámara habrá una Diputación Permanente compuesta de un mínimo de veintiún miembros, que representarán a los grupos parlamentarios en proporción a su importancia numérica.",
+    "La Diputación Permanente solo puede ejercer sus funciones durante los períodos entre sesiones ordinarias, quedando suspendidas en caso de disolución de las Cámaras."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p04",
+   "tema": 2,
+   "enunciado": "¿Cuáles son las funciones que el artículo 66 de la Constitución Española de 1978 atribuye directamente a las Cortes Generales?",
+   "opciones": [
+    "Ejercer la potestad legislativa del Estado, aprobar los Presupuestos y controlar la acción del Gobierno.",
+    "Elegir al Presidente del Gobierno, aprobar los Presupuestos y ratificar los tratados internacionales.",
+    "Dictar decretos-leyes, aprobar los Presupuestos y controlar la acción del Gobierno.",
+    "Ejercer la potestad legislativa del Estado, nombrar al Defensor del Pueblo y elegir a los magistrados del Tribunal Supremo."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p05",
+   "tema": 3,
+   "enunciado": "Conforme al artículo 21 de la Ley 50/1997, de 27 de noviembre, del Gobierno, ¿cuál de las siguientes opciones es una función del Gobierno en funciones?",
+   "opciones": [
+    "Aprobar el Proyecto de Ley de Presupuestos Generales del Estado.",
+    "Presentar Proyectos de Ley al Congreso de los Diputados.",
+    "Proponer al Rey la disolución del Congreso de los Diputados.",
+    "Limitar su gestión al despacho ordinario de los asuntos públicos."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p06",
+   "tema": 3,
+   "enunciado": "Según establece el artículo 99 de la Constitución Española de 1978 que regula el proceso de investidura del Presidente del Gobierno, ¿qué mayoría se exige en la primera votación?",
+   "opciones": [
+    "Mayoría simple del Congreso de los Diputados.",
+    "Mayoría absoluta del Congreso de los Diputados.",
+    "Mayoría absoluta del Senado.",
+    "Mayoría de dos tercios del Congreso de los Diputados."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p07",
+   "tema": 4,
+   "enunciado": "Dentro del marco de la Agenda 2030, señale cuál de los siguientes es el Objetivo de Desarrollo Sostenible número 1:",
+   "opciones": [
+    "Lucha contra el hambre.",
+    "Consumo responsable.",
+    "Paz y justicia.",
+    "Erradicación de la pobreza."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p08",
+   "tema": 4,
+   "enunciado": "Según establece el artículo 78 del Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público, señale cuál de los siguientes NO es uno de los principios de provisión de puestos de trabajo del personal funcionario de carrera:",
+   "opciones": [
+    "Mérito.",
+    "Conocimiento.",
+    "Igualdad.",
+    "Publicidad."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p09",
+   "tema": 4,
+   "enunciado": "Según establece la Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno, señale cuál de los siguientes es miembro de la Comisión de Transparencia y Buen Gobierno:",
+   "opciones": [
+    "Un representante del Defensor del Pueblo.",
+    "Un representante de la Subsecretaría de Estado del Ministerio de Hacienda.",
+    "Un representante del Tribunal Constitucional.",
+    "Un representante de la Agencia Estatal de Administración Tributaria."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p10",
+   "tema": 5,
+   "enunciado": "De conformidad con el artículo 4 de la Ley Orgánica 1/2004, de 28 de diciembre, de Medidas de Protección Integral contra la Violencia de Género, indique cuál de las siguientes opciones es correcta en relación con los principios y valores del sistema educativo:",
+   "opciones": [
+    "La Educación Infantil contribuirá a desarrollar en el alumnado su capacidad para adquirir habilidades en la resolución pacífica de conflictos y para comprender y respetar la igualdad entre sexos.",
+    "La Educación Primaria contribuirá a desarrollar en el alumnado la capacidad para relacionarse con los demás de forma pacífica y para conocer, valorar y respetar la igualdad de oportunidades de hombres y mujeres.",
+    "La Educación Secundaria Obligatoria contribuirá a desarrollar en el alumnado la capacidad para consolidar su madurez personal, social y moral, que les permita actuar de forma responsable y autónoma y para analizar y valorar críticamente las desigualdades de sexo y fomentar la igualdad real y efectiva entre hombres y mujeres.",
+    "Las Universidades incluirán y fomentarán en todos los ámbitos académicos la formación, docencia e investigación en igualdad de género y no discriminación de forma transversal."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p11",
+   "tema": 5,
+   "enunciado": "De conformidad con el artículo 4.2 del Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se aprueba el Texto Refundido de la Ley General de derechos de las personas con discapacidad y de su inclusión social, a los efectos de esta ley, ¿cuál es el grado minimo reconocido a partir del cual se tiene la consideración de persona con discapacidad?",
+   "opciones": [
+    "30 por ciento.",
+    "33 por ciento.",
+    "35 por ciento.",
+    "38 por ciento."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p12",
+   "tema": 6,
+   "enunciado": "¿Qué información está almacenada en la zona de seguridad del DNI electrónico, accesible en lectura por el ciudadano en los Puntos de Actualización del DNIe?",
+   "opciones": [
+    "El certificado de Firma (No Repudio).",
+    "El certificado de Autenticación (Digital Signature).",
+    "El certificado CA intermedia emisora.",
+    "La imagen de la fotografía."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p13",
+   "tema": 6,
+   "enunciado": "De conformidad con el Anexo III del Reglamento 910/2014 del Parlamento Europeo y del Consejo de 23 de julio de 2014 relativo a la identificación electrónica y los servicios de confianza para las transacciones electrónicas en el mercado interior y por la que se deroga la Directiva 1999/93/CE, los certificados cualificados de sello electrónico contendrán:",
+   "opciones": [
+    "El nombre o los nombres de dominio explotados por la persona física o jurídica a la que se expida el certificado.",
+    "Al menos, el nombre del creador del sello y, cuando proceda, el número de registro, tal como se recojan en los registros oficiales.",
+    "Los elementos de la dirección, incluyendo al menos la ciudad y el Estado de la persona física o jurídica a quien se expida el certificado, y, cuando proceda, según figure en los registros oficiales.",
+    "Para personas físicas: al menos el nombre de la persona a la que se expida el certificado, o un seudónimo; si se usara un seudónimo, se indicará claramente."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p14",
+   "tema": 6,
+   "enunciado": "En relación con el uso de pseudónimos en los certificados cualificados, la Ley 6/2020, de 11 de noviembre, reguladora de determinados aspectos de los servicios electrónicos de confianza, establece que:",
+   "opciones": [
+    "Está prohibido el uso de pseudónimos para garantizar la transparencia y la gestión del proceso administrativo.",
+    "El prestador debe revelar la identidad real del titular únicamente si este lo autoriza expresamente.",
+    "El prestador está obligado a revelar la identidad real a solicitud de los órganos judiciales y otras autoridades públicas en el ejercicio de sus funciones.",
+    "Solo los certificados de sello electrónico de persona jurídica admiten pseudónimo."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p15",
+   "tema": 7,
+   "enunciado": "De conformidad con el artículo 96 de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, ¿a qué hace referencia el derecho al testamento digital?",
+   "opciones": [
+    "A la transmisión automática de activos financieros digitales de personas fallecidas.",
+    "Al acceso a contenidos gestionados por prestadores de servicios de la sociedad de la información sobre personas fallecidas.",
+    "A la herencia de dispositivos digitales físicos del fallecido.",
+    "A la supresión automática y obligatoria de los datos personales del fallecido."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p16",
+   "tema": 7,
+   "enunciado": "Según el artículo 79 de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, indique cuándo son aplicables los derechos y libertades consagrados en la Constitución y en los Tratados y Convenios Internacionales:",
+   "opciones": [
+    "Solo son aplicables fuera de Internet.",
+    "Son aplicables en Internet únicamente cuando exista tratamiento de datos personales.",
+    "Son plenamente aplicables en Internet, con la colaboración de los prestadores de servicios de la sociedad de la información.",
+    "Se aplican en Internet solo si así lo establece un desarrollo reglamentario posterior."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p17",
+   "tema": 8,
+   "enunciado": "¿Cuál de las siguientes opciones NO está considerada una norma técnica de interoperabilidad a desarrollar, de obligado cumplimiento por parte de las Administraciones Públicas, según el Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica?",
+   "opciones": [
+    "Norma Técnica de Interoperabilidad de Reutilización de Activos en modo producto y en modo servicio.",
+    "Norma Técnica de Interoperabilidad de Plan de Seguridad para gestión de ciberataques.",
+    "Norma Técnica de Interoperabilidad de Plan de Direccionamiento.",
+    "Norma Técnica de Interoperabilidad de Sistema de Referencia de documentos y repositorios de confianza."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p18",
+   "tema": 8,
+   "enunciado": "Con base en el Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad, indique qué se define como un incidente de seguridad en el que, debido a una violación de las medidas técnicas u organizativas de seguridad, una información o un servicio quedan expuestos, o potencialmente expuestos, a un acceso no autorizado.",
+   "opciones": [
+    "Ciberincidente.",
+    "Ciberataque.",
+    "Compromiso de la seguridad.",
+    "Categoría de seguridad de un sistema."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p19",
+   "tema": 8,
+   "enunciado": "De conformidad con el artículo 13 del Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad, ¿a quién le corresponde, por sí mismo o a través de recursos propios o contratados, encargarse de desarrollar la forma concreta de implementar la seguridad en el sistema y la supervisión de la operación diaria del mismo?",
+   "opciones": [
+    "Al responsable del sistema.",
+    "Al responsable del servicio del sistema.",
+    "Al responsable de la Inspección Técnica de Seguridad.",
+    "Al responsable de la seguridad."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p20",
+   "tema": 9,
+   "enunciado": "De conformidad con el artículo 18 del Real Decreto 209/2003, de 21 de febrero, por el que se regulan los registros y las notificaciones telemáticas, así como la utilización de medios telemáticos para la sustitución de la aportación de certificados por los ciudadanos, indique la sentencia INCORRECTA:",
+   "opciones": [
+    "En los registros telemáticos serán considerados días inhábiles los así declarados para todo el territorio nacional en el calendario anual de días inhábiles.",
+    "La entrada de las solicitudes, escritos y comunicaciones recibidas en un día inhábil para el registro telemático se entenderá efectuada en la primera hora del primer día hábil siguiente.",
+    "Los registros telemáticos realizarán y anotarán entradas y salidas de escritos y comunicaciones en días inhábiles, aunque no compute a efectos de los plazos.",
+    "En lo que respecta a registros telemáticos referentes a trámites cuya instrucción y resolución corresponda a órganos cuya competencia esté territorialmente delimitada a una comunidad autónoma, provincia o municipio, serán días inhábiles los así declarados en el ámbito territorial correspondiente."
+   ],
+   "correcta": null,
+   "explicacion": null,
+   "anulada": true,
+   "tema_auto": true
+  },
+  {
+   "id": "p21",
+   "tema": 9,
+   "enunciado": "¿Cuál de los siguientes NO es uno de los servicios de la Plataforma de Intermediación de Datos?",
+   "opciones": [
+    "Consulta de datos de identidad.",
+    "Consulta de situación actual de prestaciones por desempleo.",
+    "Consulta de datos de patrimonio.",
+    "Consulta de títulos no universitarios por documentación."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p22",
+   "tema": 9,
+   "enunciado": "Según el artículo 2 del Real Decreto 203/2021, de 30 de marzo, por el que se aprueba el Reglamento de actuación y funcionamiento del sector público por medios electrónicos, el principio de personalización y proactividad se entiende como la capacidad de las Administraciones Públicas para:",
+   "opciones": [
+    "Proporcionar servicios precumplimentados y anticiparse a las posibles necesidades del usuario final, partiendo del conocimiento adquirido de este último.",
+    "Personalizar la imagen y el diseño de la sede electrónica según las preferencias de cada interesado.",
+    "Compartir datos y posibilitar el intercambio personalizado de información.",
+    "Verificar la identidad del usuario mediante múltiples factores de autenticación personalizados en función del riesgo del trámite."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p23",
+   "tema": 10,
+   "enunciado": "¿Qué nivel de caché está integrado físicamente dentro del núcleo del procesador, es el más rápido y tiene la menor capacidad de almacenamiento?",
+   "opciones": [
+    "Caché L1.",
+    "Caché L2.",
+    "Caché L3.",
+    "Caché L4."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p24",
+   "tema": 10,
+   "enunciado": "En relación con los componentes de un ordenador, ¿cuál es la función principal del bus del sistema?",
+   "opciones": [
+    "Ejecutar las instrucciones del sistema almacenadas en memoria.",
+    "Suministrar energía eléctrica del sistema a todos los componentes del ordenador.",
+    "Almacenar de forma permanente el sistema operativo y los datos del usuario.",
+    "Transferir datos, direcciones y señales de control entre la CPU, la memoria y los periféricos."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p25",
+   "tema": 11,
+   "enunciado": "¿Cuál de las siguientes características describe correctamente una unidad de estado sólido (SSD)?",
+   "opciones": [
+    "Almacena datos en discos magnéticos giratorios de alta densidad.",
+    "Utiliza memoria RAM volátil para el almacenamiento persistente de datos.",
+    "Es un dispositivo para almacenar datos en memoria no volátil sin partes móviles.",
+    "Requiere cabezales de lectura mecánicos para acceder a los datos almacenados."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p26",
+   "tema": 11,
+   "enunciado": "¿Cuál es el ancho de banda máximo de la especificación HDMI 2.1?",
+   "opciones": [
+    "10 Gbps.",
+    "18 Gbps.",
+    "32 Gbps.",
+    "48 Gbps."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p27",
+   "tema": 11,
+   "enunciado": "¿Cuántos fallos de dispositivo puede tolerar un conjunto RAID 5 sin pérdida de datos?",
+   "opciones": [
+    "Ningún fallo de dispositivo.",
+    "Un fallo de dispositivo.",
+    "Dos fallos de dispositivo.",
+    "Tres fallos de dispositivo."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p28",
+   "tema": 11,
+   "enunciado": "¿Qué es el Internet Printing Protocol (IPP)?",
+   "opciones": [
+    "Una colección de estándares abiertos que define un protocolo de impresión en red de alto nivel.",
+    "Un protocolo de compresión de datos orientado a la transmisión de documentos a impresoras.",
+    "Un formato de archivo para documentos imprimibles de tipo vectorial.",
+    "Un estándar de conexión física para impresoras mediante cable USB."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p29",
+   "tema": 12,
+   "enunciado": "En el formato de ficheros CSV, descrito en RFC 4180, ¿qué regla es correcta?",
+   "opciones": [
+    "Las comillas dobles están prohibidas, solo se permiten comillas simples.",
+    "Cada registro va en una línea separada por CRLF; y los campos que contengan caracteres coma, comillas o saltos de línea deben ir con comillas dobles.",
+    "Los campos nunca pueden contener comas, aunque estén delimitados por comillas dobles.",
+    "El tipo MIME registrado para CSV es “application/csv”."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p30",
+   "tema": 12,
+   "enunciado": "Según la definición estándar de JSON, RFC 8259, un valor JSON debe pertenecer a uno de estos tipos o literales. ¿Cuál es el conjunto correcto?",
+   "opciones": [
+    "object, array, number, string, date y undefined.",
+    "object, array, number, string, boolean y function.",
+    "object, array, number, string, true, false y null.",
+    "object, array, number, string, boolean y NaN."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p31",
+   "tema": 13,
+   "enunciado": "¿Cuál es el kernel sobre el que se basa Android?",
+   "opciones": [
+    "Mach Kernel.",
+    "Windows NT Kernel.",
+    "Kernel de Linux.",
+    "Microkernel L4."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p32",
+   "tema": 13,
+   "enunciado": "En el contexto de iOS, ¿cómo se denomina la técnica que garantiza que las aplicaciones solo accedan a sus propios recursos y datos, mejorando la seguridad del sistema?",
+   "opciones": [
+    "Sandboxing.",
+    "Jailbreaking.",
+    "Sideloading.",
+    "Hypervisioning."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p33",
+   "tema": 14,
+   "enunciado": "¿Cuál de las siguientes bases de datos utiliza Cypher como lenguaje de consulta de información?",
+   "opciones": [
+    "MongoDB.",
+    "CouchDB.",
+    "Cassandra.",
+    "Neo4j."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p34",
+   "tema": 14,
+   "enunciado": "En el contexto de las bases de datos orientadas a objetos, ¿cuál de los siguientes NO es considerado un constructor de tipo de colección?",
+   "opciones": [
+    "Columna.",
+    "Array.",
+    "Bolsa.",
+    "Lista."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p35",
+   "tema": 14,
+   "enunciado": "En el contexto de las bases de datos orientadas a objetos, y en relación con el identificador de objeto único (OID), ¿cuál de las siguientes opciones es correcta?",
+   "opciones": [
+    "Es visible para el usuario externo.",
+    "Puede depender de atributos del objeto.",
+    "Está generado por el sistema.",
+    "Está almacenado en el programa de aplicación que declara el objeto."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p36",
+   "tema": 14,
+   "enunciado": "Indique cuál de las siguientes opciones se corresponde con tipos de bases de datos NoSQL:",
+   "opciones": [
+    "Sistemáticos y documentales.",
+    "Clave-valor y sistemáticos.",
+    "Documentales y clave-valor.",
+    "Grafos y metodológicas."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p37",
+   "tema": 14,
+   "enunciado": "En el modelo de datos dimensional de Kimball, una dimensión outrigger es:",
+   "opciones": [
+    "Una tabla de hechos enlazada en otra tabla de hechos.",
+    "Una tabla de dimensión enlazada en otra tabla de dimensión.",
+    "Una tabla de dimensión enlazada en una tabla de hechos.",
+    "Una tabla de hechos enlazada en una tabla de dimensión."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p38",
+   "tema": 15,
+   "enunciado": "En una entidad de base de datos con 4 columnas y 7 filas:",
+   "opciones": [
+    "El grado es 4 y la cardinalidad 7.",
+    "La cardinalidad es 4 y el grado 7.",
+    "El grado es 4 y el dominio 7.",
+    "El dominio es 4 y la cardinalidad 7."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p39",
+   "tema": 15,
+   "enunciado": "Un atributo representado con una elipse discontinua en un diagrama entidad-relación significa que es un atributo:",
+   "opciones": [
+    "Clave primaria.",
+    "Compuesto.",
+    "Multivaluado.",
+    "Derivado."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p40",
+   "tema": 16,
+   "enunciado": "En JavaScript, siendo a = 10, b = 4 y c = 4, la expresión condicional (a + b) % 2 == 0 ? c + 4 : c - 2 da como resultado:",
+   "opciones": [
+    "8",
+    "4",
+    "7",
+    "9"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p41",
+   "tema": 16,
+   "enunciado": "Señale la opción correcta en relación a los árboles rojo-negro:",
+   "opciones": [
+    "Un nodo negro puede tener más de 2 subárboles.",
+    "Si un nodo es rojo, sus hijos son nodos rojos.",
+    "Para cada nodo, el camino de ese nodo a las hojas descendientes contiene la misma cantidad de nodos rojos.",
+    "La raíz es un nodo negro."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p42",
+   "tema": 17,
+   "enunciado": "¿A qué tipo de comandos SQL pertenece la instrucción DENY en Transact-SQL?",
+   "opciones": [
+    "DCL.",
+    "DQL.",
+    "DML.",
+    "TCL."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p43",
+   "tema": 17,
+   "enunciado": "En SQL, si se quiere restituir todas las modificaciones de datos realizadas desde el inicio de una transacción, o desde un punto de retorno, se debe usar la sentencia:",
+   "opciones": [
+    "SAVEPOINT",
+    "DELETE",
+    "ROLLBACK",
+    "RETURNBACK"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p44",
+   "tema": 17,
+   "enunciado": "En una base de datos relacional existe una tabla \"Departamento\". Si lo que se quiere validar es un cambio antes del evento, indique cuál sería una forma válida de comenzar la creación de un Trigger en el estándar ANSI SQL:",
+   "opciones": [
+    "CREATE TRIGGER Validar_cambio BEFORE UPDATE OF TABLE Departamento",
+    "CREATE NEW TRIGGER Validar_cambio OF Departamento BEFORE UPDATE",
+    "CREATE TRIGGER Validar_cambio ON TABLE Departamento BEFORE UPDATE",
+    "CREATE TRIGGER Validar_cambio BEFORE UPDATE ON Departamento"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p45",
+   "tema": 18,
+   "enunciado": "¿Qué patrón de diseño de comportamiento se utiliza para notificar automáticamente a múltiples objetos sobre los cambios de estado de un sujeto, manteniendo un acoplamiento débil?",
+   "opciones": [
+    "Singleton.",
+    "Observer.",
+    "Adapter.",
+    "Factory Method."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p46",
+   "tema": 18,
+   "enunciado": "En una arquitectura de herencia simple, si una subclase define un método con la misma lista de parámetros que un método de su superclase para especializar su comportamiento, ¿qué concepto se está aplicando?",
+   "opciones": [
+    "Sobrecarga (Overloading).",
+    "Ocultación de atributos (Field Hiding).",
+    "Sobrescritura (Overriding).",
+    "Agregación (Aggregating)."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p47",
+   "tema": 19,
+   "enunciado": "¿Cuál es el componente encargado de compilar el código intermedio a código máquina en tiempo de ejecución en la arquitectura Java EE/Jakarta EE?",
+   "opciones": [
+    "El Garbage Collector.",
+    "El bytecode.",
+    "El JIT (Just-In-Time Compiler).",
+    "El SDK (Software Development Kit)."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p48",
+   "tema": 19,
+   "enunciado": "Dentro de la plataforma .NET, ¿cómo se denomina el componente encargado de ejecutar el manejo de excepciones y la recolección de basura?",
+   "opciones": [
+    "MSBuild.",
+    "Kestrel.",
+    "CLR (Common Language Runtime).",
+    "NuGet."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p49",
+   "tema": 19,
+   "enunciado": "Los ensamblados son, entre otras cosas, las unidades fundamentales de implementación para aplicaciones basadas en la plataforma .NET. Señale cuál es una de sus características:",
+   "opciones": [
+    "Se implementan como archivos que tienen \".jpx\" o \".dtl\" como extensión.",
+    "En el caso de las bibliotecas que tienen como destino .NET Framework, pueden compartir ensamblados entre aplicaciones si los coloca en la caché global de aplicaciones (GAP).",
+    "Proporcionan a Internet Information Services la información necesaria para conocer las versiones de los archivos.",
+    "Solo se cargan en memoria si son necesarios. Si no se usan, no se cargan."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p50",
+   "tema": 20,
+   "enunciado": "¿Cuál es la finalidad de WSDL 2.0, según la especificación del W3C?",
+   "opciones": [
+    "Ser un lenguaje XML para describir servicios web, permitiendo describir el servicio a partir de un modelo abstracto de lo que ofrece.",
+    "Ser un protocolo de mensajería que define un “envelope” y reglas de codificación para invocaciones remotas.",
+    "Ser un protocolo de aplicación que define métodos (GET, POST, PUT, DELETE) y códigos de estado para operar sobre recursos.",
+    "Ser un protocolo de comunicación bidireccional con “handshake” y “framing” sobre TCP para tiempo real."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p51",
+   "tema": 20,
+   "enunciado": "Según la categorización habitual de métodos HTTP, ¿cuál de los siguientes métodos es idempotente pero NO seguro?",
+   "opciones": [
+    "GET",
+    "POST",
+    "PUT",
+    "CONNECT"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p52",
+   "tema": 21,
+   "enunciado": "Según el HTML Living Standard de WHATWG, ¿en qué posición debe aparecer la declaración DOCTYPE dentro de la estructura de un documento HTML?",
+   "opciones": [
+    "En la primera línea, antes del elemento raíz <html>.",
+    "Dentro del elemento <head>, como primera instrucción antes de cualquier metadato.",
+    "Dentro del elemento raíz <html>, como primera instrucción.",
+    "Al inicio del elemento <body>, antes de cualquier contenido visible."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p53",
+   "tema": 21,
+   "enunciado": "Según la especificación XML del W3C, ¿cuántos elementos raíz puede contener un documento XML bien formado?",
+   "opciones": [
+    "Ninguno, si el documento declara un DTD externo que lo define.",
+    "Varios, siempre que estén separados por instrucciones de procesamiento.",
+    "Solo dos: uno para el prólogo y otro para el contenido del documento.",
+    "Solo uno: el elemento raíz, cuyas etiquetas de apertura y cierre no se encuentran dentro del contenido de ningún otro elemento."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p54",
+   "tema": 22,
+   "enunciado": "De acuerdo con el artículo 3 del Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público, indique la opción correcta acerca del contenido accesible de sitios web y apps móviles:",
+   "opciones": [
+    "Incluye la información textual y no textual, documentos y formularios descargables y contenidos multimedia pregrabados, así como el diseño de los dispositivos de interacción como pantallas, teclados y ratones.",
+    "Incluye la información textual y no textual, documentos y formularios descargables, contenidos multimedia pregrabados, interacción bidireccional y la cumplimentación de procesos de identificación, autenticación, firma y pago.",
+    "Los documentos y formularios descargables no están incluidos, por la posibilidad de tratarse de contenidos de terceros que no están bajo el control del sujeto obligado.",
+    "La cumplimentación de procesos de identificación, autenticación, firma y pago no están incluidos, por gestionarse generalmente a través de sistemas de terceros."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p55",
+   "tema": 22,
+   "enunciado": "De acuerdo con el CCN-CERT, ¿cuál de los siguientes NO se considera un mecanismo de Autenticación Multi-Factor (MFA)?",
+   "opciones": [
+    "Contraseña + Token OTP (One Time Password).",
+    "Escáner de Iris + Huella dactilar.",
+    "Contraseña + Escáner de Iris.",
+    "Tarjeta de identificación + Reconocimiento facial."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p56",
+   "tema": 23,
+   "enunciado": "¿Cuál de los siguientes NO es un producto orientado a las pruebas de software?",
+   "opciones": [
+    "Avocado.",
+    "Cucumber.",
+    "TestLink.",
+    "OneTrust."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p57",
+   "tema": 23,
+   "enunciado": "En el contexto de una plataforma de desarrollo colaborativo, ¿qué describe mejor una “pull request”?",
+   "opciones": [
+    "Un comando de Git que obtiene cambios remotos y los integra en la rama local actual.",
+    "Una propuesta para fusionar un conjunto de cambios de una rama en otra.",
+    "Un mecanismo de Git para crear una etiqueta que marque un punto concreto del historial.",
+    "Un mecanismo para que un desarrollador solicite retirar (“pull”) la versión de código actualmente en producción y volver a la versión anterior estable."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p58",
+   "tema": 23,
+   "enunciado": "Señala la respuesta correcta acerca de las pruebas de software:",
+   "opciones": [
+    "Las pruebas de regresión comprueban que los cambios sobre un componente de un sistema de información no introducen un comportamiento no deseado o errores adicionales en otros componentes no modificados.",
+    "Las pruebas de tipo “caja blanca” consideran exclusivamente las entradas y salidas del sistema sin preocuparse por la estructura interna del mismo.",
+    "Las pruebas unitarias sirven para que el usuario del sistema determine su aceptación final, desde el punto de vista de su funcionalidad y rendimiento.",
+    "Las pruebas circunstanciales examinan las interfaces entre grupos de componentes o subsistemas para asegurar que son llamados en las circunstancias adecuadas y que los datos o mensajes que se transmiten son los requeridos."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p59",
+   "tema": 13,
+   "enunciado": "¿Qué formato de disco se puede usar de manera nativa tanto en sistemas operativos Windows, en volúmenes de más de 32 GB, como en macOS Tahoe?",
+   "opciones": [
+    "ExFAT",
+    "APFS",
+    "HFS+",
+    "ReFS"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p60",
+   "tema": 24,
+   "enunciado": "En Linux, para ver en tiempo real el contenido de un fichero de registro a medida que crece, se puede usar el comando:",
+   "opciones": [
+    "tail -r",
+    "tail -f",
+    "tail -w",
+    "tail -u"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p61",
+   "tema": 24,
+   "enunciado": "Una tarea en el Crontab de Linux con la especificación de tiempo 0 5 8 11 * se ejecutará:",
+   "opciones": [
+    "A las 00:05 del día 11 de agosto.",
+    "A las 05:00 del día 8 de noviembre.",
+    "A las 05:00 del día 11 de agosto.",
+    "A las 00:05 del día 8 de noviembre."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p62",
+   "tema": 25,
+   "enunciado": "En el ámbito de la virtualización de sistemas, un hipervisor de tipo 1 se caracteriza por:",
+   "opciones": [
+    "Ejecutarse como una aplicación sobre un sistema operativo anfitrión.",
+    "Ejecutarse directamente sobre el hardware físico sin necesidad de un sistema operativo anfitrión.",
+    "Requerir almacenamiento compartido para funcionar correctamente.",
+    "Limitar la ejecución a una única máquina virtual por host."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p63",
+   "tema": 25,
+   "enunciado": "En sistemas de almacenamiento virtualizado, ¿cuál de las siguientes es una diferencia entre un snapshot y una copia de seguridad?",
+   "opciones": [
+    "El snapshot garantiza la conservación permanente de los datos de un sistema, mientras que la copia de seguridad es temporal.",
+    "El snapshot sustituye completamente a la copia de seguridad cuando existe redundancia en el almacenamiento.",
+    "El snapshot replica los datos en un sistema independiente, mientras que la copia de seguridad se mantiene en el mismo sistema.",
+    "Un snapshot es una captura del estado completo de un sistema o conjunto de datos en un momento específico, mientras que un backup consiste en crear una réplica exacta de los datos originales con el propósito de restaurarlos en caso de pérdida, daño o error."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p64",
+   "tema": 26,
+   "enunciado": "¿Qué comando de Docker permite crear e iniciar un nuevo contenedor, descargando la imagen si es necesario, y ejecutar en el contenedor un comando especificado?",
+   "opciones": [
+    "docker run",
+    "docker start",
+    "docker exec",
+    "docker play"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p65",
+   "tema": 26,
+   "enunciado": "De los componentes de Kubernetes que forman el plano de control y que toman decisiones globales sobre el clúster, ¿cuál es responsable de decidir en qué nodo debe ejecutarse un Pod basándose en los recursos disponibles?",
+   "opciones": [
+    "kube-apiserver",
+    "etcd",
+    "kube-scheduler",
+    "kube-controller-manager"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p66",
+   "tema": 24,
+   "enunciado": "Al administrar la seguridad de usuarios en Windows Server, ¿qué objeto de Directorio Activo (AD) permite aplicar políticas de contraseña diferentes a usuarios o grupos específicos dentro de un mismo dominio?",
+   "opciones": [
+    "Password Settings Object (PSO).",
+    "Group Policy Container (GPC).",
+    "Fine-Grained Schema Object (FGSO).",
+    "Account Lockout Controller (ALC)."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p67",
+   "tema": 27,
+   "enunciado": "Dentro de la administración de seguridad en switches, ¿en qué consiste una dirección MAC de tipo \"sticky\"?",
+   "opciones": [
+    "Es una dirección aprendida dinámicamente que se convierte en parte de la configuración en ejecución y puede guardarse de forma permanente.",
+    "Es una dirección que se borra automáticamente de la tabla de direcciones tras un reinicio del dispositivo.",
+    "Es una dirección a través de la cual, si se recibe una BPDU cualquiera, el puerto se apaga automáticamente.",
+    "Es una dirección que permite al puerto del switch entrar en modo \"forwarding\" ignorando el protocolo Spanning Tree."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p68",
+   "tema": 28,
+   "enunciado": "¿Cuál de las siguientes es una base de datos de vulnerabilidades?",
+   "opciones": [
+    "NVD.",
+    "UTM.",
+    "CVDB.",
+    "SCAP."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p69",
+   "tema": 28,
+   "enunciado": "De acuerdo con las recomendaciones del CCN-CERT, un requisito para una contraseña robusta es:",
+   "opciones": [
+    "Tener al menos 7 caracteres.",
+    "Incluir datos del usuario, como su nombre o fecha de nacimiento.",
+    "Usar frases cortas sin sentido.",
+    "Apuntar la contraseña en un papel guardado en un bolso o cartera personal."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p70",
+   "tema": 28,
+   "enunciado": "Según el estándar ANSI/TIA 942-B, la zona de un Centro de Procesamiento de Datos donde se ubican elementos finales, como un servidor o un mainframe, se denomina:",
+   "opciones": [
+    "MDA (Main Distribution Area).",
+    "EDA (Equipment Distribution Area).",
+    "HDA (Horizontal Distribution Area).",
+    "IDA (Intermediate Distribution Area)."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p71",
+   "tema": 28,
+   "enunciado": "Dentro del modelo de referencia OSI, ¿qué capa tiene como función principal la negociación de la sintaxis de transferencia y la aplicación de transformaciones de datos tales como el cifrado y la compresión?",
+   "opciones": [
+    "Capa de sesión.",
+    "Capa de presentación.",
+    "Capa de aplicación.",
+    "Capa de transporte."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p72",
+   "tema": 29,
+   "enunciado": "En el contexto de las redes de comunicaciones, ¿cuál es una característica definitoria de la conmutación de circuitos frente a la conmutación de paquetes?",
+   "opciones": [
+    "El aprovechamiento del ancho de banda es más eficiente al ser compartido por múltiples usuarios.",
+    "Cada unidad de información o paquete puede seguir una ruta distinta hacia el destino.",
+    "Se establece un camino físico o lógico dedicado y exclusivo entre los nodos durante la comunicación.",
+    "Los datos se almacenan en los nodos intermedios antes de ser reenviados."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p73",
+   "tema": 30,
+   "enunciado": "Dada la red 10.0.0.0/8, se necesitan crear 600 subredes. ¿Cuál es la máscara de subred mínima que satisface este requisito?",
+   "opciones": [
+    "/17",
+    "/18",
+    "/16",
+    "/19"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p74",
+   "tema": 30,
+   "enunciado": "Según establece la RFC 8200, ¿cuál es el propósito del campo \"Hop Limit\" en la cabecera fija de IPv6?",
+   "opciones": [
+    "Determinar la prioridad de la calidad de servicio (QoS) del paquete.",
+    "Indicar el número máximo de saltos que un paquete puede dar antes de ser descartado.",
+    "Especificar el tamaño total de la carga útil del paquete.",
+    "Identificar el tipo de cabecera de extensión que sigue a la cabecera fija."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p75",
+   "tema": 30,
+   "enunciado": "¿Cuál es una de las principales ventajas técnicas de TLS 1.3 respecto a TLS 1.2?",
+   "opciones": [
+    "Aumenta el número de pasos de verificación en el handshake para asegurar que la clave sea más larga.",
+    "Elimina el uso de certificados digitales, basándose únicamente en contraseñas de un solo uso (OTP).",
+    "Obliga a que el cliente y el servidor se encuentren en la misma subred física.",
+    "Permite completar el handshake en un solo viaje de ida y vuelta (1-RTT), reduciendo la latencia."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p76",
+   "tema": 31,
+   "enunciado": "En una interacción cliente-servidor mediante HTTP, ¿qué clase de códigos de estado indican que se ha producido un error por parte del cliente?",
+   "opciones": [
+    "Códigos 2xx",
+    "Códigos 3xx",
+    "Códigos 4xx",
+    "Códigos 5xx"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p77",
+   "tema": 32,
+   "enunciado": "Dentro de las amenazas dirigidas al puesto del usuario, ¿en qué consiste la técnica de \"Pharming\" para la obtención ilícita de credenciales?",
+   "opciones": [
+    "En la alteración del proceso de resolución de nombres (fichero hosts o caché DNS) para redirigir al usuario a una página web falsa, incluso si este escribe la dirección correcta en el navegador.",
+    "En el envío masivo de correos electrónicos suplantando la identidad de una entidad financiera para que el usuario pinche en un enlace malicioso.",
+    "En la instalación de un programa malicioso que registra todas las pulsaciones de teclas realizadas en un dispositivo infectado.",
+    "En el uso de técnicas de ingeniería social telefónica con las que se suplanta la identidad de una empresa, organización o persona de confianza, con el fin de obtener información personal y sensible."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p78",
+   "tema": 32,
+   "enunciado": "En el diseño de una arquitectura de red segura, ¿qué configuración perimetral permite aislar los servidores que ofrecen servicios al exterior, impidiendo que una intrusión en estos comprometa directamente la red interna?",
+   "opciones": [
+    "La implementación de una red privada virtual (VPN) de acceso remoto para todos los usuarios externos.",
+    "La creación de una zona desmilitarizada (DMZ) mediante el uso de cortafuegos que segmenten el tráfico.",
+    "El uso de un único sistema de detección de intrusiones (IDS) configurado en modo promiscuo en el núcleo de la red.",
+    "La asignación de direcciones IP públicas directamente a los terminales de los usuarios internos."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p79",
+   "tema": 33,
+   "enunciado": "¿Cuál es una función de los terminadores en una topología física de bus?",
+   "opciones": [
+    "Amplificar la señal para que llegue a los nodos más lejanos.",
+    "Absorber la energía de la señal al final de la transmisión y evitar interferencias causadas por la reflexión de la señal.",
+    "Asignar automáticamente direcciones IP a los nodos.",
+    "Cifrar el tráfico para que no sea interceptado."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p80",
+   "tema": 33,
+   "enunciado": "El estándar IEEE 802.1Q es un estándar internacional para el etiquetado de VLANs (Virtual LANs) en redes Ethernet. ¿Qué campo de la cabecera 802.1Q (VLAN) permite definir 8 niveles de prioridad de tráfico (Class of Service)?",
+   "opciones": [
+    "VID (VLAN ID).",
+    "CFI (Canonical Format Indicator).",
+    "PCP (Priority Code Point).",
+    "TPID (Tag Protocol Identifier)."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "pr01",
+   "tema": 6,
+   "enunciado": "En relación con la Agenda España Digital 2026, indique la respuesta correcta:",
+   "opciones": [
+    "La Dirección General del Dato es la entidad ejecutora de las iniciativas propuestas en los distintos ejes de acción del Plan de Impulso de los Espacios de Datos Sectoriales.",
+    "Una de las prioridades de la Estrategia de Tecnologías Cuánticas de España es demostrar el impacto de la sensórica y metrología cuánticas.",
+    "La coordinación del Proyecto ALIA está a cargo de la Agencia Española de Supervisión de la Inteligencia Artificial.",
+    "Actúa en dos dimensiones fundamentales: infraestructuras y tecnología, y servicios públicos."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr02",
+   "tema": 28,
+   "enunciado": "De acuerdo con el CCN-CERT, solo se autorizan los métodos de Key Exchange que proporcionen una fortaleza de seguridad de, al menos:",
+   "opciones": [
+    "192 bits.",
+    "128 bits.",
+    "112 bits.",
+    "256 bits."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr03",
+   "tema": 5,
+   "enunciado": "De conformidad con el artículo 79 de la Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI, ¿cuál de las siguientes infracciones se califica como grave?",
+   "opciones": [
+    "La obstrucción o negativa absoluta a la actuación de los servicios de inspección correspondientes en el cumplimiento de los mandatos establecidos en esta ley.",
+    "El acoso discriminatorio, cuando no constituya infracción penal, por razón de orientación e identidad sexual, expresión de género o características sexuales.",
+    "La elaboración, utilización o difusión en centros educativos de libros de texto y materiales didácticos que presenten a las personas como superiores o inferiores en dignidad humana en función de su orientación e identidad sexual, expresión de género o características sexuales.",
+    "La victimización secundaria, entendida como el incumplimiento por parte de las Administraciones públicas de las obligaciones de atención previstas en esta ley que den lugar a un nuevo daño psicológico para la víctima."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr04",
+   "tema": 12,
+   "enunciado": "¿Cuál de los siguientes algoritmos de ordenación se ejecuta en tiempo lineal?",
+   "opciones": [
+    "Heapsort.",
+    "Mergesort.",
+    "Radix.",
+    "Quicksort."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr05",
+   "tema": 29,
+   "enunciado": "¿Cuántos canales Bluetooth Low Energy (LE) utiliza el mecanismo Extended Advertising introducido en Bluetooth Core 5.0?",
+   "opciones": [
+    "3 canales.",
+    "22 canales.",
+    "37 canales.",
+    "40 canales."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  }
+ ]
+}

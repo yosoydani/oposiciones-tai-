@@ -1,0 +1,399 @@
+{
+ "titulo": "Examen 2022 · libre · Supuesto práctico I",
+ "fuente": "oficial",
+ "examen": "TAI-L2022",
+ "parte": "supuesto1",
+ "tema": null,
+ "convocatoria": "2022 · libre",
+ "minutos": 23,
+ "origen": "OEP 2020, 2021 y 2022",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/2194858/Cuestionario+TAI-L_2023.pdf/505d8c94-69a3-2971-b013-76c83e442ba1",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/2194858/PlantillaRespuestas+DEFINITIVA+TAI-L_oep2022.pdf/54977d89-8c20-cb49-d715-23cb72681c35",
+ "contextos": {
+  "s1": "Se va a desarrollar un sistema que permitirá a una persona (interesado) otorgar permiso a otra (representante) para que actúe en su\nnombre ante la Administración en un determinado trámite. El sistema contará con los siguientes módulos:\n• Un frontal web (Punto de Acceso General) que recoge todos los trámites de la Administración y donde el interesado puede\notorgar la representación.\n• Un proceso que tramita las peticiones de representación, envía notificaciones PUSH a los representantes y recaba los\nconsentimientos producidos.\n• Un módulo de gestión para el personal funcionario de atención al público.\nCuando el interesado pulse el botón Otorgar representación en un trámite, el sistema generará un enlace único con caducidad, que\nserá enviado por notificación PUSH al representante.\nEn el momento en que el representante acceda al enlace tendrá disponible la acción Obtener PIN y deberá usar la aplicación móvil\nCl@ve PIN para obtener un PIN válido.\nEl funcionario, en el módulo de gestión, podrá comparar el PIN generado para la operación con el que le ofrece el representante,\npermitiendo el trámite si estos coinciden.\nUn interesado podrá solicitar representación para tantos trámites como considere y cada trámite podrá ser solicitado por un número\ncualquiera de interesados, pero una representación solo es válida para un trámite a la vez. Asimismo, cada representante podrá obtener\npermisos en cualquier número de trámites."
+ },
+ "preguntas": [
+  {
+   "id": "s101",
+   "tema": 18,
+   "enunciado": "En el diagrama de clases la relación existente entre “Solicitud Representación” y “Trámite”, ¿qué multiplicidades serían compatibles con los requisitos planteados en el enunciado?",
+   "opciones": [
+    "‘1’ en el recuadro “SR>T” y ‘1’ en el recuadro “T>SR”.",
+    "‘1’ en el recuadro “SR>T” y ‘0..N’ en el recuadro “T>SR”.",
+    "‘0..N’ en el recuadro “SR>T” y ‘1’ en el recuadro “T>SR”.",
+    "‘1..N’ en el recuadro “SR>T” y ‘0..N’ en el recuadro “T>SR”."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s102",
+   "tema": 19,
+   "enunciado": "En Java SE 17, ¿con qué visibilidad se deben generar los atributos de la clase Data Access Object Solicitudes si se quiere tener acceso directamente desde cualquier otro objeto, sin mediación de métodos?",
+   "opciones": [
+    "Se usará el modificador \"public\".",
+    "Se usará el modificador \"protected\".",
+    "No se usará ningún modificador.",
+    "Se usará el modificador \"private\"."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s103",
+   "tema": 19,
+   "enunciado": "En Java SE 17, ¿cuál de los siguientes tipos de colección no admite duplicados?",
+   "opciones": [
+    "List",
+    "Stack",
+    "Collection",
+    "Set"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s104",
+   "tema": 17,
+   "enunciado": "Para crear una tabla llamada Usuario, ¿qué sentencia SQL debemos ejecutar?",
+   "opciones": [
+    "ALTER TABLE Usuario (idUsuario bigint PRIMARY KEY, nombre varchar(255));",
+    "INSERT TABLE Usuario (idUsuario bigint PRIMARY KEY, nombre varchar(255));",
+    "CREATE TABLE Usuario (idUsuario bigint PRIMARY KEY, nombre varchar(255));",
+    "DROP TABLE Usuario (idUsuario bigint PRIMARY KEY, nombre varchar(255));"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s105",
+   "tema": 17,
+   "enunciado": "Si fuese el motor de Base de Datos ORACLE, indique cuál de los siguientes es un lenguaje de procedimiento cuya sintaxis permite insertar sentencias SQL y se almacena compilado dentro de la base de datos:",
+   "opciones": [
+    "TRANSACT SQL",
+    "PL/SQL",
+    "FORTRAN",
+    "COBOL"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s106",
+   "tema": 18,
+   "enunciado": "Se ha heredado una librería compilada que realiza la conexión a un importante servicio de comprobación de Cl@ve PIN, ¿qué patrón de diseño permite reutilizar este objeto?",
+   "opciones": [
+    "Adaptador (Adapter)",
+    "Singleton",
+    "Chain of responsibility (Cadena de responsabilidad)",
+    "Iterador (Iterator)"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s107",
+   "tema": 18,
+   "enunciado": "La última versión del estándar de UML es:",
+   "opciones": [
+    "2.5",
+    "2.4.1",
+    "2.4",
+    "3.0"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s108",
+   "tema": 17,
+   "enunciado": "En UML un diagrama de componentes:",
+   "opciones": [
+    "Describe la estructura del sistema mostrando las clases del sistema, sus atributos y relaciones entre ellas.",
+    "Describe cómo un sistema de software se divide en componentes y muestra las dependencias entre ellos.",
+    "Sirve para modelar el hardware utilizado en las implementaciones del sistema, los componentes implementados en el hardware y las asociaciones entre componentes en un momento específico.",
+    "Muestra una vista completa o parcial de la estructura de un sistema modelado en un momento específico."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s109",
+   "tema": 19,
+   "enunciado": "¿Qué framework se puede usar para aplicaciones de escritorio nativas .NET?",
+   "opciones": [
+    ".NET MAUI",
+    "Blazor Hybrid",
+    "JavaFX",
+    "WebView"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s110",
+   "tema": 22,
+   "enunciado": "¿Cuál es la normativa que define los requisitos de accesibilidad de los sitios web y aplicaciones móviles de los organismos del sector público?",
+   "opciones": [
+    "Orden Ministerial 1112/2018, de 7 de septiembre.",
+    "Ley Orgánica 1112/2018, de 7 de septiembre.",
+    "Ley 1112/2018, de 7 de septiembre.",
+    "Real Decreto 1112/2018, de 7 de septiembre."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s111",
+   "tema": 19,
+   "enunciado": "En nuestra aplicación Java, ¿qué paquetes usaríamos para establecer la conexión a la base de datos de NOTIFICACION?",
+   "opciones": [
+    "java.database",
+    "javax.naming y javax.sql",
+    "javax.io y javax.servlet",
+    "javax.servlet"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s112",
+   "tema": 19,
+   "enunciado": "Se quiere desarrollar un microservicio para que el personal funcionario pueda consultar el estado de una notificación enviada. ¿Qué especificación de la comunidad, alineada con Jakarta EE Core Profile, es la indicada para desarrollarlo?",
+   "opciones": [
+    "Jakarta Authentication",
+    "Jakarta Batch",
+    "Microprofile",
+    "Jakarta Connectors"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s113",
+   "tema": 22,
+   "enunciado": "En el equipo de desarrollo se ha decidido usar Selenium WebDriver para:",
+   "opciones": [
+    "Mejorar la accesibilidad de las páginas web facilitando audios a partir del texto.",
+    "Automatizar la ejecución de pruebas en el navegador.",
+    "Minimizar el tiempo de carga de la página web.",
+    "Diseñar páginas web adaptables."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s114",
+   "tema": 23,
+   "enunciado": "¿Cuál es una herramienta de análisis de seguridad y calidad de código?",
+   "opciones": [
+    "SonarQube",
+    "SonarCode",
+    "SonarCuality",
+    "SonarSrc"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s115",
+   "tema": null,
+   "enunciado": "¿Cuál de los siguientes es un protocolo de seguridad usado en las comunicaciones HTTP?",
+   "opciones": [
+    "TLS",
+    "SSL",
+    "STARTTLS",
+    "WPA2"
+   ],
+   "correcta": null,
+   "explicacion": null,
+   "anulada": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s116",
+   "tema": null,
+   "enunciado": "¿Qué tecnología de las siguientes es adecuada para implementar la recepción de notificaciones nativas en los teléfonos inteligentes del representante y del interesado?",
+   "opciones": [
+    "WebView",
+    "Mobile push",
+    "CDMA",
+    "Wi-Fi"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s117",
+   "tema": 21,
+   "enunciado": "¿Cuál de los siguientes lenguajes de estilos emplearía si le piden modificar el color de un botón en el frontal web?",
+   "opciones": [
+    "XML",
+    "SGML",
+    "XSL",
+    "CSS"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s118",
+   "tema": 22,
+   "enunciado": "¿Cómo se conoce el conjunto de pautas, componentes y herramientas que respaldan las mejores prácticas de diseño de la interfaz de usuario, perteneciente a Google?",
+   "opciones": [
+    "WCAG 2.1",
+    "WAI-ARIA",
+    "Material Design",
+    "Inclusive Design"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s119",
+   "tema": 22,
+   "enunciado": "¿A qué corresponde el ataque conocido por el acrónimo CSRF, que permite al atacante forzar al usuario a ejecutar acciones no deseadas en la aplicación web en la que está actualmente autenticado?",
+   "opciones": [
+    "Cross Site Request Forgery",
+    "Cross Site Repeat Forgery",
+    "Cross Site Reduction Forgery",
+    "Cross Send Request Forgery"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s120",
+   "tema": 23,
+   "enunciado": "Señale el software que permite automatizar la construcción y despliegue de un proyecto utilizando el concepto de pipelines:",
+   "opciones": [
+    "Jenkins",
+    "RabbitMQ",
+    "Apache Kafka",
+    "Subversion"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r01",
+   "tema": null,
+   "enunciado": "En JSON, ¿qué valor mostraría la consola si ejecutamos este código: console.log(4 * 3 ** 2)?",
+   "opciones": [
+    "36",
+    "-1",
+    "24",
+    "Null"
+   ],
+   "correcta": null,
+   "explicacion": null,
+   "reserva": true,
+   "anulada": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r02",
+   "tema": 21,
+   "enunciado": "¿Qué característica o atributo de seguridad de las cookies, permite que el navegador solo envíe la cookie al servidor si ésta se originó en el mismo sitio web al que estamos intentando contactar?",
+   "opciones": [
+    "Domain",
+    "SameSite",
+    "Secure",
+    "HttpOnly"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r03",
+   "tema": 16,
+   "enunciado": "En PHP, señale qué variable de entorno se puede usar para almacenar datos del inicio de sesión de un usuario:",
+   "opciones": [
+    "$_SESSION",
+    "$SESSION",
+    "$_GLOBAL",
+    "$GLOBAL"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r04",
+   "tema": 21,
+   "enunciado": "¿Qué conjunto de herramientas de presentación y comportamiento ofrece componentes para trabajar en la parte dinámica del frontal web HTML?",
+   "opciones": [
+    "NumPy",
+    "ActiveMQ",
+    "Bootstrap",
+    "TensorFlow"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r05",
+   "tema": 16,
+   "enunciado": "¿Qué método estático usaría para convertir una cadena JSON en un valor u objeto javascript?:",
+   "opciones": [
+    "JSON.parse()",
+    "JSON.stringify()",
+    "let obj = JSON",
+    "let obj = New JSON"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  }
+ ]
+}

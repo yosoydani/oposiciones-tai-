@@ -1,6 +1,33 @@
 {
   "temario": "temario.json",
   "bancos": [
+    "oficial-2019-libre-cuestionario.json",
+    "oficial-2019-libre-supuesto1.json",
+    "oficial-2019-libre-supuesto2.json",
+    "oficial-2019-pi-cuestionario.json",
+    "oficial-2019-pi-supuesto1.json",
+    "oficial-2019-pi-supuesto2.json",
+    "oficial-2022-libre-cuestionario.json",
+    "oficial-2022-libre-supuesto1.json",
+    "oficial-2022-libre-supuesto2.json",
+    "oficial-2022-pi-cuestionario.json",
+    "oficial-2022-pi-supuesto1.json",
+    "oficial-2022-pi-supuesto2.json",
+    "oficial-2024-libre-cuestionario.json",
+    "oficial-2024-libre-supuesto1.json",
+    "oficial-2024-libre-supuesto2.json",
+    "oficial-2024-pi-cuestionario.json",
+    "oficial-2024-pi-supuesto1.json",
+    "oficial-2024-pi-supuesto2.json",
+    "oficial-2025-libre-cuestionario.json",
+    "oficial-2025-libre-ext-cuestionario.json",
+    "oficial-2025-libre-ext-supuesto1.json",
+    "oficial-2025-libre-ext-supuesto2.json",
+    "oficial-2025-libre-supuesto1.json",
+    "oficial-2025-libre-supuesto2.json",
+    "oficial-2025-pi-cuestionario.json",
+    "oficial-2025-pi-supuesto1.json",
+    "oficial-2025-pi-supuesto2.json",
     "t10-propio.json"
   ]
 }

@@ -1,0 +1,790 @@
+{
+ "titulo": "Examen 2019 · promoción interna · Cuestionario",
+ "fuente": "oficial",
+ "examen": "TAI-PI2019",
+ "parte": "cuestionario",
+ "tema": null,
+ "convocatoria": "2019 · promoción interna",
+ "minutos": 60,
+ "origen": "OEP 2019",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/1925806/cues_1er_ejer_TAI-P_oep19_154AB89SD658.pdf/69f68075-790a-96eb-fe71-68758f73f4de",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/1925806/Plantilla_definitivaTAI-PEjercicionico2019_154AB89SD658.pdf/7d5f23e1-b935-d873-bd2a-61cd84b65602",
+ "contextos": {},
+ "preguntas": [
+  {
+   "id": "p01",
+   "tema": 6,
+   "enunciado": "Según el artículo 11 del Real Decreto 1553/2005, por el que se regula la expedición del documento nacional de identidad y sus certificados de firma electrónica, ¿cuáles son todos los tipos de certificados definidos que se incluyen en el chip incorporado a la tarjeta del DNI electrónico?",
+   "opciones": [
+    "Un certificado reconocido de Autenticación.",
+    "Un certificado reconocido de Firma.",
+    "Certificados reconocidos de Autenticación y de Firma.",
+    "Certificados reconocidos de Autenticación y de Firma, y certificado electrónico de la autoridad emisora."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p02",
+   "tema": 6,
+   "enunciado": "La nueva Agenda Digital \"España Digital 2025\" recoge un conjunto de medidas, reformas e inversiones. ¿En cuántos ejes se articulan estas medidas?",
+   "opciones": [
+    "6",
+    "9",
+    "12",
+    "10"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p03",
+   "tema": 7,
+   "enunciado": "Con respecto a la prescripción de las sanciones referidas a la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales, señale cuál de estas afirmaciones es correcta:",
+   "opciones": [
+    "Las sanciones por importe igual o inferior a 40.000 euros, prescriben en el plazo de diez meses.",
+    "Las sanciones por importe igual o inferior a 40.000 euros, prescriben en el plazo de un año.",
+    "Las sanciones por importe igual o inferior a 40.000 euros, prescriben en el plazo de dos años",
+    "Las sanciones por importe igual o inferior a 40.000 euros, prescriben en el plazo de tres años."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p04",
+   "tema": 7,
+   "enunciado": "Según la Ley Orgánica 3/2018, de Protección de Datos y garantía de los derechos digitales, en su Título III capítulo II, donde se trata el ejercicio de los derechos en materia de protección de datos, ¿cuál de los siguientes es un derecho que se puede ejercer?",
+   "opciones": [
+    "Derecho de indemnización.",
+    "Derecho de custodia.",
+    "Derecho de oposición.",
+    "Derecho al cifrado de la información."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p05",
+   "tema": 8,
+   "enunciado": "La guía de auditoría, que identifica los requisitos a cumplir en conformidad con el Esquema Nacional de Interoperabilidad (ENI), contiene un conjunto de controles apropiados para evaluar el cumplimiento de lo previsto en el ENI, agrupados en tres categorías:",
+   "opciones": [
+    "Marco organizativo, Marco operacional y Medidas de protección.",
+    "Marco organizativo, Marco semántico y Marco de seguridad.",
+    "Evaluación organizativa, Evaluación semántica y Evaluación temporal.",
+    "Marco organizativo, Marco operacional y Medidas técnicas."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p06",
+   "tema": 8,
+   "enunciado": "Según el artículo 11 de la Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas, éstas NO requerirán a los interesados el uso obligatorio de firma para:",
+   "opciones": [
+    "Formular solicitudes.",
+    "Acceso a notificaciones.",
+    "Interponer recursos.",
+    "Desistir de acciones."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p07",
+   "tema": 4,
+   "enunciado": "De acuerdo con el artículo 36.2 de la Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno, formará parte de la Comisión de Transparencia y Buen Gobierno:",
+   "opciones": [
+    "Un experto propuesto por el Consejo de Consumidores y Usuarios.",
+    "Un representante de la Autoridad Independiente de Responsabilidad Fiscal.",
+    "Un representante del Consejo General del Poder Judicial.",
+    "Un experto propuesto por la Federación Española de Municipios y Provincias."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p08",
+   "tema": 4,
+   "enunciado": "¿Qué número de Objetivos de Desarrollo Sostenible (ODS) se incluyen en la Agenda 2030?",
+   "opciones": [
+    "15",
+    "12",
+    "16",
+    "17"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p09",
+   "tema": 5,
+   "enunciado": "En relación a la Ley Orgánica 3/2007, para la igualdad efectiva de mujeres y hombres. En el caso de las empresas, ¿cuándo se debe elaborar y aplicar un plan de igualdad?",
+   "opciones": [
+    "Siempre.",
+    "Es voluntario.",
+    "En el caso de las empresas de cincuenta o más trabajadores o, adicionalmente, cuando así se establezca en el convenio colectivo que sea de aplicación en los términos previstos en el mismo.",
+    "Sólo en el caso de las empresas de cincuenta o más trabajadores."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p10",
+   "tema": 5,
+   "enunciado": "Según el artículo 26 de la Ley 39/2006, de Promoción de la Autonomía Personal y Atención a las personas en situación de dependencia, señale la opción correcta en relación a la clasificación de los grados de dependencia:",
+   "opciones": [
+    "Grado I. Dependencia moderada: cuando la persona necesita ayuda para realizar varias actividades básicas de la vida diaria, al menos una vez al día o tiene necesidades de apoyo intermitente o limitado para su autonomía personal.",
+    "Grado II. Gran dependencia: cuando la persona necesita ayuda para realizar varias actividades básicas de la vida diaria una o dos veces al día, pero no quiere el apoyo permanente de un cuidador o tiene necesidades de apoyo extenso para su autonomía personal.",
+    "Grado III. Dependencia total: cuando la persona necesita ayuda para realizar varias actividades básicas de la vida diaria varias veces al día y, por su pérdida total de autonomía necesita el apoyo indispensable y continuo de otra persona o tiene necesidades de apoyo generalizado para su autonomía personal.",
+    "Grado IV. Dependencia máxima: cuando la persona necesita constantemente ayuda para realizar cualquier actividad básica de la vida diaria."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p11",
+   "tema": 11,
+   "enunciado": "¿Cuál de los siguientes es un tipo de almacenamiento de datos volátil?",
+   "opciones": [
+    "Memoria de acceso aleatorio dinámico.",
+    "Memoria USB.",
+    "Memoria flash.",
+    "Discos ópticos."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p12",
+   "tema": 11,
+   "enunciado": "Indique la velocidad máxima de transferencia del USB 4.0:",
+   "opciones": [
+    "Hasta 20 Gbps.",
+    "Hasta 30 Gbps.",
+    "Hasta 40 Gbps.",
+    "Hasta 50 Gbps."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p13",
+   "tema": 12,
+   "enunciado": "Si un árbol binario lo recorremos siguiendo el orden siguiente: raíz, subárbol izquierdo, subárbol derecho, ¿cuál de los siguientes tipos de recorrido estamos utilizando?",
+   "opciones": [
+    "Preorden",
+    "Inorden",
+    "Postorden",
+    "Reorden"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p14",
+   "tema": 12,
+   "enunciado": "El algoritmo de ordenación que consiste en comparar pares de elementos adyacentes e intercambiarlos entre sí, si no están en orden, hasta que todo el conjunto de elementos se encuentre ordenado, es conocido como:",
+   "opciones": [
+    "Selección",
+    "Burbuja",
+    "Inserción",
+    "Quicksort"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p15",
+   "tema": 12,
+   "enunciado": "¿En Linux, qué tipo de proceso se corresponde con la característica de que, habiendo concluido, aún está presente en la tabla de procesos?",
+   "opciones": [
+    "Proceso zombie.",
+    "Proceso perdido.",
+    "Proceso huérfano.",
+    "Proceso demonio."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p16",
+   "tema": 12,
+   "enunciado": "En un entorno UNIX, tenemos los permisos \"rwxr-x-r–\" sobre un determinado fichero. ¿Qué acción o acciones puede hacer un usuario del grupo del propietario del fichero?",
+   "opciones": [
+    "Sólo leer.",
+    "Sólo leer y ejecutar.",
+    "Sólo leer, escribir y ejecutar.",
+    "Sólo ejecutar."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p17",
+   "tema": 15,
+   "enunciado": "Entre las restricciones aplicables al modelo relacional de datos, \"la integridad de la entidad\" hace referencia a que:",
+   "opciones": [
+    "El conjunto de valores que pueden asociarse a esa entidad está acotado.",
+    "En una relación, el valor de la clave ajena debe ser igual al de la clave primaria.",
+    "Una clave ajena pueden admitir nulos, siempre y cuando lo permita el dominio.",
+    "Una clave primaria no puede ser nula, ni ninguno de los atributos que la componen."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p18",
+   "tema": 15,
+   "enunciado": "Según Métrica v3, en un diagrama de flujo de datos, ¿qué componente representa una funcionalidad que tiene que llevar a cabo el sistema para transformar o manipular datos?",
+   "opciones": [
+    "Entidad externa.",
+    "Proceso.",
+    "Almacén de datos.",
+    "Flujo de datos."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p19",
+   "tema": 15,
+   "enunciado": "En diseño de bases de datos, al conjunto de valores que puede tomar un atributo se le denomina:",
+   "opciones": [
+    "Entidad",
+    "Recorrido",
+    "Cardinalidad",
+    "Dominio"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p20",
+   "tema": 14,
+   "enunciado": "¿Cuál es uno de los motivos para aplicar la desnormalización en una base de datos?",
+   "opciones": [
+    "Mejorar el rendimiento.",
+    "Disminución de la redundancia de los datos.",
+    "Disminución del tamaño de la base de datos.",
+    "Mejor actualización del modelo de datos."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p21",
+   "tema": 14,
+   "enunciado": "Indique cuál de las siguientes NO es una de las Reglas de Codd:",
+   "opciones": [
+    "Regla de la independencia física de los datos.",
+    "Regla de no subversión.",
+    "Regla de la inserción, actualización y supresión de bajo nivel.",
+    "Regla de la actualización de vistas."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p22",
+   "tema": 16,
+   "enunciado": "En el lenguaje C++, si hablamos de un bucle con estructura do…while:",
+   "opciones": [
+    "Sólo se ejecuta si la condición del bucle es verdadera.",
+    "Evalúa la condición del bucle y después se ejecuta al menos una vez.",
+    "Se ejecuta una vez antes de evaluar la condición del bucle.",
+    "Se ejecuta una sola vez siempre y cuando sea verdadera la condición del bucle."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p23",
+   "tema": 17,
+   "enunciado": "En SQL, ¿cuál es la sentencia correcta para actualizar la columna 'City' de la tabla 'Customers' con el valor 'PARIS'?",
+   "opciones": [
+    "UPDATE_TABLE SET TABLE='Customers' AND City='PARIS'",
+    "UPDATE City='PARIS' WHERE TABLE='Customers'",
+    "UPDATE Customers SET City='PARIS'",
+    "CREATE NEW VALUE('PARIS') FOR City ON TABLE(Customers) REWRITE"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p24",
+   "tema": 17,
+   "enunciado": "En relación al lenguaje SQL, ¿cuál de las siguientes afirmaciones es verdadera?",
+   "opciones": [
+    "CREATE es una sentencia de Lenguaje de Manipulación de Datos (DML).",
+    "INSERT es una sentencia de Lenguaje de Definición de Datos (DDL).",
+    "GRANT es una sentencia de Lenguaje de Control de Datos (DCL).",
+    "ALTER es una sentencia de Lenguaje de Control de Datos (DCL)."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p25",
+   "tema": 17,
+   "enunciado": "Indique cuáles de las siguientes etiquetas NO fueron introducidas como novedad en HTML5.",
+   "opciones": [
+    "<footer> y <details>",
+    "<header> y <nav>",
+    "<details> y <mark>",
+    "<caption> y <nav>"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p26",
+   "tema": 18,
+   "enunciado": "En relación a la representación de los diagramas de casos de uso del Lenguaje de Modelado Unificado (UML), indique la correcta.",
+   "opciones": [
+    "Los diagramas de casos de uso contienen actores, relaciones y casos de usos.",
+    "Los diagramas de casos de uso contienen almacenes, relaciones y procedimientos.",
+    "Los diagramas de casos de uso contienen actores, relaciones y procedimientos.",
+    "Los diagramas de casos de uso contienen almacenes, relaciones y casos de uso."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p27",
+   "tema": 18,
+   "enunciado": "En lo referente a los patrones de diseño GoF (Gang of Four), indique cuál de los siguientes se corresponde con un patrón de comportamiento:",
+   "opciones": [
+    "Adapter",
+    "Iterator",
+    "Composite",
+    "Builder"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p28",
+   "tema": 20,
+   "enunciado": "Indique cuál de las siguientes opciones corresponde a una API de Java para el procesamiento de documentos en formato XML.",
+   "opciones": [
+    "JNA",
+    "StAX",
+    "JNI",
+    "JPaX"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p29",
+   "tema": 20,
+   "enunciado": "¿Cuál de los siguientes NO es un principio del Manifiesto Ágil?",
+   "opciones": [
+    "El software funcionando es la medida principal de progreso.",
+    "El arte de maximizar la cantidad de trabajo realizado es esencial.",
+    "Los proyectos se desarrollan en torno a individuos motivados.",
+    "Los responsables de negocio y los desarrolladores trabajamos juntos de manera cotidiana durante todo el proyecto."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p30",
+   "tema": 20,
+   "enunciado": "¿Cuál de los siguientes protocolos está asociado al descubrimiento de servicios web?",
+   "opciones": [
+    "LLDP (Link Layer Discovery Protocol).",
+    "UDDI (Universal Description Discovery and Integration).",
+    "WSDP (Web Service Discovery Protocol).",
+    "SSDP (Simple Service Discovery Protocol)."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p31",
+   "tema": 21,
+   "enunciado": "Señale la respuesta correcta en relación a las tecnologías y herramientas de desarrollo front-end:",
+   "opciones": [
+    "Sass, Less y Stylus, son preprocesadores de CSS.",
+    "Postman es una herramienta que sirve para probar la parte de front-end, no permitiendo validar los servicios REST.",
+    "Node js fue construido con el motor de java jre 1.9",
+    "Bootstrap es una herramienta de desarrollo que permite realizar test de los servicios REST, aislando al programador del front-end."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p32",
+   "tema": 22,
+   "enunciado": "Según el WCAG 2.1, ¿qué pauta de las siguientes pertenece al principio Comprensible?",
+   "opciones": [
+    "Adaptable",
+    "Navegable",
+    "Predecible",
+    "Distinguible"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p33",
+   "tema": 22,
+   "enunciado": "Las siglas UI y UX hacen referencia a:",
+   "opciones": [
+    "Interfaz de usuario (User Interface) y experiencia de usuario (User eXperience).",
+    "Innovación para usuarios (User Innovation) y ejemplos de usuario (User eXamples).",
+    "Índice de Unicode (Unicode Index) y pericia en Unicode (Unicode eXpertise).",
+    "Interfaz unidireccional (Unidirectional Interface) y experiencia unidireccional (Unidirectional eXperience)."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p34",
+   "tema": 24,
+   "enunciado": "En los sistemas Linux, el comando pwd permite:",
+   "opciones": [
+    "Mostrar el nombre del directorio de trabajo actual.",
+    "Cambiar la contraseña de un usuario.",
+    "Informar del estado de los procesos.",
+    "Cambiar el directorio de trabajo."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p35",
+   "tema": 24,
+   "enunciado": "En Linux, ¿cuál de las siguientes opciones utilizaría para conocer qué puertos tiene abiertos un servidor?",
+   "opciones": [
+    "ntpq",
+    "ntport",
+    "nmap",
+    "traceroute"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p36",
+   "tema": 25,
+   "enunciado": "¿Cuál de los siguientes NO es un tipo de backup?",
+   "opciones": [
+    "Compartimental",
+    "Diferencial",
+    "Incremental",
+    "Completa"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p37",
+   "tema": 25,
+   "enunciado": "En relación a los sistemas RAID, indique qué configuración permite acceso independiente con paridad distribuida:",
+   "opciones": [
+    "RAID 1",
+    "RAID 3",
+    "RAID 4",
+    "RAID 5"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p38",
+   "tema": 26,
+   "enunciado": "El protocolo SMTP es acrónimo de:",
+   "opciones": [
+    "Secure Mail Transfer Protocol.",
+    "Secure Mail Transaction Protocol.",
+    "Simple Mail Transfer Protocol.",
+    "Simple Managemet Trace Protocol."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p39",
+   "tema": 13,
+   "enunciado": "¿Qué comando se debe ejecutar para mostrar un listado de los servicios en ejecución en un ordenador con sistema operativo Windows 10?",
+   "opciones": [
+    "Net view services",
+    "Net start process",
+    "Net start",
+    "Net start all"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p40",
+   "tema": 13,
+   "enunciado": "Indique cuál de los siguientes es un protocolo orientado a la gestión de los dispositivos de una red:",
+   "opciones": [
+    "SMTP",
+    "SNMP",
+    "HTTP",
+    "IGMPv3"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p41",
+   "tema": 22,
+   "enunciado": "En relación a los riesgos de seguridad en aplicaciones, según OWASP, ¿qué tipo de fallo ocurre cuando datos no confiables son enviados a un intérprete como parte de un comando o consulta?",
+   "opciones": [
+    "Secuencia de comandos en sitios cruzados (XSS).",
+    "Exposición de datos sensibles.",
+    "Redirecciones y reenvíos no validados.",
+    "Inyección."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p42",
+   "tema": 28,
+   "enunciado": "¿Qué tipo de ataque lleva a cabo el virus Ryuk?",
+   "opciones": [
+    "Sniffing",
+    "Ransomware",
+    "Spoofing",
+    "Phishing"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p43",
+   "tema": 28,
+   "enunciado": "¿Cuál de los siguientes algoritmos de cifrado es de clave pública?",
+   "opciones": [
+    "RSA",
+    "Blowfish",
+    "IDEA",
+    "Twofish"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p44",
+   "tema": 28,
+   "enunciado": "Sobre redes inalámbricas, indique cuál de las siguientes afirmaciones es INCORRECTA:",
+   "opciones": [
+    "La frecuencia de 2,4 GHz presenta interferencias con algunas versiones de Bluetooth.",
+    "La seguridad del protocolo WEP es superior a la del protocolo WPA2.",
+    "El protocolo WPA3 surge, entre otros, a raíz del ataque KRACK, mejorando la modalidad de cifrado WPA2-PSK (AES).",
+    "La frecuencia de 5 GHz tiene menor alcance que la de 2,4 GHz."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p45",
+   "tema": 29,
+   "enunciado": "El estándar comercializado con el nombre de Wi-Fi 6 se corresponde con el estándar de IEEE:",
+   "opciones": [
+    "802.11ax",
+    "802.11ac",
+    "802.11ac wave 2",
+    "802.11az"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p46",
+   "tema": 30,
+   "enunciado": "¿Cuál de los siguientes es un protocolo de nivel de transporte de TCP/IP?",
+   "opciones": [
+    "SMTP",
+    "ARP",
+    "UDP",
+    "FTP"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p47",
+   "tema": 30,
+   "enunciado": "El orden ascendente que siguen las capas del modelo OSI es:",
+   "opciones": [
+    "Física, Enlace, Red, Transporte, Sesión, Presentación y Aplicación.",
+    "Física, Enlace, Red, Transporte, Presentación, Sesión y Aplicación.",
+    "Física, Enlace, Transporte, Red, Sesión, Aplicación y Presentación.",
+    "Física, Enlace, Red, Transporte, Sesión, Aplicación y Presentación."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p48",
+   "tema": 31,
+   "enunciado": "¿Cuál de los siguientes registros DNS proporciona información sobre las características básicas del dominio y de la zona en la que se encuentra?",
+   "opciones": [
+    "AAAA",
+    "PTR",
+    "MX",
+    "SOA"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p49",
+   "tema": 32,
+   "enunciado": "¿Cuál de las siguientes herramientas del CCN-CERT se utiliza para la detección de amenazas complejas en el puesto del usuario?",
+   "opciones": [
+    "MARIA",
+    "CLAUDIA",
+    "GLORIA",
+    "ANA"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p50",
+   "tema": 32,
+   "enunciado": "En el contexto de la gestión de dispositivos móviles, qué significan las siglas BYOD:",
+   "opciones": [
+    "Bring Your Own Device.",
+    "Best Year's Open Device.",
+    "Backup Yearly with Online Device.",
+    "Buy Yet-Only Divided Device."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "pr01",
+   "tema": 10,
+   "enunciado": "La arquitectura de ordenadores Harvard:",
+   "opciones": [
+    "Tiene un único espacio de memoria para datos e instrucciones.",
+    "Tiene dos espacios de memoria separados, uno para datos y otro para instrucciones.",
+    "Es un tipo de arquitectura Von Neumann.",
+    "Tiene tres espacios de memoria separados, uno para datos, otro para instrucciones y otro para la memoria no volátil."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr02",
+   "tema": 7,
+   "enunciado": "¿Cuál es la funcionalidad de la herramienta \"FACILITA\"?",
+   "opciones": [
+    "Una herramienta de la Agencia Española de Protección de Datos para el tratamiento de datos personales de escaso riesgo.",
+    "Una herramienta ofrecida por la Administración Pública que facilita la adecuación del plan de actuación para ayudar a las personas con movilidad reducida.",
+    "Una aplicación de código abierto que ofrece la Administración General del Estado para que facilitar la visualización de contenidos multimedia.",
+    "Una aplicación para móviles que ofrece la Agencia Estatal de Administración Tributaria para generar y presentar la declaración de la renta."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr03",
+   "tema": 6,
+   "enunciado": "Según el Esquema Nacional de Seguridad, ¿cuál de las siguientes medidas de seguridad afecta a la dimensión de Trazabilidad?",
+   "opciones": [
+    "Copias de seguridad.",
+    "Sellos de tiempo.",
+    "Cifrado.",
+    "Firma electrónica."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr04",
+   "tema": 18,
+   "enunciado": "En tecnologías de almacenamiento, el término SAS se corresponde con:",
+   "opciones": [
+    "Serial Attached State.",
+    "Solid Attached SCSI.",
+    "Serial Attached SCSI.",
+    "Solid Advanced SCSI."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr05",
+   "tema": 11,
+   "enunciado": "En el contexto de HTML5, si queremos ocultar una parte de la pantalla hasta que un usuario haya hecho \"log in\", utilizaremos:",
+   "opciones": [
+    "El atributo hidden.",
+    "El atributo style del elemento como \"non visible\".",
+    "La etiqueta aside.",
+    "La etiqueta iframe."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  }
+ ]
+}

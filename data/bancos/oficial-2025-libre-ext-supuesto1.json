@@ -1,0 +1,397 @@
+{
+ "titulo": "Examen 2025 · libre · extraordinario · Supuesto práctico I",
+ "fuente": "oficial",
+ "examen": "TAI-L2025ext",
+ "parte": "supuesto1",
+ "tema": null,
+ "convocatoria": "2025 · libre · extraordinario",
+ "minutos": 24,
+ "origen": "Convocatoria 2025, llamamiento extraordinario",
+ "url_cuestionario": "https://sede.inap.gob.es/sites/sede/files/public/2026-07/cuestionario_TAI-L_ext_9QVS9NM8ER_154AB89SD658.pdf",
+ "url_plantilla": "https://sede.inap.gob.es/sites/sede/files/public/2026-10/PlantillarespuestasDefTAI-L-EXTRAORDINARIO_1E0IFRJ3RK_154AB89SD658.pdf",
+ "contextos": {
+  "s1": "Usted forma parte de un grupo de funcionarios de nuevo ingreso que se acaban de incorporar a una Subdirección General de\nTecnologías de la Información y Comunicaciones de un ministerio y una de las primeras tareas que se les encomienda es\ncontinuar el desarrollo de una aplicación que empezó un funcionario que ya no está en la subdirección.\nLa aplicación se compone de un frontend desarrollado con Angular 21 que se comunica con dos APIs:\n• API de persistencia: Desarrollada en ASP.NET 10 con C# 14, expone servicios REST para realizar operaciones de consulta,\nescritura y borrado en una base de datos SQL Server 2025. Además, utiliza Nunit 3.0 para pruebas.\n• API de integración con servicios de la Agencia Estatal de Administración Digital (AEAD): Desarrollada en Java SE\nDevelopment Kit (JDK) 8, expone servicios SOAP que están integrados con los servicios de GEISER.\nSe utiliza Git 2.43 como herramienta de control de versiones y las dos APIs están documentadas haciendo uso del estándar\nOpenAPI/Swagger 3.1.0.\nUsted forma parte del equipo técnico responsable del diseño, desarrollo, implantación y soporte de este proyecto y deberá\nresponder a las cuestiones que se le plantean a continuación.\nPara responder a estas, suponga que tiene todos los permisos necesarios en las diferentes tecnologías empleadas y que, salvo\nque se especifique lo contrario, se utilizan las librerías nativas que ya han sido declaradas de cada lenguaje de programació n\nutilizado."
+ },
+ "preguntas": [
+  {
+   "id": "s101",
+   "tema": 21,
+   "enunciado": "Se necesita establecer un enlace bidireccional entre un campo de entrada y una propiedad del componente de Angular. Señale la opción correcta para ello:",
+   "opciones": [
+    "<input type=\"text\" [ngModel]=\"email\" />",
+    "<input type=\"text\" (ngModel)=\"email\" />",
+    "<input type=\"text\" [(ngModel)]=\"email\" />",
+    "<input type=\"text\" ngModel=\"email\" />"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s102",
+   "tema": 21,
+   "enunciado": "Se quiere mostrar la fecha y hora en una parte de la aplicación. Esta información está en una propiedad del componente de Angular llamada fechaHora y un ejemplo del formato deseado es: 12/04/2026 19:32. ¿Cuál sería la opción correcta?",
+   "opciones": [
+    "<p>Fecha y hora: { fechaHora | date: dd/MM/YYYY hh:mm }</p>",
+    "<p>Fecha y hora: {{ fechaHora | date: 'dd/MM/yyyy HH:mm' }}</p>",
+    "<p> Fecha y hora: { fechaHora | date: 'DD/MM/yyyy hh:mm' }</p>",
+    "<p>Fecha y hora: {{ fechaHora | date: DD/MM/YYYY hh:mm }}</p>"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s103",
+   "tema": 21,
+   "enunciado": "Dada la siguiente clase CSS: div { text-align: center; font-weight: bold; border-radius: 20px; box-shadow: 4px 4px 4px black; background-color: limegreen; } ¿Qué pasará visualmente con el siguiente elemento HTML?: <div>Bienvenido</div>",
+   "opciones": [
+    "El texto se mostrará centrado, en negrita y con sombra negra sobre una caja rectangular de color verde lima y con borde redondo.",
+    "El texto se mostrará centrado y en negrita sobre una caja rectangular de color verde lima, con borde recto y con sombra negra aplicada a la caja.",
+    "El texto se mostrará centrado, en negrita y con sombra negra sobre una caja redonda de color verde lima.",
+    "El texto se mostrará centrado y en negrita sobre una caja rectangular de color verde lima, con borde redondo y con sombra negra aplicada a la caja."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s104",
+   "tema": 16,
+   "enunciado": "En una clase de TypeScript se definen los siguientes arrays: const menuAdministrador = [\"Usuarios\", \"Permisos\"]; const menuGestor = [\"Notificaciones\", \"Usuarios\", \"Asientos registrales\"]; En esa misma clase hay una función que ejecuta la siguiente operación: return […menuAdministrador, …menuGestor] ¿Qué hace esta operación?",
+   "opciones": [
+    "Sustituye el contenido de menuGestor por el de menuAdministrador.",
+    "Sustituye el contenido de menuAdministrador por el de menuGestor.",
+    "Genera un nuevo array que contiene únicamente los elementos comunes entre menuGestor y menuAdministrador.",
+    "Genera un nuevo array con el contenido de menuAdministrador y menuGestor."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s105",
+   "tema": 19,
+   "enunciado": "Necesita instalar Entity Framework en la API de .NET. ¿Con qué comando se puede hacer?",
+   "opciones": [
+    "dotnet package add Microsoft.EntityFrameworkCore",
+    "dotnet add package Microsoft.EntityFrameworkCore",
+    "dotnet add Microsoft.EntityFrameworkCore",
+    "dotnet package Microsoft.EntityFrameworkCore"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s106",
+   "tema": 16,
+   "enunciado": "Se va a desarrollar una nueva consulta en la API de .NET para obtener todos los usuarios cuyo primer apellido contenga una cadena de texto almacenada en una variable llamada “texto”. ¿Cuál sería la forma correcta de hacerlo?",
+   "opciones": [
+    "await context.Usuarios.Where(u => u.Apellido1.Contains(texto)).ToListAsync();",
+    "await context.Usuarios.Where(u => u.Apellido1.Like(texto)).ToListAsync();",
+    "await context.Usuarios(u => u.Apellido1.Where(texto)).ToListAsync();",
+    "await context.Usuarios(u => u.Apellido1.Contains(texto)).ToListAsync();"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s107",
+   "tema": 19,
+   "enunciado": "Se está implementando un sistema de informes en la API de Java y uno de los datos a incluir es el total de asientos registrales recibidos en el año 2026. ¿Cuál es la forma correcta de hacerlo?",
+   "opciones": [
+    "asientos.collection().filter(n -> n.getAñoPresentacion() == 2026).sum();",
+    "asientos.stream().filter(n -> n.getAñoPresentacion() == 2026).count();",
+    "asientos.list().filter(n -> n.getAñoPresentacion() == 2026).sum();",
+    "asientos.set().filter(n -> n.getAñoPresentacion() == 2026).count();"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s108",
+   "tema": 20,
+   "enunciado": "Se desea añadir a la API de Java la integración con los servicios de Notifica. ¿Cómo podría, a partir del fichero notifica.wsdl, generar las clases Java para esos servicios web en un paquete llamado “notificaciones”?",
+   "opciones": [
+    "wsgen -d notificaciones notifica.wsdl",
+    "schemagen -p notificaciones notifica.wsdl",
+    "xjc -d notificaciones notifica.wsdl",
+    "wsimport -p notificaciones notifica.wsdl"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s109",
+   "tema": 17,
+   "enunciado": "Se necesita crear una vista en la base de datos SQL Server para saber cuántos expedientes ha tramitado cada usuario. ¿Cuál sería la forma correcta de crearla?",
+   "opciones": [
+    "CREATE VIEW ExpTramitados AS SELECT IdUsuarioTramitador, COUNT(IdExpediente) AS TotalExpedientes FROM Expedientes;",
+    "CREATE VIEW ExpTramitados AS SELECT IdUsuarioTramitador, IdExpediente FROM Expedientes GROUP BY IdUsuarioTramitador;",
+    "CREATE VIEW ExpTramitados AS SELECT IdUsuarioTramitador, COUNT(IdExpediente) FROM Expedientes GROUP BY IdUsuarioTramitador;",
+    "CREATE VIEW ExpTramitados AS SELECT IdUsuarioTramitador, SUM(IdExpediente) FROM Expedientes GROUP BY IdUsuarioTramitador;"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s110",
+   "tema": 17,
+   "enunciado": "Al acceder a la aplicación se quiere mostrar una serie de información para los administradores. ¿Qué sentencia de SQL Server es la correcta para obtener los últimos 10 usuarios dados de alta en una tabla de 100 usuarios?",
+   "opciones": [
+    "SELECT TOP(10) Nombre, Apellido1, Apellido2 FROM Usuarios ORDER BY FechaCreacion DESC;",
+    "SELECT TOP(10) Nombre, Apellido1, Apellido2 FROM Usuarios WHERE FechaCreacion > '2026-01-22T00:00:00';",
+    "SELECT TOP(10) Nombre, Apellido1, Apellido2 FROM Usuarios ORDER BY FechaCreacion ASC;",
+    "SELECT Nombre, Apellido1, Apellido2, TOP(10) FechaCreacion FROM Usuarios ORDER BY FechaCreacion;"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s111",
+   "tema": 17,
+   "enunciado": "Debido a unas pruebas realizadas en el entorno de preproducción, la secuencia de la identidad de una tabla de SQL Server se ha desajustado y necesita reiniciarla. ¿Cómo lo haría?",
+   "opciones": [
+    "DBCC RESETIDENT(‘TablaPruebas’);",
+    "DBCC CHECKIDENT(‘TablaPruebas’);",
+    "DBCC RESETIDENT(‘TablaPruebas, NORESEED);",
+    "DBCC CHECKIDENT(‘TablaPruebas’, NORESEED);"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s112",
+   "tema": 17,
+   "enunciado": "Para evitar ataques XSS mediante rastreo MIME se va a añadir una cabecera a las respuestas de las dos APIs al frontend. ¿De qué cabecera se trata?",
+   "opciones": [
+    "X-Frame-Options: DENY",
+    "X-Content-Type-Options: nosniff",
+    "X-XSS-Protection: 0",
+    "Content-Security-Policy: default-src https:"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s113",
+   "tema": 20,
+   "enunciado": "En las peticiones a la API de persistencia observa que se incluye la cabecera: Authorization: Bearer eyJhbG.eyJzdW.KMUFsI ¿De qué tipo de autenticación se trata?",
+   "opciones": [
+    "Básica.",
+    "A través de una API Key.",
+    "A través de una cookie.",
+    "A través de un JWT (JSON Web Token)."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s114",
+   "tema": 22,
+   "enunciado": "Revisando el código HTML del apartado de gestión de usuarios de la aplicación ha detectado un problema de accesibilidad web: <h1>Gestión de usuarios</h1> <span><strong>Seleccione un usuario para ver acciones</strong></span> <h3>Administradores</h3> Indique cuál es:",
+   "opciones": [
+    "Se está usando <strong>, en lugar de <b>, para dar mayor importancia semántica al texto.",
+    "Se está usando <span>, en lugar de <p>, para mostrar un texto.",
+    "Hay un salto en la jerarquía de encabezados, de <h1> a <h3>, sin pasar por <h2>.",
+    "Falta un elemento <div> para contener a todos los demás elementos."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s115",
+   "tema": 18,
+   "enunciado": "En la API de persistencia encuentra una clase con el siguiente método: public void crearExpediente() { this.expediente.crearCarpetas(); this.expediente.crearDocumentos(); this.expediente.crearIndice(); } ¿Qué patrón de diseño se está utilizando?",
+   "opciones": [
+    "Abstract factory.",
+    "Composite.",
+    "Factory method.",
+    "Builder."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s116",
+   "tema": 23,
+   "enunciado": "Se va a proceder a realizar pruebas unitarias en la API de persistencia con la herramienta Nunit 3.0. ¿Cuál de las siguientes opciones es una definición correcta de una clase de pruebas?",
+   "opciones": [
+    "[TestFixture] public sealed class Tests { [Test] public void Test() {} }",
+    "[TestFixture] public sealed class Tests { [TestSample] public void Test() {} }",
+    "[TestGroup] public sealed class Tests { [TestCase] public void Test() {} }",
+    "[TestCaseSource] public sealed class Tests { [TestCase] public void Test() {} }"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s117",
+   "tema": 20,
+   "enunciado": "Uno de sus compañeros ha desarrollado un servicio REST que recibe un JSON y le ha pedido ayuda para probar su funcionamiento, para lo cual va a utilizar la herramienta Postman versión 12. ¿Con qué tipo de dato debería enviar el cuerpo de la petición?",
+   "opciones": [
+    "none",
+    "GraphQL",
+    "raw",
+    "x-www-form-urlencoded"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s118",
+   "tema": 23,
+   "enunciado": "Se ha detectado un error en una de las últimas subidas de código a la rama develop del repositorio. Tras una fase de investigación, sospecha que el error está en un commit concreto. ¿Con qué operación de Git puede incorporar ese commit a una rama aparte para continuar su investigación?",
+   "opciones": [
+    "git banana-pick",
+    "git cherry-pick",
+    "git berry-pick",
+    "git grape-pick"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s119",
+   "tema": 20,
+   "enunciado": "Un compañero le consulta por los formatos en los que puede generar la documentación de OpenAPI/Swagger. ¿Cuáles son?",
+   "opciones": [
+    "YAML y HTML.",
+    "JSON y XML.",
+    "YAML y JSON.",
+    "HTML y XML."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s120",
+   "tema": 16,
+   "enunciado": "Para evitar ataques de denegación de servicio se ha decidido implementar un control de peticiones máximas en un periodo de tiempo concreto (rate limiting). ¿Qué código HTTP deberá devolverse cuando un usuario alcance el límite establecido?",
+   "opciones": [
+    "425",
+    "429",
+    "502",
+    "503"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r01",
+   "tema": 23,
+   "enunciado": "¿Con qué tipo de fichero debe trabajar si desea implementar pruebas unitarias en un componente del frontend?",
+   "opciones": [
+    "component.ts",
+    "test.ts",
+    "module.ts",
+    "spec.ts"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r02",
+   "tema": 16,
+   "enunciado": "En uno de los componentes del frontend detecta la siguiente expresión regular para controlar el campo de entrada del teléfono: [\\+34|34]*[ -]*(3)[0-9]{8} ¿Cuál de las siguientes opciones cumple la expresión regular?",
+   "opciones": [
+    "641992011",
+    "641 992 011",
+    "+34 641992011",
+    "+34641992011"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r03",
+   "tema": 16,
+   "enunciado": "Le consultan si conoce alguna herramienta para formatear el código de la aplicación. ¿Cuál de las siguientes es una opción válida para ello?",
+   "opciones": [
+    "SonarQube.",
+    "Prettier.",
+    "Quokka.",
+    "PMD."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r04",
+   "tema": 23,
+   "enunciado": "En la Subdirección se han sustituido los ordenadores utilizados para desarrollar aplicaciones, y por tanto, debe clonarse el repositorio de código de la aplicación para continuar su trabajo. ¿Con qué comando de Git puede hacerlo?",
+   "opciones": [
+    "git clone",
+    "git init",
+    "git add",
+    "git create"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r05",
+   "tema": 19,
+   "enunciado": "Tras realizar una modificación en la API de Java se necesita aumentar el número de versión de la API. ¿Qué fichero deberá modificar para ello, suponiendo que se usa Maven 3.9?",
+   "opciones": [
+    "package.json",
+    "pom.xml",
+    ".csproj",
+    "package-lock.json"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  }
+ ]
+}

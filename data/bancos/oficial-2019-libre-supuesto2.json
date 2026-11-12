@@ -1,0 +1,397 @@
+{
+ "titulo": "Examen 2019 · libre · Supuesto práctico II",
+ "fuente": "oficial",
+ "examen": "TAI-L2019",
+ "parte": "supuesto2",
+ "tema": null,
+ "convocatoria": "2019 · libre",
+ "minutos": 24,
+ "origen": "OEP 2019",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/1925774/cues_1er_ejer_TAI-L_oep19_154AB89SD658.pdf/ac7ec9d6-3ac6-4457-6687-6ecf53aa158e",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/1925774/Plantilla_definitivaTAI-LEjercicionico2019_154AB89SD658.pdf/3a177074-d70b-2fda-e9ec-38cc0942944d",
+ "contextos": {
+  "s2": "Debido a la pandemia ocasionada por el SARS-CoV-2, más conocido como Coronavirus, las Administraciones Publicas se han visto\nobligadas a impulsar el teletrabajo y a cambiar su estrategia en el ámbito de las TIC.\nEn este sentido ha sido asignado en la integración de dos organismos en su departamento, los cuales no tienen capacidad para asumir\nlas nuevas demandas de servicios y conexiones.\nUno de los centros es la Demarcación de Carreteras de Madrid (DCM) y el otro es la Confederación Hidrográfica del Tajo (CHT).\nLa DCM tiene máquinas físicas RedHat Enterprise Linux (RHEL). Su estructura consiste en tres áreas y en cada una de ellas trabajan 20\npersonas.\nLa CHT tiene máquinas físicas Solaris. Su estructura consiste en 5 áreas y en cada una de ellas trabajan 50 personas.\nAmbos organismos tienen bastantes máquinas Windows 10, además de equipamiento específico, para el desarrollo de sus actividades,\nque tendrá que ser trasladado a su CPD.\nEs crucial la salvaguarda de los datos, la pérdida o inconsistencia de los mismos durante el proceso es algo inasumible.\nSalvo que el enunciado de la propia pregunta diga lo contrario, debe suponer que dispone de los permisos adecuados, tanto a nivel de\nsistema operativo como de conexión de red."
+ },
+ "preguntas": [
+  {
+   "id": "s201",
+   "tema": 30,
+   "enunciado": "El equipo de comunicaciones le asigna la red 10.0.4.0 con la máscara 255.255.255.128 para el direccionamiento de la DCM. ¿Cuantos bits tiene la máscara de red?",
+   "opciones": [
+    "24",
+    "26",
+    "25",
+    "23"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s202",
+   "tema": null,
+   "enunciado": "También le preguntan a qué Clase pertenece la red asignada (10.0.4.0).",
+   "opciones": [
+    "Clase A.",
+    "Clase B.",
+    "Clase C.",
+    "Clase D."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s203",
+   "tema": 30,
+   "enunciado": "Para la CHT los compañeros de redes le asignan el direccionamiento 10.0.0.0/21. ¿Cuál es el número máximo de hosts disponible?",
+   "opciones": [
+    "1024",
+    "2046",
+    "32",
+    "256"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s204",
+   "tema": 30,
+   "enunciado": "Dado el direccionamiento anterior (10.0.0.0/21) su responsable le pregunta cuál es el rango de hosts, para poder calcular si el direccionamiento es el adecuado.",
+   "opciones": [
+    "10.0.3.1 - 10.0.3.254",
+    "10.0.0.1 - 10.0.0.254",
+    "10.0.3.0 - 10.0.3.255",
+    "10.0.0.1 - 10.0.7.254"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s205",
+   "tema": 24,
+   "enunciado": "La DCM no es capaz de especificarle la versión de RHEL que tienen sus máquinas, por lo que debe decirles el comando a ejecutar. ¿Cuál de los siguientes sería?",
+   "opciones": [
+    "rm -f /etc/redhat-release",
+    "cat /etc/redhat-version",
+    "cat /etc/redhat-release",
+    "mv /etc/redhat-release"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s206",
+   "tema": 30,
+   "enunciado": "Para poder tener conectividad, la CHT necesita poner una ruta persistente en una de sus máquinas Solaris a la red 10.0.5.0/24 con una máscara de red 255.255.255.0 y usando como puerta de enlace la dirección IP 10.0.5.150 ¿Cuál sería el comando correcto?",
+   "opciones": [
+    "route -p add -net 10.0.5.0/24 -gateway 10.0.5.150",
+    "route new -p -net 10.0.5.0/24 -gateway 10.0.5.150",
+    "route -static add -net 10.0.5.0/24 -gateway 10.0.5.150",
+    "route add -static -net 10.0.5.0/24 -gateway 10.0.5.150"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s207",
+   "tema": 24,
+   "enunciado": "Se está realizando una auditoría de seguridad en uno de los servidores Linux y le preguntan dónde se están guardando las contraseñas encriptadas de los usuarios:",
+   "opciones": [
+    "/etc/passwd",
+    "/etc/users",
+    "/etc/shadow",
+    "/etc/groups"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s208",
+   "tema": 14,
+   "enunciado": "Una pieza crucial en cualquier sistema informático son las BBDD. Le han informado que tanto la DCM como la CHT utilizan Oracle, pero no le han dicho la versión. ¿Qué consulta podría hacer en la base de datos para conocer esta información?",
+   "opciones": [
+    "SELECT * FROM V$VERSION",
+    "SELECT * FROM V$VERSIONADO",
+    "SELECT * FROM V$VERSIONDB",
+    "SELECT * FROM V$VERSIONTABLE"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s209",
+   "tema": 24,
+   "enunciado": "Se le solicita crear un backup del directorio /home/opositor/temas/ comprimido con gzip en RHEL. Indique el comando correcto para realizarlo.",
+   "opciones": [
+    "tar -czf TEMAS.tar.gz /home/opositor/temas/",
+    "tar -xzf TEMAS.tar.gz /home/opositor/temas/",
+    "tar -xzf /home/opositor/temas/ TEMAS.tar.gz",
+    "tar -cjf /home/opositor/temas/ TEMAS.tar.gz"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s210",
+   "tema": 24,
+   "enunciado": "Le preguntan sobre las cuentas de usuario que pertenecen al grupo Administradores locales de una máquina, ¿qué comando de Windows debería utilizar?",
+   "opciones": [
+    "net local administradores",
+    "net localgroup admin",
+    "net local admin",
+    "net localgroup administradores"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s211",
+   "tema": 24,
+   "enunciado": "También se le consulta sobre la configuración actual de las políticas de cuentas y contraseñas de una máquina local. ¿Qué comando de Windows muestra esa información?",
+   "opciones": [
+    "net computer",
+    "net localgroup",
+    "net config",
+    "net accounts"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s212",
+   "tema": 11,
+   "enunciado": "Se están realizando en su unidad informes de las capacidades de los discos y requieren de su ayuda. Si se dispone de 5 discos duros de 6 TB, y se decide configurarlos en RAID 6, ¿qué capacidad neta de almacenamiento se obtendrá?",
+   "opciones": [
+    "12 TB",
+    "18 TB",
+    "24 TB",
+    "30 TB"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s213",
+   "tema": 24,
+   "enunciado": "En sus instalaciones no disponen de un Windows Server 2008, pero como tienen instalado Docker han decidido crear uno y arrancarlo a partir de una imagen llamada SW2008. ¿Con qué sentencia debería realizar esta petición?",
+   "opciones": [
+    "docker run SW2008",
+    "docker start SW2008",
+    "start docker SW2008",
+    "docker start run SW2008"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s214",
+   "tema": 26,
+   "enunciado": "No está seguro de que el contenedor se haya arrancado correctamente. ¿Qué comando utilizaría para listar todos los contenedores, estén o no en marcha?",
+   "opciones": [
+    "docker ps",
+    "docker ps -a",
+    "docker list",
+    "docker list-container -all"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s215",
+   "tema": 28,
+   "enunciado": "Están estudiando el traslado de algunos equipos de la CHT a su CPD y le informan de que tienen una sonda de alrededor de 70 watios que utilizan 1 hora a la semana y que debe permanecer apagada el resto del tiempo. Le indican que sería necesario poder encenderla remotamente por red. ¿Sería posible hacerlo?",
+   "opciones": [
+    "No, no sería posible.",
+    "Si, mediante PoE IEEE 802.3ct",
+    "Si, mediante PoE IEEE 802.3bt",
+    "Si, mediante PoE IEEE 802.3dt"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s216",
+   "tema": 33,
+   "enunciado": "La DCM le informa que tienen un acuerdo con la Dirección General de Tráfico y alojan en sus instalaciones un medidor de tráfico que requiere una conexión Ethernet de unos 30 Gbps. Según el estándar ANSI/TIA-568, ¿qué categoría de cableado sería necesitaría?",
+   "opciones": [
+    "Categoría 6.",
+    "Categoría 7.",
+    "Categoría 7A.",
+    "Categoría 8."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s217",
+   "tema": 32,
+   "enunciado": "Durante el proceso de creación de reglas, se da cuenta de un grave problema de seguridad. Algunos de los equipos Windows no tienen habilitado el firewall. ¿Qué comando utilizaría para habilitarlo?",
+   "opciones": [
+    "netsh advfirewall set allprofiles enable",
+    "netsh advfirewall set allprofiles state on",
+    "netsh advfirewall set allprofiles state online",
+    "netsh advfirewall set allprofiles on"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s218",
+   "tema": 32,
+   "enunciado": "Debido al creciente número de ataques, se decide implantar en su CPD un IPS que analice el comportamiento de la red y que examine el tráfico inusual para detectar posibles ataques DoS y malwares. ¿Qué tipo de IPS necesita?",
+   "opciones": [
+    "DIPS",
+    "WIPS",
+    "NBA",
+    "HIPS"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s219",
+   "tema": 26,
+   "enunciado": "Un aspecto importante es el protocolo de correo que se va a utilizar para las comunicaciones vía email. En la DCM están preocupados y no les parece seguro usar SMTP por lo que usted rápidamente sugiere usar SMTPS. ¿Qué puerto por defecto tendrá que solicitar a los compañero de seguridad para este protocolo SMTPS?",
+   "opciones": [
+    "25",
+    "465",
+    "443",
+    "425"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s220",
+   "tema": 10,
+   "enunciado": "Para evitar problemas de resolución de nombres en estos equipos Windows donde se está configurando el cliente de correo, han decidido limpiar la caché DNS. ¿Cuál sería el comando adecuado?",
+   "opciones": [
+    "ifconfig /flushdns",
+    "ipconfig /flushdns",
+    "ipconfig /cleardns",
+    "ifconfig /cleardns"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r01",
+   "tema": 32,
+   "enunciado": "Con el objetivo de recabar información sobre los equipos Windows, disponen de un software de inventariado que necesita acceso por el puerto 4433 (TCP) en los equipos destino. ¿Qué comando utilizaría en estos últimos para añadir la regla al firewall?",
+   "opciones": [
+    "netsh advfirewall firewall create rule name= \"Inventariado\" dir=in action=allow protocol=TCP localport=4433",
+    "netsh advfirewall firewall add rule name= \"Inventariado\" dir=in action=permit protocol=TCP localport=4433",
+    "netsh advfirewall firewall add rule name= \"Inventariado\" dir=in action=allow protocol=TCP localport=4433",
+    "netsh advfirewall firewall new rule name= \"Inventariado\" dir=in action=allow protocol=TCP localport=4433"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r02",
+   "tema": 24,
+   "enunciado": "Desde la unidad responsable de la red, le indican que por motivos de seguridad van a realizar la conexión por el puerto 422. ¿Qué comando debería utilizar en sus equipos RHEL para comprobar que la comunicación ya está abierta, si la IP destino es la 10.0.4.22 ?",
+   "opciones": [
+    "nc -v - ip 10.0.4.22 -port 422",
+    "nc -v 10.0.4.22 422",
+    "nc -v 422 10.0.4.22",
+    "nc -v 10.0.4.22:422"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r03",
+   "tema": 25,
+   "enunciado": "Durante el proceso de traslado, uno de los equipos Windows más importantes de la DCM da problemas de corrupción de datos y han decidido restaurar la copia de seguridad. Le indican que el dispositivo está cifrado. ¿Qué necesita que le proporcionen para poder restaurar la copia?",
+   "opciones": [
+    "El certificado digital.",
+    "La clave de BitLocker.",
+    "La clave privada.",
+    "La clave de sesión."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r04",
+   "tema": 11,
+   "enunciado": "Desde su unidad también se está valorando el uso de RAID 10, ¿cuántos discos duros son necesarios para crearlo?",
+   "opciones": [
+    "2 discos duros.",
+    "3 discos duros.",
+    "Al menos 4 discos duros.",
+    "Es indiferente."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r05",
+   "tema": 32,
+   "enunciado": "Muchas de las comunicaciones se van a realizar mediante conexiones ssh y tiene que solicitar las reglas de firewall al equipo de comunicaciones. ¿Cuál es el puerto que debe solicitar?",
+   "opciones": [
+    "21",
+    "63",
+    "69",
+    "22"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  }
+ ]
+}

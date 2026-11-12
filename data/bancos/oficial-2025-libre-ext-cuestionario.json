@@ -1,0 +1,1210 @@
+{
+ "titulo": "Examen 2025 · libre · extraordinario · Cuestionario",
+ "fuente": "oficial",
+ "examen": "TAI-L2025ext",
+ "parte": "cuestionario",
+ "tema": null,
+ "convocatoria": "2025 · libre · extraordinario",
+ "minutos": 96,
+ "origen": "Convocatoria 2025, llamamiento extraordinario",
+ "url_cuestionario": "https://sede.inap.gob.es/sites/sede/files/public/2026-07/cuestionario_TAI-L_ext_9QVS9NM8ER_154AB89SD658.pdf",
+ "url_plantilla": "https://sede.inap.gob.es/sites/sede/files/public/2026-10/PlantillarespuestasDefTAI-L-EXTRAORDINARIO_1E0IFRJ3RK_154AB89SD658.pdf",
+ "contextos": {},
+ "preguntas": [
+  {
+   "id": "p01",
+   "tema": 1,
+   "enunciado": "¿Cuántas veces se ha reformado la Constitución Española de 1978 desde su aprobación?",
+   "opciones": [
+    "Una vez.",
+    "Dos veces.",
+    "Tres veces.",
+    "Cuatro veces."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p02",
+   "tema": 1,
+   "enunciado": "Según el artículo 55 de la Constitución Española de 1978, cuando se acuerde declarado el estado de excepción, ¿qué derecho reconocido podrá ser suspendido?",
+   "opciones": [
+    "A comunicar o recibir libremente información veraz por cualquier medio de difusión.",
+    "A la libertad de cátedra.",
+    "A sindicarse libremente.",
+    "A participar en los asuntos públicos."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p03",
+   "tema": 2,
+   "enunciado": "Según establece el artículo 66 de la Constitución Española de 1978, las Cortes Generales están formadas por:",
+   "opciones": [
+    "El Congreso de los Diputados y el Senado.",
+    "El Congreso de los Diputados, el Senado y el Gobierno.",
+    "El Congreso de los Senadores y Diputados.",
+    "El Congreso de los Diputados, el Senado y el Consejo de Estado."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p04",
+   "tema": 2,
+   "enunciado": "¿Qué establece la Constitución Española de 1978 sobre el mandato imperativo de los miembros de las Cortes Generales?",
+   "opciones": [
+    "Los miembros de las Cortes Generales están ligados por el mandato imperativo de sus grupos parlamentarios.",
+    "El mandato imperativo es obligatorio en las votaciones sobre reformas constitucionales.",
+    "El mandato imperativo solo se prohíbe para los Senadores, no para los Diputados.",
+    "Los miembros de las Cortes Generales no estarán ligados por mandato imperativo."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p05",
+   "tema": 2,
+   "enunciado": "Según el artículo 161 de la Constitución Española de 1978, cuando el Gobierno impugna ante el Tribunal Constitucional una disposición adoptada por los órganos de una Comunidad Autónoma, ¿qué efecto produce dicha impugnación y en qué plazo debe resolverla el Tribunal?",
+   "opciones": [
+    "Produce la suspensión automática de la disposición impugnada; el Tribunal Constitucional deberá ratificarla o levantarla en un plazo no superior a seis meses.",
+    "No produce suspensión automática; el Tribunal Constitucional puede acordarla cautelarmente a petición fundada del Gobierno.",
+    "Produce la suspensión de la disposición o resolución recurrida; el Tribunal Constitucional deberá ratificarla o levantarla en un plazo no superior a cinco meses.",
+    "Produce la suspensión cautelar solo si el Tribunal Constitucional la ratifica expresamente en el plazo de tres meses."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p06",
+   "tema": 3,
+   "enunciado": "Según el artículo 101 de la Constitución Española de 1978, ¿cuál es causa de cese del Gobierno?",
+   "opciones": [
+    "Por dimisión de cualquier Ministro.",
+    "Por dimisión de su Presidente.",
+    "Por dimisión de un Vicepresidente.",
+    "Por dimisión de un tercio de sus miembros."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p07",
+   "tema": 3,
+   "enunciado": "Según establece el artículo 18 de la ley 50/1997, de 27 de noviembre, del Gobierno, que regula el funcionamiento del Consejo de Ministros, ¿quién actúa como Secretario de este órgano colegiado?",
+   "opciones": [
+    "El Vicepresidente Primero.",
+    "El Ministro portavoz del Gobierno.",
+    "El Ministro de la Presidencia.",
+    "El Ministro de Justicia."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p08",
+   "tema": 4,
+   "enunciado": "De acuerdo con el artículo 17.2 de la Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno, la solicitud de acceso a la información podrá presentarse por cualquier medio que permita tener constancia de:",
+   "opciones": [
+    "Una dirección de contacto, preferentemente electrónica, a efectos de comunicaciones.",
+    "La identidad del requerido.",
+    "La huella normativa.",
+    "La motivación de la solicitud."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p09",
+   "tema": 4,
+   "enunciado": "Conforme establece el artículo 18 de la Ley 53/1984, de 26 de diciembre, de Incompatibilidades del personal al servicio de las Administraciones Públicas, todas las resoluciones de compatibilidad para desempeñar un segundo puesto o actividad en el sector público o el ejercicio de actividades privadas se inscribirán:",
+   "opciones": [
+    "En el Registro Administrativo de Compatibilidades del organismo (RAC).",
+    "En la Oficina de Conflicto de Intereses.",
+    "En el Registro Común de Actividades del Personal de las Administraciones Públicas (RCAP).",
+    "En los Registros de Personal correspondientes."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p10",
+   "tema": 5,
+   "enunciado": "Según establece el artículo 9 de la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres, cualquier trato adverso o efecto negativo que se produzca en una persona como consecuencia de la presentación por su parte de queja, reclamación, denuncia, demanda o recurso, de cualquier tipo, destinados a impedir su discriminación y a exigir el cumplimiento efectivo del principio de igualdad de trato entre mujeres y hombres, se considerará:",
+   "opciones": [
+    "Discriminación directa.",
+    "Discriminación indirecta.",
+    "Discriminación por razón de sexo.",
+    "Discriminación por actuación administrativa."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p11",
+   "tema": 5,
+   "enunciado": "Según establece el artículo 49 de la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres, para impulsar la adopción voluntaria de planes de igualdad el Gobierno establecerá:",
+   "opciones": [
+    "Medidas de fomento, especialmente dirigidas a las medianas y las grandes empresas, que incluirán el apoyo técnico necesario.",
+    "Medidas de fomento, especialmente dirigidas a las empresas de 50 o más trabajadores, que incluirán el apoyo técnico necesario.",
+    "Medidas de fomento, especialmente dirigidas a las pequeñas y las medianas empresas, que incluirán el apoyo técnico necesario.",
+    "Medidas de acción positiva, dirigidas a cualquier empresa, sea de capital público o privado, que incluirán el apoyo técnico necesario."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p12",
+   "tema": 6,
+   "enunciado": "De acuerdo con el artículo 8 del Reglamento (UE) 910/2014 (eIDAS), un sistema de identificación electrónica notificado, para los medios de identificación electrónica expedidos en virtud del mismo, deberá especificar los niveles de seguridad:",
+   "opciones": [
+    "Inseguro, seguro y muy seguro.",
+    "Básico, medio y avanzado.",
+    "Bajo, sustancial y alto.",
+    "Nivel 1, nivel 2 y nivel 3."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p13",
+   "tema": 6,
+   "enunciado": "¿Cuál de las siguientes opciones NO se incluye entre los ejes estratégicos de la Agenda Digital \"España Digital 2026\"?",
+   "opciones": [
+    "Las competencias digitales.",
+    "El eLearning y la Universidad Digital.",
+    "Los derechos digitales.",
+    "La ciberseguridad."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p14",
+   "tema": 7,
+   "enunciado": "Señale la respuesta correcta respecto a la garantía de los derechos digitales reflejada en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales:",
+   "opciones": [
+    "La garantía efectiva del derecho de acceso a Internet atenderá la realidad específica de los entornos digitales.",
+    "El empleador podrá acceder a los contenidos derivados del uso de medios digitales, tanto personales como facilitados a los trabajadores, a los solos efectos de controlar el cumplimiento de las obligaciones laborales o estatutarias y de garantizar la integridad de dichos dispositivos.",
+    "Los trabajadores y los empleados públicos tendrán derecho a la desconexión digital a fin de garantizar, fuera del tiempo de trabajo legal o convencionalmente establecido, el respeto de su tiempo de descanso, permisos y vacaciones, así como de su intimidad personal y familiar.",
+    "El ejercicio del derecho al olvido en las búsquedas de internet impedirá el acceso a la información publicada en el sitio web a través de la utilización de búsqueda del nombre de quien ejerciera el derecho, así como de cualquier otro criterio de búsqueda."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p15",
+   "tema": 8,
+   "enunciado": "De acuerdo con lo que establece el artículo 4 del Real Decreto 203/2021, de 30 de marzo, por el que se aprueba el Reglamento de actuación y funcionamiento del sector público por medios electrónicos, entre los canales de asistencia para el acceso a los servicios electrónicos NO se encuentra:",
+   "opciones": [
+    "Portales de internet y sedes electrónicas.",
+    "Redes sociales.",
+    "Cita previa.",
+    "Correo electrónico."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p16",
+   "tema": 8,
+   "enunciado": "Con base en el Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad, indique cuál de las siguientes medidas de seguridad pertenece al marco operacional:",
+   "opciones": [
+    "Protección del correo electrónico.",
+    "Protección de la integridad y de la autenticidad.",
+    "Protección frente a código dañino.",
+    "Protección de dispositivos portátiles."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p17",
+   "tema": 9,
+   "enunciado": "Señale la respuesta correcta sobre la Carpeta Ciudadana del sector público estatal:",
+   "opciones": [
+    "Permite el seguimiento de la solicitud de cualquier procedimiento de los familiares del interesado.",
+    "Es accesible a través de la sede electrónica del PAGe de la Administración General del Estado.",
+    "Da a conocer los datos del interesado que obran en poder del sector público estatal, sin ninguna limitación.",
+    "Únicamente permite el acceso a las comunicaciones con el interesado."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p18",
+   "tema": 9,
+   "enunciado": "Según establece el Real Decreto 203/2021, de 30 de marzo, por el que se aprueba el Reglamento de actuación y funcionamiento del sector público por medios electrónicos, indique qué afirmación es correcta sobre el funcionamiento del Registro de Funcionarios Habilitados:",
+   "opciones": [
+    "Deberá ser plenamente interoperable con los registros u otros sistemas equivalentes que se creen por las comunidades autónomas y las entidades locales a los efectos de comprobar la validez de las habilitaciones de los funcionarios habilitados.",
+    "Deberá ser plenamente interoperable con los registros u otros sistemas equivalentes de las Administraciones Públicas de los países que integran la Unión Europea a los efectos de comprobar la validez de las habilitaciones de los funcionarios habilitados.",
+    "Deberá ser plenamente interoperable con el Sistema de Interconexión de Registros (SIR) a los efectos de comprobar la validez de las habilitaciones de los funcionarios habilitados.",
+    "Deberá ser plenamente interoperable con la Plataforma de Intermediación de Datos (PID) a los efectos de comprobar la validez de las habilitaciones de los funcionarios habilitados."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p19",
+   "tema": 9,
+   "enunciado": "Señale cuál de los siguientes NO es un producto incluido dentro del Portfolio SCSPv3 (Sustitución de Certificados en Soporte Papel):",
+   "opciones": [
+    "Librerías SCSPv3.",
+    "Cliente Ligero SCSPv3.",
+    "SCSP – SOAP.",
+    "SCSP – WS."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p20",
+   "tema": 9,
+   "enunciado": "Según la Norma Técnica de Interoperabilidad de Digitalización de Documentos, el nivel de resolución mínimo en píxeles por pulgada (ppp) para imágenes electrónicas será de:",
+   "opciones": [
+    "200 ppp para imágenes en blanco y negro, y 200 ppp para imágenes en color o escala de grises.",
+    "200 ppp para imágenes en blanco y negro, y 150 ppp para imágenes en color o escala de grises.",
+    "150 ppp para imágenes en blanco y negro, y 200 ppp para imágenes en color o escala de grises.",
+    "150 ppp para imágenes en color, y 200 ppp para imágenes en blanco y negro o escala de grises."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p21",
+   "tema": 10,
+   "enunciado": "¿Cuál es la función del registro de instrucción dentro de la unidad de control?",
+   "opciones": [
+    "Almacenar la dirección de memoria de la siguiente instrucción a ejecutar.",
+    "Obtener la dirección de memoria de la instrucción actual.",
+    "Almacenar la instrucción que está siendo ejecutada.",
+    "Obtener la dirección de memoria de la instrucción previamente leída."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p22",
+   "tema": 10,
+   "enunciado": "Para recorrer un árbol binario no vacío en preorden se deben realizar las siguientes operaciones recursivamente en cada nodo:",
+   "opciones": [
+    "Visitar el nodo raíz, recorrer el subárbol derecho y recorrer el subárbol izquierdo.",
+    "Recorrer el subárbol izquierdo, visitar el nodo raíz y recorrer el subárbol derecho.",
+    "Recorrer el subárbol izquierdo, recorrer el subárbol derecho y visitar el nodo raíz.",
+    "Visitar el nodo raíz, recorrer el subárbol izquierdo y recorrer el subárbol derecho."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p23",
+   "tema": 10,
+   "enunciado": "¿Qué es la latencia rotacional en los discos duros HDD?",
+   "opciones": [
+    "El tiempo medio que tarda el disco en leer o escribir nueva información.",
+    "El tiempo medio que tarda la aguja en situarse en el sector físico deseado.",
+    "El tiempo medio necesario para mover la cabeza desde el cilindro actual al cilindro sobre el que se quiere operar.",
+    "El tiempo medio que tarda la aguja en situarse en la pista deseada."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p24",
+   "tema": 10,
+   "enunciado": "Respecto a los sistemas RAID, señale la respuesta INCORRECTA:",
+   "opciones": [
+    "RAID 1 está configurado como espejo, los datos son duplicados en otra unidad (mínimo dos) de forma sincronizada.",
+    "RAID 5 es una implementación del striping de discos en la que se incluye información de paridad con cada escritura en disco.",
+    "RAID 10 conocido como RAID 1+0, mantiene configuración de espejo con striping.",
+    "RAID 6 es una variante de RAID 5 que implementa un doble sistema de paridad distribuida, lo que le permite funcionar con un mínimo de tres discos y tolerar el fallo simultáneo de hasta un solo disco."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p25",
+   "tema": 10,
+   "enunciado": "¿Cuál de los siguientes algoritmos de planificación de CPU asigna un quantum de tiempo de CPU a cada proceso?",
+   "opciones": [
+    "FCFS.",
+    "SJF.",
+    "Por prioridades.",
+    "Round Robin."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p26",
+   "tema": 10,
+   "enunciado": "Considerando el nodo raíz como nivel 1, ¿cuál es el número máximo de nodos en un árbol binario que tiene 4 niveles?",
+   "opciones": [
+    "15",
+    "9",
+    "16",
+    "10"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p27",
+   "tema": 24,
+   "enunciado": "¿Qué es Active Directory Domain Services (AD DS) en el ecosistema Windows Server?",
+   "opciones": [
+    "Un mecanismo para implementar la protección y verificación de integridad del sistema de archivos.",
+    "Un servicio que almacena información sobre los objetos de la red y facilita a los administradores y usuarios la búsqueda y uso.",
+    "Un dispositivo físico de seguridad diseñado para el control de acceso de los usuarios a las distintas aplicaciones, sistemas, recursos y dispositivos.",
+    "Una herramienta integrada en el sistema operativo para la monitorización de las acciones del usuario y administradores."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p28",
+   "tema": 24,
+   "enunciado": "Según el estándar JSON (RFC 8259), ¿cuál de las siguientes afirmaciones es correcta?",
+   "opciones": [
+    "Un objeto JSON mantiene el orden de inserción de sus elementos por definición.",
+    "JSON permite definir tipos de datos personalizados.",
+    "Un objeto JSON es una colección no ordenada de pares nombre/valor.",
+    "JSON admite comentarios dentro de su sintaxis estándar."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p29",
+   "tema": 24,
+   "enunciado": "En un sistema Linux, el directorio /etc contiene:",
+   "opciones": [
+    "Los ficheros y directorios del usuario.",
+    "Los ficheros de configuración del sistema.",
+    "Los directorios de los usuarios.",
+    "Los ficheros binarios ejecutables esenciales del sistema."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p30",
+   "tema": 24,
+   "enunciado": "En Linux si queremos renombrar el archivo denominado “PAGOS” con el nuevo nombre “RECIBOS”, ejecutaremos el comando:",
+   "opciones": [
+    "rm PAGOS RECIBOS",
+    "mv PAGOS RECIBOS",
+    "mv RECIBOS PAGOS",
+    "rm RECIBOS PAGOS"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p31",
+   "tema": 13,
+   "enunciado": "El framework de Wi-Fi en Android 14 y superior tiene tres HAL de Wi-Fi. Señale cuál es uno de ellos:",
+   "opciones": [
+    "HAL de Supervisor.",
+    "HAL de Comunicación.",
+    "HAL de Hostapd.",
+    "HAL de Wi-Fi."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p32",
+   "tema": 13,
+   "enunciado": "Dentro de los elementos constitutivos de un sistema operativo, ¿cómo se denomina a la estructura de datos que contiene información sobre un proceso?",
+   "opciones": [
+    "Tabla de páginas.",
+    "Vector de interrupciones.",
+    "Descriptor de segmento.",
+    "Bloque de control de proceso."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p33",
+   "tema": 15,
+   "enunciado": "De las siguientes afirmaciones sobre bases de datos relacionales, indique cuál de ellas es INCORRECTA:",
+   "opciones": [
+    "Se llama clave primaria o clave principal a un campo o a una combinación de campos que identifica de forma única a cada fila de una tabla.",
+    "Un dominio es el conjunto válido de valores que puede tomar un atributo.",
+    "Una superclave es cualquier conjunto de atributos que identifica unívocamente a cada tupla de una relación.",
+    "Las bases de datos relacionales utilizan un método simple de clave-valor para almacenar datos."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p34",
+   "tema": 15,
+   "enunciado": "Señale cuál de las siguientes es una base datos orientada a grafos:",
+   "opciones": [
+    "DynamoDB.",
+    "CouchDB.",
+    "JanusGraph.",
+    "HBase."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p35",
+   "tema": 15,
+   "enunciado": "En el diseño conceptual de bases de datos, un atributo es:",
+   "opciones": [
+    "Un objeto, real o abstracto, distinguible de otros objetos.",
+    "Una conexión semántica entre dos, o más, conjuntos de entidades.",
+    "Una propiedad asociada a un conjunto de entidades.",
+    "Una asociación que se establece entre tipos de entidad."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p36",
+   "tema": 15,
+   "enunciado": "Indique cuál de las siguientes definiciones es correcta respecto al modelo Entidad/Relación extendido.",
+   "opciones": [
+    "La generalización permite abstraer un tipo de entidad de nivel inferior (subtipo) a partir de varios tipos de entidad (supertipos).",
+    "En la especialización, un subtipo se descompone en uno o varios supertipos, los cuales heredan todos los atributos y relaciones del subtipo, además de tener los suyos propios.",
+    "La agregación consiste en construir un nuevo tipo de entidad como composición de otros y su tipo de relación y así poder manejarlo en un nivel de abstracción mayor.",
+    "En una asociación se relacionan dos tipos de entidades independientes que pertenecen al mismo dominio y que coyunturalmente no se asocian."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p37",
+   "tema": 15,
+   "enunciado": "En el contexto de las bases de datos relacionales, ¿cómo se denomina a una columna o grupo de columnas de una tabla que contiene valores que coinciden con la clave primaria de otra tabla?",
+   "opciones": [
+    "Clave primaria externa.",
+    "Clave referencia.",
+    "Clave foránea.",
+    "Clave compuesta."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p38",
+   "tema": 17,
+   "enunciado": "¿Qué tipos de disparadores o triggers contempla SQL Server?",
+   "opciones": [
+    "DML, DMC y AFTER.",
+    "DML, DDL y LOGON.",
+    "DML, DDL y EXTENDS.",
+    "DML, DMZ y FTL."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p39",
+   "tema": 17,
+   "enunciado": "En relación a los niveles de aislamiento de transacción que se definen mediante ANSI SQL, indique cuál de las siguientes sentencias es correcta:",
+   "opciones": [
+    "La lectura repetible protege contra la lectura sucia y la lectura no repetible, pero no contra la lectura fantasma.",
+    "La lectura no confirmada protege contra la lectura sucia, pero no contra la lectura no repetible, ni contra la lectura fantasma.",
+    "La lectura confirmada no protege contra la lectura sucia, ni contra la lectura no repetible, ni contra la lectura fantasma.",
+    "Serializable protege contra la lectura sucia y la lectura fantasma, pero no contra la lectura no repetible."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p40",
+   "tema": 17,
+   "enunciado": "En el sistema gestor de base de datos Oracle, indique qué valor numérico devolverá la ejecución de la siguiente sentencia: SELECT INSTR('Corporate Floor','or', 3, 2) \"Prueba\" FROM DUAL;",
+   "opciones": [
+    "2",
+    "5",
+    "13",
+    "14"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p41",
+   "tema": 17,
+   "enunciado": "En diseño modular de software, ¿qué tipo de acoplamiento se produce cuando varios módulos comparten una estructura global de datos?",
+   "opciones": [
+    "Acoplamiento de datos.",
+    "Acoplamiento de control.",
+    "Acoplamiento común.",
+    "Acoplamiento de contenido."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p42",
+   "tema": 18,
+   "enunciado": "En un diagrama de clases UML, ¿qué significado tiene el símbolo de resta ( - ) colocado antes del nombre de un atributo o método?",
+   "opciones": [
+    "Indica que el elemento tiene una visibilidad de tipo private.",
+    "Indica que el elemento tiene una visibilidad de tipo public.",
+    "Indica que el elemento tiene que ser revisado.",
+    "Indica que el elemento almacena únicamente valores numéricos negativos."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p43",
+   "tema": 18,
+   "enunciado": "¿Qué principio de diseño establece que las clases de alto nivel no deben depender de las de bajo nivel, sino que ambas deben depender de abstracciones?",
+   "opciones": [
+    "Dependency Inversion Principle (DIP).",
+    "Single Responsibility Principle (SRP).",
+    "Liskov Substitution Principle (LSP).",
+    "Interface Segregation Principle (ISP)."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p44",
+   "tema": 18,
+   "enunciado": "Dentro de los patrones de diseño del \"Gang of Four\" (GoF), ¿cuál es la diferencia fundamental entre el patrón Factory Method y el patrón Abstract Factory?",
+   "opciones": [
+    "Factory Method es un patrón de comportamiento, mientras que Abstract Factory es creacional.",
+    "Factory Method crea objetos de diferentes tipos de datos, mientras que Abstract Factory sólo crea objetos de un único tipo.",
+    "Factory Method requiere obligatoriamente el uso de interfaces, mientras que Abstract Factory sólo funciona con clases abstractas.",
+    "Factory Method sirve para crear objetos de un mismo tipo, mientras que Abstract Factory permite crear objetos de una misma familia."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p45",
+   "tema": 19,
+   "enunciado": "Las aplicaciones de .NET 10 se pueden escribir en los siguientes lenguajes de programación:",
+   "opciones": [
+    "C#, F# y Visual Basic.",
+    "C#, Java y Visual Basic.",
+    "C#, F#, Java, R y Visual Basic.",
+    "Java, PHP y Visual Basic."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p46",
+   "tema": 19,
+   "enunciado": "¿Qué especificación de la Arquitectura Jakarta EE es la homóloga funcional a 'Entity Framework Core' en la plataforma .NET para la gestión de la persistencia?",
+   "opciones": [
+    "Jakarta JDBC.",
+    "Jakarta Transactions.",
+    "Jakarta Persistence.",
+    "Jakarta Validation."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p47",
+   "tema": 20,
+   "enunciado": "¿Cuál es la última versión de SOAP (Simple Object Access Protocol)?",
+   "opciones": [
+    "SOAP 1.1",
+    "SOAP 1.2",
+    "SOAP 2.0",
+    "SOAP 2.1"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p48",
+   "tema": 21,
+   "enunciado": "Indique cuál de las siguientes afirmaciones es INCORRECTA:",
+   "opciones": [
+    "XSD se refiere al lenguaje de definición de esquemas XML.",
+    "DTD proporciona medios para validar archivos XML en relación con un conjunto de normas.",
+    "En XHTML todos los elementos tienen que llevar cierre.",
+    "jQuery es un lenguaje de programación que permite la mejora de JavaScript."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p49",
+   "tema": 21,
+   "enunciado": "Señale la afirmación correcta con respecto a REST:",
+   "opciones": [
+    "Es un protocolo estándar de la capa de aplicación diseñado para garantizar el intercambio de mensajes NTP entre plataformas heterogéneas.",
+    "Es un conjunto de principios arquitectónicos que se ajusta a las necesidades de las aplicaciones móviles y los servicios web ligeros.",
+    "Es un protocolo propietario desarrollado por el consorcio W3C para sustituir las especificaciones basadas en RPC en entornos de escritorio.",
+    "Es un patrón de diseño exclusivo para aplicaciones web tradicionales que prohíbe explícitamente la transferencia de datos en formatos JSON."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p50",
+   "tema": 16,
+   "enunciado": "En JavaScript, cuál de las siguientes afirmaciones es INCORRECTA:",
+   "opciones": [
+    "Entre los tipos de datos JavaScript están String, Boolean, Undefined y Number.",
+    "Una variable declarada sin valor asignado tiene el valor undefined.",
+    "123 == '123' devolverá falso.",
+    "El alcance de una variable declarada con let es de bloque."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p51",
+   "tema": 16,
+   "enunciado": "¿Qué significan las siglas que dan nombre a una matriz RACI?",
+   "opciones": [
+    "Reliable Algorithm for Confidential Information.",
+    "Reasonably Allocated and Centrally Implemented.",
+    "Responsible, Accountable, Consulted, Informed.",
+    "Random, Asignated, Controlled, Isolated."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p52",
+   "tema": 16,
+   "enunciado": "¿Cuál de las siguientes afirmaciones es FALSA?",
+   "opciones": [
+    "En JavaScript, la ejecución de isNaN(\"hola\") dará como resultado true.",
+    "El lenguaje de programación JavaScript forma parte de la plataforma Java.",
+    "XML es la base de un gran número de normas tales como el Lenguaje Universal de Negocios, entre otros.",
+    "React es una biblioteca de código abierto de JavaScript para crear interfaces de usuario de front-end."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p53",
+   "tema": 22,
+   "enunciado": "¿Qué práctica de seguridad en el desarrollo de software previene de forma directa las vulnerabilidades de inyección como SQLi o XSS?",
+   "opciones": [
+    "Uso de contraseñas complejas por parte de los usuarios.",
+    "Validación y saneamiento de las entradas de usuario al sistema.",
+    "Instalación de un antivirus en el servidor.",
+    "Minimizar el número de ventanas abiertas durante el desarrollo."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p54",
+   "tema": 22,
+   "enunciado": "Señale la respuesta correcta según la Directiva (UE) 2016/2102 del Parlamento Europeo y del Consejo, de 26 de octubre de 2016, sobre la accesibilidad de los sitios web y aplicaciones para dispositivos móviles de los organismos del sector público:",
+   "opciones": [
+    "El diseño universal debe permitir que todas las personas puedan usar productos o servicios, en la mayor medida posible, sin adaptación o diseño especializado, pero no excluye dispositivos de apoyo para ciertos grupos cuando sean necesarios.",
+    "El diseño universal implica que no deben existir ayudas técnicas (dispositivos de apoyo), porque todo debe funcionar igual para todos sin excepciones.",
+    "La Directiva incluye en su ámbito de aplicación los sitios web y aplicaciones para dispositivos móviles de prestadores del servicio público de radiodifusión y sus filiales.",
+    "La Directiva incluye en su ámbito de aplicación el contenido multimedia en directo de base temporal publicado después del 23 de septiembre de 2020."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p55",
+   "tema": 23,
+   "enunciado": "En Git, ¿qué significa el estado 'Staged'?",
+   "opciones": [
+    "Que el archivo tiene conflictos de fusión y no se puede compilar.",
+    "Que los cambios han sido marcados para ser incluidos en el próximo 'commit'.",
+    "Que los cambios han sido subidos al servidor remoto con éxito.",
+    "Que se ha modificado el archivo pero todavía no se ha hecho 'commit' en la base de datos."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p56",
+   "tema": 23,
+   "enunciado": "En Git, ¿qué comando se utiliza para guardar en el repositorio local una instantánea de los cambios previamente preparados?",
+   "opciones": [
+    "git push",
+    "git clone",
+    "git commit",
+    "git status"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p57",
+   "tema": 23,
+   "enunciado": "De acuerdo con la Guía de Scrum, ¿cuál de los siguientes es uno de los roles que compone el Equipo de Scrum?",
+   "opciones": [
+    "Sprint Owner.",
+    "Scrum Planner.",
+    "Scrum Master.",
+    "Stakeholder."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p58",
+   "tema": 23,
+   "enunciado": "Señale cuál de las siguientes es una plataforma integrada para monitorización y seguridad entre cuyos servicios está la monitorización del rendimiento de aplicaciones:",
+   "opciones": [
+    "Datadog.",
+    "Voldemort.",
+    "Atohalan.",
+    "Cockroach."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p59",
+   "tema": 25,
+   "enunciado": "En virtualización de sistemas, ¿qué caracteriza a un hipervisor de tipo 1?",
+   "opciones": [
+    "Se ejecuta directamente sobre el hardware físico y permite ejecutar sistemas operativos invitados.",
+    "Se ejecuta como una aplicación dentro de un sistema operativo anfitrión.",
+    "Se utiliza exclusivamente para virtualizar periféricos de impresión.",
+    "Es una herramienta destinada exclusivamente a realizar copias de seguridad."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p60",
+   "tema": 25,
+   "enunciado": "¿En qué arquitectura de almacenamiento se permite que varios usuarios y dispositivos en la red de área local accedan a los datos desde un área de almacenamiento centralizada en la red?",
+   "opciones": [
+    "Arquitectura NAS.",
+    "Arquitectura SAN.",
+    "Arquitectura DAS.",
+    "Arquitectura de Disco Interno."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p61",
+   "tema": 25,
+   "enunciado": "¿Cuál de las siguientes opciones es un ejemplo de hipervisor de tipo 1?",
+   "opciones": [
+    "VirtualBox.",
+    "VMware Workstation.",
+    "VMware ESXi.",
+    "Parallels Desktop."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p62",
+   "tema": 25,
+   "enunciado": "Señale la respuesta correcta en el ámbito de la infraestructura de escritorio virtual (VDI):",
+   "opciones": [
+    "VDI es el alojamiento de entornos de escritorio en un servidor central.",
+    "En VDI persistente el cliente final puede estar conectado al mismo escritorio cada vez o a uno aleatorio del grupo.",
+    "En VDI no persistente cada vez que un usuario accede al entorno VDI, se conecta al mismo escritorio con todos sus cambios retenidos en la imagen del sistema operativo virtual, incluso después de reiniciar la conexión.",
+    "No es necesario que los clientes finales estén constantemente conectados al servidor para que puedan mantener el acceso a los escritorios virtualizados."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p63",
+   "tema": 25,
+   "enunciado": "En Oracle 11g, ¿cuál es el comando de RMAN para listar los scripts globales y locales disponibles para ejecutar?",
+   "opciones": [
+    "RMAN> list script;",
+    "RMAN> list script names;",
+    "RMAN> list;",
+    "RMAN> list global script names;"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p64",
+   "tema": 25,
+   "enunciado": "¿Qué es Kubernetes?",
+   "opciones": [
+    "Un emulador para ejecutar aplicaciones sobre arquitecturas de procesador diferentes.",
+    "Una plataforma de orquestación de contenedores de código abierto.",
+    "Un simulador de carga de bases de datos no relacionales.",
+    "Un sistema de virtualización de contenedores a nivel de sistema operativo."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p65",
+   "tema": 25,
+   "enunciado": "¿Cuál de las siguientes soluciones de gestión de dispositivos móviles es exclusiva para dispositivos Apple?",
+   "opciones": [
+    "Citrix Endpoint Management.",
+    "Miradore.",
+    "Jamf Now.",
+    "Scalefusion."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p66",
+   "tema": 28,
+   "enunciado": "¿Cuál de los siguientes es un sistema de gestión de servicios (ITSM)?",
+   "opciones": [
+    "RabbitMQ.",
+    "Remedy/Helix.",
+    "Hibernate.",
+    "Snort."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p67",
+   "tema": 28,
+   "enunciado": "¿Cuál de las siguientes metodologías NO se corresponde a una metodología de riesgos?",
+   "opciones": [
+    "OCTAVE.",
+    "MAGERIT.",
+    "NIST SP 800-30.",
+    "PRICE3."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p68",
+   "tema": 28,
+   "enunciado": "¿Qué es el plenum, de acuerdo con el estándar ANSI/TIA 942-B?",
+   "opciones": [
+    "Un compartimento donde uno o más conductos de aire están conectados y que forma parte del sistema de distribución del aire.",
+    "Un conductor metálico sólido o trenzado aislado individualmente.",
+    "Una unión de conductores destinada a ser permanente.",
+    "Un cable utilizado para establecer conexiones en un panel de conexión."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p69",
+   "tema": 30,
+   "enunciado": "¿Qué es la tecnología VPLS?",
+   "opciones": [
+    "Es una tecnología que permite unir redes Ethernet geográficamente dispersas haciendo que compartan un mismo dominio de difusión.",
+    "Es una tecnología de reenvío de paquetes que utiliza etiquetas para tomar decisiones relativas al reenvío de datos.",
+    "Es un conjunto de protocolos que proporcionan seguridad a las comunicaciones Internet en la capa IP.",
+    "Es un protocolo de enrutado entre sistemas autónomos."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p70",
+   "tema": 30,
+   "enunciado": "El estándar H.245 propuesto por ITU es descrito como:",
+   "opciones": [
+    "Sistemas de comunicación multimedia basados en paquetes.",
+    "Protocolos de señalización de llamada y paquetización de trenes de medios para sistemas de comunicación multimedia por paquetes.",
+    "Gestión de funciones y canales de medios adicionales para terminales de la serie H.300.",
+    "Protocolo de control para comunicación multimedia."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p71",
+   "tema": 30,
+   "enunciado": "La gestión de una red de comunicaciones, según el modelo OSI, puede descomponerse en cinco áreas funcionales conocidas por el acrónimo FCAPS. Señale cuál NO es una de ellas:",
+   "opciones": [
+    "Gestión de Fallos (Fault).",
+    "Gestión del Almacenamiento (Storage).",
+    "Gestión de la Configuración (Configuration).",
+    "Gestión del Rendimiento (Performance)."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p72",
+   "tema": 30,
+   "enunciado": "El protocolo SIP (Session Initiation Protocol) utiliza por defecto el puerto:",
+   "opciones": [
+    "Solo 5060 UDP.",
+    "Solo 6050 UDP.",
+    "5060 tanto en TCP como en UDP.",
+    "6050 tanto en TCP como en UDP."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p73",
+   "tema": 30,
+   "enunciado": "Señale la respuesta correcta con respecto a CG-NAT:",
+   "opciones": [
+    "Es una solución de los operadores que hace que muchos clientes se conecten a Internet utilizando la misma dirección IPv4.",
+    "Es una solución que hace que muchos clientes que se conectan a Internet utilicen varias direcciones IP.",
+    "Es una solución que permite la asignación de varias direcciones IP privadas a una dirección IP pública entre direcciones locales y globales.",
+    "Es una solución que permite la creación de una red de área extensa definida por software."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p74",
+   "tema": 30,
+   "enunciado": "De entre las siguientes direcciones IPv4, ¿cuál es la que pertenece a la Clase A?",
+   "opciones": [
+    "2.17.39.162",
+    "142.250.200.131",
+    "239.255.255.255",
+    "192.168.0.59"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p75",
+   "tema": 30,
+   "enunciado": "¿Qué protocolo usa por defecto el puerto TCP/23?",
+   "opciones": [
+    "FTP.",
+    "SMTP.",
+    "SSH.",
+    "TELNET."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p76",
+   "tema": 31,
+   "enunciado": "En el desarrollo de una aplicación web segura con HTTPS, ¿cuál es el propósito técnico del atributo \"HttpOnly\" en una cabecera \"Set-Cookie\"?",
+   "opciones": [
+    "Obliga a que la cookie sólo se envíe si la conexión está cifrada mediante TLS.",
+    "Impide que los scripts del lado del cliente accedan a la cookie, mitigando ataques XSS.",
+    "Define que la cookie es válida para el dominio de segundo nivel y todos sus subdominios.",
+    "Establece que la cookie debe eliminarse automáticamente al cerrar el navegador."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p77",
+   "tema": 31,
+   "enunciado": "Según las recomendaciones del CCN-CERT sobre seguridad en redes privadas virtuales, ¿qué nombre recibe el túnel de red seguro que opera en la capa de red y que se implementa como un kernel de interfaz virtual de red para Linux?",
+   "opciones": [
+    "MACsec.",
+    "IKEV2.",
+    "EAPoL.",
+    "WireGuard."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p78",
+   "tema": 33,
+   "enunciado": "¿Qué especifica el estándar IEEE 802.3 dentro de la familia de normas IEEE 802?",
+   "opciones": [
+    "El funcionamiento de redes inalámbricas Wi‑Fi.",
+    "Los métodos de acceso y transmisión para redes Ethernet.",
+    "Los protocolos de seguridad para redes móviles.",
+    "Las características de redes Bluetooth de largo alcance."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p79",
+   "tema": 33,
+   "enunciado": "¿Qué tipo de cifrado es el algoritmo RSA?",
+   "opciones": [
+    "Un criptosistema de clave privada.",
+    "Un criptosistema de clave pública.",
+    "Un criptosistema lineal.",
+    "Un criptosistema elipsoidal."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p80",
+   "tema": 33,
+   "enunciado": "En redes Ethernet, ¿qué velocidad agregada se asocia habitualmente al formato QSFP+?",
+   "opciones": [
+    "Admite velocidades de datos de hasta 5 Gbps.",
+    "Admite velocidades de datos de hasta 100 Gbps.",
+    "Admite velocidades de datos de hasta 16 Gbps.",
+    "Admite velocidades de datos de hasta 40 Gbps."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "pr01",
+   "tema": 13,
+   "enunciado": "En el sistema operativo Android, ¿qué extensión tienen los archivos ejecutables Dalvik?",
+   "opciones": [
+    ".dex",
+    ".apk",
+    ".dvk",
+    ".dxk"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr02",
+   "tema": 12,
+   "enunciado": "¿Cuál de los siguientes estándares NO está incluido en la Norma Técnica de Interoperabilidad de \"Catálogo de Estándares\" en la categoría de \"Formatos ficheros - Imagen y/o texto\"?",
+   "opciones": [
+    "CSS.",
+    "JPEG.",
+    "TIFF.",
+    "BMP."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr03",
+   "tema": 30,
+   "enunciado": "Señale cuál es un estándar que especifica un conjunto de protocolos que proporcionan medidas de seguridad para la protección de los datos en la capa de enlace de redes de área local tipo Ethernet, conocido como MAC Security:",
+   "opciones": [
+    "IEEE 802.1AE",
+    "IEEE 802.1AP",
+    "IEEE 802.1AF",
+    "IEEE 802.1AZ"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr04",
+   "tema": 17,
+   "enunciado": "¿Cuáles son los tipos de procedimientos almacenados que se pueden usar en SQL Server?",
+   "opciones": [
+    "Definidos por el usuario, temporales, de sistema y extendidos.",
+    "Definidos por el usuario, locales, de sistema, almacenados y extendidos.",
+    "Definidos por el usuario, locales, de sistema y almacenados.",
+    "Definidos por el usuario, globales, de sistema y extendidos."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr05",
+   "tema": 18,
+   "enunciado": "En UML, ¿qué tipo de diagrama se utiliza para representar la interacción entre objetos o participantes mediante los mensajes que se intercambian entre ellos?",
+   "opciones": [
+    "Diagrama de clases.",
+    "Diagrama de secuencia.",
+    "Diagrama de despliegue.",
+    "Diagrama de componentes."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  }
+ ]
+}

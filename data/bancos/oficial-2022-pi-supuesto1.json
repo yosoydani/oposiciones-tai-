@@ -1,0 +1,245 @@
+{
+ "titulo": "Examen 2022 · promoción interna · Supuesto práctico I",
+ "fuente": "oficial",
+ "examen": "TAI-PI2022",
+ "parte": "supuesto1",
+ "tema": null,
+ "convocatoria": "2022 · promoción interna",
+ "minutos": 14,
+ "origen": "OEP 2020, 2021 y 2022",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/2194876/Cuestionario+TAI-PI_2023.pdf/5de03cad-c8b3-7231-1aff-96afaa23d3f2",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/2194876/Plantilla+respuestas+DEFINITIVA+TAI-P_oep2022.pdf/3dd0da87-b08b-00e2-5cc1-35d8579b4136",
+ "contextos": {
+  "s1": "Se va a desarrollar un sistema que permitirá a una persona (interesado) otorgar permiso a otra (representante) para que actúe en su\nnombre ante la Administración en un determinado trámite. El sistema contará con los siguientes módulos:\n• Un frontal web (Punto de Acceso General) que recoge todos los trámites de la Administración y donde el interesado puede\notorgar la representación.\n• Un proceso que tramita las peticiones de representación, envía notificaciones PUSH a los representantes y recaba los\nconsentimientos producidos.\n• Un módulo de gestión para el personal funcionario de atención al público.\nCuando el interesado pulse el botón Otorgar representación en un trámite, el sistema generará un enlace único con caducidad, que\nserá enviado por notificación PUSH al representante.\nEn el momento en que el representante acceda al enlace tendrá disponible la acción Obtener PIN y deberá usar la aplicación móvil\nCl@ve PIN para obtener un PIN válido.\nEl funcionario, en el módulo de gestión, podrá comparar el PIN generado para la operación con el que le ofrece el representante,\npermitiendo el trámite si estos coinciden.\nUn interesado podrá solicitar representación para tantos trámites como considere y cada trámite podrá ser solicitado por un número\ncualquiera de interesados, pero una representación solo es válida para un trámite a la vez. Asimismo, cada representante podrá obtener\npermisos en cualquier número de trámites."
+ },
+ "preguntas": [
+  {
+   "id": "s101",
+   "tema": 18,
+   "enunciado": "En el diagrama de clases la relación existente entre “Solicitud Representación” y “Trámite”, ¿qué multiplicidades serían compatibles con los requisitos planteados en el enunciado?",
+   "opciones": [
+    "‘1’ en el recuadro “SR>T” y ‘1’ en el recuadro “T>SR”.",
+    "‘1’ en el recuadro “SR>T” y ‘0..N’ en el recuadro “T>SR”.",
+    "‘0..N’ en el recuadro “SR>T” y ‘1’ en el recuadro “T>SR”.",
+    "‘1..N’ en el recuadro “SR>T” y ‘0..N’ en el recuadro “T>SR”."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s102",
+   "tema": 14,
+   "enunciado": "Dentro del sistema de Información que conforma nuestro servicio, ¿qué producto habitual de ORACLE utilizaría?",
+   "opciones": [
+    "Servidor web.",
+    "Servicio de directorio corporativo.",
+    "Sistema Gestor de Bases de Datos (SGBD).",
+    "Navegador web."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s103",
+   "tema": 19,
+   "enunciado": "En Java SE 17, ¿cuál de los siguientes tipos de colección no admite duplicados?",
+   "opciones": [
+    "List",
+    "Stack",
+    "Collection",
+    "Set"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s104",
+   "tema": 17,
+   "enunciado": "Si fuese el motor de Base de Datos ORACLE, indique cuál de los siguientes es un lenguaje de procedimiento cuya sintaxis permite insertar sentencias SQL y se almacena compilado dentro de la base de datos:",
+   "opciones": [
+    "TRANSACT SQL",
+    "PL/SQL",
+    "FORTRAN",
+    "COBOL"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s105",
+   "tema": 18,
+   "enunciado": "Si se solicitara un diagrama “centrándose en un objeto de la clase Notificación, analizando sus estados, transiciones entre estados y los eventos que los provocan”, ¿qué tipo de diagrama UML debería elaborar según METRICA v3?",
+   "opciones": [
+    "Diagrama de clases.",
+    "Diagrama de estados, o de máquina de estados.",
+    "Diagrama de despliegue.",
+    "Diagrama de objetos."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s106",
+   "tema": 18,
+   "enunciado": "Indique cuál es la última versión del estándar de UML:",
+   "opciones": [
+    "2.5",
+    "2.4.1",
+    "2.4",
+    "3.0"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s107",
+   "tema": 19,
+   "enunciado": "¿A qué definición, de entre las siguientes, se ajusta el término \"Jakarta EE\"?",
+   "opciones": [
+    "Un conjunto de especificaciones para el desarrollo de software tiempo real en sistemas embebidos.",
+    "Un congreso de desarrolladores Java que tiene lugar en Indonesia.",
+    "Un conjunto de especificaciones para aplicaciones Java de entorno empresarial (enterprise).",
+    "Un entorno de programación (IDE) para Java."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s108",
+   "tema": 19,
+   "enunciado": "Seleccione la opción correcta aplicable a .NET:",
+   "opciones": [
+    "No se puede ejecutar en entornos Linux.",
+    "Es una plataforma para desarrolladores creada por Microsoft para generar distintos tipos de aplicaciones.",
+    "Se puede usar PHP para programar en el marco de trabajo .NET",
+    "No es compatible con microservicios en contenedores Docker."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s109",
+   "tema": 23,
+   "enunciado": "¿Cuál es una herramienta de análisis de seguridad y calidad de código?",
+   "opciones": [
+    "SonarQube",
+    "SonarCode",
+    "SonarCuality",
+    "SonarSrc"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s110",
+   "tema": 18,
+   "enunciado": "Para conectar con los servicios de validación de Cl@ve PIN nos ofrecen una interfaz SOAP, ¿qué tipo de mensajes estaríamos intercambiando con el sistema Cl@ve PIN?",
+   "opciones": [
+    "Mensajes JSON",
+    "Mensajes YAML",
+    "Mensajes XML",
+    "Mensajes RDF"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s111",
+   "tema": 15,
+   "enunciado": "¿Qué característica o atributo de seguridad de las cookies, permite que JavaScript NO tenga acceso a la cookie?",
+   "opciones": [
+    "Domain",
+    "SameSite",
+    "Secure",
+    "HttpOnly"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s112",
+   "tema": 23,
+   "enunciado": "Dos programadores están trabajando en funcionalidades y ramas distintas. ¿Qué operación del sistema de control de versiones Git permitirá mezclar ambas funcionalidades?",
+   "opciones": [
+    "git reset",
+    "git checkout",
+    "git merge",
+    "git stash"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r01",
+   "tema": 22,
+   "enunciado": "¿Cuál es la normativa que define los requisitos de accesibilidad de los sitios web y aplicaciones móviles de los organismos del sector público?",
+   "opciones": [
+    "Orden Ministerial 1112/2018, de 7 de septiembre.",
+    "Ley Orgánica 1112/2018, de 7 de septiembre.",
+    "Ley 1112/2018, de 7 de septiembre.",
+    "Real Decreto 1112/2018, de 7 de septiembre."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r02",
+   "tema": 16,
+   "enunciado": "En PHP, señale que variable de entorno se puede usar para almacenar datos del inicio de sesión de un usuario:",
+   "opciones": [
+    "$_SESSION",
+    "$SESSION",
+    "$_GLOBAL",
+    "$GLOBAL"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r03",
+   "tema": 23,
+   "enunciado": "¿Qué tienen en común las siguientes tecnologías y/o programas: GIT, SVN, Mercurial, CVS?",
+   "opciones": [
+    "Todos son sistemas de gestión de publicación web (Gestores de contenidos).",
+    "Todos son software de control de versiones.",
+    "Todas son tecnologías desarrolladas en la Administración Pública española.",
+    "Todos son sistemas de gestión de bases de datos."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  }
+ ]
+}

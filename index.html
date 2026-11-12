@@ -148,6 +148,12 @@ button.opt:hover:not(:disabled) .bub { border-width: 2.5px; }
 .opt.wrong .bub { background: var(--bad); border-color: var(--bad); color: var(--paper); }
 .opt.wrong .note { color: var(--bad); }
 .opt:disabled, .opt.static { cursor: default; }
+.exam-row { display: grid; grid-template-columns: 14rem 1fr; gap: 10px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--rule); }
+.exam-conv { font-weight: 600; font-stretch: 85%; }
+@media (max-width: 640px) { .exam-row { grid-template-columns: 1fr; gap: 6px; } }
+.ctx { border: 1px solid var(--rule); border-radius: 6px; background: var(--print-soft); }
+.ctx summary { cursor: pointer; padding: 10px 14px; font-weight: 600; font-stretch: 85%; color: var(--print); }
+.ctx div { padding: 0 14px 14px; max-height: 340px; overflow-y: auto; white-space: pre-line; font-size: 0.95rem; line-height: 1.5; }
 .why { border-left: 4px solid var(--graphite); padding: 4px 0 4px 16px; display: flex; flex-direction: column; gap: 4px; max-width: 64ch; }
 .why > .v { font-weight: 800; font-stretch: 80%; font-size: 1.05rem; }
 .v.ok { color: var(--ok); } .v.bad { color: var(--bad); } .v.blank { color: var(--muted); }
@@ -254,6 +260,17 @@ table.t th { font-weight: 600; font-stretch: 85%; color: var(--muted); font-size
     return out;
   }
   function qMap() { const m = new Map(); for (const x of allQuestions()) m.set(x.key, x); return m; }
+  function ctxHtml(x, open) {
+    const c = x.q.contexto && x.bank.contextos ? x.bank.contextos[x.q.contexto] : null;
+    if (!c) return "";
+    return '<details class="ctx"' + (open ? " open" : "") + '><summary>Enunciado del supuesto práctico</summary><div>' + esc(c) + "</div></details>";
+  }
+  function explic(x) {
+    const q = x.q;
+    if (q.explicacion) return txt(q.explicacion);
+    if (x.bank.fuente === "oficial") return "Respuesta según la plantilla definitiva del tribunal: " + LETRAS[q.correcta] + ")." + (q.modificada_en_definitiva ? " La plantilla definitiva cambió esta respuesta respecto a la provisional." : "") + " Esta pregunta aún no tiene explicación." + (x.bank.url_plantilla ? ' <a href="' + esc(x.bank.url_plantilla) + '" target="_blank" rel="noopener">Ver plantilla</a>' : "");
+    return "Sin explicación todavía.";
+  }
   function lastAnswers() {
     const last = new Map();
     const sorted = S.intentos.slice().sort((a, b) => String(a.fecha).localeCompare(String(b.fecha)));
@@ -399,7 +416,7 @@ table.t th { font-weight: 600; font-stretch: 85%; color: var(--muted); font-size
     const qs = allQuestions(), st = temaStats(), c = S.cfg;
     if (!qs.length) return '<section class="sheet"><h1>Aún no hay preguntas</h1><p class="muted">En cuanto se cargue el test de un tema podrás hacerlo aquí.</p></section>';
     const temasCon = S.temas.filter((t) => (st.get(t.n) || {}).total);
-    const oficiales = S.banks.filter((b) => b.fuente === "oficial");
+    const oficiales = S.banks.filter((b) => b.fuente === "oficial").sort(ordenOficial);
     const pend = pendientes();
     if (c.origen === "oficial" && !oficiales.length) c.origen = "temas";
     if (c.origen === "fallos" && !pend.length) c.origen = "temas";
@@ -418,9 +435,15 @@ table.t th { font-weight: 600; font-stretch: 85%; color: var(--muted); font-size
       for (const t of temasCon) h += '<label><input type="checkbox" name="tema" id="tema-' + t.n + '" value="' + t.n + '"' + (c.temas.includes(t.n) ? " checked" : "") + "><span>Tema " + t.n + " · " + st.get(t.n).total + " preguntas</span></label>";
       h += '</div><span class="hint">Incluye las preguntas propias y las de exámenes oficiales asignadas a esos temas.</span></fieldset>';
     } else if (c.origen === "oficial") {
-      h += '<fieldset><legend>Examen</legend><div class="choice">';
-      for (const b of oficiales) h += radio("banco", b.id, b.titulo + " (" + (b.preguntas || []).filter((q) => !q.anulada).length + ")", c.banco === b.id);
-      h += "</div></fieldset>";
+      h += '<fieldset><legend>Examen</legend>';
+      const grupos = [];
+      for (const b of oficiales) { const g = grupos.find((x) => x.k === (b.examen || b.id)); if (g) g.bs.push(b); else grupos.push({ k: b.examen || b.id, conv: b.convocatoria || b.titulo, bs: [b] }); }
+      for (const g of grupos) {
+        h += '<div class="exam-row"><span class="exam-conv">' + esc(g.conv) + '</span><div class="choice">';
+        for (const b of g.bs) h += radio("banco", b.id, (PARTE[b.parte] || b.titulo) + " · " + (b.preguntas || []).filter((q) => !q.anulada).length, c.banco === b.id);
+        h += "</div></div>";
+      }
+      h += '<span class="hint">El cuestionario incluye sus 5 preguntas de reserva al final. En el examen real eliges uno de los dos supuestos.</span></fieldset>';
     }
     const disp = poolFor(c).length, n = numFor(c, disp);
     h += '<fieldset><legend>Cuántas</legend><div class="choice">';
@@ -432,6 +455,13 @@ table.t th { font-weight: 600; font-stretch: 85%; color: var(--muted); font-size
     h += '</div><span class="hint">' + (c.modo === "examen" ? "Tienes " + Math.round(tiempoPara(c, n) / 60) + " minutos. Lo que dejes en blanco no resta." : "Al responder ves si aciertas y por qué.") + "</span></fieldset>";
     h += '<div class="row"><button class="btn go" type="submit"' + (disp ? "" : " disabled") + ">Empezar " + plural(n, "pregunta", "preguntas") + "</button></div></form>";
     return h;
+  }
+  const PARTE = { cuestionario: "Cuestionario", supuesto1: "Supuesto I", supuesto2: "Supuesto II" };
+  function ordenOficial(a, b) {
+    const k = (x) => [-(parseInt(String(x.convocatoria || "").slice(0, 4)) || 0), /promoción/.test(x.convocatoria || "") ? 2 : /extraordinario/.test(x.convocatoria || "") ? 1 : 0, ["cuestionario", "supuesto1", "supuesto2"].indexOf(x.parte)];
+    const ka = k(a), kb = k(b);
+    for (let i = 0; i < 3; i++) if (ka[i] !== kb[i]) return ka[i] - kb[i];
+    return 0;
   }
   function radio(name, value, label, checked, disabled) {
     return '<label><input type="radio" name="' + name + '" id="' + name + "-" + esc(value) + '" value="' + esc(value) + '"' + (checked ? " checked" : "") + (disabled ? " disabled" : "") + "><span>" + esc(label) + "</span></label>";
@@ -476,9 +506,9 @@ table.t th { font-weight: 600; font-stretch: 85%; color: var(--muted); font-size
     const q = x.q, ans = R.answers[key], shown = R.modo === "practica" && R.revealed[key];
     const answered = R.items.filter((k) => R.answers[k] != null).length;
     let h = '<section class="sheet">';
-    h += '<div class="q-meta"><span><span class="q-num">' + (R.idx + 1) + "</span> de " + R.items.length + " · " + esc(R.titulo) + (x.bank.fuente === "oficial" ? " · " + esc(x.bank.convocatoria || "oficial") + " · tema " + esc(x.tema) : (/^Tema \d+$/.test(R.titulo) ? "" : " · tema " + esc(x.tema))) + "</span>";
+    h += '<div class="q-meta"><span><span class="q-num">' + (R.idx + 1) + "</span> de " + R.items.length + " · " + esc(R.titulo) + (x.bank.fuente === "oficial" ? (x.q.reserva ? " · reserva" : "") + (x.tema != null ? " · tema " + esc(x.tema) : "") : (/^Tema \d+$/.test(R.titulo) ? "" : " · tema " + esc(x.tema))) + "</span>";
     h += R.modo === "examen" ? '<span class="clock" id="clock" aria-label="Tiempo restante">' + mmss(R.limit - (Date.now() - R.start) / 1000) + "</span>" : "<span>" + plural(answered, "respondida", "respondidas") + "</span>";
-    h += '</div><div class="enun">' + txt(q.enunciado) + '</div><div class="opts" role="group" aria-label="Opciones">';
+    h += "</div>" + ctxHtml(x, true) + '<div class="enun">' + txt(q.enunciado) + '</div><div class="opts" role="group" aria-label="Opciones">';
     q.opciones.forEach((o, i) => {
       let cls = "", note = "";
       if (shown) { if (i === q.correcta) { cls = "right"; note = i === ans ? "Tu respuesta" : "Correcta"; } else if (i === ans) { cls = "wrong"; note = "Tu respuesta"; } }
@@ -488,7 +518,7 @@ table.t th { font-weight: 600; font-stretch: 85%; color: var(--muted); font-size
     h += "</div>";
     if (shown) {
       const ok = ans === q.correcta;
-      h += '<div class="why"><span class="v ' + (ans == null ? "blank" : ok ? "ok" : "bad") + '">' + (ans == null ? "En blanco. Era la " + LETRAS[q.correcta] + "." : ok ? "Correcta." : "Fallo. Era la " + LETRAS[q.correcta] + ".") + "</span><span>" + txt(q.explicacion || "Sin explicación todavía.") + "</span></div>";
+      h += '<div class="why"><span class="v ' + (ans == null ? "blank" : ok ? "ok" : "bad") + '">' + (ans == null ? "En blanco. Era la " + LETRAS[q.correcta] + "." : ok ? "Correcta." : "Fallo. Era la " + LETRAS[q.correcta] + ".") + "</span><span>" + explic(x) + "</span></div>";
     }
     h += '<div class="spread"><div class="row">';
     if (R.modo === "examen") {
@@ -560,7 +590,7 @@ table.t th { font-weight: 600; font-stretch: 85%; color: var(--muted); font-size
     for (const r of it.respuestas) { if (!porTema.has(r.tema)) porTema.set(r.tema, { a: 0, f: 0, b: 0 }); const s = porTema.get(r.tema); if (r.r == null) s.b++; else if (r.ok) s.a++; else s.f++; }
     if (porTema.size > 1) {
       h += '<div class="wrap-x"><table class="t"><thead><tr><th>Tema</th><th>Aciertos</th><th>Fallos</th><th>Blanco</th><th>Nota</th></tr></thead><tbody>';
-      for (const [t, s] of Array.from(porTema).sort((x, y) => x[0] - y[0])) h += "<tr><td>" + esc(t) + "</td><td>" + s.a + "</td><td>" + s.f + "</td><td>" + s.b + '</td><td class="nota">' + n2(puntuar(s.a, s.f, s.a + s.f + s.b)) + "</td></tr>";
+      for (const [t, s] of Array.from(porTema).sort((x, y) => (x[0] == null ? 99 : x[0]) - (y[0] == null ? 99 : y[0]))) h += "<tr><td>" + (t == null ? "Sin tema asignado" : esc(t)) + "</td><td>" + s.a + "</td><td>" + s.f + "</td><td>" + s.b + '</td><td class="nota">' + n2(puntuar(s.a, s.f, s.a + s.f + s.b)) + "</td></tr>";
       h += "</tbody></table></div>";
     }
     h += '<div class="row">' + (malas ? '<button class="btn go" data-action="retry-fails">Repetir ' + plural(malas, "fallo", "fallos") + "</button>" : "") + '<button class="btn" data-action="new">Nuevo test</button>' + (it._fromHist ? '<button class="btn" data-action="back-hist">Volver al historial</button>' : "") + "</div></section>";
@@ -575,14 +605,14 @@ table.t th { font-weight: 600; font-stretch: 85%; color: var(--muted); font-size
       const x = m.get(r.k);
       if (!x) { h += '<div class="review-item"><span class="hint">Pregunta ' + (i + 1) + ": ya no está en el banco.</span></div>"; continue; }
       const q = x.q, st = r.r == null ? "blank" : r.ok ? "ok" : "bad";
-      h += '<div class="review-item"><div class="q-meta"><span><span class="q-num">' + (i + 1) + "</span> · tema " + esc(x.tema) + '</span><span class="v ' + st + '" style="font-weight:600">' + (st === "ok" ? "Acierto" : st === "bad" ? "Fallo" : "En blanco") + "</span></div>";
-      h += '<div class="enun" style="font-size:1.08rem">' + txt(q.enunciado) + '</div><div class="opts">';
+      h += '<div class="review-item"><div class="q-meta"><span><span class="q-num">' + (i + 1) + "</span>" + (x.tema != null ? " · tema " + esc(x.tema) : "") + (q.reserva ? " · reserva" : "") + '</span><span class="v ' + st + '" style="font-weight:600">' + (st === "ok" ? "Acierto" : st === "bad" ? "Fallo" : "En blanco") + "</span></div>";
+      h += ctxHtml(x, false) + '<div class="enun" style="font-size:1.08rem">' + txt(q.enunciado) + '</div><div class="opts">';
       q.opciones.forEach((o, j) => {
         const cls = j === q.correcta ? "right" : j === r.r ? "wrong" : "";
         const note = j === r.r ? "Tu respuesta" : j === q.correcta ? "Correcta" : "";
         h += '<div class="opt static ' + cls + '"><span class="bub">' + LETRAS[j] + '</span><span class="tx">' + txt(o) + '</span><span class="note">' + note + "</span></div>";
       });
-      h += '</div><div class="why"><span class="v">Por qué</span><span>' + txt(q.explicacion || "Sin explicación todavía.") + "</span></div></div>";
+      h += '</div><div class="why"><span class="v">Por qué</span><span>' + explic(x) + "</span></div></div>";
     }
     h += "</div></section>";
     return h;

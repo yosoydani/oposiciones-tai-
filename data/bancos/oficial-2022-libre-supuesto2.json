@@ -1,0 +1,397 @@
+{
+ "titulo": "Examen 2022 · libre · Supuesto práctico II",
+ "fuente": "oficial",
+ "examen": "TAI-L2022",
+ "parte": "supuesto2",
+ "tema": null,
+ "convocatoria": "2022 · libre",
+ "minutos": 24,
+ "origen": "OEP 2020, 2021 y 2022",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/2194858/Cuestionario+TAI-L_2023.pdf/505d8c94-69a3-2971-b013-76c83e442ba1",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/2194858/PlantillaRespuestas+DEFINITIVA+TAI-L_oep2022.pdf/54977d89-8c20-cb49-d715-23cb72681c35",
+ "contextos": {
+  "s2": "La Subdirección General de Informática del Organismo en el que recientemente Vd. ha tomado posesión y a través de su departamento\nde Sistemas, Comunicaciones y Seguridad, ha decidido acometer un cambio de diseño en la infraestructura de la red informática del\ndepartamento y Vd. debe colaborar en su implantación.\nSe parte de la situación inicial donde hay una única red con el siguiente direccionamiento IP 10.20.30.0/24 donde residen:\n• Los equipos informáticos de los usuarios\n• Las aplicaciones informáticas\n• Las Bases de Datos Oracle y MySql\n• La conexión a Internet del departamento\nTodo reside en la misma red según el modelo que llamaremos Modelo A:\nDespués de varios estudios se concluye que se debe realizar una segmentación de la red actual en cuatro subredes:\n● Primera Subred para los PCs de usuario\n● Segunda Subred para las Bases de Datos\n● Tercera Subred para las Aplicaciones\n● Cuarta Subred para utilizarla como DMZ\nSe instalará una pareja de Firewalls o Cortafuegos formando un clúster donde se implementarán las reglas necesarias para las\nconectividades y encaminamientos entre Subredes.\nEl modelo al que llamaremos Modelo B pasa a ser el siguiente:\nNota aclaratoria: los PCs de Usuario tienen sistema operativo Windows 10 y tanto los servidores para Aplicaciones, Base de Datos y\nDMZ tienen sistema operativo Linux RedHat RHEL7.4"
+ },
+ "preguntas": [
+  {
+   "id": "s201",
+   "tema": 10,
+   "enunciado": "En los PCs de los usuarios hay que purgar la memoria caché de la resolución DNS. ¿Cuál de los siguientes comandos habría que lanzar desde la consola de PowerShell?",
+   "opciones": [
+    "ipconfig /dnsflush",
+    "ipconfig /flushdns",
+    "ifconifg --erase dnscache",
+    "ifconifg --clean dnscache"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s202",
+   "tema": 24,
+   "enunciado": "En todos los PCs de usuario existe un usuario local llamado Infocentro utilizado para labores de mantenimiento. ¿Qué comando utilizaríamos desde la línea de comandos de Windows PowerShell para ver más información sobre este usuario?",
+   "opciones": [
+    "net user Infocentro",
+    "netuser Infocentro",
+    "info user Infocentro",
+    "infouser Infocentro"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s203",
+   "tema": 25,
+   "enunciado": "En el contexto de la administración del almacenamiento, ¿qué es el “Thin Provisioning”?",
+   "opciones": [
+    "Es un mecanismo de despliegue de discos en red para clientes ligeros.",
+    "Es una tecnología que permite agregar discos físicos en caliente a las cabinas de la SAN.",
+    "Es un método de virtualización de almacenamiento que permite asignar el espacio de almacenamiento de una manera flexible bajo demanda.",
+    "Es un método por el que se asigna todo el espacio virtualizado disponible y se va a reduciendo (shrinking) a medida que el cliente lo descarta."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s204",
+   "tema": 27,
+   "enunciado": "En uno de los servidores de la Subred de Aplicaciones del Modelo B se va a instalar un software de monitorización para Linux. Indique de entre los siguientes, cuál cumpliría esa función:",
+   "opciones": [
+    "Check_MK",
+    "Reddis",
+    "Jenkins",
+    "Nagstamon"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s205",
+   "tema": 30,
+   "enunciado": "¿Qué máscara deberá tener la red 10.20.30.0 del modelo A para que haya cuatro subredes como en el Modelo B?",
+   "opciones": [
+    "255.255.255.194",
+    "255.255.255.192",
+    "255.255.255.196",
+    "255.255.255.190"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s206",
+   "tema": 30,
+   "enunciado": "Necesitamos borrar la caché de las direcciones físicas (Mac Address) en uno de los servidores que ofrece la aplicación de Intranet de la Subred de Aplicaciones del Modelo B. ¿Cuál de los siguientes comandos utilizaría?",
+   "opciones": [
+    "ip delete cache",
+    "arp -d",
+    "iptables -d mac",
+    "ip flush"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s207",
+   "tema": 30,
+   "enunciado": "Si tenemos en cuenta que la primera subred para PCs de Usuario del Modelo B es la 10.20.30.0/26, ¿cuáles son las direcciones de Red y Broadcast?",
+   "opciones": [
+    "10.20.30.0 y 10.20.30.255",
+    "10.20.30.1 y 10.20.30.62",
+    "10.20.30.0 y 10.20.30.63",
+    "10.20.30.64 y 10.20.30.127"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s208",
+   "tema": 31,
+   "enunciado": "Para optimizar el acceso a Internet, se opta por instalar un servidor proxy-caché que soporte los protocolos HTTP, HTTP/2, HTTPS. ¿Cuál de las siguientes soluciones puede realizar dicha función?",
+   "opciones": [
+    "INFLUXDB",
+    "GRAFANA",
+    "CHECK_MK",
+    "SQUID"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s209",
+   "tema": 32,
+   "enunciado": "Una vez implementado \"teletrabajo\" mediante VPN, se quiere dotar de mayor seguridad mediante el envío de un código por SMS al teléfono móvil del trabajador. ¿Cómo se denomina a este tipo de validación?",
+   "opciones": [
+    "Factor electrónico de autenticación.",
+    "Autenticación electrónica de usuarios.",
+    "Doble factor de autenticación.",
+    "Factor único de autenticación."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s210",
+   "tema": 26,
+   "enunciado": "En la subred de DMZ del Modelo B se quiere implementar un servicio de correo seguro. Cuáles, de entre los siguientes, son los puertos seguros para los protocolos POP, SMTP e IMAP:",
+   "opciones": [
+    "POP:993 / SMTP:465 / IMAP:995",
+    "POP:995 / SMTP:495 / IMAP:963",
+    "POP:995 / SMTP:465 / IMAP:993",
+    "POP:965 / SMTP:495 / IMAP:993"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s211",
+   "tema": null,
+   "enunciado": "Para la aplicacion AutoFirma 1.8.2 de las estaciones de trabajo de la organizacion, ¿qué algoritmo de huella para la firma se permite de los siguientes?",
+   "opciones": [
+    "ECDSA",
+    "MD5",
+    "SHA384",
+    "DSA"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s212",
+   "tema": 29,
+   "enunciado": "En la organización se están planteando instalar puntos de acceso WiFi. ¿Cuál de estos estándares puede funcionar a 2,4 GHz, 5 GHz y 6 GHz?",
+   "opciones": [
+    "No existe la banda de los 6 GHz",
+    "802.11ax",
+    "802.11ac",
+    "802.11be"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s213",
+   "tema": 30,
+   "enunciado": "Desde su equipo en la subred de PCs de Usuarios del Modelo B y como administrador de los equipos del resto de subredes, necesita conectarse mediante SSH y SCP. ¿Qué puerto o puertos estándares deberían tener abiertos en el firewall para realizar esta labor?",
+   "opciones": [
+    "Puerto 21 para SSH y 22 para SCP.",
+    "Puerto 22 para SSH y 21 para SCP.",
+    "Puerto 21 tanto para SSH como SCP.",
+    "Puerto 22 tanto para SSH como SCP."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s214",
+   "tema": 24,
+   "enunciado": "Si hubiese instalado un IIS, ¿qué comando utilizaría para reiniciarlo?",
+   "opciones": [
+    "IIS RESET",
+    "IISRESET",
+    "RESET IIS",
+    "RESETIIS"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s215",
+   "tema": 12,
+   "enunciado": "En uno de los servidores de la Subred de Aplicaciones del Modelo B se necesita realizar una captura del tráfico que pasa por la interfaz de red eth1 y guardarlo en fichero.out para su posterior análisis, ¿cuál de las siguientes sentencias es la correcta?",
+   "opciones": [
+    "snoop -d eth1 -w fichero.out",
+    "tcpdump -i any -o fichero.out",
+    "tcpdump -i eth1 -w fichero.out",
+    "snoop -d any -o fichero.out"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s216",
+   "tema": 30,
+   "enunciado": "En el servidor de la Subred de Aplicaciones que sirve las páginas de la intranet en el dominio intranet.sgi.es y que utiliza Apache 2.4, quieren servir páginas de otros dominios. ¿Cuál de las siguientes directivas debe utilizar?",
+   "opciones": [
+    "VirtualMachine",
+    "VirtualDomain",
+    "VirtualHost",
+    "VirtualIp"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s217",
+   "tema": 33,
+   "enunciado": "Se quiere crear una nueva vLAN en el organismo. ¿Qué opción de las vLAN hace que las tramas Ethernet incorporen la etiqueta \"vLAN ID\"?",
+   "opciones": [
+    "untagged",
+    "tagged",
+    "id",
+    "trunk"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s218",
+   "tema": 28,
+   "enunciado": "Indique qué herramienta desarrollada por el CCN-CERT, es una plataforma de análisis avanzado de malware:",
+   "opciones": [
+    "NADA",
+    "CADA",
+    "ADA",
+    "SADA"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s219",
+   "tema": 32,
+   "enunciado": "En el clúster de Firewalls del modelo B se quiere implementar un módulo de seguridad para filtrar y monitorear el tráfico HTTP desde Internet a nuestros servidores WEB. ¿Cuál de los siguientes módulos debe implementarse para cumplir esta función?",
+   "opciones": [
+    "WAT - Web Administration Tool",
+    "WAF - Web Application Firewall",
+    "VFN - Virtual Firewall Network",
+    "WFL7 - Web Firewall Layer 7"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s220",
+   "tema": 30,
+   "enunciado": "En la Subred de PCs de Usuario del Modelo B, los PCs tienen el sistema operativo Windows 10. Necesitamos saber la tabla de enrutamiento de los equipos. ¿Cuál de los siguientes comandos permite ver esa información?",
+   "opciones": [
+    "route show",
+    "ip route ls",
+    "route print",
+    "ip route print"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r01",
+   "tema": 24,
+   "enunciado": "¿Qué comando muestra información del conjunto resultante de directivas (RSoP) para un usuario y equipo de destino en los equipos Windows 10 de la Subred de PCs de Usuario del Modelo B?",
+   "opciones": [
+    "gpshow",
+    "gpprint",
+    "gpresult",
+    "gplist"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r02",
+   "tema": 32,
+   "enunciado": "Una vez implementado el acceso telemático a la oficina o \"teletrabajo\" mediante VPN, en relación con esta tecnología, indique en qué RFC está definido el protocolo PPTP:",
+   "opciones": [
+    "RFC 2661",
+    "RFC 2637",
+    "RFC 1661",
+    "RFC 2472"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r03",
+   "tema": 33,
+   "enunciado": "Los dispositivos de interconexión de redes de nuestro sistema, son compatibles con POE++. Señale la afirmación correcta con respecto a este término:",
+   "opciones": [
+    "Las siglas corresponden a Power-of-Ethernet.",
+    "Como estándar, recibe la denominación IEEE 802.3at.",
+    "La alimentación real recibida es de 25,50 Watts.",
+    "Se subdivide en dos tipos: Tipo 3 y Tipo 4."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r04",
+   "tema": 25,
+   "enunciado": "Si fuese el motor de Base de Datos ORACLE, indique cuál de los siguientes comandos utilizaria para crear una copia de seguridad de la base de datos origen:",
+   "opciones": [
+    "RMAN",
+    "DUMPALL",
+    "ORACLE_BCK",
+    "COPYDB"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r05",
+   "tema": 30,
+   "enunciado": "Se ha decidido que la última IP válida de host para la Subred de Aplicaciones del Modelo B sea considerada como Puerta de Enlace o Default Gateway. Según este criterio, señale la opción correcta teniendo en cuenta que esta subred tiene el direccionamiento",
+   "opciones": [
+    "10.20.30.191",
+    "10.20.30.190",
+    "10.20.30.193",
+    "10.20.30.192"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  }
+ ]
+}

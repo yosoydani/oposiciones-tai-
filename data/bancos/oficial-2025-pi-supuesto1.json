@@ -1,0 +1,246 @@
+{
+ "titulo": "Examen 2025 · promoción interna · Supuesto práctico I",
+ "fuente": "oficial",
+ "examen": "TAI-PI2025",
+ "parte": "supuesto1",
+ "tema": null,
+ "convocatoria": "2025 · promoción interna",
+ "minutos": 14,
+ "origen": "Convocatoria 2025, modelo A",
+ "url_cuestionario": "https://sede.inap.gob.es/sites/sede/files/public/2026-05/Cuestionario%20TAI-P-ModeloA.pdf",
+ "url_plantilla": "https://sede.inap.gob.es/sites/sede/files/public/2026-09/Plantilla%20respuestas%20Def%20TAI-P-A.pdf",
+ "contextos": {
+  "s1": "El Ministerio de Educación, Formación Profesional y Deportes ha puesto en marcha el proyecto EDUCA-DATA 2030, cuyo objetivo es\ndiseñar, desarrollar e implantar un sistema integral para el seguimiento, análisis y toma de decisiones estratégicas sobre los diferentes\nprogramas educativos.\nEl sistema permitirá la visualización de indicadores clave de rendimiento (KPI) relativos a centros educativos, programas formativos y\nalumnado, entre otros muchos. La solución se integrará con los sistemas corporativos existentes mediante servicios REST y\nprocesamientos ETL, y almacenará la información en una base de datos Oracle Database 19c Enterprise Edition.\nEl desarrollo se realizará utilizando Java SE Development Kit (JDK) 17, Spring Boot 3.2.2, Apache Maven 3.9.6, un servidor de\naplicaciones Apache Tomcat 10.1.18 y un frontend basado en HTML5, CSS3 y JavaScript ECMAScript 2022. El control de versiones se\nrealizará con Git 2.43 y la integración continua mediante Jenkins 2.426.\nAsimismo, el sistema incorporará funcionalidades de inteligencia artificial basadas en modelos de predicción implementados con Python\n3.11 y TensorFlow 2.15 para anticipar riesgos de abandono escolar.\nAdemás, la aplicación se integrará con una aplicación desarrollada en C# 14 y .NET 10 para obtener otros indicadores relevantes para\nel sistema.\nUna propuesta de parte del modelo de datos de EDUCA-DATA 2030 es el siguiente:\nUsted forma parte del equipo técnico responsable del diseño, desarrollo, implantación y soporte de este proyecto y deberá responder a\nlas cuestiones que se le plantean a continuación.\nPara responder a estas, suponga que tiene todos los permisos necesarios en las diferentes tecnologías empleadas y que, salvo que se\nespecifique lo contrario, se utilizan las librerías nativas que ya han sido declaradas de cada lenguaje de programación utilizado."
+ },
+ "preguntas": [
+  {
+   "id": "s101",
+   "tema": 14,
+   "enunciado": "Se desea garantizar en la base de datos que el campo DNI de la tabla ALUMNO no contenga valores duplicados, conforme al modelo de datos definido y asegurando el máximo rendimiento en consultas de búsqueda por dicho campo. ¿Cuál es la sentencia correcta en Oracle?",
+   "opciones": [
+    "CREATE INDEX idx_dni ON ALUMNO (dni);",
+    "ALTER TABLE ALUMNO ADD CONSTRAINT dni_unique UNIQUE (dni);",
+    "ALTER TABLE ALUMNO MODIFY dni PRIMARY KEY;",
+    "CREATE VIEW v_alumno AS SELECT DISTINCT dni FROM ALUMNO;"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s102",
+   "tema": 17,
+   "enunciado": "El equipo técnico desea consultar en la base de datos solamente los datos de todos los alumnos que tienen matrículas asociadas. ¿Cuál de las siguientes consultas SQL en Oracle es correcta conforme al modelo de datos?",
+   "opciones": [
+    "SELECT * FROM ALUMNO, MATRICULA;",
+    "SELECT * FROM ALUMNO INNER JOIN MATRICULA ON ALUMNO.id_alumno = MATRICULA.id_alumno;",
+    "SELECT * FROM ALUMNO WHERE id_alumno IN MATRICULA;",
+    "SELECT * FROM MATRICULA WHERE ALUMNO.id_alumno = MATRICULA.id_alumno;"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s103",
+   "tema": 15,
+   "enunciado": "El equipo técnico necesita garantizar que cada registro de la tabla MATRICULA tenga un identificador único generado automáticamente en Oracle, evitando conflictos de concurrencia cuando múltiples usuarios insertan matrículas simultáneamente desde la aplicación. Se decide utilizar una SEQUENCE para generar el valor de la clave primaria id_matricula. ¿Cuál de las siguientes sentencias SQL en Oracle es correcta para crear una secuencia que comience en 1 y se incremente en 1?",
+   "opciones": [
+    "CREATE SEQUENCE seq_matricula START 1 INCREMENT 1;",
+    "CREATE SEQUENCE seq_matricula BEGIN WITH 1 STEP 1;",
+    "CREATE SEQUENCE seq_matricula START WITH 1 INCREMENT BY 1;",
+    "CREATE SEQUENCE seq_matricula INIT 1 NEXT 1;"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s104",
+   "tema": 19,
+   "enunciado": "El equipo técnico necesita definir la clase Alumno como entidad persistente conforme al estándar Jakarta Persistence compatible con Hibernate. ¿Cuál es la anotación correcta que deben emplear para definir esa clase como entidad persistente?",
+   "opciones": [
+    "@Entity",
+    "@Table",
+    "@Persistent",
+    "@DatabaseEntity"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s105",
+   "tema": 23,
+   "enunciado": "El sistema implementa un servicio Java que calcula el número total de matrículas de un alumno a partir de los datos recuperados desde la base de datos. El equipo técnico desea verificar mediante una prueba unitaria utilizando JUnit 6 que el método calcularMatriculas() devuelve el valor correcto. La clase a probar es: public class AlumnoService { public int calcularMatriculas(int matriculas) { return matriculas; } } ¿Cuál de las siguientes implementaciones de la prueba unitaria es correcta?",
+   "opciones": [
+    "@Test void testCalcularMatriculas() { AlumnoService service = new AlumnoService(); assertEquals(3, service.calcularMatriculas(3)); }",
+    "@Test void testCalcularMatriculas() { AlumnoService service = new AlumnoService(); assertTrue(service.calcularMatriculas(3)); }",
+    "@Test void testCalcularMatriculas() { assertEquals(3, calcularMatriculas(3)); }",
+    "@Test void testCalcularMatriculas() { AlumnoService service = null; assertEquals(3, service.calcularMatriculas(3)); }"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s106",
+   "tema": 19,
+   "enunciado": "Se necesita ejecutar la aplicación Spring Boot. ¿Cuál es el comando de Maven correcto?",
+   "opciones": [
+    "mvn spring-boot:launch",
+    "mvn run spring-boot",
+    "mvn spring-boot:run",
+    "mvn launch spring-boot"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s107",
+   "tema": 21,
+   "enunciado": "El equipo técnico necesita definir una estructura HTML5 válida que incluya un contenedor para mostrar el listado de alumnos, cumpliendo el estándar HTML5 W3C y asegurando compatibilidad con navegadores modernos utilizados en el Ministerio. ¿Cuál de las siguientes estructuras es correcta?",
+   "opciones": [
+    "<html><body><div id=\"alumnos\"></div></body></html>",
+    "<!DOCTYPE html><html><head><title>EducaData</title></head><body><div id=\"alumnos\"></div></body></html>",
+    "<html version=\"5\"><body><container id=\"alumnos\"></container></body></html>",
+    "<!HTML5><body><div id=\"alumnos\"></div></body>"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s108",
+   "tema": 21,
+   "enunciado": "Se debe garantizar que los documentos XML generados estén bien formados conforme a la especificación XML 1.0 para permitir su procesamiento correcto por sistemas externos. ¿Cuál de los siguientes fragmentos XML está bien formado?",
+   "opciones": [
+    "<?xml version=\"1.0\" encoding=\"UTF-8\"?><alumno><id_alumno>10</nombre><nombre>Juan Pérez</nombre></alumno>",
+    "<?xml version=\"1.0\" encoding=\"UTF-8\"?><alumno><id_alumno>10</id_alumno><nombre>Juan Pérez</nombre></alumno>",
+    "<?xml version=\"1.0\" encoding=\"UTF-8\"?><alumno><id_alumno>10</id_alumno><nombre>Juan Pérez</nombre>",
+    "<?xml version=\"1.0\" encoding=\"UTF-8\"?><alumno><id_alumno>10</id_alumno><nombre>Juan Pérez</id_alumno> </alumno>"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s109",
+   "tema": 16,
+   "enunciado": "Se requiere mejorar la experiencia del usuario permitiendo interacción dinámica en EDUCA-DATA 2030. ¿Qué lenguaje permite implementar esta funcionalidad, de forma que los navegadores Google Chrome, Microsoft Edge y Mozilla Firefox la ejecuten de forma nativa?",
+   "opciones": [
+    "Python 3.11",
+    "Oracle SQL",
+    "Java JDK 17",
+    "JavaScript ECMAScript 2022"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s110",
+   "tema": 14,
+   "enunciado": "El sistema implementa un Web Service REST que permite registrar un nuevo alumno en la base de datos. Lo utiliza una aplicación administrativa que envía una solicitud al backend para crear el nuevo registro. Tras crear correctamente el recurso en la base de datos, el Web Service debe devolver el código HTTP adecuado conforme a los estándares REST. ¿Cuál es el código de estado HTTP que existe específicamente para responder a este caso?",
+   "opciones": [
+    "200 OK",
+    "201 Created",
+    "204 No Content",
+    "202 Accepted"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s111",
+   "tema": 22,
+   "enunciado": "Se debe implementar correctamente la estructura del contenido principal del aplicativo, garantizando accesibilidad a usuarios que utilizan tecnologías de asistencia como lectores de pantalla. ¿Qué actuación se recomienda en las pautas de accesibilidad WCAG 2.1?",
+   "opciones": [
+    "Utilizar tablas HTML <table> para estructurar todo el contenido.",
+    "Utilizar únicamente etiquetas <div> con atributos class para facilitar el diseño visual.",
+    "Utilizar etiquetas semánticas HTML5 como <main>, <section> y <header> para estructurar el contenido.",
+    "Utilizar únicamente estilos CSS para definir visualmente la estructura del contenido."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s112",
+   "tema": 22,
+   "enunciado": "¿Cuál de estas opciones recomienda OWASP para prevenir ataques XSS en la aplicación?",
+   "opciones": [
+    "Validar y escapar correctamente los datos antes de mostrarlos en el navegador.",
+    "Utilizar conexiones HTTP entre cliente y servidor.",
+    "Alojar la aplicación en servidores con redundancia física y tolerancia a fallos.",
+    "Almacenar los datos únicamente en Oracle Database 19c."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r01",
+   "tema": 19,
+   "enunciado": "Para el mantenimiento de la aplicación, se requiere ejecutar un código de limpieza cuando el motor Catalina de Tomcat se detenga por completo, pero antes de que la máquina virtual de Java finalice. ¿Cuál es la opción correcta para ello?",
+   "opciones": [
+    "Registrar un shutdown hook.",
+    "Usar una anotación @PreDestroy en la clase del código de limpieza.",
+    "Implementar un LifecycleListener y registrarlo en el elemento <server> del fichero \"server.xml\".",
+    "Definir en Tomcat una Valve personalizada en el elemento <Server> con el método de limpieza."
+   ],
+   "correcta": null,
+   "explicacion": null,
+   "reserva": true,
+   "anulada": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r02",
+   "tema": null,
+   "enunciado": "Tras un debate sobre cómo resolver un problema en la aplicación, se ha optado por utilizar un algoritmo greedy (voraz). Este algoritmo:",
+   "opciones": [
+    "Siempre alcanza la solución más óptima.",
+    "Siempre toma la decisión que parece más buena en el momento.",
+    "Solo se puede aplicar para resolver problemas de selección de actividades.",
+    "Resuelve el problema dividiéndolo en subproblemas pequeños y combinando sus soluciones."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r03",
+   "tema": 14,
+   "enunciado": "El equipo técnico necesita crear un usuario en Oracle llamado EDUCA_USER con contraseña segura, conforme a los requisitos del sistema, para que la aplicación pueda conectarse a la base de datos. ¿Cuál es la sentencia correcta en Oracle?",
+   "opciones": [
+    "REGISTER USER EDUCA_USER IDENTIFIED BY password123;",
+    "ADD USER EDUCA_USER PASSWORD password123;",
+    "NEW USER EDUCA_USER IDENTIFIED password123;",
+    "CREATE USER EDUCA_USER IDENTIFIED BY password123;"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  }
+ ]
+}

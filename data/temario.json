@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11",
+  "actualizado": "2026-11-12",
   "indice": "https://claude.ai/artifact/XW4sESDcBBPBHmUz1BDRLX",
   "bloques": [
     {
@@ -30,49 +30,49 @@
       "n": 2,
       "bloque": "I",
       "titulo": "Cortes Generales, Tribunal Constitucional y Defensor del Pueblo",
-      "doc": null
+      "doc": "https://claude.ai/artifact/HaL2joeiDEk4LCvv7d28dX"
     },
     {
       "n": 3,
       "bloque": "I",
       "titulo": "El Gobierno: nombramiento, cese, funciones y relación con las Cortes",
-      "doc": null
+      "doc": "https://claude.ai/artifact/CbSJ56iRiJPgAcZJ2Xvmpc"
     },
     {
       "n": 4,
       "bloque": "I",
       "titulo": "Estatuto Básico del Empleado Público, transparencia y Agenda 2030",
-      "doc": null
+      "doc": "https://claude.ai/artifact/Fhe4k3GygEefahy2QJK5eu"
     },
     {
       "n": 5,
       "bloque": "I",
       "titulo": "Igualdad, violencia de género, no discriminación LGTBI, discapacidad y dependencia",
-      "doc": null
+      "doc": "https://claude.ai/artifact/XRQMDKLXoaCVzPuvYwy7SC"
     },
     {
       "n": 6,
       "bloque": "I",
       "titulo": "Sociedad de la información, firma electrónica, DNI electrónico, Agenda Digital",
-      "doc": null
+      "doc": "https://claude.ai/artifact/N9YkyWKwXeQf1sAXdYwbYu"
     },
     {
       "n": 7,
       "bloque": "I",
       "titulo": "Protección de datos personales y derechos digitales",
-      "doc": null
+      "doc": "https://claude.ai/artifact/A9KvtvthtAY5AiWPmy9zXe"
     },
     {
       "n": 8,
       "bloque": "I",
       "titulo": "Acceso electrónico a servicios públicos, ENS e interoperabilidad",
-      "doc": null
+      "doc": "https://claude.ai/artifact/ReZKQr35XpzF7uN9a2GKJw"
     },
     {
       "n": 9,
       "bloque": "I",
       "titulo": "Sedes electrónicas, identificación y autenticación, infraestructuras comunes",
-      "doc": null
+      "doc": "https://claude.ai/artifact/UAwQ13EBa9DutGjHDee3Go"
     },
     {
       "n": 10,
@@ -96,127 +96,127 @@
       "n": 13,
       "bloque": "II",
       "titulo": "Sistemas operativos: Windows, Unix/Linux y móviles",
-      "doc": null
+      "doc": "https://claude.ai/artifact/AbWKRqB9ukRUmRhHJQG5nc"
     },
     {
       "n": 14,
       "bloque": "II",
       "titulo": "Bases de datos relacionales, orientadas a objetos y NoSQL",
-      "doc": null
+      "doc": "https://claude.ai/artifact/RUwTzpgvkQjbpua9tUMZ9S"
     },
     {
       "n": 15,
       "bloque": "III",
       "titulo": "Modelado de datos, diseño de BD, modelo relacional y normalización",
-      "doc": null
+      "doc": "https://claude.ai/artifact/FCx7CnPmGrbB6soe79tCrN"
     },
     {
       "n": 16,
       "bloque": "III",
       "titulo": "Lenguajes de programación: tipos, operadores, control de flujo, funciones",
-      "doc": null
+      "doc": "https://claude.ai/artifact/XC7F1DBnCVkNT9prrPvxK7"
     },
     {
       "n": 17,
       "bloque": "III",
       "titulo": "SQL estándar, procedimientos almacenados y disparadores",
-      "doc": null
+      "doc": "https://claude.ai/artifact/UZPQk9QqwsF3f9CKEXCy3S"
     },
     {
       "n": 18,
       "bloque": "III",
       "titulo": "Programación orientada a objetos, patrones de diseño y UML",
-      "doc": null
+      "doc": "https://claude.ai/artifact/HQ7jox2KKzTEeSU7we4ueD"
     },
     {
       "n": 19,
       "bloque": "III",
       "titulo": "Java EE / Jakarta EE y plataforma .NET",
-      "doc": null
+      "doc": "https://claude.ai/artifact/PKk1aEh5mvuaJh5wtN5gDz"
     },
     {
       "n": 20,
       "bloque": "III",
       "titulo": "Arquitecturas cliente/servidor y multicapa, servicios web",
-      "doc": null
+      "doc": "https://claude.ai/artifact/XvJ289ofaHVMmsFjEkKzZ9"
     },
     {
       "n": 21,
       "bloque": "III",
       "titulo": "Aplicaciones web front-end y servidor, marcado, navegadores, scripts",
-      "doc": null
+      "doc": "https://claude.ai/artifact/PHP7r8kn5oe1qj8VWcY6L1"
     },
     {
       "n": 22,
       "bloque": "III",
       "titulo": "Accesibilidad, diseño universal, usabilidad y desarrollo seguro",
-      "doc": null
+      "doc": "https://claude.ai/artifact/ByKryh5DUdgDpMSwcnafiX"
     },
     {
       "n": 23,
       "bloque": "III",
       "titulo": "Repositorios, documentación, metodologías, pruebas y control de versiones",
-      "doc": null
+      "doc": "https://claude.ai/artifact/AMWAh2STVZeMfoJ2FoiLYM"
     },
     {
       "n": 24,
       "bloque": "IV",
       "titulo": "Administración del sistema operativo y software de base",
-      "doc": null
+      "doc": "https://claude.ai/artifact/9MTdzVk2KxU3rBNtYxps74"
     },
     {
       "n": 25,
       "bloque": "IV",
       "titulo": "Administración de BD, almacenamiento, copias de seguridad y virtualización",
-      "doc": null
+      "doc": "https://claude.ai/artifact/8FnuabY9EaDe1ecbqKYGHr"
     },
     {
       "n": 26,
       "bloque": "IV",
       "titulo": "Servidores de correo, contenedores y microservicios",
-      "doc": null
+      "doc": "https://claude.ai/artifact/R6zYRECurv3xVAZpZ48Heh"
     },
     {
       "n": 27,
       "bloque": "IV",
       "titulo": "Redes de área local: usuarios, dispositivos y monitorización de tráfico",
-      "doc": null
+      "doc": "https://claude.ai/artifact/JNJD74bT4NeBPuXQqqQdsf"
     },
     {
       "n": 28,
       "bloque": "IV",
       "titulo": "Seguridad de sistemas: física, lógica, amenazas, criptografía, CPD, incidencias",
-      "doc": null
+      "doc": "https://claude.ai/artifact/FemAq2CnVFPNMdAbMcNdko"
     },
     {
       "n": 29,
       "bloque": "IV",
       "titulo": "Comunicaciones: medios, equipos, redes móviles e inalámbricas",
-      "doc": null
+      "doc": "https://claude.ai/artifact/MpeWkGuNp9hu43qjfVbx9G"
     },
     {
       "n": 30,
       "bloque": "IV",
       "titulo": "Modelos OSI y TCP/IP, protocolos TCP/IP",
-      "doc": null
+      "doc": "https://claude.ai/artifact/K447V9cVT3eFRw4gC7yJhX"
     },
     {
       "n": 31,
       "bloque": "IV",
       "titulo": "Internet: arquitectura, servicios, HTTP, HTTPS, SSL/TLS",
-      "doc": null
+      "doc": "https://claude.ai/artifact/YNSiaeo5x6TcpAzejs4nsA"
     },
     {
       "n": 32,
       "bloque": "IV",
       "titulo": "Seguridad en redes: perimetral, acceso remoto, VPN, puesto de usuario",
-      "doc": null
+      "doc": "https://claude.ai/artifact/SeMX75FiEFyBWSS5tobmag"
     },
     {
       "n": 33,
       "bloque": "IV",
       "titulo": "Redes locales: topología, transmisión, acceso al medio, interconexión",
-      "doc": null
+      "doc": "https://claude.ai/artifact/WZbnaw5T12AGZPoWP1dHYn"
     }
   ]
 }

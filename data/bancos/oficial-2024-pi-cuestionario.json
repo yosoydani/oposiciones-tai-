@@ -1,0 +1,790 @@
+{
+ "titulo": "Examen 2024 · promoción interna · Cuestionario",
+ "fuente": "oficial",
+ "examen": "TAI-PI2024",
+ "parte": "cuestionario",
+ "tema": null,
+ "convocatoria": "2024 · promoción interna",
+ "minutos": 60,
+ "origen": "OEP 2021-2024, modelo A",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/2364118/Cuestionario_TAI_PI_2024_A_3GZ5F829JV_154AB89SD658.pdf/1b2e81f9-779b-c97a-580e-0dd1da24ad18",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/2364118/Plantilla+Cuestionario_TAI_PI_2024_A_definitiva.pdf/31d14516-c3c6-9852-7d7c-94345641fb3e",
+ "contextos": {},
+ "preguntas": [
+  {
+   "id": "p01",
+   "tema": 7,
+   "enunciado": "¿Qué principio relativo al tratamiento de datos personales definido en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento general de protección de datos) se refiere a que los datos serán adecuados, pertinentes y limitados a lo necesario en relación con los fines para los que son tratados?",
+   "opciones": [
+    "Limitación de la finalidad.",
+    "Exactitud.",
+    "Minimización de datos.",
+    "Adecuación de datos."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p02",
+   "tema": 7,
+   "enunciado": "De acuerdo con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento general de protección de datos), el responsable y el encargado del tratamiento aplicarán medidas técnicas y organizativas apropiadas para garantizar un nivel de seguridad adecuado al riesgo, que en su caso incluya, entre otros:",
+   "opciones": [
+    "La capacidad de garantizar la confidencialidad, integridad, disponibilidad y resiliencia permanentes de los sistemas y servicios de tratamiento.",
+    "La capacidad de garantizar la confidencialidad, integridad, disponibilidad y trazabilidad permanentes de los sistemas y servicios de tratamiento.",
+    "La capacidad de garantizar la confidencialidad, autenticidad, disponibilidad y resiliencia permanentes de los sistemas y servicios de tratamiento.",
+    "La capacidad de garantizar la confidencialidad, autenticidad, integridad y disponibilidad permanentes de los sistemas y servicios de tratamiento."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p03",
+   "tema": 8,
+   "enunciado": "El artículo 6 del Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica hace referencia al carácter multidimensional de la interoperabilidad. ¿Cuáles son las dimensiones que recoge este artículo?",
+   "opciones": [
+    "Organizativa, semántica y técnica.",
+    "Organizativa, semántica, técnica y de seguridad.",
+    "Organizativa, operacional y de protección.",
+    "Infraestructuras, estándares y protocolos."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p04",
+   "tema": 4,
+   "enunciado": "Indique cuál NO es uno de los 17 Objetivos de Desarrollo Sostenible:",
+   "opciones": [
+    "Fin de la pobreza.",
+    "Ciudades y comunidades sostenibles.",
+    "Crecimiento de la producción y reducción del paro.",
+    "Acción por el clima."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p05",
+   "tema": 4,
+   "enunciado": "Indique la respuesta correcta sobre la vigencia que tienen los certificados electrónicos reconocidos incorporados al documento nacional de identidad, según la legislación vigente:",
+   "opciones": [
+    "No podrá ser superior a tres años.",
+    "No podrá ser superior a cuatro años.",
+    "No podrá ser superior a cinco años.",
+    "No podrá ser superior a seis años."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p06",
+   "tema": 4,
+   "enunciado": "La Ley 56/2007, de 28 de diciembre, de Medidas de Impulso de la Sociedad de la Información, ¿qué establece sobre la factura electrónica en el artículo 1?",
+   "opciones": [
+    "Los formatos estructurados de las facturas electrónicas permitirán su visualización y emisión en las distintas lenguas oficiales existentes y en inglés, con la finalidad de garantizar los derechos de los usuarios nacionales y extranjeros.",
+    "Los formatos estructurados de las facturas electrónicas permitirán su visualización y emisión en las distintas lenguas oficiales existentes, con la finalidad de garantizar los derechos de los usuarios.",
+    "No trata en ningún artículo sobre la factura electrónica.",
+    "La factura electrónica solo se utilizará en contratación, estando excluida de la justificación de ayudas y subvenciones."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p07",
+   "tema": 4,
+   "enunciado": "Según el artículo 11 de la Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno, el Portal de la Transparencia contendrá información publicada de acuerdo con las prescripciones técnicas que se establezcan reglamentariamente, que deberán adecuarse a los siguientes principios:",
+   "opciones": [
+    "Usabilidad, interoperabilidad y reutilización.",
+    "Accesibilidad, interoperabilidad y seguridad.",
+    "Flexibilidad, interoperabilidad y seguridad.",
+    "Accesibilidad, interoperabilidad y reutilización."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p08",
+   "tema": 5,
+   "enunciado": "Según el artículo 45 de la Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI, la autoridad competente para la tramitación del procedimiento de rectificación registral de la mención del sexo corresponderá a:",
+   "opciones": [
+    "La persona encargada de la Oficina del Registro Civil en la que se hubiera presentado la solicitud.",
+    "La persona titular del Ministerio de Igualdad.",
+    "La persona titular del Ministerio de Justicia.",
+    "La persona titular de la Dirección General para la Igualdad Real y Efectiva de las personas LGTBI."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p09",
+   "tema": 5,
+   "enunciado": "Según el Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se aprueba el Texto Refundido de la Ley General de derechos de las personas con discapacidad y de su inclusión social, es discriminación directa:",
+   "opciones": [
+    "La que existe cuando una persona o grupo en que se integra es objeto de un trato discriminatorio debido a su relación con otra por motivo o por razón de discapacidad.",
+    "La situación en que se encuentra una persona con discapacidad cuando es tratada de manera menos favorable que otra en situación análoga por motivo de o por razón de su discapacidad.",
+    "La que existe cuando una disposición legal o reglamentaria, una cláusula convencional o contractual, un pacto individual, una decisión unilateral o un criterio o práctica, o bien un entorno, producto o servicio, aparentemente neutros, puedan ocasionar una desventaja particular a una persona respecto de otras por motivo de o por razón de discapacidad, siempre que objetivamente no respondan a una finalidad legítima y que los medios para la consecución de esta finalidad no sean adecuados y necesarios.",
+    "Toda conducta no deseada relacionada con la discapacidad de una persona, que tenga como objetivo o consecuencia atentar contra su dignidad o crear un entorno intimidatorio, hostil, degradante, humillante u ofensivo."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p10",
+   "tema": 8,
+   "enunciado": "Señale la respuesta correcta respecto a las notificaciones según la Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas:",
+   "opciones": [
+    "Toda notificación deberá ser cursada dentro del plazo de quince días a partir de la fecha en que el acto haya sido dictado.",
+    "Cuando los interesados en un procedimiento sean desconocidos, se ignore el lugar de la notificación o bien, intentada ésta, no se hubiese podido practicar, la notificación se hará por medio de un anuncio publicado en el BOE.",
+    "Las notificaciones se practicarán preferentemente en papel y, en todo caso, cuando el interesado resulte obligado a recibirlas por esta vía.",
+    "Cuando la notificación se practique en el domicilio del interesado, de no hallarse presente éste en el momento de entregarse la notificación, podrá hacerse cargo de ella cualquier persona mayor de dieciséis años que se encuentre en el domicilio y haga constar su identidad."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p11",
+   "tema": 8,
+   "enunciado": "¿Qué es la taxonomía de Flynn?",
+   "opciones": [
+    "Una clasificación de patrones de diseño para objetos de software, centrados en su creación, relación e interacción.",
+    "Una clasificación para las computadoras con arquitectura paralela atendiendo al flujo de datos e instrucciones en un sistema.",
+    "Una clasificación que pretende clarificar los diferentes tipos de tecnologías, técnicas y mecanismos que abarca el concepto abstracto de “Inteligencia Artificial”.",
+    "Una clasificación de los tipos de controladores (drivers) JDBC."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p12",
+   "tema": 12,
+   "enunciado": "Señale la respuesta correcta en relación con la digitalización de imágenes:",
+   "opciones": [
+    "La resolución del escáner se mide en puntos por pulgada (ppp) o píxeles por pulgada (ppi).",
+    "A mayor número de píxeles tendremos mayor resolución y menor tamaño de los ficheros donde se almacenan las imágenes.",
+    "La profundidad del bit es la capacidad de reproducir los píxeles en tonos grises.",
+    "Sólo los formatos TIFF y JPEG sirven para guardar una imagen digitalizada. El formato PDF se emplea para guardar imágenes de textos únicamente."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p13",
+   "tema": 12,
+   "enunciado": "Señale la respuesta correcta referente al tipo abstracto de datos (TAD) Pila:",
+   "opciones": [
+    "Basada en el principio FIFO (first-in, first-out).",
+    "Se puede implementar usando arrays.",
+    "No se puede implementar usando una estructura dinámica.",
+    "Las operaciones de apilar (push) y desapilar (pop) se realizan en cualquier posición."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p14",
+   "tema": 16,
+   "enunciado": "Señale la respuesta INCORRECTA acerca de los tipos abstractos de datos (TAD):",
+   "opciones": [
+    "Es una colección de propiedades y operaciones que se definen mediante una especificación que es independiente de cualquier representación.",
+    "Nos permiten diseñar nuestros propios tipos para encapsular lógica algorítmica y proveer abstracción a las capas de software de más alto nivel.",
+    "Se pueden escribir usando lenguaje natural, usando pseudo-código o incluso algún lenguaje de programación.",
+    "En JAVA, una estructura de datos (interface) debe implementar todas las operaciones definidas en su TAD (class)."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p15",
+   "tema": 16,
+   "enunciado": "Señale la respuesta INCORRECTA sobre el lenguaje Swift:",
+   "opciones": [
+    "Fue creado por Apple.",
+    "Se distribuye bajo licencia de código abierto Apache 2.0.",
+    "Se utiliza exclusivamente para la construcción de aplicaciones para iOS.",
+    "Algunas de las variables más comunes son String, Int, Double y Bool."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p16",
+   "tema": 16,
+   "enunciado": "Señale la respuesta INCORRECTA. Android NDK:",
+   "opciones": [
+    "Es un conjunto de herramientas que permiten implementar partes de las aplicaciones de Android mediante C y C++.",
+    "Genera librerías binarias para cada arquitectura de procesador que se pueden invocar desde Java por medio de JNI (Java Native Interface).",
+    "Se recomienda su uso con aplicaciones intensivas a nivel computacional, como juegos o simulaciones físicas.",
+    "No permite la reutilización de código, no pudiendo usar bibliotecas de otros desarrolladores."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p17",
+   "tema": 16,
+   "enunciado": "¿Cuál es la última versión de .NET con soporte a largo plazo?",
+   "opciones": [
+    ".NET 4.5",
+    ".NET 3.1",
+    ".NET 8.0",
+    ".NET 2000"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p18",
+   "tema": 16,
+   "enunciado": "¿Qué hará el siguiente código de JavaScript console.log(10 === ‘10’)?",
+   "opciones": [
+    "Imprimirá true.",
+    "Imprimirá false.",
+    "Dará error.",
+    "Imprimirá ‘1010’."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p19",
+   "tema": 28,
+   "enunciado": "¿Qué término hace referencia a la realización de un análisis estático del código fuente de una aplicación para identificar vulnerabilidades de seguridad antes de que se implemente en un entorno de producción real?",
+   "opciones": [
+    "SAST.",
+    "OWASP.",
+    "DAST.",
+    "SART."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p20",
+   "tema": 15,
+   "enunciado": "De acuerdo con Métrica v3, en el Modelo Entidad/Relación Extendido, ¿cuál es el término que representa la participación en la relación de cada una de las entidades afectadas?",
+   "opciones": [
+    "Atributo.",
+    "Cardinalidad.",
+    "Tipo de Correspondencia.",
+    "Dominio."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p21",
+   "tema": 15,
+   "enunciado": "En CSS3, ¿cuál de las siguientes unidades de medida NO es relativa?",
+   "opciones": [
+    "Q",
+    "vw",
+    "ex",
+    "ch"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p22",
+   "tema": 19,
+   "enunciado": "En el ámbito de ASP.NET Core, señale la respuesta correcta respecto a Razor:",
+   "opciones": [
+    "Razor es la sintaxis de plantillas utilizada en ASP.NET Core para crear vistas dinámicas en aplicaciones web.",
+    "Es uno de los lenguajes de programación que se utilizan con ASP.NET Core.",
+    "Razor se ejecuta directamente en el navegador del cliente.",
+    "Razor utiliza el @símbolo para realizar la transición de C# a HTML."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p23",
+   "tema": 23,
+   "enunciado": "En el contexto de las metodologías de desarrollo de software, ¿cuál de los siguientes es un principio del Manifiesto Ágil?",
+   "opciones": [
+    "Son bienvenidos los requisitos cambiantes, incluso si llegan tarde al desarrollo.",
+    "Las personas del negocio y los desarrolladores deben coordinarse en una reunión semanal.",
+    "La documentación entregada es la principal medida del progreso.",
+    "Las mejores arquitecturas, requisitos y diseños emergen de equipos bien jerarquizados."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p24",
+   "tema": 24,
+   "enunciado": "Referente a los comandos DML del lenguaje SQL, señale la respuesta correcta:",
+   "opciones": [
+    "DML es acrónimo de Data Manager Language.",
+    "Permiten crear nuevas bases de datos, añadiendo y eliminando elementos.",
+    "El comando TRUNCATE es un comando DML.",
+    "El comando SELECT es un comando DML."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p25",
+   "tema": 10,
+   "enunciado": "Según el estándar IEEE 754-2008, un número en coma flotante de doble precisión es:",
+   "opciones": [
+    "Una aproximación de 64 bits de un número real.",
+    "Una aproximación de 32 bits de un número real.",
+    "Un número decimal empaquetado con una coma decimal implícita.",
+    "Un entero de cuatro bytes con una precisión de 10 dígitos."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p26",
+   "tema": 20,
+   "enunciado": "Señale la opción correcta sobre la arquitectura de servicios web REST:",
+   "opciones": [
+    "En la arquitectura REST, el servicio no almacena información sobre el estado del cliente entre peticiones.",
+    "El uso de identificadores está basado en SOA.",
+    "En la arquitectura REST, la interfaz para acceder a los recursos expuestos puede ser HTTP o FTP.",
+    "Es una arquitectura no orientada a recursos."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p27",
+   "tema": 15,
+   "enunciado": "Señale la respuesta correcta sobre la normalización de bases de datos en Métrica v3:",
+   "opciones": [
+    "Un atributo tiene dependencia funcional completa de otro si, y sólo si, depende de él a través de otro atributo.",
+    "Una entidad está en 1FN si tiene grupos repetitivos, es decir, un atributo puede tomar varios valores de un dominio simple.",
+    "Una entidad está en 2FN si está en 1FN y todos los atributos que no forman parte de las claves candidatas tienen dependencia funcional completa respecto de éstas.",
+    "Una relación en 3FN estará también en 2FN, pero no en 1FN."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p28",
+   "tema": 17,
+   "enunciado": "Señale la respuesta INCORRECTA referente a los eventos en SQL:",
+   "opciones": [
+    "Es una tarea que se ejecuta de forma automática en un momento temporal previamente programado.",
+    "Se definen como CREATE EVENT nombre_evento.",
+    "La temporalidad de los eventos se indica en la cláusula ON SCHEDULE.",
+    "Una vez que el evento se ha ejecutado hay que eliminarlo manualmente."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p29",
+   "tema": 18,
+   "enunciado": "Señale la respuesta INCORRECTA respecto al Lenguaje de Modelado Unificado (UML):",
+   "opciones": [
+    "Es un lenguaje basado en diagramas para la especificación, visualización, construcción y documentación de cualquier sistema software.",
+    "Es independiente de las metodologías de análisis y diseño y de los lenguajes de programación que se utilicen en la construcción del software.",
+    "Se basa en el paradigma de la orientación a objetos.",
+    "Muestra únicamente el modelado estático de un sistema software, que puede utilizarse en las diferentes fases de su ciclo de desarrollo."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p30",
+   "tema": 18,
+   "enunciado": "Señale la respuesta INCORRECTA. El patrón de diseño “Composite”:",
+   "opciones": [
+    "Es un patrón de diseño estructural que permite componer objetos en estructuras de árbol.",
+    "Sirve para construir objetos complejos a partir de otros más simples y similares entre sí.",
+    "Simplifica el tratamiento de los objetos creados que, al poseer de una interfaz común, se tratan todos de la misma manera.",
+    "Se recomienda su uso cuando se quiere añadir responsabilidades a objetos concretos de manera dinámica y transparente y sin afectar a otros objetos."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p31",
+   "tema": 18,
+   "enunciado": "Suponga el siguiente programa escrito en un lenguaje de programación estándar: integer x=0; while x<100 do (x=x+1; print x; x=x-1;)",
+   "opciones": [
+    "Este programa imprime los números enteros del 1 al 100.",
+    "Este programa imprime los números impares del 1 al 100.",
+    "Este programa imprime los números pares del 1 al 100.",
+    "Este programa es un bucle infinito."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p32",
+   "tema": 23,
+   "enunciado": "Uno de los expertos más reconocidos en usabilidad web, Jakob Nielsen, estableció 10 principios clave que todo diseñador web debe tener en cuenta. ¿Cuál de los siguientes NO es uno de ellos?",
+   "opciones": [
+    "Visibilidad del estado del sistema.",
+    "Control y libertad del usuario.",
+    "Reconocimiento después que recuerdo.",
+    "Ayuda y documentación."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p33",
+   "tema": 25,
+   "enunciado": "¿Cuál de los siguientes ataques consiste en suplantar a una entidad legítima por medio de llamadas telefónicas?",
+   "opciones": [
+    "Pharming.",
+    "Smishing.",
+    "Vishing.",
+    "Whaling."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p34",
+   "tema": 30,
+   "enunciado": "¿Qué mecanismo de solución a bucles de enrutamiento consiste en implementar un temporizador para que la distancia al destino deje de ser infinita y, en caso de que expirado el temporizador la distancia siga siendo infinita, eliminar la ruta de la tabla de enrutamiento?",
+   "opciones": [
+    "Poison reverse.",
+    "Triggered Updates.",
+    "Split horizon.",
+    "Hold down."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p35",
+   "tema": 13,
+   "enunciado": "¿Qué puerto utiliza Telnet?",
+   "opciones": [
+    "23",
+    "25",
+    "21",
+    "20"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p36",
+   "tema": 13,
+   "enunciado": "El fenómeno que se produce cuando la señal eléctrica transmitida por un par induce corrientes en otros pares vecinos, se conoce como:",
+   "opciones": [
+    "Atenuación.",
+    "Jitter.",
+    "Diafonía.",
+    "Desajuste de impedancia."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p37",
+   "tema": 13,
+   "enunciado": "En Linux, ¿qué comando usaremos para ver la información relativa a una interfaz de red en particular (por ejemplo, 'eth0')?",
+   "opciones": [
+    "ethtoolsshd eth0",
+    "dhclient eth0",
+    "ifconfig eth0",
+    "tcpdump eth0"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p38",
+   "tema": 13,
+   "enunciado": "En sistemas operativos, cuando hablamos de Registro de Instrucción, ¿a qué nos estamos refiriendo?",
+   "opciones": [
+    "Al registro que contiene la última instrucción leída.",
+    "Al registro que contiene el identificador único asociado al proceso de la instrucción.",
+    "Al registro que contiene la dirección de la siguiente instrucción del programa que se ejecutará.",
+    "Al registro que contiene el número de procesos que están corriendo en paralelo."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p39",
+   "tema": 26,
+   "enunciado": "Indique cuál de los siguientes NO es un protocolo de acceso al correo electrónico:",
+   "opciones": [
+    "IMAP.",
+    "POP3.",
+    "SNTP.",
+    "SMTP."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p40",
+   "tema": 26,
+   "enunciado": "Indique cuál NO es uno de los beneficios de la arquitectura de microservicios:",
+   "opciones": [
+    "Permite un escalado flexible.",
+    "Admite la integración y la entrega continuas.",
+    "El enfoque de diseño único, sin posibilidad de elegir la tecnología.",
+    "Mejora la resistencia a los errores, permitiendo degradar una funcionalidad sin bloquear toda la aplicación."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p41",
+   "tema": 28,
+   "enunciado": "Indique la respuesta correcta sobre el formato de firma digital CAdES:",
+   "opciones": [
+    "Es apropiado para firmar ficheros grandes, especialmente si la firma contiene el documento original porque optimiza el espacio de la información.",
+    "Es el formato de firma que utiliza Microsoft Office.",
+    "El resultado es un fichero de texto XML. No es adecuado cuando el fichero original es muy grande.",
+    "Es el formato más adecuado cuando el documento original es un PDF."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p42",
+   "tema": 28,
+   "enunciado": "Indique la respuesta correcta sobre el instrumento para medir la eficiencia de los CPD, conocido como variable PUE (Power Usage Effectiveness):",
+   "opciones": [
+    "Sirve para comparar el total de energía consumida por el CPD con la cantidad de energía que realmente consume el equipamiento de TI (tecnologías de la información).",
+    "Sirve para establecer un orden de mayor a menor consumo de energía de los equipos conectados en un CPD en base al estándar IEEE P1574.",
+    "Sirve para medir la eficiencia energética de un equipo concreto de entre todos los conectados en un CPD.",
+    "Sirve para comparar la energía consumida por el CPD con la cantidad de energía consumida por los equipos que no son TI (sistemas de refrigeración, etc.)."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p43",
+   "tema": 28,
+   "enunciado": "Indique la respuesta correcta sobre el significado del conjunto de códigos de respuesta 3xx del protocolo HTTP:",
+   "opciones": [
+    "Peticiones correctas: esta clase de código indica que la petición fue recibida correctamente, entendida y aceptada.",
+    "Errores del cliente: la solicitud contiene sintaxis incorrecta o no puede procesarse.",
+    "Errores de servidor: el servidor falló al completar una solicitud aparentemente válida.",
+    "Redirecciones: el cliente tiene que tomar una acción adicional para completar la petición."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p44",
+   "tema": 30,
+   "enunciado": "Indique la respuesta INCORRECTA:",
+   "opciones": [
+    "La capa de sesión del modelo OSI está incluida en la capa de aplicación del modelo TCP/IP.",
+    "La capa de acceso de red del modelo TCP/IP se corresponde con la capa de red del modelo OSI.",
+    "La capa de presentación del modelo OSI está incluida en la capa de aplicación del modelo TCP/IP.",
+    "La capa de transporte del modelo TCP/IP se corresponde con la capa de transporte del modelo OSI."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p45",
+   "tema": 30,
+   "enunciado": "La herramienta del CCN que proporciona visibilidad y control sobre la red es:",
+   "opciones": [
+    "CARMEN.",
+    "EMMA.",
+    "MONICA.",
+    "OLVIDO."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p46",
+   "tema": 30,
+   "enunciado": "La norma IEEE 802.11 se refiere a:",
+   "opciones": [
+    "Redes inalámbricas.",
+    "Redes de área metropolitana.",
+    "Redes integradas para voz y datos.",
+    "Seguridad de red."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p47",
+   "tema": 30,
+   "enunciado": "La regla 3-2-1 de las copias de seguridad consiste en:",
+   "opciones": [
+    "Conservar 3 copias de los datos, en 2 medios diferentes con 1 copia almacenada en un lugar externo a la organización.",
+    "Conservar 3 copias de los datos, en 2 medios iguales con 1 copia almacenada en un lugar externo a la organización.",
+    "Conservar 3 copias de los datos, en 2 medios iguales con 1 copia almacenada en un lugar interno a la organización.",
+    "Conservar 3 copias de los datos, en 2 medios diferentes con 1 copia almacenada en un lugar interno a la organización."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p48",
+   "tema": 30,
+   "enunciado": "Referente a la Infraestructura Convergente (CI), señale la respuesta correcta:",
+   "opciones": [
+    "Es una solución que requiere de una gestión compleja y poco optimizada de los recursos.",
+    "Es una solución definida por hardware que combina cómputo, redes, almacenamiento, administración de sistemas y software en un paquete preconfigurado que funciona como un sistema singular.",
+    "Es una solución difícil de escalar, requiere planificación previa.",
+    "Aumenta en gran medida los costos asociados con la energía, la refrigeración y el cableado en el centro de datos."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p49",
+   "tema": 30,
+   "enunciado": "Relativa al direccionamiento IPv4, indique la respuesta INCORRECTA:",
+   "opciones": [
+    "La dirección 172.16.52.63 es una dirección de clase B.",
+    "Las direcciones 192.168.123.71 y 192.168.123.133 con máscara de subred 255.255.255.192 se encuentran en la misma red.",
+    "Las redes de clase A usan una máscara de subred predeterminada de 255.0.0.0.",
+    "En las redes clase C se permite direccionar 254 equipos como máximo."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "p50",
+   "tema": 31,
+   "enunciado": "Sobre el protocolo RSVP, es correcto decir:",
+   "opciones": [
+    "Desarrollado en la RFC 4566, está destinado a describir sesiones multimedia con el propósito de anunciar sesiones, invitar a sesiones y otras formas de iniciar sesiones multimedia.",
+    "Desarrollado en la RFC 7826, es un protocolo de nivel de aplicación para controlar la entrega de datos con propiedades en tiempo real.",
+    "Desarrollado en la RFC 2205, es un protocolo de configuración de reserva de recursos diseñado para servicios integrados de Internet.",
+    "Desarrollado en la RFC 2974, posibilita el anuncio de sesiones multimedia en la modalidad multicast."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "tema_auto": true
+  },
+  {
+   "id": "pr01",
+   "tema": 7,
+   "enunciado": "Según establece la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales, ¿quién NO puede ponerse en contacto con los prestadores de servicios de la sociedad de la información para acceder a los contenidos de la persona fallecida?",
+   "opciones": [
+    "En caso de fallecimiento de personas con discapacidad, estas facultades podrán ejercerse por quienes hubiesen sido designados para el ejercicio de funciones de apoyo si tales facultades se entendieran comprendidas en las medidas de apoyo prestadas por el designado.",
+    "El albacea testamentario así como aquella persona o institución a la que el fallecido hubiese designado expresamente para ello podrá solicitar, con arreglo a las instrucciones recibidas, el acceso a los contenidos con vistas a dar cumplimiento a tales instrucciones.",
+    "En caso de personas fallecidas mayores de edad, estas facultades no podrán ejercerse por sus representantes legales o, en el marco de sus competencias, por el Ministerio Fiscal, que podrá actuar de oficio o a instancia de cualquier persona física o jurídica interesada.",
+    "Las personas vinculadas al fallecido por razones familiares o de hecho, así como sus herederos podrán dirigirse a los prestadores de servicios de la sociedad de la información al objeto de acceder a dichos contenidos e impartirles las instrucciones que estimen oportunas sobre su utilización, destino o supresión."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr02",
+   "tema": 10,
+   "enunciado": "¿Cuál de las siguientes respuestas se corresponden con el número 450 estando este representado en base decimal?",
+   "opciones": [
+    "111000010 en binario.",
+    "764 en octal.",
+    "1F4 en hexadecimal.",
+    "407 en octal."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr03",
+   "tema": 16,
+   "enunciado": "Indique la respuesta correcta respecto al lenguaje de programación F#:",
+   "opciones": [
+    "El literal tipo sbyte es un número natural de 8 bits sin signo.",
+    "La palabra clave let enlaza un nombre a un valor o función.",
+    "Para realizar comentarios en el código de múltiples líneas se utiliza //* para iniciar el comentario y *// para cerrarlo.",
+    "La expresión “let immutable x = 1” es correcta."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr04",
+   "tema": 23,
+   "enunciado": "Indique la opción correcta sobre un “repositorio bare” en el sistema de control de versiones Git:",
+   "opciones": [
+    "Un repositorio bare es un mecanismo para lanzar scripts de usuario cuando suceden ciertas acciones importantes.",
+    "Un repositorio bare se suele usar para crear un repositorio central de Git remoto.",
+    "No existen repositorios bare en Git.",
+    "Un repositorio bare se suele usar para automatizar la copia de seguridad del repositorio local de trabajo."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  },
+  {
+   "id": "pr05",
+   "tema": 33,
+   "enunciado": "Indique la respuesta INCORRECTA respecto a PoE (Power over Ethernet):",
+   "opciones": [
+    "Power over Ethernet (PoE) es una tecnología que permite que los conmutadores de red transmitan energía y datos a través de un cable Ethernet simultáneamente.",
+    "Existen dos tipos: PoE activo y PoE pasivo.",
+    "PoE pasivo no se adhiere a ningún estándar IEEE.",
+    "El último estándar de PoE activo es el IEEE 802.3at."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "tema_auto": true
+  }
+ ]
+}

@@ -1,0 +1,245 @@
+{
+ "titulo": "Examen 2019 · promoción interna · Supuesto práctico I",
+ "fuente": "oficial",
+ "examen": "TAI-PI2019",
+ "parte": "supuesto1",
+ "tema": null,
+ "convocatoria": "2019 · promoción interna",
+ "minutos": 14,
+ "origen": "OEP 2019",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/1925806/cues_1er_ejer_TAI-P_oep19_154AB89SD658.pdf/69f68075-790a-96eb-fe71-68758f73f4de",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/1925806/Plantilla_definitivaTAI-PEjercicionico2019_154AB89SD658.pdf/7d5f23e1-b935-d873-bd2a-61cd84b65602",
+ "contextos": {
+  "s1": "En el departamento TIC, al que usted se acaba de incorporar, quiere desarrollar para la Subdirección de Selección un sistema integral de\ninformación para la gestión de los procesos selectivos y convocatorias de oposiciones de la Administración General del Estado. El\nsistema incluirá, entre otras, las siguientes funcionalidades:\n- Gestión de solicitudes de inscripción de aspirantes al proceso selectivo.\n- Gestión de colaboradores.\n- Generación de listados, estadísticas y cuadros de mando.\n- Generación de certificados para aspirantes y colaboradores.\nDada la envergadura del proyecto, y para aprovechar las aplicaciones ya implantadas en la Subdirección y la experiencia profesional del\npersonal, van a convivir diferentes lenguajes de programación, entre otros, Java, C# o Python, así como distintos gestores de Bases de\nDatos. Como repositorio de código se utiliza Git.\nA continuación se muestra un diagrama simplificado de clases que describe parte del sistema:\nSolicitud Opositor\n+IdSolicitud Presentada por +IdOpositor\n+IdOpositor 1..N 1 +NIF\n+IdProceso\n1..N\nPertenece a\n1\nProceso Ejercicio\n+IdProceso Consta +IdEjercicio\n+IdFormaAcceso 1 1..N +IdProceso\n+Duracion\nSalvo que el enunciado diga lo contrario, se asume que aquellas preguntas que contengan un fragmento de código tendrán declaradas\ncorrectamente todas las clases, librerías y variables que no aparezcan explícitamente. Del mismo modo sí se trata de lenguaje HTML, se\nda por supuesto que éste será HTML5 y será ejecutado en navegadores que soporten dicha versión. Las sentencias SQL que aparecen\nse encuentran dentro del estándar ANSI SQL.Como metodología de base el organismo aplica Métrica v3."
+ },
+ "preguntas": [
+  {
+   "id": "s101",
+   "tema": null,
+   "enunciado": "Se necesita presentar una estadística utilizando HTML5 mediante una tabla en la que una de sus columnas contendrá la descripción de cada Proceso Selectivo. Suponiendo que a dicha columna la denominamos \"Proceso\", ¿qué etiqueta deberá utilizar para definir la celda de encabezado de la tabla para dicha columna, con un formato de letra diferenciado?",
+   "opciones": [
+    "<th>Proceso</th>",
+    "<tableheader>Proceso</tableheader>",
+    "<theader>Proceso</theader>",
+    "<tableh>Proceso</tableh>"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s102",
+   "tema": null,
+   "enunciado": "También se requiere definir en el informe un hipervínculo en HTML5. ¿Qué etiqueta debería utilizar?",
+   "opciones": [
+    "<link>",
+    "<a>",
+    "<goto>",
+    "<hlink>"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s103",
+   "tema": null,
+   "enunciado": "En su Subdirección van a usar JSON para realizar intercambio de datos, y le preguntan, de entre los siguientes, cuál sería un fichero JSON válido.",
+   "opciones": [
+    "{\"nombre\": \"Juana\", \"apellido\": \"Ruiz\"}",
+    "{'nombre': 'Juana', 'apellido': 'Ruiz'}",
+    "{nombre: \"Juana\", apellido: \"Ruiz\"}",
+    "{nombre: \"Juana\"; apellido: \"Ruiz\"}"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s104",
+   "tema": 19,
+   "enunciado": "¿Cómo debe definir el equipo de desarrollo en Java una clase llamada Ejercicio si quiere impedir que se pueda heredar de la misma?",
+   "opciones": [
+    "closed class Ejercicio",
+    "final class Ejercicio",
+    "private class Ejercicio",
+    "immutable class Ejercicio"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s105",
+   "tema": 18,
+   "enunciado": "Su responsable le pregunta qué concepto hace referencia a la posibilidad de utilizar el mismo nombre de método con distintos parámetros en la programación orientada a objetos. ¿Qué debería responder?",
+   "opciones": [
+    "Herencia.",
+    "Ligadura dinámica.",
+    "Polimorfismo.",
+    "Abstracción."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s106",
+   "tema": 16,
+   "enunciado": "Revisando un programa escrito en lenguaje Python, se encuentra con el siguiente fragmento de código. [a*a for a in [3, 2, 1] if a > 1] ¿Qué se muestra?",
+   "opciones": [
+    "[3, 2, 1, 3, 2, 1]",
+    "[9 ,4]",
+    "[9, 4, 1]",
+    "[2, 1]"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s107",
+   "tema": 14,
+   "enunciado": "Le han pedido que compruebe si en el esquema de la base de datos hay tablas que no se están utilizando, y verifica que existe una con esas características llamada PruebaOLD. ¿Cuál sería la instrucción SQL para eliminarla?",
+   "opciones": [
+    "TRUNCATE TABLE PruebaOLD",
+    "DROP TABLE PruebaOLD",
+    "DELETE TABLE PruebaOLD",
+    "ERASE TABLE PruebaOLD"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s108",
+   "tema": 17,
+   "enunciado": "También le consultan sobre la sentencia SQL a utilizar para obtener el listado del identificador de los opositores (IdOpositor) que tienen más de una entrada en la tabla Solicitud.",
+   "opciones": [
+    "SELECT IdOpositor, COUNT(IdSolicitud) AS NumeroSolicitudes FROM Solicitud GROUP BY IdOpositor WHERE NumeroSolicitudes > 1",
+    "SELECT IdOpositor, IdSolicitud FROM Solicitud WHERE COUNT(IdSolicitud) > 1",
+    "SELECT IdOpositor, COUNT(IdSolicitud) FROM Solicitud WHERE COUNT(IdSolicitud) > 1 GROUP BY IdOpositor",
+    "SELECT IdOpositor, COUNT(IdSolicitud) FROM Solicitud GROUP BY IdOpositor HAVING COUNT(IdSolicitud) > 1"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s109",
+   "tema": 16,
+   "enunciado": "Dentro de las tecnologías para el desarrollo web utilizadas en su unidad, se contempla utilizar javascript. ¿Qué valor devuelve la siguiente función javascript? Function prueba() { var i = 1; var j = 0; while (i < 7) { j += i; i += 2; } return j; }",
+   "opciones": [
+    "2",
+    "9",
+    "6",
+    "0"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s110",
+   "tema": 15,
+   "enunciado": "Su equipo está estudiando la información existente dispersa en distintas fuentes de datos con el fin de consolidarla. En una base de datos antigua, hay una tabla que contiene el siguiente registro: NIF: 12345678Z Nombre: Emilia PrimerApellido: Pardo SegundoApellido: Bazán Direccion: Atocha 106 Telefonos: 916666666;917777777 ¿En qué forma normal está la tabla?",
+   "opciones": [
+    "En primera forma normal.",
+    "En segunda forma normal.",
+    "En tercera forma normal.",
+    "No está en ninguna forma normal."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s111",
+   "tema": 20,
+   "enunciado": "En una reunión departamental se está hablando de Servicios Web, y le preguntan cuál de los siguientes estándares no se usa en Servicios Web. ¿Qué debería responder?",
+   "opciones": [
+    "SOAP",
+    "UDDI",
+    "HEVC",
+    "WSDL"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s112",
+   "tema": 16,
+   "enunciado": "El sistema de información deberá ser accesible a través de dispositivos móviles. ¿Cómo se denomina el tipo de diseño que permite la adaptación del contenido a los distintos dispositivos?",
+   "opciones": [
+    "Diseño incremental (Gradual Design).",
+    "Diseño responsivo (Responsive Design).",
+    "Diseño variable (Variable Design).",
+    "Diseño escalable (Scalable Design)."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r01",
+   "tema": 16,
+   "enunciado": "Dentro del código de la página web a la que acceden los opositores, se encuentra el siguiente código HTML: <html><body><h1 id=\"titulo\">Primer ejercicio TAI</h1></body></html> ¿Cuál es el código javascript para obtener la cadena \"Primer ejercicio TAI\"?",
+   "opciones": [
+    "var titulo = document.getElementById(\"titulo\").firstChild.nodeValue;",
+    "var titulo = document.titulo.InnerHTML;",
+    "var titulo = document.getElement(\"h1\").InnerText;",
+    "var titulo = document.children[0].getValue();"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r02",
+   "tema": 16,
+   "enunciado": "El equipo de proyecto está estudiando varios framework para valorar su utilización. ¿Cuál es el propósito principal del framework de javascript Jest?",
+   "opciones": [
+    "Testeado de código.",
+    "Machine learning.",
+    "Animacion y efectos gráficos.",
+    "Funciones matemáticas y tratamiento de cadenas."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  },
+  {
+   "id": "s1r03",
+   "tema": 19,
+   "enunciado": "Para el desarrollo de sus funciones, tiene que usar un gestor de paquetes de código desarrollado por Microsoft para .NET. ¿Cuál utilizaría?",
+   "opciones": [
+    "Pip",
+    "Maven",
+    "Npm",
+    "NuGet"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s1",
+   "tema_auto": true
+  }
+ ]
+}

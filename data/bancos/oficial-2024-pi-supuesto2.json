@@ -1,0 +1,245 @@
+{
+ "titulo": "Examen 2024 · promoción interna · Supuesto práctico II",
+ "fuente": "oficial",
+ "examen": "TAI-PI2024",
+ "parte": "supuesto2",
+ "tema": null,
+ "convocatoria": "2024 · promoción interna",
+ "minutos": 14,
+ "origen": "OEP 2021-2024, modelo A",
+ "url_cuestionario": "https://sede.inap.gob.es/documents/59312/2364118/Cuestionario_TAI_PI_2024_A_3GZ5F829JV_154AB89SD658.pdf/1b2e81f9-779b-c97a-580e-0dd1da24ad18",
+ "url_plantilla": "https://sede.inap.gob.es/documents/59312/2364118/Plantilla+Cuestionario_TAI_PI_2024_A_definitiva.pdf/31d14516-c3c6-9852-7d7c-94345641fb3e",
+ "contextos": {
+  "s2": "El organismo en el que usted presta servicios es el órgano competente para la concesión de unas becas para personas opositoras y,\npor tanto, ha surgido la necesidad de desarrollar un sistema de información que cubra todas las fases que se producen en la concesión\nde las becas.\nA continuación, se expone parte del modelo de datos del sistema, donde los atributos señalados en negrita son claves primarias y los\nseñalados en cursiva, claves foráneas:\nEl sistema, en su parte frontend, permitirá la firma y presentación de solicitudes, subsanaciones y alegaciones por parte de los\ninteresados una vez se autentiquen. También permitirá la descarga de los distintos listados que se publiquen por parte de los empleados\npúblicos del organismo que tramita estas becas.\nPor otra parte, el backend dará el servicio necesario al frontend y, además, permitirá a los empleados públicos del organismo, desde\nuna aplicación de gestión, visualizar la información y documentación de las solicitudes, subsanaciones y alegaciones presentadas, así\ncomo la publicación de los listados mencionados anteriormente.\nPara el desarrollo del frontend se utilizará un framework de desarrollo web con JavaScript, HTML5 y CSS3, mientras que el backend\npodrá desarrollarse con .NET o Java, dependiendo de la experiencia y conocimientos de los desarrolladores del organismo.\nTambién se ha decidido usar GitHub (plataforma de desarrollo colaborativo para alojar proyectos utilizando el sistema de control de\nversiones Git) para poder compartir el trabajo entre los desarrolladores en la cual se puede almacenar, compartir y trabajar de forma\nconjunta en el código. De esta forma se permite seguir y administrar los cambios en el código a lo largo del tiempo.\nAdicionalmente, se utilizará un gestor documental para la gestión de la documentación aportada en cada uno de los trámites por los\ninteresados, así como los respectivos servicios del Catálogo de Servicios de Administración Digital que puedan reutilizarse."
+ },
+ "preguntas": [
+  {
+   "id": "s201",
+   "tema": null,
+   "enunciado": "¿Qué tipo de correspondencia hay entre las tablas “SolicitudBeca” y “FicheroAdjunto”?",
+   "opciones": [
+    "Un registro de SolicitudBeca puede tener N registros de FicheroAdjunto.",
+    "Un registro de SolicitudBeca puede tener como máximo un registro de FicheroAdjunto.",
+    "N registros de SolicitudBeca pueden tener M registros de FicheroAdjunto.",
+    "Un registro de SolicitudBeca puede tener cero o como máximo un registro de FicheroAdjunto."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s202",
+   "tema": null,
+   "enunciado": "¿Qué elemento HTML utilizaría para impedir que el e-mail exceda los 100 caracteres cuando el interesado lo cumplimente?",
+   "opciones": [
+    "<input type=''email'' id=''email'' name=''email'' size=''100''>",
+    "<input type=''email'' id=''email'' name=''email'' max=''100''>",
+    "<input type=''email'' id=''email'' name=''email'' maxlength=''100''>",
+    "<input type=''email'' id=''email'' name=''email'' length=''100''>"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s203",
+   "tema": 14,
+   "enunciado": "¿Qué ORM podría utilizar, en función de la solución de backend escogida?",
+   "opciones": [
+    "JPA en .NET e Hibernate en Java.",
+    "Hibernate en .NET y Entity Framework en Java.",
+    "Entity Framework en .NET e Hibernate en Java.",
+    "Spring Data en .NET e Hibernate en Java."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s204",
+   "tema": 25,
+   "enunciado": "¿Qué sentencia habría que ejecutar si se quiere añadir un nuevo registro a la tabla “CuerpoBecado”?",
+   "opciones": [
+    "INSERT INTO CuerpoBecado (Codigo, Denominacion) VALUES ('TAI, 'Técnico Auxiliar de Informática');",
+    "INSERT INTO CuerpoBecado (Codigo, Denominacion) VALUES (TAI, Técnico Auxiliar de Informática);",
+    "INSERT TO CuerpoBecado (Codigo, Denominacion) VALUES ('TAI', 'Técnico Auxiliar de Informática');",
+    "INSERT INTO CuerpoBecado (Codigo, Denominacion) VALUES ('TAI', 'Técnico Auxiliar de Informática');"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s205",
+   "tema": null,
+   "enunciado": "A este sistema le es de aplicación la normativa vigente de accesibilidad de sitios web. ¿Qué herramienta automatizada utilizaría para probar que la aplicación cumple con los estándares de accesibilidad?",
+   "opciones": [
+    "QualWeb.",
+    "Equal Automatic Checker.",
+    "AccSite.",
+    "Shovel."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s206",
+   "tema": 13,
+   "enunciado": "El proceso de presentación de solicitud implica la autenticación del usuario, la firma de la solicitud, el guardado en base de datos, la generación de un asiento registral y la generación de un justificante de presentación. ¿Qué diagrama UML utilizaría para representar las acciones implicadas en este flujo?",
+   "opciones": [
+    "Diagrama de paquetes.",
+    "Diagrama de objetos.",
+    "Diagrama de secuencia.",
+    "Diagrama de Entidad/Relación."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s207",
+   "tema": null,
+   "enunciado": "Necesita controlar el plazo de presentación de solicitudes. Suponiendo que utiliza Java en el backend, ¿qué clase nativa de Java puede utilizar para trabajar con una fecha y hora simultáneamente?",
+   "opciones": [
+    "LocalDateTime.",
+    "LocalDate.",
+    "LocalTime.",
+    "OffsetTime."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s208",
+   "tema": 25,
+   "enunciado": "Para que la aplicación de gestión pueda interactuar con esta aplicación, se va a exponer una capa de servicios web. ¿Cuál de las siguientes opciones NO es válida para documentar dichos servicios?",
+   "opciones": [
+    "RAML.",
+    "REST.",
+    "WSDL.",
+    "OpenAPI/Swagger."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s209",
+   "tema": null,
+   "enunciado": "Se ha determinado que es necesaria la integración de la aplicación con GEISER, cuyos servicios web son de naturaleza SOAP. ¿Con qué firmará las peticiones generadas por la aplicación?",
+   "opciones": [
+    "WS-Security.",
+    "SAML.",
+    "JWT.",
+    "XML-Encryption."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s210",
+   "tema": 25,
+   "enunciado": "Se quiere facilitar el uso de herramientas de asistencia en la página. ¿Qué atributo utilizaría para indicar que un elemento se actualizará?",
+   "opciones": [
+    "aria-live.",
+    "aria-cheked.",
+    "aria-flowto.",
+    "aria-valuenow."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s211",
+   "tema": 14,
+   "enunciado": "Según “Técnicas y Practicas” de Métrica v3, si se quisiera optimizar el modelo físico de datos para reducir o simplificar el número de accesos a la base de datos, ¿cuál de las siguientes acciones se aplicaría?",
+   "opciones": [
+    "Combinar entidades si los accesos son frecuentes en transacciones distintas.",
+    "Eliminar entidades.",
+    "Introducir elementos redundantes.",
+    "Normalizar las tablas en Forma Normal de Boyce-Codd (FNBC)."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s212",
+   "tema": 25,
+   "enunciado": "Suponiendo que se utilizara la metodología ágil SCRUM, si durante un sprint, se da cuenta de que se está aplicando una mala práctica que puede enlentecer el proyecto, ¿en qué reunión comentará esa mala práctica, para buscar la mejora continua y evitar aplicarla en los siguientes sprints?",
+   "opciones": [
+    "En la Daily Scrum.",
+    "En la Sprint Retrospective.",
+    "En la Sprint Planning.",
+    "En la Sprint Review."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r01",
+   "tema": 12,
+   "enunciado": "Quiere facilitar la incorporación de otros desarrolladores al proyecto y para ello, en el repositorio de código, va a crear un fichero en el que incluirá, entre otra información, el propósito del proyecto y cómo arrancarlo localmente. Esa información se incluirá en el fichero:",
+   "opciones": [
+    "CODEOWNERS.",
+    "README.MD.",
+    "LICENSE.",
+    "CITATION."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r02",
+   "tema": null,
+   "enunciado": "Está escogiendo herramientas que le permitan analizar y mejorar la calidad del código. ¿Cuál de las siguientes NO le será de ayuda?",
+   "opciones": [
+    "SonarQube.",
+    "Un linter de JavaScript.",
+    "PMD.",
+    "Mercurial."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r03",
+   "tema": null,
+   "enunciado": "El sistema de información a desarrollar se integrará con Cl@ve para identificar a los interesados en el procedimiento. Cl@ve utiliza el estándar abierto SAML2 para el intercambio de datos de autenticación y autorización, que está basado en XML. ¿Cuál de las siguientes afirmaciones sobre XML Schema (XSD) es correcta?",
+   "opciones": [
+    "Un XML Schema (XSD) no puede definir tipos de datos personalizados.",
+    "Un XML Schema (XSD) puede definir restricciones sobre los valores de los elementos y atributos.",
+    "Un XML Schema (XSD) solo puede ser utilizado para validar documentos XML que no contienen espacios de nombres.",
+    "Un XML Schema (XSD) no puede ser referenciado desde otro XML Schema."
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  }
+ ]
+}

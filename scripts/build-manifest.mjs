@@ -23,11 +23,14 @@ for (const f of bancos) {
     else if (ids.has(String(q.id))) errores.push(`${at}: "id" repetido`);
     ids.add(String(q.id));
     const tema = q.tema ?? b.tema;
-    if (!temas.has(tema)) errores.push(`${at}: tema ${tema} no existe en temario.json`);
+    const oficial = b.fuente === "oficial";
+    // En los exámenes oficiales el tema puede faltar todavía (null).
+    if (!(oficial && tema == null) && !temas.has(tema)) errores.push(`${at}: tema ${tema} no existe en temario.json`);
     if (!q.enunciado) errores.push(`${at}: falta "enunciado"`);
     if (!Array.isArray(q.opciones) || q.opciones.length < 2) errores.push(`${at}: "opciones" necesita al menos 2`);
+    else if (q.anulada && q.correcta == null) { /* anulada sin respuesta */ }
     else if (!Number.isInteger(q.correcta) || q.correcta < 0 || q.correcta >= q.opciones.length) errores.push(`${at}: "correcta" debe ser un índice de 0 a ${q.opciones.length - 1}`);
-    if (!q.explicacion && !q.anulada) errores.push(`${at}: falta "explicacion"`);
+    if (!q.explicacion && !q.anulada && !oficial) errores.push(`${at}: falta "explicacion"`);
   });
 }
 

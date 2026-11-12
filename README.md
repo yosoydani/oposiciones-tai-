@@ -50,6 +50,14 @@ scripts/build-manifest.mjs Valida los bancos y genera el manifiesto
 
 Antes de hacer push puedes validar con `node scripts/build-manifest.mjs`. El workflow ejecuta lo mismo y no publica si hay errores.
 
+## Exámenes oficiales
+
+`data/bancos/oficial-*.json` salen de los cuestionarios y plantillas definitivas del INAP (2019-2025, turno libre y promoción interna), vía `temario/tests-tai.json` del proyecto. Cada examen se divide en tres bancos: cuestionario (con sus 5 reservas al final), supuesto I y supuesto II.
+
+- `scripts/convert.py` regenera los bancos oficiales desde ese JSON.
+- `scripts/temas.py` asigna a cada pregunta su tema (`"tema_auto": true`): por palabras clave y aprovechando que el cuestionario sigue el orden del temario. Acierta en la gran mayoría, pero es automático: si ves una mal asignada, corrige su `tema` y borra `tema_auto`.
+- Las preguntas oficiales aún no tienen `explicacion`: la web muestra la respuesta de la plantilla definitiva.
+
 ## Probar en local
 
 ```

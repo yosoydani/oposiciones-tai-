@@ -1,0 +1,397 @@
+{
+ "titulo": "Examen 2025 · libre · Supuesto práctico II",
+ "fuente": "oficial",
+ "examen": "TAI-L2025",
+ "parte": "supuesto2",
+ "tema": null,
+ "convocatoria": "2025 · libre",
+ "minutos": 24,
+ "origen": "Convocatoria 2025 (OEP 2023-2025), modelo A",
+ "url_cuestionario": "https://sede.inap.gob.es/sites/sede/files/public/2026-05/Cuestionario%20TAI-L-ModeloA.pdf",
+ "url_plantilla": "https://sede.inap.gob.es/sites/sede/files/public/2026-10/PlantillarespuestasDefTAI-L-A_G4WN8WY1M8_154AB89SD658.pdf",
+ "contextos": {
+  "s2": "La Subdirección General de Tecnologías de la Información y Comunicaciones (en adelante SGTIC) del Ministerio al que usted se acaba\nde incorporar, mantiene un CPD principal que cuenta con la siguiente infraestructura física y lógica:\n- Servidores Windows Server 2019 para los servicios de Directorio Activo (AD), DNS y DHCP.\n- Servidores Linux Red Hat Enterprise Linux (RHEL) 8.8, basado en Systemd, para los servicios web, base de datos y correo\nelectrónico.\nA nivel de comunicaciones la SGTIC cuenta con switches y routers Cisco IOS 15.x y firewalls de distintos fabricantes para realizar la\nsegmentación de red.\nSe dispone de dos líneas redundadas para la conexión a Internet y otras dos líneas para la conexión a Red SARA.\nLos puestos de trabajo son Windows 11 Enterprise en versión 25H2.\nLa SGTIC cuenta con dos grandes rangos de direccionamiento:\n- La red interna 10.30.16.0/20, que da servicio a usuarios y servidores internos.\n- La DMZ 172.19.50.0/27, que aloja, entre otros servicios, los servidores web01 (Nginx) y mail01 (Postfix).\nEntre otras, la SGTIC cuenta con una VLAN denominada VLAN 10 para usuarios y otra denominada VLAN 20 para servidores.\nEl router de distribución integra DHCP relay hacia el servidor DHCP de la VLAN 20.\nEntre sus tareas como integrante del Servicio de Sistemas, Comunicaciones y Seguridad Informática de la SGTIC se encuentran el\nmantenimiento y operación de los distintos elementos que conforman la infraestructura tecnológica de la SGTIC, así como el diagnóstico\ny resolución de las incidencias que afecten a dichos elementos.\nSalvo indicación expresa, usted dispone de los permisos necesarios para realizar todas las operaciones requeridas y las siguientes\npreguntas están referidas a la infraestructura anteriormente especificada."
+ },
+ "preguntas": [
+  {
+   "id": "s201",
+   "tema": 30,
+   "enunciado": "Se le asigna la gestión de la red interna 10.30.16.0/20. Si la VLAN 10 usa la primera subred del rango de direccionamiento de esa red, con 25 bits de máscara de red, ¿cuáles son su dirección de red y broadcast, respectivamente?",
+   "opciones": [
+    "10.30.16.0 y 10.30.16.191",
+    "10.30.16.1 y 10.30.16.191",
+    "10.30.16.1 y 10.30.16.127",
+    "10.30.16.0 y 10.30.16.127"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s202",
+   "tema": 30,
+   "enunciado": "También se le solicita el número máximo de hosts disponibles de la red interna 10.30.16.0/20, indique la respuesta correcta:",
+   "opciones": [
+    "254",
+    "1022",
+    "4094",
+    "8190"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s203",
+   "tema": 30,
+   "enunciado": "Se le pide segmentar la subred 10.30.24.0/21 en 4 subredes de igual tamaño. ¿Cuál será la dirección de red y la máscara de la tercera subred?",
+   "opciones": [
+    "10.30.28.0/22",
+    "10.30.26.0/23",
+    "10.30.28.0/23",
+    "10.30.28.0/24 En un momento determinado, la web del Ministerio deja de estar accesible. A continuación, deberá comprobar posibles problemas de servicio, rutas, puertos y/o filtrado entre máquinas."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s204",
+   "tema": 33,
+   "enunciado": "En la SVI (Switched Virtual Interface) de la VLAN 10 del router de distribución, ¿qué comando de Cisco IOS 15.x habilita el DHCP relay hacia el servidor 10.30.20.5?",
+   "opciones": [
+    "ip helper-address 10.30.20.5",
+    "ip dhcp server 10.30.20.5",
+    "service dhcp forward 10.30.20.5",
+    "relay dhcp 10.30.20.5"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s205",
+   "tema": 30,
+   "enunciado": "También le preguntan qué comando usaría para ver la tabla de enrutamiento en el servidor web01 (RHEL):",
+   "opciones": [
+    "route print",
+    "netstat -p tcp",
+    "ip route show",
+    "tracert -r"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s206",
+   "tema": 24,
+   "enunciado": "Para habilitar el servicio nginx automáticamente en el arranque del servidor web01, ¿qué orden de systemd resulta adecuada?",
+   "opciones": [
+    "systemctl enable nginx",
+    "systemctl autostart nginx",
+    "service nginx start-enable",
+    "systemctl run nginx -onboot"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s207",
+   "tema": 26,
+   "enunciado": "En el servidor web01, un contenedor con ID \"3f7\" está consumiendo demasiados recursos y debe interrumpirse inmediatamente. ¿Cuál es el comando que debe ejecutar?",
+   "opciones": [
+    "docker kill 3f7",
+    "docker end 3f7",
+    "docker interrupt 3f7",
+    "docker block 3f7"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s208",
+   "tema": 24,
+   "enunciado": "Adicionalmente, habiendo comprobado que ya no es necesario, le solicitan eliminarlo también. ¿Cuál es el comando a ejecutar?",
+   "opciones": [
+    "docker delete 3f7",
+    "docker rm 3f7",
+    "docker eliminate 3f7",
+    "docker excise 3f7"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s209",
+   "tema": 24,
+   "enunciado": "Se necesita descargar una imagen desde Docker Hub, ¿qué comando utilizaría para descargar la imagen “ImagenA” al equipo local?",
+   "opciones": [
+    "docker download ImagenA",
+    "docker get ImagenA",
+    "docker images ImagenA",
+    "docker pull ImagenA"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s210",
+   "tema": 32,
+   "enunciado": "Se quiere comprobar si el servicio HTTPS está permitido en la zona pública del cortafuegos del servidor web01. ¿Qué comando ofrece la verificación correcta?",
+   "opciones": [
+    "firewall-cmd --zone=public --list-services",
+    "firewall-cmd --get-active-zones=public",
+    "firewall-cmd --list-ports",
+    "iptables -L -n nat"
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s211",
+   "tema": 30,
+   "enunciado": "Desde web01 se le pide verificar qué ruta efectiva (interfaz/next hop) usa el kernel para llegar a db01 (10.30.20.30). ¿Qué orden sería la adecuada?",
+   "opciones": [
+    "ip route neigh 10.30.20.30",
+    "ip route get 10.30.20.30",
+    "ip net show 10.30.20.30",
+    "ip route net 10.30.20.30"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s212",
+   "tema": 30,
+   "enunciado": "Le piden probar conectividad de capa 4 (TCP connect) desde web01 a db01 (10.30.20.30:3306) sin cliente MySQL. ¿Qué sonda simple es adecuada?",
+   "opciones": [
+    "curl -vk https://10.30.20.30:3306",
+    "nc -vz 10.30.20.30 3306",
+    "telnet 10.30.20.30 3306/udp",
+    "ping 10.30.20.30 -p 3306"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s213",
+   "tema": 25,
+   "enunciado": "Le solicitan listar rápidamente los puertos en escucha del sistema. En RHEL, ¿cuál indicaría que es un comando válido?",
+   "opciones": [
+    "route -n",
+    "arp -an",
+    "hostnamectl",
+    "ss -ltn En los servidores RHEL 8.8 se usa RAID por hardware y LVM para la gestión de volúmenes de datos. Para la gestión de copias de seguridad se usa el producto Veeam Backup y se sigue la política de copias 3-2-1, usando estrategias basadas en snapshots y backups. Los servidores RHEL deberán seguir las recomendaciones de seguridad del CCN-CERT."
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s214",
+   "tema": 25,
+   "enunciado": "¿Qué opción refleja correctamente la estrategia 3-2-1?",
+   "opciones": [
+    "3 copias de los datos, en 2 soportes fuera de la sede, con 1 copia cifrada.",
+    "3 copias de los datos, en 2 servidores fuera de la sede, con 1 copia en nube.",
+    "3 copias de los datos, en 2 soportes distintos, con 1 copia fuera de la sede.",
+    "3 copias de los datos, en 2 soportes distintos, con 1 copia cifrada."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s215",
+   "tema": 25,
+   "enunciado": "Se necesita generar una copia de seguridad en formato de compresión .tar.gz, del directorio “/srv/app/config/”, en un fichero llamado “config_backup.tar.gz”. El comando correcto es:",
+   "opciones": [
+    "tar -xzf config_backup.tar.gz /srv/app/config/",
+    "tar -czf config_backup.tar.gz /srv/app/config/",
+    "gzip -cf /srv/app/config/ > config_backup.tar",
+    "zip -r config_backup.tar.gz /srv/app/config/"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s216",
+   "tema": 24,
+   "enunciado": "Para el cumplimiento de normativas de seguridad, en RHEL se quiere realizar una auditoría detallada que permita monitorizar accesos y modificaciones a archivos o directorios, basándose en reglas de auditoria preconfiguradas. ¿Qué componente del sistema diría que está diseñado para ello?",
+   "opciones": [
+    "traceguardian",
+    "top",
+    "journalctl",
+    "auditd"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s217",
+   "tema": 26,
+   "enunciado": "Se desea reforzar la seguridad en el correo. Para IMAP seguro (IMAPS), ¿qué puerto estándar, indicado por IANA, debe exponerse?",
+   "opciones": [
+    "143",
+    "110",
+    "995",
+    "993"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s218",
+   "tema": 24,
+   "enunciado": "En el servidor de Windows Server 2019, se quiere agregar un usuario a un grupo global desde el Controlador de Dominio (DC), ¿qué herramienta gráfica nativa usaría?",
+   "opciones": [
+    "Active Directory Users and Computers (dsa.msc).",
+    "Local Users and Groups en el DC (lusrmgr.msc).",
+    "Panel de control de cuentas de usuario (netplwiz).",
+    "Administrador de certificados (certmgr.msc) del equipo."
+   ],
+   "correcta": 0,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s219",
+   "tema": 24,
+   "enunciado": "Se necesita instalar un nuevo controlador de dominio en un servidor Windows Server 2019, ¿qué comando cmdlet de PowerShell permite instalar el rol de Servicios de Dominio de Active Directory (AD)?",
+   "opciones": [
+    "Add-ADDSRole AD-Domain-Services -IncludeManagementTools",
+    "Install-ADDSForest -IncludeManagementTools",
+    "Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools",
+    "New-ADDomainService -IncludeManagementTools"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s220",
+   "tema": 24,
+   "enunciado": "En Windows 11, le piden copiar todo el contenido de un directorio de origen, “C:\\DirectorioA”, en un directorio de destino existente, “C:\\DirectorioB”, de forma recursiva. ¿Qué comando cmdlet de PowerShell le permite hacer lo solicitado?",
+   "opciones": [
+    "Copy-Item “C:\\DirectorioA\\*” “C:\\DirectorioB” -Recursive",
+    "Copy-Path “C:\\DirectorioA\\*” “C:\\DirectorioB” -Recurse",
+    "Copy-Item -Path “C:\\DirectorioA\\*” -Destination “C:\\DirectorioB” -Recurse",
+    "Copy-Path “C:\\DirectorioA\\*” -Destination “C:\\DirectorioB” -Recursive"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r01",
+   "tema": 24,
+   "enunciado": "En el servidor db01 (RHEL 8.8), se desea añadir de forma persistente una regla que permita el acceso al puerto 3306/TCP solo desde la DMZ 172.19.50.0/27. La zona efectiva del servidor es public. La activación en tiempo de ejecución se realizará posteriormente según el procedimiento estándar. ¿Qué comando añade la regla persistente correcta en la zona public?",
+   "opciones": [
+    "firewall-cmd --permanent --zone=public --add-rich-rule='rule family=\"ipv4\" address=\"172.19.50.0/27\" port protocol=\"tcp\" port number=\"3306\" accept'",
+    "firewall-cmd --permanent-direct --zone=public --add-rich-rule='rule ip=\"ipv4\" address=\"172.19.50.0/27\" protocol=\"tcp\" port=\"3306\" accept'",
+    "firewall-cmd --permanent-direct --add-rule='rule ip=\"ipv4\" source address=\"172.19.50.0/27\" protocol=\"tcp\" port number=\"3306\" accept'",
+    "firewall-cmd --permanent --zone=public --add-rich-rule='rule family=\"ipv4\" source address=\"172.19.50.0/27\" port protocol=\"tcp\" port=\"3306\" accept'"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r02",
+   "tema": 30,
+   "enunciado": "¿Qué ajuste de sysctl del kernel resulta adecuado para mitigar ataques de suplantación de IP (IP spoofing) mediante filtrado de ruta inversa en RHEL 8.8?",
+   "opciones": [
+    "Activar net.ipv4.ip_forward",
+    "Configurar net.ipv4.conf.all.rp_filter=1",
+    "Deshabilitar net.ipv4.tcp_syncookies",
+    "Activar net.ipv4.conf.all.accept_ra=1"
+   ],
+   "correcta": 1,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r03",
+   "tema": 32,
+   "enunciado": "En un equipo Windows 11 de la red de usuarios, necesita añadir una regla de firewall de Windows Defender llamada \"Puerto8443\" para permitir conexiones entrantes TCP al puerto 8443. ¿Cuál es el comando correcto que ejecutaría desde la línea de comandos con privilegios de administrador?",
+   "opciones": [
+    "netsh advfirewall firewall create rule name=\"Puerto8443\" dir=in action=permit protocol=TCP localport=8443",
+    "netsh firewall add portopening TCP 8443 \"Puerto8443\" dir=in action=permit",
+    "netsh advfirewall set rule name=\"Puerto8443\" dir=in action=allow protocol=TCP localport=8443",
+    "netsh advfirewall firewall add rule name=\"Puerto8443\" dir=in action=allow protocol=TCP localport=8443"
+   ],
+   "correcta": 3,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r04",
+   "tema": 24,
+   "enunciado": "Tras la instalación del nuevo controlador de dominio en Windows Server 2019, se observa que presenta errores de replicación. ¿Qué comando le permitiría obtener un resumen del estado de replicación entre controladores de dominio?",
+   "opciones": [
+    "dcdiag /q",
+    "netdom query fsmo",
+    "repadmin /replsummary",
+    "nltest /sc_verify"
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  },
+  {
+   "id": "s2r05",
+   "tema": 25,
+   "enunciado": "En db01 (RHEL 8.8) existe un grupo de volúmenes LVM2 llamado vg_datos con 200 GiB libres. El volumen lógico lv_contenido (actualmente 500 GiB) contiene un sistema de ficheros XFS montado en /contenido. No hay snapshots activos. Se requiere ampliar la capacidad disponible en /contenido hasta 600 GiB, sin cambiar el punto de montaje ni la estructura del volumen y sin añadir discos nuevos. ¿Cuál es la secuencia de acciones correcta a nivel lógico para realizar la ampliación?",
+   "opciones": [
+    "Crear un volumen lógico nuevo de 600 GiB, formatearlo y sustituir el actual en /etc/fstab.",
+    "Crear un snapshot del volumen lógico, montar el snapshot y ejecutar la ampliación sobre el snapshot.",
+    "Extender el volumen lógico a 600 GiB y, a continuación, ampliar en línea el sistema de ficheros XFS sobre /contenido.",
+    "Añadir un PV nuevo al grupo vg_datos y ejecutar fsck sobre /contenido antes de ampliar el sistema de ficheros."
+   ],
+   "correcta": 2,
+   "explicacion": null,
+   "reserva": true,
+   "contexto": "s2",
+   "tema_auto": true
+  }
+ ]
+}
