@@ -15,7 +15,7 @@
  "preguntas": [
   {
    "id": "s201",
-   "tema": null,
+   "tema": 15,
    "enunciado": "¿Qué tipo de correspondencia hay entre las tablas “SolicitudBeca” y “FicheroAdjunto”?",
    "opciones": [
     "Un registro de SolicitudBeca puede tener N registros de FicheroAdjunto.",
@@ -24,28 +24,26 @@
     "Un registro de SolicitudBeca puede tener cero o como máximo un registro de FicheroAdjunto."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "Entre SolicitudBeca y FicheroAdjunto hay una correspondencia **1:N**: una solicitud puede llevar **varios** ficheros adjuntos y cada fichero pertenece a una sola solicitud. Se implementa con una **clave foránea en FicheroAdjunto** que apunta a SolicitudBeca. Una N:M necesitaría una tabla intermedia, y las opciones de «como máximo uno» describen una 1:1 o una 1:0..1, que limitarían la solicitud a un solo adjunto. Truco: la clave foránea va siempre en el lado «muchos».",
+   "contexto": "s2"
   },
   {
    "id": "s202",
-   "tema": null,
+   "tema": 21,
    "enunciado": "¿Qué elemento HTML utilizaría para impedir que el e-mail exceda los 100 caracteres cuando el interesado lo cumplimente?",
    "opciones": [
-    "<input type=''email'' id=''email'' name=''email'' size=''100''>",
-    "<input type=''email'' id=''email'' name=''email'' max=''100''>",
-    "<input type=''email'' id=''email'' name=''email'' maxlength=''100''>",
-    "<input type=''email'' id=''email'' name=''email'' length=''100''>"
+    "<input type=\"email\" id=\"email\" name=\"email\" size=\"100\">",
+    "<input type=\"email\" id=\"email\" name=\"email\" max=\"100\">",
+    "<input type=\"email\" id=\"email\" name=\"email\" maxlength=\"100\">",
+    "<input type=\"email\" id=\"email\" name=\"email\" length=\"100\">"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "El atributo **maxlength** limita el número máximo de caracteres que se pueden escribir en un input de texto, email incluido. **size** solo fija el ancho visible del campo en caracteres, sin limitar lo que se escribe; **max** marca el valor máximo de los campos numéricos o de fecha; y **length** no es un atributo de input. Truco: maxlength y minlength cuentan caracteres; max y min, valores.",
+   "contexto": "s2"
   },
   {
    "id": "s203",
-   "tema": 14,
+   "tema": 19,
    "enunciado": "¿Qué ORM podría utilizar, en función de la solución de backend escogida?",
    "opciones": [
     "JPA en .NET e Hibernate en Java.",
@@ -54,13 +52,12 @@
     "Spring Data en .NET e Hibernate en Java."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "El ORM de referencia en **.NET** es **Entity Framework** (EF Core), y en **Java** es **Hibernate**, que implementa la especificación JPA. **JPA** es una especificación de Java, no un ORM de .NET, y **Spring Data** es un proyecto de Java. Hibernate tuvo un port para .NET (NHibernate), pero Entity Framework no existe en Java. Truco: EF = .NET; JPA, Hibernate y Spring Data = Java.",
+   "contexto": "s2"
   },
   {
    "id": "s204",
-   "tema": 25,
+   "tema": 17,
    "enunciado": "¿Qué sentencia habría que ejecutar si se quiere añadir un nuevo registro a la tabla “CuerpoBecado”?",
    "opciones": [
     "INSERT INTO CuerpoBecado (Codigo, Denominacion) VALUES ('TAI, 'Técnico Auxiliar de Informática');",
@@ -69,13 +66,12 @@
     "INSERT INTO CuerpoBecado (Codigo, Denominacion) VALUES ('TAI', 'Técnico Auxiliar de Informática');"
    ],
    "correcta": 3,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "En SQL las cadenas van **entre comillas simples** y la sintaxis es **INSERT INTO tabla (columnas) VALUES (valores);**. Una opción no cierra la comilla de 'TAI, otra pone los textos sin comillas (TAI se tomaría por el nombre de una columna y la frase daría error de sintaxis) y otra escribe «INSERT TO», que no existe. Revisa siempre comillas, la palabra INTO y los paréntesis.",
+   "contexto": "s2"
   },
   {
    "id": "s205",
-   "tema": null,
+   "tema": 22,
    "enunciado": "A este sistema le es de aplicación la normativa vigente de accesibilidad de sitios web. ¿Qué herramienta automatizada utilizaría para probar que la aplicación cumple con los estándares de accesibilidad?",
    "opciones": [
     "QualWeb.",
@@ -84,13 +80,12 @@
     "Shovel."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**QualWeb** es un evaluador automático de accesibilidad web (de la Universidad de Lisboa) que comprueba las **WCAG 2.x** mediante reglas **ACT** del W3C, y está disponible como servicio web, extensión del navegador y librería. Los otros nombres no corresponden a herramientas reconocidas de accesibilidad: no confundas «Equal Automatic Checker» con el Accessibility Checker de IBM Equal Access. Otras herramientas automáticas habituales son WAVE, axe, Lighthouse o TAW, y en la AGE el Observatorio de Accesibilidad Web. Recuerda que las pruebas automáticas no sustituyen a la revisión manual.",
+   "contexto": "s2"
   },
   {
    "id": "s206",
-   "tema": 13,
+   "tema": 18,
    "enunciado": "El proceso de presentación de solicitud implica la autenticación del usuario, la firma de la solicitud, el guardado en base de datos, la generación de un asiento registral y la generación de un justificante de presentación. ¿Qué diagrama UML utilizaría para representar las acciones implicadas en este flujo?",
    "opciones": [
     "Diagrama de paquetes.",
@@ -99,13 +94,12 @@
     "Diagrama de Entidad/Relación."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "El **diagrama de secuencia** representa las **interacciones entre participantes en orden temporal**: el usuario, el sistema de firma, la base de datos, el registro y el generador del justificante, con los mensajes que se intercambian a lo largo del flujo. El **diagrama de paquetes** muestra cómo se organiza el modelo y el **de objetos** una foto estática de instancias; el **Entidad/Relación** ni siquiera es un diagrama UML. Un diagrama de actividad también serviría para un flujo, pero no aparece entre las opciones.",
+   "contexto": "s2"
   },
   {
    "id": "s207",
-   "tema": null,
+   "tema": 19,
    "enunciado": "Necesita controlar el plazo de presentación de solicitudes. Suponiendo que utiliza Java en el backend, ¿qué clase nativa de Java puede utilizar para trabajar con una fecha y hora simultáneamente?",
    "opciones": [
     "LocalDateTime.",
@@ -114,13 +108,12 @@
     "OffsetTime."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**java.time.LocalDateTime** (Java 8+) representa una **fecha y una hora juntas**, sin zona horaria, por ejemplo 2024-06-30T23:59:59. **LocalDate** guarda solo la fecha, **LocalTime** solo la hora y **OffsetTime** una hora con desfase respecto a UTC, pero sin fecha. Si además hiciera falta la zona horaria, se usaría ZonedDateTime u OffsetDateTime.",
+   "contexto": "s2"
   },
   {
    "id": "s208",
-   "tema": 25,
+   "tema": 20,
    "enunciado": "Para que la aplicación de gestión pueda interactuar con esta aplicación, se va a exponer una capa de servicios web. ¿Cuál de las siguientes opciones NO es válida para documentar dichos servicios?",
    "opciones": [
     "RAML.",
@@ -129,13 +122,12 @@
     "OpenAPI/Swagger."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**REST** es un **estilo de arquitectura** para servicios web, no un lenguaje para documentarlos. Para documentar servicios **REST** se usan **OpenAPI/Swagger** (YAML/JSON) o **RAML**, y para servicios **SOAP**, **WSDL** (XML). Truco: REST es lo que construyes; OpenAPI, RAML y WSDL son cómo lo describes.",
+   "contexto": "s2"
   },
   {
    "id": "s209",
-   "tema": null,
+   "tema": 20,
    "enunciado": "Se ha determinado que es necesaria la integración de la aplicación con GEISER, cuyos servicios web son de naturaleza SOAP. ¿Con qué firmará las peticiones generadas por la aplicación?",
    "opciones": [
     "WS-Security.",
@@ -144,13 +136,12 @@
     "XML-Encryption."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "Para firmar mensajes **SOAP** se usa **WS-Security** (OASIS), que mete en la cabecera SOAP una firma **XML Signature** y, si hace falta, cifrado y tokens (como el certificado X.509). **SAML** sirve para intercambiar aserciones de identidad (Cl@ve lo usa), **JWT** es un token firmado propio de las API REST/JSON y **XML-Encryption** cifra, pero no firma. GEISER (el servicio de registro de la AGE) exige peticiones firmadas con WS-Security.",
+   "contexto": "s2"
   },
   {
    "id": "s210",
-   "tema": 25,
+   "tema": 22,
    "enunciado": "Se quiere facilitar el uso de herramientas de asistencia en la página. ¿Qué atributo utilizaría para indicar que un elemento se actualizará?",
    "opciones": [
     "aria-live.",
@@ -159,13 +150,12 @@
     "aria-valuenow."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**aria-live** marca una **región viva**: su contenido se actualizará dinámicamente, y los lectores de pantalla lo anunciarán sin que el usuario mueva el foco (con los valores polite, assertive u off). **aria-checked** (aquí mal escrito) indica si una casilla está marcada, **aria-flowto** propone otro orden de lectura y **aria-valuenow** es el valor actual de un control de rango, como un slider o una barra de progreso.",
+   "contexto": "s2"
   },
   {
    "id": "s211",
-   "tema": 14,
+   "tema": 15,
    "enunciado": "Según “Técnicas y Practicas” de Métrica v3, si se quisiera optimizar el modelo físico de datos para reducir o simplificar el número de accesos a la base de datos, ¿cuál de las siguientes acciones se aplicaría?",
    "opciones": [
     "Combinar entidades si los accesos son frecuentes en transacciones distintas.",
@@ -174,13 +164,12 @@
     "Normalizar las tablas en Forma Normal de Boyce-Codd (FNBC)."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "En las Técnicas y Prácticas de Métrica v3, para **reducir o simplificar los accesos** al optimizar el modelo físico se pueden **introducir elementos redundantes** (desnormalizar). También se pueden **combinar entidades** cuando sus accesos son frecuentes **dentro de la misma transacción**, no en transacciones distintas, que es lo que dice el distractor. Normalizar hasta FNBC suele **aumentar** el número de tablas y de joins, y eliminar entidades sin más no es una técnica de optimización. Truco: más rendimiento en lectura = más redundancia controlada.",
+   "contexto": "s2"
   },
   {
    "id": "s212",
-   "tema": 25,
+   "tema": 23,
    "enunciado": "Suponiendo que se utilizara la metodología ágil SCRUM, si durante un sprint, se da cuenta de que se está aplicando una mala práctica que puede enlentecer el proyecto, ¿en qué reunión comentará esa mala práctica, para buscar la mejora continua y evitar aplicarla en los siguientes sprints?",
    "opciones": [
     "En la Daily Scrum.",
@@ -189,13 +178,12 @@
     "En la Sprint Review."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "La **Sprint Retrospective**, al final de cada sprint, es donde el Scrum Team inspecciona **cómo ha trabajado** (personas, interacciones, procesos y herramientas) y acuerda mejoras para los siguientes sprints, así que ahí se comentan las malas prácticas. La **Sprint Review** inspecciona **el producto** (el incremento) con los interesados, la **Daily Scrum** sincroniza al equipo durante 15 minutos hacia el objetivo del sprint y la **Sprint Planning** planifica el sprint. Truco: la Review mira el producto y la Retrospective, el proceso.",
+   "contexto": "s2"
   },
   {
    "id": "s2r01",
-   "tema": 12,
+   "tema": 23,
    "enunciado": "Quiere facilitar la incorporación de otros desarrolladores al proyecto y para ello, en el repositorio de código, va a crear un fichero en el que incluirá, entre otra información, el propósito del proyecto y cómo arrancarlo localmente. Esa información se incluirá en el fichero:",
    "opciones": [
     "CODEOWNERS.",
@@ -204,14 +192,13 @@
     "CITATION."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**README.md** es el fichero de presentación del repositorio, y GitHub lo muestra en la portada: incluye el propósito del proyecto, cómo instalarlo y arrancarlo en local, cómo contribuir, etc. **CODEOWNERS** define quién revisa cada parte del código, **LICENSE** contiene la licencia y **CITATION** (CITATION.cff) indica cómo citar el proyecto. Truco: README significa literalmente «léeme».",
    "reserva": true,
-   "contexto": "s2",
-   "tema_auto": true
+   "contexto": "s2"
   },
   {
    "id": "s2r02",
-   "tema": null,
+   "tema": 23,
    "enunciado": "Está escogiendo herramientas que le permitan analizar y mejorar la calidad del código. ¿Cuál de las siguientes NO le será de ayuda?",
    "opciones": [
     "SonarQube.",
@@ -220,14 +207,13 @@
     "Mercurial."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**Mercurial** es un **sistema de control de versiones** distribuido, como Git, y no analiza la calidad del código. Las otras tres sí son herramientas de análisis estático: **SonarQube** es una plataforma de calidad (bugs, code smells, cobertura, vulnerabilidades), un **linter** de JavaScript como ESLint detecta errores y malas prácticas, y **PMD** es un analizador de código, sobre todo de Java.",
    "reserva": true,
-   "contexto": "s2",
-   "tema_auto": true
+   "contexto": "s2"
   },
   {
    "id": "s2r03",
-   "tema": null,
+   "tema": 21,
    "enunciado": "El sistema de información a desarrollar se integrará con Cl@ve para identificar a los interesados en el procedimiento. Cl@ve utiliza el estándar abierto SAML2 para el intercambio de datos de autenticación y autorización, que está basado en XML. ¿Cuál de las siguientes afirmaciones sobre XML Schema (XSD) es correcta?",
    "opciones": [
     "Un XML Schema (XSD) no puede definir tipos de datos personalizados.",
@@ -236,10 +222,9 @@
     "Un XML Schema (XSD) no puede ser referenciado desde otro XML Schema."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "XML Schema **puede definir restricciones** sobre los valores de elementos y atributos mediante facetas como pattern, enumeration, minInclusive o maxLength. Los distractores dicen lo contrario de lo que permite XSD: **sí** se pueden definir tipos propios (simpleType, complexType), **sí** se trabaja con espacios de nombres (targetNamespace) y **sí** se pueden referenciar otros esquemas con **xs:include** y **xs:import**. Esa capacidad de tipado y restricción es la gran ventaja del XSD frente a la DTD.",
    "reserva": true,
-   "contexto": "s2",
-   "tema_auto": true
+   "contexto": "s2"
   }
  ]
 }

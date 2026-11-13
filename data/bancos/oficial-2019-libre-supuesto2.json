@@ -24,13 +24,13 @@
     "23"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "255.255.255.128 en binario son 8 + 8 + 8 + 1 bits a uno (128 = 10000000), es decir, una máscara **/25**. /24 sería 255.255.255.0, /26 sería 255.255.255.192 y /23 sería 255.255.254.0. Una /25 deja 7 bits para hosts: 2^7 − 2 = **126 hosts**, más que suficiente para los 60 empleados de la DCM.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s202",
-   "tema": null,
+   "tema": 30,
    "enunciado": "También le preguntan a qué Clase pertenece la red asignada (10.0.4.0).",
    "opciones": [
     "Clase A.",
@@ -39,9 +39,8 @@
     "Clase D."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "En el direccionamiento con clases, el primer octeto decide la clase: **Clase A = 1-126**, B = 128-191, C = 192-223, D (multicast) = 224-239. Como 10.0.4.0 empieza por **10**, es de **Clase A**. Además, 10.0.0.0/8 es el rango **privado** de clase A (RFC 1918). Que se use con una máscara /25 (subnetting) no cambia su clase original.",
+   "contexto": "s2"
   },
   {
    "id": "s203",
@@ -54,7 +53,7 @@
     "256"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Una red **/21** deja 32 − 21 = **11 bits** para hosts: 2^11 = 2048 direcciones, menos la de red y la de broadcast, **2046 hosts**. 1024 correspondería a 10 bits sin restar nada, y 256 y 32 son potencias de 2 sin relación con /21. Fórmula: hosts = 2^(32 − prefijo) − 2.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -69,7 +68,7 @@
     "10.0.0.1 - 10.0.7.254"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Una /21 abarca 8 bloques /24 (2048 direcciones): de **10.0.0.0** (red) a **10.0.7.255** (broadcast), así que los hosts van de **10.0.0.1 a 10.0.7.254**. Las demás opciones solo cubren un /24 (10.0.0.x o 10.0.3.x) o incluyen la dirección de red y la de broadcast. Truco: con /21 el tercer octeto avanza de 8 en 8 (256 − 248 = 8).",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -84,13 +83,13 @@
     "mv /etc/redhat-release"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En RHEL la versión está en el fichero **/etc/redhat-release**, que se muestra con **cat /etc/redhat-release**; hoy también se usa /etc/os-release o hostnamectl. «/etc/redhat-version» no existe, y **rm** y **mv** borrarían o moverían el fichero: no lo muestran y además serían dañinos.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s206",
-   "tema": 30,
+   "tema": 24,
    "enunciado": "Para poder tener conectividad, la CHT necesita poner una ruta persistente en una de sus máquinas Solaris a la red 10.0.5.0/24 con una máscara de red 255.255.255.0 y usando como puerta de enlace la dirección IP 10.0.5.150 ¿Cuál sería el comando correcto?",
    "opciones": [
     "route -p add -net 10.0.5.0/24 -gateway 10.0.5.150",
@@ -99,9 +98,8 @@
     "route add -static -net 10.0.5.0/24 -gateway 10.0.5.150"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "En Solaris, **route -p add** añade una ruta **persistente** (-p) que se conserva tras reiniciar; la sintaxis es -net <red/prefijo> -gateway <IP>. Las demás opciones usan «new» o «-static», que no son la forma de hacer persistente una ruta en Solaris. En Linux el equivalente sería ip route add y guardar la ruta en la configuración de red.",
+   "contexto": "s2"
   },
   {
    "id": "s207",
@@ -114,13 +112,13 @@
     "/etc/groups"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En Linux los **hashes** de las contraseñas se guardan en **/etc/shadow**, que solo puede leer root, junto con datos de caducidad de la contraseña. **/etc/passwd** contiene los datos de las cuentas (UID, GID, shell…) y es legible por todos, por eso hoy solo tiene una «x» en el campo de la contraseña. /etc/users no existe y el fichero de grupos es **/etc/group**, en singular. Precisión: no se guardan «encriptadas», sino como hash con sal (SHA-512, yescrypt…).",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s208",
-   "tema": 14,
+   "tema": 25,
    "enunciado": "Una pieza crucial en cualquier sistema informático son las BBDD. Le han informado que tanto la DCM como la CHT utilizan Oracle, pero no le han dicho la versión. ¿Qué consulta podría hacer en la base de datos para conocer esta información?",
    "opciones": [
     "SELECT * FROM V$VERSION",
@@ -129,9 +127,8 @@
     "SELECT * FROM V$VERSIONTABLE"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "La vista dinámica **V$VERSION** de Oracle muestra la versión de la base de datos y de sus componentes (SELECT * FROM V$VERSION, o SELECT banner FROM v$version). Las otras vistas no existen. Las vistas dinámicas de rendimiento de Oracle empiezan por V$ (V$INSTANCE, V$SESSION…), y las del diccionario de datos por DBA_, ALL_ y USER_.",
+   "contexto": "s2"
   },
   {
    "id": "s209",
@@ -144,7 +141,7 @@
     "tar -cjf /home/opositor/temas/ TEMAS.tar.gz"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**tar -czf TEMAS.tar.gz /home/opositor/temas/**: **c** crea el archivo, **z** lo comprime con **gzip** y **f** indica el nombre del fichero, que va justo detrás. Después van los directorios que se incluyen. La opción **x** extrae en lugar de crear, **j** comprime con **bzip2** (no gzip), y en dos de las opciones además están invertidos el fichero de salida y el origen.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -159,7 +156,7 @@
     "net localgroup administradores"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**net localgroup <grupo>** muestra los miembros de un grupo local de Windows. En un Windows en español el grupo se llama **Administradores** (en inglés, Administrators), así que el comando es **net localgroup administradores**. «net local» no existe y «admin» no es el nombre del grupo.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -174,13 +171,13 @@
     "net accounts"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**net accounts** muestra (y permite cambiar) la **política de cuentas y contraseñas** del equipo: longitud mínima, duración máxima y mínima, historial y umbral de bloqueo. **net config** muestra la configuración de los servicios Servidor y Estación de trabajo, **net localgroup** gestiona grupos locales y «net computer» añade o quita equipos de un dominio.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s212",
-   "tema": 11,
+   "tema": 25,
    "enunciado": "Se están realizando en su unidad informes de las capacidades de los discos y requieren de su ayuda. Si se dispone de 5 discos duros de 6 TB, y se decide configurarlos en RAID 6, ¿qué capacidad neta de almacenamiento se obtendrá?",
    "opciones": [
     "12 TB",
@@ -189,13 +186,12 @@
     "30 TB"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**RAID 6** usa **doble paridad distribuida**, así que se pierde la capacidad de **dos discos**: (5 − 2) × 6 TB = **18 TB** netos, y aguanta el fallo de dos discos a la vez. 24 TB sería RAID 5 (n − 1), 30 TB sería RAID 0 (sin redundancia) y 12 TB no corresponde a este caso. RAID 6 necesita como mínimo 4 discos.",
+   "contexto": "s2"
   },
   {
    "id": "s213",
-   "tema": 24,
+   "tema": 26,
    "enunciado": "En sus instalaciones no disponen de un Windows Server 2008, pero como tienen instalado Docker han decidido crear uno y arrancarlo a partir de una imagen llamada SW2008. ¿Con qué sentencia debería realizar esta petición?",
    "opciones": [
     "docker run SW2008",
@@ -204,9 +200,8 @@
     "docker start run SW2008"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**docker run <imagen>** **crea un contenedor nuevo** a partir de la imagen y lo **arranca** (equivale a docker create + docker start). **docker start** solo arranca un contenedor que **ya existe** y está parado, no una imagen. Las demás sintaxis no existen. En la práctica, una imagen de Windows Server necesita un host Windows con contenedores de Windows.",
+   "contexto": "s2"
   },
   {
    "id": "s214",
@@ -219,13 +214,13 @@
     "docker list-container -all"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**docker ps** lista solo los contenedores **en ejecución**; con **-a (--all)** se incluyen también los **parados** o terminados. «docker list» y «list-container» no son comandos de Docker. Equivalente moderno: docker container ls -a.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s215",
-   "tema": 28,
+   "tema": 33,
    "enunciado": "Están estudiando el traslado de algunos equipos de la CHT a su CPD y le informan de que tienen una sonda de alrededor de 70 watios que utilizan 1 hora a la semana y que debe permanecer apagada el resto del tiempo. Le indican que sería necesario poder encenderla remotamente por red. ¿Sería posible hacerlo?",
    "opciones": [
     "No, no sería posible.",
@@ -234,9 +229,8 @@
     "Si, mediante PoE IEEE 802.3dt"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "Sí: un switch con **PoE** puede alimentar el equipo por el cable de red y encenderlo o apagarlo **activando o desactivando el puerto en remoto**. Para unos **70 W** hace falta **IEEE 802.3bt** (PoE++), que en Tipo 4 entrega hasta 90 W en el switch, y unos 71 W en el dispositivo. 802.3af (15,4 W) y 802.3at (30 W) se quedarían cortos. **802.3ct** es un estándar de Ethernet a 100 Gb/s sobre sistemas DWDM, no de PoE, y «802.3dt» no es un estándar PoE.",
+   "contexto": "s2"
   },
   {
    "id": "s216",
@@ -249,7 +243,7 @@
     "Categoría 8."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Para unos 30 Gbps sobre par trenzado hace falta **Categoría 8** (hasta 2000 MHz), que admite **25GBASE-T y 40GBASE-T** en distancias cortas, de unos 30 m. La **Categoría 6** llega a 10 Gbps solo hasta unos 55 m y la 6A hasta 100 m. Las **Categorías 7 y 7A** no las recoge la ANSI/TIA-568 (son clases F y FA de la ISO/IEC 11801) y tampoco están pensadas para 25-40 Gbps.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -264,7 +258,7 @@
     "netsh advfirewall set allprofiles on"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El comando es **netsh advfirewall set allprofiles state on**: activa el firewall de Windows en los tres perfiles (dominio, privado y público). Para desactivarlo se usa state off. Las demás opciones fallan porque les falta la palabra clave **state** o usan valores no válidos («enable», «online»). En PowerShell: Set-NetFirewallProfile -Enabled True.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -279,7 +273,7 @@
     "HIPS"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Un IPS de tipo **NBA (Network Behavior Analysis)** analiza el **comportamiento del tráfico** de la red para detectar anomalías, como **ataques DoS/DDoS**, gusanos, malware o usos indebidos. Según la clasificación del NIST (SP 800-94), los otros tipos son el **de red** (NIPS), el **inalámbrico** (WIPS, que vigila el tráfico Wi-Fi) y el **de host** (HIPS, instalado en un equipo). «DIPS» no es una categoría reconocida.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -294,13 +288,13 @@
     "425"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**SMTPS** (SMTP sobre TLS implícito) usa por defecto el puerto **465**; la RFC 8314 lo reasignó para el envío de correo con TLS. **25** es SMTP sin cifrar entre servidores y **443** es HTTPS. Conviene recordar también el **587**, envío de correo con STARTTLS. Otros seguros: IMAPS 993 y POP3S 995.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s220",
-   "tema": 10,
+   "tema": 24,
    "enunciado": "Para evitar problemas de resolución de nombres en estos equipos Windows donde se está configurando el cliente de correo, han decidido limpiar la caché DNS. ¿Cuál sería el comando adecuado?",
    "opciones": [
     "ifconfig /flushdns",
@@ -309,9 +303,8 @@
     "ifconfig /cleardns"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "En Windows, **ipconfig /flushdns** vacía la **caché del resolvedor DNS** del cliente, e **ipconfig /displaydns** la muestra. **ifconfig** es el comando de Unix/Linux (y no tiene esa opción), y «/cleardns» no existe.",
+   "contexto": "s2"
   },
   {
    "id": "s2r01",
@@ -324,7 +317,7 @@
     "netsh advfirewall firewall new rule name= \"Inventariado\" dir=in action=allow protocol=TCP localport=4433"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La sintaxis para añadir una regla es **netsh advfirewall firewall add rule** name=… dir=in action=**allow** protocol=TCP localport=4433. Los verbos son **add**, delete, set y show (no «create» ni «new»), y los valores válidos de action son **allow, block y bypass** («permit» no es válido). En PowerShell: New-NetFirewallRule.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -340,7 +333,7 @@
     "nc -v 10.0.4.22:422"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**nc -v 10.0.4.22 422** usa **netcat** para intentar una conexión TCP al **host y puerto** indicados, en ese orden; con **-v** (verbose) informa de si la conexión tiene éxito. Con -z solo se comprueba el puerto, sin enviar datos. Las demás formas no son válidas: netcat no usa las opciones «-ip» y «-port», no admite el formato host:puerto y el puerto va detrás del host.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -356,14 +349,14 @@
     "La clave de sesión."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**BitLocker** es el cifrado de disco de Windows. Para acceder a un volumen cifrado (por ejemplo, para restaurarlo o recuperar sus datos) se necesita la **clave de recuperación de BitLocker**, de 48 dígitos, o la contraseña o clave de desbloqueo. Un certificado digital, una clave privada genérica o una clave de sesión no sirven para desbloquear el volumen. Buena práctica: guardar la clave de recuperación en Active Directory, Entra ID o en un lugar seguro.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s2r04",
-   "tema": 11,
+   "tema": 25,
    "enunciado": "Desde su unidad también se está valorando el uso de RAID 10, ¿cuántos discos duros son necesarios para crearlo?",
    "opciones": [
     "2 discos duros.",
@@ -372,10 +365,9 @@
     "Es indiferente."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**RAID 10 (1+0)** es una **división en bandas (RAID 0) de espejos (RAID 1)**, así que necesita **al menos 4 discos**, y siempre en número par. Con 2 discos solo se puede montar un RAID 1 o un RAID 0, y con 3 no se pueden formar dos parejas espejo. Su capacidad útil es la mitad del total.",
    "reserva": true,
-   "contexto": "s2",
-   "tema_auto": true
+   "contexto": "s2"
   },
   {
    "id": "s2r05",
@@ -388,7 +380,7 @@
     "22"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**SSH** usa por defecto el **puerto 22/TCP**. **21** es FTP (control) y **69** es TFTP (sobre UDP); el 63 no corresponde a ningún servicio habitual. Otros puertos para recordar: 23 Telnet, 25 SMTP, 53 DNS, 80 HTTP, 443 HTTPS, 3389 RDP.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true

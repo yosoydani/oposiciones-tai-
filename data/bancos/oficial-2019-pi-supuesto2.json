@@ -24,13 +24,13 @@
     "23"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La máscara **255.255.255.128** tiene en binario 8 + 8 + 8 + 1 bits a uno (128 = 10000000), es decir, **25 bits: /25**. Con /24 la máscara sería 255.255.255.0, con /26 255.255.255.192 y con /23 255.255.254.0. Esa red 10.0.4.0/25 ofrece 2^7 − 2 = 126 hosts, de sobra para las 60 personas de la DCM.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s202",
-   "tema": null,
+   "tema": 30,
    "enunciado": "También le preguntan a qué Clase pertenece la red asignada (10.0.4.0).",
    "opciones": [
     "Clase A.",
@@ -39,9 +39,8 @@
     "Clase D."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "Por el primer octeto, **10 está en el rango 1-126**, así que la red es de **clase A** (además, 10.0.0.0/8 es un bloque **privado** según la RFC 1918). La clase B va de 128 a 191, la C de 192 a 223 y la D (224-239) es multicast. Hoy se trabaja sin clases (CIDR), y por eso se le asigna una /25, pero la clasificación por clases se sigue preguntando.",
+   "contexto": "s2"
   },
   {
    "id": "s203",
@@ -54,7 +53,7 @@
     "256"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Una red **/21** deja 32 − 21 = **11 bits de host**: 2^11 = 2048 direcciones, menos la de red y la de broadcast, **2046 hosts** (de 10.0.0.1 a 10.0.7.254, comprobado con Python). 1024 sería /22 sin restar las dos reservadas, y 256 y 32 no corresponden a /21. Fórmula: hosts = 2^(32 − prefijo) − 2.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -69,13 +68,13 @@
     "mv /etc/redhat-release"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En RHEL la versión está en el fichero **`/etc/redhat-release`**, y se muestra con **`cat /etc/redhat-release`** (por ejemplo «Red Hat Enterprise Linux release 8.x»). **`rm -f`** lo **borraría**, **`mv`** sin destino daría error, y `/etc/redhat-version` no existe. También sirven `cat /etc/os-release` o `hostnamectl`.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s205",
-   "tema": 14,
+   "tema": 25,
    "enunciado": "Una pieza crucial en cualquier sistema informático son las BBDD. Le han informado que tanto la DCM como la CHT utilizan Oracle, pero no le han dicho la versión. ¿Qué consulta podría hacer en la base de datos para conocer esta información?",
    "opciones": [
     "SELECT * FROM V$VERSION",
@@ -84,9 +83,8 @@
     "SELECT * FROM V$VERSIONTABLE"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "En Oracle, la vista dinámica de rendimiento **`V$VERSION`** muestra la **versión de la base de datos** y de sus componentes (`SELECT * FROM V$VERSION`; también `SELECT banner FROM v$version`). `V$VERSIONADO`, `V$VERSIONDB` y `V$VERSIONTABLE` no existen. Otras fuentes: `V$INSTANCE` (columna VERSION) o `PRODUCT_COMPONENT_VERSION`.",
+   "contexto": "s2"
   },
   {
    "id": "s206",
@@ -99,13 +97,13 @@
     "Vaulting"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La **deduplicación** detecta bloques o ficheros repetidos y **guarda una sola copia**, sustituyendo el resto por referencias. Así **reduce el espacio y el coste** del almacenamiento de las copias. **RTO** (tiempo máximo para recuperar el servicio) y **RPO** (pérdida máxima de datos admisible, medida en tiempo) son **objetivos** de continuidad, no técnicas, y el **vaulting** consiste en llevar las copias a una ubicación externa segura.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s207",
-   "tema": 11,
+   "tema": 25,
    "enunciado": "Desde su unidad también se está valorando el uso de RAID 10, ¿cuántos discos duros son necesarios para crearlo?",
    "opciones": [
     "2 discos duros.",
@@ -114,9 +112,8 @@
     "Es indiferente."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**RAID 10 (1+0)** es un **striping (RAID 0) de espejos (RAID 1)**: necesita al menos dos parejas de discos en espejo, es decir, **un mínimo de 4 discos**, y siempre un número par. Con 2 discos solo se puede hacer RAID 1 o RAID 0, y con 3 RAID 5. Truco: «1 + 0» son dos espejos de dos discos repartidos en bandas, 2 × 2 = 4.",
+   "contexto": "s2"
   },
   {
    "id": "s208",
@@ -129,7 +126,7 @@
     "LVM"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**LVM (Logical Volume Manager)** es el **gestor de volúmenes lógicos de Linux**: agrupa discos en grupos de volúmenes y crea volúmenes lógicos redimensionables. Virtualiza almacenamiento, pero **no es un software de virtualización de máquinas**. **VMware** (ESXi/Workstation), **VirtualBox** (hipervisor de tipo 2, de Oracle) e **Hyper-V** (hipervisor de Microsoft) sí lo son.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -144,13 +141,13 @@
     "docker systeminfo"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**`docker info`** muestra la **información global** de la instalación: número de contenedores (en ejecución, pausados, parados), imágenes, versión del servidor, *storage driver* y recursos. **`docker ps`** solo lista los contenedores en ejecución (con `-a`, todos) y **`docker inspect`** da el detalle JSON de **un objeto concreto** (contenedor, imagen, red). «docker systeminfo» no existe, aunque sí `docker system df`, que muestra el uso de disco.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s210",
-   "tema": 14,
+   "tema": 24,
    "enunciado": "En una reunión se habla del Directorio Activo. Defina en qué consiste este concepto.",
    "opciones": [
     "Es el usuario que está logado actualmente en el sistema.",
@@ -159,9 +156,8 @@
     "Es un almacén de datos que contiene información de los programas software instalados en la red por la organización."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**Active Directory** es el **servicio de directorio** de Microsoft: un **almacén de datos estructurado y jerárquico** (dominios, unidades organizativas) con información sobre los **objetos de la red** (usuarios, equipos, grupos, impresoras) para **localizarlos y administrarlos** de forma centralizada. Usa LDAP, Kerberos y DNS. No es el usuario conectado, no es de Novell (su directorio era eDirectory/NDS) y no es un inventario de software.",
+   "contexto": "s2"
   },
   {
    "id": "s211",
@@ -174,7 +170,7 @@
     "net localgroup administradores"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**`net localgroup <grupo>`** lista los miembros de un **grupo local**. En un Windows en español, el grupo se llama **«Administradores»**, de ahí `net localgroup administradores` (en inglés, «Administrators»). `net local` no es un subcomando válido y «admin» no es el nombre del grupo. Para los grupos de dominio se usa `net group`.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -189,7 +185,7 @@
     "osTicket"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**osTicket** es un sistema de **gestión de incidencias y peticiones (ticketing) de código abierto** (licencia GPL, en PHP con MySQL). **Remedy** (BMC) es una herramienta ITSM **propietaria**, **Nagios** es de **monitorización** de infraestructura, no de *ticketing*, y «Ticket2.0» no es un producto conocido. Otras alternativas libres son GLPI, OTRS (Community Edition) o Request Tracker.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -204,7 +200,7 @@
     "netsh advfirewall firewall new rule name= \"Inventariado\" dir=in action=allow protocol=TCP localport=4433"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La sintaxis correcta es **`netsh advfirewall firewall add rule`** con **`action=allow`** (los valores válidos son `allow`, `block` y `bypass`), junto con `dir=in`, `protocol=TCP` y `localport=4433`. «create rule» y «new rule» no son verbos de netsh, y **`permit`** no es un valor válido de `action`. En PowerShell, el equivalente es `New-NetFirewallRule -DisplayName \"Inventariado\" -Direction Inbound -Protocol TCP -LocalPort 4433 -Action Allow`.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -220,7 +216,7 @@
     "La clave de sesión."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Si el disco de Windows está cifrado con **BitLocker**, para acceder a sus datos o restaurarlos hace falta la **clave de recuperación de BitLocker** (48 dígitos), normalmente guardada en Active Directory, Entra ID o la cuenta Microsoft. Un **certificado digital** o una **clave privada** genérica no desbloquean el volumen, y la **clave de sesión** es temporal y propia de protocolos como TLS.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -236,7 +232,7 @@
     "22"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**SSH** escucha por defecto en el **puerto TCP 22** (también lo usan SFTP y SCP). **21** es el puerto de control de **FTP**, **69** el de **TFTP** (UDP) y el **63** no corresponde a ningún servicio habitual. Truco: 21 FTP, 22 SSH, 23 Telnet, 25 SMTP.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true

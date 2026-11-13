@@ -18,13 +18,13 @@
    "tema": 21,
    "enunciado": "¿Qué elemento HTML utilizaría para impedir que el e-mail exceda los 100 caracteres cuando el interesado lo cumplimente?",
    "opciones": [
-    "<input type=''email'' id=''email'' name=''email'' size=''100''>",
-    "<input type=''email'' id=''email'' name=''email'' max=''100''>",
-    "<input type=''email'' id=''email'' name=''email'' maxlength=''100''>",
-    "<input type=''email'' id=''email'' name=''email'' length=''100''>"
+    "<input type=\"email\" id=\"email\" name=\"email\" size=\"100\">",
+    "<input type=\"email\" id=\"email\" name=\"email\" max=\"100\">",
+    "<input type=\"email\" id=\"email\" name=\"email\" maxlength=\"100\">",
+    "<input type=\"email\" id=\"email\" name=\"email\" length=\"100\">"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El atributo **maxlength=\"100\"** limita el **número máximo de caracteres** que el usuario puede escribir en un campo de texto o email, y el navegador no le deja pasar de ahí. **size** solo fija el **ancho visible** del campo en caracteres, **max** sirve para el valor máximo de campos numéricos o de fecha (number, range, date), y **length** no es un atributo de <input>. Recuerda que esto es validación en cliente: el backend debe volver a comprobarlo.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -39,7 +39,7 @@
     "Spring Data en .NET e Hibernate en Java."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Un **ORM** (mapeo objeto-relacional) traduce clases a tablas. En **.NET** el ORM de referencia es **Entity Framework (Core)** y en **Java** lo es **Hibernate**, que además es el proveedor más usado de **JPA**. Los distractores cruzan plataformas: JPA y Spring Data son de Java, no de .NET, y Entity Framework no existe en Java (en .NET existe NHibernate, un port, pero no se llama Hibernate).",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -54,13 +54,13 @@
     "INSERT INTO CuerpoBecado (Codigo, Denominacion) VALUES ('TAI', 'Técnico Auxiliar de Informática');"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La sintaxis correcta es **INSERT INTO tabla (columnas) VALUES (valores)**, con las cadenas de texto **entre comillas simples**: ('TAI', 'Técnico Auxiliar de Informática'). Los distractores fallan en un detalle: a 'TAI le falta la comilla de cierre, sin comillas los textos se interpretarían como identificadores y daría error, e «INSERT TO» no existe.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s104",
-   "tema": null,
+   "tema": 15,
    "enunciado": "¿Qué tipo de correspondencia hay entre las tablas “SolicitudBeca” y “FicheroAdjunto”?",
    "opciones": [
     "Un registro de SolicitudBeca puede tener N registros de FicheroAdjunto.",
@@ -69,9 +69,8 @@
     "Un registro de SolicitudBeca puede tener cero o como máximo un registro de FicheroAdjunto."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "Cada solicitud de beca puede llevar **varios ficheros adjuntos**, y cada fichero pertenece a **una sola** solicitud: es una correspondencia **1:N**. Por eso la tabla FicheroAdjunto lleva la clave foránea **IdSolicitudBeca** que apunta a SolicitudBeca (como se ve en las consultas del supuesto). Una N:M necesitaría una tabla intermedia, y limitar a uno o a cero-uno los adjuntos no encaja con aportar documentación en cada trámite. Truco: la clave foránea siempre está en el lado «N».",
+   "contexto": "s1"
   },
   {
    "id": "s105",
@@ -84,7 +83,7 @@
     "Shovel."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**QualWeb** es un evaluador automático de accesibilidad web (de la Universidad de Lisboa) que analiza páginas y comprueba automáticamente las pautas **WCAG** (y las técnicas ACT), que son la base de la norma **UNE-EN 301 549** exigida por el RD 1112/2018. «Equal Automatic Checker», «AccSite» y «Shovel» no son herramientas de evaluación reconocidas con esos nombres (existe «IBM Equal Access Accessibility Checker», que no es la opción que se da). Recuerda que las pruebas automáticas no bastan: deben completarse con revisión manual.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -99,7 +98,7 @@
     "Server Side Rendering."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**Server Side Rendering (SSR)** genera el HTML de la página **en el servidor** y lo envía ya renderizado al navegador, lo que mejora el tiempo de primera carga en páginas grandes y con muchas consultas de datos. **Ajax** hace peticiones asíncronas desde el cliente (el renderizado sigue en el navegador), y **Server-Sent Events** y **WebSocket** son mecanismos de comunicación en tiempo real (unidireccional servidor→cliente y bidireccional, respectivamente), no de renderizado.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -114,7 +113,7 @@
     "Diagrama de Entidad/Relación."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **diagrama de secuencia** muestra cómo **interactúan los objetos o componentes mediante mensajes ordenados en el tiempo**, que es justo lo que pasa en este flujo: autenticar, firmar, guardar, registrar y emitir el justificante. El **diagrama de paquetes** muestra la organización en paquetes y sus dependencias, el **de objetos** una instantánea de instancias, y el **Entidad/Relación** no es un diagrama UML (es de modelado de datos). Un diagrama de actividad también serviría, pero no está entre las opciones.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -129,7 +128,7 @@
     "Apache CXF."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**Apache CXF** es un framework de servicios web para Java (SOAP con **JAX-WS** y REST con **JAX-RS**) que incluye herramientas como **wsdl2java** para generar el **cliente** a partir de un WSDL. **Apache Flink** procesa flujos de datos (*streaming*), **Xalan** es un procesador **XSLT** y **Xerces** un **parser XML**. Ninguno de esos tres genera clientes de servicios web.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -144,7 +143,7 @@
     "JAX-RS."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**JAXB** (Java Architecture for XML Binding, hoy Jakarta XML Binding) **mapea clases Java a XML y viceversa** (*marshalling*/*unmarshalling*) mediante anotaciones como @XmlRootElement. **JPA** mapea clases a **tablas relacionales**, **JAXR** es una API para acceder a **registros** de servicios (UDDI, ebXML) y **JAX-RS** sirve para crear servicios **REST**. Truco: la B de JAXB es de Binding.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -159,7 +158,7 @@
     "Mercurial."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**Mercurial** es un **sistema de control de versiones distribuido** (como Git), así que no analiza la calidad del código. Las otras sí: **SonarQube** hace análisis estático continuo (bugs, vulnerabilidades, *code smells*, cobertura), un **linter de JavaScript** (ESLint, JSHint) detecta errores y malas prácticas de estilo, y **PMD** es un analizador estático (principalmente para Java) que encuentra código duplicado, variables sin usar y otros defectos.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -174,7 +173,7 @@
     "OffsetTime."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**java.time.LocalDateTime** (desde Java 8) representa **fecha y hora a la vez**, sin zona horaria, por ejemplo 2024-07-01T14:00. **LocalDate** guarda solo la **fecha**, **LocalTime** solo la **hora** y **OffsetTime** una hora con desfase respecto a UTC, pero sin fecha. Si el plazo debe tener en cuenta la zona horaria, existen ZonedDateTime y OffsetDateTime.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -189,7 +188,7 @@
     "OpenAPI/Swagger."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**REST** es un **estilo de arquitectura** para diseñar servicios web, no un formato para documentarlos. Sí sirven para documentar: **WSDL** (describe servicios **SOAP** en XML), **OpenAPI/Swagger** (estándar de facto para describir APIs REST en JSON/YAML) y **RAML** (RESTful API Modeling Language, basado en YAML).",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -204,7 +203,7 @@
     "CREATE TABLE Subsanacion AS (IdSubsanacion bigint, IdSolicitudBeca bigint, TextoFundamento varchar(2000));"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La sintaxis estándar es **CREATE TABLE nombre (columna tipo, …)**: aquí, dos columnas **bigint** y una **varchar(2000)**. «CREATE Subsanacion» omite la palabra **TABLE**, «CREATE NEW TABLE» no existe, y **CREATE TABLE … AS** se usa para crear una tabla a partir del resultado de una **consulta** (CREATE TABLE t AS SELECT …), no con una lista de columnas.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -219,7 +218,7 @@
     "Repeatable read."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**REPEATABLE READ** evita las **lecturas sucias** y las **no repetibles**, pero en el estándar SQL todavía permite las **lecturas fantasma** (filas nuevas que aparecen al repetir una consulta por rango). **READ UNCOMMITTED** permite las tres anomalías, **READ COMMITTED** solo evita las sucias y **SERIALIZABLE** evita las tres. Truco: cada nivel, de menos a más estricto, elimina una anomalía más: sucia → no repetible → fantasma.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -234,7 +233,7 @@
     "XML-Encryption."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En servicios **SOAP**, la firma (y el cifrado) de los mensajes se hace con el estándar **WS-Security** de OASIS, que añade a la cabecera SOAP firmas **XML Signature**, cifrado y *tokens* (por ejemplo, de certificado X.509). **SAML** sirve para intercambiar aserciones de **identidad** y autenticación, **JWT** es un formato de *token* típico de APIs REST, y **XML-Encryption** solo **cifra**, no firma. GEISER (Gestión Integrada de Servicios de Registro) expone servicios SOAP.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -249,13 +248,13 @@
     "dotnet install iText."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En la CLI de .NET los paquetes NuGet se instalan en un proyecto con **dotnet add package <nombre>**, que además añade la referencia al fichero .csproj. «dotnet install package», «dotnet add» sin «package» y «dotnet install» no son comandos válidos de la CLI de .NET. Truco: en el gestor de NuGet de Visual Studio es Install-Package, pero en la CLI es add package.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s117",
-   "tema": 14,
+   "tema": 15,
    "enunciado": "Según “Técnicas y Practicas” de Métrica v3, si se quisiera optimizar el modelo físico de datos para reducir o simplificar el número de accesos a la base de datos, ¿cuál de las siguientes acciones se aplicaría?",
    "opciones": [
     "Combinar entidades si los accesos son frecuentes en transacciones distintas.",
@@ -264,9 +263,8 @@
     "Normalizar las tablas en Forma Normal de Boyce-Codd (FNBC)."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "Según «Técnicas y Prácticas» de Métrica v3, para **optimizar el modelo físico** y reducir el número de accesos se puede **desnormalizar**, es decir, **introducir elementos redundantes**, así como dividir entidades o **combinar entidades si se accede a ellas frecuentemente dentro de la misma transacción**. Combinarlas cuando se usan en transacciones **distintas** no ahorra accesos, eliminar entidades no es una técnica de optimización, y normalizar a **FNBC** suele aumentar el número de tablas y de *joins*, al revés de lo que se busca.",
+   "contexto": "s1"
   },
   {
    "id": "s118",
@@ -279,7 +277,7 @@
     "En la Sprint Review."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La **Sprint Retrospective** se celebra al final de cada sprint para que el equipo **inspeccione cómo ha trabajado** (personas, procesos, herramientas) y acuerde **mejoras** para el siguiente: es el evento de la **mejora continua**. La **Daily Scrum** (15 minutos) revisa el progreso hacia el objetivo del sprint, la **Sprint Planning** planifica el trabajo del sprint y la **Sprint Review** inspecciona el **incremento del producto** con los interesados. Truco: Review = el producto; Retrospective = el equipo.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -294,7 +292,7 @@
     "Servicio, Proveedor de servicios, Consumidor de servicios y Registro de servicios."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Los componentes principales de una **SOA** son el **servicio**, el **proveedor** (lo publica), el **consumidor** (lo usa) y el **registro de servicios** (por ejemplo UDDI), donde el proveedor publica la descripción del servicio y el consumidor la busca. Es el triángulo clásico «publicar, descubrir, enlazar». La orquestación (por ejemplo con BPEL) es una forma de componer servicios, no uno de los elementos básicos, y «depurador» y «comparador» no forman parte de SOA.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -309,7 +307,7 @@
     "int ?? Telefono"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En C# un tipo de valor se hace **anulable (nullable)** añadiendo **?** al tipo: **int? Telefono** equivale a Nullable<int> y admite null. «int|null» es sintaxis de uniones de tipos de otros lenguajes (como PHP o TypeScript), «int:null» no existe, y **??** es el **operador de fusión de null** (x ?? 0 devuelve 0 si x es null), no un modificador de tipo.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -324,14 +322,14 @@
     "1-0-0."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La especificidad CSS se cuenta como (**IDs**, **clases, atributos y pseudoclases**, **elementos y pseudoelementos**). En **input:required** hay **0 IDs**, **1 pseudoclase** (:required) y **1 elemento** (input), así que su especificidad es **0-1-1**. Los demás valores supondrían que hay un ID (1-x-x) o que no cuenta la pseudoclase (1-0-0, 1-0-1).",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s1r02",
-   "tema": 15,
+   "tema": 22,
    "enunciado": "Se quiere facilitar el uso de herramientas de asistencia en la página. ¿Qué atributo utilizaría para indicar que un elemento se actualizará?",
    "opciones": [
     "aria-live.",
@@ -340,10 +338,9 @@
     "aria-valuenow."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**aria-live** marca una **región viva**: avisa a los lectores de pantalla de que el contenido de ese elemento **se actualizará dinámicamente**, y con los valores polite o assertive indica con qué urgencia anunciar los cambios. **aria-checked** indica el estado de una casilla (el distractor está mal escrito), **aria-flowto** indica el siguiente elemento en un orden de lectura alternativo y **aria-valuenow** da el valor actual de un control de rango (barra de progreso, deslizador).",
    "reserva": true,
-   "contexto": "s1",
-   "tema_auto": true
+   "contexto": "s1"
   },
   {
    "id": "s1r03",
@@ -356,7 +353,7 @@
     "SELECT * FROM FicheroAdjunto WHERE Denominacion NOT LIKE 'pdf' AND IdSolicitudBeca = (SELECT IdSolicitudBeca FROM SolicitudBeca WHERE AñoConvocatoria = 2024 AND IdInteresado = (SELECT IdInteresado FROM Interesado WHERE DocumentoIdentidad = '00000000T'));"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Hay que filtrar con **NOT LIKE '%.pdf'** (el comodín **%** representa cualquier cadena antes de «.pdf») y encadenar las subconsultas hasta **Interesado WHERE DocumentoIdentidad = '00000000T'**. Los distractores fallan así: LIKE sin NOT devolvería justo los PDF; la subconsulta sin WHERE devolvería todos los interesados (y fallaría al comparar con =); otra subconsulta no tiene FROM; y NOT LIKE 'pdf' sin comodín solo excluiría un nombre exactamente igual a «pdf». La opción correcta solo omite el punto y coma final, que no cambia la consulta.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
@@ -372,7 +369,7 @@
     "CORS."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**CORS** (Cross-Origin Resource Sharing) es el mecanismo por el que el **servidor** indica, con cabeceras como **Access-Control-Allow-Origin**, qué **orígenes** pueden hacer peticiones de origen cruzado desde scripts (fetch, XMLHttpRequest): bastaría con permitir solo el origen del frontend. **HSTS** obliga al navegador a usar siempre **HTTPS**, **CSP** (Content Security Policy) limita desde dónde puede **cargar recursos la propia página** y **TLS** cifra la conexión.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
@@ -388,7 +385,7 @@
     "CITATION."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **README.md** es el fichero de presentación del repositorio: explica el **propósito del proyecto**, cómo **instalarlo y arrancarlo localmente**, cómo contribuir, etc., y GitHub lo muestra en la portada. **CODEOWNERS** define los **responsables** de revisar cada parte del código, **LICENSE** contiene la **licencia** y **CITATION** (CITATION.cff) indica **cómo citar** el software.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true

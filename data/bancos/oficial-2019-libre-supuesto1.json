@@ -15,7 +15,7 @@
  "preguntas": [
   {
    "id": "s101",
-   "tema": null,
+   "tema": 21,
    "enunciado": "Se necesita presentar una estadística utilizando HTML5 mediante una tabla en la que una de sus columnas contendrá la descripción de cada Proceso Selectivo. Suponiendo que a dicha columna la denominamos \"Proceso\", ¿qué etiqueta deberá utilizar para definir la celda de encabezado de la tabla para dicha columna, con un formato de letra diferenciado?",
    "opciones": [
     "<th>Proceso</th>",
@@ -24,13 +24,12 @@
     "<tableh>Proceso</tableh>"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "En HTML la celda de **encabezado** de una tabla se escribe con **<th>** (table header), que el navegador muestra por defecto en **negrita y centrada**; las celdas normales usan **<td>**. Las etiquetas <tableheader>, <theader> y <tableh> no existen (no confundir con **<thead>**, que agrupa la fila o filas de cabecera).",
+   "contexto": "s1"
   },
   {
    "id": "s102",
-   "tema": 16,
+   "tema": 21,
    "enunciado": "Le indican que debe presentar también una lista de opositores con las notas correspondientes a los dos primeros ejercicios. Las notas se representarán como una lista anidada para cada opositor, debiendo ser el resultado a obtener: • Opositor ◦ Nota 1 ◦ Nota 2 ¿Cuál es el código HTML5 correcto si presentamos un solo opositor?",
    "opciones": [
     "<ul><li>Opositor<ul><li>Nota 1</li><li>Nota 2</li></ul></li></ul>",
@@ -39,13 +38,12 @@
     "<ul><li>Opositor<li>Nota 1</li><li>Nota 2</li></li></ul>"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "Para anidar una lista, la lista interior **<ul>** debe ir **dentro del <li>** del opositor, antes de cerrarlo: <li>Opositor<ul>…</ul></li>. Si se ponen dos <ul> seguidas se obtienen dos listas independientes, no anidadas; <li1> y <li2> no existen; y un <li> no puede contener directamente otro <li> sin una <ul> u <ol> de por medio.",
+   "contexto": "s1"
   },
   {
    "id": "s103",
-   "tema": 16,
+   "tema": 21,
    "enunciado": "En el formulario web de inscripción se le pide forzar a la introducción del nombre del opositor como campo obligatorio. Para desarrollar esta petición, de entre las siguientes opciones de código, ¿cuál debería utilizar para incorporarlo en el fragmento de código marcado como [---------------------------------------] ? <form> <label for=\"username\">Nombre de Opositor:</label> [---------------------------------------] <input type=\"submit\" value=\"Confirmar\"/> </form>",
    "opciones": [
     "<input type=\"text\" name=\"username\" required/>",
@@ -54,13 +52,12 @@
     "<input type=\"text\" name=\"username\" compulsory/>"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "El atributo booleano **required** de HTML5 hace que un campo de formulario sea **obligatorio**: el navegador no envía el formulario si el campo está vacío. «enforced», «mandatory» y «compulsory» no son atributos HTML. Ojo: es solo una validación en el cliente, así que el servidor debe volver a validar el dato.",
+   "contexto": "s1"
   },
   {
    "id": "s104",
-   "tema": 16,
+   "tema": 21,
    "enunciado": "En la página web a la que accederán los aspirantes, se quiere aplicar el color verde a todos los elementos que tengan etiqueta <a> que sean hijos de un elemento con etiqueta <li> ¿Cuál es el código CSS adecuado?",
    "opciones": [
     "li.a {color: green;}",
@@ -69,13 +66,12 @@
     "li_a {color: green;}"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "El combinador **>** (hijo directo) selecciona los <a> que son **hijos inmediatos** de un <li>: **li > a**. **li.a** selecciona elementos li con la **clase** «a», **li#a** un li con **id** «a», y li_a sería un selector de etiqueta inexistente. Si se quisieran todos los descendientes, no solo los hijos, se usaría el espacio: li a.",
+   "contexto": "s1"
   },
   {
    "id": "s105",
-   "tema": 16,
+   "tema": 21,
    "enunciado": "Un compañero le consulta la forma de aplicar el modelo de Diseño de Caja Flexible (o Flexbox) a un elemento div con id=\"principal\". De entre los siguientes, ¿cuál es el código CSS correcto que debería proponer?",
    "opciones": [
     "div#principal {display: flex;}",
@@ -84,9 +80,8 @@
     "div#principal {display:flexible;}"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "Para convertir un elemento en contenedor Flexbox se usa **display: flex** (o **inline-flex**), y sus hijos pasan a ser elementos flexibles. **display: flexbox** era la sintaxis de un borrador antiguo y no es válida hoy, y «flex-container» y «flexible» no existen. El selector div#principal apunta al div con ese id.",
+   "contexto": "s1"
   },
   {
    "id": "s106",
@@ -99,13 +94,13 @@
     "<Opositor>Winston Churchill<Nota1>95</><Nota2>65</></>"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Un XML está **bien formado** si tiene un único elemento raíz, todas las etiquetas cerradas, bien anidadas y con las mayúsculas exactas. El de **<Nota1/> y <Nota2/>** lo cumple: son elementos vacíos autocerrados y el texto queda dentro de <Opositor>. Los otros fallan: XML **distingue mayúsculas y minúsculas** (Nota1 no cierra con nota1), las etiquetas se cruzan (</Opositor> antes de </Nota2>) o se usan cierres vacíos «</>», que no existen. Que el contenido quede mal estructurado no importa para estar bien formado.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s107",
-   "tema": null,
+   "tema": 12,
    "enunciado": "En su Subdirección van a usar JSON para realizar intercambio de datos, y le preguntan, de entre los siguientes, cuál sería un fichero JSON válido.",
    "opciones": [
     "{\"nombre\": \"Juana\", \"apellido\": \"Ruiz\"}",
@@ -114,9 +109,8 @@
     "{nombre: \"Juana\"; apellido: \"Ruiz\"}"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "En **JSON** las claves deben ser **cadenas entre comillas dobles**, y los pares se separan con **comas**: {\"nombre\": \"Juana\", \"apellido\": \"Ruiz\"}. Las comillas simples, las claves sin comillas (válidas en un objeto JavaScript, pero no en JSON) y el punto y coma como separador hacen que el texto no sea JSON válido (RFC 8259).",
+   "contexto": "s1"
   },
   {
    "id": "s108",
@@ -129,7 +123,7 @@
     "0"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El bucle suma a j los valores impares menores que 7: i = 1, 3 y 5, así que **j = 1 + 3 + 5 = 9**. Cuando i llega a 7 la condición i < 7 es falsa y la función devuelve 9. Las demás cifras salen de cortar el bucle antes o de no sumar. (En JavaScript la palabra clave se escribe en minúscula: function).",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -144,7 +138,7 @@
     "notaSegundoEjercicio = opositor(notas(2))"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "opositor es un **diccionario**: con **opositor['notas']** se obtiene la lista [27, 36, 12], y como las listas empiezan en el **índice 0**, el segundo ejercicio es **[1]**. Python no permite acceder a las claves de un diccionario con punto (opositor.notas), y las sintaxis .Key, .Value o con paréntesis no existen. Error típico: usar [2], que daría 12, la tercera nota.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -159,7 +153,7 @@
     "Openpyxl"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Keras** es una biblioteca de Python de alto nivel para **redes neuronales y deep learning**, integrada en TensorFlow. **Yum** es el gestor de paquetes de Red Hat/CentOS, **Mahotas** es una biblioteca de visión artificial y procesamiento de imágenes, y **openpyxl** sirve para leer y escribir ficheros Excel. Otras bibliotecas de ML en Python: scikit-learn, TensorFlow y PyTorch.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -174,13 +168,13 @@
     "StringCreator"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En Java los objetos String son **inmutables**, así que concatenar con + dentro de un bucle crea un objeto nuevo en cada vuelta. **StringBuilder** es una secuencia de caracteres **mutable** y con append() evita ese coste. Si varios hilos lo comparten se usa **StringBuffer**, que está sincronizado. StringConcat, StringConstruct y StringCreator no existen en java.lang.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s112",
-   "tema": 19,
+   "tema": 18,
    "enunciado": "¿Cómo debe definir el equipo de desarrollo en Java una clase llamada Ejercicio si quiere impedir que se pueda heredar de la misma?",
    "opciones": [
     "closed class Ejercicio",
@@ -189,13 +183,12 @@
     "immutable class Ejercicio"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "Una clase declarada **final** no se puede heredar (por ejemplo, java.lang.String es final). «closed» e «immutable» no son modificadores de Java, y una clase de primer nivel no puede ser private (solo puede serlo una clase anidada). Recuerda: final en una clase impide heredar, en un método impide sobrescribirlo y en una variable impide reasignarla.",
+   "contexto": "s1"
   },
   {
    "id": "s113",
-   "tema": 16,
+   "tema": 19,
    "enunciado": "En C# debe crear un objeto de tipo SqlConnection y que se llame al método Dispose, para así liberar recursos al final del bloque de código que aparece entre llaves. ¿Qué instrucción debemos utilizar?",
    "opciones": [
     "using (SqlConnection conn = new SqlConnection(connString)) {conn.Open();}",
@@ -204,9 +197,8 @@
     "internal (SqlConnection conn = new SqlConnection(connString)) {conn.Open();}"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "La instrucción **using** de C# garantiza que se llame a **Dispose()** del objeto (que debe implementar **IDisposable**) al salir del bloque, aunque se produzca una excepción. Es equivalente a un try/finally. «scope», «dispose» e «internal» no sirven para esto; internal es un modificador de acceso.",
+   "contexto": "s1"
   },
   {
    "id": "s114",
@@ -219,9 +211,8 @@
     "int arrayEnteros[] = new {1, 2, 3};"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "En C# los corchetes van **detrás del tipo**: int[] arrayEnteros. **new[] {1, 2, 3}** crea un array con el tipo deducido de los elementos. También valen new int[] {1, 2, 3} o simplemente {1, 2, 3}. La sintaxis int arrayEnteros[] es de C/Java, no de C#, y new {1, 2, 3} sin corchetes intentaría crear un tipo anónimo y da error.",
+   "contexto": "s1"
   },
   {
    "id": "s115",
@@ -234,13 +225,13 @@
     "No está en ninguna forma normal."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La tabla **no está ni en 1FN**, porque el campo **Telefonos** contiene **varios valores** (916666666;917777777) y la primera forma normal exige **valores atómicos**, sin grupos repetitivos. Como cada forma normal exige cumplir las anteriores, tampoco puede estar en 2FN ni en 3FN. Para corregirlo se lleva el teléfono a otra tabla relacionada por el NIF.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s116",
-   "tema": 14,
+   "tema": 17,
    "enunciado": "En la base de datos, el campo \"IdFormaAcceso\" de la tabla \"Proceso\" es de tipo char(1) y puede tomar los valores \"L\" (Ingreso Libre) y \"P\" (Promocion Interna). ¿Qué instrucción deberá utilizar para obtener un listado de todos los IdProceso de forma que aparezca el nombre descriptivo de la correspondiente Forma de Acceso?",
    "opciones": [
     "SELECT IdProceso, IF IdFormaAcceso = 'L' THEN 'Ingreso Libre' ELSE 'Promocion Interna' ENDIF AS FormaAcceso FROM Proceso",
@@ -249,9 +240,8 @@
     "SELECT IdProceso, IIF(IdFormaAcceso, 'L' = 'Ingreso Libre', 'P' = 'Promocion Interna') AS FormaAcceso FROM Proceso"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "La expresión condicional estándar de SQL es **CASE**: CASE IdFormaAcceso WHEN 'L' THEN 'Ingreso Libre' WHEN 'P' THEN 'Promocion Interna' END, a la que se da un nombre con **AS**. IF…THEN…ENDIF es de lenguajes procedimentales (como PL/SQL), no se usa dentro de un SELECT; **SWITCH** e **IIF** son funciones propias de Access o SQL Server, no de ANSI SQL, y además aquí están mal escritas.",
+   "contexto": "s1"
   },
   {
    "id": "s117",
@@ -264,7 +254,7 @@
     "SELECT IdOpositor, COUNT(IdSolicitud) FROM Solicitud GROUP BY IdOpositor HAVING COUNT(IdSolicitud) > 1"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Para filtrar **grupos** según una función de agregado se usa **HAVING** después de GROUP BY: GROUP BY IdOpositor HAVING COUNT(IdSolicitud) > 1. WHERE filtra **filas antes de agrupar** y no admite agregados como COUNT, tampoco puede ir después de GROUP BY, y en la mayoría de gestores no se puede usar en el filtro un alias definido en el SELECT. Orden de las cláusulas: SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -279,7 +269,7 @@
     "UPDATE SET Duracion *= 1.10 FROM Ejercicio"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La sintaxis es **UPDATE tabla SET columna = expresión**; sin WHERE afecta a **todas las filas**, así que **UPDATE Ejercicio SET Duracion = Duracion * 1.1** sube un 10 %. Las otras opciones fallan porque ponen la columna en lugar de la tabla, usan «UPDATE TABLE» o «10%», o el operador *= y la cláusula FROM, que no son ANSI SQL.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -294,7 +284,7 @@
     "SELECT DNI(3*) FROM Opositor"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Para buscar por patrón se usa **LIKE**, y el comodín **%** representa cualquier secuencia de caracteres, así que **LIKE '3%'** encuentra los valores que empiezan por 3 (el comodín **_** equivale a un solo carácter). El asterisco no es un comodín en SQL (= 3* es un error), **IN** compara con valores exactos, no con patrones, y DNI(3*) no es una sintaxis válida.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -309,13 +299,13 @@
     "git log"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**git log** muestra el **historial de commits** (hash, autor, fecha y mensaje); git log --oneline lo resume en una línea por commit. **git commit** crea un commit nuevo, **git fetch** descarga los cambios del remoto sin integrarlos y **git status** muestra el estado del directorio de trabajo y del área de preparación.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s1r01",
-   "tema": 16,
+   "tema": 21,
    "enunciado": "Dentro del código de la página web a la que acceden los opositores, se encuentra el siguiente código HTML: <html><body><h1 id=\"titulo\">Primer ejercicio TAI</h1></body></html> ¿Cuál es el código javascript para obtener la cadena \"Primer ejercicio TAI\"?",
    "opciones": [
     "var titulo = document.getElementById(\"titulo\").firstChild.nodeValue;",
@@ -324,14 +314,13 @@
     "var titulo = document.children[0].getValue();"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**document.getElementById(\"titulo\")** devuelve el <h1>, su **firstChild** es el nodo de texto y **nodeValue** devuelve la cadena «Primer ejercicio TAI». También valdrían .textContent o .innerText. Las demás fallan porque document.titulo no apunta al elemento, getElement() no existe y JavaScript **distingue mayúsculas** (es innerHTML, no InnerHTML), y getValue() no existe en el DOM.",
    "reserva": true,
-   "contexto": "s1",
-   "tema_auto": true
+   "contexto": "s1"
   },
   {
    "id": "s1r02",
-   "tema": 16,
+   "tema": 23,
    "enunciado": "El equipo de proyecto está estudiando varios framework para valorar su utilización. ¿Cuál es el propósito principal del framework de javascript Jest?",
    "opciones": [
     "Testeado de código.",
@@ -340,14 +329,13 @@
     "Funciones matemáticas y tratamiento de cadenas."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Jest** es un framework de **pruebas (testing)** de JavaScript creado por Facebook (Meta), muy usado con React y Node.js; incluye aserciones, mocks e informes de cobertura. No es una biblioteca de machine learning (como TensorFlow.js), de animación (como GSAP) ni de funciones matemáticas o de cadenas (como Lodash).",
    "reserva": true,
-   "contexto": "s1",
-   "tema_auto": true
+   "contexto": "s1"
   },
   {
    "id": "s1r03",
-   "tema": 16,
+   "tema": 21,
    "enunciado": "Entre los lenguajes contemplados para el nuevo sistema de información se encuentra Python. De entre los siguientes, ¿cuál es un framework para desarrollo web en Python?",
    "opciones": [
     "Django",
@@ -356,14 +344,13 @@
     "Numpy"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Django** es un framework de **desarrollo web** en Python, que sigue el patrón MTV (Modelo-Plantilla-Vista) e incluye ORM y panel de administración; otro conocido es **Flask**. **Keras** es una biblioteca de deep learning, **pip** es el gestor de paquetes de Python y **NumPy** sirve para cálculo numérico con arrays.",
    "reserva": true,
-   "contexto": "s1",
-   "tema_auto": true
+   "contexto": "s1"
   },
   {
    "id": "s1r04",
-   "tema": 16,
+   "tema": 21,
    "enunciado": "Se ha realizado un vídeo explicativo para los opositores y se ha publicado en una página web. ¿Qué mostrará el siguiente fragmento de código en un navegador que soporte HTML5?: <video width=\"320\" height=\"240\" controls><source src=\"movie.mp4\" type=\"video/mp4\"><source src=\"movie.ogg\" type=\"video/ogg\">No soportado</video>",
    "opciones": [
     "Se mostrarán los dos vídeos \"movie.mp4\" y \"movie.ogg\".",
@@ -372,14 +359,13 @@
     "No se mostrará nada porque el código no está bien formado."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En la etiqueta <video> con varios **<source>**, el navegador reproduce **el primer formato que soporte**, en orden, y solo uno. Si soporta MP4, muestra movie.mp4. El texto «No soportado» solo aparece en navegadores que no reconocen <video>, y el código está bien formado. El atributo controls muestra los botones de reproducción.",
    "reserva": true,
-   "contexto": "s1",
-   "tema_auto": true
+   "contexto": "s1"
   },
   {
    "id": "s1r05",
-   "tema": 14,
+   "tema": 22,
    "enunciado": "Para intentar obtener información de la base de datos de aspirantes, un usuario malintencionado introduce la siguiente cadena en el campo \"Número de opositor\" de un formulario incluido en la página web de inscripciones al proceso: 100 OR 1=1 ¿Qué técnica está utilizando?",
    "opciones": [
     "Denial of Service.",
@@ -388,10 +374,9 @@
     "SQL Injection."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Introducir **100 OR 1=1** en un campo es un ataque de **inyección SQL**: si la aplicación concatena la entrada en la consulta (…WHERE numero = 100 OR 1=1), la condición siempre es verdadera y devuelve **todos los registros**. Se evita con **consultas parametrizadas** (PreparedStatement) y validando la entrada. Una denegación de servicio busca dejar el servicio sin disponibilidad, el phishing engaña al usuario para robarle datos y un ataque de malware usa software malicioso.",
    "reserva": true,
-   "contexto": "s1",
-   "tema_auto": true
+   "contexto": "s1"
   }
  ]
 }

@@ -24,7 +24,7 @@
     "ifconifg --clean dnscache"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En Windows la caché de resolución DNS se vacía con **`ipconfig /flushdns`**, que también funciona en PowerShell. El cmdlet propio de PowerShell es `Clear-DnsClientCache`. «/dnsflush» invierte el parámetro, e «ifconifg» está mal escrito; además, **ifconfig** es de Unix y no tiene opciones de caché DNS. Relacionado: `ipconfig /displaydns` muestra el contenido de esa caché.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -39,7 +39,7 @@
     "infouser Infocentro"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**`net user <nombre>`** muestra la información de una cuenta local: nombre completo, último inicio de sesión, caducidad de la contraseña, grupos, etc. Funciona en CMD y en PowerShell, y en PowerShell la alternativa nativa es `Get-LocalUser`. «netuser», «info user» e «infouser» no son comandos de Windows.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -54,7 +54,7 @@
     "Es un método por el que se asigna todo el espacio virtualizado disponible y se va a reduciendo (shrinking) a medida que el cliente lo descarta."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **Thin Provisioning** es un método de **virtualización del almacenamiento** que presenta al cliente un volumen del tamaño solicitado pero **solo asigna espacio físico a medida que se escriben datos**, bajo demanda. Así se aprovecha mejor la capacidad, aunque hay que vigilar la **sobresuscripción**. Lo contrario es el **thick provisioning**, que reserva todo el espacio de inicio. No tiene que ver con clientes ligeros ni con añadir discos en caliente.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -69,7 +69,7 @@
     "Nagstamon"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Check_MK** (hoy **Checkmk**) es una herramienta de **monitorización de sistemas y redes** que nació como extensión de Nagios, y se instala en un servidor Linux. **Redis** (mal escrito en la opción) es una base de datos clave-valor en memoria, y **Jenkins** un servidor de CI/CD. **Nagstamon** es solo un **cliente de escritorio** que muestra el estado de Nagios/Checkmk, no un sistema de monitorización.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -84,7 +84,7 @@
     "255.255.255.190"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Para obtener **4 subredes** a partir de una /24 hacen falta **2 bits** (2² = 4), así que el prefijo pasa a **/26**, es decir, **255.255.255.192** (128 + 64 = 192 en el último octeto). Cada subred tiene 64 direcciones y 62 hosts útiles. Las demás máscaras (.194, .196, .190) **no son válidas**: los bits a 1 de una máscara tienen que ser contiguos, y en el último octeto solo valen 0, 128, 192, 224, 240, 248, 252, 254 y 255.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -99,7 +99,7 @@
     "ip flush"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**`arp -d`** borra entradas de la **caché ARP** (la tabla de correspondencia IP-MAC). En Linux hay que indicar la IP (`arp -d <ip>`), y en Windows se puede usar `arp -d *` para borrarlas todas. En Linux moderno el equivalente es **`ip neigh flush`**. «ip delete cache», «ip flush» e «iptables -d mac» no son comandos válidos para esto; iptables es el cortafuegos.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -114,7 +114,7 @@
     "10.20.30.64 y 10.20.30.127"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En la subred **10.20.30.0/26** (bloques de 64 direcciones), la **dirección de red** es la primera, **10.20.30.0**, y la de **broadcast** la última, **10.20.30.63**. Los hosts útiles van de .1 a .62, que es lo que da la opción que confunde rango de hosts con red y broadcast. 10.20.30.64-127 es la **segunda** subred, y .0-.255 es la /24 completa.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -129,7 +129,7 @@
     "SQUID"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**Squid** es el **proxy-caché** de software libre por excelencia: almacena contenido web para acelerar el acceso y ahorrar ancho de banda, y gestiona HTTP y HTTPS (mediante CONNECT o *SSL bump*). **InfluxDB** es una base de datos de series temporales, **Grafana** una herramienta de visualización de métricas y **Check_MK** una herramienta de monitorización.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -144,7 +144,7 @@
     "Factor único de autenticación."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Pedir, además de las credenciales de la VPN, un **código enviado por SMS** es una **autenticación de doble factor (2FA)**: combina **algo que sabes** (la contraseña) con **algo que tienes** (el móvil). Las demás opciones no son términos estándar o describen lo contrario: el factor único es justo lo que se quiere reforzar. Ojo: el SMS se considera hoy un segundo factor débil frente a las apps de autenticación o las llaves FIDO2.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -159,13 +159,13 @@
     "POP:965 / SMTP:495 / IMAP:993"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Los puertos estándar de correo seguro con TLS implícito son **POP3S 995**, **SMTPS 465** e **IMAPS 993**. Los no seguros son POP3 110, SMTP 25 (y 587 para envío con STARTTLS) e IMAP 143. Una opción intercambia 993 y 995, y las demás usan puertos inventados (495, 963, 965). Truco: los dos de recepción empiezan por 99, POP con 5 e IMAP con 3.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s211",
-   "tema": null,
+   "tema": 6,
    "enunciado": "Para la aplicacion AutoFirma 1.8.2 de las estaciones de trabajo de la organizacion, ¿qué algoritmo de huella para la firma se permite de los siguientes?",
    "opciones": [
     "ECDSA",
@@ -174,9 +174,8 @@
     "DSA"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "AutoFirma permite como **algoritmos de huella (hash)** para la firma la familia **SHA-2: SHA-256, SHA-384 y SHA-512** (y SHA-1 en versiones antiguas). **MD5** es un hash, pero está **roto y no se admite** para firma. **ECDSA** y **DSA** no son algoritmos de huella sino **algoritmos de firma** (de clave asimétrica). Truco: si pregunta por la huella, busca un SHA.",
+   "contexto": "s2"
   },
   {
    "id": "s212",
@@ -189,9 +188,10 @@
     "802.11be"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**802.11be (Wi-Fi 7)** funciona en las tres bandas: **2,4 GHz, 5 GHz y 6 GHz**, y además puede usar varias a la vez (*Multi-Link Operation*). **802.11ac (Wi-Fi 5)** solo opera en **5 GHz**. La banda de 6 GHz sí existe y está abierta al wifi en Europa (5945-6425 MHz) desde 2021. Truco: Wi-Fi 5 = 802.11ac, Wi-Fi 6/6E = 802.11ax, Wi-Fi 7 = 802.11be.",
    "contexto": "s2",
-   "tema_auto": true
+   "tema_auto": true,
+   "nota_vigencia": "Objeción: **802.11ax también puede funcionar en 2,4, 5 y 6 GHz**. Su extensión a 6 GHz es Wi-Fi 6E, incluida en el estándar IEEE 802.11ax-2021, así que «802.11ax» también sería correcta. Además, cuando se hizo el examen 802.11be aún era un borrador; el estándar se aprobó en 2024 y se publicó en 2025."
   },
   {
    "id": "s213",
@@ -204,7 +204,7 @@
     "Puerto 22 tanto para SSH como SCP."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**SCP funciona sobre SSH**, así que ambos usan el **puerto TCP 22**, igual que SFTP. El **puerto 21** es el de control de **FTP**, con el que se confunde SCP en las otras opciones. Basta con abrir el 22 en el cortafuegos hacia las subredes de servidores.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -219,13 +219,13 @@
     "RESETIIS"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Internet Information Services (IIS) se reinicia desde la línea de comandos con **`iisreset`**, todo junto, que detiene y vuelve a arrancar sus servicios. Admite opciones como `/stop`, `/start` o `/restart`. Las variantes separadas («IIS RESET», «RESET IIS») o con el orden cambiado («RESETIIS») no existen.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s215",
-   "tema": 12,
+   "tema": 27,
    "enunciado": "En uno de los servidores de la Subred de Aplicaciones del Modelo B se necesita realizar una captura del tráfico que pasa por la interfaz de red eth1 y guardarlo en fichero.out para su posterior análisis, ¿cuál de las siguientes sentencias es la correcta?",
    "opciones": [
     "snoop -d eth1 -w fichero.out",
@@ -234,13 +234,12 @@
     "snoop -d any -o fichero.out"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**`tcpdump -i eth1 -w fichero.out`** captura el tráfico **de la interfaz eth1** (`-i`) y lo **escribe en un fichero** (`-w`) en formato pcap, que luego se puede analizar con Wireshark o con `tcpdump -r`. `-i any` captura en todas las interfaces, no en eth1, y `-o` no sirve para guardar la captura. **snoop** es la herramienta equivalente de **Solaris**, no de RHEL.",
+   "contexto": "s2"
   },
   {
    "id": "s216",
-   "tema": 30,
+   "tema": 31,
    "enunciado": "En el servidor de la Subred de Aplicaciones que sirve las páginas de la intranet en el dominio intranet.sgi.es y que utiliza Apache 2.4, quieren servir páginas de otros dominios. ¿Cuál de las siguientes directivas debe utilizar?",
    "opciones": [
     "VirtualMachine",
@@ -249,9 +248,8 @@
     "VirtualIp"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "En Apache 2.4, servir varios dominios en un mismo servidor (*virtual hosting*) se hace con la directiva **`<VirtualHost>`**. En cada bloque se indican `ServerName`/`ServerAlias` y el `DocumentRoot` del dominio, y el *hosting* puede basarse en nombre o en IP. «VirtualMachine», «VirtualDomain» y «VirtualIp» no son directivas de Apache.",
+   "contexto": "s2"
   },
   {
    "id": "s217",
@@ -264,7 +262,7 @@
     "trunk"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un puerto **tagged** (etiquetado) envía las tramas Ethernet con la **etiqueta 802.1Q**, que incluye el **VLAN ID** (12 bits). Se usa en los enlaces que transportan varias VLAN. Un puerto **untagged** envía las tramas sin etiqueta, normalmente hacia equipos finales. **Trunk** es el nombre (sobre todo en Cisco) del enlace que lleva varias VLAN etiquetadas, pero la opción que añade la etiqueta a las tramas es *tagged*.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -279,7 +277,7 @@
     "SADA"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**ADA** es la **plataforma de análisis avanzado de malware** del CCN-CERT, que estudia muestras sospechosas de forma automatizada. **NADA**, **CADA** y **SADA** son nombres inventados que juegan con el acrónimo. Truco: memoriza las herramientas del CCN por su función, por ejemplo ADA para malware, LUCÍA para incidentes, PILAR para el análisis de riesgos e INÉS para el informe del estado de seguridad.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -294,7 +292,7 @@
     "WFL7 - Web Firewall Layer 7"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un **WAF (Web Application Firewall)** **filtra y monitoriza el tráfico HTTP/HTTPS** hacia las aplicaciones web y bloquea ataques de capa 7 como inyección SQL, XSS o CSRF. Sigue, por ejemplo, el **OWASP Core Rule Set**. «WAT», «VFN» y «WFL7» no son módulos de seguridad estándar.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -309,7 +307,7 @@
     "ip route print"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En Windows la tabla de enrutamiento se muestra con **`route print`**, que equivale a `netstat -r`. En PowerShell la alternativa es `Get-NetRoute`. **`ip route`** (`ip route show`, `ip route ls`) es la sintaxis de **Linux**, que no sirve en Windows 10, y «route show» o «ip route print» no son comandos válidos.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -324,7 +322,7 @@
     "gplist"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**`gpresult`** muestra el **Conjunto Resultante de Directivas (RSoP)** que se aplica a un usuario y a un equipo, es decir, qué GPO se aplican. Por ejemplo, `gpresult /r` da un resumen y `gpresult /h informe.html` genera un informe. **`gpupdate`** fuerza la aplicación de las directivas, mientras que «gpshow», «gpprint» y «gplist» no existen.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -340,7 +338,7 @@
     "RFC 2472"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**PPTP** (Point-to-Point Tunneling Protocol) está definido en la **RFC 2637** (1999). Las demás son de protocolos relacionados: **L2TP** en la **RFC 2661**, **PPP** en la **RFC 1661**, y la **2472** trata de IPv6 sobre PPP. PPTP se considera hoy **inseguro** y no debe usarse para VPN.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -356,7 +354,7 @@
     "Se subdivide en dos tipos: Tipo 3 y Tipo 4."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**PoE++** es el nombre comercial de **IEEE 802.3bt** (2018), que define dos tipos: **Tipo 3** (hasta **60 W** en el equipo que alimenta, unos 51 W en el que recibe) y **Tipo 4** (hasta **90-100 W**, unos 71 W en el que recibe). Las siglas son **Power over Ethernet**, no «Power-of-Ethernet». **802.3at** es **PoE+**, cuyos **25,5 W** recibidos corresponden a PoE+ y no a PoE++. Truco: af (PoE, 15,4 W) → at (PoE+, 30 W) → bt (PoE++, 60/100 W).",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -372,7 +370,7 @@
     "COPYDB"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**RMAN (Recovery Manager)** es la herramienta de Oracle para **copias de seguridad y recuperación** de la base de datos, sean completas, incrementales o en caliente. También sirve para duplicar bases de datos (`DUPLICATE`). «DUMPALL» recuerda a **pg_dumpall** de PostgreSQL, y «ORACLE_BCK» y «COPYDB» no son comandos de Oracle.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -388,7 +386,7 @@
     "10.20.30.192"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Al dividir 10.20.30.0/24 en cuatro /26, la **tercera subred (Aplicaciones) es 10.20.30.128/26**: red .128, broadcast **.191** y hosts de .129 a **.190**. Por tanto, la **última IP válida de host es 10.20.30.190**. **.191** es el broadcast y **.192** es la dirección de red de la cuarta subred (DMZ), así que ninguna de las dos se puede asignar a un host. **.193** es el primer host de la DMZ.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true

@@ -22,7 +22,7 @@
     "Cuatro veces."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La Constitución de 1978 se ha reformado **cuatro veces**, siempre por el procedimiento ordinario del **art. 167**: en **1992** (art. 13.2, sufragio pasivo de ciudadanos de la UE en elecciones municipales), en **2011** (art. 135, estabilidad presupuestaria), en **2024** (art. 49, lenguaje sobre personas con discapacidad) y en **2026** (art. 69.3, Formentera pasa a ser circunscripción propia y elige su senador, BOE de 20 de mayo de 2026). Quien estudió con manuales anteriores a mayo de 2026 contestaría «tres», que es la trampa. Truco: 92-11-24-26, una por cada década salvo la última, que trae dos.",
    "tema_auto": true
   },
   {
@@ -36,7 +36,7 @@
     "A participar en los asuntos públicos."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **art. 55.1 CE** permite suspender en el estado de excepción los derechos de los arts. 17, 18.2 y 3, 19, 20.1.a) y d), 21, 28.2 y 37.2; el derecho a **comunicar o recibir libremente información veraz es el art. 20.1.d)**, así que entra en la lista. La libertad de cátedra (20.1.c), la libertad sindical (28.1, solo se suspende la huelga del 28.2) y la participación en asuntos públicos (art. 23) no pueden suspenderse. Recuerda que del art. 20 solo caen la libertad de expresión (a) y la de información (d).",
    "tema_auto": true
   },
   {
@@ -50,7 +50,7 @@
     "El Congreso de los Diputados, el Senado y el Consejo de Estado."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **art. 66.1 CE** dice que las Cortes Generales representan al pueblo español y están formadas por **el Congreso de los Diputados y el Senado**: es un parlamento bicameral. El Gobierno (Título IV) y el Consejo de Estado (art. 107, órgano consultivo del Gobierno) no forman parte de las Cortes, y «Congreso de los Senadores y Diputados» no existe.",
    "tema_auto": true
   },
   {
@@ -64,7 +64,7 @@
     "Los miembros de las Cortes Generales no estarán ligados por mandato imperativo."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **art. 67.2 CE** es tajante: «Los miembros de las Cortes Generales **no estarán ligados por mandato imperativo**». Se aplica igual a diputados y senadores y en cualquier votación, también en las de reforma constitucional. El mandato es representativo: el parlamentario representa a todo el pueblo español, no a su partido ni a sus electores, aunque en la práctica exista disciplina de grupo.",
    "tema_auto": true
   },
   {
@@ -78,7 +78,7 @@
     "Produce la suspensión cautelar solo si el Tribunal Constitucional la ratifica expresamente en el plazo de tres meses."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Según el **art. 161.2 CE**, cuando el Gobierno impugna ante el TC disposiciones y resoluciones de los órganos de las Comunidades Autónomas, la impugnación **produce la suspensión** automática de lo recurrido, y el Tribunal debe **ratificarla o levantarla en un plazo no superior a cinco meses**. Las opciones que hablan de seis o tres meses cambian la cifra, y la que niega la suspensión automática contradice el texto. Truco: el «privilegio» del Gobierno es la suspensión automática, y dura como mucho **5 meses**.",
    "tema_auto": true
   },
   {
@@ -92,7 +92,7 @@
     "Por dimisión de un tercio de sus miembros."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **art. 101.1 CE** fija las causas de cese del Gobierno: celebración de elecciones generales, pérdida de la confianza parlamentaria (moción de censura o cuestión de confianza perdida) y **dimisión o fallecimiento de su Presidente**. La dimisión de un ministro, de un vicepresidente o de varios miembros no hace cesar al Gobierno: basta con nombrar a otros. El Gobierno cae con su Presidente porque es él quien recibe la confianza del Congreso.",
    "tema_auto": true
   },
   {
@@ -106,7 +106,7 @@
     "El Ministro de Justicia."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **art. 18 de la Ley 50/1997** (funcionamiento del Consejo de Ministros) establece que las reuniones las convoca y preside el Presidente del Gobierno, **actuando como Secretario el Ministro de la Presidencia**. No lo es el Vicepresidente primero, que sustituye al Presidente, ni el Ministro portavoz o el de Justicia. Recuerda: «Presidencia» preside el despacho del Consejo y levanta sus actas.",
    "tema_auto": true
   },
   {
@@ -120,7 +120,7 @@
     "La motivación de la solicitud."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **art. 17.2 de la Ley 19/2013** pide que la solicitud de acceso permita tener constancia de la identidad del solicitante, la información que se solicita, **una dirección de contacto, preferentemente electrónica, a efectos de comunicaciones** y, en su caso, la modalidad de acceso preferida. La identidad que importa es la del *solicitante*, no la de un «requerido». La **motivación no es obligatoria** (art. 17.3: el solicitante no está obligado a motivar su solicitud). La «huella normativa» no tiene nada que ver con la solicitud.",
    "tema_auto": true
   },
   {
@@ -134,7 +134,7 @@
     "En los Registros de Personal correspondientes."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **art. 18 de la Ley 53/1984** dispone que todas las resoluciones de compatibilidad, para un segundo puesto público o para actividades privadas, **se inscribirán en los Registros de Personal correspondientes**. El «Registro Administrativo de Compatibilidades» y el «RCAP» no existen con ese nombre. La Oficina de Conflictos de Intereses se ocupa de los altos cargos (Ley 3/2015), no del personal al servicio de las Administraciones.",
    "tema_auto": true
   },
   {
@@ -148,7 +148,7 @@
     "Discriminación por actuación administrativa."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **art. 9 de la LO 3/2007** (indemnidad frente a represalias) dice que también se considerará **discriminación por razón de sexo** cualquier trato adverso o efecto negativo que sufra una persona por presentar una queja, reclamación, denuncia, demanda o recurso para exigir la igualdad de trato. La discriminación directa e indirecta se definen en el art. 6 y la «discriminación por actuación administrativa» no es una categoría de la ley. Asocia: art. 9 = **represalias**.",
    "tema_auto": true
   },
   {
@@ -162,7 +162,7 @@
     "Medidas de acción positiva, dirigidas a cualquier empresa, sea de capital público o privado, que incluirán el apoyo técnico necesario."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **art. 49 de la LO 3/2007** dice que, para impulsar la adopción voluntaria de planes de igualdad, el Gobierno establecerá **medidas de fomento, especialmente dirigidas a las pequeñas y las medianas empresas**, que incluirán el apoyo técnico necesario. Tiene lógica: las empresas de **50 o más trabajadores** ya están *obligadas* a tener plan (art. 45.2), así que el fomento voluntario apunta a las pymes. No son «medidas de acción positiva», que son otra figura (art. 11).",
    "tema_auto": true
   },
   {
@@ -176,7 +176,7 @@
     "Nivel 1, nivel 2 y nivel 3."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **art. 8 del Reglamento eIDAS (UE) 910/2014** clasifica los sistemas de identificación electrónica notificados en tres niveles de seguridad: **bajo, sustancial y alto**, según el grado de confianza en la identidad declarada. Las demás ternas son inventadas. El Reglamento (UE) 2024/1183 (eIDAS 2) mantuvo estos tres niveles. Truco: **B-S-A**, de menos a más.",
    "tema_auto": true
   },
   {
@@ -190,7 +190,7 @@
     "La ciberseguridad."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "España Digital 2026 se organiza en ejes estratégicos como la conectividad, el impulso del 5G, **la ciberseguridad**, la economía del dato y la IA, la transformación digital del sector público y de la empresa, los proyectos tractores, España Hub audiovisual, **las competencias digitales** y **los derechos digitales**. **El eLearning y la Universidad Digital no es uno de ellos**: la formación aparece dentro de las competencias digitales, no como eje propio.",
    "tema_auto": true
   },
   {
@@ -204,7 +204,7 @@
     "El ejercicio del derecho al olvido en las búsquedas de internet impedirá el acceso a la información publicada en el sitio web a través de la utilización de búsqueda del nombre de quien ejerciera el derecho, así como de cualquier otro criterio de búsqueda."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **art. 88 LOPDGDD** reconoce a trabajadores y empleados públicos el **derecho a la desconexión digital** para garantizar, fuera del tiempo de trabajo, su descanso, permisos, vacaciones e intimidad personal y familiar. Las demás opciones cambian una palabra: el acceso a Internet (art. 81.2) atenderá la realidad de los **entornos rurales**, no «digitales»; el empleador solo puede acceder a los medios digitales **facilitados** por él, no a los personales (art. 87.2); y el derecho al olvido en buscadores (art. 93) **no impide** encontrar la información con criterios de búsqueda distintos del nombre.",
    "tema_auto": true
   },
   {
@@ -218,7 +218,7 @@
     "Correo electrónico."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **art. 4 del RD 203/2021** enumera los canales de asistencia: presencial (oficinas de asistencia), **portales de internet y sedes electrónicas**, **redes sociales**, telefónico, **correo electrónico** y cualquier otro que se establezca conforme al art. 12. La **cita previa** no es un canal, sino un modo de organizar la atención presencial. Truco para recordarlos: «Presencial, Portal, Redes, Teléfono, Correo».",
    "tema_auto": true
   },
   {
@@ -232,7 +232,7 @@
     "Protección de dispositivos portátiles."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En el **Anexo II del ENS (RD 311/2022)**, la **protección frente a código dañino es la medida op.exp.6**, dentro de la explotación del **marco operacional**. Las otras tres son **medidas de protección (mp)**: protección del correo electrónico (mp.s.1), protección de la integridad y autenticidad de las comunicaciones (mp.com.3) y protección de dispositivos portátiles (mp.eq.3). Pista: lo que «protege» un activo concreto (correo, equipo, comunicación) suele ser *mp*; lo que se hace al explotar el sistema es *op.exp*.",
    "tema_auto": true
   },
   {
@@ -246,7 +246,7 @@
     "Únicamente permite el acceso a las comunicaciones con el interesado."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **art. 8 del RD 203/2021** dice que la Carpeta Ciudadana del sector público estatal **es accesible a través de la sede electrónica del PAGe de la AGE**. Permite seguir los procedimientos en que el interesado es **parte** (no los de sus familiares), acceder a comunicaciones **y** notificaciones (no solo a comunicaciones) y conocer los datos que obran en poder del sector público estatal, pero **con las limitaciones de la normativa vigente**, no «sin ninguna limitación».",
    "tema_auto": true
   },
   {
@@ -260,7 +260,7 @@
     "Deberá ser plenamente interoperable con la Plataforma de Intermediación de Datos (PID) a los efectos de comprobar la validez de las habilitaciones de los funcionarios habilitados."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **art. 31.3 del RD 203/2021** establece que el Registro de Funcionarios Habilitados de la AGE **deberá ser plenamente interoperable con los registros u otros sistemas equivalentes que creen las comunidades autónomas y las entidades locales**, para comprobar la validez de las habilitaciones. Lo mismo exige el art. 12.3 de la Ley 39/2015. No se habla de países de la UE, ni del SIR (intercambio de asientos registrales) ni de la Plataforma de Intermediación (consulta de datos entre Administraciones).",
    "tema_auto": true
   },
   {
@@ -274,7 +274,7 @@
     "SCSP – WS."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El portfolio **SCSP v3** (Sustitución de Certificados en Soporte Papel) que ofrece la AGE incluye, entre otros, las **librerías SCSPv3** para integrar los servicios en aplicaciones propias, el **Cliente Ligero SCSPv3** (aplicación web para hacer consultas sin desarrollo propio) y **SCSP-WS**. **«SCSP – SOAP» no es un producto**: SOAP es simplemente el protocolo de los mensajes que usan todos ellos. Truco: si la opción es el nombre de un protocolo, desconfía.",
    "tema_auto": true
   },
   {
@@ -288,7 +288,7 @@
     "150 ppp para imágenes en color, y 200 ppp para imágenes en blanco y negro o escala de grises."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La **NTI de Digitalización de Documentos** fija un nivel de resolución mínimo de **200 píxeles por pulgada**, tanto para imágenes en **blanco y negro** como en **color o escala de grises**. Las demás opciones introducen 150 ppp en alguno de los casos, que no aparece en la norma. Truco: **un único mínimo, 200 ppp para todo**.",
    "tema_auto": true
   },
   {
@@ -302,12 +302,12 @@
     "Obtener la dirección de memoria de la instrucción previamente leída."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **registro de instrucción (IR)** guarda **la instrucción que se está ejecutando** en ese momento, para que el decodificador de la unidad de control la interprete. La dirección de la **siguiente** instrucción la guarda el **contador de programa (PC)**, y las direcciones de memoria que se van a leer o escribir pasan por el registro de dirección de memoria (MAR). Recuerda: PC = *dónde* está la siguiente; IR = *qué* se ejecuta ahora.",
    "tema_auto": true
   },
   {
    "id": "p22",
-   "tema": 10,
+   "tema": 12,
    "enunciado": "Para recorrer un árbol binario no vacío en preorden se deben realizar las siguientes operaciones recursivamente en cada nodo:",
    "opciones": [
     "Visitar el nodo raíz, recorrer el subárbol derecho y recorrer el subárbol izquierdo.",
@@ -316,8 +316,7 @@
     "Visitar el nodo raíz, recorrer el subárbol izquierdo y recorrer el subárbol derecho."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "En el recorrido en **preorden** se **visita la raíz primero**, después el subárbol izquierdo y luego el derecho (R-I-D). El inorden es I-R-D, el postorden es I-D-R, y visitar raíz-derecho-izquierdo no es ninguno de los tres recorridos clásicos. Truco: el prefijo dice dónde va la raíz: **pre** = antes, **in** = en medio, **post** = al final."
   },
   {
    "id": "p23",
@@ -330,7 +329,7 @@
     "El tiempo medio que tarda la aguja en situarse en la pista deseada."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La **latencia rotacional** es el tiempo medio que tarda el **sector deseado en pasar bajo la cabeza** al girar el plato, una vez que la cabeza está ya sobre la pista correcta; en media es el tiempo de **media vuelta** (a 7.200 rpm, unos 4,17 ms). Mover la cabeza de un cilindro a otro, o situarla en la pista, es el **tiempo de búsqueda** (*seek time*), y leer o escribir los datos es el tiempo de transferencia. Tiempo de acceso = búsqueda + latencia rotacional + transferencia.",
    "tema_auto": true
   },
   {
@@ -344,12 +343,12 @@
     "RAID 6 es una variante de RAID 5 que implementa un doble sistema de paridad distribuida, lo que le permite funcionar con un mínimo de tres discos y tolerar el fallo simultáneo de hasta un solo disco."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La afirmación **incorrecta** es la de RAID 6: usa **doble paridad distribuida**, necesita **un mínimo de cuatro discos** y tolera el fallo simultáneo de **hasta dos discos**, no de uno solo (eso es lo que ya hace RAID 5, con mínimo tres discos). Las demás son correctas: RAID 1 es espejo, RAID 5 es *striping* con paridad distribuida y RAID 10 combina espejo y *striping*. Truco: el «6» es un «5 con una paridad más», y por eso aguanta un disco más.",
    "tema_auto": true
   },
   {
    "id": "p25",
-   "tema": 10,
+   "tema": 13,
    "enunciado": "¿Cuál de los siguientes algoritmos de planificación de CPU asigna un quantum de tiempo de CPU a cada proceso?",
    "opciones": [
     "FCFS.",
@@ -358,12 +357,11 @@
     "Round Robin."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**Round Robin** asigna a cada proceso un **quantum** (rodaja de tiempo) de CPU; si no termina, se le expulsa y vuelve al final de la cola. Es un algoritmo **expulsivo** pensado para tiempo compartido. FCFS atiende por orden de llegada sin expulsión, SJF elige el trabajo más corto y por prioridades elige el de mayor prioridad: ninguno de ellos usa un quantum fijo."
   },
   {
    "id": "p26",
-   "tema": 10,
+   "tema": 12,
    "enunciado": "Considerando el nodo raíz como nivel 1, ¿cuál es el número máximo de nodos en un árbol binario que tiene 4 niveles?",
    "opciones": [
     "15",
@@ -372,8 +370,7 @@
     "10"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "En un árbol binario, el nivel *i* (empezando en 1) tiene como máximo 2^(i−1) nodos, así que con *h* niveles el máximo es **2^h − 1**. Con 4 niveles: 1 + 2 + 4 + 8 = **15 nodos**. El 16 es 2^4, el error típico de olvidar el «−1». Si el enunciado contara la raíz como nivel 0, cambiaría la fórmula, y por eso lo aclara."
   },
   {
    "id": "p27",
@@ -386,12 +383,12 @@
     "Una herramienta integrada en el sistema operativo para la monitorización de las acciones del usuario y administradores."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**Active Directory Domain Services (AD DS)** es el **servicio de directorio** de Windows Server: almacena información sobre los objetos de la red (usuarios, equipos, grupos, impresoras…) y permite a administradores y usuarios buscarlos y usarlos, además de autenticar en el dominio. No es un mecanismo de integridad del sistema de archivos, ni un dispositivo físico, ni una herramienta de auditoría. El controlador de dominio es el servidor que aloja AD DS.",
    "tema_auto": true
   },
   {
    "id": "p28",
-   "tema": 24,
+   "tema": 12,
    "enunciado": "Según el estándar JSON (RFC 8259), ¿cuál de las siguientes afirmaciones es correcta?",
    "opciones": [
     "Un objeto JSON mantiene el orden de inserción de sus elementos por definición.",
@@ -400,8 +397,7 @@
     "JSON admite comentarios dentro de su sintaxis estándar."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El **RFC 8259** define un objeto JSON como **una colección no ordenada de cero o más pares nombre/valor**; por eso no puede presuponerse que se mantenga el orden de inserción (que algunas librerías lo conserven no forma parte del estándar). JSON solo tiene seis tipos (objeto, array, cadena, número, booleano y null): **no permite tipos personalizados** y **no admite comentarios**. Truco: objeto = no ordenado; array = ordenado."
   },
   {
    "id": "p29",
@@ -414,7 +410,7 @@
     "Los ficheros binarios ejecutables esenciales del sistema."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Según el estándar FHS, **/etc** contiene los **ficheros de configuración del sistema** (por ejemplo /etc/passwd, /etc/fstab o /etc/hosts). Los directorios personales de los usuarios están en **/home**, y los binarios esenciales en **/bin** y **/sbin**. Truco: en /etc no debe haber binarios, solo configuración.",
    "tema_auto": true
   },
   {
@@ -428,7 +424,7 @@
     "rm RECIBOS PAGOS"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En Linux no hay un comando «rename» básico: se renombra **moviendo** el archivo con **mv origen destino**, es decir, **mv PAGOS RECIBOS**. Invertir el orden (mv RECIBOS PAGOS) intentaría renombrar un archivo RECIBOS que no existe, y **rm** borra archivos, no los renombra. Recuerda: en mv y cp, primero va lo que ya tienes y después lo que quieres obtener.",
    "tema_auto": true
   },
   {
@@ -442,7 +438,7 @@
     "HAL de Wi-Fi."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La documentación de Android (AOSP) indica que el framework de Wi-Fi tiene tres superficies HAL: **Vendor HAL** (comandos específicos de Android), **Supplicant HAL** (interfaz con el demonio wpa_supplicant) y **Hostapd HAL** (interfaz con el demonio hostapd, usado para el punto de acceso o *hotspot*). De las opciones, solo **Hostapd** coincide con uno de esos nombres; «Supervisor» y «Comunicación» no existen y «HAL de Wi-Fi» es el nombre genérico del conjunto. Truco: **V-S-H**, Vendor, Supplicant, Hostapd.",
    "tema_auto": true
   },
   {
@@ -456,7 +452,7 @@
     "Bloque de control de proceso."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **Bloque de Control de Proceso (PCB)** es la estructura de datos que el sistema operativo mantiene para cada proceso: identificador, estado, contador de programa, registros, información de memoria, archivos abiertos, prioridad… Es lo que se guarda y restaura en cada cambio de contexto. La tabla de páginas traduce direcciones de memoria, el vector de interrupciones apunta a las rutinas de servicio y el descriptor de segmento describe un segmento de memoria.",
    "tema_auto": true
   },
   {
@@ -470,12 +466,12 @@
     "Las bases de datos relacionales utilizan un método simple de clave-valor para almacenar datos."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La afirmación **incorrecta** es la de que las bases de datos relacionales usan un método **clave-valor**: eso define a las bases **NoSQL clave-valor** (Redis, DynamoDB). Las relacionales organizan los datos en **tablas (relaciones)** de filas y columnas unidas por claves. Las demás afirmaciones son correctas: clave primaria, dominio (conjunto de valores válidos de un atributo) y superclave (conjunto de atributos que identifica cada tupla, aunque sobre alguno).",
    "tema_auto": true
   },
   {
    "id": "p34",
-   "tema": 15,
+   "tema": 14,
    "enunciado": "Señale cuál de las siguientes es una base datos orientada a grafos:",
    "opciones": [
     "DynamoDB.",
@@ -484,8 +480,7 @@
     "HBase."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**JanusGraph** es una base de datos **orientada a grafos** distribuida y de código abierto (se consulta con Gremlin/TinkerPop). DynamoDB es **clave-valor/documental** (AWS), CouchDB es **documental** (JSON) y HBase es de **columnas anchas** (modelo Bigtable sobre Hadoop). Pista: casi todas las de grafos llevan «graph» o son Neo4j."
   },
   {
    "id": "p35",
@@ -498,7 +493,7 @@
     "Una asociación que se establece entre tipos de entidad."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En el modelo E/R, un **atributo es una propiedad o característica asociada a un conjunto de entidades** (por ejemplo, el NIF o el nombre de la entidad Empleado). Un objeto real o abstracto distinguible de otros es una **entidad**, y la conexión o asociación entre conjuntos de entidades es una **relación** (que lo digan dos opciones distintas es la pista). Recuerda: entidad = sustantivo, relación = verbo, atributo = adjetivo o dato.",
    "tema_auto": true
   },
   {
@@ -512,7 +507,7 @@
     "En una asociación se relacionan dos tipos de entidades independientes que pertenecen al mismo dominio y que coyunturalmente no se asocian."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La **agregación** construye un nuevo tipo de entidad a partir de otros tipos y su relación, para tratarlo como un bloque en un nivel de abstracción mayor (por ejemplo, relacionar «Empleado-trabaja en-Proyecto» con otra entidad). Las demás invierten los conceptos: en la **generalización** se obtiene un **supertipo** a partir de varios subtipos, y en la **especialización** el **supertipo se divide en subtipos**, que son los que heredan. Truco: siempre **heredan los subtipos**.",
    "tema_auto": true
   },
   {
@@ -526,7 +521,7 @@
     "Clave compuesta."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Una **clave foránea** (*foreign key*, clave ajena o externa) es una columna o conjunto de columnas cuyos valores deben coincidir con la **clave primaria (o una clave candidata) de otra tabla**, y así se garantiza la **integridad referencial**. Una clave compuesta es la formada por varias columnas, sea primaria o no; «clave primaria externa» y «clave referencia» no son términos del modelo relacional.",
    "tema_auto": true
   },
   {
@@ -540,7 +535,7 @@
     "DML, DMZ y FTL."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "SQL Server admite tres tipos de desencadenadores: **DML** (INSERT, UPDATE, DELETE sobre tablas o vistas), **DDL** (CREATE, ALTER, DROP…) y **LOGON** (al iniciar sesión). AFTER e INSTEAD OF son **momentos** de ejecución de un trigger DML, no tipos; «DMC», «DMZ», «FTL» y «EXTENDS» no tienen nada que ver. Truco: datos (DML), definición (DDL) e inicio de sesión (LOGON).",
    "tema_auto": true
   },
   {
@@ -554,7 +549,7 @@
     "Serializable protege contra la lectura sucia y la lectura fantasma, pero no contra la lectura no repetible."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En ANSI SQL, **REPEATABLE READ** evita las **lecturas sucias** y las **no repetibles**, pero **no las lecturas fantasma**. READ UNCOMMITTED no evita ninguna, READ COMMITTED evita solo la lectura sucia y **SERIALIZABLE evita las tres**. Truco: cada nivel elimina un fenómeno más, en este orden: sucia → no repetible → fantasma.",
    "tema_auto": true
   },
   {
@@ -568,12 +563,12 @@
     "14"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**INSTR(cadena, subcadena, posición, ocurrencia)** devuelve la posición de la n-ésima aparición buscando desde la posición indicada. En 'Corporate Floor', «or» aparece en las posiciones **2, 5 y 14**; empezando a buscar en la 3, la primera aparición es la 5 y **la segunda es la 14** (es el ejemplo de la documentación de Oracle). El 2 sería la primera aparición desde el inicio. Ojo: en Oracle las posiciones empiezan en 1.",
    "tema_auto": true
   },
   {
    "id": "p41",
-   "tema": 17,
+   "tema": 18,
    "enunciado": "En diseño modular de software, ¿qué tipo de acoplamiento se produce cuando varios módulos comparten una estructura global de datos?",
    "opciones": [
     "Acoplamiento de datos.",
@@ -582,8 +577,7 @@
     "Acoplamiento de contenido."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El **acoplamiento común** (*common coupling*) aparece cuando varios módulos **comparten una estructura de datos global**: un cambio en ella afecta a todos y los errores se propagan. En el acoplamiento de **datos** los módulos solo se pasan parámetros simples (el más deseable), en el de **control** uno pasa indicadores que dirigen la lógica del otro, y en el de **contenido** un módulo accede directamente al interior de otro (el peor). Orden de mejor a peor: datos, estampado, control, externo, **común**, contenido."
   },
   {
    "id": "p42",
@@ -596,7 +590,7 @@
     "Indica que el elemento almacena únicamente valores numéricos negativos."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En UML, el signo **«−» indica visibilidad privada (*private*)**: el miembro solo es accesible desde la propia clase. Los demás símbolos son **«+» público**, **«#» protegido** y **«~» de paquete**. No tiene relación con valores negativos ni con elementos pendientes de revisión. Truco: el «+» suma accesos y el «−» los resta.",
    "tema_auto": true
   },
   {
@@ -610,7 +604,7 @@
     "Interface Segregation Principle (ISP)."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **Principio de Inversión de Dependencias (DIP)**, la «D» de SOLID, establece que los módulos de alto nivel no deben depender de los de bajo nivel, sino que **ambos deben depender de abstracciones** (y las abstracciones no deben depender de los detalles). SRP pide una sola responsabilidad por clase, LSP que una subclase pueda sustituir a su clase base e ISP que haya interfaces pequeñas y específicas. Es la base de la inyección de dependencias.",
    "tema_auto": true
   },
   {
@@ -624,7 +618,7 @@
     "Factory Method sirve para crear objetos de un mismo tipo, mientras que Abstract Factory permite crear objetos de una misma familia."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Ambos son patrones **creacionales** del GoF. **Factory Method** delega en las subclases la creación de **un producto** (un tipo de objeto), mientras que **Abstract Factory** ofrece una interfaz para crear **familias de objetos relacionados** sin indicar sus clases concretas (por ejemplo, botón + ventana + menú de un mismo «tema»). Que Factory Method sea de comportamiento es falso, y ninguno de los dos obliga a usar interfaces o clases abstractas en exclusiva. Truco: Abstract Factory suele implementarse con varios Factory Method.",
    "tema_auto": true
   },
   {
@@ -638,7 +632,7 @@
     "Java, PHP y Visual Basic."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Microsoft mantiene tres lenguajes oficiales para .NET (también en **.NET 10**): **C#, F# y Visual Basic**. Java no es un lenguaje de .NET (tiene su propia plataforma, la JVM), y R o PHP tampoco son lenguajes soportados oficialmente. Truco: los tres oficiales se distinguen por la extensión del proyecto: .csproj, .fsproj y .vbproj.",
    "tema_auto": true
   },
   {
@@ -652,7 +646,7 @@
     "Jakarta Validation."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**Entity Framework Core** es el ORM de .NET, y su equivalente en Jakarta EE es **Jakarta Persistence** (antes JPA), que define el mapeo objeto-relacional con entidades, EntityManager y JPQL; Hibernate o EclipseLink son implementaciones. **Jakarta JDBC** (en realidad JDBC forma parte de Java SE) es el acceso de bajo nivel, comparable a ADO.NET; Jakarta Transactions gestiona transacciones y Jakarta Validation valida beans.",
    "tema_auto": true
   },
   {
@@ -666,7 +660,7 @@
     "SOAP 2.1"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La última versión de SOAP es **SOAP 1.2**, Recomendación del W3C desde **2003** (segunda edición en 2007). SOAP 1.1 (2000) fue una nota del W3C, y **no existen SOAP 2.0 ni 2.1**. Truco: SOAP se quedó en 1.2 porque el desarrollo de servicios web se desplazó hacia REST.",
    "tema_auto": true
   },
   {
@@ -680,12 +674,12 @@
     "jQuery es un lenguaje de programación que permite la mejora de JavaScript."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La afirmación **incorrecta** es la de jQuery: **no es un lenguaje de programación, sino una biblioteca de JavaScript** que facilita manipular el DOM, gestionar eventos y hacer peticiones AJAX. Las demás son ciertas: **XSD** es el lenguaje de definición de esquemas XML, **DTD** permite validar documentos XML frente a unas reglas y en **XHTML** todos los elementos deben cerrarse (incluso los vacíos, como `<br />`).",
    "tema_auto": true
   },
   {
    "id": "p49",
-   "tema": 21,
+   "tema": 20,
    "enunciado": "Señale la afirmación correcta con respecto a REST:",
    "opciones": [
     "Es un protocolo estándar de la capa de aplicación diseñado para garantizar el intercambio de mensajes NTP entre plataformas heterogéneas.",
@@ -694,8 +688,7 @@
     "Es un patrón de diseño exclusivo para aplicaciones web tradicionales que prohíbe explícitamente la transferencia de datos en formatos JSON."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**REST** (*Representational State Transfer*, definido por Roy Fielding en 2000) **no es un protocolo, sino un estilo arquitectónico**: un conjunto de principios (cliente-servidor, sin estado, cacheable, interfaz uniforme, sistema en capas) que encaja con aplicaciones móviles y servicios web ligeros. No es un protocolo de la capa de aplicación ni lo creó el W3C, nada tiene que ver con NTP y **admite JSON**, que de hecho es su formato más habitual."
   },
   {
    "id": "p50",
@@ -708,12 +701,12 @@
     "El alcance de una variable declarada con let es de bloque."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La afirmación **incorrecta** es que `123 == '123'` devuelve falso: el operador **== hace conversión de tipos** y compara 123 con 123, así que devuelve **true**. Para que dé false hay que usar la **igualdad estricta ===**, que compara también el tipo. Las demás son ciertas: String, Boolean, Undefined y Number son tipos de JavaScript, una variable declarada sin valor vale `undefined` y `let` tiene **ámbito de bloque** (a diferencia de `var`).",
    "tema_auto": true
   },
   {
    "id": "p51",
-   "tema": 16,
+   "tema": 23,
    "enunciado": "¿Qué significan las siglas que dan nombre a una matriz RACI?",
    "opciones": [
     "Reliable Algorithm for Confidential Information.",
@@ -722,8 +715,7 @@
     "Random, Asignated, Controlled, Isolated."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Una matriz **RACI** asigna responsabilidades en un proyecto o proceso: **R**esponsible (quien ejecuta la tarea), **A**ccountable (quien rinde cuentas y aprueba; solo uno por tarea), **C**onsulted (a quien se consulta antes) e **I**nformed (a quien se informa después). Las demás opciones son siglas inventadas. Truco: **una sola A por tarea**."
   },
   {
    "id": "p52",
@@ -736,7 +728,7 @@
     "React es una biblioteca de código abierto de JavaScript para crear interfaces de usuario de front-end."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La afirmación **falsa** es que JavaScript forma parte de la plataforma Java: son **lenguajes distintos** y el parecido del nombre es una decisión de marketing de 1995. Las demás son ciertas: `isNaN(\"hola\")` da **true** porque convierte \"hola\" a número y obtiene NaN, **XML** es la base de muchos estándares como UBL (Universal Business Language) y **React** es una biblioteca de JavaScript de código abierto para interfaces de usuario.",
    "tema_auto": true
   },
   {
@@ -750,7 +742,7 @@
     "Minimizar el número de ventanas abiertas durante el desarrollo."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La defensa directa frente a la inyección SQL y el XSS es la **validación y el saneamiento de las entradas** (junto con las consultas parametrizadas y la codificación de la salida): nunca hay que tratar los datos del usuario como código. Las contraseñas complejas protegen la autenticación, un antivirus no detecta peticiones maliciosas a la aplicación y el número de ventanas abiertas no influye en nada. Regla de OWASP: **no confíes nunca en la entrada del usuario**.",
    "tema_auto": true
   },
   {
@@ -764,7 +756,7 @@
     "La Directiva incluye en su ámbito de aplicación el contenido multimedia en directo de base temporal publicado después del 23 de septiembre de 2020."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La **Directiva (UE) 2016/2102** recoge el concepto de diseño universal de la Convención de la ONU: productos y servicios utilizables por todas las personas **sin adaptación ni diseño especializado**, pero **sin excluir los dispositivos de apoyo** para grupos concretos cuando se necesiten. Por eso es falso que no deban existir ayudas técnicas. Además, el art. 1 **excluye** de su ámbito los sitios y aplicaciones de los **organismos públicos de radiodifusión y sus filiales** y el **contenido multimedia en directo** de base temporal (la fecha de 23 de septiembre de 2020 se refiere al contenido pregrabado).",
    "tema_auto": true
   },
   {
@@ -778,7 +770,7 @@
     "Que se ha modificado el archivo pero todavía no se ha hecho 'commit' en la base de datos."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En Git, un cambio **staged** (preparado) está en el **área de preparación o índice**: se ha marcado con `git add` para que entre **en el próximo commit**. Si el archivo está modificado pero aún no se ha añadido, su estado es **modified**; si ya se hizo commit, está **committed**; y subirlo al remoto es `git push`, que no es un estado del archivo. Ciclo: modified → (`git add`) → staged → (`git commit`) → committed.",
    "tema_auto": true
   },
   {
@@ -792,7 +784,7 @@
     "git status"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**git commit** guarda en el **repositorio local** una instantánea de los cambios preparados (*staged*), con su mensaje y autor. `git push` envía los commits al repositorio **remoto**, `git clone` copia un repositorio existente y `git status` solo muestra el estado de los archivos. Truco: commit es local; push es lo que «empuja» hacia fuera.",
    "tema_auto": true
   },
   {
@@ -806,7 +798,7 @@
     "Stakeholder."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Según la **Guía de Scrum (2020)**, el Equipo Scrum tiene tres responsabilidades: **Scrum Master**, **Product Owner** y **Developers**. Los *stakeholders* (interesados) participan, por ejemplo en la Sprint Review, pero **no forman parte del Equipo Scrum**, y «Sprint Owner» o «Scrum Planner» no existen. Truco: hay un PO, un SM y los desarrolladores, y nada más.",
    "tema_auto": true
   },
   {
@@ -820,7 +812,7 @@
     "Cockroach."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Datadog** es una plataforma SaaS de **monitorización y seguridad** que integra infraestructura, logs, **APM** (monitorización del rendimiento de aplicaciones), trazas y seguridad. Voldemort es una base de datos clave-valor distribuida (creada por LinkedIn) y Cockroach (CockroachDB) es una base de datos SQL distribuida; «Atohalan» no corresponde a ningún producto conocido. Otras herramientas de APM del mismo tipo son Dynatrace, New Relic o Elastic APM.",
    "tema_auto": true
   },
   {
@@ -834,7 +826,7 @@
     "Es una herramienta destinada exclusivamente a realizar copias de seguridad."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Un **hipervisor de tipo 1** (nativo o *bare-metal*) se ejecuta **directamente sobre el hardware físico**, sin sistema operativo anfitrión, y sobre él corren las máquinas virtuales con sus sistemas operativos invitados (VMware ESXi, Hyper-V, KVM, Xen). El que se ejecuta como aplicación dentro de un sistema operativo es el de **tipo 2** (VirtualBox, VMware Workstation). Las otras dos opciones no describen un hipervisor.",
    "tema_auto": true
   },
   {
@@ -848,7 +840,7 @@
     "Arquitectura de Disco Interno."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En la arquitectura **NAS** (*Network Attached Storage*) un dispositivo con su propio sistema de archivos ofrece almacenamiento **a nivel de fichero** a varios usuarios y equipos de la **LAN**, con protocolos como **NFS o SMB/CIFS**. La **SAN** es una red dedicada que ofrece almacenamiento **por bloques** (Fibre Channel, iSCSI) a servidores, y el **DAS** está conectado directamente a un único equipo, como un disco interno. Truco: NAS = ficheros por la LAN; SAN = bloques por una red propia.",
    "tema_auto": true
   },
   {
@@ -862,7 +854,7 @@
     "Parallels Desktop."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**VMware ESXi** es un hipervisor de **tipo 1** (*bare-metal*): se instala directamente sobre el servidor físico. **VirtualBox, VMware Workstation y Parallels Desktop** son de **tipo 2**: se instalan como aplicaciones sobre Windows, Linux o macOS. Pista: los productos para el escritorio de un usuario suelen ser de tipo 2, y los de servidor (ESXi, Hyper-V, Xen), de tipo 1.",
    "tema_auto": true
   },
   {
@@ -876,7 +868,7 @@
     "No es necesario que los clientes finales estén constantemente conectados al servidor para que puedan mantener el acceso a los escritorios virtualizados."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**VDI** (*Virtual Desktop Infrastructure*) **aloja los escritorios en servidores centrales** como máquinas virtuales, y el usuario se conecta a ellos desde cualquier dispositivo. Las demás confunden los conceptos: en el VDI **persistente** el usuario se conecta siempre a **su** escritorio, que conserva sus cambios; en el **no persistente** recibe uno cualquiera del grupo y los cambios se pierden al cerrar sesión. Además, el cliente **debe estar conectado** al servidor para usar el escritorio.",
    "tema_auto": true
   },
   {
@@ -890,12 +882,12 @@
     "RMAN> list global script names;"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En RMAN, **LIST SCRIPT NAMES** muestra **todos los scripts almacenados, tanto globales como locales**, en el catálogo de recuperación. **LIST GLOBAL SCRIPT NAMES** muestra solo los **globales**, y `LIST SCRIPT` o `LIST` solos no son sintaxis válida para esto (LIST necesita un objeto, como BACKUP o COPY). El contenido de un script se muestra con **PRINT SCRIPT**.",
    "tema_auto": true
   },
   {
    "id": "p64",
-   "tema": 25,
+   "tema": 26,
    "enunciado": "¿Qué es Kubernetes?",
    "opciones": [
     "Un emulador para ejecutar aplicaciones sobre arquitecturas de procesador diferentes.",
@@ -904,8 +896,7 @@
     "Un sistema de virtualización de contenedores a nivel de sistema operativo."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**Kubernetes** (K8s) es una **plataforma de código abierto para orquestar contenedores**: automatiza el despliegue, el escalado, el balanceo y la recuperación de aplicaciones en contenedores repartidas en un clúster. Creado por Google, hoy lo mantiene la CNCF. Lo que crea y ejecuta los contenedores (virtualización a nivel de sistema operativo) son runtimes como Docker, containerd o CRI-O; Kubernetes los **gestiona**, no los sustituye."
   },
   {
    "id": "p65",
@@ -918,7 +909,7 @@
     "Scalefusion."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**Jamf Now** es una solución de gestión de dispositivos móviles (MDM) **exclusiva para dispositivos Apple** (iPhone, iPad, Mac y Apple TV), pensada para pymes; su hermano mayor es Jamf Pro. **Citrix Endpoint Management, Miradore y Scalefusion** son multiplataforma: gestionan también Android y Windows, entre otros. Truco: el ecosistema Jamf nació alrededor de Apple.",
    "tema_auto": true
   },
   {
@@ -932,7 +923,7 @@
     "Snort."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**BMC Remedy** (hoy **BMC Helix ITSM**) es un sistema de **gestión de servicios de TI (ITSM)** alineado con ITIL: incidencias, problemas, cambios y catálogo de servicios, como ServiceNow u OTRS. **RabbitMQ** es un *broker* de mensajería, **Hibernate** es un ORM de Java y **Snort** es un IDS/IPS de red. Pista: si gestiona tickets e incidencias, es ITSM.",
    "tema_auto": true
   },
   {
@@ -946,7 +937,7 @@
     "PRICE3."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**OCTAVE** (de la Universidad Carnegie Mellon), **MAGERIT** (la metodología española, del Consejo Superior de Administración Electrónica, que implementa la herramienta PILAR) y **NIST SP 800-30** (guía de evaluación de riesgos) son **metodologías de análisis de riesgos**. **«PRICE3» no es una metodología de riesgos**: suena parecido a PRINCE2, que es de gestión de proyectos, para confundir.",
    "tema_auto": true
   },
   {
@@ -960,7 +951,7 @@
     "Un cable utilizado para establecer conexiones en un panel de conexión."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En **ANSI/TIA-942-B** (infraestructura de CPD), el **plenum** es un **compartimento en el que se conectan uno o varios conductos de aire y que forma parte del sistema de distribución del aire** (por ejemplo, el espacio bajo el falso suelo o sobre el falso techo). Por eso los cables que pasan por él deben ser de tipo *plenum*, con baja emisión de humos. Las demás opciones definen otros términos del estándar: conductor aislado, empalme permanente y latiguillo (*patch cord*).",
    "tema_auto": true
   },
   {
@@ -974,7 +965,7 @@
     "Es un protocolo de enrutado entre sistemas autónomos."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**VPLS** (*Virtual Private LAN Service*) es un servicio VPN de **nivel 2** sobre redes MPLS que une sedes Ethernet geográficamente separadas como si estuvieran en **la misma LAN**, compartiendo **un mismo dominio de difusión**. La conmutación por etiquetas es **MPLS** (la tecnología sobre la que se apoya VPLS), el conjunto de protocolos de seguridad en la capa IP es **IPsec** y el enrutamiento entre sistemas autónomos es **BGP**.",
    "tema_auto": true
   },
   {
@@ -988,7 +979,7 @@
     "Protocolo de control para comunicación multimedia."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La Recomendación **ITU-T H.245** se titula «**Protocolo de control para comunicación multimedia**»: negocia capacidades y abre y cierra canales lógicos en llamadas H.323. Las otras opciones son los títulos de normas vecinas: **H.323** (sistemas de comunicación multimedia basados en paquetes), **H.225.0** (señalización de llamada y paquetización de medios) y **H.239** (gestión de funciones y canales de medios adicionales para terminales H.300). Truco: H.323 es el paraguas; H.225 establece la llamada y H.245 la controla.",
    "tema_auto": true
   },
   {
@@ -1002,7 +993,7 @@
     "Gestión del Rendimiento (Performance)."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**FCAPS** son las cinco áreas funcionales de la gestión de red OSI (ISO/IEC 7498-4, ITU-T M.3400): **F**allos (*Fault*), **C**onfiguración, **A**ccounting (contabilidad), **P**restaciones o rendimiento (*Performance*) y **S**eguridad (*Security*). La «S» es **seguridad, no almacenamiento (*Storage*)**, que es la trampa.",
    "tema_auto": true
   },
   {
@@ -1016,7 +1007,7 @@
     "6050 tanto en TCP como en UDP."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "SIP utiliza por defecto el puerto **5060, tanto en UDP como en TCP** (RFC 3261); para SIP sobre TLS (SIPS) se usa el **5061**. Afirmar que solo usa UDP es incorrecto, y el 6050 es una inversión de cifras para despistar. Truco: SIP = **5060**, y con cifrado se suma uno.",
    "tema_auto": true
   },
   {
@@ -1030,7 +1021,7 @@
     "Es una solución que permite la creación de una red de área extensa definida por software."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**CG-NAT** (*Carrier-Grade NAT*, o NAT444) es una solución de los **operadores** para paliar el agotamiento de IPv4: **muchos clientes salen a Internet compartiendo una misma dirección IPv4 pública**. Para ello usa el rango reservado **100.64.0.0/10** (RFC 6598) entre el router del cliente y el operador. Las demás describen otra cosa: usar varias IP no ahorra direcciones, el NAT entre direcciones locales y globales es el NAT clásico de una organización y la WAN definida por software es SD-WAN.",
    "tema_auto": true
   },
   {
@@ -1044,7 +1035,7 @@
     "192.168.0.59"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Las direcciones de **clase A** tienen el primer octeto entre **1 y 126** (el primer bit es 0), así que **2.17.39.162** es de clase A. 142.250.200.131 es de **clase B** (128-191), 192.168.0.59 es de **clase C** (192-223, y además privada) y 239.255.255.255 es de **clase D** (224-239, multidifusión). Truco: A < 128 ≤ B < 192 ≤ C < 224 ≤ D < 240 ≤ E.",
    "tema_auto": true
   },
   {
@@ -1058,7 +1049,7 @@
     "TELNET."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**Telnet** usa el puerto **TCP 23**: es acceso remoto en texto plano, sin cifrar, y por eso se ha sustituido por SSH. **SSH es el 22**, **FTP usa el 21** (control) y el 20 (datos) y **SMTP el 25**. Truco: 20-21 FTP, 22 SSH, 23 Telnet, 25 SMTP, una escalera.",
    "tema_auto": true
   },
   {
@@ -1072,12 +1063,12 @@
     "Establece que la cookie debe eliminarse automáticamente al cerrar el navegador."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El atributo **HttpOnly** de `Set-Cookie` **impide que JavaScript del lado del cliente (document.cookie) acceda a la cookie**; así, si hay un fallo XSS, el atacante no puede robar la cookie de sesión. Que la cookie solo viaje por HTTPS lo controla el atributo **Secure**, el ámbito de dominio lo fija **Domain**, y una cookie sin Expires ni Max-Age es **de sesión** y se borra al cerrar el navegador. Lo recomendable para cookies de sesión es usar HttpOnly, Secure y SameSite.",
    "tema_auto": true
   },
   {
    "id": "p77",
-   "tema": 31,
+   "tema": 32,
    "enunciado": "Según las recomendaciones del CCN-CERT sobre seguridad en redes privadas virtuales, ¿qué nombre recibe el túnel de red seguro que opera en la capa de red y que se implementa como un kernel de interfaz virtual de red para Linux?",
    "opciones": [
     "MACsec.",
@@ -1086,8 +1077,7 @@
     "WireGuard."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**WireGuard** es una VPN moderna que crea un túnel seguro en la **capa de red (capa 3)** y se implementa como una **interfaz de red virtual en el núcleo de Linux** (incluida en el kernel desde la versión 5.6). Usa criptografía moderna fija (Curve25519, ChaCha20-Poly1305) y tiene un código muy pequeño. **MACsec** (IEEE 802.1AE) cifra en la **capa 2**, **IKEv2** es el protocolo de intercambio de claves de IPsec, no un túnel, y **EAPoL** es la encapsulación de EAP para 802.1X."
   },
   {
    "id": "p78",
@@ -1100,12 +1090,12 @@
     "Las características de redes Bluetooth de largo alcance."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**IEEE 802.3** es el estándar de **Ethernet**: define el control de acceso al medio (CSMA/CD en su origen) y la capa física de las redes cableadas, de 10 Mbps a 400 Gbps y más. Las redes **Wi-Fi** son **802.11**, Bluetooth se basó en el **802.15.1** y la seguridad de redes móviles no es cosa del 802.3. Truco: **802.3 = cable Ethernet; 802.11 = Wi-Fi**.",
    "tema_auto": true
   },
   {
    "id": "p79",
-   "tema": 33,
+   "tema": 28,
    "enunciado": "¿Qué tipo de cifrado es el algoritmo RSA?",
    "opciones": [
     "Un criptosistema de clave privada.",
@@ -1114,8 +1104,7 @@
     "Un criptosistema elipsoidal."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**RSA** (Rivest, Shamir y Adleman, 1977) es un **criptosistema de clave pública** o asimétrica: usa un par de claves (pública para cifrar o verificar, privada para descifrar o firmar), y su seguridad se basa en la dificultad de **factorizar el producto de dos primos grandes**. Los de clave privada o simétrica usan una sola clave compartida (AES, 3DES). «Elipsoidal» confunde con la criptografía de **curva elíptica** (ECC), que también es asimétrica pero distinta de RSA."
   },
   {
    "id": "p80",
@@ -1128,7 +1117,7 @@
     "Admite velocidades de datos de hasta 40 Gbps."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**QSFP+** (*Quad SFP+*) agrupa **cuatro canales de 10 Gbps** y admite hasta **40 Gbps** (40GBASE). **100 Gbps** corresponde a **QSFP28** (4 × 25 Gbps), y 16 Gbps es una velocidad de Fibre Channel. Truco: «Q» de *quad*, cuatro carriles: QSFP+ = 4 × 10 = 40; QSFP28 = 4 × 25 = 100.",
    "tema_auto": true
   },
   {
@@ -1142,7 +1131,7 @@
     ".dxk"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Los ejecutables de la máquina virtual Dalvik (y de su sucesora ART) tienen extensión **.dex** (*Dalvik Executable*): el bytecode Java o Kotlin compilado se convierte a formato DEX (classes.dex). La extensión **.apk** es el **paquete de instalación**, un ZIP que contiene los .dex, los recursos y el manifiesto. «.dvk» y «.dxk» no existen.",
    "reserva": true,
    "tema_auto": true
   },
@@ -1157,7 +1146,7 @@
     "BMP."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La **NTI de Catálogo de Estándares**, en la categoría «Formatos ficheros – Imagen y/o texto», incluye entre otros CSV, HTML, **CSS**, **JPEG**, PDF y PDF/A, PNG, SVG, **TIFF**, TXT, XHTML y ODF/OOXML. **BMP no aparece** en el catálogo: es un formato de mapa de bits sin compresión, poco eficiente y no abierto. Aunque CSS no sea una imagen, el catálogo lo clasifica en esa categoría, y esa es la trampa.",
    "reserva": true,
    "tema_auto": true
   },
@@ -1172,7 +1161,7 @@
     "IEEE 802.1AZ"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**IEEE 802.1AE** es **MACsec** (*MAC Security*): da confidencialidad, integridad y autenticidad de origen a las tramas Ethernet en la **capa de enlace**, salto a salto. Su gestión de claves se hace con **802.1X-2010** (MKA). Los demás no existen o son otra cosa; por ejemplo, **802.1AB** es LLDP y **802.3az** (no 802.1AZ) es Ethernet de eficiencia energética. Truco: MACsec protege la capa 2, IPsec la capa 3 y TLS la de transporte/aplicación.",
    "reserva": true,
    "tema_auto": true
   },
@@ -1187,7 +1176,7 @@
     "Definidos por el usuario, globales, de sistema y extendidos."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La documentación de SQL Server distingue estos tipos de procedimientos almacenados: **definidos por el usuario**, **temporales** (locales #, y globales ##), **del sistema** (prefijo sp_, en la base de datos Resource) y **extendidos definidos por el usuario** (xp_, DLL externas, en desuso a favor de CLR). «Locales», «globales» y «almacenados» no son tipos independientes: locales y globales son las dos clases de procedimientos **temporales**.",
    "reserva": true,
    "tema_auto": true
   },
@@ -1202,7 +1191,7 @@
     "Diagrama de componentes."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **diagrama de secuencia** es un diagrama de **interacción** UML que muestra los mensajes que se intercambian los objetos o participantes **ordenados en el tiempo**, con líneas de vida verticales. El de **clases** es estructural (clases, atributos y relaciones), el de **despliegue** muestra nodos físicos y artefactos y el de **componentes** las piezas de software y sus interfaces. Truco: si importa el orden de los mensajes, es de secuencia; si importan los enlaces entre objetos, de comunicación.",
    "reserva": true,
    "tema_auto": true
   }

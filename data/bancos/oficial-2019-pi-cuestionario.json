@@ -22,8 +22,9 @@
     "Certificados reconocidos de Autenticación y de Firma, y certificado electrónico de la autoridad emisora."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Según el **art. 11 del RD 1553/2005** (vigente cuando se celebró el examen de la OEP 2019), el chip del DNIe contenía los **certificados reconocidos de Autenticación y de Firma** y además el **certificado electrónico de la autoridad emisora**, junto con las claves privadas, la foto, la firma manuscrita y la plantilla de la huella. Las opciones con uno solo o con los dos certificados del titular se quedan cortas porque la pregunta pide «todos». Truco: dos certificados del ciudadano (autenticar y firmar) más el de la autoridad que los emite.",
+   "tema_auto": true,
+   "nota_vigencia": "El RD 1553/2005 fue derogado por el **RD 255/2025, de 1 de abril**, que regula hoy el DNI. Su art. 11.2 habla de «certificados electrónicos **cualificados**» (terminología eIDAS) de identificación y firma, con validez de dos años, y ya no menciona expresamente el certificado de la autoridad emisora. Hoy se respondería «certificados cualificados de autenticación y de firma»."
   },
   {
    "id": "p02",
@@ -36,8 +37,9 @@
     "10"
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La agenda **España Digital 2025** (julio de 2020) se articulaba en **10 ejes estratégicos**: conectividad, 5G, competencias digitales, ciberseguridad, transformación digital del sector público, de la empresa, proyectos tractores sectoriales, sector audiovisual, economía del dato e IA, y derechos digitales. 6, 9 y 12 son cifras de relleno.",
+   "tema_auto": true,
+   "nota_vigencia": "En julio de 2022 se actualizó como **España Digital 2026**: mantiene los diez ejes estratégicos, los agrupa en tres dimensiones (infraestructuras y tecnología, economía, personas) y añade **dos ejes transversales** (PERTE y RETECH), es decir, 12 en total. Si preguntan por la agenda vigente, ojo a esa cifra."
   },
   {
    "id": "p03",
@@ -50,7 +52,7 @@
     "Las sanciones por importe igual o inferior a 40.000 euros, prescriben en el plazo de tres años."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **art. 78.1 de la LOPDGDD** fija la prescripción de las sanciones por importe: hasta **40.000 €, un año**; de 40.001 a 300.000 €, dos años; más de 300.000 €, tres años. Diez meses no aparece en la ley. Truco: 1-2-3 años para las tres franjas de importe.",
    "tema_auto": true
   },
   {
@@ -64,7 +66,7 @@
     "Derecho al cifrado de la información."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El capítulo II del título III de la LOPDGDD (arts. 12 a 18) regula los derechos de **acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición** (art. 18). El derecho a indemnización existe en el RGPD (art. 82), pero no está en ese capítulo, y «custodia» o «cifrado» no son derechos del interesado. Truco: los clásicos ARCO más limitación y portabilidad.",
    "tema_auto": true
   },
   {
@@ -78,7 +80,7 @@
     "Marco organizativo, Marco operacional y Medidas técnicas."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La **Guía de auditoría del ENI** agrupa sus controles en tres categorías: **Marco organizativo, Marco operacional y Medidas técnicas**. La opción con «Medidas de protección» mezcla la estructura del ENS (marco organizativo, operacional y medidas de protección), que es la trampa principal. Truco: ENS protege, ENI es técnico.",
    "tema_auto": true
   },
   {
@@ -92,7 +94,7 @@
     "Desistir de acciones."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **art. 11.2 de la Ley 39/2015** solo exige firma para **formular solicitudes, presentar declaraciones responsables o comunicaciones, interponer recursos, desistir de acciones y renunciar a derechos**. Para el resto de actuaciones, como **acceder a las notificaciones**, basta con acreditar la identidad (art. 11.1). Truco: se firma cuando el interesado manifiesta su voluntad; para consultar o recibir, basta identificarse.",
    "tema_auto": true
   },
   {
@@ -106,7 +108,7 @@
     "Un experto propuesto por la Federación Española de Municipios y Provincias."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **art. 36.2 de la Ley 19/2013** compone la Comisión de Transparencia y Buen Gobierno con su Presidente, un Diputado, un Senador y un representante de cada uno de estos organismos: Tribunal de Cuentas, Defensor del Pueblo, AEPD, Secretaría de Estado de Administraciones Públicas y **Autoridad Independiente de Responsabilidad Fiscal (AIReF)**. No hay representantes del CGPJ, de la FEMP ni del Consejo de Consumidores y Usuarios.",
    "tema_auto": true
   },
   {
@@ -120,7 +122,7 @@
     "17"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La **Agenda 2030** de Naciones Unidas (2015) recoge **17 Objetivos de Desarrollo Sostenible** y 169 metas. 15, 12 y 16 son distractores; el ODS 16 es «Paz, justicia e instituciones sólidas» y el 17 «Alianzas para lograr los objetivos». Truco: 17 objetivos y 169 metas.",
    "tema_auto": true
   },
   {
@@ -134,7 +136,7 @@
     "Sólo en el caso de las empresas de cincuenta o más trabajadores."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **art. 45 de la LO 3/2007**, reformado por el RDL 6/2019, obliga a elaborar y aplicar un plan de igualdad a las empresas de **cincuenta o más trabajadores**, y también cuando lo establezca el **convenio colectivo** aplicable (o lo acuerde la autoridad laboral en un procedimiento sancionador). Por eso la opción que solo menciona los 50 trabajadores es incompleta. Para el resto de empresas el plan es voluntario, así que no se exige «siempre». Antes de 2019 el umbral era de 250 trabajadores.",
    "tema_auto": true
   },
   {
@@ -148,7 +150,7 @@
     "Grado IV. Dependencia máxima: cuando la persona necesita constantemente ayuda para realizar cualquier actividad básica de la vida diaria."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **art. 26 de la Ley 39/2006** define el **Grado I (dependencia moderada)** como la necesidad de ayuda para varias actividades básicas de la vida diaria **al menos una vez al día**, o de apoyo intermitente o limitado. Las demás alteran la escala: el Grado II es **dependencia severa** (no gran dependencia), el Grado III es **gran dependencia** (no «total») y no existe un Grado IV. Truco: moderada, severa, gran dependencia (I, II, III).",
    "tema_auto": true
   },
   {
@@ -162,7 +164,7 @@
     "Discos ópticos."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La **DRAM (memoria de acceso aleatorio dinámica)**, que es la RAM principal, es **volátil**: pierde su contenido sin alimentación y además necesita refresco periódico. Las memorias USB y flash (semiconductor no volátil) y los discos ópticos conservan los datos sin corriente. Truco: RAM = se borra al apagar.",
    "tema_auto": true
   },
   {
@@ -176,8 +178,9 @@
     "Hasta 50 Gbps."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La especificación **USB4** (versión 1.0, 2019), basada en Thunderbolt 3, alcanza **hasta 40 Gbps**. 20 Gbps es USB 3.2 Gen 2x2 (y el modo básico de USB4); 30 y 50 Gbps no corresponden a ningún modo USB.",
+   "tema_auto": true,
+   "nota_vigencia": "En 2022 se publicó **USB4 Version 2.0**, que llega a **80 Gbps** simétricos (hasta 120 Gbps en un sentido en modo asimétrico). La cifra de 40 Gbps sigue siendo la de USB4 v1, pero ya no es el máximo de USB4."
   },
   {
    "id": "p13",
@@ -190,7 +193,7 @@
     "Reorden"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El recorrido **preorden** visita primero la **raíz**, luego el subárbol izquierdo y después el derecho. En **inorden** la raíz va en medio (izquierdo, raíz, derecho) y en **postorden** al final (izquierdo, derecho, raíz); «reorden» no existe. Truco: el prefijo indica dónde va la raíz (pre = antes, in = en medio, post = después).",
    "tema_auto": true
   },
   {
@@ -204,12 +207,12 @@
     "Quicksort"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El método de la **burbuja** compara **pares de elementos adyacentes** y los intercambia si están desordenados, repitiendo pasadas hasta que no haya cambios; es O(n²). La **selección** busca el mínimo y lo coloca en su posición, la **inserción** inserta cada elemento en la parte ya ordenada y **quicksort** divide en torno a un pivote. Truco: los mayores «suben» como burbujas al final en cada pasada.",
    "tema_auto": true
   },
   {
    "id": "p15",
-   "tema": 12,
+   "tema": 13,
    "enunciado": "¿En Linux, qué tipo de proceso se corresponde con la característica de que, habiendo concluido, aún está presente en la tabla de procesos?",
    "opciones": [
     "Proceso zombie.",
@@ -218,12 +221,11 @@
     "Proceso demonio."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Un **proceso zombie** ha terminado (`exit`) pero **sigue en la tabla de procesos** porque su padre aún no ha recogido su estado con `wait()`; en `ps` aparece con estado **Z**. Un **huérfano** sigue vivo pero ha perdido a su padre (lo adopta init/systemd), un **demonio** es un proceso de servicio en segundo plano y «proceso perdido» no es un término estándar."
   },
   {
    "id": "p16",
-   "tema": 12,
+   "tema": 13,
    "enunciado": "En un entorno UNIX, tenemos los permisos \"rwxr-x-r–\" sobre un determinado fichero. ¿Qué acción o acciones puede hacer un usuario del grupo del propietario del fichero?",
    "opciones": [
     "Sólo leer.",
@@ -232,8 +234,7 @@
     "Sólo ejecutar."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Los permisos (que deben leerse **rwxr-xr--**, con el guion final mal impreso en el examen) se reparten en tríos: propietario **rwx**, grupo **r-x**, otros **r--**. Un usuario del **grupo** puede por tanto **leer y ejecutar**, pero no escribir. Solo leer es lo que pueden hacer los «otros». Truco: en octal es 754 (r=4, w=2, x=1)."
   },
   {
    "id": "p17",
@@ -246,7 +247,7 @@
     "Una clave primaria no puede ser nula, ni ninguno de los atributos que la componen."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La **regla de integridad de entidad** del modelo relacional dice que **ninguna clave primaria puede ser nula, ni ninguno de sus atributos**, porque identifica de forma única cada tupla. Lo de que la clave ajena coincida con una primaria (o sea nula) es la **integridad referencial**, y acotar valores es una restricción de **dominio**. Truco: entidad → clave primaria; referencial → clave ajena.",
    "tema_auto": true
   },
   {
@@ -260,7 +261,7 @@
     "Flujo de datos."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En los DFD de **Métrica v3**, el **proceso** representa la funcionalidad que **transforma** flujos de datos de entrada en flujos de salida. La **entidad externa** es un origen o destino fuera del sistema, el **almacén** guarda datos en reposo y el **flujo de datos** es el dato en movimiento entre componentes.",
    "tema_auto": true
   },
   {
@@ -274,12 +275,12 @@
     "Dominio"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **dominio** es el **conjunto de valores permitidos** para un atributo (por ejemplo, enteros entre 0 y 120 para la edad). La **entidad** es el objeto del mundo real que se modela y la **cardinalidad** indica cuántas ocurrencias participan en una relación. «Recorrido» es un término de funciones matemáticas, no del diseño de BD.",
    "tema_auto": true
   },
   {
    "id": "p20",
-   "tema": 14,
+   "tema": 15,
    "enunciado": "¿Cuál es uno de los motivos para aplicar la desnormalización en una base de datos?",
    "opciones": [
     "Mejorar el rendimiento.",
@@ -288,8 +289,7 @@
     "Mejor actualización del modelo de datos."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La **desnormalización** introduce redundancia controlada (columnas duplicadas, tablas precalculadas) para **evitar joins costosos y mejorar el rendimiento** de las consultas, sobre todo en sistemas de lectura intensiva o data warehouses. Hace justo lo contrario de las otras opciones: **aumenta** la redundancia y el tamaño y complica las actualizaciones. Truco: normalizar = integridad; desnormalizar = velocidad."
   },
   {
    "id": "p21",
@@ -302,7 +302,7 @@
     "Regla de la actualización de vistas."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La regla 7 de Codd es la de **inserción, actualización y borrado de alto nivel**: el SGBD debe permitir operar sobre **conjuntos** de filas, no fila a fila. Por eso la versión de «bajo nivel» no es regla de Codd. Sí lo son la independencia física de los datos (regla 8), la de no subversión (regla 12: el acceso de bajo nivel no puede saltarse las reglas de integridad) y la de actualización de vistas (regla 6).",
    "tema_auto": true
   },
   {
@@ -316,7 +316,7 @@
     "Se ejecuta una sola vez siempre y cuando sea verdadera la condición del bucle."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En un bucle **do…while**, el cuerpo **se ejecuta una vez antes de evaluar la condición**, así que siempre se ejecuta al menos una vez. Un `while` normal es el que solo entra si la condición es verdadera. La opción que evalúa primero y ejecuta después invierte el orden, y la de «una sola vez» es falsa: se repite mientras la condición se cumpla. Truco: do (haz) primero, while (mientras) después.",
    "tema_auto": true
   },
   {
@@ -330,7 +330,7 @@
     "CREATE NEW VALUE('PARIS') FOR City ON TABLE(Customers) REWRITE"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La sintaxis estándar es **`UPDATE tabla SET columna = valor [WHERE condición]`**, así que **`UPDATE Customers SET City='PARIS'`** es la correcta: sin `WHERE` actualiza todas las filas. Las demás inventan palabras clave (`UPDATE_TABLE`, `TABLE=` o `CREATE NEW VALUE`) que no existen en SQL.",
    "tema_auto": true
   },
   {
@@ -344,7 +344,7 @@
     "ALTER es una sentencia de Lenguaje de Control de Datos (DCL)."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**GRANT** (y REVOKE) pertenece al **DCL (Data Control Language)**, que gestiona permisos. **CREATE** y **ALTER** son **DDL** (definen estructuras) e **INSERT** es **DML** (manipula datos). Truco: DDL = CREATE/ALTER/DROP; DML = SELECT/INSERT/UPDATE/DELETE; DCL = GRANT/REVOKE.",
    "tema_auto": true
   },
   {
@@ -358,8 +358,9 @@
     "<caption> y <nav>"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La plantilla oficial da como respuesta la pareja **`<details>` y `<mark>`**. Sin embargo, ambas etiquetas son novedades de HTML5, igual que `<header>`, `<nav>` y `<footer>`. La única etiqueta que ya existía antes es **`<caption>`** (título de tabla, desde HTML 3.2), así que la pareja que de verdad no es «nueva» es la de `<caption>` y `<nav>`. Recuerda: las etiquetas semánticas de estructura (header, nav, section, article, aside, footer) y elementos como details, summary, mark, figure o time llegaron con HTML5.",
+   "tema_auto": true,
+   "nota_vigencia": "Posible error de la plantilla (o de la extracción de las opciones): `<details>` y `<mark>` se introdujeron en HTML5, y `<caption>` ya existía en HTML 3.2/4.01. Hoy se respondería **`<caption>` y `<nav>`**, la única pareja con una etiqueta anterior a HTML5."
   },
   {
    "id": "p26",
@@ -372,7 +373,7 @@
     "Los diagramas de casos de uso contienen almacenes, relaciones y casos de uso."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Un **diagrama de casos de uso de UML** contiene **actores** (roles externos), **casos de uso** (funcionalidades) y las **relaciones** entre ellos (asociación, include, extend, generalización), normalmente dentro de un límite del sistema. Los almacenes pertenecen a los DFD y «procedimientos» no es un elemento UML. Truco: monigote (actor) + óvalo (caso de uso) + líneas.",
    "tema_auto": true
   },
   {
@@ -386,7 +387,7 @@
     "Builder"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**Iterator** es un patrón GoF de **comportamiento**: permite recorrer los elementos de una colección sin exponer su estructura interna. **Adapter** y **Composite** son **estructurales**, y **Builder** es **creacional**. Truco: los creacionales «crean» (Builder, Factory, Singleton, Prototype); los estructurales «componen» (Adapter, Composite, Decorator, Facade, Proxy).",
    "tema_auto": true
   },
   {
@@ -400,12 +401,12 @@
     "JPaX"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**StAX (Streaming API for XML, JSR 173)** es una API de Java para procesar XML en flujo, con un modelo *pull* (el programa pide el siguiente evento), frente a SAX (*push*) y DOM (árbol en memoria). **JNI** y **JNA** sirven para llamar a código nativo (C/C++) desde Java, y «JPaX» no existe; la API real es **JAXP**. Truco: StAX = Streaming.",
    "tema_auto": true
   },
   {
    "id": "p29",
-   "tema": 20,
+   "tema": 23,
    "enunciado": "¿Cuál de los siguientes NO es un principio del Manifiesto Ágil?",
    "opciones": [
     "El software funcionando es la medida principal de progreso.",
@@ -414,8 +415,7 @@
     "Los responsables de negocio y los desarrolladores trabajamos juntos de manera cotidiana durante todo el proyecto."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El principio real del Manifiesto Ágil dice: «La **simplicidad**, o el arte de maximizar la cantidad de trabajo **no realizado**, es esencial». La opción cambia el sentido al hablar de trabajo «realizado». Los otros tres sí son principios literales: el software funcionando como medida de progreso, los individuos motivados y la colaboración diaria entre negocio y desarrolladores."
   },
   {
    "id": "p30",
@@ -428,7 +428,7 @@
     "SSDP (Simple Service Discovery Protocol)."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**UDDI (Universal Description, Discovery and Integration)** es el registro estándar para **publicar y descubrir servicios web** SOAP, que se describen con WSDL. **LLDP** descubre vecinos de red en capa 2, **SSDP** descubre dispositivos en UPnP y «WSDP» no es el estándar (el de descubrimiento en red local es WS-Discovery). Truco: SOAP para el mensaje, WSDL para describir y UDDI para encontrar.",
    "tema_auto": true
   },
   {
@@ -442,7 +442,7 @@
     "Bootstrap es una herramienta de desarrollo que permite realizar test de los servicios REST, aislando al programador del front-end."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Sass, Less y Stylus** son **preprocesadores de CSS**: añaden variables, anidación y mixins, y compilan a CSS normal. **Postman** sirve precisamente para probar APIs REST, **Node.js** está construido sobre el motor JavaScript **V8** de Google (no sobre Java) y **Bootstrap** es un framework CSS/JS de maquetación, no una herramienta de pruebas.",
    "tema_auto": true
   },
   {
@@ -456,7 +456,7 @@
     "Distinguible"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En **WCAG 2.1**, el principio **Comprensible** agrupa las pautas **Legible (3.1), Predecible (3.2) y Entrada de datos asistida (3.3)**. **Adaptable** y **Distinguible** pertenecen a **Perceptible**, y **Navegable** a **Operable**. Truco: los cuatro principios forman POUR (Perceptible, Operable, Comprensible-Understandable, Robusto). WCAG 2.2 (2023) mantiene esta estructura.",
    "tema_auto": true
   },
   {
@@ -470,7 +470,7 @@
     "Interfaz unidireccional (Unidirectional Interface) y experiencia unidireccional (Unidirectional eXperience)."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**UI** es la **interfaz de usuario (User Interface)**, es decir, la parte visual e interactiva (botones, pantallas), y **UX** es la **experiencia de usuario (User eXperience)**, cómo percibe el usuario la interacción en conjunto (facilidad, satisfacción). Las otras expansiones son inventadas.",
    "tema_auto": true
   },
   {
@@ -484,7 +484,7 @@
     "Cambiar el directorio de trabajo."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**`pwd` (print working directory)** muestra la **ruta del directorio de trabajo actual**. Para cambiar la contraseña se usa `passwd`, para ver los procesos `ps` y para cambiar de directorio `cd`. Truco: pwd = «¿dónde estoy?».",
    "tema_auto": true
   },
   {
@@ -498,7 +498,7 @@
     "traceroute"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**`nmap`** es el escáner de red estándar para descubrir hosts y **puertos abiertos** y los servicios que los escuchan (por ejemplo `nmap -sT servidor`). **`ntpq`** consulta servidores NTP, **`traceroute`** muestra los saltos hasta un destino y «ntport» no existe. En el propio servidor también sirven `ss -tuln` o `netstat`.",
    "tema_auto": true
   },
   {
@@ -512,7 +512,7 @@
     "Completa"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Los tipos clásicos de copia de seguridad son la **completa** (todo), la **incremental** (lo cambiado desde la última copia de cualquier tipo) y la **diferencial** (lo cambiado desde la última completa). **«Compartimental» no es un tipo de backup.** Truco: para restaurar una incremental necesitas la completa y todas las incrementales; con diferencial, la completa y la última diferencial.",
    "tema_auto": true
   },
   {
@@ -526,7 +526,7 @@
     "RAID 5"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**RAID 5** usa **striping a nivel de bloque con paridad distribuida** entre todos los discos y permite **acceso independiente** a cada disco; requiere un mínimo de 3. **RAID 4** también accede de forma independiente, pero con un **disco de paridad dedicado**; **RAID 3** usa paridad dedicada con acceso **paralelo/síncrono** (a nivel de byte) y **RAID 1** es espejo sin paridad. Truco: 3 y 4 tienen la paridad en un disco; 5 la reparte.",
    "tema_auto": true
   },
   {
@@ -540,7 +540,7 @@
     "Simple Managemet Trace Protocol."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**SMTP = Simple Mail Transfer Protocol** (RFC 5321), el protocolo para **enviar y transferir** correo entre servidores (puerto 25, 587 para envío autenticado). Las variantes con «Secure» son inventadas; la versión cifrada es SMTP con STARTTLS o SMTPS (465). Truco: casi todos los protocolos «S…P» clásicos empiezan por **Simple** (SMTP, SNMP).",
    "tema_auto": true
   },
   {
@@ -554,12 +554,12 @@
     "Net start all"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**`net start`** sin argumentos **lista los servicios en ejecución** en Windows; con un nombre de servicio, lo arranca (y `net stop` lo detiene). `net view` muestra equipos o recursos compartidos de la red, y las variantes `process` o `all` no existen. Alternativas modernas: `sc query` o `Get-Service` en PowerShell.",
    "tema_auto": true
   },
   {
    "id": "p40",
-   "tema": 13,
+   "tema": 27,
    "enunciado": "Indique cuál de los siguientes es un protocolo orientado a la gestión de los dispositivos de una red:",
    "opciones": [
     "SMTP",
@@ -568,8 +568,7 @@
     "IGMPv3"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**SNMP (Simple Network Management Protocol)** está diseñado para la **gestión y monitorización de dispositivos de red** (routers, switches, impresoras) mediante agentes, MIB y mensajes GET/SET/TRAP (puertos UDP 161/162). **SMTP** es correo, **HTTP** web e **IGMPv3** gestiona la pertenencia a grupos multicast, no dispositivos. Truco: la «N» de SNMP es de Network y la «M» de Management."
   },
   {
    "id": "p41",
@@ -582,7 +581,7 @@
     "Inyección."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "OWASP define la **inyección** (SQL, NoSQL, OS, LDAP…) como el fallo que ocurre cuando **datos no confiables se envían a un intérprete como parte de un comando o consulta**. El **XSS** consiste en inyectar scripts en páginas que ve otro usuario, la **exposición de datos sensibles** es no proteger datos (sin cifrado, por ejemplo) y las **redirecciones no validadas** desvían al usuario a sitios maliciosos. Desde el Top 10 de 2021, el XSS se integra dentro de la categoría Inyección.",
    "tema_auto": true
   },
   {
@@ -596,7 +595,7 @@
     "Phishing"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**Ryuk** es un **ransomware** (detectado en 2018 y muy activo contra administraciones y hospitales, también en España): **cifra los ficheros y pide un rescate**, a menudo tras una infección previa con Emotet o TrickBot. El **sniffing** captura tráfico, el **spoofing** suplanta identidades (IP, MAC, correo) y el **phishing** engaña al usuario para que entregue sus credenciales.",
    "tema_auto": true
   },
   {
@@ -610,7 +609,7 @@
     "Twofish"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**RSA** es un algoritmo de **clave pública (asimétrico)**, basado en la dificultad de factorizar números grandes. **Blowfish**, **IDEA** y **Twofish** son cifrados **simétricos** de bloque (una sola clave compartida). Truco: los asimétricos más citados son RSA, Diffie-Hellman, DSA y curvas elípticas (ECC).",
    "tema_auto": true
   },
   {
@@ -624,7 +623,7 @@
     "La frecuencia de 5 GHz tiene menor alcance que la de 2,4 GHz."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Se pide la afirmación **incorrecta**: **WEP es mucho menos seguro que WPA2**, porque su RC4 con IV de 24 bits se rompe en minutos, mientras que WPA2 usa AES-CCMP. Las demás son ciertas: 2,4 GHz comparte banda con Bluetooth, **WPA3** (2018) surgió en parte tras el **ataque KRACK** sustituyendo el PSK por **SAE**, y 5 GHz tiene **menor alcance** (atraviesa peor los obstáculos). Orden de seguridad: WEP < WPA < WPA2 < WPA3.",
    "tema_auto": true
   },
   {
@@ -638,7 +637,7 @@
     "802.11az"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Wi-Fi 6** es el nombre comercial de **IEEE 802.11ax** (OFDMA, MU-MIMO, hasta unos 9,6 Gbps teóricos). **802.11ac** es Wi-Fi 5 (Wave 2 es una mejora del mismo estándar) y **802.11az** trata de posicionamiento. Truco: n = Wi-Fi 4, ac = 5, ax = 6 (6E en 6 GHz) y be = Wi-Fi 7.",
    "tema_auto": true
   },
   {
@@ -652,7 +651,7 @@
     "FTP"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**UDP (User Datagram Protocol)** es, junto con **TCP**, un protocolo de la **capa de transporte** de TCP/IP: sin conexión y sin garantía de entrega. **SMTP** y **FTP** son de **aplicación**, y **ARP** resuelve IP a MAC entre la capa de red y la de enlace. Truco: transporte = TCP, UDP (y SCTP).",
    "tema_auto": true
   },
   {
@@ -666,7 +665,7 @@
     "Física, Enlace, Red, Transporte, Sesión, Aplicación y Presentación."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Las 7 capas OSI, de abajo arriba, son: **Física, Enlace, Red, Transporte, Sesión, Presentación y Aplicación**. Las demás opciones intercambian Sesión y Presentación, o Red y Transporte. Regla mnemotécnica: «**F**ui **E**n **R**ed **T**ras **S**u **P**rimera **A**parición» (F-E-R-T-S-P-A).",
    "tema_auto": true
   },
   {
@@ -680,7 +679,7 @@
     "SOA"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El registro **SOA (Start of Authority)** es el primero de cada zona DNS y contiene sus **datos básicos**: servidor primario, correo del responsable, número de serie y temporizadores (refresh, retry, expire, TTL mínimo). **AAAA** asocia un nombre con una IPv6, **PTR** hace la resolución inversa (IP → nombre) y **MX** indica los servidores de correo del dominio.",
    "tema_auto": true
   },
   {
@@ -694,7 +693,7 @@
     "ANA"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**CLAUDIA** es la herramienta del CCN-CERT para la **detección de amenazas complejas en el puesto de usuario** (endpoint), complementaria de CARMEN, que vigila la red. **MARIA** es una plataforma multiantivirus de análisis estático de código dañino, **GLORIA** es el SIEM para correlar eventos y **ANA** sirve para la automatización y normalización de auditorías (gestión de activos y vulnerabilidades).",
    "tema_auto": true
   },
   {
@@ -708,7 +707,7 @@
     "Buy Yet-Only Divided Device."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**BYOD = Bring Your Own Device** («trae tu propio dispositivo»): los empleados usan sus dispositivos personales para trabajar, lo que exige políticas de seguridad y herramientas MDM/MAM. Las demás expansiones son inventadas. Términos relacionados: COPE (dispositivo corporativo con uso personal) y CYOD (eliges entre los que ofrece la empresa).",
    "tema_auto": true
   },
   {
@@ -722,7 +721,7 @@
     "Tiene tres espacios de memoria separados, uno para datos, otro para instrucciones y otro para la memoria no volátil."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La **arquitectura Harvard** tiene **memorias y buses separados para instrucciones y para datos**, lo que permite leer una instrucción y un dato a la vez. Tener **un único espacio** para ambos es justo la arquitectura **Von Neumann** (y su «cuello de botella»), así que Harvard no es un tipo de Von Neumann, y no existen tres espacios. Es típica de DSP y microcontroladores, y las cachés L1 separadas de los procesadores actuales siguen esta idea.",
    "reserva": true,
    "tema_auto": true
   },
@@ -737,13 +736,13 @@
     "Una aplicación para móviles que ofrece la Agencia Estatal de Administración Tributaria para generar y presentar la declaración de la renta."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**FACILITA RGPD** es una herramienta gratuita de la **Agencia Española de Protección de Datos** que ayuda a empresas y profesionales que tratan **datos personales de escaso riesgo** a cumplir el RGPD (genera documentación como cláusulas informativas o el registro de actividades). Existe también **Facilita Emprende**, para startups. Las demás funcionalidades atribuidas son inventadas.",
    "reserva": true,
    "tema_auto": true
   },
   {
    "id": "pr03",
-   "tema": 6,
+   "tema": 8,
    "enunciado": "Según el Esquema Nacional de Seguridad, ¿cuál de las siguientes medidas de seguridad afecta a la dimensión de Trazabilidad?",
    "opciones": [
     "Copias de seguridad.",
@@ -752,13 +751,12 @@
     "Firma electrónica."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "reserva": true,
-   "tema_auto": true
+   "explicacion": "En el ENS, la **trazabilidad [T]** permite saber quién hizo qué y cuándo, y la medida que la protege es la de **sellos de tiempo** (mp.info.5 en el RD 3/2010, vigente en el examen; **mp.info.4** en el actual RD 311/2022, solo exigible en categoría alta). La **firma electrónica** protege la integridad y la autenticidad [I, A], las **copias de seguridad** la disponibilidad [D] y el **cifrado** la confidencialidad (y la integridad). Recuerda las cinco dimensiones: C, I, T, A, D.",
+   "reserva": true
   },
   {
    "id": "pr04",
-   "tema": 18,
+   "tema": 11,
    "enunciado": "En tecnologías de almacenamiento, el término SAS se corresponde con:",
    "opciones": [
     "Serial Attached State.",
@@ -767,13 +765,12 @@
     "Solid Advanced SCSI."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "reserva": true,
-   "tema_auto": true
+   "explicacion": "**SAS = Serial Attached SCSI**: interfaz serie punto a punto que sustituyó al SCSI paralelo en servidores y cabinas (12 Gbps en SAS-3, 22,5 Gbps en SAS-4), y que admite también discos SATA. Las demás expansiones son inventadas. Truco: SAS es a SCSI lo que SATA es a ATA, la versión serie.",
+   "reserva": true
   },
   {
    "id": "pr05",
-   "tema": 11,
+   "tema": 21,
    "enunciado": "En el contexto de HTML5, si queremos ocultar una parte de la pantalla hasta que un usuario haya hecho \"log in\", utilizaremos:",
    "opciones": [
     "El atributo hidden.",
@@ -782,9 +779,8 @@
     "La etiqueta iframe."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "reserva": true,
-   "tema_auto": true
+   "explicacion": "El **atributo global `hidden`** de HTML5 indica que el elemento **aún no es relevante o ya no lo es** y el navegador no lo muestra; el propio estándar pone como ejemplo ocultar contenido hasta que el usuario inicia sesión. «non visible» no es un valor válido (en CSS sería `display:none` o `visibility:hidden`), **`<aside>`** marca contenido lateral relacionado e **`<iframe>`** incrusta otro documento.",
+   "reserva": true
   }
  ]
 }

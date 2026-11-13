@@ -24,13 +24,13 @@
     "65536"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Dividir la red **10.9.0.0/16** en **16 subredes** requiere 4 bits más (2⁴ = 16), así que cada subred es una **/20**. Quedan **32 − 20 = 12 bits** de host: 2¹² = 4096 direcciones, menos la de red y la de difusión, dan **4094 hosts**. La última subred es la 10.9.240.0/20 (difusión 10.9.255.255), comprobado con Python. 4096 olvida restar esas dos direcciones, y 65534 y 65536 corresponden a toda la /16 sin dividir.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s202",
-   "tema": 12,
+   "tema": 24,
    "enunciado": "Al arrancar el servidor donde se aloja la web de profesores, aparecen errores en la partición sda8. ¿Qué comando hay que usar para reparar de forma automática los errores en el sistema de ficheros correspondiente, que no ha podido montarse?",
    "opciones": [
     "mount –T /dev/sda8",
@@ -39,9 +39,8 @@
     "checkdisk /dev/sda8"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**fsck** (file system check) comprueba y repara sistemas de ficheros en Linux, y la opción **-y** responde «sí» automáticamente a todas las reparaciones; debe ejecutarse con la partición **desmontada**, que es el caso. **mount** monta sistemas de ficheros, no los repara; **-m** no es la opción de reparación automática de fsck; y **checkdisk** no existe en Linux (chkdsk es la herramienta equivalente de Windows).",
+   "contexto": "s2"
   },
   {
    "id": "s203",
@@ -54,7 +53,7 @@
     "Disponer del puerto TCP/80, configurando el servidor web para que lleve a cabo una redirección automática de HTTP a HTTPS."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El CCN recomienda **mantener el puerto TCP/80 abierto solo para redirigir automáticamente de HTTP a HTTPS** (por ejemplo con un 301), de modo que quien escriba la dirección sin «https» acabe en la web segura; se complementa con la cabecera **HSTS** para que el navegador use HTTPS directamente las siguientes veces. Mostrar una web estática en el 80, mover HTTPS a un puerto no estándar (seguridad por oscuridad) o analizar cabeceras en el 80 no resuelven el problema.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -69,13 +68,13 @@
     "Disrupción."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **tailgating o piggybacking** consiste en **colarse detrás de una persona autorizada** aprovechando que abre una puerta con control de acceso. El **quid pro quo** ofrece algo a cambio de información o acceso (por ejemplo, falso soporte técnico), y el **pretexto (pretexting)** inventa una historia o personaje creíble para engañar a la víctima. «Disrupción» no es una técnica de ingeniería social. Las contramedidas típicas son las esclusas, los tornos y la concienciación del personal.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s205",
-   "tema": 32,
+   "tema": 33,
    "enunciado": "El organismo tiene, para controlar la seguridad física del CPD, un circuito cerrado de televisión con cámaras que usa una red coaxial y se necesita interconectar esta red a la red local Ethernet para poder monitorizarlas. ¿Con qué dispositivo de red puede hacerlo?",
    "opciones": [
     "Un cortafuegos (firewall).",
@@ -84,9 +83,8 @@
     "Un repetidor (repeater)."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "Una **pasarela (gateway)** interconecta redes **de distinta naturaleza o protocolo**, y traduce entre ellas hasta los niveles superiores si hace falta: aquí, la red coaxial del CCTV y la LAN Ethernet. Un **repetidor** solo regenera la señal (nivel 1) dentro del mismo tipo de red, un **switch** conmuta tramas entre equipos de la misma tecnología (nivel 2) y un **cortafuegos** filtra tráfico por seguridad, no adapta tecnologías.",
+   "contexto": "s2"
   },
   {
    "id": "s206",
@@ -99,7 +97,7 @@
     "FTP es un protocolo de usuario y DNS es un protocolo de soporte."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Los documentos de requisitos de los hosts de Internet (RFC 1123) dividen los protocolos de aplicación de TCP/IP en **protocolos de usuario**, que prestan servicio directamente a los usuarios (**FTP**, Telnet, SMTP), y **protocolos de soporte**, que dan funciones comunes al sistema (**DNS**, SNMP, BOOTP/DHCP). Por eso FTP es de usuario y DNS de soporte. Tampoco es cierto que DNS sea siempre orientado a conexión: usa normalmente **UDP/53** (y TCP para respuestas grandes y transferencias de zona).",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -114,13 +112,13 @@
     "Asignar todos los hosts conectados a cualquier puerto del switch a la VLAN 1."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En Cisco IOS, **switchport access vlan 1** se ejecuta en el **modo de configuración de una interfaz** (tras «interface FastEthernet0/1», por ejemplo) y **asigna ese puerto, en modo acceso, a la VLAN 1**. El «1» es el número de VLAN, no el del puerto; para ver los puertos de cada VLAN se usa **show vlan brief**; y el comando afecta solo a la interfaz configurada, no a todos los equipos del switch.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s208",
-   "tema": 12,
+   "tema": 28,
    "enunciado": "La base de datos se ha corrompido y además, los usuarios no pueden acceder a la información. Se tiene toda la información de cómo se produjo el incidente y cuál es la persona que lo ha causado y por qué, pero, este incidente, ¿a qué dimensión o dimensiones de la seguridad afecta?",
    "opciones": [
     "A la disponibilidad porque no está accesible la base de datos y la integridad porque el fichero de la base de datos está corrupto.",
@@ -129,9 +127,8 @@
     "A la trazabilidad, porque no podremos averiguar lo que ha pasado por mucho que nos esforcemos, la seguridad es así."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "Hay dos dimensiones afectadas: la **integridad**, porque los datos se han **corrompido**, y la **disponibilidad**, porque los usuarios **no pueden acceder**. No se ve afectada la **trazabilidad**, ya que se sabe quién causó el incidente, cómo y por qué; ni la **confidencialidad**, porque nada indica que los datos se hayan revelado a terceros. Las cinco dimensiones del ENS son: **confidencialidad, integridad, trazabilidad, autenticidad y disponibilidad** (truco: «CITAD»).",
+   "contexto": "s2"
   },
   {
    "id": "s209",
@@ -144,7 +141,7 @@
     "A que el cable del dispositivo es coaxial y no Ethernet."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En muchas tarjetas y switches Gigabit Ethernet, el LED de enlace indica la velocidad negociada: **verde para 1 Gbps** y **naranja/ámbar para una velocidad menor** (10/100 Mbps), por ejemplo porque la tarjeta del dispositivo no admite Gigabit. Si no hubiera conexión, el LED estaría **apagado**; una VLAN mal configurada no cambia el color del LED; y un cable coaxial ni siquiera podría conectarse a un puerto RJ-45. El código de colores depende del fabricante, pero este es el convenio más habitual.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -159,7 +156,7 @@
     "kexec -l"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**uname -r** muestra la **versión (release) del kernel** en ejecución, por ejemplo 6.8.0-45-generic. **uname -o** muestra el **sistema operativo** (GNU/Linux), **dpkg -i** **instala** paquetes .deb y **kexec -l** carga un kernel para arrancarlo directamente sin pasar por la BIOS. Truco: uname -a muestra toda la información de golpe.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -174,7 +171,7 @@
     "FTPS no contiene comandos estandarizados para manipular directorios o listar atributos, mientras que SFTP sí."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La afirmación incorrecta es la que asigna a cada uno un único método de autenticación: tanto **SFTP** como **FTPS** admiten **usuario y contraseña**, y también **claves o certificados** (SFTP con claves públicas SSH y FTPS con certificados X.509 de cliente). El resto es lo que suele contarse en las comparativas: SFTP usa el **puerto 22** de SSH y **un único canal** para comandos y datos, mientras que FTPS es FTP sobre TLS (990 implícito o 21 con AUTH TLS explícito) y usa **canal de control y canal de datos** separados. Sobre los comandos de directorios, FTP sí tiene MKD, RMD o LIST, pero el formato de los listados no estaba estandarizado (hasta MLSD, RFC 3659), mientras que SFTP sí define operaciones y atributos de fichero.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -189,7 +186,7 @@
     "Es un ataque masivo a una organización ocurrido por un fallo que no se había advertido hasta ese momento y, por tanto, no se cuenta con la salvaguarda o parche para prevenirlo."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El CCN define una **APT (Advanced Persistent Threat)** como un **ataque selectivo de ciberespionaje o cibersabotaje** llevado a cabo bajo el auspicio o la dirección de un **país u organización adversaria**, por razones que van más allá de las financieras, delictivas o de protesta política. Es avanzada, sigilosa y **persistente** (permanece mucho tiempo en la red, con movimiento lateral). Los distractores describen otras amenazas: **ransomware** (WannaCry), suplantación con escalada de privilegios y vulnerabilidades **zero-day**. **CLAUDIA** es la herramienta del CCN para detectar estas amenazas en los equipos.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -204,7 +201,7 @@
     "UDP (por defecto) y TCP."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Los **Services de Kubernetes** admiten los protocolos **TCP** (el valor **por defecto**), **UDP** y **SCTP**. HTTP y HTTPS no son valores del campo protocol de un Service (funcionan por encima de TCP y se gestionan, por ejemplo, con Ingress), y SSH y SFTP son protocolos de aplicación. Además, el valor por defecto es TCP, no UDP.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -219,7 +216,7 @@
     "Formatear a fábrica todos los dispositivos móviles."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **enrolamiento** consiste en **registrar cada dispositivo en el sistema MDM** de la organización y **asociarlo a su usuario**, para que el MDM pueda aplicarle políticas de seguridad, configuraciones, aplicaciones y borrado remoto. Dar de alta los móviles en una base de datos cualquiera, insertar las SIM o restaurarlos a fábrica pueden ser pasos previos u operativos, pero no son el enrolamiento.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -250,7 +247,7 @@
     "El hash es la firma del CCN de la página web donde se presenta la herramienta que estamos intentando descargar y es una medida para evitar que los hackers puedan manipular la página y subir otro fichero en vez del que se pretende descargar."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **hash** publicado junto a la descarga sirve para **verificar la integridad**: calculas el hash del fichero descargado (por ejemplo con **sha256sum** o **Get-FileHash**) y, si **no coincide** con el publicado, el fichero se ha corrompido o manipulado y no debe usarse. Un hash **no limpia** el malware; **no es una firma** (no identifica a quien lo publica, para eso hace falta una firma digital con certificado); y no certifica productos para sistemas de categoría ALTA o clasificados.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -265,7 +262,7 @@
     "La CPU del ordenador es insuficiente y provoca estos problemas."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**SIP** y el audio **RTP** llevan dentro de los mensajes direcciones IP y puertos privados que **NAT** no traduce, así que el flujo de medios se pierde o se corta en las llamadas con el exterior, mientras que entre usuarios internos (sin NAT) todo funciona. Se resuelve con un **SBC** (Session Border Controller), un **ALG** SIP o técnicas como **STUN/TURN/ICE**. Un problema de códecs o de CPU afectaría también a las llamadas internas, y un bloqueo en el cortafuegos impediría la llamada, no la cortaría de forma intermitente.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -280,7 +277,7 @@
     "Con POP3, si los usuarios organizan sus correos electrónicos en un dispositivo mediante carpetas, ya no tendrán que hacerlo en el resto de dispositivos porque se replica la organización en carpetas."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La afirmación incorrecta es la de POP3: con **POP3** los correos se **descargan al dispositivo**, de modo que las carpetas y la organización son **locales** y **no se replican** en otros dispositivos. La **sincronización entre dispositivos** es justamente la ventaja de **IMAP**, que guarda los mensajes y las carpetas en el servidor hasta que el usuario los borra. Lo demás es correcto: POP3 solo sincroniza en un sentido (del servidor al cliente).",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -295,7 +292,7 @@
     "sudo mysql -u root -p"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En MySQL las cuentas se guardan en la tabla **mysql.user**, y cada cuenta se identifica por el par **user@host**: con **SELECT user, host FROM mysql.user** se ve qué usuarios hay y desde qué host o IP pueden conectarse. Seleccionar solo **user** no muestra el host; **all_users** es una vista de **Oracle**, no de MySQL; y **mysql -u root -p** solo **abre la consola** como root, sin consultar nada.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -310,7 +307,7 @@
     "Relaciones de confianza entre el Directorio Activo actual y el dominio de seguridad del grupo de usuarios Profesores."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La buena práctica es crear primero una **Unidad Organizativa (OU)** para los usuarios del grupo Profesores, porque las **GPO se vinculan a sitios, dominios y OU**, no directamente a grupos de seguridad (los grupos solo se usan para filtrar la aplicación de una GPO). No hace falta un nuevo **bosque** ni **relaciones de confianza**, que son para unir dominios o bosques distintos, y las ACL de la GPO se ajustan después, si se quiere filtrar por seguridad.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -325,7 +322,7 @@
     "Editando el parámetro $helo_name en /etc/postfix/main.cf y reiniciando posteriormente el servidor Postfix."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La configuración general de Postfix está en **/etc/postfix/main.cf**, y tras cambiarla hay que **recargar o reiniciar** Postfix (postfix reload). El nombre que se presenta en el HELO/EHLO lo controla el parámetro **smtp_helo_name** (por defecto vale **$myhostname**); la opción oficial lo llama «$helo_name», un nombre impreciso, pero es la única que acierta con el fichero y el procedimiento. **master.cf** define los **servicios y procesos** de Postfix, no ese parámetro; «$client» no es el parámetro del HELO; y EHLO es un comando del protocolo SMTP, no una forma de configurar el servidor.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -341,7 +338,7 @@
     "Una contraseña de 192 bits usando el algoritmo GMCP-256."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**WPA3-Enterprise** usa **802.1X**: cada usuario se autentica con sus credenciales o un certificado mediante **EAP** contra un **servidor RADIUS** (por ejemplo con **EAP-TLS**), no con una contraseña compartida. La contraseña compartida es propia del modo **Personal** (WPA3-SAE). El «modo de 192 bits» de WPA3-Enterprise se refiere a la **fortaleza criptográfica** (suite CNSA, con **GCMP-256**), no a la longitud de una contraseña.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -357,7 +354,7 @@
     "CREATE TABLE ProfesoresIngles (nombre, apellido);"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La sentencia correcta sigue la sintaxis **CREATE TABLE nombre (columna tipo [restricciones], …)**: un **id INT NOT NULL PRIMARY KEY AUTO_INCREMENT** (AUTO_INCREMENT es la forma de MySQL de generar el identificador) y columnas **VARCHAR(30)** para el nombre y los apellidos. Las demás no son SQL válido: faltan los paréntesis y los **tipos de datos**, «KEY» no se usa así, y «CREAR TABLA» no existe porque las palabras clave van en inglés.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -367,13 +364,13 @@
    "tema": 24,
    "enunciado": "Ha instalado el servicio Nagios para monitorizar los servidores y servicios en su sistema y quiere monitorizar, además, la URL de profesores (https://profesores.es), pero antes quiere comprobar que este servicio está configurado correctamente. Para ello, utilizará el comando:",
    "opciones": [
-    "nagios –v /usr/local/nagios/etc/nagios.cfg",
+    "nagios -v /usr/local/nagios/etc/nagios.cfg",
     "/mnt/nagios –check",
     "systemctl status nagios",
     "https://profesores.es nagios"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**nagios -v /usr/local/nagios/etc/nagios.cfg** **verifica la configuración** de Nagios (objetos, comandos, servicios, hosts) sin arrancarlo, y conviene ejecutarlo antes de reiniciar el servicio tras añadir un nuevo servicio a monitorizar, como la URL. **systemctl status nagios** solo muestra si el servicio está en marcha, no si la configuración es correcta; «/mnt/nagios –check» y «https://profesores.es nagios» no son comandos válidos.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -389,7 +386,7 @@
     "La versión mínima aceptable es la 1.1 y se recomienda usar la 1.3"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Las guías CCN-STIC del **CCN** sobre configuración segura de TLS fijan **TLS 1.2 como versión mínima aceptable** y **recomiendan TLS 1.3**. **TLS 1.0 y 1.1** están **obsoletas** (desaprobadas formalmente por el **RFC 8996** en 2021) y no deben usarse, al igual que todas las versiones de SSL. Truco: «mínimo 1.2, ideal 1.3».",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true

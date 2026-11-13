@@ -22,7 +22,7 @@
     "La imagen de la fotografía."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El chip del DNIe tiene tres zonas: en la **zona de seguridad**, que el ciudadano puede leer en los **Puntos de Actualización del DNIe**, están los datos de filiación, la **imagen de la fotografía** y la imagen de la firma manuscrita. Los certificados de **Autenticación** y de **Firma** van en la **zona privada**, protegidos por el PIN, y el certificado de la CA intermedia emisora está en la **zona pública**, accesible sin restricciones. Truco: pública = lo de la CA; privada = lo que usa tu PIN; seguridad = lo que «se ve» en el documento (foto y firma).",
    "tema_auto": true
   },
   {
@@ -36,7 +36,7 @@
     "A la supresión automática y obligatoria de los datos personales del fallecido."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **artículo 96 de la LOPDGDD** regula el **testamento digital**: las personas vinculadas al fallecido o sus herederos pueden dirigirse a los **prestadores de servicios de la sociedad de la información** para acceder a sus contenidos e impartir instrucciones sobre su utilización, destino o supresión (salvo que el fallecido lo hubiera prohibido). No trata de activos financieros ni de la herencia de dispositivos físicos, que se rigen por el Código Civil. Tampoco impone una supresión automática: la supresión es una de las instrucciones que se pueden pedir, no un efecto obligatorio.",
    "tema_auto": true
   },
   {
@@ -50,7 +50,7 @@
     "16 años."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Según el **artículo 7.1 de la LOPDGDD**, el menor puede consentir por sí mismo el tratamiento de sus datos **a partir de los 14 años**; por debajo, consienten los titulares de la patria potestad o tutela. El RGPD (art. 8) fija por defecto 16 años para servicios de la sociedad de la información, pero deja a los Estados bajarlo hasta un mínimo de 13; España eligió 14. Truco: 13 es el mínimo europeo, 16 el valor por defecto del RGPD, 14 el español.",
    "tema_auto": true
   },
   {
@@ -64,7 +64,7 @@
     "Bloqueo de puesto de trabajo."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En la tabla del Anexo II del ENS, el **análisis de impacto (op.cont.1)** es una medida de continuidad del servicio y se aplica solo a la dimensión de **Disponibilidad (D)**. El **registro de la actividad (op.exp.8)** afecta a la Trazabilidad (T), los **requisitos de acceso (op.acc.2)** a Confidencialidad, Integridad, Trazabilidad y Autenticidad (sin D), y el **bloqueo de puesto de trabajo (mp.eq.2)** a la Autenticidad (A). Truco: todo lo que empieza por «op.cont» (continuidad) es de disponibilidad.",
    "tema_auto": true
   },
   {
@@ -78,7 +78,7 @@
     "Categoría de seguridad de un sistema."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El glosario del **Anexo IV del ENS** define el **compromiso de la seguridad** como el incidente en el que, por una violación de las medidas técnicas u organizativas, una información o un servicio quedan **expuestos, o potencialmente expuestos, a un acceso no autorizado**. **Ciberincidente** es cualquier incidente relacionado con la seguridad de las TIC que se produce en el ciberespacio, y **ciberataque** es una conducta dolosa contra los sistemas para sustraer, alterar, destruir o inutilizar activos. La **categoría de seguridad** (básica, media o alta) es el grado que se asigna a un sistema para elegir sus medidas, no un incidente.",
    "tema_auto": true
   },
   {
@@ -92,7 +92,7 @@
     "Durante las 24 horas de todos los días del año, excepto los días declarados como inhábiles en cada ámbito territorial y los declarados como inhábiles para todo el territorio nacional."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **artículo 17** que el Real Decreto 209/2003 introdujo en el RD 772/1999 establece que la presentación en los registros telemáticos puede hacerse **durante las 24 horas de todos los días del año**, sin excepciones por sábados, domingos ni festivos. Los días inhábiles no impiden presentar; solo afectan al cómputo de plazos. Hoy la misma regla está en el **artículo 31.2 de la Ley 39/2015**: el registro electrónico admite documentos todos los días del año durante las 24 horas, y lo presentado en día inhábil se entiende hecho en la primera hora del primer día hábil siguiente.",
    "tema_auto": true
   },
   {
@@ -106,7 +106,7 @@
     "Erradicación de la pobreza."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **ODS 1 es «Fin de la pobreza»** (erradicar la pobreza en todas sus formas). La lucha contra el hambre es el **ODS 2 (Hambre cero)**, la producción y el consumo responsables el **ODS 12** y paz, justicia e instituciones sólidas el **ODS 16**. Truco: los dos primeros ODS son las necesidades más básicas, primero la pobreza y después el hambre.",
    "modificada_en_definitiva": true,
    "tema_auto": true
   },
@@ -121,7 +121,7 @@
     "Un representante de la Agencia Estatal de Administración Tributaria."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Según el **artículo 36 de la Ley 19/2013**, la Comisión de Transparencia y Buen Gobierno la forman su Presidente, un Diputado, un Senador y un representante de cada uno de estos: **Tribunal de Cuentas, Defensor del Pueblo, Agencia Española de Protección de Datos, Secretaría de Estado de Administraciones Públicas y Autoridad Independiente de Responsabilidad Fiscal (AIReF)**. No están el Tribunal Constitucional, la AEAT ni una «Subsecretaría de Estado» de Hacienda (que, además, no existe como tal). Truco: son órganos de control (Cortes, Tribunal de Cuentas, Defensor, AEPD, AIReF) más la Secretaría de Estado responsable de la Administración.",
    "tema_auto": true
   },
   {
@@ -135,7 +135,7 @@
     "38 por ciento."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **artículo 4.2 del Texto Refundido de la Ley General de derechos de las personas con discapacidad** considera persona con discapacidad a quien tenga reconocido un grado igual o superior al **33 por ciento**. También se equiparan a ese grado, entre otros, los pensionistas de la Seguridad Social con incapacidad permanente total, absoluta o gran invalidez. Las cifras de 30, 35 y 38 % son distractores; el umbral clave es 33 %.",
    "tema_auto": true
   },
   {
@@ -149,7 +149,7 @@
     "Se considera acoso sexual la situación en que se encuentra una persona que sea, haya sido o pudiera ser tratada, en atención a su sexo, de manera menos favorable que otra en situación comparable."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **artículo 6.1 de la Ley Orgánica 3/2007** define la **discriminación directa** como la situación de quien es, ha sido o pudiera ser tratado, en atención a su sexo, de manera menos favorable que otra persona en situación comparable. La **indirecta** (art. 6.2) es la que produce una disposición, criterio o práctica **aparentemente neutros** que ponen a las personas de un sexo en desventaja particular. El acoso sexual y el acoso por razón de sexo se definen en el artículo 7 y consisten en comportamientos que atentan contra la dignidad, no en un trato comparativo menos favorable.",
    "tema_auto": true
   },
   {
@@ -163,7 +163,7 @@
     "Requiere cabezales de lectura mecánicos para acceder a los datos almacenados."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Un **SSD** almacena los datos en **memoria flash NAND, no volátil**, y **no tiene partes móviles**, lo que le da menor latencia y más resistencia a golpes que un disco duro. Los discos magnéticos giratorios y los cabezales mecánicos son propios del **HDD**. La RAM es volátil (pierde los datos sin corriente), así que no sirve para almacenamiento persistente.",
    "tema_auto": true
   },
   {
@@ -177,7 +177,7 @@
     "Transferir datos, direcciones y señales de control entre la CPU, la memoria y los periféricos."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **bus del sistema** es el conjunto de líneas que comunica CPU, memoria y E/S, y se divide en **bus de datos, bus de direcciones y bus de control**. Ejecutar instrucciones es tarea de la **CPU**, suministrar energía es tarea de la **fuente de alimentación** y el almacenamiento permanente corresponde a los **discos (HDD/SSD)**. Truco: las tres funciones de la respuesta (datos, direcciones, control) coinciden con los tres buses.",
    "tema_auto": true
   },
   {
@@ -191,7 +191,7 @@
     "El tipo MIME registrado para CSV es “application/csv”."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La **RFC 4180** establece que cada registro va en una línea terminada en **CRLF** y que los campos que contienen **comas, comillas dobles o saltos de línea** deben ir **entre comillas dobles**; una comilla dentro del campo se escapa duplicándola (\"\"). Por eso las comillas dobles no están prohibidas, y un campo sí puede llevar comas si va entrecomillado. El tipo MIME registrado es **text/csv**, no application/csv.",
    "tema_auto": true
   },
   {
@@ -205,7 +205,7 @@
     "object, array, number, string, boolean y NaN."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La **RFC 8259** dice que un valor JSON es un **object, array, number o string**, o uno de los tres literales **true, false y null** (en minúsculas). JSON no tiene tipo date (las fechas van como string), ni undefined, ni function, ni NaN: son conceptos de JavaScript que JSON no admite. Truco: 4 tipos estructurados o primitivos y 3 literales.",
    "tema_auto": true
   },
   {
@@ -219,7 +219,7 @@
     "Microkernel L4."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**Android** se basa en el **kernel de Linux** (en las versiones recientes, ramas LTS del kernel modificadas por Google, el «Android Common Kernel»). El **Mach** es la base del XNU de macOS/iOS, el **kernel NT** es el de Windows y **L4** es una familia de microkernels usada en sistemas embebidos, pero no en Android.",
    "tema_auto": true
   },
   {
@@ -233,7 +233,7 @@
     "Cambiar los permisos de acceso de un archivo o directorio."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**chmod** (change mode) cambia los **permisos** de lectura, escritura y ejecución de un archivo o directorio, en notación octal (`chmod 755 f`) o simbólica (`chmod u+x f`). El propietario se cambia con **chown**, el grupo de un archivo con **chgrp**, los grupos de un usuario con **usermod -aG** y los enlaces simbólicos se crean con **ln -s**.",
    "tema_auto": true
   },
   {
@@ -247,7 +247,7 @@
     "El dominio es 4 y la cardinalidad 7."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En el modelo relacional, el **grado** de una relación es su **número de atributos (columnas)** y la **cardinalidad** es su **número de tuplas (filas)**: aquí, grado 4 y cardinalidad 7. El **dominio** es el conjunto de valores posibles de un atributo, no un recuento de filas ni de columnas. Truco: el grado es «de ancho» y la cardinalidad «de alto».",
    "tema_auto": true
   },
   {
@@ -261,12 +261,12 @@
     "Derivado."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "En la notación de Chen, la **elipse discontinua** indica un **atributo derivado**, cuyo valor se calcula a partir de otros (por ejemplo, la edad a partir de la fecha de nacimiento). El atributo **multivaluado** se dibuja con **doble elipse**, la **clave primaria** con el nombre **subrayado** y el **compuesto** con una elipse de la que cuelgan otras elipses. Truco: discontinua porque «no se guarda del todo», se deriva.",
    "tema_auto": true
   },
   {
    "id": "p19",
-   "tema": 15,
+   "tema": 16,
    "enunciado": "¿Cómo se llama el bloque de un programa donde se incluyen instrucciones iterativas?",
    "opciones": [
     "Cabecera.",
@@ -275,12 +275,11 @@
     "Control."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "En la estructura clásica de un programa se distinguen la cabecera, las declaraciones y el cuerpo, y en este las **instrucciones de control** (selectivas como if/switch e **iterativas** como for/while) son las que deciden el flujo de ejecución. La **cabecera** identifica el programa, las **declaraciones** definen constantes, tipos y variables y las **asignaciones** guardan valores en variables, pero ninguna de ellas repite instrucciones."
   },
   {
    "id": "p20",
-   "tema": 15,
+   "tema": 12,
    "enunciado": "El slice de un array es:",
    "opciones": [
     "Su longitud.",
@@ -289,12 +288,11 @@
     "Su último elemento."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Un **slice** («rebanada») es una **subestructura del array**: una porción contigua de elementos entre dos índices, como `a[2:5]` en Python o los slices de Go. La longitud es `len(a)`, y el primer y el último elemento son accesos a una sola posición, no subestructuras."
   },
   {
    "id": "p21",
-   "tema": 15,
+   "tema": 12,
    "enunciado": "Una cola se caracteriza por:",
    "opciones": [
     "Tener cabecera y cola.",
@@ -303,8 +301,7 @@
     "Permitir insertar un elemento en cualquier posición."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Una **cola** es una estructura **FIFO** (el primero en entrar es el primero en salir) que se maneja por sus dos extremos: la **cabecera o frente**, por donde se extrae, y el **final o cola**, por donde se inserta. La política **LIFO** es la de la **pila**. Insertar o extraer en cualquier posición es propio de una **lista**, no de una cola. Truco: como la cola del supermercado, se entra por detrás y se sale por delante."
   },
   {
    "id": "p22",
@@ -317,7 +314,7 @@
     "ALLOW"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**GRANT** es la sentencia del **DCL** (lenguaje de control de datos) que concede privilegios, por ejemplo `GRANT SELECT, UPDATE ON tabla TO usuario;`, y **REVOKE** los retira. **ALTER TABLE** es DDL y modifica la estructura de la tabla, no los permisos. **PERMISSION** y **ALLOW** no son sentencias SQL.",
    "tema_auto": true
   },
   {
@@ -331,7 +328,7 @@
     "RETURNBACK"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**ROLLBACK** deshace todos los cambios de la transacción en curso, y **ROLLBACK TO SAVEPOINT nombre** deshace solo hasta un punto de retorno. **SAVEPOINT** únicamente crea ese punto de retorno, sin deshacer nada, y **DELETE** borra filas, que es lo contrario de restituir. **RETURNBACK** no existe. Truco: COMMIT confirma, ROLLBACK «rueda hacia atrás».",
    "tema_auto": true
   },
   {
@@ -345,12 +342,12 @@
     "CREATE TRIGGER Validar_cambio BEFORE UPDATE ON Departamento"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La sintaxis del estándar SQL es `CREATE TRIGGER nombre {BEFORE | AFTER | INSTEAD OF} evento [OF columnas] ON tabla`, así que lo correcto es **CREATE TRIGGER Validar_cambio BEFORE UPDATE ON Departamento**. Detrás de **OF** van **columnas**, no la palabra TABLE, y no se escribe «ON TABLE» ni «CREATE NEW TRIGGER». Además, el momento (BEFORE) va antes de ON, no al final. Truco: orden «qué-cuándo-qué evento-sobre qué tabla».",
    "tema_auto": true
   },
   {
    "id": "p25",
-   "tema": 17,
+   "tema": 18,
    "enunciado": "En el contexto de la relación entre clases y objetos, ¿cuál es la definición técnica más precisa de una instancia?",
    "opciones": [
     "Es el código fuente escrito en el lenguaje de programación que define los atributos.",
@@ -359,8 +356,7 @@
     "Es el conjunto de todas las clases que pertenecen a un mismo paquete o espacio de nombres."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Una **instancia** (u objeto) es un **ejemplar concreto de una clase** creado en tiempo de ejecución (`new`), con su **propio estado** (valores de sus atributos) e identidad. El código fuente que define atributos y métodos es la **clase**, no la instancia. Un método **estático** pertenece a la clase y se invoca sin crear objetos, y el conjunto de clases de un mismo espacio de nombres es un **paquete o namespace**."
   },
   {
    "id": "p26",
@@ -373,7 +369,7 @@
     "NuGet."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **CLR (Common Language Runtime)** es la máquina virtual de .NET: compila el código intermedio (IL) mediante JIT, gestiona la memoria con el **recolector de basura** y se encarga del **manejo de excepciones**, la seguridad de tipos y los hilos. **MSBuild** es el motor de compilación de proyectos, **Kestrel** el servidor web de ASP.NET Core y **NuGet** el gestor de paquetes. Truco: es el equivalente en .NET a la JVM de Java.",
    "tema_auto": true
   },
   {
@@ -387,12 +383,12 @@
     "Jakarta Pages."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**Jakarta RESTful Web Services** (antes **JAX-RS**) es la especificación para crear servicios REST con anotaciones como `@Path`, `@GET` o `@Produces`. **Jakarta Mail** sirve para enviar correo, **Jakarta Web Services Metadata** aporta anotaciones para servicios **SOAP** (JAX-WS, como `@WebService`) y **Jakarta Pages** es el antiguo **JSP** para vistas.",
    "tema_auto": true
   },
   {
    "id": "p28",
-   "tema": 20,
+   "tema": 23,
    "enunciado": "¿Cuál de los siguientes NO es un producto orientado a las pruebas de software?",
    "opciones": [
     "Avocado.",
@@ -401,8 +397,7 @@
     "OneTrust."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**OneTrust** es una plataforma de **gestión de la privacidad, el consentimiento (cookies) y el cumplimiento normativo** (RGPD), no una herramienta de pruebas. **Avocado** es un framework de automatización de pruebas, **Cucumber** permite pruebas de aceptación **BDD** escritas en Gherkin (Given/When/Then) y **TestLink** es un gestor de casos y planes de prueba."
   },
   {
    "id": "p29",
@@ -415,7 +410,7 @@
     "Ser un protocolo de comunicación bidireccional con “handshake” y “framing” sobre TCP para tiempo real."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Según el W3C, **WSDL 2.0** es un **lenguaje XML para describir servicios web**: primero describe de forma **abstracta** lo que ofrece el servicio (interfaces, operaciones y mensajes) y después, de forma concreta, cómo y dónde invocarlo (bindings y endpoints). El protocolo de mensajería con «envelope» es **SOAP**, el de métodos GET/POST/PUT/DELETE y códigos de estado es **HTTP**, y el bidireccional con handshake y framing sobre TCP es **WebSocket**.",
    "tema_auto": true
   },
   {
@@ -429,7 +424,7 @@
     "Un archivo comprimido y cifrado que contiene la última versión estable del código fuente, conocida como “release candidate”."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un **repositorio** de Git contiene los **archivos del proyecto y el historial completo de sus cambios** (commits, ramas y etiquetas), lo que permite versionar y recuperar cualquier estado anterior. En Git cada clon local es un repositorio completo, no solo el servidor. Compilar y distribuir ejecutables es tarea de un servidor de **CI/CD**, un entorno aislado de despliegue es un **contenedor o entorno de producción**, y un archivo con la versión estable es un **artefacto o release**, no un repositorio.",
    "tema_auto": true
   },
   {
@@ -443,7 +438,7 @@
     "Al inicio del elemento <body>, antes de cualquier contenido visible."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El HTML Living Standard exige que el **DOCTYPE** (`<!DOCTYPE html>`) aparezca **al principio del documento, antes del elemento raíz `<html>`**; solo pueden precederle un BOM, comentarios o espacios en blanco. Su función es que el navegador use el **modo estándar** y no el «quirks mode». No puede ir dentro de `<html>`, `<head>` ni `<body>`, porque no es un elemento sino una declaración del documento.",
    "tema_auto": true
   },
   {
@@ -457,7 +452,7 @@
     "La cumplimentación de procesos de identificación, autenticación, firma y pago no están incluidos, por gestionarse generalmente a través de sistemas de terceros."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **artículo 3.2 del RD 1112/2018** incluye en el contenido accesible la información **textual y no textual**, los **documentos y formularios descargables**, los contenidos **multimedia pregrabados**, las formas de **interacción bidireccional** y la cumplimentación de procesos de **identificación, autenticación, firma y pago**, con independencia de la plataforma tecnológica. El diseño de los dispositivos físicos (pantallas, teclados, ratones) queda fuera, porque la norma regula contenidos y no hardware. Los descargables y los procesos de firma y pago sí están incluidos.",
    "tema_auto": true
   },
   {
@@ -471,7 +466,7 @@
     "Tarjeta de identificación + Reconocimiento facial."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La **MFA** exige combinar factores de **categorías distintas**: algo que sabes (contraseña), algo que tienes (token, tarjeta) y algo que eres (biometría). **Iris + huella dactilar** son dos factores de la **misma categoría (biométricos)**, así que no es MFA aunque haya dos comprobaciones. En cambio, contraseña + OTP, contraseña + iris y tarjeta + reconocimiento facial combinan dos categorías diferentes.",
    "tema_auto": true
   },
   {
@@ -485,7 +480,7 @@
     "tail -u"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**tail -f** (follow) muestra el final de un fichero y **sigue mostrando las líneas nuevas** a medida que se añaden, por lo que es el clásico para seguir logs (`tail -f /var/log/messages`). `tail -F` hace lo mismo, pero además reabre el fichero si este se rota. **-r** (en BSD) invierte el orden de las líneas y no existe en el tail de GNU, donde se usa **tac**. **-w** y **-u** no son opciones de tail.",
    "tema_auto": true
   },
   {
@@ -499,7 +494,7 @@
     "Tras finalizar una transacción, los datos deben cumplir todas las restricciones definidas en la base de datos."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **aislamiento (Isolation)** de ACID garantiza que las **transacciones concurrentes no interfieran** entre sí: cada una se ejecuta como si estuviera sola, según el nivel de aislamiento elegido. Ejecutarse completamente o no ejecutarse es la **atomicidad**, mantener los cambios confirmados tras un fallo es la **durabilidad**, y que los datos cumplan las restricciones al terminar es la **consistencia**. Truco: ACID = Atomicidad, Consistencia, Aislamiento, Durabilidad.",
    "tema_auto": true
   },
   {
@@ -513,7 +508,7 @@
     "La clave referenciada debe contener únicamente valores no nulos."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La **integridad referencial** exige que **todo valor no nulo de una clave ajena exista** como valor de la clave (primaria o candidata) de la tabla referenciada; una clave ajena nula sí se permite, salvo que se declare NOT NULL. La clave ajena **no tiene por qué ser única**: muchas filas pueden apuntar a la misma (relación 1:N). Que la clave primaria no sea nula es la **integridad de entidad**, que es otra regla distinta.",
    "tema_auto": true
   },
   {
@@ -527,7 +522,7 @@
     "docker play"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**docker run** crea un contenedor nuevo a partir de una imagen, **descarga la imagen si no está en local (pull)**, lo arranca y ejecuta el comando indicado (`docker run ubuntu ls`). **docker start** arranca un contenedor que **ya existe** y está parado, y **docker exec** ejecuta un comando dentro de un contenedor que **ya está en marcha**. **docker play** no existe. Truco: run = create + start (+ pull si hace falta).",
    "tema_auto": true
   },
   {
@@ -541,12 +536,12 @@
     "CNAME."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**DKIM** (DomainKeys Identified Mail) permite **firmar criptográficamente** los correos del dominio: el servidor emisor firma cada mensaje y publica la **clave pública en un registro TXT** del DNS (`selector._domainkey.dominio`), con la que el receptor comprueba la firma. **SPF** lista las IP autorizadas para enviar correo del dominio, pero no firma nada. **DMARC** define qué hacer si fallan SPF o DKIM y a quién enviar los informes, y **CNAME** es solo un alias de nombre. Truco: la K de DKIM es de Key (clave).",
    "tema_auto": true
   },
   {
    "id": "p39",
-   "tema": 26,
+   "tema": 33,
    "enunciado": "Según el modelo de referencia para redes locales de la IEEE, la capa de enlace de datos se divide en dos subcapas. ¿Cuál de ellas se encarga de la sincronización de tramas, control de flujo y la detección de errores de transmisión independientemente del medio físico?",
    "opciones": [
     "Subcapa de Control de Acceso al Medio (MAC).",
@@ -555,8 +550,7 @@
     "Subcapa de Interfaz de Dependencia del Medio (MDI)."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "En el modelo **IEEE 802**, la capa de enlace se divide en **LLC (Logical Link Control, IEEE 802.2)**, que es común a todas las redes LAN y **no depende del medio**, y **MAC**, que es específica de cada tecnología (Ethernet, Wi-Fi…) y controla el acceso al medio. Por eso las funciones que no dependen del medio, como el control de flujo y de errores, se atribuyen a LLC. «DCS» no es una subcapa de enlace, y **MDI** es la interfaz física (el conector), que pertenece a la capa física."
   },
   {
    "id": "p40",
@@ -569,7 +563,7 @@
     "Apuntar la contraseña en un papel guardado en un bolso o cartera personal."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El CCN-CERT recomienda contraseñas **largas y difíciles de adivinar**, como **frases de paso sin sentido** o combinaciones de palabras sin relación, que son más fáciles de recordar y más resistentes a ataques de diccionario. **7 caracteres** se quedan cortos para las recomendaciones actuales, y meter **datos personales** (nombre, fecha de nacimiento) la hace previsible. **Apuntarla en un papel** que llevas encima expone la contraseña si lo pierdes o te lo roban.",
    "tema_auto": true
   },
   {
@@ -583,12 +577,12 @@
     "IDA (Intermediate Distribution Area)."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En la **ANSI/TIA-942**, la **EDA (Equipment Distribution Area)** es la zona de racks y armarios donde se ubican los **equipos finales** (servidores, almacenamiento, mainframes). La **MDA** es el punto central de distribución del cableado (routers y switches de core), la **HDA** es la distribución horizontal hacia las EDA y la **IDA** es un nivel intermedio opcional entre MDA y HDA. Truco: Main → Intermediate → Horizontal → Equipment, del centro a los equipos.",
    "tema_auto": true
   },
   {
    "id": "p42",
-   "tema": 28,
+   "tema": 29,
    "enunciado": "¿Cómo se denomina a la degradación de la señal que consiste en la pérdida de energía de la misma a medida que se propaga por el medio de transmisión?",
    "opciones": [
     "Distorsión de retardo.",
@@ -597,12 +591,11 @@
     "Atenuación."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La **atenuación** es la **pérdida de energía (potencia) de la señal** conforme se propaga por el medio; se mide en dB y aumenta con la distancia y la frecuencia, por lo que se compensa con amplificadores o repetidores. La **distorsión de retardo** se produce porque las distintas frecuencias viajan a velocidades diferentes, la **diafonía** es la interferencia entre pares o canales cercanos y el **ruido térmico** lo produce la agitación de los electrones."
   },
   {
    "id": "p43",
-   "tema": 30,
+   "tema": 33,
    "enunciado": "¿Qué dispositivo de interconexión de redes es capaz de segmentar los dominios de colisión, pero mantiene un único dominio de difusión?",
    "opciones": [
     "Un router.",
@@ -611,8 +604,7 @@
     "Un gateway."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Un **switch** (nivel 2) crea un **dominio de colisión por cada puerto**, pero **reenvía los broadcast** por todos sus puertos, así que mantiene un **único dominio de difusión** (si no se usan VLAN). El **router** (nivel 3) separa tanto los dominios de colisión como los de difusión, y el **hub** (nivel 1) no separa ninguno. El **gateway** traduce entre protocolos en capas altas y también separa la difusión."
   },
   {
    "id": "p44",
@@ -625,7 +617,7 @@
     "Capa de transporte."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La **capa de presentación (capa 6 de OSI)** se ocupa de la **sintaxis de los datos**: negocia la sintaxis de transferencia y aplica transformaciones de formato, **cifrado y compresión**. La de **sesión (5)** gestiona el diálogo y la sincronización, la de **aplicación (7)** ofrece los servicios al usuario y la de **transporte (4)** la entrega extremo a extremo. Truco: presentación es «cómo se presentan los datos» (codificación, cifrado, compresión).",
    "tema_auto": true
   },
   {
@@ -639,7 +631,7 @@
     "SYN y FIN."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **three-way handshake** de TCP sigue esta secuencia: el cliente envía **SYN**, el servidor responde **SYN + ACK** y el cliente confirma con **ACK**. En el segundo paso el servidor sincroniza su propio número de secuencia (SYN) y confirma el del cliente (ACK). **INIT** no es un flag de TCP (sí es un bloque de SCTP), y **FIN** sirve para cerrar la conexión, no para abrirla.",
    "tema_auto": true
   },
   {
@@ -653,7 +645,7 @@
     "Identificar el tipo de cabecera de extensión que sigue a la cabecera fija."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Según la **RFC 8200**, el **Hop Limit** (8 bits) se **decrementa en 1 en cada nodo que reenvía** el paquete, y este se **descarta cuando llega a 0**. Es el equivalente al **TTL** de IPv4 y evita que los paquetes circulen indefinidamente. La prioridad de QoS va en **Traffic Class**, el tamaño de la carga en **Payload Length** y el tipo de la siguiente cabecera en **Next Header**.",
    "tema_auto": true
   },
   {
@@ -667,7 +659,7 @@
     "Traducir nombres de dominio legibles para humanos en direcciones IP numéricas que las máquinas pueden procesar."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **DNS** es un sistema distribuido y jerárquico que **traduce nombres de dominio en direcciones IP** (registros A/AAAA) y también al revés (registros PTR). Elegir la ruta entre origen y destino es tarea del **enrutamiento (routers)**, cifrar el correo lo hacen **S/MIME o PGP** (o TLS en el transporte), y traducir IP a MAC es la función de **ARP**.",
    "tema_auto": true
   },
   {
@@ -681,7 +673,7 @@
     "Códigos 5xx"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Los códigos **4xx** indican un **error del cliente** (400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found…). Los **2xx** indican éxito, los **3xx** redirección y los **5xx** un **error del servidor** (500, 502, 503…). Truco: 1xx informativo, 2xx bien, 3xx «ve a otro sitio», 4xx «la culpa es tuya», 5xx «la culpa es mía» (del servidor).",
    "tema_auto": true
   },
   {
@@ -695,7 +687,7 @@
     "En obligar a los usuarios a compartir sus credenciales con sus responsables directos para garantizar la continuidad del servicio."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **artículo 20 del ENS (RD 311/2022)** recoge el principio de **mínimo privilegio**: los sistemas deben diseñarse y configurarse otorgando **solo los privilegios necesarios** para el correcto desempeño, de modo que cada usuario tenga únicamente los permisos que requieren sus funciones. Las **cuentas genéricas** van contra la trazabilidad, porque impiden saber quién hizo cada acción. **Compartir credenciales** está prohibido, y decidir el acceso solo por la ubicación física, sin tener en cuenta el rol, no tiene nada que ver con este principio.",
    "tema_auto": true
   },
   {
@@ -709,7 +701,7 @@
     "La asignación de direcciones IP públicas directamente a los terminales de los usuarios internos."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La **DMZ (zona desmilitarizada)** es una red intermedia, delimitada por **cortafuegos**, donde se colocan los servidores que ofrecen servicios al exterior (web, correo). Así, si alguien los compromete, no tiene acceso directo a la red interna. Una **VPN** protege los accesos remotos, pero no aísla servidores, y un **IDS** en modo promiscuo solo detecta, no segmenta. Dar **IP públicas a los puestos internos** los expondría directamente a Internet.",
    "tema_auto": true
   },
   {
@@ -723,7 +715,7 @@
     "Actúa en dos dimensiones fundamentales: infraestructuras y tecnología, y servicios públicos."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Una de las prioridades de la **Estrategia de Tecnologías Cuánticas de España** (2025) es **demostrar el impacto de la sensórica y la metrología cuánticas**, junto con otras como las comunicaciones cuánticas y la protección de la información en la era poscuántica. El **Proyecto ALIA** lo coordina el **Barcelona Supercomputing Center (BSC-CNS)**, no la AESIA. **España Digital 2026** actúa en **tres dimensiones** (infraestructuras y tecnología, economía y personas), no en dos. En el Plan de Impulso de los Espacios de Datos Sectoriales, la **Dirección General del Dato dirige la implementación**, pero cada iniciativa tiene su propia **entidad ejecutora** (SEDIA, Red.es, SETUR, comunidades autónomas…).",
    "reserva": true,
    "tema_auto": true
   },
@@ -738,7 +730,7 @@
     "256 bits."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El CCN-CERT solo autoriza métodos de intercambio de claves (Key Exchange) con una **fortaleza de seguridad de al menos 112 bits**, que es el mínimo aceptado hoy en criptografía. Equivale aproximadamente a **RSA o Diffie-Hellman de 2048 bits** o a curvas elípticas de unos 224 bits. 128, 192 y 256 bits corresponden a niveles más exigentes (como AES-128/192/256), y fijarlos como mínimo dejaría fuera configuraciones que sí están autorizadas.",
    "reserva": true,
    "tema_auto": true
   },
@@ -753,7 +745,7 @@
     "La victimización secundaria, entendida como el incumplimiento por parte de las Administraciones públicas de las obligaciones de atención previstas en esta ley que den lugar a un nuevo daño psicológico para la víctima."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **artículo 79.3.c) de la Ley 4/2023** califica como **grave** la **obstrucción o negativa absoluta a la actuación de los servicios de inspección**; si la falta de colaboración es solo parcial, la infracción es **leve** (art. 79.2.b). El **acoso discriminatorio**, la elaboración o difusión en centros educativos de **libros de texto** que presenten a las personas como superiores o inferiores en dignidad y la **victimización secundaria** son infracciones **muy graves** (art. 79.4, letras a, e e i). Truco: negarse del todo a la inspección es grave y negarse en parte es leve.",
    "reserva": true,
    "tema_auto": true
   },
@@ -768,7 +760,7 @@
     "Quicksort."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**Radix sort** no compara elementos: los ordena dígito a dígito, con un coste **O(d·(n+k))**, que es **lineal en n** cuando el número de dígitos d y la base k son constantes. **Heapsort** y **Mergesort** son **O(n log n)** en todos los casos, y **Quicksort** es O(n log n) en el caso medio, pero **O(n²)** en el peor. Truco: los algoritmos basados en comparaciones no pueden bajar de n log n; los lineales (radix, counting, bucket) no comparan.",
    "reserva": true,
    "tema_auto": true
   },
@@ -783,7 +775,7 @@
     "40 canales."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**Bluetooth LE** usa **40 canales de 2 MHz** en la banda de 2,4 GHz: **3 canales primarios de advertising** (37, 38 y 39) y **37 canales de datos**. El **Extended Advertising** de Bluetooth 5.0 envía en los 3 primarios solo un puntero, y el resto del anuncio va por los **37 canales secundarios** (los de datos), así que utiliza los **40 canales**. Los 3 canales del advertising clásico y los 37 secundarios son distractores parciales, y BLE no tiene 22 canales.",
    "reserva": true,
    "tema_auto": true
   }

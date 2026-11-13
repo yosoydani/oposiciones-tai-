@@ -15,7 +15,7 @@
  "preguntas": [
   {
    "id": "s101",
-   "tema": null,
+   "tema": 21,
    "enunciado": "Se necesita presentar una estadística utilizando HTML5 mediante una tabla en la que una de sus columnas contendrá la descripción de cada Proceso Selectivo. Suponiendo que a dicha columna la denominamos \"Proceso\", ¿qué etiqueta deberá utilizar para definir la celda de encabezado de la tabla para dicha columna, con un formato de letra diferenciado?",
    "opciones": [
     "<th>Proceso</th>",
@@ -24,13 +24,12 @@
     "<tableh>Proceso</tableh>"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "En HTML la celda de **encabezado** de una tabla se define con **`<th>`** (table header). Los navegadores la muestran por defecto **en negrita y centrada**, a diferencia de `<td>`. `<tableheader>`, `<theader>` y `<tableh>` no existen; no hay que confundir `<th>` con **`<thead>`**, que agrupa las filas de cabecera. Truco: tr = fila, td = dato, th = encabezado.",
+   "contexto": "s1"
   },
   {
    "id": "s102",
-   "tema": null,
+   "tema": 21,
    "enunciado": "También se requiere definir en el informe un hipervínculo en HTML5. ¿Qué etiqueta debería utilizar?",
    "opciones": [
     "<link>",
@@ -39,13 +38,12 @@
     "<hlink>"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "Los hipervínculos se crean con la etiqueta **`<a>`** (anchor) y su atributo **`href`**, por ejemplo `<a href=\"informe.html\">Informe</a>`. **`<link>`** va en el `<head>` y relaciona el documento con recursos externos como hojas de estilo, pero no crea un enlace clicable. `<goto>` y `<hlink>` no existen.",
+   "contexto": "s1"
   },
   {
    "id": "s103",
-   "tema": null,
+   "tema": 12,
    "enunciado": "En su Subdirección van a usar JSON para realizar intercambio de datos, y le preguntan, de entre los siguientes, cuál sería un fichero JSON válido.",
    "opciones": [
     "{\"nombre\": \"Juana\", \"apellido\": \"Ruiz\"}",
@@ -54,13 +52,12 @@
     "{nombre: \"Juana\"; apellido: \"Ruiz\"}"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "En **JSON** (RFC 8259), las claves y las cadenas van **obligatoriamente entre comillas dobles** y los pares se separan con **comas**: `{\"nombre\": \"Juana\", \"apellido\": \"Ruiz\"}`. Las comillas simples o las claves sin comillas son válidas en un objeto literal de JavaScript, pero no en JSON, y el punto y coma no es separador válido. Truco: JSON es más estricto que JavaScript.",
+   "contexto": "s1"
   },
   {
    "id": "s104",
-   "tema": 19,
+   "tema": 18,
    "enunciado": "¿Cómo debe definir el equipo de desarrollo en Java una clase llamada Ejercicio si quiere impedir que se pueda heredar de la misma?",
    "opciones": [
     "closed class Ejercicio",
@@ -69,9 +66,8 @@
     "immutable class Ejercicio"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "En Java, una clase declarada con **`final`** (`final class Ejercicio`) **no puede tener subclases**; `final` en un método impide sobrescribirlo y en una variable la hace constante. `closed` e `immutable` no son palabras reservadas de Java, y una clase de nivel superior no puede ser `private` (solo `public` o de paquete). En C# el equivalente es `sealed`.",
+   "contexto": "s1"
   },
   {
    "id": "s105",
@@ -84,7 +80,7 @@
     "Abstracción."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Usar el mismo nombre de método con distintos parámetros es la **sobrecarga**, una forma de **polimorfismo** (ad hoc o estático, resuelto en compilación). La **herencia** permite que una clase reutilice otra, la **ligadura dinámica** decide en tiempo de ejecución qué método sobrescrito se llama, y la **abstracción** consiste en quedarse con lo esencial. Truco: sobrecarga = mismo nombre y distinta firma; sobrescritura = misma firma en una subclase.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -99,13 +95,13 @@
     "[2, 1]"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La lista por comprensión `[a*a for a in [3, 2, 1] if a > 1]` **filtra** primero los valores mayores que 1 (3 y 2) y luego eleva al cuadrado cada uno, dando **`[9, 4]`** (comprobado en Python). La opción `[9, 4, 1]` olvida el filtro `if`, `[2, 1]` confunde el filtro con el resultado y `[3, 2, 1, 3, 2, 1]` sería `lista * 2`.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s107",
-   "tema": 14,
+   "tema": 17,
    "enunciado": "Le han pedido que compruebe si en el esquema de la base de datos hay tablas que no se están utilizando, y verifica que existe una con esas características llamada PruebaOLD. ¿Cuál sería la instrucción SQL para eliminarla?",
    "opciones": [
     "TRUNCATE TABLE PruebaOLD",
@@ -114,9 +110,8 @@
     "ERASE TABLE PruebaOLD"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "**`DROP TABLE PruebaOLD`** (DDL) **elimina la tabla entera**: estructura, datos, índices y permisos. **`TRUNCATE TABLE`** borra todas las filas pero conserva la tabla vacía, `DELETE` borra filas con la sintaxis `DELETE FROM tabla`, y «DELETE TABLE» o «ERASE TABLE» no son sentencias válidas. Truco: DROP tira la tabla, TRUNCATE la vacía.",
+   "contexto": "s1"
   },
   {
    "id": "s108",
@@ -129,7 +124,7 @@
     "SELECT IdOpositor, COUNT(IdSolicitud) FROM Solicitud GROUP BY IdOpositor HAVING COUNT(IdSolicitud) > 1"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Para filtrar por el resultado de una **función de agregado** hay que usar **`HAVING`** después de **`GROUP BY`**: `GROUP BY IdOpositor HAVING COUNT(IdSolicitud) > 1`. **`WHERE` filtra filas antes de agrupar** y no admite agregados como `COUNT`, y además no puede ir tras `GROUP BY`; en SQL estándar tampoco se puede usar en él un alias del `SELECT`. Orden lógico: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -144,7 +139,7 @@
     "0"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El bucle suma los impares menores que 7. Con i = 1, j vale 1; con i = 3, j = 4; con i = 5, j = 9; al llegar i a 7 la condición `i < 7` es falsa y se devuelve **9** (comprobado en Node). 6 sería olvidar una iteración y 2 o 0 no salen de ningún recorrido. Nota: en JavaScript real la palabra clave es `function` en minúscula; la mayúscula del enunciado es una errata.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -159,7 +154,7 @@
     "No está en ninguna forma normal."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El campo **Telefonos** guarda **varios valores en un mismo atributo** (`916666666;917777777`), lo que incumple la **primera forma normal**: cada atributo debe ser **atómico**. Como no cumple la 1FN, tampoco puede estar en 2FN ni en 3FN, porque cada forma normal exige cumplir la anterior. Para normalizarla habría que llevar los teléfonos a una tabla aparte (NIF, Telefono).",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -174,13 +169,13 @@
     "WSDL"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**HEVC (High Efficiency Video Coding, H.265)** es un **códec de compresión de vídeo**, sin relación con los servicios web. **SOAP** es el protocolo de mensajería XML, **WSDL** el lenguaje para describir el servicio y **UDDI** el registro para publicarlo y descubrirlo: son los tres pilares clásicos de los servicios web SOAP.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s112",
-   "tema": 16,
+   "tema": 21,
    "enunciado": "El sistema de información deberá ser accesible a través de dispositivos móviles. ¿Cómo se denomina el tipo de diseño que permite la adaptación del contenido a los distintos dispositivos?",
    "opciones": [
     "Diseño incremental (Gradual Design).",
@@ -189,13 +184,12 @@
     "Diseño escalable (Scalable Design)."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "El **diseño responsivo (Responsive Web Design)** adapta la maquetación al tamaño y la orientación de la pantalla mediante **rejillas fluidas, imágenes flexibles y *media queries* de CSS**. «Diseño incremental», «variable» o «escalable» no son el término estándar. No hay que confundirlo con el **diseño adaptativo**, que sirve maquetaciones fijas distintas según el dispositivo, ni con *mobile first*, la estrategia de diseñar primero para móvil.",
+   "contexto": "s1"
   },
   {
    "id": "s1r01",
-   "tema": 16,
+   "tema": 21,
    "enunciado": "Dentro del código de la página web a la que acceden los opositores, se encuentra el siguiente código HTML: <html><body><h1 id=\"titulo\">Primer ejercicio TAI</h1></body></html> ¿Cuál es el código javascript para obtener la cadena \"Primer ejercicio TAI\"?",
    "opciones": [
     "var titulo = document.getElementById(\"titulo\").firstChild.nodeValue;",
@@ -204,14 +198,13 @@
     "var titulo = document.children[0].getValue();"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "`document.getElementById(\"titulo\")` devuelve el `<h1>`; su **`firstChild`** es el **nodo de texto** y **`nodeValue`** devuelve su contenido, «Primer ejercicio TAI». Las demás fallan: `document.titulo` no accede por id de forma estándar, JavaScript distingue mayúsculas (la propiedad es `innerHTML`/`innerText`, no `InnerHTML`), `getElement()` no existe y `getValue()` no es un método del DOM. Hoy también valdría `document.getElementById(\"titulo\").textContent`.",
    "reserva": true,
-   "contexto": "s1",
-   "tema_auto": true
+   "contexto": "s1"
   },
   {
    "id": "s1r02",
-   "tema": 16,
+   "tema": 23,
    "enunciado": "El equipo de proyecto está estudiando varios framework para valorar su utilización. ¿Cuál es el propósito principal del framework de javascript Jest?",
    "opciones": [
     "Testeado de código.",
@@ -220,10 +213,9 @@
     "Funciones matemáticas y tratamiento de cadenas."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Jest** es un framework de **pruebas (testing) de JavaScript** creado por Facebook/Meta, muy usado con React y Node, con aserciones, *mocks* y cobertura integradas. Para machine learning en JS existe TensorFlow.js, para animación GSAP o anime.js, y para utilidades de cadenas y funciones librerías como Lodash. Otros frameworks de pruebas JS: Mocha, Jasmine y Vitest.",
    "reserva": true,
-   "contexto": "s1",
-   "tema_auto": true
+   "contexto": "s1"
   },
   {
    "id": "s1r03",
@@ -236,7 +228,7 @@
     "NuGet"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**NuGet** es el gestor de paquetes oficial de **.NET**, desarrollado por Microsoft (paquetes `.nupkg`, repositorio nuget.org). **Pip** es el de **Python**, **Maven** el de **Java** (gestión de dependencias y construcción) y **npm** el de **JavaScript/Node.js**. Truco: Nu-**Get** para .NET.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true

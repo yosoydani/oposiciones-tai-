@@ -15,7 +15,7 @@
  "preguntas": [
   {
    "id": "s201",
-   "tema": 10,
+   "tema": 24,
    "enunciado": "En los PCs de los usuarios hay que purgar la memoria caché de la resolución DNS. ¿Cuál de los siguientes comandos habría que lanzar desde la consola de PowerShell?",
    "opciones": [
     "ipconfig /dnsflush",
@@ -24,14 +24,13 @@
     "ifconifg --clean dnscache"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "En Windows, la caché del resolvedor DNS se vacía con **`ipconfig /flushdns`**, que funciona tanto en CMD como en PowerShell. En PowerShell también existe el cmdlet nativo **`Clear-DnsClientCache`**. «/dnsflush» invierte el orden de las palabras, e «ifconifg» (mal escrito, en realidad `ifconfig`) es un comando de Unix/Linux sin esas opciones. Para ver la caché se usa `ipconfig /displaydns`.",
+   "contexto": "s2"
   },
   {
    "id": "s202",
    "tema": 24,
-   "enunciado": "En todos los PCs de usuario existe un usuario local llamado Infocentro\" utilizado para labores de mantenimiento, ¿qué comando utilizaríamos desde la línea de comandos de Windows PowerShell para ver más información sobre este usuario?",
+   "enunciado": "En todos los PCs de usuario existe un usuario local llamado \"Infocentro\" utilizado para labores de mantenimiento, ¿qué comando utilizaríamos desde la línea de comandos de Windows PowerShell para ver más información sobre este usuario?",
    "opciones": [
     "net user Infocentro",
     "netuser Infocentro",
@@ -39,7 +38,7 @@
     "infouser Infocentro"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**`net user <nombre>`** muestra la información de una cuenta local: nombre completo, si está activa, la caducidad y el último cambio de contraseña, el último inicio de sesión y los grupos a los que pertenece. Funciona en CMD y en PowerShell. Las demás opciones no son comandos de Windows. En PowerShell, el equivalente nativo es **`Get-LocalUser -Name Infocentro`**.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -54,7 +53,7 @@
     "3606"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "MySQL escucha por defecto en el puerto **TCP 3306**, que es el que hay que abrir en el cortafuegos desde la subred de aplicaciones hacia la de bases de datos. Las demás cifras son variaciones inventadas. Otros puertos útiles: Oracle **1521**, SQL Server **1433** y PostgreSQL **5432**.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -69,7 +68,7 @@
     "Nagstamon"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Check_MK** (hoy Checkmk) es una **solución de monitorización** de infraestructuras que nació como extensión de **Nagios** y se instala en un servidor Linux. **Redis** (mal escrito «Reddis») es una base de datos clave-valor en memoria y **Jenkins** es un servidor de integración continua. **Nagstamon** está relacionado con la monitorización, pero solo es un **cliente de escritorio** que muestra las alertas de un Nagios, Icinga o Checkmk ya existente; no monitoriza por sí mismo.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -84,7 +83,7 @@
     "255.255.255.190"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Para crear **4 subredes** hay que tomar **2 bits** del host (2² = 4): el prefijo pasa de /24 a **/26**, es decir, **255.255.255.192** (último octeto 11000000 = 192). Cada subred tiene 64 direcciones (62 hosts útiles): .0, .64, .128 y .192. Las otras máscaras no son válidas, porque 190, 194 y 196 no son una secuencia continua de unos seguida de ceros. Truco: las máscaras válidas del octeto son 128, 192, 224, 240, 248, 252, 254 y 255.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -99,7 +98,7 @@
     "254"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Un **/24** deja 8 bits para el host: 2⁸ = 256 direcciones, menos la de **red** (.0) y la de **broadcast** (.255), quedan **254 hosts**. 126 sería un /25, 62 un /26 y 32 ni siquiera es un número de hosts útiles válido (sería el total de direcciones de un /27, que tiene 30 hosts). Fórmula: **2ⁿ − 2**, con n = bits de host.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -114,7 +113,7 @@
     "10.20.30.64 y 10.20.30.127"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Un **/26** tiene bloques de 64 direcciones: 10.20.30.0/26 va de .0 a .63. La dirección de **red** es **10.20.30.0** y la de **broadcast** es **10.20.30.63**, y los hosts útiles van de .1 a .62. La opción .1 y .62 da el primer y el último host, la de .0 y .255 es la red /24 completa, y .64 y .127 son la red y el broadcast de la **segunda** subred.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -129,7 +128,7 @@
     "SQUID"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**Squid** es el **proxy-caché** de código abierto más conocido: guarda en caché el contenido web para acelerar el acceso y ahorrar ancho de banda, y hace de intermediario para HTTP y HTTPS. **InfluxDB** es una base de datos de **series temporales**, **Grafana** es una herramienta de **paneles y visualización** de métricas y **Check_MK** sirve para **monitorizar**. Ninguna de ellas es un proxy.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -144,7 +143,7 @@
     "Factor único de autenticación."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Combinar algo que **se sabe** (el usuario y la contraseña de la VPN) con algo que **se tiene** (el móvil que recibe el código por SMS) es **autenticación de doble factor** (2FA, un caso de MFA). El factor único sería solo la contraseña, y «factor electrónico de autenticación» y «autenticación electrónica de usuarios» no son el nombre técnico de esta validación. Matiz: hoy el SMS se considera un segundo factor débil (por el riesgo de *SIM swapping*), y se prefieren las apps TOTP, las notificaciones push o las llaves FIDO2.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -159,13 +158,13 @@
     "POP:965 / SMTP:495 / IMAP:993"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Los puertos de las versiones seguras (con TLS implícito) son **POP3S: 995**, **SMTPS: 465** e **IMAPS: 993**. Las demás opciones intercambian los puertos de POP e IMAP o usan números inventados (495, 963, 965). Truco: los dos de lectura están en la «99x» (**POP 995**, **IMAP 993**: el de más letras, el número menor), y el envío seguro es **465** (o **587** con STARTTLS). En texto claro serían POP3 110, SMTP 25 e IMAP 143.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s211",
-   "tema": null,
+   "tema": 6,
    "enunciado": "Para la aplicacion AutoFirma 1.8.2 de las estaciones de trabajo de la organizacion, ¿qué algoritmo de huella para la firma se permite de los siguientes?",
    "opciones": [
     "ECDSA",
@@ -174,9 +173,8 @@
     "DSA"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "La **huella** (*hash*) de una firma se calcula con un algoritmo de resumen. AutoFirma permite la familia **SHA-2** (**SHA-256, SHA-384, SHA-512**) y, por compatibilidad, SHA-1. **MD5** no se admite por inseguro (tiene colisiones prácticas). **ECDSA** y **DSA** no son algoritmos de huella, sino algoritmos de **firma** asimétrica que se combinan con un hash (por ejemplo, SHA384withECDSA). Truco: SHA = huella; RSA, DSA y ECDSA = firma.",
+   "contexto": "s2"
   },
   {
    "id": "s212",
@@ -189,9 +187,10 @@
     "802.11be"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La plantilla oficial marca **802.11be (Wi-Fi 7)**, que funciona en las bandas de **2,4, 5 y 6 GHz** y añade canales de 320 MHz y MLO (operación multienlace). La banda de 6 GHz sí existe y está abierta al wifi en Europa (5925-6425 MHz). **802.11ac (Wi-Fi 5)** solo trabaja en 5 GHz. Truco: Wi-Fi 4 = n, 5 = ac, 6/6E = ax, 7 = be.",
    "contexto": "s2",
-   "tema_auto": true
+   "tema_auto": true,
+   "nota_vigencia": "Objeción a la plantilla: 802.11ax también puede funcionar en 2,4, 5 y 6 GHz. La extensión a 6 GHz forma parte del propio estándar IEEE 802.11ax-2021 y se comercializa como Wi-Fi 6E, así que 802.11ax también cumple el enunciado. Además, cuando se celebró el examen, 802.11be aún era un borrador; hoy ya es estándar aprobado (Wi-Fi 7). En la actualidad ambas opciones serían correctas."
   },
   {
    "id": "s2r01",
@@ -204,7 +203,7 @@
     "RFC 2472"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**PPTP** (Point-to-Point Tunneling Protocol) se define en el **RFC 2637** (1999). El **RFC 2661** es **L2TP**, el **RFC 1661** es **PPP**, en el que se basan ambos, y el **RFC 2472** define IPv6 sobre PPP. Hoy PPTP se considera **inseguro** (MS-CHAPv2 está roto) y no debe usarse para teletrabajo: se recomiendan IPsec/IKEv2, VPN TLS o WireGuard. Truco: PPTP = 26**37**, L2TP = 26**61**.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -220,7 +219,7 @@
     "Se subdivide en dos tipos: Tipo 3 y Tipo 4."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**PoE++** es el estándar **IEEE 802.3bt** (2018), que se divide en **Tipo 3** (hasta 60 W en el equipo emisor, unos 51 W en el dispositivo) y **Tipo 4** (hasta 90-100 W en el emisor, unos 71 W en el dispositivo). **802.3at** es **PoE+** (Tipo 2), que entrega **25,5 W** al dispositivo; esa es la cifra de otra de las opciones. Las siglas son **Power over Ethernet**, no «Power-of-Ethernet». Truco: af (PoE, 15,4 W) → at (PoE+, 30 W) → bt (PoE++, 60/90 W).",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -236,7 +235,7 @@
     "COPYDB"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**RMAN** (Recovery Manager) es la herramienta nativa de Oracle para **copias de seguridad y recuperación**: copias completas e incrementales, recuperación hasta un punto en el tiempo y validación de bloques. Las demás opciones no son utilidades de Oracle (`pg_dumpall` es de PostgreSQL). Para exportaciones lógicas, Oracle usa **Data Pump** (`expdp`/`impdp`), que no sustituye a una copia física con RMAN.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true

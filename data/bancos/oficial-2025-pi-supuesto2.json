@@ -10,7 +10,7 @@
  "url_cuestionario": "https://sede.inap.gob.es/sites/sede/files/public/2026-05/Cuestionario%20TAI-P-ModeloA.pdf",
  "url_plantilla": "https://sede.inap.gob.es/sites/sede/files/public/2026-09/Plantilla%20respuestas%20Def%20TAI-P-A.pdf",
  "contextos": {
-  "s2": "La Subdirección General de Tecnologías de la Información y Comunicaciones (en adelante SGTIC) del Ministerio al que usted se acaba\nde incorporar, mantiene un CPD principal que cuenta con la siguiente infraestructura física y lógica:\n- Servidores Windows Server 2019 para los servicios de Directorio Activo (AD), DNS y DHCP.\n- Servidores Linux Red Hat Enterprise Linux (RHEL) 8.8, basado en Systemd, para los servicios web, base de datos y correo\nelectrónico.\nA nivel de comunicaciones la SGTIC cuenta con switches y routers Cisco IOS 15.x y firewalls de distintos fabricantes para realizar la\nsegmentación de red.\nSe dispone de dos líneas redundadas para la conexión a Internet y otras dos líneas para la conexión a Red SARA.\nLos puestos de trabajo son Windows 11 Enterprise en versión 25H2.\nLa SGTIC cuenta con dos grandes rangos de direccionamiento:\n- La red interna 10.30.16.0/20, que da servicio a usuarios y servidores internos.\n- La DMZ 172.19.50.0/27, que aloja, entre otros servicios, los servidores web01 (Nginx) y mail01 (Postfix).\nEntre otras, la SGTIC cuenta con una VLAN denominada VLAN 10 para usuarios y otra denominada VLAN 20 para servidores.\nEl router de distribución integra DHCP relay hacia el servidor DHCP de la VLAN 20.\nEntre sus tareas como integrante del Servicio de Sistemas, Comunicaciones y Seguridad Informática de la SGTIC se encuentran el\nmantenimiento y operación de los distintos elementos que conforman la infraestructura tecnológica de la SGTIC, así como el diagnóstico\ny resolución de las incidencias que afecten a dichos elementos.\nSalvo indicación expresa, usted dispone de los permisos necesarios para realizar todas las operaciones requeridas y las siguientes\npreguntas están referidas a la infraestructura anteriormente especificada."
+  "s2": "La Subdirección General de Tecnologías de la Información y Comunicaciones (en adelante SGTIC) del Ministerio al que usted se acaba\nde incorporar, mantiene un CPD principal que cuenta con la siguiente infraestructura física y lógica:\n- Servidores Windows Server 2019 para los servicios de Directorio Activo (AD), DNS y DHCP.\n- Servidores Linux Red Hat Enterprise Linux (RHEL) 8.8, basado en Systemd, para los servicios web, base de datos y correo\nelectrónico.\nA nivel de comunicaciones la SGTIC cuenta con switches y routers Cisco IOS 15.x y firewalls de distintos fabricantes para realizar la\nsegmentación de red.\nSe dispone de dos líneas redundadas para la conexión a Internet y otras dos líneas para la conexión a Red SARA.\nLos puestos de trabajo son Windows 11 Enterprise en versión 25H2.\nLa SGTIC cuenta con dos grandes rangos de direccionamiento:\n- La red interna 10.30.16.0/20, que da servicio a usuarios y servidores internos.\n- La DMZ 172.19.50.0/27, que aloja, entre otros servicios, los servidores web01 (Nginx) y mail01 (Postfix).\nEntre otras, la SGTIC cuenta con una VLAN denominada VLAN 10 para usuarios y otra denominada VLAN 20 para servidores.\nEl router de distribución integra DHCP relay hacia el servidor DHCP de la VLAN 20.\nEntre sus tareas como integrante del Servicio de Sistemas, Comunicaciones y Seguridad Informática de la SGTIC se encuentran el\nmantenimiento y operación de los distintos elementos que conforman la infraestructura tecnológica de la SGTIC, así como el diagnóstico\ny resolución de las incidencias que afecten a dichos elementos.\nSalvo indicación expresa, usted dispone de los permisos necesarios para realizar todas las operaciones requeridas y las siguientes\npreguntas están referidas a la infraestructura anteriormente especificada.\nEn un momento determinado, la web del Ministerio deja de estar accesible. A continuación, deberá comprobar posibles problemas de servicio, rutas, puertos y/o filtrado entre máquinas.\nEn los servidores RHEL 8.8 se usa RAID por hardware y LVM para la gestión de volúmenes de datos. Para la gestión de copias de seguridad se usa el producto Veeam Backup y se sigue la política de copias 3-2-1, usando estrategias basadas en snapshots y backups. Los servidores RHEL deberán seguir las recomendaciones de seguridad del CCN-CERT."
  },
  "preguntas": [
   {
@@ -24,7 +24,7 @@
     "10.30.16.0 y 10.30.16.127"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La primera subred /25 de 10.30.16.0/20 empieza en la propia dirección base, **10.30.16.0**, y una /25 tiene 2^7 = **128 direcciones** (0 a 127), así que su **broadcast es 10.30.16.127** y los hosts válidos van de .1 a .126. La dirección .1 es el primer host, no la de red, y el .191 sería el broadcast de una /26 que empezase en .128, no de la primera /25. Truco: broadcast = dirección de red + tamaño del bloque − 1.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -36,10 +36,10 @@
     "254",
     "1022",
     "4094",
-    "8190 En un momento determinado, la web del Ministerio deja de estar accesible. A continuación, deberá comprobar posibles problemas de servicio, rutas, puertos y/o filtrado entre máquinas."
+    "8190"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Una /20 deja **32 − 20 = 12 bits de host**, que dan 2^12 = 4096 direcciones, y restando la de red y la de broadcast quedan **2^12 − 2 = 4094 hosts** (de 10.30.16.1 a 10.30.31.254). 254 corresponde a una /24, 1022 a una /22 y 8190 a una /19. Truco: hosts = 2^(32 − prefijo) − 2.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -54,7 +54,7 @@
     "relay dhcp 10.30.20.5"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En Cisco IOS, el DHCP relay se configura en la interfaz que recibe los DHCPDISCOVER de los clientes (aquí, la SVI de la VLAN 10) con **`ip helper-address 10.30.20.5`**. El router convierte entonces el broadcast DHCP en un **unicast dirigido al servidor** de otra subred. Ninguna de las otras órdenes existe en IOS. `ip dhcp pool` y `service dhcp` existen, pero sirven para que el propio router actúe como servidor DHCP, no para reenviar.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -69,7 +69,7 @@
     "tracert -r"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En RHEL, la tabla de enrutamiento se consulta con **`ip route show`** (o `ip r`), del paquete **iproute2**; también funcionan los antiguos `route -n` y `netstat -rn`. **route print** y **tracert** son comandos de **Windows**, y tracert no muestra la tabla de rutas, sino el camino hasta un destino. **netstat -p tcp** es la sintaxis de Windows/BSD para listar conexiones de un protocolo, no las rutas.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -84,7 +84,7 @@
     "systemctl run nginx -onboot"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**`systemctl enable nginx`** crea los enlaces de la unidad en el target correspondiente (normalmente multi-user.target) para que el servicio **arranque en cada inicio**. No lo arranca en ese momento: para eso se usa `systemctl start` o, para hacer las dos cosas a la vez, `systemctl enable --now nginx`. Los subcomandos «autostart» y «run … -onboot» no existen en systemd, y `service` (SysV) no tiene «start-enable».",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -99,7 +99,7 @@
     "docker block 3f7"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**`docker kill 3f7`** envía por defecto **SIGKILL** y detiene el contenedor **inmediatamente** (con `--signal` se puede enviar otra señal). En cambio, **docker stop** envía SIGTERM y espera un tiempo de gracia (10 s por defecto) antes de matarlo. Basta con el prefijo del ID («3f7») si no es ambiguo. «end», «interrupt» y «block» no son subcomandos de Docker.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -114,24 +114,23 @@
     "ip route net 10.30.20.30"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**`ip route get 10.30.20.30`** pregunta al kernel **qué ruta usaría realmente** para ese destino y muestra la **interfaz de salida (dev), el next hop (via) y la IP de origen (src)**, tras aplicar toda la lógica de enrutamiento. `ip route show` lista la tabla completa, pero no resuelve un destino concreto. «ip route neigh», «ip net show» e «ip route net» no son órdenes válidas; los vecinos (ARP/ND) se consultan con `ip neigh`.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s208",
-   "tema": 25,
+   "tema": 24,
    "enunciado": "Le solicitan listar rápidamente los puertos en escucha del sistema. En RHEL, ¿cuál indicaría que es un comando válido?",
    "opciones": [
     "route -n",
     "arp -an",
     "hostnamectl",
-    "ss -ltn En los servidores RHEL 8.8 se usa RAID por hardware y LVM para la gestión de volúmenes de datos. Para la gestión de copias de seguridad se usa el producto Veeam Backup y se sigue la política de copias 3-2-1, usando estrategias basadas en snapshots y backups. Los servidores RHEL deberán seguir las recomendaciones de seguridad del CCN-CERT."
+    "ss -ltn"
    ],
    "correcta": 3,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**`ss -ltn`** lista los sockets **en escucha (-l)** de **TCP (-t)** con puertos y direcciones en **formato numérico (-n)**. Con `-p` muestra también el proceso, y con `-u` incluye UDP. `ss` sustituye al antiguo `netstat -ltn`. **route -n** muestra la tabla de rutas, **arp -an** la caché ARP y **hostnamectl** el nombre del equipo y datos del sistema.",
+   "contexto": "s2"
   },
   {
    "id": "s209",
@@ -144,7 +143,7 @@
     "3 copias de los datos, en 2 soportes distintos, con 1 copia cifrada."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La regla **3-2-1** consiste en tener **3 copias** de los datos (la original y dos copias de seguridad), en **2 soportes o tipos de almacenamiento distintos** y con **1 copia fuera de la sede** (offsite), para sobrevivir a fallos de soporte y a desastres locales. El cifrado y la nube son buenas prácticas, pero no forman parte de la regla, y en ella solo una copia tiene que estar fuera, no dos. Veeam la amplía a **3-2-1-1-0**, que añade una copia inmutable u offline y cero errores en la verificación.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -159,7 +158,7 @@
     "zip -r config_backup.tar.gz /srv/app/config/"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**`tar -czf config_backup.tar.gz /srv/app/config/`** **crea (-c)** un archivo tar, lo **comprime con gzip (-z)** y lo escribe en el **fichero (-f)** indicado, que debe ir justo después de -f. **-x** sirve para **extraer**, no para crear. **gzip** comprime ficheros sueltos, pero no empaqueta directorios, y **zip** crea un archivo en formato ZIP aunque el nombre acabe en .tar.gz. Truco: c = create, x = extract, t = list; z = gzip, j = bzip2, J = xz.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -174,7 +173,7 @@
     "Administrador de certificados (certmgr.msc) del equipo."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Los usuarios y grupos de dominio se administran gráficamente con **Usuarios y equipos de Active Directory (dsa.msc)**, desde la pestaña «Miembros» del grupo o «Miembro de» del usuario. En un controlador de dominio **no hay cuentas locales**, así que **lusrmgr.msc** no está disponible. **netplwiz** gestiona las cuentas del equipo local y **certmgr.msc** los certificados del usuario.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -189,7 +188,7 @@
     "Copy-Path “C:\\DirectorioA\\*” -Destination “C:\\DirectorioB” -Recursive"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El cmdlet es **Copy-Item**, y su parámetro para copiar de forma recursiva es **-Recurse**: `Copy-Item -Path \"C:\\DirectorioA\\*\" -Destination \"C:\\DirectorioB\" -Recurse`. **Copy-Path** no existe. **-Recursive** no es un parámetro válido, y PowerShell solo acepta abreviaturas de un nombre, no palabras más largas. Truco: los cmdlets siguen el esquema **Verbo-Sustantivo** (Copy-Item, Get-ChildItem, Remove-Item).",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -204,7 +203,7 @@
     "firewall-cmd --permanent --zone=public --add-rich-rule='rule family=\"ipv4\" source address=\"172.19.50.0/27\" port protocol=\"tcp\" port=\"3306\" accept'"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "En **firewalld**, una regla rica que filtra por origen se escribe **`rule family=\"ipv4\" source address=\"172.19.50.0/27\" port port=\"3306\" protocol=\"tcp\" accept`**, con **--permanent** para que sea persistente (después se aplica con `firewall-cmd --reload`). El orden de los atributos dentro de `port` no importa. Las demás fallan por la sintaxis: **--permanent-direct** no existe, la dirección debe ir dentro del elemento **source** (no basta `address` suelto) y no existen atributos como `ip=` o `port number=`.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -220,7 +219,7 @@
     "Activar net.ipv4.conf.all.accept_ra=1"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**`net.ipv4.conf.all.rp_filter=1`** activa el **filtrado de ruta inversa en modo estricto** (RFC 3704): el kernel descarta los paquetes cuya IP de origen no se alcanzaría por la misma interfaz por la que llegan, lo que frena el **IP spoofing**. **ip_forward** convierte el equipo en router, lo que aumenta la exposición. **Desactivar tcp_syncookies** quita la protección contra la inundación SYN. **accept_ra** es un parámetro de IPv6 (anuncios de router) y no protege contra el spoofing.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -236,7 +235,7 @@
     "Añadir un PV nuevo al grupo vg_datos y ejecutar fsck sobre /contenido antes de ampliar el sistema de ficheros."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Como hay 200 GiB libres en el grupo de volúmenes, basta con **extender el volumen lógico** (`lvextend -L 600G /dev/vg_datos/lv_contenido`) y después **ampliar el XFS en caliente** con `xfs_growfs /contenido`; también se puede hacer todo de una vez con `lvextend -r`. **XFS se puede ampliar montado, pero nunca reducir**. Crear un volumen nuevo y cambiar el fstab obligaría a migrar los datos, un snapshot no sirve para ampliar el original y **no hace falta un PV nuevo** porque hay espacio libre. Además, `fsck` no se usa con XFS (su equivalente es `xfs_repair`).",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true

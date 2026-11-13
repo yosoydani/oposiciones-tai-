@@ -13,7 +13,7 @@
  "preguntas": [
   {
    "id": "p01",
-   "tema": 3,
+   "tema": 1,
    "enunciado": "De acuerdo con el artículo 64 de la Constitución Española de 1978 (en adelante CE), los actos del Rey, excepto la propuesta y el nombramiento del Presidente del Gobierno, y la disolución de las Cámaras prevista en el artículo 99, serán refrendados por:",
    "opciones": [
     "Los Presidentes del Congreso y el Senado.",
@@ -22,12 +22,11 @@
     "El Presidente del Gobierno y, en su caso, por los Ministros competentes."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El **artículo 64.1 CE** dice que los actos del Rey serán refrendados **por el Presidente del Gobierno y, en su caso, por los Ministros competentes**. Los Presidentes de las Cámaras solo intervienen en la excepción del propio enunciado: la propuesta y el nombramiento del Presidente del Gobierno y la disolución del artículo 99 los refrenda el **Presidente del Congreso** (no el del Senado). Los Secretarios de Estado no refrendan nunca: no son miembros del Gobierno."
   },
   {
    "id": "p02",
-   "tema": 3,
+   "tema": 1,
    "enunciado": "La suspensión de los derechos y libertades se encuentra regulada en la CE en:",
    "opciones": [
     "En el Capítulo III del Título I.",
@@ -36,12 +35,11 @@
     "En el Capítulo V del Título I."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La suspensión de derechos y libertades está en el **Capítulo V del Título I, que tiene un único artículo, el 55**. El Capítulo III del Título I recoge los principios rectores de la política social y económica (arts. 39-52), los artículos 52 y 53 tratan de las organizaciones profesionales y de las garantías de los derechos, y el 58 está fuera del Título I (Consejo Económico y Social, Título VII). Truco: Título I = cinco capítulos; el último, el V, suspende."
   },
   {
    "id": "p03",
-   "tema": 3,
+   "tema": 2,
    "enunciado": "Según el artículo 68 de la CE, ¿cuál es la circunscripción electoral en nuestro sistema electoral?",
    "opciones": [
     "La provincia.",
@@ -50,8 +48,7 @@
     "Distrito Municipal."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El **artículo 68.2 CE** establece que **la circunscripción electoral es la provincia**; Ceuta y Melilla eligen un Diputado cada una. Ni el municipio, ni la Comunidad Autónoma, ni el distrito municipal son circunscripciones para el Congreso. Para el Senado (art. 69) también se parte de la provincia, con reglas propias para las islas, Ceuta y Melilla."
   },
   {
    "id": "p04",
@@ -64,7 +61,7 @@
     "El Ministro de Justicia."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **artículo 18.1 de la Ley 50/1997** dice que el Presidente convoca y preside el Consejo de Ministros, **actuando como Secretario el Ministro de la Presidencia**. El Vicepresidente puede presidirlo en ausencia del Presidente, pero no es su secretario; ni el portavoz ni el Ministro de Justicia tienen esa función. Que hoy el ministerio se llame «de la Presidencia, Justicia y Relaciones con las Cortes» no cambia la regla: el secretario es quien ocupe la cartera de Presidencia.",
    "tema_auto": true
   },
   {
@@ -78,7 +75,7 @@
     "La constitución de las nuevas Cortes Generales."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Según el **artículo 78.3 CE**, expirado el mandato o disueltas las Cámaras, las Diputaciones Permanentes siguen ejerciendo sus funciones **hasta la constitución de las nuevas Cortes Generales**. No basta con celebrar las elecciones ni con proclamar los resultados, ni depende de que se elijan los presidentes de las Cámaras: el puente se mantiene hasta que las nuevas Cortes se constituyen.",
    "tema_auto": true
   },
   {
@@ -92,7 +89,7 @@
     "Tres meses, transcurrido el cual, la reclamación se entenderá desestimada."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **artículo 24.4 de la Ley 19/2013** fija un plazo máximo de **tres meses** para resolver y notificar la reclamación ante el Consejo de Transparencia y Buen Gobierno, y su silencio es **desestimatorio**. No confundas con el plazo de **un mes** que tiene la Administración para resolver la solicitud de acceso (art. 20.1), cuyo silencio también es desestimatorio. Truco: en transparencia el silencio siempre es negativo; lo que cambia es el plazo (1 mes la solicitud, 3 meses la reclamación).",
    "tema_auto": true
   },
   {
@@ -106,8 +103,9 @@
     "Reforma del marco regulatorio."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El **IV Plan de Gobierno Abierto (2020-2024)** tenía **10 compromisos**, entre ellos la **reforma del marco regulatorio** (ley de transparencia), la **huella normativa** y la **protección de denunciantes**, además del plan de participación ciudadana, el sistema de integridad, la educación y formación, la comunicación inclusiva y el Observatorio de Gobierno Abierto. No había un compromiso específico de «participación de los jóvenes en políticas públicas»: la participación aparecía de forma general. Truco: el IV Plan se organizaba en cuatro ejes, transparencia, participación, integridad y formación.",
+   "tema_auto": true,
+   "nota_vigencia": "El IV Plan de Gobierno Abierto (2020-2024) ya no está en vigor: el 6 de octubre de 2025 se aprobó el **V Plan de Gobierno Abierto**, vigente hasta 2029, con 10 compromisos y 218 medidas. Hoy la pregunta tendría que referirse a los compromisos del V Plan."
   },
   {
    "id": "p08",
@@ -120,7 +118,7 @@
     "En los Registros de Personal correspondientes."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **artículo 18 de la Ley 53/1984** dispone que todas las resoluciones de compatibilidad **se inscribirán en los Registros de Personal correspondientes**. El Registro Central de Personal es solo uno de ellos (el de la AGE), y la Oficina de Conflictos de Intereses se ocupa de los altos cargos, no del personal sometido a esta ley. La unidad de personal del ministerio tramita, pero no es el registro donde se inscribe.",
    "tema_auto": true
   },
   {
@@ -134,7 +132,7 @@
     "Todas las respuestas anteriores son correctas."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **artículo 30 de la Ley 39/2006** dice que el grado de dependencia es revisable **a instancia del interesado, de sus representantes o de oficio** por las Administraciones públicas competentes, por mejoría o empeoramiento de la situación o por error de diagnóstico o de aplicación del baremo. Por eso son correctas las tres vías a la vez. La reforma de la Ley 4/2026 dio nueva redacción a este artículo, pero mantiene las mismas tres vías de revisión.",
    "tema_auto": true
   },
   {
@@ -148,12 +146,12 @@
     "Medidas de acción positiva, dirigidas a cualquier empresa, sea de capital público o privado."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **artículo 49 de la LO 3/2007** dice que el Gobierno establecerá **medidas de fomento, especialmente dirigidas a las pequeñas y las medianas empresas**, con el apoyo técnico necesario, para impulsar los planes de igualdad voluntarios. Las «medidas de acción positiva» son otra figura (art. 11). Las empresas de **50 o más trabajadores** ya están **obligadas** a tener plan de igualdad, así que no necesitan fomento para adoptarlo voluntariamente.",
    "tema_auto": true
   },
   {
    "id": "p11",
-   "tema": 5,
+   "tema": 6,
    "enunciado": "Con carácter general el documento nacional de identidad tendrá un período de validez, a contar desde la fecha de la expedición o de cada una de sus renovaciones, de:",
    "opciones": [
     "Dos años cuando el solicitante no haya cumplido los cinco años de edad.",
@@ -162,8 +160,7 @@
     "Permanente cuando el titular haya cumplido los sesenta años."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El **artículo 6 del Real Decreto 1553/2005** fija la validez del DNI en **dos años si el titular no ha cumplido cinco**, **cinco años** de los 5 a los 30, **diez años** de los 30 a los 70 y **permanente a partir de los 70**. Las otras opciones cambian las cifras: cuatro años en vez de cinco, nueve en vez de diez y permanente a los sesenta en vez de a los setenta. Truco: 2-5-10-permanente, con cortes a los 5, 30 y 70 años."
   },
   {
    "id": "p12",
@@ -176,7 +173,7 @@
     "No será superior a 6 años."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **artículo 4.1 de la Ley 6/2020** establece que el periodo de vigencia de los certificados cualificados **no será superior a cinco años**. No existe certificado cualificado ilimitado, y los tres o seis años son distractores. La vigencia la fija el prestador dentro de ese máximo, y el certificado se extingue antes si se revoca.",
    "tema_auto": true
   },
   {
@@ -190,7 +187,7 @@
     "Derecho a la igualdad y a la no discriminación en el entorno digital."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **Título X de la LOPDGDD (arts. 79-97)** recoge, entre otros, el **testamento digital** (art. 96), el **derecho al olvido en redes sociales** (art. 94) y la **desconexión digital en el ámbito laboral** (art. 88). El «derecho a la igualdad y a la no discriminación en el entorno digital» no está en la LOPDGDD: aparece en la **Carta de Derechos Digitales** de 2021, que no es una norma con rango de ley. Truco: si suena a principio general y no a una garantía concreta, desconfía.",
    "tema_auto": true
   },
   {
@@ -204,7 +201,7 @@
     "3 meses."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **artículo 34.3 de la LOPDGDD** obliga a comunicar a la AEPD (o a la autoridad autonómica) las designaciones, nombramientos y ceses de los delegados de protección de datos **en el plazo de diez días**. Quince días, un mes o tres meses son distractores. Lo mismo vale tanto si el delegado es obligatorio como si es voluntario.",
    "tema_auto": true
   },
   {
@@ -218,7 +215,7 @@
     "Criptografía."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "En el **Anexo II del RD 311/2022 (ENS)**, la medida **mp.si.2 Criptografía** afecta a la **confidencialidad y la integridad**. El **bloqueo de puesto de trabajo** (mp.eq.2) afecta solo a la **autenticidad**, la **firma electrónica** (mp.info.3) a integridad y autenticidad, y el **registro de la actividad** (op.exp.8) a la **trazabilidad**. Truco: cifrar es lo que impide que otro lea, y eso es confidencialidad.",
    "tema_auto": true
   },
   {
@@ -232,7 +229,7 @@
     "Los intercambios de información se podrán implementar a través de servicios web."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La **NTI de Protocolos de intermediación de datos** dice literalmente que **«los intercambios de información se podrán implementar a través de servicios web»** (apartado III.5). Las demás alteran el texto. Las tecnologías deben basarse en **estándares abiertos e interoperables** según la NTI de Catálogo de estándares, y la opción quita el «abiertos e interoperables». Se usa por defecto la **versión 3.0 de SCSP**, no la 2.0, que solo se admite en servicios ya existentes. Y emisores y requirentes **sí mantienen trazabilidad** de los intercambios.",
    "tema_auto": true
   },
   {
@@ -246,12 +243,12 @@
     "MONICA, Gestor de logs para responder ante incidentes y amenazas."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**ELENA** es el **simulador de técnicas de cibervigilancia** del CCN, un entorno para formar analistas en investigación en fuentes abiertas. Las demás confunden nombres: **CLARA** analiza el cumplimiento del ENS en equipos Windows (la protección y trazabilidad del dato es **CARLA**). Las descripciones de **GLORIA** (Gestor de Logs para Responder ante Incidentes y Amenazas, como su acrónimo indica) y **MÓNICA** (gestión de eventos e información de seguridad) aparecen intercambiadas. Truco: muchas preguntas de herramientas del CCN se resuelven leyendo el acrónimo.",
    "tema_auto": true
   },
   {
    "id": "p18",
-   "tema": 2,
+   "tema": 9,
    "enunciado": "Señale la respuesta correcta referente a los servicios comunes en materia de administración electrónica:",
    "opciones": [
     "SERVINOMINA realiza la gestión completa de las fases de nómina: cálculo, contabilidad y pago.",
@@ -260,8 +257,7 @@
     "ENVIA es una aplicación que hace posible el envío de ficheros de gran volumen entre usuarios."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**CIRCABC** es la herramienta colaborativa de la Comisión Europea para compartir documentación y trabajar en grupo, ofrecida como servicio común. Las demás atribuyen funciones a la herramienta equivocada. La gestión completa de la nómina (cálculo, contabilidad y pago) es **NEDAES**, mientras que **Servinómina** es el servicio para que el empleado público **consulte sus nóminas**. El envío de ficheros de gran volumen entre usuarios es **ALMACÉN**, y **eVisor** sirve para generar justificantes visualizables e imprimibles de documentos firmados."
   },
   {
    "id": "p19",
@@ -274,12 +270,12 @@
     "Alto comisionado del Gobierno de la nación."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **artículo 54 CE** define al Defensor del Pueblo como **alto comisionado de las Cortes Generales**, designado por ellas para defender los derechos del Título I, para lo cual puede supervisar la actividad de la Administración. Lo eligen el Congreso y el Senado (no solo el Congreso), y no depende ni del Poder Judicial ni del Gobierno. Truco: si lo nombran las dos Cámaras, es comisionado de las dos.",
    "tema_auto": true
   },
   {
    "id": "p20",
-   "tema": 2,
+   "tema": 22,
    "enunciado": "¿Qué es WCAG?",
    "opciones": [
     "Unas pautas de accesibilidad de contenidos web promovidas por el W3C.",
@@ -288,8 +284,7 @@
     "Un framework javascript especialmente indicado para trabajar con bases de datos no relacionales."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**WCAG** (Web Content Accessibility Guidelines) son las **pautas de accesibilidad para contenidos web del W3C**, dentro de su iniciativa WAI. Son la base de la norma europea **EN 301 549** y, a través de ella, del RD 1112/2018. Las otras opciones (librería Java EE, componente de Hadoop, framework JavaScript) son inventadas."
   },
   {
    "id": "p21",
@@ -302,7 +297,7 @@
     "Lightning"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**Lightning** es el conector propietario de Apple para carga y datos, introducido en 2012 con el iPhone 5. **USB tipo C** es un estándar del USB-IF, no de Apple, y desde el iPhone 15 (2023) Apple lo usa en lugar de Lightning por la normativa europea del cargador común. «iUSB» e «iFirewire» no existen; FireWire (IEEE 1394) sí lo impulsó Apple, pero sin la «i».",
    "tema_auto": true
   },
   {
@@ -316,7 +311,7 @@
     "La sentencia GRANT se utiliza para dar permisos a un usuario."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La opción falsa es la de **DELETE**, porque **borra filas de una tabla**, no objetos de la base de datos. Para eliminar bases de datos, tablas o índices se usa **DROP** (DDL). Las demás son correctas: **INSERT** añade registros, **UPDATE** modifica los existentes y **GRANT** concede permisos (DCL). Truco: DELETE trabaja con datos (DML) y DROP con estructuras (DDL).",
    "tema_auto": true
   },
   {
@@ -330,7 +325,7 @@
     "Job, Pod, Volume, Deployment."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La documentación clásica de Kubernetes enumera como objetos básicos **Pod, Service, Volume y Namespace**. Deployment o Job son **controladores** de nivel superior construidos sobre esos objetos básicos, y «State» no es un objeto de Kubernetes (existe StatefulSet, que también es un controlador). Truco: P-S-V-N, «lo que se ejecuta, cómo se expone, dónde se guarda y dónde vive».",
    "tema_auto": true
   },
   {
@@ -344,7 +339,7 @@
     "El multiplexor de entrada."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La **ALU (unidad aritmético-lógica)** es una parte de la **CPU**, junto a la unidad de control y los registros, y hace las operaciones aritméticas y lógicas. La memoria guarda datos e instrucciones pero no opera con ellos. El bus de operaciones y el multiplexor de entrada no son los componentes donde está la ALU.",
    "tema_auto": true
   },
   {
@@ -358,7 +353,7 @@
     "Está muy extendido en el mercado de procesadores para smartphone y tablets por su bajo consumo y buen rendimiento."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En **CISC** (Complex Instruction Set Computer) la **microprogramación** es característica: cada instrucción compleja se descompone en microinstrucciones guardadas en la unidad de control. Las otras opciones describen **RISC**: juego reducido de instrucciones para usar menos ciclos, instrucciones cableadas directamente en hardware y predominio en móviles y tabletas (ARM) por su bajo consumo.",
    "tema_auto": true
   },
   {
@@ -372,7 +367,7 @@
     "Un RAID 4 distribuye la información a nivel de bloques con dos discos de paridad dedicados."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La afirmación falsa es la de **RAID 4**, que reparte los datos por bloques con **un único disco de paridad dedicado**, no dos. Dos paridades corresponden a **RAID 6**, aunque distribuidas, no dedicadas. Lo demás es cierto: **RAID 5 necesita al menos 3 discos**, **RAID 6** añade un segundo bloque de paridad a RAID 5 y **RAID 1+0 necesita al menos 4 discos**.",
    "tema_auto": true
   },
   {
@@ -386,7 +381,7 @@
     "DLT"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**SATA** (Serial ATA) es la interfaz de discos que transmite **en serie**. **ATA** (PATA) y el **SCSI** clásico son interfaces **paralelas**; la versión serie de SCSI se llama SAS. **DLT** no es un bus: es una tecnología de cinta magnética para copias de seguridad.",
    "tema_auto": true
   },
   {
@@ -400,7 +395,7 @@
     "Los dispositivos USB 2.0 pueden lograr una velocidad de transferencia máxima hasta de 480 Mbps."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La afirmación falsa es que USB tipo C sea lo mismo que USB 3.1: **USB-C es un tipo de conector**, mientras que USB 3.1 es una **especificación de velocidad y protocolo**. Un puerto USB-C puede ir a velocidad USB 2.0 y un USB 3.1 puede usar conector tipo A. Las demás son ciertas: **USB 2.0 llega a 480 Mbps**, **USB 3.2 Gen 2x2 a 20 Gbps**, y USB 3.1 Gen 1 (5 Gbps) y Gen 2 (10 Gbps) se distinguen por la velocidad.",
    "tema_auto": true
   },
   {
@@ -414,7 +409,7 @@
     "Algoritmo de Floyd-Warshall."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El **algoritmo de Dijkstra** calcula los **caminos mínimos desde un vértice origen a todos los demás** en un grafo con pesos no negativos. **Floyd-Warshall** calcula los caminos mínimos **entre todos los pares** de vértices, mientras que **Kruskal y Prim** construyen el **árbol de expansión mínima** y no buscan caminos más cortos. Truco: Dijkstra, uno a todos; Floyd, todos a todos.",
    "tema_auto": true
   },
   {
@@ -428,7 +423,7 @@
     "PDF/I proporciona especificaciones para crear, ver e imprimir páginas finales listas para imprimir o listas para la prensa."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La falsa es la de **PDF/I**, porque ese estándar no existe: los documentos listos para imprenta son **PDF/X** (ISO 15930). Las demás son correctas: **PDF/UA** (ISO 14289) es el estándar de accesibilidad, **PDF/A** (ISO 19005) el de conservación a largo plazo y **PDF/E** (ISO 24517) el de documentos de ingeniería. Truco: X de «eXchange» gráfico para imprenta, A de archivo, E de engineering, UA de Universal Accessibility.",
    "tema_auto": true
   },
   {
@@ -442,8 +437,9 @@
     "macOS Ventura"
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "En la fecha del examen la versión más reciente era **macOS 13 Ventura** (octubre de 2022). El orden es **Sierra (10.12, 2016) → … → Big Sur (11, 2020) → Monterey (12, 2021) → Ventura (13, 2022)**. Después llegaron Sonoma (14), Sequoia (15), Tahoe (26) y macOS 27.",
+   "tema_auto": true,
+   "nota_vigencia": "Hoy macOS Ventura ya no es la versión más reciente: le siguieron Sonoma (14, 2023), Sequoia (15, 2024) y Tahoe (26, 2025), y en la WWDC 2026 se presentó **macOS 27 «Golden Gate»**, publicado en septiembre de 2026. Ventura (13) solo es la respuesta correcta para la fecha del examen."
   },
   {
    "id": "p32",
@@ -456,7 +452,7 @@
     "En Windows de 64 bits se admiten llamadas a procedimientos remotos (RPC) entre procesos de 64 y 32 bits tanto en el mismo equipo como entre equipos distintos."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La falsa es la que limita las RPC al mismo equipo, porque según la documentación de Microsoft el Windows de 64 bits **admite RPC entre procesos de 32 y 64 bits tanto en el mismo equipo como entre equipos distintos**. También es cierto que un proceso de 64 bits **no puede cargar una DLL de 32 bits** ni uno de 32 bits una DLL de 64 bits: un proceso solo carga bibliotecas de su misma arquitectura. Para comunicar procesos de distinta arquitectura se usa precisamente RPC/COM fuera de proceso.",
    "tema_auto": true
   },
   {
@@ -470,7 +466,7 @@
     "Atomicidad, Consistencia, Aislamiento y Disponibilidad."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**ACID** son las siglas de **Atomicidad, Consistencia, Aislamiento (Isolation) y Durabilidad**: la transacción se hace entera o no se hace, lleva la base de datos de un estado válido a otro, no interfiere con otras transacciones concurrentes y sus cambios confirmados persisten. Las demás cuelan términos de otros modelos: la **Disponibilidad** es de **CAP** o de **BASE** (NoSQL), y no forman parte de ACID ni la coherencia, ni la integridad, ni la distribución.",
    "tema_auto": true
   },
   {
@@ -484,7 +480,7 @@
     "El esquema de una BDOO incluye únicamente un conjunto de clases (o de tipos)."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **Manifiesto de las BDOO (Atkinson et al., 1989)** exige que el sistema de tipos sea **extensible**: el usuario debe poder definir tipos nuevos y usarlos igual que los predefinidos. Por eso es falso que el conjunto de tipos deba ser fijo. Sí son características suyas los **objetos complejos** y la **identidad de objeto (OID)**, que no depende de los valores de los atributos. También lo es que el esquema se defina como un conjunto de clases o tipos.",
    "tema_auto": true
   },
   {
@@ -498,7 +494,7 @@
     "Es el servicio principal para almacenar, procesar y proteger los datos."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**Machine Learning Services** es una característica de SQL Server que permite **ejecutar scripts de Python y R dentro de la base de datos**, sobre los datos relacionales y sin moverlos. Las otras describen otros componentes: la copia y sincronización entre bases de datos es la **replicación**, la calidad de datos basada en conocimiento es **Data Quality Services** y el servicio principal para almacenar, procesar y proteger datos es el **Motor de base de datos** (Database Engine).",
    "tema_auto": true
   },
   {
@@ -512,7 +508,7 @@
     "La clave candidata es el conjunto de atributos que garantizan la unicidad de las ocurrencias e identifican la ocurrencia unívocamente."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**MÉTRICA v3** define la **entidad** como **el objeto, real o abstracto, acerca del cual se desea almacenar información** en la base de datos. Las demás fallan: un atributo se define sobre **un único dominio**, y el dominio **sí tiene existencia propia**, independiente de entidades, relaciones o atributos. La clave candidata exige además **minimalidad**: un conjunto de atributos que solo garantiza la unicidad, sin ser mínimo, es una superclave.",
    "tema_auto": true
   },
   {
@@ -541,7 +537,7 @@
     "Un compilador cruzado o cross compiler es un compilador capaz de crear código ejecutable para otra plataforma distinta a aquélla en la que se ejecuta."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La falsa es la definición del **transpilador**, que no es un híbrido de intérprete y compilador. Es un compilador **de código fuente a código fuente** que traduce entre lenguajes de nivel de abstracción parecido, como TypeScript a JavaScript. Las demás son correctas: el **intérprete** ejecuta directamente las instrucciones, el **compilador** traduce a un lenguaje de más bajo nivel y el **compilador cruzado** genera ejecutables para una plataforma distinta de aquella en la que se ejecuta.",
    "tema_auto": true
   },
   {
@@ -555,7 +551,7 @@
     "En C++ no se puede nombrar más de una función con el mismo nombre."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En C++ las funciones con el mismo nombre en el mismo ámbito y **distinta lista de parámetros** se llaman **funciones sobrecargadas** (*overloading*). El compilador elige cuál llamar por el número y los tipos de los argumentos; el tipo de retorno no basta para distinguirlas. «Funciones dobles» o «repetidas» no son términos de C++, y C++ sí permite dar el mismo nombre a varias funciones.",
    "tema_auto": true
   },
   {
@@ -569,7 +565,7 @@
     "En C++ la declaración del array: «int vector2[] = {1,2,3,4,10,9,80,70,19};», es incorrecta."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Un **array o vector** es una estructura de datos **homogénea** (todos los elementos del mismo tipo) cuyos elementos se guardan **en posiciones consecutivas de memoria**, por eso se accede a ellos por índice en tiempo constante. El **bytecode** de Java es un **código intermedio** para la JVM, no código máquina binario. C++ es un lenguaje de **tercera generación**, y la declaración `int vector2[] = {1,2,3,...};` es válida, porque el compilador deduce el tamaño de la lista de inicialización.",
    "tema_auto": true
   },
   {
@@ -583,12 +579,12 @@
     "Los drivers tipo 2 son controladores \"puente\", que utilizan otra tecnología (por ejemplo ODBC) para comunicarse con la base de datos."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Los **drivers JDBC de tipo 3** usan un **protocolo de red independiente y un middleware** (servidor intermedio) que traduce las llamadas al SGBD. Hay **cuatro tipos**, no tres: **tipo 1**, puente JDBC-ODBC; **tipo 2**, API nativa parcialmente en Java; **tipo 3**, protocolo de red con middleware; **tipo 4**, Java puro con el protocolo nativo del SGBD. Las otras opciones atribuyen el Java puro al tipo 1 (es el 4) y el puente al tipo 2 (es el 1).",
    "tema_auto": true
   },
   {
    "id": "p42",
-   "tema": 16,
+   "tema": 14,
    "enunciado": "Señale la respuesta INCORRECTA. Los tipos más corrientes de anomalías de base de datos son:",
    "opciones": [
     "Lecturas no repetibles.",
@@ -597,8 +593,7 @@
     "Lecturas fantasma."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Las anomalías clásicas de concurrencia que definen los niveles de aislamiento de SQL son las **lecturas sucias** (*dirty reads*), las **lecturas no repetibles** y las **lecturas fantasma** (*phantom reads*). Las «lecturas hundidas» no existen. Truco: READ COMMITTED evita las sucias, REPEATABLE READ también las no repetibles y SERIALIZABLE además las fantasma."
   },
   {
    "id": "p43",
@@ -611,12 +606,12 @@
     "ERASE"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**DELETE** (sin WHERE, `DELETE FROM tabla`) borra las filas pero **mantiene la definición de la tabla**. **TRUNCATE** haría lo mismo de forma más rápida, pero no está entre las opciones. **DROP TABLE** elimina la tabla entera, datos y estructura, y **REMOVE** y **ERASE** no son sentencias de SQL estándar.",
    "tema_auto": true
   },
   {
    "id": "p44",
-   "tema": 17,
+   "tema": 18,
    "enunciado": "¿Cuál de los siguientes términos hace referencia a patrones generales de software para asignación de responsabilidades en el diseño orientado a objetos?",
    "opciones": [
     "OOD",
@@ -625,8 +620,7 @@
     "Fan-In & Fan-Out"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**GRASP** (General Responsibility Assignment Software Patterns, de Craig Larman) son los patrones generales para **asignar responsabilidades** en diseño orientado a objetos: Experto en información, Creador, Controlador, Bajo acoplamiento, Alta cohesión, Polimorfismo, etc. **OOD** es el diseño orientado a objetos en general, **Booch** es un método de modelado, y **fan-in / fan-out** son métricas de acoplamiento."
   },
   {
    "id": "p45",
@@ -654,7 +648,7 @@
     "Diagrama de casos de uso."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En **MÉTRICA v3** el **diagrama de interacción** (de secuencia o de colaboración) describe en detalle **un escenario concreto de un caso de uso**: qué objetos intervienen y qué mensajes se intercambian. El **diagrama de casos de uso** solo muestra los casos y los actores, sin el detalle de cada escenario, y el **DFD** es una técnica estructurada, no orientada a objetos. «Diagrama de representación» no es una técnica de MÉTRICA.",
    "tema_auto": true
   },
   {
@@ -668,7 +662,7 @@
     "Mockete"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**Mockete** no existe como librería de Apache: es un nombre inventado que recuerda a **Mockito**, que tampoco es de Apache. Las demás sí son de la Apache Software Foundation: **Log4j** (registro de logs), **HttpClient** (proyecto HttpComponents) y **Commons IO** (utilidades de entrada/salida).",
    "tema_auto": true
   },
   {
@@ -682,7 +676,7 @@
     ".NET admite un amplio rango de lenguajes de programación, a excepción de C#"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**.NET es un proyecto de código abierto** (licencia MIT), gestionado bajo la **.NET Foundation** e impulsado por **Microsoft**, no por Google. Es multiplataforma y sirve para web, escritorio, móvil, nube, IoT, juegos, etc., no solo para móviles. Su lenguaje principal es precisamente **C#**, junto a F# y Visual Basic.",
    "tema_auto": true
   },
   {
@@ -696,7 +690,7 @@
     "Podrá contener miembros como: métodos. eventos y delegados."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Según el glosario de .NET, un **POCO (Plain Old CLR Object)** es una estructura que **solo contiene propiedades o campos públicos**, **no hereda de otra clase ni implementa interfaces** y **no debe contener otros miembros como métodos, eventos o delegados**. Por eso es falso que pueda contener métodos, eventos y delegados. Se usan sobre todo como **DTO**, y su idea viene del POJO de Java.",
    "tema_auto": true
   },
   {
@@ -725,7 +719,7 @@
     "WS-Policy"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**WS-SecureConversation** es el estándar de **OASIS** que define cómo **establecer y compartir contextos de seguridad** y **derivar claves de sesión** a partir de ellos, para no repetir la autenticación costosa en cada mensaje. **WS-Addressing** trata del direccionamiento de mensajes, **WS-Federation** de la federación de identidades entre dominios y **WS-Policy** de la expresión de políticas.",
    "tema_auto": true
   },
   {
@@ -739,12 +733,12 @@
     "Es una organización diseñada para promover la interoperatividad de servicios Web entre plataformas, sistemas operativos y lenguajes de programación."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**WSIL (Web Services Inspection Language)** es un **método alternativo y más ligero que UDDI para el descubrimiento** de servicios web. Funciona con documentos XML publicados en el propio sitio que enumeran sus servicios y enlazan a sus WSDL. Las otras describen otras cosas: el modelo de despliegue en Java EE es **JSR-109**, publicar y encontrar información en un registro es **UDDI**, y la organización para la interoperabilidad entre plataformas es **WS-I**.",
    "tema_auto": true
   },
   {
    "id": "p53",
-   "tema": 20,
+   "tema": 21,
    "enunciado": "¿Cuál es el motor web desarrollado por The Mozilla Foundation?",
    "opciones": [
     "WebKit",
@@ -753,8 +747,7 @@
     "Edge"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**Gecko** es el **motor de renderizado** desarrollado por Mozilla y usado en Firefox y Thunderbird. **Firefox** es el navegador, no el motor. **WebKit** es el motor de Apple (Safari), y **Edge** es el navegador de Microsoft, que hoy usa **Blink**, el motor de Chromium."
   },
   {
    "id": "p54",
@@ -767,8 +760,9 @@
     "Optimized Document"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "En la especificación **XOP** del W3C, el **XOP Package** es **el paquete que contiene el XOP Document y el contenido optimizado** (binario), normalmente en un mensaje MIME Multipart/Related. Es el término central del estándar que usa MTOM. «XOP Header» y «Optimized Document» no son términos de la especificación (el término es «Optimized Content»).",
+   "tema_auto": true,
+   "nota_vigencia": "Objeción: la especificación XOP del W3C (apartado 1.1, Terminology) también define **«Reconstituted XML Infoset»** («an XML Infoset that has been constructed from the parts of a XOP Package»), así que esa opción también está relacionada con XOP. La plantilla da por buena solo «XOP Package»."
   },
   {
    "id": "p55",
@@ -781,12 +775,12 @@
     "JDBC"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**JDBC** (Java Database Connectivity) es la **API de Java para acceder a bases de datos**, no un framework de JavaScript. **Angular** y **React** son frameworks o librerías de JavaScript para interfaces. **Bootstrap** es sobre todo un framework CSS, pero incluye componentes JavaScript.",
    "tema_auto": true
   },
   {
    "id": "p56",
-   "tema": 21,
+   "tema": 22,
    "enunciado": "Para detectar, eliminar y/o mitigar las debilidades de una aplicación se pueden realizar diferentes análisis de seguridad durante el ciclo de vida del desarrollo de software, entre los que NO se encuentra:",
    "opciones": [
     "SAST (Static Application Security Testing).",
@@ -795,8 +789,7 @@
     "SCA (Software Composition Analysis)."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**S-SDLC** significa **Secure Software Development Life Cycle**: es el **ciclo de vida de desarrollo seguro** en su conjunto, no un tipo de análisis de seguridad, y la expansión «Liability Control» es inventada. Sí son análisis concretos el **SAST** (análisis estático del código fuente), el **DAST** (pruebas dinámicas sobre la aplicación en ejecución) y el **SCA** (análisis de componentes y dependencias de terceros con vulnerabilidades conocidas)."
   },
   {
    "id": "p57",
@@ -809,7 +802,7 @@
     "La operabilidad."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El principio **operable** de WCAG exige que **los componentes de la interfaz y la navegación puedan utilizarse** por cualquier persona, por ejemplo con teclado y con tiempo suficiente. **Perceptible** exige que la información se pueda percibir, **comprensible** que la información y el manejo se entiendan, y **robusto** que el contenido funcione con distintos agentes de usuario y productos de apoyo. Truco: POUR, Perceptible, Operable, Comprensible (Understandable) y Robusto.",
    "tema_auto": true
   },
   {
@@ -823,7 +816,7 @@
     "Pruebas de integración."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "En **MÉTRICA v3** las **pruebas de integración** verifican el **correcto ensamblaje entre componentes** y que interactúan bien a través de sus interfaces. Las **pruebas del sistema** comprueban el sistema completo y su integración con el entorno, las de **implantación** su funcionamiento en el entorno de operación, y las de **regresión** que un cambio no ha introducido errores en lo que ya funcionaba.",
    "tema_auto": true
   },
   {
@@ -837,7 +830,7 @@
     "Equipo de Proyecto."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "En **MÉTRICA v3**, la tarea **«Elaboración de los Manuales de Usuario» (CSI 9.1)** la realiza el **Equipo de Proyecto**. El **Equipo de Formación** interviene en la definición de la formación de usuarios finales (CSI 10), y los **usuarios expertos** participan en la validación y en las pruebas, no en la redacción de los manuales. El **consultor de sistemas de información** tampoco figura como participante de esta tarea.",
    "tema_auto": true
   },
   {
@@ -851,12 +844,12 @@
     "GIT"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**JMeter** (Apache) es una herramienta de **pruebas de carga y rendimiento**, no de control de versiones. **Subversion** (SVN) es un control de versiones **centralizado**, y **Mercurial** y **Git** son **distribuidos**.",
    "tema_auto": true
   },
   {
    "id": "p61",
-   "tema": 10,
+   "tema": 13,
    "enunciado": "Señale la respuesta INCORRECTA sobre el kernel de un Sistema Operativo:",
    "opciones": [
     "Controla todas las funciones importantes del hardware.",
@@ -865,8 +858,7 @@
     "Recibe peticiones de servicio de los procesos y los comunica con el hardware."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La falsa es que el kernel sea el núcleo del procesador: el **kernel es el núcleo del sistema operativo**, que es software, mientras que los *cores* del procesador son hardware. Las demás son funciones reales del kernel: **controla el hardware**, **planifica los procesos** (multitarea) y **atiende las llamadas al sistema** de los procesos, comunicándolos con el hardware."
   },
   {
    "id": "p62",
@@ -879,7 +871,7 @@
     "El proceso init se refiere al proceso de arranque de un usuario."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La falsa es la de **init**, que no es el arranque de un usuario: es el **primer proceso del sistema (PID 1)**, lanzado por el kernel al arrancar, padre de todos los demás procesos. En la mayoría de distribuciones Linux actuales ese papel lo cumple **systemd**. Lo demás es cierto: **UID** identifica al usuario, **GID** al grupo y el superusuario es **root** (UID 0).",
    "tema_auto": true
   },
   {
@@ -893,7 +885,7 @@
     "Permite un aprovechamiento mayor de la capacidad del hardware."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La falsa es que la virtualización exija más inversión en hardware específico: al contrario, **consolida varias máquinas virtuales en un mismo servidor físico** y **reduce la inversión en hardware**, el consumo y el espacio. Las demás son ventajas reales: facilita desplegar entornos (plantillas, clonación), ejecuta varios sistemas operativos en una máquina física y aprovecha mejor la capacidad del hardware.",
    "tema_auto": true
   },
   {
@@ -907,7 +899,7 @@
     "Realiza una copia integral de los datos, copiando todos los contenidos de los sistemas a mantener."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La **copia diferencial** copia **todo lo modificado desde la última copia completa**. Para restaurar bastan la completa más la última diferencial. La **incremental** copia lo modificado desde la última copia **de cualquier tipo**, completa o incremental. La copia que replica también los borrados es una **copia espejo** (*mirror*), y la que lo copia todo es la **completa**. Truco: la diferencial crece cada día hasta la siguiente completa; la incremental es pequeña pero obliga a restaurar toda la cadena.",
    "tema_auto": true
   },
   {
@@ -921,7 +913,7 @@
     "metadata"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "En Kubernetes, el campo **metadata** contiene los datos que **identifican unívocamente al objeto**: `name`, `namespace` y `uid`, además de labels y annotations. **apiVersion** indica la versión de la API, **kind** el tipo de objeto (Pod, Service…) y **spec** el estado deseado.",
    "tema_auto": true
   },
   {
@@ -935,7 +927,7 @@
     "POP3"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**Outlook** es un **cliente de correo** (programa de Microsoft), no un protocolo. Los protocolos son **SMTP** para enviar y transferir correo entre servidores, y **POP3** e **IMAP** para que el cliente recupere el correo del buzón. Con POP3 normalmente se descarga el correo, y con IMAP se sincroniza y permanece en el servidor.",
    "tema_auto": true
   },
   {
@@ -949,7 +941,7 @@
     "CMIP"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**CMIP** (Common Management Information Protocol) es el protocolo de **gestión de red del modelo OSI**, el equivalente OSI a SNMP, y sirve para supervisar y administrar dispositivos de red. **SMTP** es para el correo, **DNS** para la resolución de nombres y **FTP** para la transferencia de ficheros.",
    "tema_auto": true
   },
   {
@@ -963,12 +955,12 @@
     "GET RESPONSE"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**GetBulk** (GetBulkRequest), introducido en **SNMPv2**, permite que el gestor recupere **grandes bloques de datos de una tabla MIB** en una sola petición. **GetNext** también recorre la MIB, pero de objeto en objeto, una petición por cada uno. **Get** pide valores concretos, y **Response** es la contestación del agente, no un comando del gestor.",
    "tema_auto": true
   },
   {
    "id": "p69",
-   "tema": 27,
+   "tema": 28,
    "enunciado": "¿Qué es ECDSA?",
    "opciones": [
     "Un algoritmo de firma.",
@@ -977,12 +969,11 @@
     "Un protocolo de nivel de enlace."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**ECDSA** (Elliptic Curve Digital Signature Algorithm) es un **algoritmo de firma digital basado en criptografía de curva elíptica**: la variante de DSA sobre curvas elípticas. Da la misma seguridad que RSA con claves mucho más cortas. No tiene que ver con estándares de cableado, organismos reguladores ni protocolos de enlace."
   },
   {
    "id": "p70",
-   "tema": 27,
+   "tema": 6,
    "enunciado": "Seleccione la respuesta INCORRECTA sobre la firma electrónica:",
    "opciones": [
     "Se llama Co-firma a la firma múltiple en la que todos los firmantes están al mismo nivel y en la que no importa el orden en el que se firma.",
@@ -991,8 +982,7 @@
     "El formato PAdES (Propietario Avanzado) es el formato propio utilizado por Microsoft Office, si bien existe una implementación abierta que se aplica en Open Office."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La falsa es la de **PAdES**, que significa **PDF Advanced Electronic Signatures**: es el formato de firma avanzada para documentos **PDF** (ETSI), no un formato propietario de Microsoft Office. Lo demás es cierto: la **cofirma** es una firma múltiple en paralelo en la que no importa el orden, **XAdES** produce un fichero XML, y en XAdES se habla de firmas **detached** (separada), **enveloping** (envolvente) y **enveloped** (envuelta). Truco: CAdES (CMS), XAdES (XML), PAdES (PDF)."
   },
   {
    "id": "p71",
@@ -1005,7 +995,7 @@
     "Concentradores (Hubs)."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **router (enrutador)** trabaja en el **nivel 3 (red)**: encamina paquetes entre redes según la dirección IP. **Puentes y conmutadores** trabajan en el **nivel 2 (enlace)**, con direcciones MAC, y el **concentrador (hub)** en el **nivel 1 (físico)**, porque solo repite la señal. Truco: hub-1, switch/bridge-2, router-3.",
    "tema_auto": true
   },
   {
@@ -1019,7 +1009,7 @@
     "Es muy flexible, lo que hace que se pueda usar sin problema en instalaciones donde los tubos son antiguos."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La falsa es que la **fibra óptica plástica (POF)** tenga un núcleo menor: lo tiene **mucho mayor que la fibra de vidrio**, en torno a **1 mm** frente a los 8-62,5 µm de la de vidrio. Por eso es fácil de conectar y muy flexible. Es cierto que está hecha de **PMMA** (polimetilmetacrilato) con revestimiento de polímeros fluorados y que, por su flexibilidad, sirve en instalaciones con tubos antiguos. Su contrapartida es una atenuación mayor, que la limita a distancias cortas.",
    "tema_auto": true
   },
   {
@@ -1033,7 +1023,7 @@
     "FC00::/7"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En IPv6 las direcciones **multicast** usan el prefijo **FF00::/8** (empiezan por FF). **::1/128** es la dirección de **loopback**, **FC00::/7** son las direcciones **únicas locales** (ULA) y **224.0.0.0/4** es el rango multicast de **IPv4** (clase D), no de IPv6.",
    "tema_auto": true
   },
   {
@@ -1047,7 +1037,7 @@
     "Un servicio no confirmado utiliza 3 de las 4 primitivas: Request, Indication, Response."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Un **servicio confirmado** usa las **cuatro primitivas**: **Request** (petición), **Indication** (indicación al destino), **Response** (respuesta) y **Confirm** (confirmación al origen). Uno **no confirmado** solo usa **dos**, Request e Indication, y no tres. Son las entidades del **nivel N** las que ofrecen servicios al **nivel N+1**, no al revés, y la simplificación en TCP e IP que plantea otra opción es inventada.",
    "tema_auto": true
   },
   {
@@ -1061,7 +1051,7 @@
     "TIA"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La **UIT (ITU)**, Unión Internacional de Telecomunicaciones, es el **organismo especializado de la ONU para las telecomunicaciones** y regula, entre otras cosas, el espectro radioeléctrico y los estándares (UIT-T, UIT-R). **ICANN** gestiona nombres de dominio y direcciones IP, **IEEE** es una asociación profesional que publica estándares como los 802, y **TIA** es una asociación estadounidense de la industria (cableado TIA/EIA). Ninguna de las tres depende de la ONU.",
    "tema_auto": true
   },
   {
@@ -1075,7 +1065,7 @@
     "Ninguna. Es el sitio web el que debe recibir las claves pública y privada del certificado de la persona que navega."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El navegador solo necesita la **clave pública del certificado del servidor**: la clave privada **nunca sale del servidor**. Con la pública comprueba la identidad del sitio (la firma en el *handshake* TLS) y acuerda las **claves de sesión simétricas** con las que se cifra después todo el tráfico. La redacción oficial («para descifrar los mensajes del sitio») simplifica en exceso, pero sigue siendo la mejor opción. Las demás son imposibles: el navegador no tiene acceso a la clave privada del sitio, y HTTPS no exige certificado de cliente.",
    "tema_auto": true
   },
   {
@@ -1089,7 +1079,7 @@
     "Una página web que gestiona el acceso de los usuarios a una red, generalmente inalámbrica."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Un **portal cautivo** es una **página web que intercepta el acceso de los usuarios a una red**, normalmente wifi pública (hoteles, aeropuertos), y les obliga a autenticarse o aceptar condiciones antes de navegar. No tiene que ver con el ransomware, con un sitio en preproducción ni con el cumplimiento de WCAG.",
    "tema_auto": true
   },
   {
@@ -1103,7 +1093,7 @@
     "KSEC 1.1"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**KSEC 1.1** no es un protocolo de VPN: es un nombre inventado. Sí se usan en VPN **PPTP con MPPE** (Microsoft Point-to-Point Encryption, hoy inseguro), **IPsec** y **L2TP/IPsec**: L2TP solo crea el túnel y no cifra, por eso se combina con IPsec. Otros protocolos habituales son SSL/TLS (OpenVPN) y WireGuard.",
    "tema_auto": true
   },
   {
@@ -1117,7 +1107,7 @@
     "Acceso único de múltiples portadoras y detección de colisiones."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**CSMA/CD** son las siglas de **Carrier Sense Multiple Access with Collision Detection**: **acceso múltiple con detección de portadora y detección de colisiones**. Es el método de acceso de **Ethernet** (IEEE 802.3) en medio compartido: la estación escucha antes de transmitir y, si detecta una colisión, para y reintenta tras un tiempo aleatorio (*backoff*). No confundir con **CSMA/CA** (*Collision Avoidance*), el de las redes wifi.",
    "tema_auto": true
   },
   {
@@ -1137,7 +1127,7 @@
   },
   {
    "id": "pr01",
-   "tema": null,
+   "tema": 33,
    "enunciado": "¿A qué se corresponden las siglas de Red SOHO?",
    "opciones": [
     "Small Own, Home Own.",
@@ -1146,9 +1136,8 @@
     "Small Office, House Office."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "reserva": true,
-   "tema_auto": true
+   "explicacion": "**SOHO** significa **Small Office, Home Office**, es decir, pequeña oficina u oficina en casa. Se usa para hablar de redes y equipos (routers, NAS, impresoras) para pocos usuarios, con configuración sencilla. Las demás opciones cambian la «O» final por «Own» o la «H» por «House».",
+   "reserva": true
   },
   {
    "id": "pr02",
@@ -1161,13 +1150,13 @@
     "OriginOS"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**PenPoint OS** fue un sistema operativo para ordenadores con lápiz óptico de **GO Corporation** (principios de los 90). No tiene nada que ver con Android. Las demás sí son capas de personalización de Android: **MIUI** (Xiaomi), **One UI** (Samsung) y **OriginOS** (vivo).",
    "reserva": true,
    "tema_auto": true
   },
   {
    "id": "pr03",
-   "tema": 17,
+   "tema": 14,
    "enunciado": "Señale qué paquete R en SQL Server Machine Learning Services permite realizar transformaciones y manipulaciones de datos, resúmenes estadísticos, visualizaciones y muchas formas de modelado:",
    "opciones": [
     "Revoscalepy",
@@ -1176,9 +1165,8 @@
     "SqlRutils"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "reserva": true,
-   "tema_auto": true
+   "explicacion": "**RevoScaleR** es el paquete de R de Microsoft en SQL Server Machine Learning Services para **transformar y manipular datos, hacer resúmenes estadísticos, visualizaciones y muchos tipos de modelos** de forma escalable. **revoscalepy** es su equivalente para **Python**, no para R. **MicrosoftML** ofrece algoritmos de aprendizaje automático optimizados, y **sqlrutils** sirve para empaquetar scripts de R como procedimientos almacenados.",
+   "reserva": true
   },
   {
    "id": "pr04",
@@ -1191,13 +1179,13 @@
     "ANGULAR"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Go** (Golang, de Google) es un lenguaje compilado muy usado en el **backend**: servidores, APIs, microservicios y herramientas como Docker o Kubernetes. **Sass** es un preprocesador de CSS (*frontend*), **XML** es un lenguaje de marcado y no de programación, y **Angular** es un framework de *frontend*.",
    "reserva": true,
    "tema_auto": true
   },
   {
    "id": "pr05",
-   "tema": 11,
+   "tema": 29,
    "enunciado": "Indique cuáles son los diferentes tipos de configuración contemplados para WPS:",
    "opciones": [
     "PIN, PBC, USB",
@@ -1206,9 +1194,8 @@
     "PIN, PBC, NFC, USB"
    ],
    "correcta": 3,
-   "explicacion": null,
-   "reserva": true,
-   "tema_auto": true
+   "explicacion": "**WPS (Wi-Fi Protected Setup)** contempla cuatro métodos de configuración: **PIN**, **PBC** (*Push Button Configuration*, pulsar un botón), **NFC** (acercar los dispositivos) y **USB** (pasar la configuración con una memoria USB, ya en desuso). Las demás opciones están incompletas. Recuerda también que el método PIN de WPS es vulnerable a ataques de fuerza bruta, por lo que se recomienda desactivarlo.",
+   "reserva": true
   }
  ]
 }

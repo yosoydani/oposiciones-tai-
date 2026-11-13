@@ -22,8 +22,9 @@
     "Permanente cuando el titular haya cumplido los sesenta años."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Según la norma vigente en 2022 (art. 6 del RD 1553/2005, en la redacción del RD 869/2013), el DNI vale **dos años si el titular no ha cumplido los 5 años**. Las demás opciones alteran las cifras: de 5 a 30 años son **cinco años** (no cuatro), de 30 a 70 son **diez años** (no nueve) y el DNI permanente se daba a partir de los **70 años** (no de los 60). Truco: 2-5-10 años según los tramos <5, <30 y <70.",
+   "tema_auto": true,
+   "nota_vigencia": "El RD 1553/2005 fue derogado por el Real Decreto 255/2025, de 1 de abril, que regula ahora la validez en su art. 7: se mantienen 2, 5 y 10 años, pero a partir de los 70 años ya no es «permanente», sino de más de diez años con una fecha consignada. La respuesta (2 años para menores de 5) sigue siendo correcta."
   },
   {
    "id": "p02",
@@ -36,7 +37,7 @@
     "No será superior a 6 años."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El art. 4.1 de la Ley 6/2020 dispone que el periodo de vigencia de los certificados cualificados **no será superior a cinco años**. No hay certificados cualificados de vigencia ilimitada, y 3 o 6 años son cifras inventadas. Recuerda: certificado cualificado = máximo **5 años**, igual que el tramo de 5 a 30 años del DNI.",
    "tema_auto": true
   },
   {
@@ -50,7 +51,7 @@
     "Derecho a la igualdad y a la no discriminación en el entorno digital."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El título X de la LOPDGDD (**arts. 79 a 97**, «Garantía de los derechos digitales») recoge, entre otros, el **derecho a la desconexión digital** en el ámbito laboral (art. 88), el **derecho al olvido en redes sociales** (art. 94) y el **testamento digital** (art. 96). El «derecho a la igualdad y a la no discriminación en el entorno digital» no figura en la ley: aparece en la **Carta de Derechos Digitales** de 2021, que no es una norma con rango de ley. Truco: neutralidad, acceso universal, seguridad, educación, menores, rectificación, intimidad laboral, olvido, portabilidad y testamento están en la ley; la igualdad digital, no.",
    "tema_auto": true
   },
   {
@@ -64,7 +65,7 @@
     "3 meses."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El art. 34.4 de la LOPDGDD obliga a los responsables y encargados a comunicar a la AEPD (o a la autoridad autonómica) las designaciones, nombramientos y ceses de los delegados de protección de datos en el plazo de **diez días**. Los 15 días, un mes o tres meses no aparecen en ese artículo. Truco: el DPD se comunica «en diez».",
    "tema_auto": true
   },
   {
@@ -78,12 +79,12 @@
     "MONICA, Gestor de logs para responder ante incidentes y amenazas."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**ELENA** es el **simulador de técnicas de cibervigilancia** del CCN-CERT, en el que el usuario hace de analista y resuelve casos prácticos de ciberinvestigación. Las otras asociaciones están cambiadas: la protección y trazabilidad del dato es **CARLA** (no CLARA, que analiza el cumplimiento de seguridad de equipos Windows frente al ENS), y las descripciones de **GLORIA** (gestor de logs para responder ante incidentes) y **MÓNICA** (gestión de eventos e información de seguridad) aparecen intercambiadas. Truco: las herramientas del CCN tienen nombre de mujer; asocia **ELENA** con «entrenamiento».",
    "tema_auto": true
   },
   {
    "id": "p06",
-   "tema": 4,
+   "tema": 9,
    "enunciado": "Señale la respuesta correcta referente a los servicios comunes en materia de administración electrónica:",
    "opciones": [
     "SERVINOMINA realiza la gestión completa de las fases de nómina: cálculo, contabilidad y pago.",
@@ -92,8 +93,8 @@
     "ENVIA es una aplicación que hace posible el envío de ficheros de gran volumen entre usuarios."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**CIRCABC** (Communication and Information Resource Centre for Administrations, Businesses and Citizens) es una **herramienta de trabajo en grupo** de la Comisión Europea, basada en software libre, para compartir documentación y trabajar en colaboración. El servicio común para enviar ficheros de gran tamaño entre usuarios es **ALMACÉN**, no «ENVIA», y las descripciones de SERVINOMINA y «eVISOR» atribuyen a esos servicios funciones que no les corresponden. Truco: CIRCA = «círculo» de trabajo compartido.",
+   "nota_vigencia": "La instancia de CIRCA para la Administración General del Estado dejó de prestar servicio en 2025; el PAe remite como alternativas a Microsoft 365 (SharePoint/Teams), a la versión de CIRCABC de la UE y a Cooper@. La descripción de CIRCABC como herramienta de trabajo en grupo sigue siendo correcta."
   },
   {
    "id": "p07",
@@ -106,7 +107,7 @@
     "Tres meses, transcurrido el cual, la reclamación se entenderá desestimada."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El art. 24.4 de la Ley 19/2013 fija en **tres meses** el plazo máximo para resolver y notificar la reclamación ante el Consejo de Transparencia, y si no se resuelve la reclamación se entiende **desestimada** (silencio negativo). Un mes es el plazo para resolver la **solicitud** de acceso (art. 20.1) y también para **presentar** la reclamación (art. 24.2), lo que provoca la confusión. Truco: solicitud = 1 mes; reclamación = 3 meses; el silencio en transparencia es siempre negativo.",
    "tema_auto": true
   },
   {
@@ -120,8 +121,9 @@
     "Reforma del marco regulatorio."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El IV Plan de Gobierno Abierto (2020-2024) tenía 10 compromisos, entre ellos la **reforma del marco regulatorio** de la transparencia, la **huella normativa** y la **protección de denunciantes** (transposición de la Directiva europea). Había un plan general de mejora de la participación ciudadana, pero no un compromiso específico sobre la **participación de los jóvenes** en políticas públicas. Otros compromisos: transparencia y rendición de cuentas, sistemas de integridad, educación y formación, comunicación inclusiva, Observatorio de Gobierno Abierto e iniciativas autonómicas y locales.",
+   "tema_auto": true,
+   "nota_vigencia": "El IV Plan terminó en 2024. En octubre de 2025 se aprobó el V Plan de Gobierno Abierto 2025-2029, también con 10 compromisos (218 iniciativas). La respuesta sobre el IV Plan no cambia, pero hoy las preguntas suelen referirse al V Plan."
   },
   {
    "id": "p09",
@@ -134,7 +136,7 @@
     "Son correctas las respuestas a) y c)."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El art. 9 de la LO 3/2007 («Indemnidad frente a represalias») dice que se considerará **discriminación por razón de sexo** cualquier trato adverso que sufra una persona por presentar una queja, reclamación, denuncia, demanda o recurso para exigir la igualdad de trato. No es discriminación directa ni indirecta (art. 6), que se definen por el trato o el efecto desfavorable en razón del sexo, así que la opción que suma «directa» y «por razón de sexo» también falla. Truco: las represalias, el acoso sexual y el acoso por razón de sexo se consideran todos «discriminación por razón de sexo».",
    "tema_auto": true
   },
   {
@@ -148,7 +150,7 @@
     "Todas las respuestas anteriores son correctas."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El art. 30.1 de la Ley 39/2006 establece que el grado de dependencia será revisable **a instancia del interesado, de sus representantes o de oficio** por las Administraciones públicas competentes. Por tanto, las tres vías son correctas. Causas de revisión: mejoría o empeoramiento de la situación, o error de diagnóstico o en la aplicación del baremo.",
    "tema_auto": true
   },
   {
@@ -162,7 +164,7 @@
     "El número de operaciones de coma flotante por segundo que puede realizar."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**FLOPS** (FLoating-point Operations Per Second) mide las **operaciones en coma flotante por segundo**, la métrica habitual para supercomputadores y GPU. Las instrucciones por segundo se miden en **MIPS**, y la frecuencia de reloj en **hercios** (GHz). Los accesos a memoria por segundo no tienen nada que ver con FLOPS.",
    "tema_auto": true
   },
   {
@@ -176,7 +178,7 @@
     "Quartet"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un grupo de **4 bits** se llama **nibble**, es decir, medio byte: un dígito hexadecimal se representa con exactamente un nibble. Un **byte** son 8 bits. En algunos textos aparecen «half-byte» o «cuarteto» como descripciones o sinónimos, pero el término técnico que se espera es nibble. Truco: byte = «bocado», nibble = «mordisquito».",
    "tema_auto": true
   },
   {
@@ -190,7 +192,7 @@
     "Se trata de un formato de imagen que permite transparencias."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "JPEG es un **estándar internacional** (ISO/IEC 10918-1, Joint Photographic Experts Group). Usa compresión **con pérdida**, así que cada vez que se vuelve a guardar la imagen **pierde** calidad (no la gana). Genera archivos **pequeños**, no pesados, y **no admite transparencias** (para eso están PNG, GIF o WebP).",
    "tema_auto": true
   },
   {
@@ -204,7 +206,7 @@
     "En una lista simple enlazada el primer y el último nodo están unidos juntos."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La afirmación falsa es que en una lista simple el primer y el último nodo estén unidos: el último nodo apunta a **null**. Si el último apunta al primero, se trata de una **lista circular**. Las demás son ciertas: en una lista doblemente enlazada cada nodo tiene enlaces al anterior y al siguiente, por lo que se recorre en ambos sentidos y normalmente se mantienen punteros a cabeza y cola. En la lista simple cada nodo tiene **un único** campo de enlace.",
    "tema_auto": true
   },
   {
@@ -218,7 +220,7 @@
     "ISO/IEC 18372:2004"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "OpenDocument 1.0 se aprobó como **ISO/IEC 26300:2006**. ISO/IEC 14977:1996 es la notación **EBNF**, y las demás cifras no corresponden a ODF. Truco: ODF = «26300».",
    "tema_auto": true
   },
   {
@@ -232,7 +234,7 @@
     "PDF/I proporciona especificaciones para crear, ver e imprimir páginas finales listas para imprimir o listas para la prensa."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**PDF/I no existe**: el estándar para páginas finales listas para imprenta (preimpresión) es **PDF/X** (ISO 15930). Las demás son correctas: **PDF/UA** para accesibilidad (ISO 14289), **PDF/A** para archivo a largo plazo (ISO 19005) y **PDF/E** para ingeniería (ISO 24517). Truco: A = Archivo, E = Engineering, UA = Universal Accessibility, X = eXchange gráfico (imprenta).",
    "tema_auto": true
   },
   {
@@ -246,7 +248,7 @@
     "Agregación."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En MÉTRICA v3, el **tipo de correspondencia** es el número **máximo** de ocurrencias de cada tipo de entidad que pueden intervenir en una ocurrencia de la relación (1:1, 1:N, N:M). La **cardinalidad** de un tipo de entidad es el número **mínimo y máximo** de ocurrencias con que se relaciona con una ocurrencia de la otra entidad, por ejemplo (0,n). La **especialización** y la **agregación** son abstracciones del modelo extendido. Truco: correspondencia = solo máximos; cardinalidad = mínimo y máximo.",
    "tema_auto": true
   },
   {
@@ -260,7 +262,7 @@
     "La clave candidata es el conjunto de atributos que garantizan la unicidad de las ocurrencias e identifican la ocurrencia unívocamente."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "MÉTRICA v3 define la **entidad** como el objeto, real o abstracto, acerca del cual se desea almacenar información en la base de datos. Las otras fallan: cada atributo se define sobre **un único dominio**, y el dominio **sí tiene existencia propia**, con independencia de entidades, relaciones o atributos. La definición de clave candidata omite la **minimalidad**: un conjunto de atributos que solo garantiza la unicidad es una **superclave**.",
    "tema_auto": true
   },
   {
@@ -274,7 +276,7 @@
     "Create, Reload, Update and Delete."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**CRUD** = **Create, Read, Update, Delete**, las cuatro operaciones básicas sobre datos persistentes. En SQL corresponden a INSERT, SELECT, UPDATE y DELETE, y en REST a POST, GET, PUT/PATCH y DELETE. Las demás opciones cambian alguna letra por palabras que no forman parte del acrónimo (Rename, Used, Drop, Reload).",
    "tema_auto": true
   },
   {
@@ -288,12 +290,12 @@
     "En C++ la declaración del array: «int vector2[] = {1,2,3,4,10,9,80,70,19};», es incorrecta."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Un **array** es un tipo estructurado que guarda datos **homogéneos** (del mismo tipo) en posiciones **consecutivas de memoria**, accesibles por índice. El **bytecode** de Java no es código máquina binario, sino código **intermedio** que ejecuta la JVM. C++ es un lenguaje de **tercera generación**. La declaración `int vector2[] = {1,2,3,4,10,9,80,70,19};` es válida: el compilador deduce el tamaño (9) a partir del inicializador.",
    "tema_auto": true
   },
   {
    "id": "p21",
-   "tema": 16,
+   "tema": 14,
    "enunciado": "Señale la respuesta INCORRECTA. Los tipos más corrientes de anomalías de base de datos son:",
    "opciones": [
     "Lecturas no repetibles.",
@@ -302,8 +304,7 @@
     "Lecturas fantasma."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Las anomalías clásicas de concurrencia que definen los niveles de aislamiento de SQL son las **lecturas sucias** (leer datos no confirmados), las **lecturas no repetibles** (la misma fila cambia entre dos lecturas) y las **lecturas fantasma** (aparecen o desaparecen filas al repetir una consulta). Las «lecturas hundidas» **no existen**. Truco: READ UNCOMMITTED las permite todas; SERIALIZABLE no permite ninguna."
   },
   {
    "id": "p22",
@@ -316,12 +317,12 @@
     "ORDER"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En SQL el orden del resultado se indica con **ORDER BY**, seguido de las columnas y, si se quiere, **ASC** (por defecto) o **DESC**. Va al final de la consulta, después de WHERE, GROUP BY y HAVING. «ORDER TO», «ORDER WHERE» y «ORDER» a secas no son sintaxis válida.",
    "tema_auto": true
   },
   {
    "id": "p23",
-   "tema": 17,
+   "tema": 18,
    "enunciado": "¿Cuál de las siguientes características NO se corresponde con el modelo orientado a objetos?",
    "opciones": [
     "Abstracción.",
@@ -330,12 +331,11 @@
     "Encapsulamiento."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Según Booch, los elementos fundamentales del modelo de objetos son la **abstracción**, el **encapsulamiento**, la **modularidad** y la **jerarquía**. La **durabilidad** es la «D» de las propiedades **ACID** de las transacciones de bases de datos, no una característica de la orientación a objetos. Truco: ACID = Atomicidad, Consistencia, aIslamiento, Durabilidad; eso es de BD, no de POO."
   },
   {
    "id": "p24",
-   "tema": 17,
+   "tema": 18,
    "enunciado": "¿Cuál de los siguientes términos hace referencia a patrones generales de software para asignación de responsabilidades en el diseño orientado a objetos?",
    "opciones": [
     "OOD",
@@ -344,8 +344,7 @@
     "Fan-In & Fan-Out"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**GRASP** (General Responsibility Assignment Software Patterns, de Craig Larman) agrupa los patrones para **asignar responsabilidades** en el diseño OO: Experto en información, Creador, Controlador, Bajo acoplamiento, Alta cohesión, Polimorfismo, Fabricación pura, Indirección y Variaciones protegidas. OOD es el diseño orientado a objetos en general, Booch es un método de análisis y diseño, y fan-in/fan-out son métricas de acoplamiento. Truco: GRASP = «agarrar» la responsabilidad adecuada."
   },
   {
    "id": "p25",
@@ -358,7 +357,7 @@
     "La versión para C# del entorno gráfico de desarrollo ADO Py, originalmente creado para Python."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**ADO.NET** (ActiveX Data Objects para .NET) es el componente del framework .NET para el **acceso a bases de datos**, con clases como Connection, Command, DataReader y DataSet. Las demás opciones son inventadas. Su equivalente en Java sería **JDBC**.",
    "tema_auto": true
   },
   {
@@ -372,7 +371,7 @@
     "Puedo utilizar como nombre de variable la palabra static"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En Java, los identificadores pueden contener letras, dígitos, **«_» y «$»**, pero **no pueden empezar por un número** ni ser **palabras reservadas** como `static`. Los comentarios multilínea van entre **/* ... */**; `//` es el comentario de una sola línea. Por ejemplo, `int $x = 1, a$b = 2;` compila sin problemas.",
    "tema_auto": true
   },
   {
@@ -386,7 +385,7 @@
     "Menor coste de comunicaciones ya que consumen menos ancho de banda."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Las arquitecturas multinivel aportan **flexibilidad, modularidad, escalabilidad y extensibilidad**, pero **no reducen** el coste de comunicaciones. Al repartir la lógica en más capas, normalmente separadas en la red, aumentan las comunicaciones entre niveles y el ancho de banda consumido. Ese es uno de sus inconvenientes, junto con la mayor complejidad.",
    "tema_auto": true
   },
   {
@@ -400,12 +399,12 @@
     "Es una organización diseñada para promover la interoperatividad de servicios Web entre plataformas, sistemas operativos y lenguajes de programación."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**WSIL** (Web Services Inspection Language) es un método **alternativo a UDDI** para descubrir servicios web: el proveedor publica documentos de inspección (por ejemplo, inspection.wsil) que enlazan a las descripciones WSDL, sin necesidad de un registro central. Publicar y buscar información en un registro es lo que hace **UDDI**. El modelo de despliegue de servicios web en Java EE es **JSR 109** (JAX-RPC/JAX-WS), y la organización de interoperabilidad entre plataformas es **WS-I**.",
    "tema_auto": true
   },
   {
    "id": "p29",
-   "tema": 22,
+   "tema": 21,
    "enunciado": "¿Cuál de estos elementos permiten definir la presentación y estilos de una página web?",
    "opciones": [
     "CSS",
@@ -414,12 +413,11 @@
     "OSS/BSS"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**CSS** (Cascading Style Sheets) define la **presentación y los estilos** (colores, fuentes, maquetación) de una página web, separándolos del contenido HTML. **XSS** (Cross-Site Scripting) es un ataque de inyección de scripts. CSI y OSS/BSS (sistemas de soporte de operaciones y de negocio de las telecos) no tienen que ver con la presentación web."
   },
   {
    "id": "p30",
-   "tema": 22,
+   "tema": 21,
    "enunciado": "Cuál es una de las restricciones básicas que introduce XHTML referente a la sintaxis de sus etiquetas:",
    "opciones": [
     "Los nombres de las etiquetas y de los atributos se pueden escribir en letras mayúsculas o minúsculas.",
@@ -428,8 +426,7 @@
     "Para elementos vacíos, se requieren etiquetas finales."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "XHTML aplica las reglas de XML: los **elementos vacíos** también **deben cerrarse** (`<br/>`, `<img ... />`). Además, etiquetas y atributos se escriben **en minúsculas**, los elementos se anidan y se cierran **ordenadamente** y los atributos **no se pueden minimizar** (se escribe `checked=\"checked\"`, no `checked`). Las demás opciones describen justo lo que HTML permitía y XHTML prohíbe."
   },
   {
    "id": "p31",
@@ -442,7 +439,7 @@
     "8"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Jakob Nielsen formuló **10 heurísticas** de usabilidad: visibilidad del estado del sistema, relación con el mundo real, control y libertad del usuario, consistencia y estándares, prevención de errores, reconocer antes que recordar, flexibilidad y eficiencia, diseño estético y minimalista, ayuda para reconocer y recuperarse de errores, y ayuda y documentación. Truco: son **10**, como los dedos de las manos.",
    "tema_auto": true
   },
   {
@@ -456,7 +453,7 @@
     "Los datos de la conexión deben quedar registrados y estar disponibles para su consulta."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Dar al teletrabajador **los mismos privilegios** que en local **no** mitiga el riesgo: lo recomendable es aplicar el **mínimo privilegio** y restringir los recursos accesibles en remoto. Las demás medidas sí son recomendaciones de seguridad: canal **cifrado** que termine en un cortafuegos, **segundo factor** de autenticación y **registro** de las conexiones para poder auditarlas.",
    "tema_auto": true
   },
   {
@@ -470,7 +467,7 @@
     "Constituir el conjunto de software y hardware necesario para el funcionamiento del ordenador."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El sistema operativo es **software**: gestiona los recursos (planificación de la CPU, memoria, E/S), controla los accesos de los usuarios y atiende las **interrupciones**. «El conjunto de software y hardware necesario para el funcionamiento del ordenador» define el **sistema informático**, no el sistema operativo. Truco: si en la definición aparece «hardware», no es el SO.",
    "tema_auto": true
   },
   {
@@ -484,7 +481,7 @@
     "Round Robin"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**FCFS** (First Come First Served), **SJF** (Shortest Job First) y **Round Robin** (turno rotatorio con quantum) son algoritmos clásicos de planificación de la CPU. El «algoritmo de agrupación» **no existe** como algoritmo de planificación de procesos; la agrupación (clustering) es una técnica de análisis de datos. Otros algoritmos reales: prioridades, SRTF y colas multinivel.",
    "tema_auto": true
   },
   {
@@ -498,7 +495,7 @@
     "Ofrece a los usuarios acceso remoto a escritorios completos, por lo que requiere acceder desde de un hardware potente para poder ejecutarlo."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Lo falso es que la virtualización del escritorio (**VDI**) requiera un **hardware potente** en el puesto: el escritorio se ejecuta en los **servidores** del CPD y el usuario solo recibe la imagen. Por eso basta un **cliente ligero**, una tableta o un móvil. Las demás opciones son ciertas: aceleración gráfica, varios fabricantes (Citrix, VMware, Microsoft…) y acceso multiplataforma.",
    "tema_auto": true
   },
   {
@@ -512,7 +509,7 @@
     "Realiza una copia integral de los datos, copiando todos los contenidos de los sistemas a mantener."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La copia **diferencial** guarda todos los datos modificados **desde la última copia completa**. Por eso crece cada día, pero para restaurar basta con la **completa + la última diferencial**. La copia que solo guarda lo cambiado desde el último backup de cualquier tipo es la **incremental**. La copia fiel que también borra en destino lo eliminado en origen es una copia **espejo**, y la que lo copia todo es la **completa**. Truco: Diferencial = Desde la completa; Incremental = desde la última copia.",
    "tema_auto": true
   },
   {
@@ -526,7 +523,7 @@
     "Limita el tipo de aplicaciones que soporta."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La documentación oficial («Qué no es Kubernetes») dice que Kubernetes **no ofrece ni adopta un sistema exhaustivo de configuración, mantenimiento, administración o autorreparación** de máquinas. También dice lo contrario de las demás opciones: **no despliega código fuente ni compila** la aplicación (eso lo hacen los flujos CI/CD), **no impone** soluciones de registros, monitorización o alertas y **no limita** los tipos de aplicaciones que soporta.",
    "tema_auto": true
   },
   {
@@ -540,12 +537,12 @@
     "POP3"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**Outlook** es un **cliente** de correo (un programa de Microsoft), no un protocolo. **SMTP** es el protocolo de envío y transferencia de correo, y **POP3** e **IMAP** son protocolos de acceso al buzón: POP3 descarga los mensajes e IMAP los sincroniza en el servidor.",
    "tema_auto": true
   },
   {
    "id": "p39",
-   "tema": 26,
+   "tema": 33,
    "enunciado": "Dentro de la topología de las redes de área local, aquella que se caracteriza por existir un enlace punto a punto directo entre los Equipos Terminal de Datos (DTE) vecinos que operan en un solo sentido, se denomina:",
    "opciones": [
     "Topología en estrella.",
@@ -554,12 +551,11 @@
     "Topología de bus."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "En la **topología en anillo** cada estación se conecta con sus dos vecinas mediante **enlaces punto a punto** y la información circula en **un solo sentido** (en el anillo simple), pasando de estación en estación. En la topología en **estrella** todos los equipos van a un nodo central, en el **bus** comparten un medio común difundido y el **árbol** es una jerarquía de buses o estrellas. Ejemplos de anillo: Token Ring y FDDI."
   },
   {
    "id": "p40",
-   "tema": 26,
+   "tema": 27,
    "enunciado": "De los siguientes protocolos, ¿cuál se utiliza para administrar dispositivos de una red?",
    "opciones": [
     "SMTP",
@@ -568,12 +564,11 @@
     "CMIP"
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**CMIP** (Common Management Information Protocol) es el protocolo de **gestión de red** del modelo OSI, el equivalente a SNMP en TCP/IP. **SMTP** es de correo, **DNS** resuelve nombres y **FTP** transfiere ficheros. Truco: los protocolos de gestión llevan «M» de Management (SNMP, CMIP)."
   },
   {
    "id": "p41",
-   "tema": 26,
+   "tema": 32,
    "enunciado": "Los protocolos AAA se descomponen en tres procesos entrelazados. Señale la respuesta correcta:",
    "opciones": [
     "Autenticación, Autorización, Aislamiento.",
@@ -582,12 +577,11 @@
     "Autenticación, Autorización, Contabilización."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**AAA** = **Autenticación** (quién eres), **Autorización** (qué puedes hacer) y **Contabilización** o auditoría (Accounting: qué has hecho y cuánto has consumido). Los protocolos AAA típicos son **RADIUS**, **TACACS+** y **Diameter**. Aislamiento, seguridad o control no forman parte del acrónimo."
   },
   {
    "id": "p42",
-   "tema": 26,
+   "tema": 6,
    "enunciado": "Seleccione la respuesta INCORRECTA sobre la firma electrónica.",
    "opciones": [
     "Se llama Co-firma a la firma múltiple en la que todos los firmantes están al mismo nivel y en la que no importa el orden en el que se firma.",
@@ -596,8 +590,7 @@
     "El formato PAdES (Propietario Avanzado) es el formato propio utilizado por Microsoft Office, si bien existe una implementación abierta que se aplica en Open Office."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La afirmación incorrecta es la de **PAdES**: son las siglas de **PDF Advanced Electronic Signatures**, el formato de firma avanzada **para documentos PDF** (ETSI). No es un formato propietario de Microsoft Office. Las demás son correctas: la **cofirma** es una firma múltiple en paralelo, en la que el orden no importa (frente a la **contrafirma**, en cascada). **XAdES** produce XML y admite firmas *detached*, *enveloping* y *enveloped*. Truco: CAdES = CMS, XAdES = XML, PAdES = PDF."
   },
   {
    "id": "p43",
@@ -610,7 +603,7 @@
     "Es una red de almacenamiento dedicada que permite a los servidores y dispositivos de almacenamiento compartir datos a través de una conexión segura de alta velocidad."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**POLAN** (Passive Optical LAN) es una red local basada en **fibra óptica pasiva** (tecnología GPON): un OLT central y unos ONT en el puesto, unidos mediante **divisores ópticos pasivos** que no necesitan alimentación ni conmutadores intermedios. Una red de zona geográfica extensa es una **WAN**. La red neuronal con generador y discriminador es una **GAN**. La red dedicada de almacenamiento es una **SAN**.",
    "tema_auto": true
   },
   {
@@ -624,7 +617,7 @@
     "Los tres ofrecen apantallamiento."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**UTP** (Unshielded Twisted Pair) es el par trenzado **sin apantallar**. **FTP** (Foiled Twisted Pair) lleva una **lámina** global sobre todos los pares, y **STP** (Shielded Twisted Pair) lleva **malla o pantalla**. Truco: la «U» de UTP es «Unshielded».",
    "tema_auto": true
   },
   {
@@ -638,7 +631,7 @@
     "RIP"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**FTP** (File Transfer Protocol) es un protocolo de **aplicación** (nivel 7, puertos 20/21), no de red. **RIP** y **BGP** son protocolos de **encaminamiento**, que se estudian en el nivel de red aunque viajen sobre UDP y TCP. **ARP** suele situarse entre los niveles 2 y 3 porque traduce direcciones IP en direcciones MAC. De todas, FTP es la que claramente no es de nivel 3.",
    "tema_auto": true
   },
   {
@@ -652,7 +645,7 @@
     "FC00::/7"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Las direcciones **multicast IPv6** empiezan por **FF00::/8** (primer octeto FF). **::1/128** es el **loopback** en IPv6, **224.0.0.0/4** es el multicast de **IPv4** (clase D) y **FC00::/7** son las direcciones locales únicas (**ULA**), el equivalente de las privadas. Truco: en IPv6 el multicast es todo «FF»; no hay broadcast.",
    "tema_auto": true
   },
   {
@@ -666,7 +659,7 @@
     "Fecha de emisión del certificado."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Un certificado X.509 SSL/TLS contiene la **clave pública**, nunca la **privada**, que el titular guarda en secreto en su servidor. Sí incluye, entre otros datos, el **dominio** (CN o SAN), el **emisor** (la autoridad de certificación), el **periodo de validez** (fechas de emisión y caducidad) y la firma de la CA. Truco: el certificado es público; la clave privada no viaja nunca.",
    "tema_auto": true
   },
   {
@@ -680,12 +673,12 @@
     "Ninguna. Es el sitio web el que debe recibir las claves pública y privada del certificado de la persona que navega."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El navegador solo necesita la **clave pública** del certificado del sitio, que recibe durante el *handshake* TLS. La usa para **verificar la identidad** del servidor (comprobando firmas) y para establecer las **claves de sesión simétricas** con las que se cifra el tráfico. La clave privada **nunca** sale del servidor, por lo que las opciones que dan al navegador la clave privada son falsas. Matiz: la respuesta oficial dice que la clave pública sirve para «descifrar los mensajes» del sitio, pero en realidad sirve para verificar lo que el servidor firma con su clave privada; los datos se cifran con las claves de sesión.",
    "tema_auto": true
   },
   {
    "id": "p49",
-   "tema": 31,
+   "tema": 32,
    "enunciado": "¿Cuál de las siguientes Guias de Seguridad CCN-STIC trata sobre la “Seguridad en Redes Privadas Virtuales”?",
    "opciones": [
     "837",
@@ -694,8 +687,7 @@
     "812"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La guía **CCN-STIC-836** trata la **seguridad en redes privadas virtuales (VPN)** dentro de la serie 800 (guías del ENS). Las demás numeraciones corresponden a otras guías de la serie: por ejemplo, la **812** trata la seguridad en entornos y aplicaciones web, y la **814** la seguridad en el correo electrónico."
   },
   {
    "id": "p50",
@@ -708,7 +700,7 @@
     "MACsec"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Las VPN de nivel de transporte, llamadas **VPN SSL/TLS** (por ejemplo, OpenVPN, AnyConnect o los portales web), usan sobre todo **TLS**. **IPSec** es el protocolo típico de las VPN de **nivel de red** (nivel 3), y **MACsec** (IEEE 802.1AE) cifra en el **nivel de enlace**. **SSH** permite túneles puntuales, pero no es el protocolo típico de una VPN de transporte.",
    "tema_auto": true
   },
   {
@@ -722,9 +714,10 @@
     "Esta vulnerabilidad afecta únicamente al protocolo WPA2."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**KRACK** (Key Reinstallation Attack, Vanhoef, 2017) ataca el **4-way handshake** de WPA2: el atacante hace que la víctima **reinstale una clave ya en uso**, lo que reinicia los contadores, y así se usa la **misma clave** con valores **nonce ya utilizados**. Por eso es incorrecto decir que se usa una clave «distinta»: el problema es precisamente que se reutiliza la misma clave con nonces repetidos. Truco: «reinstallation» = la misma clave otra vez.",
    "reserva": true,
-   "tema_auto": true
+   "tema_auto": true,
+   "nota_vigencia": "Objeción a la plantilla: la afirmación de que KRACK «afecta únicamente a WPA2» también es inexacta, porque el propio artículo de Vanhoef indica que afecta a WPA y WPA2 (tanto personal como empresarial). La respuesta más claramente incorrecta sigue siendo la de la «clave distinta». WPA3 no es vulnerable a KRACK."
   },
   {
    "id": "pr02",
@@ -737,13 +730,13 @@
     "LXC es una tecnología basada en Docker for Linux."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**LXC** (**Linux Containers**) es una tecnología de **virtualización a nivel de sistema operativo**: aísla procesos mediante *namespaces* y *cgroups* del núcleo, compartiendo el mismo kernel. No significa «Linux Exchange Container» ni es una versión de Linux Mint, y la relación con Docker es la contraria: las primeras versiones de **Docker se apoyaban en LXC**, y después lo sustituyeron por su propia biblioteca (libcontainer).",
    "reserva": true,
    "tema_auto": true
   },
   {
    "id": "pr03",
-   "tema": 23,
+   "tema": 28,
    "enunciado": "¿Cuál de las siguientes herramientas se utiliza para la detección y prevención de intrusiones (HIDS)?",
    "opciones": [
     "OSSEC",
@@ -752,9 +745,8 @@
     "Checkstyle"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "reserva": true,
-   "tema_auto": true
+   "explicacion": "**OSSEC** es un **HIDS** (sistema de detección de intrusiones en el host) de código abierto: analiza registros, comprueba la integridad de ficheros, detecta *rootkits* y puede responder de forma activa. **Git** es un sistema de control de versiones, y **Sonar(Qube)** y **Checkstyle** son herramientas de análisis estático de calidad del código.",
+   "reserva": true
   },
   {
    "id": "pr04",
@@ -767,13 +759,13 @@
     "802.11 – Wireless LAN"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**IEEE 802.11** es el grupo de trabajo de las **Wireless LAN** (wifi). Las demás asociaciones están cambiadas: **802.1** se ocupa de los **Higher Layer LAN Protocols** (puentes, VLAN 802.1Q, 802.1X), **802.3** es **Ethernet** y la coexistencia inalámbrica es **802.19**. Truco: 802.3 = Ethernet, 802.11 = wifi, 802.15 = WPAN (Bluetooth), 802.16 = WiMAX.",
    "reserva": true,
    "tema_auto": true
   },
   {
    "id": "pr05",
-   "tema": null,
+   "tema": 30,
    "enunciado": "Señale cuál es el valor del campo Tipo del protocolo ICMPv6 cuyo mensaje de error es “Paquete demasiado Grande”:",
    "opciones": [
     "2",
@@ -782,9 +774,8 @@
     "3"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "reserva": true,
-   "tema_auto": true
+   "explicacion": "En ICMPv6 (RFC 4443), los mensajes de **error** tienen tipos 0-127: **1** = destino inalcanzable, **2** = **paquete demasiado grande** (Packet Too Big), **3** = tiempo excedido y **4** = problema de parámetros. Los informativos van de 128 a 255 (por ejemplo, 128/129 = echo request/reply). «Packet Too Big» es clave en IPv6 porque los routers no fragmentan: la usa el descubrimiento de la MTU de la ruta (PMTUD).",
+   "reserva": true
   }
  ]
 }

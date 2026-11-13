@@ -24,7 +24,7 @@
     "<input type=\"text\" ngModel=\"email\" />"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El enlace **bidireccional** en Angular se escribe con la sintaxis **«banana in a box» `[(ngModel)]`**: los corchetes `[]` llevan el dato del componente a la vista (*property binding*) y los paréntesis `()` llevan el evento de la vista al componente (*event binding*). Con `[ngModel]` solo hay enlace unidireccional hacia la vista, `(ngModel)` no es una sintaxis válida y `ngModel=\"email\"` asigna un texto literal. Recuerda que hace falta importar **FormsModule**.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -39,7 +39,7 @@
     "<p>Fecha y hora: {{ fechaHora | date: DD/MM/YYYY hh:mm }}</p>"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La interpolación en Angular usa **dobles llaves `{{ }}`** y el formato del *pipe* `date` va **entre comillas**: `{{ fechaHora | date: 'dd/MM/yyyy HH:mm' }}`. En los patrones, **dd** es el día del mes, **MM** el mes (mm son minutos), **yyyy** el año y **HH** la hora de 0 a 23 (hh va de 1 a 12, así que «19:32» exige HH). Las demás opciones fallan por usar llaves simples, no entrecomillar el formato o usar «DD» y «YYYY», que no significan día y año naturales.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -54,14 +54,14 @@
     "El texto se mostrará centrado y en negrita sobre una caja rectangular de color verde lima, con borde redondo y con sombra negra aplicada a la caja."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "`text-align: center` y `font-weight: bold` centran el texto y lo ponen en negrita; `border-radius: 20px` **redondea las esquinas** de la caja, que sigue siendo **rectangular** (no se vuelve redonda); `box-shadow` aplica la sombra negra **a la caja**, no al texto (para eso está `text-shadow`); y `background-color: limegreen` la colorea de verde lima. Por eso fallan las opciones que ponen la sombra en el texto, hablan de borde recto o de caja redonda. Truco: *box*-shadow = caja; *text*-shadow = letras.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s104",
    "tema": 16,
-   "enunciado": "En una clase de TypeScript se definen los siguientes arrays: const menuAdministrador = [\"Usuarios\", \"Permisos\"]; const menuGestor = [\"Notificaciones\", \"Usuarios\", \"Asientos registrales\"]; En esa misma clase hay una función que ejecuta la siguiente operación: return […menuAdministrador, …menuGestor] ¿Qué hace esta operación?",
+   "enunciado": "En una clase de TypeScript se definen los siguientes arrays: const menuAdministrador = [\"Usuarios\", \"Permisos\"]; const menuGestor = [\"Notificaciones\", \"Usuarios\", \"Asientos registrales\"]; En esa misma clase hay una función que ejecuta la siguiente operación: return [...menuAdministrador, ...menuGestor] ¿Qué hace esta operación?",
    "opciones": [
     "Sustituye el contenido de menuGestor por el de menuAdministrador.",
     "Sustituye el contenido de menuAdministrador por el de menuGestor.",
@@ -69,7 +69,7 @@
     "Genera un nuevo array con el contenido de menuAdministrador y menuGestor."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **operador de propagación (*spread*) `...`** expande los elementos de cada array dentro de un literal nuevo, así que `[...menuAdministrador, ...menuGestor]` **crea un array nuevo** con los elementos del primero seguidos de los del segundo: [\"Usuarios\", \"Permisos\", \"Notificaciones\", \"Usuarios\", \"Asientos registrales\"]. **No modifica** los originales (no sustituye nada) y **no calcula la intersección**: de hecho, «Usuarios» aparece repetido. Equivale a `menuAdministrador.concat(menuGestor)`.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -84,9 +84,10 @@
     "dotnet package Microsoft.EntityFrameworkCore"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En **.NET 10** la CLI adoptó el orden «sustantivo-verbo», y el comando documentado para añadir un paquete NuGet es **`dotnet package add Microsoft.EntityFrameworkCore`**. Las formas `dotnet add Microsoft.EntityFrameworkCore` y `dotnet package Microsoft.EntityFrameworkCore` no son válidas porque falta el verbo o el sustantivo `package`. Ojo: la forma clásica `dotnet add package`, que también aparece entre las opciones, **sigue funcionando** en .NET 10.",
    "contexto": "s1",
-   "tema_auto": true
+   "tema_auto": true,
+   "nota_vigencia": "Objeción a la plantilla: en .NET 10 la forma antigua `dotnet add package Microsoft.EntityFrameworkCore` sigue siendo válida (Microsoft mantiene los comandos con el verbo delante), así que dos opciones instalan el paquete. La plantilla da por buena solo la nueva sintaxis `dotnet package add`."
   },
   {
    "id": "s106",
@@ -99,7 +100,7 @@
     "await context.Usuarios(u => u.Apellido1.Contains(texto)).ToListAsync();"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En **Entity Framework Core** se filtra con LINQ: `context.Usuarios.Where(u => u.Apellido1.Contains(texto)).ToListAsync()`. EF traduce **`string.Contains`** a SQL como un **`LIKE '%texto%'`**, y `ToListAsync()` ejecuta la consulta de forma asíncrona. **`Like` no es un método de string** en C# (existe `EF.Functions.Like`, con otra sintaxis), y las opciones que llaman a `context.Usuarios(...)` como si fuera un método o aplican `Where` a una cadena no compilan.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -114,7 +115,7 @@
     "asientos.set().filter(n -> n.getAñoPresentacion() == 2026).count();"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En Java, las colecciones se procesan con la **API Stream**: `asientos.stream().filter(...).count()` crea un *stream*, deja solo los asientos de 2026 y **cuenta** los que quedan (devuelve un `long`). Las colecciones no tienen métodos `collection()`, `list()` ni `set()` que devuelvan un *stream*, y **`sum()`** solo existe en *streams* numéricos (IntStream, LongStream), además de que sumaría valores en vez de contar elementos. Recuerda: **stream → operaciones intermedias (filter, map) → operación terminal (count, collect)**.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -129,7 +130,7 @@
     "wsimport -p notificaciones notifica.wsdl"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**`wsimport`** genera, a partir de un **WSDL**, las clases Java cliente de JAX-WS, y la opción **`-p`** fija el **paquete** de destino: `wsimport -p notificaciones notifica.wsdl`. Viene en el JDK 8 que usa la API (se retiró del JDK a partir de Java 11). **`wsgen`** hace lo contrario (genera artefactos a partir de una clase Java), **`xjc`** genera clases JAXB a partir de un **XSD** (y su `-d` es el directorio, no el paquete) y **`schemagen`** genera un esquema a partir de clases Java. Truco: *import* = traer el WSDL a Java.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -144,9 +145,10 @@
     "CREATE VIEW ExpTramitados AS SELECT IdUsuarioTramitador, SUM(IdExpediente) FROM Expedientes GROUP BY IdUsuarioTramitador;"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Para contar por usuario hay que **agrupar con `GROUP BY IdUsuarioTramitador`** y aplicar **`COUNT(IdExpediente)`** a cada grupo. Sin GROUP BY, mezclar una columna normal con un agregado da error, y la opción sin agregado tampoco es válida; **`SUM`** sumaría los identificadores, que no tiene sentido. Ojo práctico: en SQL Server una vista exige que **todas las columnas tengan nombre**, así que en la realidad habría que escribir `COUNT(IdExpediente) AS TotalExpedientes`.",
    "contexto": "s1",
-   "tema_auto": true
+   "tema_auto": true,
+   "nota_vigencia": "Objeción a la plantilla: tal como está escrita, la opción oficial falla en SQL Server con el error 4511 («Create View or Function failed because no column name was specified for column 2»), porque la columna COUNT no tiene alias. La respuesta correcta sería `... COUNT(IdExpediente) AS TotalExpedientes FROM Expedientes GROUP BY IdUsuarioTramitador;`, que no está entre las opciones."
   },
   {
    "id": "s110",
@@ -159,7 +161,7 @@
     "SELECT Nombre, Apellido1, Apellido2, TOP(10) FechaCreacion FROM Usuarios ORDER BY FechaCreacion;"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Para los **10 últimos** dados de alta hay que **ordenar por fecha de creación descendente** y quedarse con los diez primeros: `SELECT TOP(10) ... ORDER BY FechaCreacion DESC`. Con **ASC** saldrían los diez **más antiguos**, filtrar por una fecha fija no garantiza que sean los últimos (TOP sin ORDER BY devuelve filas en orden no garantizado) y TOP debe ir **justo después de SELECT**, no junto a una columna. Recuerda: TOP sin ORDER BY no tiene un orden definido.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -174,13 +176,13 @@
     "DBCC CHECKIDENT(‘TablaPruebas’, NORESEED);"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**`DBCC CHECKIDENT('TablaPruebas')`** comprueba el valor actual de identidad y, **si es menor que el máximo de la columna, lo corrige** usando ese máximo. Con **NORESEED** solo informa del valor y no cambia nada, y **`DBCC RESETIDENT` no existe**. Para fijar un valor concreto se usa `DBCC CHECKIDENT('TablaPruebas', RESEED, n)`: la siguiente fila recibirá n + incremento (o n si la tabla nunca ha tenido filas).",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s112",
-   "tema": 17,
+   "tema": 22,
    "enunciado": "Para evitar ataques XSS mediante rastreo MIME se va a añadir una cabecera a las respuestas de las dos APIs al frontend. ¿De qué cabecera se trata?",
    "opciones": [
     "X-Frame-Options: DENY",
@@ -189,9 +191,8 @@
     "Content-Security-Policy: default-src https:"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "La cabecera **`X-Content-Type-Options: nosniff`** prohíbe al navegador **«adivinar» el tipo MIME** (*MIME sniffing*) y le obliga a respetar el Content-Type declarado; así no puede interpretar como script o HTML un fichero servido, por ejemplo, como texto o imagen. **X-Frame-Options: DENY** evita el *clickjacking* (que la página se cargue en un iframe), **X-XSS-Protection: 0** desactiva el antiguo filtro XSS del navegador y **Content-Security-Policy** limita los orígenes de los recursos. Truco: *nosniff* = «no olfatees» el tipo.",
+   "contexto": "s1"
   },
   {
    "id": "s113",
@@ -204,7 +205,7 @@
     "A través de un JWT (JSON Web Token)."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El esquema **`Authorization: Bearer`** envía un *token* de portador, y el valor `xxxxx.yyyyy.zzzzz` (**tres partes en Base64URL separadas por puntos**: cabecera, carga útil y firma) es la forma de un **JWT**; además, «eyJ» es el comienzo típico en Base64 de un JSON que empieza por `{\"`. La autenticación **básica** usa `Authorization: Basic` con usuario:contraseña en Base64, una **API Key** suele ir en una cabecera propia (como `X-API-Key`) o en la URL, y una **cookie** viaja en la cabecera `Cookie`.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -219,7 +220,7 @@
     "Falta un elemento <div> para contener a todos los demás elementos."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Las **WCAG** (criterio **1.3.1 «Información y relaciones»**) piden que los encabezados reflejen la estructura real del contenido; **saltar de `<h1>` a `<h3>` sin `<h2>`** rompe esa jerarquía y despista a quien navega por encabezados con un lector de pantalla. Usar `<strong>` en lugar de `<b>` es **correcto** (aporta importancia semántica), usar `<span>` para un texto no es un error de accesibilidad en sí mismo y no hace falta un `<div>` contenedor.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -234,7 +235,7 @@
     "Builder."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El método construye un objeto complejo (el expediente) **paso a paso**, llamando por orden a crearCarpetas(), crearDocumentos() y crearIndice(): es la idea del patrón **Builder**, que separa la construcción de un objeto complejo de su representación (aquí, el método haría de «director» que coordina los pasos). **Abstract Factory** y **Factory Method** crean objetos en una sola llamada, sin construcción por pasos, y **Composite** organiza objetos en estructuras de árbol parte-todo. Pista: varias llamadas «crearX» seguidas sobre el mismo objeto suenan a Builder.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -249,7 +250,7 @@
     "[TestCaseSource] public sealed class Tests { [TestCase] public void Test() {} }"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En **NUnit 3**, una clase de pruebas se marca con **`[TestFixture]`** y cada método de prueba con **`[Test]`**. `[TestCase]` también marca pruebas, pero **parametrizadas**, y se pone sobre **métodos**, no sobre la clase; `[TestCaseSource]` indica la fuente de datos de una prueba parametrizada, y `[TestSample]` o `[TestGroup]` no existen. Comparación útil: en MSTest son [TestClass] y [TestMethod]; en xUnit, [Fact] y [Theory].",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -264,7 +265,7 @@
     "x-www-form-urlencoded"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En Postman, para enviar **JSON** en el cuerpo se elige el tipo **raw** y, en el desplegable, el formato **JSON** (que además pone la cabecera `Content-Type: application/json`). **none** envía la petición sin cuerpo, **x-www-form-urlencoded** codifica pares clave=valor como un formulario HTML y **GraphQL** sirve para consultas GraphQL. Los demás tipos de cuerpo de Postman son form-data y binary.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -279,7 +280,7 @@
     "git grape-pick"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**`git cherry-pick <commit>`** aplica los cambios de **un commit concreto** sobre la rama actual, creando un commit nuevo: basta con crear una rama aparte, situarse en ella y hacer cherry-pick del commit sospechoso. Las demás son juegos de palabras con frutas que no existen (*banana*, *berry*, *grape*). Para buscar qué commit introdujo un error existe además **`git bisect`**, que hace una búsqueda binaria en el historial.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -294,13 +295,13 @@
     "HTML y XML."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La especificación **OpenAPI 3.1.0** indica que un documento OpenAPI es en sí mismo un objeto **JSON** y puede representarse en **JSON o en YAML** (normalmente openapi.json u openapi.yaml). HTML no es un formato de la especificación: es la **documentación visual** que genera, por ejemplo, Swagger UI a partir de ese JSON o YAML. XML tampoco está admitido. Truco: YAML es un superconjunto de JSON, y por eso valen los dos.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s120",
-   "tema": 16,
+   "tema": 31,
    "enunciado": "Para evitar ataques de denegación de servicio se ha decidido implementar un control de peticiones máximas en un periodo de tiempo concreto (rate limiting). ¿Qué código HTTP deberá devolverse cuando un usuario alcance el límite establecido?",
    "opciones": [
     "425",
@@ -309,9 +310,8 @@
     "503"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "El código **429 Too Many Requests** (RFC 6585) indica que el cliente ha enviado **demasiadas peticiones en un periodo de tiempo**, que es justo el caso del *rate limiting*; suele ir acompañado de la cabecera `Retry-After`. **425** es *Too Early* (riesgo de repetir una petición en TLS 1.3 0-RTT), **502** *Bad Gateway* (un proxy recibió una respuesta inválida del servidor) y **503** *Service Unavailable* (el servidor no está disponible, por sobrecarga o mantenimiento). Los 4xx son culpa del cliente y los 5xx del servidor.",
+   "contexto": "s1"
   },
   {
    "id": "s1r01",
@@ -324,7 +324,7 @@
     "spec.ts"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "En Angular, las pruebas unitarias de un componente se escriben en el fichero **`.spec.ts`** (por ejemplo, usuarios.component.spec.ts), que Angular CLI genera junto al componente y que ejecuta el *test runner* configurado (Karma/Jasmine o, en las versiones recientes, Vitest). `component.ts` contiene la lógica del componente y `module.ts` define un módulo NgModule; `test.ts` era el punto de entrada de Karma, no el sitio donde se escriben las pruebas. Truco: *spec* de *specification*, la especificación del comportamiento esperado.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
@@ -340,7 +340,7 @@
     "+34641992011"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Ojo: `[\\+34|34]*` **no es una alternativa** entre «+34» y «34», sino una **clase de caracteres** que acepta cualquier repetición de «+», «3», «4» o «|». Después vienen espacios o guiones opcionales, un **«3» obligatorio** y exactamente **ocho dígitos** `[0-9]{8}`. Solo **+34641992011** contiene esa secuencia: el «+» lo toma la clase, luego el «3» y después los ocho dígitos «46419920». En las demás opciones no hay ningún «3» seguido de ocho dígitos. Ninguna cadena cumple la expresión entera (`^...$`); para validar de verdad un móvil español sería algo como `^(\\+34|34)?[ -]*[67][0-9]{8}$`.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
@@ -356,7 +356,7 @@
     "PMD."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**Prettier** es un **formateador de código** «con opiniones» (JavaScript, TypeScript, HTML, CSS, JSON…) que reescribe el código con un estilo uniforme. **SonarQube** analiza la **calidad** del código (*bugs*, vulnerabilidades, deuda técnica), **PMD** es un analizador estático de errores y malas prácticas (sobre todo en Java) y **Quokka** es un *playground* para ejecutar JavaScript al vuelo en el editor. Pista: Prettier embellece; los otros analizan o ejecutan.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
@@ -372,7 +372,7 @@
     "git create"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**`git clone <url>`** descarga una **copia completa de un repositorio remoto** (todo su historial y sus ramas) y deja configurado el remoto `origin`: es lo que hay que hacer en un equipo nuevo. **`git init`** crea un repositorio **vacío**, **`git add`** prepara cambios para el próximo commit y **`git create` no existe**.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
@@ -388,7 +388,7 @@
     "package-lock.json"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En un proyecto **Maven**, la versión del artefacto está en el elemento `<version>` del fichero **`pom.xml`** (*Project Object Model*), junto a groupId y artifactId. **package.json** y **package-lock.json** son de proyectos Node/npm (como el frontend de Angular) y el fichero **.csproj** es el de un proyecto .NET. Truco: Maven = pom.xml; Gradle = build.gradle.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true

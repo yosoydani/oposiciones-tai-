@@ -24,7 +24,7 @@
     "10.30.16.0 y 10.30.16.127"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Una /25 deja 7 bits de host: **128 direcciones**, así que la primera subred de 10.30.16.0/20 va de **10.30.16.0 (red) a 10.30.16.127 (broadcast)**. La dirección de red siempre termina con todos los bits de host a 0, por eso las opciones que empiezan en .1 están mal (.1 sería el primer host). El .191 correspondería a un bloque de 192 direcciones, que no es potencia de 2.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -39,7 +39,7 @@
     "8190"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Una /20 deja 32 − 20 = 12 bits de host: 2^12 = 4096 direcciones, menos la de red y la de broadcast, **4094 hosts**. 254 sería una /24; 1022, una /22, y 8190, una /19. Truco: hosts = **2^(32−prefijo) − 2**.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -51,17 +51,17 @@
     "10.30.28.0/22",
     "10.30.26.0/23",
     "10.30.28.0/23",
-    "10.30.28.0/24 En un momento determinado, la web del Ministerio deja de estar accesible. A continuación, deberá comprobar posibles problemas de servicio, rutas, puertos y/o filtrado entre máquinas."
+    "10.30.28.0/24"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Para 4 subredes iguales hacen falta 2 bits más: /21 → **/23**, bloques de 512 direcciones (2 en el tercer octeto). Las subredes son 10.30.24.0, 10.30.26.0, **10.30.28.0** y 10.30.30.0, todas /23, así que la tercera es 10.30.28.0/23. Con /22 solo salen 2 subredes y con /24 salen 8; 10.30.26.0 es la segunda.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s204",
    "tema": 33,
-   "enunciado": "En la SVI (Switched Virtual Interface) de la VLAN 10 del router de distribución, ¿qué comando de Cisco IOS 15.x habilita el DHCP relay hacia el servidor 10.30.20.5?",
+   "enunciado": "En un momento determinado, la web del Ministerio deja de estar accesible. A continuación, deberá comprobar posibles problemas de servicio, rutas, puertos y/o filtrado entre máquinas. En la SVI (Switched Virtual Interface) de la VLAN 10 del router de distribución, ¿qué comando de Cisco IOS 15.x habilita el DHCP relay hacia el servidor 10.30.20.5?",
    "opciones": [
     "ip helper-address 10.30.20.5",
     "ip dhcp server 10.30.20.5",
@@ -69,7 +69,7 @@
     "relay dhcp 10.30.20.5"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En Cisco IOS el reenvío DHCP se configura en la interfaz (aquí la SVI de la VLAN 10) con **ip helper-address 10.30.20.5**: el router convierte el broadcast DHCPDISCOVER del cliente en unicast hacia el servidor de otra subred. `ip dhcp server`, `service dhcp forward` y `relay dhcp` no son la orden de relay en IOS (el comando global `service dhcp` solo activa el servicio DHCP del router).",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -84,7 +84,7 @@
     "tracert -r"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En RHEL la tabla de rutas se ve con **ip route show** (o `ip r`), del paquete iproute2, que sustituye al antiguo `route -n`. `route print` y `tracert` son comandos de Windows, y `netstat -p tcp` filtra conexiones por protocolo, no muestra la tabla de rutas.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -99,7 +99,7 @@
     "systemctl run nginx -onboot"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**systemctl enable nginx** crea los enlaces de la unidad para que el servicio arranque automáticamente al iniciar el sistema (con `enable --now` además lo arranca en ese momento). `autostart`, `start-enable` y `run -onboot` no existen en systemd. Recuerda: **enable** = en el arranque; **start** = ahora.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -114,13 +114,13 @@
     "docker block 3f7"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**docker kill 3f7** envía SIGKILL al proceso principal del contenedor y lo detiene al instante; basta con un prefijo único del ID. `docker stop` en cambio manda SIGTERM y espera (10 s por defecto) antes de matarlo, así que no es inmediato. `end`, `interrupt` y `block` no son subcomandos de Docker.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s208",
-   "tema": 24,
+   "tema": 26,
    "enunciado": "Adicionalmente, habiendo comprobado que ya no es necesario, le solicitan eliminarlo también. ¿Cuál es el comando a ejecutar?",
    "opciones": [
     "docker delete 3f7",
@@ -129,13 +129,12 @@
     "docker excise 3f7"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "Un contenedor detenido se elimina con **docker rm 3f7** (con `-f` se fuerza aunque siga en marcha). `delete`, `eliminate` y `excise` no existen. No lo confundas con `docker rmi`, que borra **imágenes**, no contenedores.",
+   "contexto": "s2"
   },
   {
    "id": "s209",
-   "tema": 24,
+   "tema": 26,
    "enunciado": "Se necesita descargar una imagen desde Docker Hub, ¿qué comando utilizaría para descargar la imagen “ImagenA” al equipo local?",
    "opciones": [
     "docker download ImagenA",
@@ -144,9 +143,8 @@
     "docker pull ImagenA"
    ],
    "correcta": 3,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**docker pull ImagenA** descarga la imagen del registro (por defecto Docker Hub) al equipo local. `docker images` solo lista las imágenes que ya están en local, y `download`/`get` no son subcomandos de Docker. Ojo: en la práctica los nombres de repositorio en Docker Hub deben ir en minúsculas.",
+   "contexto": "s2"
   },
   {
    "id": "s210",
@@ -159,7 +157,7 @@
     "iptables -L -n nat"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**firewall-cmd --zone=public --list-services** muestra los servicios permitidos en la zona public, así que se ve si aparece `https` (también vale `--query-service=https`). `--list-ports` solo lista puertos abiertos sueltos, no los servicios; `--get-active-zones` no admite valor, e `iptables -L -n nat` está mal formado y en RHEL 8 firewalld usa nftables por debajo.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -174,7 +172,7 @@
     "ip route net 10.30.20.30"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**ip route get 10.30.20.30** pregunta al kernel qué ruta usaría para ese destino y devuelve la interfaz de salida, el next hop (`via`) y la IP de origen. Las otras órdenes no existen así: los vecinos ARP se ven con `ip neigh`, no con `ip route neigh`, y no hay `ip net` ni `ip route net`.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -189,29 +187,28 @@
     "ping 10.30.20.30 -p 3306"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**nc -vz 10.30.20.30 3306** (netcat) intenta un connect TCP al puerto: `-z` no envía datos y `-v` informa de si conecta. `curl https://` intentaría un handshake TLS contra MySQL; `telnet` no admite `/udp`, y `ping` usa ICMP, que no tiene puertos (en Linux `-p` es un patrón de relleno).",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s213",
-   "tema": 25,
+   "tema": 24,
    "enunciado": "Le solicitan listar rápidamente los puertos en escucha del sistema. En RHEL, ¿cuál indicaría que es un comando válido?",
    "opciones": [
     "route -n",
     "arp -an",
     "hostnamectl",
-    "ss -ltn En los servidores RHEL 8.8 se usa RAID por hardware y LVM para la gestión de volúmenes de datos. Para la gestión de copias de seguridad se usa el producto Veeam Backup y se sigue la política de copias 3-2-1, usando estrategias basadas en snapshots y backups. Los servidores RHEL deberán seguir las recomendaciones de seguridad del CCN-CERT."
+    "ss -ltn"
    ],
    "correcta": 3,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**ss -ltn** lista los sockets **l**istening **T**CP en formato **n**umérico; es el sustituto moderno de `netstat -ltn` (añade `-u` para UDP y `-p` para ver el proceso). `route -n` muestra rutas, `arp -an` la caché ARP y `hostnamectl` el nombre del equipo.",
+   "contexto": "s2"
   },
   {
    "id": "s214",
    "tema": 25,
-   "enunciado": "¿Qué opción refleja correctamente la estrategia 3-2-1?",
+   "enunciado": "En los servidores RHEL 8.8 se usa RAID por hardware y LVM para la gestión de volúmenes de datos. Para la gestión de copias de seguridad se usa el producto Veeam Backup y se sigue la política de copias 3-2-1, usando estrategias basadas en snapshots y backups. Los servidores RHEL deberán seguir las recomendaciones de seguridad del CCN-CERT. ¿Qué opción refleja correctamente la estrategia 3-2-1?",
    "opciones": [
     "3 copias de los datos, en 2 soportes fuera de la sede, con 1 copia cifrada.",
     "3 copias de los datos, en 2 servidores fuera de la sede, con 1 copia en nube.",
@@ -219,7 +216,7 @@
     "3 copias de los datos, en 2 soportes distintos, con 1 copia cifrada."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La regla **3-2-1**: **3 copias** de los datos (la original y dos copias), en **2 soportes o medios distintos** y **1 copia fuera de la sede** (off-site). Las opciones que hablan de copia cifrada o en la nube mezclan buenas prácticas que no forman parte de la regla; la nube puede ser una forma de cumplir el «1», pero no es la regla en sí.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -234,7 +231,7 @@
     "zip -r config_backup.tar.gz /srv/app/config/"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**tar -czf config_backup.tar.gz /srv/app/config/**: `-c` crea el archivo, `-z` lo comprime con gzip y `-f` indica el nombre del fichero. `-x` es extraer, no crear; `gzip` comprime ficheros sueltos, no directorios, y `zip -r` genera un ZIP aunque el nombre acabe en .tar.gz. Truco: **c**rear, e**x**traer, **t** listar; **z** = gzip.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -249,7 +246,7 @@
     "auditd"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**auditd** es el demonio del Linux Audit System: con reglas (`auditctl`, `/etc/audit/rules.d/`, por ejemplo `-w /ruta -p wa`) registra accesos y modificaciones de ficheros, y se consulta con `ausearch` y `aureport`. `journalctl` lee los logs de systemd, pero no define reglas de auditoría; `top` muestra procesos y `traceguardian` no existe.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -264,7 +261,7 @@
     "993"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "IANA asigna a **IMAPS (IMAP sobre TLS) el puerto 993/TCP**. 143 es IMAP sin cifrar (o con STARTTLS), 110 es POP3 y 995 es POP3S. Truco: los cifrados «implícitos» de correo acaban en 9x: **993 IMAPS, 995 POP3S** (y 465 para SMTP de envío).",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -279,7 +276,7 @@
     "Administrador de certificados (certmgr.msc) del equipo."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Los usuarios y grupos de dominio se gestionan con **Usuarios y equipos de Active Directory (dsa.msc)**. En un controlador de dominio no hay base de datos SAM local, así que `lusrmgr.msc` no sirve; `netplwiz` gestiona cuentas del equipo local y `certmgr.msc`, certificados del usuario.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -294,7 +291,7 @@
     "New-ADDomainService -IncludeManagementTools"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El rol de AD DS se instala con **Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools**. Después se promociona el servidor con los cmdlets de ADDSDeployment: `Install-ADDSForest` crea un bosque nuevo (no instala el rol) e `Install-ADDSDomainController` añade un DC a un dominio existente. `Add-ADDSRole` y `New-ADDomainService` no existen.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -309,7 +306,7 @@
     "Copy-Path “C:\\DirectorioA\\*” -Destination “C:\\DirectorioB” -Recursive"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El cmdlet es **Copy-Item** con **-Path**, **-Destination** y el parámetro **-Recurse** para copiar subcarpetas. `-Recursive` no es un parámetro válido y `Copy-Path` no existe. La opción sin nombres de parámetro también funcionaría por posición si usara `-Recurse`, pero falla por `-Recursive`.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -324,7 +321,7 @@
     "firewall-cmd --permanent --zone=public --add-rich-rule='rule family=\"ipv4\" source address=\"172.19.50.0/27\" port protocol=\"tcp\" port=\"3306\" accept'"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "En una rich rule de firewalld el origen se indica con **source address=\"172.19.50.0/27\"** y el puerto con **port port=\"3306\" protocol=\"tcp\"**, y `--permanent` la guarda en la configuración persistente (luego `firewall-cmd --reload`). La opción con `address` sin `source` y `port number=` tiene sintaxis incorrecta, y `--permanent-direct` no existe (la interfaz directa es `--direct`).",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -340,7 +337,7 @@
     "Activar net.ipv4.conf.all.accept_ra=1"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**net.ipv4.conf.all.rp_filter=1** activa el filtrado estricto de ruta inversa (RFC 3704): el kernel descarta paquetes cuya IP de origen no se alcanzaría por la interfaz por la que llegaron, que es lo típico del spoofing. `ip_forward` convierte el equipo en router; desactivar `tcp_syncookies` empeora la defensa frente a SYN flood, y `accept_ra` es de IPv6.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -356,7 +353,7 @@
     "netsh advfirewall firewall add rule name=\"Puerto8443\" dir=in action=allow protocol=TCP localport=8443"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La sintaxis vigente es **netsh advfirewall firewall add rule name=\"Puerto8443\" dir=in action=allow protocol=TCP localport=8443**. Los fallos de las otras: el verbo es `add rule` (no `create` ni `set`, que modifica una regla existente), la acción es `allow` (no `permit`), y `netsh firewall` es el contexto antiguo y obsoleto.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -372,7 +369,7 @@
     "nltest /sc_verify"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**repadmin /replsummary** muestra un resumen del estado de replicación de cada DC: fallos, deltas y errores. `dcdiag` hace pruebas generales de salud del DC (con `/q` solo muestra errores), `netdom query fsmo` lista los roles FSMO y `nltest /sc_verify` verifica el canal seguro con un dominio.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -388,7 +385,7 @@
     "Añadir un PV nuevo al grupo vg_datos y ejecutar fsck sobre /contenido antes de ampliar el sistema de ficheros."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Hay 200 GiB libres en el grupo de volúmenes, así que basta con **extender el LV** (`lvextend -L 600G`) y después **ampliar el XFS en caliente** con `xfs_growfs /contenido` (o todo junto con `lvextend -r`). XFS se puede ampliar montado, pero nunca reducir. Crear un LV nuevo cambia la estructura, un snapshot no amplía nada y no hace falta añadir un PV ni ejecutar fsck.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true

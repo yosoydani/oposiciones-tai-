@@ -24,7 +24,7 @@
     "‘1..N’ en el recuadro “SR>T” y ‘0..N’ en el recuadro “T>SR”."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El caso dice que **una representación solo es válida para un trámite a la vez**, así que cada Solicitud de Representación se asocia con **exactamente 1** Trámite (recuadro «T>SR» = **1**). También dice que cada trámite puede ser solicitado por **un número cualquiera** de interesados, así que un Trámite tiene **0..N** solicitudes (recuadro «SR>T» = **0..N**). La relación 1 a 1 impediría varias solicitudes por trámite; la combinación 1 y 0..N invierte los extremos; y 1..N junto a 0..N permitiría solicitudes sin trámite o con varios trámites.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -39,7 +39,7 @@
     "Navegador web."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El producto estrella de Oracle es su **Sistema Gestor de Bases de Datos** (Oracle Database), y el caso de la representación necesita guardar interesados, representantes, trámites y solicitudes. Oracle también tiene servidores de aplicaciones y de directorio (WebLogic, OID), pero no son su producto «habitual» por excelencia. Oracle no tiene un navegador web.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -54,7 +54,7 @@
     "Set"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "En Java, **Set** (HashSet, TreeSet, LinkedHashSet) modela un conjunto matemático y **no admite elementos duplicados**: `add()` devuelve `false` si el elemento ya existe según `equals()`. **List** y **Stack** (que hereda de Vector) son colecciones ordenadas que **sí** admiten duplicados, y **Collection** es la interfaz raíz, que no impone esa restricción. Truco: Set = conjunto = sin repetidos.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -69,7 +69,7 @@
     "COBOL"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**PL/SQL** (Procedural Language/SQL) es el lenguaje procedimental de **Oracle**: añade variables, bucles y excepciones al SQL, y sus procedimientos, funciones, paquetes y disparadores se almacenan **compilados** en la base de datos. **Transact-SQL** es el equivalente de **Microsoft SQL Server** y Sybase. FORTRAN y COBOL son lenguajes de propósito general que no se almacenan en el SGBD. Truco: PL/SQL para Oracle, T-SQL para SQL Server, PL/pgSQL para PostgreSQL.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -84,7 +84,7 @@
     "Diagrama de objetos."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **diagrama de estados** (o de máquina de estados) se centra en **un objeto de una clase** y muestra sus **estados**, las **transiciones** y los **eventos** que las provocan. Es justo lo que se pide para el objeto Notificación (por ejemplo: creada, enviada, leída, caducada). El diagrama de **clases** describe la estructura estática, el de **despliegue** la distribución física en nodos y el de **objetos** una instantánea de instancias en un momento dado.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -99,7 +99,7 @@
     "3.0"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La última versión de UML publicada por el OMG es la **2.5**, en concreto la **2.5.1** (diciembre de 2017), que sigue siendo la vigente. Las versiones 2.4 y 2.4.1 son anteriores, y **UML 3.0 no existe**. Truco: UML se quedó en la serie 2.5; el OMG trabaja ahora en SysML v2, no en UML 3.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -114,7 +114,7 @@
     "Un entorno de programación (IDE) para Java."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**Jakarta EE** es el nombre que recibió **Java EE** (antes J2EE) cuando Oracle la cedió a la **Eclipse Foundation** en 2017-2018. Es un **conjunto de especificaciones** para aplicaciones Java empresariales: Servlets, JPA, CDI, JAX-RS, EJB… No es un IDE (como Eclipse o IntelliJ), ni un congreso, ni una plataforma de tiempo real o sistemas embebidos (para eso estaba Java ME o RTSJ). Desde Jakarta EE 9, los paquetes pasan de `javax.*` a `jakarta.*`.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -129,7 +129,7 @@
     "No es compatible con microservicios en contenedores Docker."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**.NET** es una **plataforma de desarrollo de Microsoft**, gratuita y de código abierto, para crear aplicaciones web, de escritorio, móviles, en la nube, juegos o IoT. Desde .NET Core es **multiplataforma** y **funciona en Linux** y macOS. Es plenamente compatible con **microservicios en contenedores Docker**. Sus lenguajes son C#, F# y Visual Basic; **PHP no** es un lenguaje de .NET.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -144,13 +144,13 @@
     "SonarSrc"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**SonarQube** (de SonarSource) es una plataforma de **análisis estático** que inspecciona de forma continua la **calidad y la seguridad** del código: *bugs*, vulnerabilidades, *code smells*, cobertura y duplicaciones. Se integra en las canalizaciones CI/CD. «SonarCode», «SonarCuality» y «SonarSrc» no existen. La familia real es SonarQube, SonarCloud (hoy SonarQube Cloud) y SonarLint (hoy SonarQube for IDE).",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s110",
-   "tema": 18,
+   "tema": 20,
    "enunciado": "Para conectar con los servicios de validación de Cl@ve PIN nos ofrecen una interfaz SOAP, ¿qué tipo de mensajes estaríamos intercambiando con el sistema Cl@ve PIN?",
    "opciones": [
     "Mensajes JSON",
@@ -159,13 +159,12 @@
     "Mensajes RDF"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "**SOAP** es un protocolo de mensajería basado en **XML**: cada mensaje es un *Envelope* XML con *Header* y *Body*, y el servicio se describe con **WSDL**, que también es XML. **JSON** es el formato habitual de las API **REST**, **YAML** se usa sobre todo para ficheros de configuración y **RDF** es un modelo de datos de la web semántica. Truco: SOAP siempre va con XML.",
+   "contexto": "s1"
   },
   {
    "id": "s111",
-   "tema": 15,
+   "tema": 22,
    "enunciado": "¿Qué característica o atributo de seguridad de las cookies, permite que JavaScript NO tenga acceso a la cookie?",
    "opciones": [
     "Domain",
@@ -174,9 +173,8 @@
     "HttpOnly"
    ],
    "correcta": 3,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "El atributo **HttpOnly** impide que JavaScript lea la cookie (no aparece en `document.cookie`), lo que **mitiga el robo de sesión por XSS**. **Secure** obliga a enviarla solo por **HTTPS**, **SameSite** controla si se envía en peticiones **entre sitios** (protege frente a CSRF) y **Domain** define a qué dominios se envía. Truco: HttpOnly = «solo para HTTP», no para scripts.",
+   "contexto": "s1"
   },
   {
    "id": "s112",
@@ -189,7 +187,7 @@
     "git stash"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**`git merge`** integra en la rama actual los cambios de otra rama, creando un *commit* de fusión si hace falta, y así junta las dos funcionalidades. **`git reset`** mueve la rama o HEAD a otro *commit* (deshace cambios), **`git checkout`** cambia de rama o restaura ficheros, y **`git stash`** guarda temporalmente los cambios no confirmados. Otra forma de integrar ramas es `git rebase`, que reescribe el historial en lugar de fusionarlo.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -204,14 +202,14 @@
     "Real Decreto 1112/2018, de 7 de septiembre."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **Real Decreto 1112/2018, de 7 de septiembre**, regula la **accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público** y transpone la Directiva (UE) 2016/2102. Remite a la norma **UNE-EN 301 549** (que se basa en WCAG 2.1, nivel AA). Las demás opciones cambian el rango de la norma: no es una orden ministerial ni una ley.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s1r02",
-   "tema": 16,
+   "tema": 21,
    "enunciado": "En PHP, señale que variable de entorno se puede usar para almacenar datos del inicio de sesión de un usuario:",
    "opciones": [
     "$_SESSION",
@@ -220,10 +218,9 @@
     "$GLOBAL"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**`$_SESSION`** es la variable **superglobal** de PHP que guarda datos de la **sesión** del usuario en el servidor entre peticiones, después de llamar a `session_start()`. Las superglobales de PHP empiezan por **«$_»** y van en mayúsculas (`$_GET`, `$_POST`, `$_COOKIE`, `$_SERVER`). La superglobal de variables globales es **`$GLOBALS`** (con S final, sin guion bajo), así que `$_GLOBAL` y `$GLOBAL` no existen, y `$SESSION` sin guion bajo es una variable normal.",
    "reserva": true,
-   "contexto": "s1",
-   "tema_auto": true
+   "contexto": "s1"
   },
   {
    "id": "s1r03",
@@ -236,7 +233,7 @@
     "Todos son sistemas de gestión de bases de datos."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**Git**, **SVN** (Subversion), **Mercurial** y **CVS** son todos **sistemas de control de versiones**. CVS y SVN son **centralizados**, y Git y Mercurial son **distribuidos**. No son gestores de contenidos (como WordPress o Drupal), ni sistemas gestores de bases de datos, ni se desarrollaron en la Administración española: Git lo creó Linus Torvalds en 2005.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true

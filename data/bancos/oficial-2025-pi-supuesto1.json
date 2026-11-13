@@ -24,7 +24,7 @@
     "CREATE VIEW v_alumno AS SELECT DISTINCT dni FROM ALUMNO;"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**ALTER TABLE ALUMNO ADD CONSTRAINT dni_unique UNIQUE (dni);** declara una **restricción de unicidad** que impide que se repitan DNI. Además, Oracle crea automáticamente un **índice único** para aplicarla, de modo que las búsquedas por DNI son rápidas. Un `CREATE INDEX` normal acelera las búsquedas, pero **no impide duplicados** (haría falta `CREATE UNIQUE INDEX`). La tabla ya tiene su clave primaria (id_alumno) y solo puede tener una, y una vista con DISTINCT no restringe lo que se inserta en la tabla.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -39,13 +39,13 @@
     "SELECT * FROM MATRICULA WHERE ALUMNO.id_alumno = MATRICULA.id_alumno;"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**INNER JOIN ... ON ALUMNO.id_alumno = MATRICULA.id_alumno** devuelve solo las filas de alumnos que tienen al menos una matrícula que coincide, que es lo que se pide. `FROM ALUMNO, MATRICULA` sin condición genera el **producto cartesiano** (todas las combinaciones posibles). `IN MATRICULA` es sintaxis inválida, porque IN necesita una lista o una subconsulta (`IN (SELECT id_alumno FROM MATRICULA)`). La última consulta usa ALUMNO en el WHERE sin incluirlo en el FROM, así que Oracle da error de identificador no válido.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s103",
-   "tema": 15,
+   "tema": 17,
    "enunciado": "El equipo técnico necesita garantizar que cada registro de la tabla MATRICULA tenga un identificador único generado automáticamente en Oracle, evitando conflictos de concurrencia cuando múltiples usuarios insertan matrículas simultáneamente desde la aplicación. Se decide utilizar una SEQUENCE para generar el valor de la clave primaria id_matricula. ¿Cuál de las siguientes sentencias SQL en Oracle es correcta para crear una secuencia que comience en 1 y se incremente en 1?",
    "opciones": [
     "CREATE SEQUENCE seq_matricula START 1 INCREMENT 1;",
@@ -54,9 +54,8 @@
     "CREATE SEQUENCE seq_matricula INIT 1 NEXT 1;"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "La sintaxis de Oracle es **CREATE SEQUENCE seq_matricula START WITH 1 INCREMENT BY 1;** y los valores se obtienen con `seq_matricula.NEXTVAL` en el INSERT. La secuencia es segura frente a la **concurrencia**: dos sesiones nunca reciben el mismo número. Las cláusulas «START 1 INCREMENT 1», «BEGIN WITH … STEP» o «INIT … NEXT» no existen en Oracle. Truco: se lee como una frase en inglés, «start with 1, increment by 1». Desde Oracle 12c también existen las columnas `GENERATED AS IDENTITY`.",
+   "contexto": "s1"
   },
   {
    "id": "s104",
@@ -69,7 +68,7 @@
     "@DatabaseEntity"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**@Entity** (`jakarta.persistence.Entity`) marca la clase como **entidad persistente** gestionada por JPA/Hibernate, y obliga a que tenga una clave anotada con **@Id**. **@Table** es opcional y solo sirve para indicar el nombre de la tabla u otros detalles del mapeo; por sí sola no convierte la clase en entidad. **@Persistent** y **@DatabaseEntity** no son anotaciones de Jakarta Persistence.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -84,7 +83,7 @@
     "@Test void testCalcularMatriculas() { AlumnoService service = null; assertEquals(3, service.calcularMatriculas(3)); }"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Una prueba correcta **crea el objeto a probar** (`new AlumnoService()`) y compara el resultado con **assertEquals(esperado, real)**: `assertEquals(3, service.calcularMatriculas(3))` pasa porque el método devuelve lo que recibe. **assertTrue** espera un boolean y el método devuelve un int, así que **no compila**. Llamar a `calcularMatriculas(3)` sin objeto tampoco compila, porque es un método de instancia y no estático. Con `service = null` la prueba falla con **NullPointerException**.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -99,7 +98,7 @@
     "mvn launch spring-boot"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El plugin de Spring Boot para Maven se invoca con la forma **plugin:objetivo**, así que el comando es **mvn spring-boot:run**, que compila y arranca la aplicación. Los objetivos «launch» o las formas «run spring-boot» no existen. Otras formas de lanzarla son `mvn package` seguido de `java -jar target/app.jar`, o `./mvnw spring-boot:run` con el wrapper de Maven.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -114,7 +113,7 @@
     "<!HTML5><body><div id=\"alumnos\"></div></body>"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un documento HTML5 válido empieza por **`<!DOCTYPE html>`**, que activa el **modo estándar** del navegador, y debe incluir un **`<title>`** en el `<head>`; dentro del body, un `<div id=\"alumnos\">` sirve de contenedor. Sin DOCTYPE el navegador entra en **quirks mode** y el documento no se valida. El atributo `version=\"5\"` y la etiqueta `<container>` no existen en HTML, y `<!HTML5>` no es una declaración válida.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -129,7 +128,7 @@
     "<?xml version=\"1.0\" encoding=\"UTF-8\"?><alumno><id_alumno>10</id_alumno><nombre>Juan Pérez</id_alumno> </alumno>"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un XML **bien formado** debe tener **un único elemento raíz** y todas sus etiquetas **cerradas y bien anidadas**, con el mismo nombre en la apertura y el cierre: el fragmento con `<id_alumno>10</id_alumno><nombre>Juan Pérez</nombre>` dentro de `<alumno>…</alumno>` cumple todo eso. En los demás, `<id_alumno>` se cierra con `</nombre>`, falta el cierre del raíz `</alumno>` o `<nombre>` se cierra con `</id_alumno>`. Ojo: «bien formado» (sintaxis) no es lo mismo que «válido» (ajustado a un DTD o XSD).",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -144,13 +143,13 @@
     "JavaScript ECMAScript 2022"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**JavaScript (ECMAScript 2022)** es el lenguaje que los navegadores (Chrome, Edge y Firefox) **ejecutan de forma nativa** en el cliente para manipular el DOM y dar interactividad. **Python** y **Java** se ejecutan en el servidor o necesitan un runtime propio (los applets de Java desaparecieron hace años), y **Oracle SQL** es un lenguaje de consulta de bases de datos. La única otra opción nativa en los navegadores es WebAssembly.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s110",
-   "tema": 14,
+   "tema": 20,
    "enunciado": "El sistema implementa un Web Service REST que permite registrar un nuevo alumno en la base de datos. Lo utiliza una aplicación administrativa que envía una solicitud al backend para crear el nuevo registro. Tras crear correctamente el recurso en la base de datos, el Web Service debe devolver el código HTTP adecuado conforme a los estándares REST. ¿Cuál es el código de estado HTTP que existe específicamente para responder a este caso?",
    "opciones": [
     "200 OK",
@@ -159,9 +158,8 @@
     "202 Accepted"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "**201 Created** es el código específico para indicar que la petición (normalmente un **POST**) ha **creado un recurso nuevo**, y suele ir con la cabecera **Location**, que apunta a la URI del recurso creado. **200 OK** indica un éxito genérico, **204 No Content** un éxito sin cuerpo de respuesta (típico de DELETE o PUT) y **202 Accepted** que la petición se ha aceptado, pero se procesará más tarde (de forma asíncrona).",
+   "contexto": "s1"
   },
   {
    "id": "s111",
@@ -174,7 +172,7 @@
     "Utilizar únicamente estilos CSS para definir visualmente la estructura del contenido."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Las WCAG 2.1 (criterio **1.3.1 Información y relaciones**) piden que la estructura se transmita mediante el marcado, y para eso se usan **elementos semánticos de HTML5** como `<header>`, `<nav>`, `<main>`, `<section>` o `<footer>`. Los lectores de pantalla los reconocen como **regiones (landmarks)** por las que se puede navegar. Las **tablas** son solo para datos tabulares, no para maquetar. Los `<div>` con clases y la estructura definida solo con CSS no aportan ninguna semántica a las tecnologías de asistencia.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -189,7 +187,7 @@
     "Almacenar los datos únicamente en Oracle Database 19c."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "OWASP recomienda **validar las entradas y, sobre todo, codificar o escapar la salida** según el contexto (HTML, atributo, JavaScript, URL) antes de mostrarla en el navegador, para que el código inyectado se muestre como texto y no se ejecute. Como defensa complementaria propone la cabecera **Content Security Policy (CSP)**. Usar **HTTP** (sin TLS) empeora la seguridad, y la **redundancia física** o el **SGBD** elegido no tienen relación con el XSS, que es una vulnerabilidad de la capa de presentación.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -212,7 +210,7 @@
   },
   {
    "id": "s1r02",
-   "tema": null,
+   "tema": 12,
    "enunciado": "Tras un debate sobre cómo resolver un problema en la aplicación, se ha optado por utilizar un algoritmo greedy (voraz). Este algoritmo:",
    "opciones": [
     "Siempre alcanza la solución más óptima.",
@@ -221,10 +219,9 @@
     "Resuelve el problema dividiéndolo en subproblemas pequeños y combinando sus soluciones."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un **algoritmo voraz (greedy)** elige en cada paso la **opción que parece mejor en ese momento** (óptimo local) y no reconsidera sus decisiones. Por eso **no siempre** llega al óptimo global: solo lo hace en problemas con la propiedad de elección voraz, como Dijkstra, Kruskal o el cambio de monedas con el sistema euro. Se aplica a muchos problemas, no solo a la selección de actividades. Dividir el problema en subproblemas y combinar sus soluciones es la técnica **divide y vencerás**.",
    "reserva": true,
-   "contexto": "s1",
-   "tema_auto": true
+   "contexto": "s1"
   },
   {
    "id": "s1r03",
@@ -237,7 +234,7 @@
     "CREATE USER EDUCA_USER IDENTIFIED BY password123;"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "En Oracle, un usuario se crea con **CREATE USER EDUCA_USER IDENTIFIED BY contraseña;** y después necesita al menos **GRANT CREATE SESSION** para poder conectarse. REGISTER USER, ADD USER y NEW USER no son sentencias SQL de Oracle, y la contraseña siempre se indica con **IDENTIFIED BY**. Ojo: «password123» es un ejemplo y no es una contraseña segura en la práctica.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true

@@ -24,7 +24,7 @@
     "‘1..N’ en el recuadro “SR>T” y ‘0..N’ en el recuadro “T>SR”."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El caso dice que **cada trámite puede ser solicitado por cualquier número de interesados** y que **una representación solo es válida para un trámite a la vez**. Por eso, por cada trámite puede haber **0..N** solicitudes de representación, y cada solicitud se refiere a **exactamente 1** trámite. Las opciones que ponen «1» en ambos sentidos o «1» solicitud por trámite limitan a un único interesado, y la que permite 1..N trámites por solicitud contradice que la representación vale para un solo trámite. Truco: lee cada requisito como «un X tiene cuántos Y» y coloca el número en el extremo de Y.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -39,7 +39,7 @@
     "Se usará el modificador \"private\"."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Para acceder a un atributo **directamente desde cualquier otro objeto**, sin getters ni setters, hay que declararlo **public**. **protected** solo da acceso al mismo paquete y a las subclases, **sin modificador** (acceso de paquete) solo a las clases del mismo paquete, y **private** solo a la propia clase. Hacerlo así rompe el encapsulamiento, pero es lo que pide el enunciado. Truco: de más a menos visible, public > protected > paquete > private.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -54,7 +54,7 @@
     "Set"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**Set** (HashSet, TreeSet, LinkedHashSet…) es la colección de Java que **no admite elementos duplicados**: dos elementos son iguales si `equals()` devuelve true. **List** y **Stack** (que hereda de Vector) admiten duplicados y mantienen el orden de inserción, y **Collection** es la interfaz raíz, que no impone esa restricción.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -69,7 +69,7 @@
     "DROP TABLE Usuario (idUsuario bigint PRIMARY KEY, nombre varchar(255));"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Una tabla se crea con **CREATE TABLE** (DDL), indicando columnas, tipos y restricciones como la **PRIMARY KEY**. **ALTER TABLE** modifica una tabla que ya existe, **DROP TABLE** la elimina (y no admite definición de columnas), e **INSERT** añade filas (DML); «INSERT TABLE» ni siquiera es sintaxis válida.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -84,7 +84,7 @@
     "COBOL"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**PL/SQL** es el lenguaje procedimental de **Oracle**: permite incluir sentencias SQL, y sus procedimientos, funciones, paquetes y disparadores se **almacenan compilados en la base de datos**. **Transact-SQL** es el equivalente de **SQL Server** (y Sybase), no de Oracle. **FORTRAN** y **COBOL** son lenguajes de propósito general que pueden llevar SQL embebido, pero no se guardan en la base de datos.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -99,7 +99,7 @@
     "Iterador (Iterator)"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El patrón **Adaptador (Adapter)** permite **reutilizar una clase existente cuya interfaz no encaja con la que espera nuestro sistema**, envolviéndola con una clase que traduce las llamadas. Es el caso típico de una librería compilada heredada que no podemos modificar. **Singleton** garantiza una única instancia, **Cadena de responsabilidad** pasa una petición por una cadena de manejadores e **Iterador** recorre colecciones, y ninguno resuelve la incompatibilidad de interfaces.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -114,13 +114,13 @@
     "3.0"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La versión vigente de UML es la de la **familia 2.5**: **UML 2.5 se publicó en 2015** y su última revisión formal es la **2.5.1 (diciembre de 2017)**, que sigue siendo la última publicada por el OMG. **2.4 y 2.4.1** son anteriores (2011), y **UML 3.0 no existe**. No confundas con **SysML v2**, que es otro lenguaje.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s108",
-   "tema": 17,
+   "tema": 18,
    "enunciado": "En UML un diagrama de componentes:",
    "opciones": [
     "Describe la estructura del sistema mostrando las clases del sistema, sus atributos y relaciones entre ellas.",
@@ -129,9 +129,8 @@
     "Muestra una vista completa o parcial de la estructura de un sistema modelado en un momento específico."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "El **diagrama de componentes** muestra **cómo se divide el sistema en componentes** (módulos, librerías, ejecutables) y **las dependencias e interfaces entre ellos**. Las otras definiciones son de otros diagramas: clases, atributos y relaciones es el **diagrama de clases**; hardware y componentes desplegados en él es el **diagrama de despliegue**; y la estructura del sistema en un instante concreto es el **diagrama de objetos**.",
+   "contexto": "s1"
   },
   {
    "id": "s109",
@@ -144,7 +143,7 @@
     "WebView"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**.NET MAUI** (Multi-platform App UI) es el framework de Microsoft para crear **aplicaciones nativas multiplataforma**, de escritorio (Windows, macOS) y móviles (Android, iOS), con un único código C#/XAML. **Blazor Hybrid** usa Razor/HTML dentro de un control WebView incrustado en una app nativa, así que es una solución híbrida. **JavaFX** es de Java, no de .NET, y **WebView** es solo un control para mostrar contenido web.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -159,7 +158,7 @@
     "Real Decreto 1112/2018, de 7 de septiembre."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La accesibilidad de los sitios web y aplicaciones móviles del sector público la regula el **Real Decreto 1112/2018, de 7 de septiembre**, que traspone la **Directiva (UE) 2016/2102**. Es un **real decreto**, no una orden ministerial, ni una ley ordinaria, ni una ley orgánica. Exige cumplir la norma **UNE-EN 301 549**, que se basa en WCAG nivel AA.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -174,7 +173,7 @@
     "javax.servlet"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En Java, la conexión a base de datos en un servidor de aplicaciones se obtiene con **JNDI** (`javax.naming`), que localiza el recurso, y el **DataSource** de `javax.sql`, que da la conexión del pool. **java.database** y **javax.io** no existen (la entrada/salida está en `java.io`), y **javax.servlet** es la API de servlets, no de acceso a datos. Aunque Jakarta EE 9+ renombró `javax.*` a `jakarta.*`, estos dos paquetes son de **Java SE** y no han cambiado.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -189,13 +188,13 @@
     "Jakarta Connectors"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**Eclipse MicroProfile** es la especificación de la comunidad para **desarrollar microservicios en Java empresarial**, alineada con el **Jakarta EE Core Profile**. Incluye Config, Health, Metrics, Fault Tolerance, JWT y REST Client. **Jakarta Authentication** trata de la autenticación, **Jakarta Batch** del procesamiento por lotes y **Jakarta Connectors** de la integración con sistemas de información empresarial (EIS).",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s113",
-   "tema": 22,
+   "tema": 23,
    "enunciado": "En el equipo de desarrollo se ha decidido usar Selenium WebDriver para:",
    "opciones": [
     "Mejorar la accesibilidad de las páginas web facilitando audios a partir del texto.",
@@ -204,9 +203,8 @@
     "Diseñar páginas web adaptables."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "**Selenium WebDriver** sirve para **automatizar la ejecución de pruebas en el navegador**: controla Chrome, Firefox, etc. por programa y simula la interacción del usuario. Es la base de muchas pruebas funcionales y de regresión de la interfaz web. No convierte texto en audio, no optimiza el tiempo de carga y no diseña páginas adaptables (*responsive*).",
+   "contexto": "s1"
   },
   {
    "id": "s114",
@@ -219,7 +217,7 @@
     "SonarSrc"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**SonarQube** (de SonarSource) es la plataforma de **análisis estático de calidad y seguridad del código**: detecta *bugs*, vulnerabilidades, *code smells*, duplicaciones y cobertura de pruebas. Suele integrarse en la integración continua con *quality gates*. «SonarCode», «SonarCuality» y «SonarSrc» no existen; el producto para el IDE es **SonarLint** (hoy SonarQube for IDE).",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -250,7 +248,7 @@
     "Wi-Fi"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Las **notificaciones push móviles** (*mobile push*) permiten que el servidor **envíe avisos nativos al smartphone** aunque la app no esté abierta, mediante servicios como **FCM** (Android) o **APNs** (iOS). Es justo el mecanismo que el caso usa para mandar el enlace al representante. **WebView** solo muestra contenido web dentro de una app, y **CDMA** y **Wi-Fi** son tecnologías de acceso radio, no de notificación.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -265,7 +263,7 @@
     "CSS"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Para cambiar el aspecto visual de un botón (color, tamaño, márgenes) en una página web se usa **CSS** (Cascading Style Sheets), el lenguaje de **hojas de estilo** de HTML. **XML** y **SGML** son lenguajes de marcado, no de estilos, y **XSL** es el lenguaje de estilos y transformación **de documentos XML** (XSLT, XSL-FO), no el que se usa para dar estilo al HTML del frontal.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -280,7 +278,7 @@
     "Inclusive Design"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**Material Design** es el **sistema de diseño de Google**: pautas, componentes y herramientas para crear interfaces coherentes y usables. **WCAG 2.1** son pautas de accesibilidad del W3C, **WAI-ARIA** es una especificación del W3C para hacer accesibles los componentes dinámicos, e **Inclusive Design** es una filosofía de diseño (popularizada por Microsoft), no un sistema de Google.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -295,7 +293,7 @@
     "Cross Send Request Forgery"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**CSRF** significa **Cross-Site Request Forgery** (falsificación de petición en sitios cruzados). El atacante hace que el navegador de un usuario autenticado envíe una petición no deseada aprovechando su **cookie de sesión**. Se mitiga con **tokens anti-CSRF**, el atributo **SameSite** de las cookies y la comprobación del origen. Las demás opciones cambian «Request» o «Site» por palabras que no corresponden.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -310,7 +308,7 @@
     "Subversion"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Jenkins** es el servidor de **integración y despliegue continuos (CI/CD)** que define la construcción, las pruebas y el despliegue como **pipelines** (Jenkinsfile). **RabbitMQ** es un *broker* de mensajería (AMQP), **Apache Kafka** una plataforma de *streaming* de eventos, y **Subversion** un control de versiones.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -342,7 +340,7 @@
     "HttpOnly"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El atributo **SameSite** de una cookie controla que el navegador **solo la envíe en peticiones originadas en el mismo sitio** (Strict o Lax), lo que protege frente a **CSRF**. **Domain** indica a qué dominios se envía la cookie, **Secure** obliga a enviarla solo por HTTPS y **HttpOnly** impide leerla desde JavaScript, lo que mitiga el robo de cookies por XSS.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
@@ -358,7 +356,7 @@
     "$GLOBAL"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En PHP los datos de sesión de un usuario se guardan en la **superglobal `$_SESSION`**, después de llamar a `session_start()`. Aunque el enunciado habla de «variable de entorno», técnicamente es una variable superglobal. **`$SESSION`** y **`$GLOBAL`** no existen (sin guion bajo o en singular), y la superglobal parecida es **`$GLOBALS`**, que da acceso a las variables globales, no a la sesión.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
@@ -374,7 +372,7 @@
     "TensorFlow"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**Bootstrap** es un conjunto de herramientas de *frontend* con **estilos CSS y componentes JavaScript** (modales, desplegables, carruseles…) para construir interfaces web adaptables. **NumPy** es una librería de cálculo numérico de Python, **ActiveMQ** un *broker* de mensajería de Apache y **TensorFlow** una librería de aprendizaje automático.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
@@ -390,7 +388,7 @@
     "let obj = New JSON"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**`JSON.parse()`** es el método estático que **convierte una cadena JSON en un valor u objeto JavaScript**. **`JSON.stringify()`** hace lo contrario, convertir un objeto en una cadena JSON. `JSON` no es un constructor, así que `new JSON` da error, y asignar `JSON` a una variable no convierte nada. Truco: *parse* analiza el texto y *stringify* lo convierte en cadena.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true

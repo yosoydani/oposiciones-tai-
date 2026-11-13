@@ -24,7 +24,7 @@
     "CREATE VIEW v_alumno AS SELECT DISTINCT dni FROM ALUMNO;"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Una restricción **UNIQUE** impide duplicados y Oracle crea automáticamente un **índice único** para aplicarla, así que se cumplen a la vez la integridad y el rendimiento de las búsquedas por DNI. Un `CREATE INDEX` normal acelera las búsquedas pero admite duplicados; una tabla solo puede tener una clave primaria (ALUMNO ya tiene `id_alumno`), y una vista con DISTINCT no impide insertar repetidos.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -39,7 +39,7 @@
     "SELECT * FROM MATRICULA WHERE ALUMNO.id_alumno = MATRICULA.id_alumno;"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**INNER JOIN ... ON ALUMNO.id_alumno = MATRICULA.id_alumno** devuelve solo las filas que casan en ambas tablas, es decir, los alumnos que tienen alguna matrícula. `FROM ALUMNO, MATRICULA` sin condición hace un producto cartesiano; `IN MATRICULA` no es sintaxis válida (haría falta una subconsulta, `IN (SELECT id_alumno FROM MATRICULA)`), y la última referencia a ALUMNO sin incluirla en el FROM.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -54,7 +54,7 @@
     "SELECT id_programa, SUM(*) FROM MATRICULA GROUP BY id_programa;"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Para contar por grupo se combina **COUNT(*)** con **GROUP BY id_programa**, y toda columna no agregada del SELECT tiene que estar en el GROUP BY. Fallan las otras: `GROUP id_programa` sin BY es un error de sintaxis; seleccionar `id_programa` con COUNT sin GROUP BY da ORA-00937, y `SUM(*)` no existe (SUM necesita una columna numérica).",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -69,7 +69,7 @@
     "@Rest public class AlumnoController {}"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En Spring **@RestController** (= @Controller + @ResponseBody) hace que lo devuelto se serialice a JSON, y **@GetMapping(\"/alumnos\")** asocia el método a GET /alumnos; `findAll()` es el método estándar de los repositorios de Spring Data. `@Get`, `@WebController` y `@Rest` no existen en Spring, y `repository.get()` tampoco es un método del repositorio.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -84,7 +84,7 @@
     "@Test void testException() { assertThrows(Exception.class); }"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En JUnit 5 y posteriores (Jupiter, también en JUnit 6) se usa **assertThrows(Tipo.class, () -> código)**: ejecuta la lambda y falla si no se lanza esa excepción. `assertEquals` con una clase no captura la excepción: el test reventaría con ella. Llamar al método sin aserción hace fallar el test por la excepción, y `assertThrows(Exception.class)` sin el ejecutable no compila.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -99,7 +99,7 @@
     "Se producirá error porque el método equals() solo funciona en Java 18 o superior."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "`idAlumno` es un **int primitivo**, y los primitivos no tienen métodos: javac da el error **«int cannot be dereferenced»**, así que es un error de **compilación**, no de ejecución. Se compararía con `idAlumno == id` (o con `Integer` y equals). `equals()` existe en `Object` desde Java 1.0, no depende de la versión.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -114,7 +114,7 @@
     "mvn launch spring-boot"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El plugin de Maven de Spring Boot tiene el goal **spring-boot:run**, que compila y arranca la aplicación: `mvn spring-boot:run`. La sintaxis de Maven es `prefijo:goal`, así que `run spring-boot`, `launch spring-boot` y `spring-boot:launch` no existen. Alternativa: `mvn package` y luego `java -jar target/app.jar`.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -129,7 +129,7 @@
     "logger.Error(“Ejecución del método incorrecta”);"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La interfaz `ILogger` de .NET (Microsoft.Extensions.Logging) tiene los métodos de extensión **LogTrace, LogDebug, LogInformation, LogWarning, LogError y LogCritical**, así que `logger.LogInformation(...)` es correcto. `Log(...)` exige también el `LogLevel` como primer argumento; `LogWarn` y `Error` son nombres de otras librerías (NLog, log4net), no de ILogger.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -144,7 +144,7 @@
     "await int DevolverDato()"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En C# un método asíncrono se declara con el modificador **async** y devuelve **Task** (o `Task<T>` si devuelve un valor, o `ValueTask`); dentro se usa `await`. `Thread` no es un tipo de retorno asíncrono, `Thread<int>` no existe y `await` se usa dentro del cuerpo, no en la firma.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -159,7 +159,7 @@
     "<!HTML5><body><div id=\"alumnos\"></div></body>"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un documento HTML5 válido empieza con **<!DOCTYPE html>** (si falta, el navegador entra en modo quirks) e incluye un **<title>** en el <head>, que es obligatorio. `<html version=\"5\">`, `<container>` y `<!HTML5>` no existen en HTML5, y el primer fragmento no tiene doctype ni title.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -174,13 +174,13 @@
     "<?xml version=\"1.0\" encoding=\"UTF-8\"?><alumno><id_alumno>10</id_alumno><nombre>Juan Pérez</id_alumno> </alumno>"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un XML está **bien formado** si tiene un único elemento raíz y cada etiqueta de apertura se cierra con su mismo nombre y en orden correcto (anidado). El fragmento correcto cumple las dos cosas. Los demás fallan: `<id_alumno>` se cierra con `</nombre>`; falta cerrar `</alumno>`, y `<nombre>` se cierra con `</id_alumno>`.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s112",
-   "tema": 15,
+   "tema": 21,
    "enunciado": "También se le pide incluir un atributo id_alumno en el elemento <alumno>, garantizando que el documento XML sea válido. ¿Cuál de los siguientes fragmentos XML lo implementaría correctamente?",
    "opciones": [
     "<?xml version=\"1.0\" encoding=\"UTF-8\"?><alumno id_alumno:\"10\"><nombre>Juan Pérez</nombre></alumno>",
@@ -189,9 +189,8 @@
     "<?xml version=\"1.0\" encoding=\"UTF-8\"?><alumno>id_alumno=\"10\"<nombre>Juan Pérez</nombre></alumno>"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "En XML los atributos van **dentro de la etiqueta de apertura**, con la forma **nombre=\"valor\"** y el valor **siempre entre comillas** (dobles o simples). Por eso `id_alumno:\"10\"` (dos puntos en vez de =) y `id_alumno=10` (sin comillas) no están bien formados, y poner `id_alumno=\"10\"` fuera de la etiqueta lo convierte en texto, no en atributo.",
+   "contexto": "s1"
   },
   {
    "id": "s113",
@@ -204,7 +203,7 @@
     "request.fetch(\"/alumnos\");"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La API nativa del navegador es **fetch(url)**: devuelve una Promise con la respuesta, `response.json()` la convierte en objeto y el segundo `then` recibe los datos. `get()`, `http.get()` y `request.fetch()` no son funciones globales del navegador (`http.get` es de Node.js o de librerías como Angular).",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -219,7 +218,7 @@
     "using tensorflow"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En Python los módulos se cargan con **import**, y la convención es **import tensorflow as tf**. `include` es de C/C++ (#include), `using` es de C# y `load` no es una instrucción de Python.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -234,13 +233,13 @@
     "JavaScript ECMAScript 2022"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El único lenguaje que ejecutan **de forma nativa** Chrome, Edge y Firefox es **JavaScript (ECMAScript)**, por eso sirve para la interactividad dinámica en el cliente. Python 3.11 y Java 17 se ejecutan en el servidor (o con plugins o transpiladores), y Oracle SQL es el lenguaje de la base de datos.",
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s116",
-   "tema": 14,
+   "tema": 20,
    "enunciado": "El sistema implementa un Web Service REST que permite registrar un nuevo alumno en la base de datos. Lo utiliza una aplicación administrativa que envía una solicitud al backend para crear el nuevo registro. Tras crear correctamente el recurso en la base de datos, el Web Service debe devolver el código HTTP adecuado conforme a los estándares REST. ¿Cuál es el código de estado HTTP que existe específicamente para responder a este caso?",
    "opciones": [
     "200 OK",
@@ -249,9 +248,8 @@
     "202 Accepted"
    ],
    "correcta": 1,
-   "explicacion": null,
-   "contexto": "s1",
-   "tema_auto": true
+   "explicacion": "**201 Created** es el código que indica que la petición ha creado un recurso nuevo; se suele acompañar de la cabecera `Location` con su URI (típico de un POST). 200 es un éxito genérico; 204, éxito sin cuerpo de respuesta, y 202, que la petición se ha aceptado pero aún no se ha procesado (asíncrono).",
+   "contexto": "s1"
   },
   {
    "id": "s117",
@@ -264,7 +262,7 @@
     "Utilizar únicamente estilos CSS para definir visualmente la estructura del contenido."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "WCAG 2.1 (criterio **1.3.1 Información y relaciones**) pide que la estructura se transmita en el código, y la forma recomendada es el **HTML semántico**: <header>, <main>, <section>, <nav>... que los lectores de pantalla anuncian como regiones (landmarks). Las tablas son solo para datos tabulares, los <div> con class no tienen semántica y una estructura puramente visual con CSS no llega a las tecnologías de asistencia.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -279,7 +277,7 @@
     "tabindex=\"1\""
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**aria-expanded** (WAI-ARIA) indica si el elemento que controla un menú o panel está desplegado (`true`) o plegado (`false`), y el lector de pantalla lo anuncia. `role=\"dropdown-status\"` no es un rol ARIA; `alt` es texto alternativo de imágenes, y `tabindex` solo afecta al orden del foco (y se desaconsejan valores positivos).",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -294,7 +292,7 @@
     "Descarga objetos y referencias del remoto y actualiza las ramas de seguimiento remoto, registrando lo obtenido en .git/FETCH_HEAD, sin integrar cambios en la rama actual."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**git fetch** descarga objetos y referencias del remoto y actualiza las ramas de seguimiento (`origin/main`...), con lo obtenido anotado en `.git/FETCH_HEAD`, **sin tocar tu rama actual**. Descargar y además fusionar es `git pull` (fetch + merge/rebase); subir commits es `git push`, y sustituir el historial local sería algo como `git reset --hard origin/rama`.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -309,7 +307,7 @@
     "Almacenar los datos únicamente en Oracle Database 19c."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "OWASP (XSS Prevention Cheat Sheet) recomienda **validar las entradas y codificar o escapar la salida** según el contexto (HTML, atributo, JavaScript, URL) antes de mostrar los datos en el navegador, además de medidas como la CSP. HTTP sin cifrar no protege de nada (lo recomendado es HTTPS); la redundancia física es disponibilidad, y el motor de base de datos no influye en el XSS.",
    "contexto": "s1",
    "tema_auto": true
   },
@@ -324,7 +322,7 @@
     "En .git/workflows y con extensión .yaml"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "GitHub Actions solo reconoce los workflows dentro de **.github/workflows/** y en ficheros YAML con extensión **.yml o .yaml**. `.github/actions` se suele usar para acciones propias, no para workflows; JSON no es el formato, y `.git/` es el directorio interno de Git, que no se sube al repositorio.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
@@ -357,14 +355,14 @@
     "File, Directory, Commit y Branch."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "La documentación de Git (gitdatamodel) describe **4 tipos de datos**: los **objects** (blobs, trees, commits y tags), las **references** (ramas y etiquetas), el **index** (área de preparación) y los **reflogs**. La opción de commits, trees, blobs y tags solo enumera los tipos de **objeto**, que son una de esas cuatro piezas; las demás mezclan niveles.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true
   },
   {
    "id": "s1r04",
-   "tema": null,
+   "tema": 12,
    "enunciado": "Tras un debate sobre cómo resolver un problema en la aplicación, se ha optado por utilizar un algoritmo greedy (voraz). Este algoritmo:",
    "opciones": [
     "Siempre alcanza la solución más óptima.",
@@ -373,10 +371,9 @@
     "Resuelve el problema dividiéndolo en subproblemas pequeños y combinando sus soluciones."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un algoritmo **voraz (greedy)** elige en cada paso la opción que **parece mejor en ese momento** (óptimo local) y no vuelve atrás. No garantiza siempre el óptimo global (sí en casos como Dijkstra, Kruskal o Prim); se aplica a muchos problemas, no solo a la selección de actividades, y dividir en subproblemas y combinar sus soluciones es **divide y vencerás**.",
    "reserva": true,
-   "contexto": "s1",
-   "tema_auto": true
+   "contexto": "s1"
   },
   {
    "id": "s1r05",
@@ -389,7 +386,7 @@
     "CREATE USER EDUCA_USER IDENTIFIED BY password123;"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "En Oracle un usuario se crea con **CREATE USER nombre IDENTIFIED BY contraseña**, y para conectarse necesita además el privilegio `CREATE SESSION` (GRANT). `REGISTER USER`, `ADD USER` y `NEW USER` no son sentencias SQL de Oracle.",
    "reserva": true,
    "contexto": "s1",
    "tema_auto": true

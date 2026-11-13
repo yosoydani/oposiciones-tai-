@@ -24,7 +24,7 @@
     "chmod a+x script.sh"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**`chmod u+x script.sh`** añade el permiso de ejecución **solo al propietario** (u = *user*) y deja el resto igual: -rw-r--r-- pasa a **-rwxr--r--**. `chmod +x` sin indicar a quién (afectado por la umask) y `chmod a+x` lo dan a **todos** (u, g y o); `chmod 755` fija rwxr-xr-x, que también da ejecución a grupo y otros. Truco: **u**ser, **g**roup, **o**thers, **a**ll.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -39,7 +39,7 @@
     "create nuevo_directorio"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**`mkdir nuevo_directorio`** (*make directory*) crea un directorio en la ubicación actual; con `-p` crea también los directorios intermedios que falten. **`md`** es el equivalente en **Windows** (cmd), **`touch`** crea un **fichero vacío** o actualiza su fecha de modificación, y **`create`** no es un comando de Linux.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -54,7 +54,7 @@
     "Muestra el nombre completo cualificado (FQDN) del equipo."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**`hostname -f`** (*--fqdn*) muestra el **nombre de dominio completamente cualificado (FQDN)** del equipo, por ejemplo web01.ministerio.es, resolviéndolo a través de la configuración de nombres del sistema. La forma **abreviada** (solo «web01») se obtiene con **`hostname -s`**. Las demás opciones no corresponden a ninguna opción del comando. Truco: **-f = full**, **-s = short**.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -69,7 +69,7 @@
     "netsh advfirewall show currentprofile status"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Con netsh, el estado del perfil **activo** del Firewall se consulta con **`netsh advfirewall show currentprofile`**, que muestra si está activado, la directiva de entrada y salida y la configuración de registro. El verbo de consulta en netsh advfirewall es **show**, no *get*; **`show profile`** no es un parámetro válido (hay que indicar currentprofile, domainprofile, privateprofile, publicprofile o allprofiles) y `status` no se añade al final. Truco: **show** para mirar, **set** para cambiar.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -84,7 +84,7 @@
     "netsh advfirewall set currentprofile state on"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Para activar el Firewall en el perfil actual se usa **`netsh advfirewall set currentprofile state on`**: el verbo **set**, después el **perfil** y por último el parámetro **state** con su valor (on/off). Las demás opciones alteran el orden, omiten «state» o usan un verbo **enable** que no existe en este contexto. Para todos los perfiles a la vez: `netsh advfirewall set allprofiles state on`.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -99,7 +99,7 @@
     "appcmd new backup \"BackupManual\""
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "En IIS, **AppCmd** sigue la sintaxis **`appcmd <verbo> <objeto>`**, y la copia de seguridad de la configuración se crea con **`appcmd add backup \"BackupManual\"`** (se guarda en %windir%\\system32\\inetsrv\\backup). Los verbos de AppCmd son **list, add, delete, set**, y para copias también restore; *create* y *new* no existen, y poner el objeto antes del verbo (`backup add`) es el orden equivocado. Truco: primero el verbo, luego el objeto.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -114,7 +114,7 @@
     "appcmd enumerate backup"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Las copias de seguridad de la configuración de IIS se enumeran con **`appcmd list backup`**: **list** es el verbo de consulta de AppCmd para cualquier objeto (list site, list apppool, list backup…). *show*, *get* y *enumerate* no son verbos de AppCmd. Para restaurar una: `appcmd restore backup \"BackupManual\"`.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -129,7 +129,7 @@
     "CDI"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Una **VTL** (*Virtual Tape Library*, biblioteca de cintas virtual) es un sistema de **disco que se presenta ante el software de copias como si fuera una biblioteca de cintas**, así que se pueden eliminar las cintas físicas sin cambiar los procedimientos de copia. **VDI** es la infraestructura de escritorios virtuales, y **VDL** y **CDI** no son sistemas de copias de seguridad. Ventajas de la VTL: copias y restauraciones más rápidas y posibilidad de deduplicación.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -144,7 +144,7 @@
     "Se continúa la comunicación con un mensaje \"ack\"."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En el *handshake* de **TLS 1.3**, si el servidor acepta los parámetros del **ClientHello** responde con **ServerHello** (seguido de EncryptedExtensions, Certificate, CertificateVerify y Finished). Si no los acepta pero puede negociar otros, envía un **HelloRetryRequest**, y si no hay acuerdo posible corta con una **alerta** (como handshake_failure). «reset», «end» y «ack» no son mensajes del handshake TLS. TLS 1.3 completa el handshake en **1 RTT**.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -159,7 +159,7 @@
     "sudo -i systemctl tomcat -r"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En RHEL 8 los servicios se gestionan con **systemd**, y la sintaxis es **`systemctl <acción> <unidad>`**. Como el servicio está registrado como **tomcat9.service**, se reinicia con **`systemctl restart tomcat9`** (el sufijo .service puede omitirse). `systemctl restart tomcat` fallaría porque esa unidad no existe, y `start -r` o `tomcat -r` no son sintaxis válidas. Para ver el resultado: `systemctl status tomcat9`.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -174,7 +174,7 @@
     "143"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El envío de correo **SMTP autenticado con STARTTLS** (*submission*) usa el puerto **587**; en Microsoft 365 el servidor es smtp.office365.com:587. **995** es POP3 sobre SSL/TLS, **993** es IMAP sobre SSL/TLS y **143** es IMAP sin cifrar (o con STARTTLS). Truco: 25 entre servidores, **587 para que los clientes envíen**, 465 para SMTP con TLS implícito.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -189,7 +189,7 @@
     "Set-ADReplication PLANI"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En el módulo **ActiveDirectory** de PowerShell, los sitios se gestionan con los cmdlets de replicación: **`New-ADReplicationSite PLANI`** crea el sitio, y existen también New-ADReplicationSubnet y New-ADReplicationSiteLink. **`New-ADSite`, `New-ADReplication` y `Set-ADReplication` no existen**. Los sitios de AD representan la topología física de la red y sirven para optimizar la replicación y la autenticación.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -204,7 +204,7 @@
     "\"switchport mode trunk\" y \"switchport trunk allowed vlan 10\""
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un PC es un dispositivo final que pertenece a una sola VLAN, así que el puerto del switch se configura en **modo acceso**: **`switchport mode access`** y **`switchport access vlan 10`**. Los **troncales** (*trunk*) llevan **varias VLAN etiquetadas (802.1Q)** entre switches o hacia servidores y routers, y `switchport trunk access vlan` ni siquiera existe. **`dynamic desirable`** negocia el troncal con DTP, que no tiene sentido hacia un PC.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -219,13 +219,13 @@
     "journalctl -u nginx -n 50"
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**`journalctl -u nginx -n 50`** muestra las **50 últimas entradas** del *journal* de la **unidad** nginx: `-u` filtra por unidad de systemd y **`-n`** (`--lines`) limita el número de líneas. `--last=50` no existe y `-t` filtra por identificador de syslog, no por número de líneas. `tail -n 50 /var/log/messages` lee un fichero de log general del sistema, **no el journal**. Para seguirlo en tiempo real se añade **`-f`**.",
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s215",
-   "tema": null,
+   "tema": 24,
    "enunciado": "Se ha observado que el servicio nginx del servidor web01 no arranca y el log indica un error “permission denied” al acceder a /var/www/html. El sistema tiene configurado SELinux en modo enforcing. ¿Qué herramienta permite analizar la causa concreta del bloqueo?",
    "opciones": [
     "semange",
@@ -234,14 +234,13 @@
     "sealert"
    ],
    "correcta": 3,
-   "explicacion": null,
-   "contexto": "s2",
-   "tema_auto": true
+   "explicacion": "**`sealert`** (paquete setroubleshoot) **analiza las denegaciones de SELinux** registradas en /var/log/audit/audit.log y explica **la causa concreta y cómo resolverla** (por ejemplo, `sealert -a /var/log/audit/audit.log`). **`restorecon`** restablece los contextos de seguridad de los ficheros (suele ser la *solución* cuando /var/www/html tiene un contexto incorrecto), **`getsebool`** consulta los booleanos de SELinux y semanage (escrito «semange» en la opción) gestiona la política, pero ninguno de ellos diagnostica el bloqueo. Truco: sealert *alerta y explica*; restorecon *arregla*.",
+   "contexto": "s2"
   },
   {
    "id": "s216",
    "tema": 28,
-   "enunciado": "En el organismo se quiere disponer de un sistema de vigilancia de la red y se ha optado por la sonda SAT INET del CCN- CERT. Según su arquitectura, ¿cómo se realizan las comunicaciones de la sonda con el sistema central?",
+   "enunciado": "En el organismo se quiere disponer de un sistema de vigilancia de la red y se ha optado por la sonda SAT INET del CCN-CERT. Según su arquitectura, ¿cómo se realizan las comunicaciones de la sonda con el sistema central?",
    "opciones": [
     "Por medio de un túnel cifrado se inicia desde la sonda hacia el sistema central.",
     "Por medio de un túnel cifrado se inicia desde el sistema central hacia la sonda.",
@@ -249,7 +248,7 @@
     "Por medio de un túnel cifrado que discurre siempre a través del AC del organismo."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En el **SAT INET** del CCN-CERT, la sonda se instala en la salida a Internet del organismo y su comunicación con el **sistema central** del CCN-CERT se hace por un **túnel cifrado iniciado desde la sonda hacia el sistema central**. Al iniciarse desde dentro, el organismo **no tiene que abrir conexiones entrantes** en su cortafuegos hacia la sonda, lo que reduce la superficie de ataque. Las demás opciones invierten el sentido o ponen condiciones (que vaya por Internet o por un determinado elemento del organismo) que no forman parte de la arquitectura.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -264,7 +263,7 @@
     "/28"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Para tener al menos 100 hosts utilizables hacen falta *h* bits de host tales que **2^h − 2 ≥ 100**: con h = 7, 128 − 2 = **126 hosts**, así que la máscara es 32 − 7 = **/25** (255.255.255.128), que divide la /24 en dos subredes. Con **/26** solo hay 62 hosts, con /27 30 y con /28 14. Truco: cada bit que se añade a la máscara divide a la mitad los hosts disponibles.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -279,7 +278,7 @@
     "FC00::/7"
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Las direcciones **multicast IPv6** empiezan por **FF00::/8** (el primer octeto es FF). **FE80::/10** son las **link-local** (de enlace local), **FC00::/7** las **ULA** (únicas locales, el equivalente a las privadas de IPv4) y **FEC0::/10** eran las *site-local*, ya **obsoletas** (RFC 3879). Truco: **FF = multicast**, FE8 = enlace, FC/FD = privadas.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -294,7 +293,7 @@
     "docker list -a"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**`docker ps -a`** (o su equivalente moderno **`docker container ls -a`**) lista **todos los contenedores**, en ejecución y detenidos. Sin `-a`, tanto `docker ps` como `docker container ls` muestran **solo los que están en ejecución**, y por eso la opción `docker container ls` no sirve. `docker ls` y `docker list` no existen. Truco: **-a = all**.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -309,7 +308,7 @@
     "Get-Service | Where-Object {$_.Status -eq \"Active\"} | Select-Object Name"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La propiedad **Status** de los objetos que devuelve `Get-Service` (tipo ServiceControllerStatus) puede valer **Running**, **Stopped**, Paused, StartPending, StopPending, etc., así que el filtro correcto es **`$_.Status -eq \"Running\"`**. «Enabled» y «Active» no son estados de Windows (recuerdan a systemd en Linux) y «Started» tampoco existe. Otra forma más corta: `Get-Service | Where-Object Status -eq Running | Select-Object Name`.",
    "contexto": "s2",
    "tema_auto": true
   },
@@ -324,7 +323,7 @@
     "Utiliza una secuencia de bits (chips) de modo que permite que diferentes señales compartan una misma banda de frecuencia."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "**CDMA** (*Code Division Multiple Access*) asigna a cada usuario un **código o secuencia pseudoaleatoria de *chips*** con el que ensancha su señal (espectro ensanchado), de modo que **varias señales comparten la misma banda de frecuencia al mismo tiempo** y el receptor separa cada una con su código. La separación con subportadoras ortogonales describe **OFDM**, los intervalos de guarda y *slots* recuerdan a **FDMA/TDMA** y escuchar el medio antes de transmitir es **CSMA**. Truco: FDMA reparte frecuencias, TDMA tiempo y CDMA códigos.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -340,14 +339,14 @@
     "802.11be"
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "**Wi-Fi 6** es el estándar **IEEE 802.11ax** (Wi-Fi 6E es la misma norma en la banda de 6 GHz), que introduce OFDMA y MU-MIMO en ambos sentidos. **802.11ac** es **Wi-Fi 5** y **802.11be** es **Wi-Fi 7**; «802.11an» no existe. Truco: n = 4, ac = 5, ax = 6, be = 7.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
   },
   {
    "id": "s2r03",
-   "tema": 14,
+   "tema": 27,
    "enunciado": "En SNMP, el conjunto de OID (Object IDentifier) que tiene disponible un dispositivo se conoce como:",
    "opciones": [
     "MIB (Management Information Base).",
@@ -356,10 +355,9 @@
     "OID Group."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En **SNMP**, la **MIB** (*Management Information Base*) es la base de información de gestión: la colección **jerárquica de objetos, identificados por OID**, que un agente expone sobre el dispositivo (interfaces, tráfico, CPU…). Se define con el lenguaje SMI y la estándar es **MIB-II** (RFC 1213). «MIR», «OID Database» y «OID Group» no son términos de SNMP.",
    "reserva": true,
-   "contexto": "s2",
-   "tema_auto": true
+   "contexto": "s2"
   },
   {
    "id": "s2r04",
@@ -372,7 +370,7 @@
     "UDP 2000"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La instancia **predeterminada** del motor de base de datos de SQL Server escucha por defecto en el puerto **TCP 1433**. El servicio **SQL Server Browser** usa **UDP 1434** para indicar los puertos de las instancias con nombre, que por defecto usan puertos dinámicos. Los demás puertos no corresponden a SQL Server (el 5432 es el de PostgreSQL). Truco: 1433 para el motor, 1434 para el Browser.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true
@@ -388,7 +386,7 @@
     "TXT"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El registro **MX** (*Mail eXchanger*) indica qué servidores reciben el correo de un dominio, con una **prioridad** (el número más bajo tiene preferencia). El registro **A** asocia un nombre a una dirección IPv4, **CNAME** crea un alias de otro nombre y **TXT** guarda texto libre, que se usa por ejemplo para SPF, DKIM o DMARC.",
    "reserva": true,
    "contexto": "s2",
    "tema_auto": true

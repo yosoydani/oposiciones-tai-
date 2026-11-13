@@ -22,7 +22,7 @@
     "Adecuación de datos."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El art. 5.1.c) del RGPD define la **minimización de datos**: los datos serán «adecuados, pertinentes y limitados a lo necesario» para los fines del tratamiento. La limitación de la finalidad (art. 5.1.b) exige fines determinados, explícitos y legítimos, y la exactitud (art. 5.1.d) que los datos sean exactos y estén actualizados; «adecuación de datos» no es ningún principio del RGPD. Truco: «limitados a lo necesario» = usar el mínimo de datos.",
    "tema_auto": true
   },
   {
@@ -36,7 +36,7 @@
     "La capacidad de garantizar la confidencialidad, autenticidad, integridad y disponibilidad permanentes de los sistemas y servicios de tratamiento."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **art. 32.1.b) del RGPD** habla de la capacidad de garantizar la **confidencialidad, integridad, disponibilidad y resiliencia** permanentes de los sistemas y servicios de tratamiento. Las demás opciones cambian una pieza por trazabilidad o autenticidad, que son dimensiones de seguridad del ENS, no de este artículo del RGPD. Truco: RGPD art. 32 = «CID + resiliencia».",
    "tema_auto": true
   },
   {
@@ -50,7 +50,7 @@
     "Infraestructuras, estándares y protocolos."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **art. 6 del Esquema Nacional de Interoperabilidad (RD 4/2010)** dice que la interoperabilidad se contemplará en sus dimensiones **organizativa, semántica y técnica**. La seguridad no es una dimensión de la interoperabilidad (es materia del ENS), y las otras listas son inventadas. Truco: el ENI responde a tres preguntas: quién y cómo se organiza (organizativa), qué significan los datos (semántica) y cómo se conectan los sistemas (técnica).",
    "tema_auto": true
   },
   {
@@ -64,12 +64,12 @@
     "Acción por el clima."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "El ODS 8 es **«Trabajo decente y crecimiento económico»**; no existe un objetivo llamado «Crecimiento de la producción y reducción del paro». Fin de la pobreza es el ODS 1, Ciudades y comunidades sostenibles el ODS 11 y Acción por el clima el ODS 13. Truco: la Agenda 2030 habla de crecimiento «sostenible» y empleo «decente», nunca de producción a secas.",
    "tema_auto": true
   },
   {
    "id": "p05",
-   "tema": 4,
+   "tema": 6,
    "enunciado": "Indique la respuesta correcta sobre la vigencia que tienen los certificados electrónicos reconocidos incorporados al documento nacional de identidad, según la legislación vigente:",
    "opciones": [
     "No podrá ser superior a tres años.",
@@ -78,12 +78,12 @@
     "No podrá ser superior a seis años."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Según el **art. 12.1 del RD 1553/2005**, vigente en 2024, la vigencia de los certificados electrónicos reconocidos incorporados al DNI **no podrá ser superior a cinco años**, y al caducar se pueden renovar manteniendo la misma tarjeta mientras el DNI siga vigente. Los plazos de tres, cuatro y seis años no aparecen en la norma. Cinco años es también el máximo general que la Ley 6/2020 fija para los certificados cualificados.",
+   "nota_vigencia": "El RD 1553/2005 quedó derogado por el **Real Decreto 255/2025**, de 1 de abril, que regula el DNI. Su art. 11.3 fija que el plazo de validez de los certificados electrónicos del DNI **será de dos años**, así que hoy no se respondería ninguna de las opciones."
   },
   {
    "id": "p06",
-   "tema": 4,
+   "tema": 6,
    "enunciado": "La Ley 56/2007, de 28 de diciembre, de Medidas de Impulso de la Sociedad de la Información, ¿qué establece sobre la factura electrónica en el artículo 1?",
    "opciones": [
     "Los formatos estructurados de las facturas electrónicas permitirán su visualización y emisión en las distintas lenguas oficiales existentes y en inglés, con la finalidad de garantizar los derechos de los usuarios nacionales y extranjeros.",
@@ -92,8 +92,7 @@
     "La factura electrónica solo se utilizará en contratación, estando excluida de la justificación de ayudas y subvenciones."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El **art. 1 de la Ley 56/2007** regula el impulso de la factura electrónica y dice que sus formatos estructurados permitirán su visualización y emisión **en las distintas lenguas oficiales existentes**, para garantizar los derechos de los usuarios. No menciona el inglés: esa opción es una trampa por adición. Tampoco es verdad que la ley no hable de la factura electrónica, ni que esta quede limitada a la contratación."
   },
   {
    "id": "p07",
@@ -106,7 +105,7 @@
     "Accesibilidad, interoperabilidad y reutilización."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **art. 11 de la Ley 19/2013** establece que el Portal de la Transparencia se rige por los principios de **accesibilidad, interoperabilidad y reutilización**. Usabilidad, seguridad y flexibilidad no figuran en ese artículo. Truco: la información debe poder verse (accesibilidad), conectarse con otros sistemas (interoperabilidad) y volver a usarse (reutilización).",
    "tema_auto": true
   },
   {
@@ -120,7 +119,7 @@
     "La persona titular de la Dirección General para la Igualdad Real y Efectiva de las personas LGTBI."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "El **art. 45 de la Ley 4/2023** atribuye la competencia para tramitar la rectificación registral de la mención del sexo a **la persona encargada de la Oficina del Registro Civil en la que se hubiera presentado la solicitud**. Es un procedimiento registral, no administrativo, así que no lo resuelven ni los ministerios de Igualdad o Justicia ni la Dirección General LGTBI. Truco: el sexo consta en el Registro Civil, luego es el propio Registro quien lo rectifica.",
    "tema_auto": true
   },
   {
@@ -134,7 +133,7 @@
     "Toda conducta no deseada relacionada con la discapacidad de una persona, que tenga como objetivo o consecuencia atentar contra su dignidad o crear un entorno intimidatorio, hostil, degradante, humillante u ofensivo."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **art. 2.c) del RDL 1/2013** define la **discriminación directa** como la situación en que una persona con discapacidad es tratada de manera menos favorable que otra en situación análoga por razón de su discapacidad. Las demás definiciones son de otras figuras del mismo artículo: la discriminación por asociación (trato discriminatorio por la relación con otra persona con discapacidad), la discriminación indirecta (una norma o práctica aparentemente neutra que causa desventaja) y el acoso (conducta que atenta contra la dignidad). Truco: directa = «peor trato» explícito; indirecta = «aparentemente neutro».",
    "tema_auto": true
   },
   {
@@ -148,12 +147,12 @@
     "Cuando la notificación se practique en el domicilio del interesado, de no hallarse presente éste en el momento de entregarse la notificación, podrá hacerse cargo de ella cualquier persona mayor de dieciséis años que se encuentre en el domicilio y haga constar su identidad."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "El **art. 44 de la Ley 39/2015** dispone que, si los interesados son desconocidos, se ignora el lugar de notificación o esta no se ha podido practicar, la notificación se hará **mediante un anuncio publicado en el BOE**. Las demás fallan en un dato: el plazo para cursarla es de **diez días** (art. 40.2), no quince; las notificaciones se practican preferentemente **por medios electrónicos** (art. 41.1), no en papel; y en el domicilio puede recogerla cualquier persona **mayor de catorce años** (art. 42.2), no de dieciséis.",
    "tema_auto": true
   },
   {
    "id": "p11",
-   "tema": 8,
+   "tema": 10,
    "enunciado": "¿Qué es la taxonomía de Flynn?",
    "opciones": [
     "Una clasificación de patrones de diseño para objetos de software, centrados en su creación, relación e interacción.",
@@ -162,12 +161,11 @@
     "Una clasificación de los tipos de controladores (drivers) JDBC."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La **taxonomía de Flynn** (1966) clasifica las arquitecturas de computadores según el número de flujos de instrucciones y de datos: **SISD, SIMD, MISD y MIMD**. La clasificación de patrones en creacionales, estructurales y de comportamiento es la del GoF; los drivers JDBC se clasifican en tipos 1 a 4; y no hay una taxonomía de Flynn sobre la IA. Truco: S/M = Single/Multiple, I = Instruction, D = Data."
   },
   {
    "id": "p12",
-   "tema": 12,
+   "tema": 11,
    "enunciado": "Señale la respuesta correcta en relación con la digitalización de imágenes:",
    "opciones": [
     "La resolución del escáner se mide en puntos por pulgada (ppp) o píxeles por pulgada (ppi).",
@@ -176,8 +174,7 @@
     "Sólo los formatos TIFF y JPEG sirven para guardar una imagen digitalizada. El formato PDF se emplea para guardar imágenes de textos únicamente."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La resolución de un escáner se mide en **puntos por pulgada (ppp, dpi) o píxeles por pulgada (ppi)**. Más píxeles dan más resolución pero ficheros **más grandes**, no más pequeños; la profundidad de bit es el número de bits por píxel, que fija cuántos colores o tonos se pueden representar, no solo grises; y una imagen digitalizada se puede guardar en muchos formatos (PNG, TIFF, JPEG, PDF…)."
   },
   {
    "id": "p13",
@@ -190,12 +187,12 @@
     "Las operaciones de apilar (push) y desapilar (pop) se realizan en cualquier posición."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Una pila es una estructura **LIFO** (last-in, first-out) que **se puede implementar con un array** (con un índice de cima) o con una estructura dinámica, como una lista enlazada. FIFO es el principio de la cola, y en una pila push y pop actúan siempre sobre la cima, nunca en cualquier posición. Truco: piensa en una pila de platos, donde el último que pones es el primero que coges.",
    "tema_auto": true
   },
   {
    "id": "p14",
-   "tema": 16,
+   "tema": 12,
    "enunciado": "Señale la respuesta INCORRECTA acerca de los tipos abstractos de datos (TAD):",
    "opciones": [
     "Es una colección de propiedades y operaciones que se definen mediante una especificación que es independiente de cualquier representación.",
@@ -204,8 +201,7 @@
     "En JAVA, una estructura de datos (interface) debe implementar todas las operaciones definidas en su TAD (class)."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La afirmación falsa invierte los papeles: en Java el TAD se especifica con una **interface**, y es la **class** (la estructura de datos concreta) la que implementa todas sus operaciones. Lo demás es cierto: un TAD es una especificación de valores y operaciones independiente de su representación, sirve para encapsular y abstraer, y se puede especificar en lenguaje natural, en pseudocódigo o en un lenguaje formal. Truco: la interface dice «qué» y la clase dice «cómo»."
   },
   {
    "id": "p15",
@@ -218,7 +214,7 @@
     "Algunas de las variables más comunes son String, Int, Double y Bool."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Swift **no es exclusivo de iOS**: sirve para macOS, watchOS, tvOS y visionOS, y también para Linux, Windows y servidores. Las demás son ciertas: lo creó **Apple** (2014), es código abierto con **licencia Apache 2.0** (con excepción de runtime) y sus tipos básicos más comunes son String, Int, Double y Bool. Cuidado con los absolutos como «exclusivamente», que suelen delatar la opción falsa.",
    "tema_auto": true
   },
   {
@@ -232,12 +228,12 @@
     "No permite la reutilización de código, no pudiendo usar bibliotecas de otros desarrolladores."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Es falso que el NDK impida reutilizar código: una de sus ventajas es precisamente **reutilizar bibliotecas C/C++ propias o de terceros**. El Android NDK permite escribir partes de la app en C y C++, genera bibliotecas nativas (.so) por arquitectura (ABI) que se llaman desde Java/Kotlin mediante **JNI**, y se recomienda para código de cálculo intensivo, como juegos o simulaciones físicas.",
    "tema_auto": true
   },
   {
    "id": "p17",
-   "tema": 16,
+   "tema": 19,
    "enunciado": "¿Cuál es la última versión de .NET con soporte a largo plazo?",
    "opciones": [
     ".NET 4.5",
@@ -246,12 +242,12 @@
     ".NET 2000"
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "En 2024 la última versión con soporte a largo plazo (LTS) era **.NET 8**, publicada en noviembre de 2023 con tres años de soporte. .NET Core 3.1 también fue LTS, pero su soporte terminó en diciembre de 2022; .NET Framework 4.5 es la plataforma antigua, solo para Windows, y «.NET 2000» no existe. Truco: desde .NET 5 las versiones pares son LTS (3 años) y las impares STS.",
+   "nota_vigencia": "**.NET 10** (noviembre de 2025, con soporte hasta noviembre de 2028) es hoy la última LTS, y el soporte de .NET 8 terminó el 10 de noviembre de 2026. Hoy la respuesta sería .NET 10."
   },
   {
    "id": "p18",
-   "tema": 16,
+   "tema": 21,
    "enunciado": "¿Qué hará el siguiente código de JavaScript console.log(10 === ‘10’)?",
    "opciones": [
     "Imprimirá true.",
@@ -260,12 +256,11 @@
     "Imprimirá ‘1010’."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El operador **=== (igualdad estricta)** compara valor **y tipo** sin convertir, así que 10 (number) === '10' (string) da **false**. No da error, porque comparar tipos distintos es legal. Con == (igualdad débil) sí habría conversión y el resultado sería true. '1010' saldría de una concatenación con +, no de una comparación."
   },
   {
    "id": "p19",
-   "tema": 28,
+   "tema": 22,
    "enunciado": "¿Qué término hace referencia a la realización de un análisis estático del código fuente de una aplicación para identificar vulnerabilidades de seguridad antes de que se implemente en un entorno de producción real?",
    "opciones": [
     "SAST.",
@@ -274,8 +269,7 @@
     "SART."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**SAST (Static Application Security Testing)** analiza el código fuente sin ejecutarlo para detectar vulnerabilidades antes del despliegue. DAST (Dynamic AST) prueba la aplicación en ejecución, desde fuera y como caja negra; OWASP es una fundación que publica guías como el Top 10, no una técnica; y SART no es un término reconocido. Truco: Static = código parado; Dynamic = aplicación corriendo."
   },
   {
    "id": "p20",
@@ -288,12 +282,12 @@
     "Dominio."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En el MER extendido de Métrica v3, la **cardinalidad** de una entidad representa **su participación en la relación**: el número mínimo y máximo de ocurrencias con que puede relacionarse con una ocurrencia de la otra entidad, por ejemplo (0,n) o (1,1). El **tipo de correspondencia** es otra cosa: el número máximo de ocurrencias de cada entidad que intervienen en la relación (1:1, 1:N, N:M). Un atributo es una propiedad de una entidad y un dominio es el conjunto de valores que puede tomar.",
    "tema_auto": true
   },
   {
    "id": "p21",
-   "tema": 15,
+   "tema": 21,
    "enunciado": "En CSS3, ¿cuál de las siguientes unidades de medida NO es relativa?",
    "opciones": [
     "Q",
@@ -302,8 +296,7 @@
     "ch"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**Q** (cuarto de milímetro, 1Q = 0,25 mm) es una unidad **absoluta** de CSS, como cm, mm, in, pt, pc o px. Las otras son relativas: **vw** es un 1 % del ancho del viewport, **ex** la altura de la «x» de la fuente y **ch** el ancho del carácter «0». Truco: las unidades absolutas son las del mundo físico (cm, mm, Q, in, pt, pc) más px."
   },
   {
    "id": "p22",
@@ -316,7 +309,7 @@
     "Razor utiliza el @símbolo para realizar la transición de C# a HTML."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**Razor** es la **sintaxis de plantillas** (marcado) de ASP.NET Core que mezcla HTML y C# para generar vistas dinámicas (.cshtml, .razor). No es un lenguaje de programación, ya que el lenguaje es C#; se procesa en el servidor, no en el navegador (salvo cuando lo compila Blazor WebAssembly); y el símbolo @ sirve para pasar **de HTML a C#**, no al revés.",
    "tema_auto": true
   },
   {
@@ -330,12 +323,12 @@
     "Las mejores arquitecturas, requisitos y diseños emergen de equipos bien jerarquizados."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**«Aceptamos que los requisitos cambien, incluso en etapas tardías del desarrollo»** es el segundo de los 12 principios del Manifiesto Ágil. Los distractores deforman otros principios: negocio y desarrolladores trabajan juntos **a diario** (no en una reunión semanal), la medida principal de progreso es el **software funcionando** (no la documentación) y las mejores arquitecturas emergen de **equipos autoorganizados** (no jerarquizados).",
    "tema_auto": true
   },
   {
    "id": "p24",
-   "tema": 24,
+   "tema": 17,
    "enunciado": "Referente a los comandos DML del lenguaje SQL, señale la respuesta correcta:",
    "opciones": [
     "DML es acrónimo de Data Manager Language.",
@@ -344,8 +337,7 @@
     "El comando SELECT es un comando DML."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**SELECT es un comando DML** (Data **Manipulation** Language) junto a INSERT, UPDATE y DELETE; algunos autores lo separan como DQL, pero en la clasificación clásica es DML. Crear bases de datos o añadir y eliminar objetos corresponde al **DDL** (CREATE, ALTER, DROP), y **TRUNCATE también es DDL**. El acrónimo no es «Data Manager Language»."
   },
   {
    "id": "p25",
@@ -358,7 +350,7 @@
     "Un entero de cuatro bytes con una precisión de 10 dígitos."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "En IEEE 754 la **doble precisión (binary64)** usa **64 bits**: 1 de signo, 11 de exponente y 52 de mantisa, con unos 15-16 dígitos decimales significativos. 32 bits es la precisión simple (binary32); el decimal empaquetado es BCD y un entero de cuatro bytes no es coma flotante. Truco: simple = 4 bytes, doble = 8 bytes.",
    "tema_auto": true
   },
   {
@@ -372,7 +364,7 @@
     "Es una arquitectura no orientada a recursos."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "Una de las restricciones de REST es que la comunicación es **sin estado (stateless)**: cada petición lleva toda la información necesaria y el servidor no guarda el estado del cliente entre peticiones. REST está **orientado a recursos**, identificados por URI; su interfaz uniforme se apoya en **HTTP** y sus métodos, no en FTP; y no se basa en los identificadores de SOA, que es otro estilo, más propio de SOAP.",
    "tema_auto": true
   },
   {
@@ -386,7 +378,7 @@
     "Una relación en 3FN estará también en 2FN, pero no en 1FN."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Según Métrica v3, una entidad está en **2FN** si está en 1FN y todos los atributos que no forman parte de las claves candidatas tienen **dependencia funcional completa** respecto de ellas, es decir, de la clave entera y no de una parte. Depender de un atributo «a través de otro» es la **dependencia transitiva**, la que elimina la 3FN. La 1FN exige **no** tener grupos repetitivos, y las formas normales son acumulativas: toda relación en 3FN está también en 2FN y en 1FN.",
    "tema_auto": true
   },
   {
@@ -400,7 +392,7 @@
     "Una vez que el evento se ha ejecutado hay que eliminarlo manualmente."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Es falso que haya que borrar el evento a mano: por defecto (**ON COMPLETION NOT PRESERVE**), un evento puntual **se elimina automáticamente** después de ejecutarse, y solo se conserva si se indica ON COMPLETION PRESERVE. Lo demás describe bien los eventos de MySQL/MariaDB: son tareas programadas que se crean con **CREATE EVENT** y cuya temporalidad se fija en **ON SCHEDULE** (AT para una vez, EVERY para repetir).",
    "tema_auto": true
   },
   {
@@ -414,7 +406,7 @@
     "Muestra únicamente el modelado estático de un sistema software, que puede utilizarse en las diferentes fases de su ciclo de desarrollo."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "UML **no** modela solo la parte estática: tiene **diagramas estructurales** (clases, objetos, componentes, despliegue…) y **diagramas de comportamiento** (casos de uso, actividad, estados, secuencia…). Lo demás es cierto: es un lenguaje gráfico para especificar, visualizar, construir y documentar sistemas, independiente de metodologías y lenguajes, y basado en la orientación a objetos. Cuidado con el «únicamente».",
    "tema_auto": true
   },
   {
@@ -428,12 +420,12 @@
     "Se recomienda su uso cuando se quiere añadir responsabilidades a objetos concretos de manera dinámica y transparente y sin afectar a otros objetos."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "Añadir responsabilidades a objetos concretos de forma dinámica y transparente, sin afectar a otros, es la intención del patrón **Decorator**, no de Composite. **Composite** es un patrón **estructural** que compone objetos en **estructuras de árbol** (parte-todo) y deja tratar igual a los objetos simples y a los compuestos gracias a una interfaz común. Truco: Composite = árbol, carpeta con ficheros; Decorator = envoltorio que añade funciones.",
    "tema_auto": true
   },
   {
    "id": "p31",
-   "tema": 18,
+   "tema": 16,
    "enunciado": "Suponga el siguiente programa escrito en un lenguaje de programación estándar: integer x=0; while x<100 do (x=x+1; print x; x=x-1;)",
    "opciones": [
     "Este programa imprime los números enteros del 1 al 100.",
@@ -442,12 +434,11 @@
     "Este programa es un bucle infinito."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Dentro del bucle, x pasa de 0 a 1, se imprime 1 y vuelve a 0, así que al comprobar la condición **x siempre vale 0** y 0 < 100 nunca deja de cumplirse: es un **bucle infinito** que imprime «1» sin parar. Para imprimir del 1 al 100 bastaría con quitar la instrucción x=x-1. Truco: en un while, sigue el valor de la variable de control al final de cada vuelta."
   },
   {
    "id": "p32",
-   "tema": 23,
+   "tema": 22,
    "enunciado": "Uno de los expertos más reconocidos en usabilidad web, Jakob Nielsen, estableció 10 principios clave que todo diseñador web debe tener en cuenta. ¿Cuál de los siguientes NO es uno de ellos?",
    "opciones": [
     "Visibilidad del estado del sistema.",
@@ -456,12 +447,11 @@
     "Ayuda y documentación."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La heurística de Nielsen es **«reconocimiento antes que recuerdo»** (recognition rather than recall): hay que mostrar opciones y pistas para que el usuario no tenga que memorizar. Es la sexta de las diez, y la opción que pone «después» la invierte. Visibilidad del estado del sistema, Control y libertad del usuario, y Ayuda y documentación sí son heurísticas de Nielsen."
   },
   {
    "id": "p33",
-   "tema": 25,
+   "tema": 28,
    "enunciado": "¿Cuál de los siguientes ataques consiste en suplantar a una entidad legítima por medio de llamadas telefónicas?",
    "opciones": [
     "Pharming.",
@@ -470,8 +460,7 @@
     "Whaling."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El **vishing** (voice + phishing) es la suplantación de una entidad legítima **mediante llamadas telefónicas**. El **smishing** usa SMS; el **pharming** redirige a webs falsas manipulando el DNS o el fichero hosts; y el **whaling** es phishing dirigido a altos directivos (las «ballenas»). Truco: V de voz, S de SMS."
   },
   {
    "id": "p34",
@@ -484,12 +473,12 @@
     "Hold down."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "El **hold down** (temporizador de retención) es un mecanismo de los protocolos de vector distancia, como RIP: cuando una ruta se marca como inalcanzable, se arranca un temporizador durante el que se ignoran las actualizaciones peores, para que la red converja; si al expirar la ruta sigue siendo inalcanzable, se elimina. **Split horizon** no anuncia una ruta por la interfaz por la que se aprendió; **poison reverse** la anuncia con métrica infinita; y las **triggered updates** envían la actualización en el momento en que hay un cambio, sin esperar al ciclo periódico.",
    "tema_auto": true
   },
   {
    "id": "p35",
-   "tema": 13,
+   "tema": 30,
    "enunciado": "¿Qué puerto utiliza Telnet?",
    "opciones": [
     "23",
@@ -498,12 +487,11 @@
     "20"
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**Telnet usa el puerto TCP 23**. El 25 es SMTP, el 21 es el canal de control de FTP y el 20 el canal de datos de FTP en modo activo. Truco: los puertos 20, 21, 22, 23 y 25 van seguidos: FTP datos, FTP control, SSH, Telnet y SMTP."
   },
   {
    "id": "p36",
-   "tema": 13,
+   "tema": 29,
    "enunciado": "El fenómeno que se produce cuando la señal eléctrica transmitida por un par induce corrientes en otros pares vecinos, se conoce como:",
    "opciones": [
     "Atenuación.",
@@ -512,8 +500,7 @@
     "Desajuste de impedancia."
    ],
    "correcta": 2,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La **diafonía (crosstalk)** es la interferencia que la señal de un par induce en los pares vecinos del mismo cable; se mide como NEXT y FEXT y se reduce con el trenzado y el apantallamiento. La atenuación es la pérdida de potencia con la distancia; el jitter, la variación del retardo de los paquetes; y el desajuste de impedancia provoca reflexiones de la señal."
   },
   {
    "id": "p37",
@@ -526,12 +513,12 @@
     "tcpdump eth0"
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**ifconfig eth0** muestra la configuración de esa interfaz: IP, máscara, MAC, estado y contadores. dhclient eth0 solicita una IP por DHCP, tcpdump eth0 captura el tráfico y «ethtoolsshd» no existe, porque mezcla ethtool con sshd. Hoy ifconfig (paquete net-tools) está en desuso y el equivalente moderno es **ip addr show eth0**.",
    "tema_auto": true
   },
   {
    "id": "p38",
-   "tema": 13,
+   "tema": 10,
    "enunciado": "En sistemas operativos, cuando hablamos de Registro de Instrucción, ¿a qué nos estamos refiriendo?",
    "opciones": [
     "Al registro que contiene la última instrucción leída.",
@@ -540,8 +527,7 @@
     "Al registro que contiene el número de procesos que están corriendo en paralelo."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "El **registro de instrucción (IR)** guarda la **instrucción que se acaba de leer de memoria** (la que se está decodificando y ejecutando). La dirección de la **siguiente** instrucción la guarda el **contador de programa (PC)**, que es el distractor más típico. Los identificadores de proceso y el número de procesos los gestiona el sistema operativo, no un registro de la CPU."
   },
   {
    "id": "p39",
@@ -554,7 +540,7 @@
     "SMTP."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**SNTP (Simple Network Time Protocol)** sincroniza relojes y no tiene nada que ver con el correo, por eso es la respuesta. **IMAP y POP3** son los protocolos con los que el cliente accede al buzón, y **SMTP** es el de envío y transferencia de correo entre servidores. En sentido estricto SMTP tampoco es de «acceso», pero la pregunta busca el protocolo ajeno al correo. Truco: no confundas SNTP (tiempo) con SMTP (correo).",
    "tema_auto": true
   },
   {
@@ -568,12 +554,12 @@
     "Mejora la resistencia a los errores, permitiendo degradar una funcionalidad sin bloquear toda la aplicación."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "Una de las ventajas de los microservicios es justo lo contrario de un enfoque único: cada servicio puede usar **la tecnología más adecuada** (políglota). Sus beneficios reconocidos son el **escalado independiente y flexible**, la **integración y entrega continuas (CI/CD)** de cada servicio y la **resistencia a fallos**, porque si un servicio cae, la funcionalidad se degrada sin tumbar toda la aplicación.",
    "tema_auto": true
   },
   {
    "id": "p41",
-   "tema": 28,
+   "tema": 6,
    "enunciado": "Indique la respuesta correcta sobre el formato de firma digital CAdES:",
    "opciones": [
     "Es apropiado para firmar ficheros grandes, especialmente si la firma contiene el documento original porque optimiza el espacio de la información.",
@@ -582,8 +568,7 @@
     "Es el formato más adecuado cuando el documento original es un PDF."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**CAdES** (CMS Advanced Electronic Signatures) genera firmas binarias en formato CMS/PKCS#7, compactas, por lo que es **apropiado para ficheros grandes**, sobre todo cuando la firma incluye el documento original. El formato XML, poco adecuado para ficheros grandes, es **XAdES**; el adecuado para PDF es **PAdES**; y Microsoft Office usa firmas basadas en XMLDSig/XAdES, no CAdES. Truco: C = CMS (binario), X = XML, P = PDF."
   },
   {
    "id": "p42",
@@ -596,12 +581,12 @@
     "Sirve para comparar la energía consumida por el CPD con la cantidad de energía consumida por los equipos que no son TI (sistemas de refrigeración, etc.)."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "**PUE = energía total que consume el CPD / energía que consume el equipamiento TI**. Compara el total con lo que realmente usan los equipos TI: el ideal es 1,0 y cuanto más se acerca a 1, más eficiente es el CPD. No ordena equipos ni mide uno concreto, y no compara con el consumo no TI (refrigeración, etc.), aunque ese consumo es justo el que eleva la PUE por encima de 1. La métrica la definió The Green Grid y la recoge la ISO/IEC 30134-2.",
    "tema_auto": true
   },
   {
    "id": "p43",
-   "tema": 28,
+   "tema": 31,
    "enunciado": "Indique la respuesta correcta sobre el significado del conjunto de códigos de respuesta 3xx del protocolo HTTP:",
    "opciones": [
     "Peticiones correctas: esta clase de código indica que la petición fue recibida correctamente, entendida y aceptada.",
@@ -610,8 +595,7 @@
     "Redirecciones: el cliente tiene que tomar una acción adicional para completar la petición."
    ],
    "correcta": 3,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "Los códigos **3xx** de HTTP son **redirecciones**: el cliente debe hacer algo más para completar la petición, como seguir la cabecera Location (301 Moved Permanently, 302 Found, 304 Not Modified…). 2xx son peticiones correctas (200 OK), 4xx errores del cliente (404 Not Found) y 5xx errores del servidor (500, 503). Truco: 1 informativo, 2 éxito, 3 redirección, 4 «tú fallas», 5 «yo fallo»."
   },
   {
    "id": "p44",
@@ -624,12 +608,12 @@
     "La capa de transporte del modelo TCP/IP se corresponde con la capa de transporte del modelo OSI."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "La afirmación falsa es la de la capa de **acceso a red** de TCP/IP: no equivale a la capa de red de OSI, sino a las capas **física y de enlace de datos**. La capa de red de OSI equivale a la capa de **Internet** de TCP/IP (IP). Lo demás es cierto: las capas OSI de **sesión y presentación** quedan dentro de la capa de aplicación de TCP/IP, y las dos capas de transporte se corresponden.",
    "tema_auto": true
   },
   {
    "id": "p45",
-   "tema": 30,
+   "tema": 28,
    "enunciado": "La herramienta del CCN que proporciona visibilidad y control sobre la red es:",
    "opciones": [
     "CARMEN.",
@@ -638,12 +622,11 @@
     "OLVIDO."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**EMMA** es la herramienta del CCN-CERT para la **visibilidad y el control de la red**: inventario de los dispositivos conectados, control de acceso a la red (NAC), segmentación y detección de equipos no autorizados. **CARMEN** detecta amenazas persistentes avanzadas analizando el tráfico, **MONICA** gestiona eventos e información de seguridad (SIEM) y **OLVIDO** hace borrado seguro de soportes. Conviene memorizar el catálogo de herramientas del CCN (CARMEN, CLARA, EMMA, LUCÍA, MARTA, MicroCLAUDIA, OLVIDO, PILAR…)."
   },
   {
    "id": "p46",
-   "tema": 30,
+   "tema": 29,
    "enunciado": "La norma IEEE 802.11 se refiere a:",
    "opciones": [
     "Redes inalámbricas.",
@@ -652,12 +635,11 @@
     "Seguridad de red."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "**IEEE 802.11** es la familia de normas de **redes inalámbricas de área local (WLAN, Wi-Fi)**. Las redes de área metropolitana son la IEEE 802.16 (WiMAX) y la seguridad de red la cubren normas como la IEEE 802.1X o la 802.11i (seguridad dentro del propio Wi-Fi). Truco: 802.3 = Ethernet por cable; 802.11 = Wi-Fi."
   },
   {
    "id": "p47",
-   "tema": 30,
+   "tema": 25,
    "enunciado": "La regla 3-2-1 de las copias de seguridad consiste en:",
    "opciones": [
     "Conservar 3 copias de los datos, en 2 medios diferentes con 1 copia almacenada en un lugar externo a la organización.",
@@ -666,12 +648,11 @@
     "Conservar 3 copias de los datos, en 2 medios diferentes con 1 copia almacenada en un lugar interno a la organización."
    ],
    "correcta": 0,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La regla **3-2-1** consiste en tener **3 copias** de los datos (la original más dos copias de seguridad), en **2 soportes distintos** y con **1 copia fuera** de la organización (off-site). La clave son los soportes **diferentes**, para que un mismo fallo no destruya todas las copias, y la copia **externa**, para resistir un desastre local. Hoy se habla también de 3-2-1-1-0: una copia inmutable o desconectada (air-gapped) y cero errores en la verificación."
   },
   {
    "id": "p48",
-   "tema": 30,
+   "tema": 25,
    "enunciado": "Referente a la Infraestructura Convergente (CI), señale la respuesta correcta:",
    "opciones": [
     "Es una solución que requiere de una gestión compleja y poco optimizada de los recursos.",
@@ -680,8 +661,7 @@
     "Aumenta en gran medida los costos asociados con la energía, la refrigeración y el cableado en el centro de datos."
    ],
    "correcta": 1,
-   "explicacion": null,
-   "tema_auto": true
+   "explicacion": "La **Infraestructura Convergente (CI)** es una solución **definida por hardware** que integra cómputo, red, almacenamiento, gestión y software en un **paquete preconfigurado** que funciona como un único sistema. Sus ventajas son justo lo contrario de los distractores: gestión **simplificada**, despliegue y escalado más sencillos, y **ahorro** de energía, refrigeración y cableado. No la confundas con la **hiperconvergente (HCI)**, que es definida por software."
   },
   {
    "id": "p49",
@@ -694,7 +674,7 @@
     "En las redes clase C se permite direccionar 254 equipos como máximo."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Con máscara 255.255.255.192 (/26) cada subred tiene 64 direcciones, así que **192.168.123.71** está en la red **.64/26** (de .64 a .127) y **192.168.123.133** en la **.128/26** (de .128 a .191): son redes **distintas**, y por eso esa afirmación es la falsa. Las demás son ciertas: 172.16.52.63 es de **clase B** (primer octeto entre 128 y 191), la máscara por defecto de la clase A es **255.0.0.0** y una clase C admite **2^8 − 2 = 254** hosts. Truco: con /26, los saltos de red van de 64 en 64 (0, 64, 128, 192).",
    "tema_auto": true
   },
   {
@@ -708,7 +688,7 @@
     "Desarrollado en la RFC 2974, posibilita el anuncio de sesiones multimedia en la modalidad multicast."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "**RSVP (Resource ReSerVation Protocol), RFC 2205**, es el protocolo de señalización que **reserva recursos** a lo largo de la ruta para dar calidad de servicio en el modelo de **Servicios Integrados (IntServ)**. Las demás describen otros protocolos multimedia: **SDP** (RFC 4566, describe sesiones), **RTSP 2.0** (RFC 7826, controla la entrega de flujos en tiempo real) y **SAP** (RFC 2974, anuncia sesiones multicast).",
    "tema_auto": true
   },
   {
@@ -722,7 +702,7 @@
     "Las personas vinculadas al fallecido por razones familiares o de hecho, así como sus herederos podrán dirigirse a los prestadores de servicios de la sociedad de la información al objeto de acceder a dichos contenidos e impartirles las instrucciones que estimen oportunas sobre su utilización, destino o supresión."
    ],
    "correcta": 2,
-   "explicacion": null,
+   "explicacion": "La afirmación que no recoge la ley es la que dice que los representantes legales y el Ministerio Fiscal **no podrán** ejercer estas facultades: el **art. 96.1.c) LOPDGDD** dice lo contrario, que en caso de personas fallecidas **menores de edad** podrán ejercerlas **también** sus representantes legales o el Ministerio Fiscal, de oficio o a instancia de cualquier interesado. El resto sí está en el art. 96.1: familiares, personas vinculadas de hecho y herederos (letra a), el albacea o la persona designada por el fallecido (letra b) y quienes prestaban funciones de apoyo a personas con discapacidad (letra d). Truco: la opción falsa cambia «menores» por «mayores» y «podrán» por «no podrán».",
    "reserva": true,
    "tema_auto": true
   },
@@ -737,7 +717,7 @@
     "407 en octal."
    ],
    "correcta": 0,
-   "explicacion": null,
+   "explicacion": "450 = 256 + 128 + 64 + 2, que en binario es **111000010**. En octal 450 es **702** y en hexadecimal **1C2**; los distractores son otros números: 764 en octal y 1F4 en hexadecimal valen 500, y 407 en octal vale 263. Truco: para pasar de binario a octal agrupa de 3 en 3 bits (111 000 010 = 7 0 2), y para hexadecimal de 4 en 4 (1 1100 0010 = 1 C 2).",
    "reserva": true,
    "tema_auto": true
   },
@@ -752,7 +732,7 @@
     "La expresión “let immutable x = 1” es correcta."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "En F#, **let enlaza un nombre a un valor o a una función** (let x = 1, let f x = x + 1). sbyte es un entero de 8 bits **con signo**, porque el que no tiene signo es byte; los comentarios de varias líneas se escriben entre `(*` y `*)`, mientras que `//` es un comentario de una línea; y los valores son inmutables por defecto, así que para poder cambiarlos se escribe **let mutable**, no «let immutable».",
    "reserva": true,
    "tema_auto": true
   },
@@ -767,7 +747,7 @@
     "Un repositorio bare se suele usar para automatizar la copia de seguridad del repositorio local de trabajo."
    ],
    "correcta": 1,
-   "explicacion": null,
+   "explicacion": "Un **repositorio bare** (git init --bare) no tiene directorio de trabajo, solo el contenido de .git, y se usa como **repositorio central remoto** al que todos hacen push y pull. Los scripts que se lanzan ante ciertas acciones son los **hooks**; los repositorios bare sí existen; y no son un mecanismo de copia de seguridad del repositorio local. Truco: «bare» = desnudo, sin ficheros de trabajo, porque en él nadie edita.",
    "reserva": true,
    "tema_auto": true
   },
@@ -782,7 +762,7 @@
     "El último estándar de PoE activo es el IEEE 802.3at."
    ],
    "correcta": 3,
-   "explicacion": null,
+   "explicacion": "La afirmación falsa es la del último estándar: el más reciente de PoE activo es **IEEE 802.3bt** (2018, PoE++ o 4PPoE, hasta 60 W tipo 3 y 90-100 W tipo 4), no el 802.3at (PoE+, 2009, 30 W). Lo demás es cierto: PoE transmite energía y datos por el mismo cable Ethernet, y existe PoE **activo**, que negocia la potencia según la norma IEEE, y PoE **pasivo**, que no sigue ningún estándar IEEE. Truco: af (15,4 W) → at (30 W) → bt (60-90 W).",
    "reserva": true,
    "tema_auto": true
   }
