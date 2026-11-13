@@ -1,0 +1,170 @@
+{
+ "2": {
+  "titulo": "Tema 2. Cortes Generales, Tribunal Constitucional y Defensor del Pueblo",
+  "rev": 17,
+  "actualizado": "2026-11-14",
+  "caracteres": 49066
+ },
+ "3": {
+  "titulo": "Tema 3. El Gobierno",
+  "rev": 10,
+  "actualizado": "2026-11-14",
+  "caracteres": 39597
+ },
+ "5": {
+  "titulo": "Tema 5. Igualdad, violencia de género, LGTBI, discapacidad y dependencia",
+  "rev": 10,
+  "actualizado": "2026-11-14",
+  "caracteres": 33571
+ },
+ "6": {
+  "titulo": "Tema 6. Sociedad de la información, identidad y firma electrónica, DNIe y Agenda Digital",
+  "rev": 10,
+  "actualizado": "2026-11-14",
+  "caracteres": 32604
+ },
+ "7": {
+  "titulo": "Tema 7. Protección de datos personales y derechos digitales",
+  "rev": 12,
+  "actualizado": "2026-11-14",
+  "caracteres": 35521
+ },
+ "8": {
+  "titulo": "Tema 8. Acceso electrónico, gestión electrónica del procedimiento, ENS y ENI",
+  "rev": 12,
+  "actualizado": "2026-11-14",
+  "caracteres": 48944
+ },
+ "9": {
+  "titulo": "Tema 9. Instrumentos para el acceso electrónico a las Administraciones públicas",
+  "rev": 10,
+  "actualizado": "2026-11-14",
+  "caracteres": 38758
+ },
+ "13": {
+  "titulo": "Tema 13. Sistemas operativos",
+  "rev": 14,
+  "actualizado": "2026-11-14",
+  "caracteres": 62362
+ },
+ "14": {
+  "titulo": "Tema 14. Sistemas de gestión de bases de datos",
+  "rev": 12,
+  "actualizado": "2026-11-14",
+  "caracteres": 45761
+ },
+ "15": {
+  "titulo": "Tema 15. Modelado de datos y diseño de bases de datos",
+  "rev": 10,
+  "actualizado": "2026-11-14",
+  "caracteres": 46593
+ },
+ "16": {
+  "titulo": "Tema 16. Lenguajes de programación",
+  "rev": 12,
+  "actualizado": "2026-11-14",
+  "caracteres": 51694
+ },
+ "17": {
+  "titulo": "Tema 17. SQL, procedimientos almacenados y disparadores",
+  "rev": 10,
+  "actualizado": "2026-11-14",
+  "caracteres": 49421
+ },
+ "18": {
+  "titulo": "Tema 18. Programación orientada a objetos, patrones y UML",
+  "rev": 15,
+  "actualizado": "2026-11-14",
+  "caracteres": 52211
+ },
+ "19": {
+  "titulo": "Tema 19. Arquitectura Java EE/Jakarta EE y plataforma .NET",
+  "rev": 14,
+  "actualizado": "2026-11-14",
+  "caracteres": 58178
+ },
+ "20": {
+  "titulo": "Tema 20. Arquitectura cliente/servidor, multicapa y servicios web",
+  "rev": 11,
+  "actualizado": "2026-11-14",
+  "caracteres": 53465
+ },
+ "21": {
+  "titulo": "Tema 21. Aplicaciones web",
+  "rev": 11,
+  "actualizado": "2026-11-14",
+  "caracteres": 46799
+ },
+ "22": {
+  "titulo": "Tema 22. Accesibilidad, usabilidad y seguridad en el desarrollo",
+  "rev": 13,
+  "actualizado": "2026-11-14",
+  "caracteres": 48381
+ },
+ "23": {
+  "titulo": "Tema 23. Repositorios, metodologías, pruebas y control de versiones",
+  "rev": 17,
+  "actualizado": "2026-11-13",
+  "caracteres": 54976
+ },
+ "24": {
+  "titulo": "Tema 24. Administración del sistema operativo y software de base",
+  "rev": 10,
+  "actualizado": "2026-11-13",
+  "caracteres": 41530
+ },
+ "25": {
+  "titulo": "Tema 25. Bases de datos, almacenamiento, backup y virtualización",
+  "rev": 13,
+  "actualizado": "2026-11-13",
+  "caracteres": 42286
+ },
+ "26": {
+  "titulo": "Tema 26. Servidores de correo electrónico, contenedores y microservicios",
+  "rev": 13,
+  "actualizado": "2026-11-13",
+  "caracteres": 48980
+ },
+ "27": {
+  "titulo": "Tema 27. Administración de redes de área local",
+  "rev": 9,
+  "actualizado": "2026-11-13",
+  "caracteres": 41309
+ },
+ "28": {
+  "titulo": "Tema 28. Seguridad de los sistemas de información",
+  "rev": 11,
+  "actualizado": "2026-11-13",
+  "caracteres": 52588
+ },
+ "29": {
+  "titulo": "Tema 29. Comunicaciones y redes",
+  "rev": 10,
+  "actualizado": "2026-11-13",
+  "caracteres": 47006
+ },
+ "30": {
+  "titulo": "Tema 30. Modelos TCP/IP y OSI",
+  "rev": 14,
+  "actualizado": "2026-11-13",
+  "caracteres": 53214
+ },
+ "31": {
+  "titulo": "Tema 31. Internet, HTTP, HTTPS y SSL/TLS",
+  "rev": 12,
+  "actualizado": "2026-11-13",
+  "caracteres": 39869
+ },
+ "32": {
+  "titulo": "Tema 32. Seguridad en redes, perímetro, VPN y puesto de usuario",
+  "rev": 12,
+  "actualizado": "2026-11-13",
+  "caracteres": 48277
+ },
+ "33": {
+  "titulo": "Tema 33. Redes locales",
+  "rev": 15,
+  "actualizado": "2026-11-13",
+  "caracteres": 49107
+ }
+}

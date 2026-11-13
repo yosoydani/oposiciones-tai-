@@ -1,0 +1,293 @@
+<p><strong>Enunciado (Bloque III, tema 17):</strong> Lenguajes de interrogación de bases de datos. Estándar ANSI SQL. Procedimientos almacenados. Eventos y disparadores.</p>
+<p>Enunciado revisado con el Anexo V de la convocatoria (BOE-A-2025-26262). En el Anexo V figura como tema 3 del bloque III «Desarrollo de sistemas»; es el tema 17 en numeración correlativa (bloque I: 9 temas; bloque II: 5 temas).</p>
+<h2 id="1-lenguajes-de-interrogación-de-bases-de-datos-y-el-estándar-sql">1. Lenguajes de interrogación de bases de datos y el estándar SQL</h2>
+<p>Un <strong>lenguaje de interrogación</strong> (<em>query language</em>) permite consultar y manipular los datos de una BD. Clasificación:</p>
+<table><thead><tr><th>Tipo</th><th>Característica</th><th>Ejemplos</th></tr></thead><tbody><tr><td><strong>Formales</strong></td><td>Base matemática</td><td>Álgebra relacional (procedimental), cálculo relacional de tuplas y de dominios (declarativos)</td></tr><tr><td><strong>Comerciales relacionales</strong></td><td>Basados en los formales</td><td><strong>SQL</strong> (cálculo de tuplas + álgebra), <strong>QUEL</strong> (Ingres), <strong>QBE</strong> (<em>Query By Example</em>, IBM, cálculo de dominios; modelo de las consultas gráficas de Access)</td></tr><tr><td><strong>Lógicos / deductivos</strong></td><td>Reglas</td><td><strong>Datalog</strong></td></tr><tr><td><strong>Otros modelos</strong></td><td>No relacionales</td><td><strong>XQuery/XPath</strong> (XML), <strong>SPARQL</strong> (RDF, W3C), <strong>Cypher</strong> (Neo4j), <strong>GQL</strong> (grafos, <strong>ISO/IEC 39075:2024</strong>, publicada el 12-04-2024), MQL (MongoDB)</td></tr></tbody></table>
+<p>SQL es <strong>declarativo</strong> (se dice <em>qué</em> se quiere, no <em>cómo</em> obtenerlo: eso lo decide el <strong>optimizador</strong>), <strong>relacionalmente completo</strong> y no es un lenguaje de programación completo en su núcleo (las extensiones procedimentales lo son).</p>
+<p>Modos de uso de SQL: <strong>interactivo</strong> (consola), <strong>embebido</strong> en un lenguaje anfitrión (<em>Embedded SQL</em>, con precompilador: Pro*C, SQLJ), <strong>dinámico</strong> (sentencias construidas en tiempo de ejecución) y mediante <strong>API de llamadas</strong> (SQL/CLI, ODBC, JDBC).</p>
+<h3 id="11-historia-y-versiones-del-estándar">1.1. Historia y versiones del estándar</h3>
+<ul><li><p><strong>SEQUEL</strong> (<em>Structured English Query Language</em>): <strong>D. Chamberlin y R. Boyce</strong>, IBM, a mediados de los 70, para el prototipo <strong>System R</strong>. Por motivos de marca pasó a llamarse <strong>SQL</strong>.</p></li><li><p><strong>1979</strong>: Relational Software (hoy <strong>Oracle</strong>) lanza el primer SGBD comercial con SQL.</p></li><li><p><strong>1986</strong>: primer estándar <strong>ANSI X3.135-1986</strong>; ISO lo adopta en <strong>1987</strong> (ISO 9075). Hoy la norma es <strong>ISO/IEC 9075</strong>, que INCITS adopta en EE. UU. (de ahí el nombre popular «ANSI SQL»).</p></li></ul>
+<table><thead><tr><th>Versión</th><th>Novedades principales (dato de test)</th></tr></thead><tbody><tr><td><strong>SQL-86 / SQL-89</strong></td><td>Primer estándar; SQL-89 añade integridad referencial</td></tr><tr><td><strong>SQL-92</strong> (SQL2)</td><td>Gran revisión: <code>JOIN</code> explícitos, niveles de aislamiento, tipos fecha/hora, <code>CASE</code>, niveles de conformidad (<em>entry, intermediate, full</em>). En 1996 se añade <strong>SQL/PSM</strong> (procedimientos almacenados)</td></tr><tr><td><strong>SQL:1999</strong> (SQL3)</td><td><strong>Disparadores</strong> (<em>triggers</em>), <strong>consultas recursivas</strong> (<code>WITH RECURSIVE</code>), tipos definidos por el usuario y características <strong>objeto-relacionales</strong>, <code>BOOLEAN</code></td></tr><tr><td><strong>SQL:2003</strong></td><td><strong>Funciones de ventana</strong> (<code>OVER</code>), <strong><code>MERGE</code></strong>, secuencias, columnas <strong>identidad</strong>, <strong>SQL/XML</strong></td></tr><tr><td><strong>SQL:2006</strong></td><td>Amplía SQL/XML (XQuery)</td></tr><tr><td><strong>SQL:2008</strong></td><td><code>TRUNCATE</code>, disparadores <strong><code>INSTEAD OF</code></strong>, <code>FETCH FIRST n ROWS</code></td></tr><tr><td><strong>SQL:2011</strong></td><td><strong>Datos temporales</strong> (tablas versionadas por periodo)</td></tr><tr><td><strong>SQL:2016</strong></td><td><strong>JSON</strong> (funciones SQL/JSON), reconocimiento de patrones en filas (<code>MATCH_RECOGNIZE</code>), funciones de tabla polimórficas</td></tr><tr><td><strong>SQL:2019</strong></td><td>Parte 15: <strong>arrays multidimensionales</strong> (SQL/MDA)</td></tr><tr><td><strong>SQL:2023</strong></td><td><strong>Vigente</strong>. Nueva parte 16 <strong>SQL/PGQ</strong> (consultas sobre <strong>grafos de propiedades</strong>), <strong>tipo de dato <code>JSON</code></strong> con notación de punto simplificada, funciones <code>GREATEST</code>, <code>LEAST</code>, <code>LPAD</code>, <code>RPAD</code>, <code>LTRIM</code>, <code>RTRIM</code>, <code>ANY_VALUE</code></td></tr></tbody></table>
+<p>A fecha de este tema la edición <strong>vigente es ISO/IEC 9075:2023 (SQL:2023)</strong>, en <strong>11 partes</strong> (1 Framework, 2 Foundation, 3 CLI, 4 PSM, 9 MED, 10 OLB, 11 Schemata, 13 JRT, 14 XML, 15 MDA, 16 PGQ). La siguiente edición está en elaboración (borrador de comité ISO/IEC CD 9075-1, edición 7). Fuentes: <a href="https://blogs.oracle.com/sql/general-availability-of-the-sql2023-standard" target="_blank" rel="noopener">Oracle, publicación de SQL:2023</a>, <a href="https://www.iso.org/standard/92320.html" target="_blank" rel="noopener">ISO, CD 9075-1</a>, <a href="https://blog.ansi.org/sql-standard-iso-iec-9075-2023-ansi-x3-135/" target="_blank" rel="noopener">ANSI, historia de SQL</a>, <a href="https://webstore.iec.ch/publication/94107" target="_blank" rel="noopener">IEC, GQL</a>.</p>
+<blockquote><p>Ningún SGBD comercial implementa el estándar completo; cada uno tiene su <strong>dialecto</strong> (PL/SQL de Oracle, T-SQL de SQL Server, PL/pgSQL de PostgreSQL).</p></blockquote>
+<h2 id="2-sublenguajes-de-sql-y-tipos-de-datos">2. Sublenguajes de SQL y tipos de datos</h2>
+<table><thead><tr><th>Sublenguaje</th><th>Finalidad</th><th>Sentencias</th></tr></thead><tbody><tr><td><strong>DDL</strong> (<em>Data Definition Language</em>)</td><td>Definir estructuras (esquema)</td><td><code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>, <code>TRUNCATE</code><em>, <code>RENAME</code></em>, <code>COMMENT</code>*</td></tr><tr><td><strong>DML</strong> (<em>Data Manipulation Language</em>)</td><td>Consultar y modificar datos</td><td><code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>MERGE</code></td></tr><tr><td><strong>DCL</strong> (<em>Data Control Language</em>)</td><td>Permisos</td><td><code>GRANT</code>, <code>REVOKE</code></td></tr><tr><td><strong>TCL</strong> (<em>Transaction Control Language</em>)</td><td>Transacciones</td><td><code>COMMIT</code>, <code>ROLLBACK</code>, <code>SAVEPOINT</code>, <code>SET TRANSACTION</code>, <code>START TRANSACTION</code></td></tr></tbody></table>
+<p>* Según el producto. Algunos autores separan <code>SELECT</code> como <strong>DQL</strong> (<em>Data Query Language</em>).</p>
+<blockquote><p>Ojo: <code>TRUNCATE</code> borra todas las filas como <code>DELETE</code> sin <code>WHERE</code>, pero se considera <strong>DDL</strong>: no dispara triggers de fila, es más rápido, no admite <code>WHERE</code> y en Oracle hace <strong>COMMIT implícito</strong> (no se puede deshacer con <code>ROLLBACK</code>). En Oracle y MySQL <strong>toda sentencia DDL confirma implícitamente</strong> la transacción; PostgreSQL y SQL Server admiten DDL transaccional.</p></blockquote>
+<h3 id="21-tipos-de-datos-del-estándar">2.1. Tipos de datos del estándar</h3>
+<table><thead><tr><th>Categoría</th><th>Tipos</th></tr></thead><tbody><tr><td><strong>Numéricos exactos</strong></td><td><code>SMALLINT</code>, <code>INTEGER</code>/<code>INT</code>, <code>BIGINT</code>, <strong><code>NUMERIC(p,s)</code></strong>, <strong><code>DECIMAL(p,s)</code></strong> (p = dígitos totales, s = decimales)</td></tr><tr><td><strong>Numéricos aproximados</strong></td><td><code>REAL</code>, <code>DOUBLE PRECISION</code>, <code>FLOAT(p)</code></td></tr><tr><td><strong>Cadenas de caracteres</strong></td><td><strong><code>CHAR(n)</code></strong> (longitud <strong>fija</strong>, rellena con espacios), <strong><code>VARCHAR(n)</code></strong> (longitud <strong>variable</strong>), <code>CLOB</code> (objetos grandes de texto)</td></tr><tr><td><strong>Binarios</strong></td><td><code>BINARY</code>, <code>VARBINARY</code>, <code>BLOB</code></td></tr><tr><td><strong>Fecha y hora</strong></td><td><code>DATE</code>, <code>TIME</code>, <code>TIMESTAMP</code> (con o sin <code>WITH TIME ZONE</code>), <code>INTERVAL</code></td></tr><tr><td><strong>Lógico</strong></td><td><code>BOOLEAN</code> (TRUE, FALSE, UNKNOWN)</td></tr><tr><td><strong>Otros</strong></td><td><code>XML</code>, <code>JSON</code> (SQL:2023), <code>ARRAY</code>, <code>MULTISET</code>, <code>ROW</code>, tipos definidos por el usuario</td></tr></tbody></table>
+<p><code>NUMERIC(7,2)</code> admite valores hasta <strong>99999,99</strong>. En Oracle <code>VARCHAR2</code> y <code>NUMBER</code> son los tipos propios.</p>
+<h3 id="22-elementos-del-lenguaje">2.2. Elementos del lenguaje</h3>
+<ul><li><p><strong>No distingue mayúsculas</strong> en palabras clave e identificadores sin comillas; sí en los literales de cadena (según la intercalación o <em>collation</em>).</p></li><li><p>Literales de cadena entre <strong>comillas simples</strong> (<code>&#39;Madrid&#39;</code>); identificadores delimitados entre <strong>comillas dobles</strong> (<code>&quot;Nombre con espacios&quot;</code>).</p></li><li><p>Comentarios: <code>-- línea</code> y <code>/* bloque */</code>.</p></li><li><p>Las sentencias terminan en <code>;</code>.</p></li><li><p><strong>Esquema</strong> = conjunto de objetos (tablas, vistas, índices...) de un usuario o espacio de nombres; <strong>catálogo</strong> = conjunto de esquemas. Los metadatos se consultan en <code>INFORMATION_SCHEMA</code> (estándar) o en el diccionario del producto (<code>USER_TABLES</code> en Oracle).</p></li></ul>
+<h2 id="3-ddl-tablas-restricciones-índices-y-vistas">3. DDL: tablas, restricciones, índices y vistas</h2>
+<p>Esquema de ejemplo usado en todo el tema:</p>
+<pre><code class="language-sql">CREATE TABLE departamento (
+  cod_dpto  INTEGER      PRIMARY KEY,
+  nombre    VARCHAR(50)  NOT NULL UNIQUE,
+  ciudad    VARCHAR(40)
+);
+
+CREATE TABLE empleado (
+  dni       CHAR(9)       PRIMARY KEY,
+  nombre    VARCHAR(60)   NOT NULL,
+  salario   NUMERIC(8,2)  DEFAULT 1200 CHECK (salario &gt; 0),
+  fecha_alta DATE         NOT NULL,
+  cod_dpto  INTEGER,
+  jefe      CHAR(9),
+  CONSTRAINT fk_emp_dpto FOREIGN KEY (cod_dpto)
+    REFERENCES departamento (cod_dpto)
+    ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT fk_emp_jefe FOREIGN KEY (jefe) REFERENCES empleado (dni)
+);</code></pre>
+<h3 id="31-restricciones-constraints">3.1. Restricciones (constraints)</h3>
+<table><thead><tr><th>Restricción</th><th>Efecto</th><th>Nulos</th></tr></thead><tbody><tr><td><code>NOT NULL</code></td><td>Obliga a dar valor</td><td>No admite</td></tr><tr><td><code>UNIQUE</code></td><td>Valores no repetidos (clave alternativa)</td><td>Admite (el estándar no considera iguales dos nulos)</td></tr><tr><td><code>PRIMARY KEY</code></td><td>= <code>UNIQUE</code> + <code>NOT NULL</code>; <strong>una por tabla</strong></td><td>No admite</td></tr><tr><td><code>FOREIGN KEY ... REFERENCES</code></td><td>Integridad referencial</td><td>Admite (salvo <code>NOT NULL</code>)</td></tr><tr><td><code>CHECK (condición)</code></td><td>Condición de dominio; se viola solo si la condición es <strong>FALSA</strong> (DESCONOCIDO la cumple)</td><td>—</td></tr><tr><td><code>DEFAULT valor</code></td><td>Valor por defecto (no es restricción propiamente)</td><td>—</td></tr></tbody></table>
+<ul><li><p><strong>De columna</strong> (junto a la columna) o <strong>de tabla</strong> (al final; obligatorio para claves compuestas).</p></li><li><p>Se pueden nombrar con <code>CONSTRAINT nombre</code> y declarar <strong>diferibles</strong> (<code>DEFERRABLE INITIALLY DEFERRED</code>: se comprueban al hacer <code>COMMIT</code>).</p></li><li><p><strong>Aserción</strong> (<code>CREATE ASSERTION</code>): restricción sobre varias tablas; está en el estándar pero casi ningún SGBD la implementa (se usan triggers).</p></li><li><p><strong>Dominio</strong> (<code>CREATE DOMAIN</code>): tipo con restricciones reutilizable (PostgreSQL lo soporta).</p></li></ul>
+<h3 id="32-alter-y-drop">3.2. ALTER y DROP</h3>
+<pre><code class="language-sql">ALTER TABLE empleado ADD email VARCHAR(100);
+ALTER TABLE empleado DROP COLUMN email;
+ALTER TABLE empleado ADD CONSTRAINT ck_alta CHECK (fecha_alta &gt;= DATE &#39;2000-01-01&#39;);
+ALTER TABLE empleado DROP CONSTRAINT ck_alta;
+
+DROP TABLE empleado CASCADE;   -- elimina también objetos dependientes (vistas, FK)
+DROP TABLE empleado RESTRICT;  -- falla si hay dependencias</code></pre>
+<h3 id="33-índices">3.3. Índices</h3>
+<p>Estructura auxiliar que acelera las búsquedas a costa de espacio y de ralentizar <code>INSERT</code>/<code>UPDATE</code>/<code>DELETE</code>. <strong>No forman parte del estándar SQL</strong> (pertenecen al nivel físico), aunque todos los SGBD los admiten.</p>
+<pre><code class="language-sql">CREATE INDEX idx_emp_nombre ON empleado (nombre);
+CREATE UNIQUE INDEX idx_dpto_nombre ON departamento (nombre);
+DROP INDEX idx_emp_nombre;</code></pre>
+<table><thead><tr><th>Tipo</th><th>Uso</th></tr></thead><tbody><tr><td><strong>Árbol B / B+</strong></td><td>El más habitual; igualdades y <strong>rangos</strong>, ordenación</td></tr><tr><td><strong>Hash</strong></td><td>Solo <strong>igualdades</strong></td></tr><tr><td><strong>Bitmap</strong></td><td>Columnas con <strong>pocos valores distintos</strong> (sexo, provincia); <em>data warehouse</em></td></tr><tr><td><strong>Agrupado</strong> (<em>clustered</em>)</td><td>Ordena físicamente la tabla; <strong>solo uno por tabla</strong> (SQL Server)</td></tr><tr><td><strong>Compuesto</strong></td><td>Varias columnas; sirve para búsquedas por el <strong>prefijo</strong> izquierdo</td></tr></tbody></table>
+<p>Los SGBD crean automáticamente un índice para <code>PRIMARY KEY</code> y <code>UNIQUE</code>.</p>
+<h3 id="34-vistas">3.4. Vistas</h3>
+<p>Una <strong>vista</strong> es una <strong>tabla virtual</strong> definida por una consulta; no almacena datos (salvo las <strong>materializadas</strong>). Sirven para <strong>seguridad</strong> (ocultar columnas o filas), <strong>simplificar</strong> consultas e <strong>independencia lógica</strong>.</p>
+<pre><code class="language-sql">CREATE VIEW emp_madrid AS
+  SELECT e.dni, e.nombre, e.salario
+  FROM empleado e JOIN departamento d ON e.cod_dpto = d.cod_dpto
+  WHERE d.ciudad = &#39;Madrid&#39;
+  WITH CHECK OPTION;</code></pre>
+<ul><li><p><strong>Actualizable</strong> si, en general, se basa en <strong>una sola tabla</strong>, sin <code>DISTINCT</code>, <code>GROUP BY</code>, agregados ni operaciones de conjuntos, e incluye las columnas obligatorias. Para vistas no actualizables: triggers <strong><code>INSTEAD OF</code></strong>.</p></li><li><p><strong><code>WITH CHECK OPTION</code></strong>: impide insertar o modificar filas que luego <strong>no serían visibles</strong> a través de la vista.</p></li><li><p><strong>Vista materializada</strong> (Oracle, PostgreSQL): guarda físicamente el resultado y se <strong>refresca</strong> periódicamente; no es estándar SQL.</p></li></ul>
+<h3 id="35-otros-objetos">3.5. Otros objetos</h3>
+<ul><li><p><strong>Secuencias</strong> (<code>CREATE SEQUENCE s START WITH 1 INCREMENT BY 1</code>; <code>NEXT VALUE FOR s</code>) y columnas <strong>identidad</strong> (<code>GENERATED ALWAYS AS IDENTITY</code>), ambas desde SQL:2003.</p></li><li><p><strong>Sinónimos</strong> (Oracle), <strong>esquemas</strong> (<code>CREATE SCHEMA</code>), <strong>tablas temporales</strong> (<code>CREATE GLOBAL TEMPORARY TABLE</code>).</p></li></ul>
+<h2 id="4-dml-consultas-y-modificación-de-datos">4. DML: consultas y modificación de datos</h2>
+<h3 id="41-estructura-de-select-y-orden-lógico-de-evaluación">4.1. Estructura de SELECT y orden lógico de evaluación</h3>
+<pre><code class="language-sql">SELECT   [DISTINCT] columnas, expresiones, agregados   -- 5
+FROM     tablas / JOIN                                 -- 1
+WHERE    condición sobre filas                         -- 2
+GROUP BY columnas de agrupación                        -- 3
+HAVING   condición sobre grupos                        -- 4
+ORDER BY columnas [ASC | DESC]                         -- 6
+OFFSET n ROWS FETCH FIRST m ROWS ONLY;                 -- 7</code></pre>
+<p>Orden lógico: <strong>FROM → WHERE → GROUP BY → HAVING → SELECT → DISTINCT → ORDER BY → OFFSET/FETCH</strong>. Consecuencias de test:</p>
+<ul><li><p>En <code>WHERE</code> <strong>no</strong> se pueden usar funciones de agregado (se usa <code>HAVING</code>).</p></li><li><p>En <code>WHERE</code> no se pueden usar los <strong>alias</strong> del <code>SELECT</code>; en <code>ORDER BY</code> sí.</p></li><li><p>Con <code>GROUP BY</code>, en el <code>SELECT</code> solo pueden aparecer columnas de agrupación y agregados.</p></li><li><p>Limitar filas: <code>FETCH FIRST n ROWS ONLY</code> (estándar, SQL:2008); <code>LIMIT</code> (MySQL, PostgreSQL); <code>TOP</code> (SQL Server); <code>ROWNUM</code> (Oracle antiguo).</p></li></ul>
+<h3 id="42-predicados-del-where">4.2. Predicados del WHERE</h3>
+<table><thead><tr><th>Predicado</th><th>Ejemplo</th><th>Nota</th></tr></thead><tbody><tr><td>Comparación</td><td><code>salario &gt;= 2000</code>, <code>ciudad &lt;&gt; &#39;Madrid&#39;</code></td><td><code>&lt;&gt;</code> es el distinto estándar</td></tr><tr><td><code>BETWEEN</code></td><td><code>salario BETWEEN 1500 AND 2000</code></td><td><strong>Incluye</strong> los extremos</td></tr><tr><td><code>IN</code></td><td><code>cod_dpto IN (10, 20, 30)</code></td><td>Lista o subconsulta</td></tr><tr><td><code>LIKE</code></td><td><code>nombre LIKE &#39;A%&#39;</code>, <code>dni LIKE &#39;_____123_&#39;</code></td><td><code>%</code> = cualquier cadena (incluso vacía); <code>_</code> = <strong>un</strong> carácter</td></tr><tr><td><code>IS [NOT] NULL</code></td><td><code>jefe IS NULL</code></td><td><code>= NULL</code> nunca es verdadero</td></tr><tr><td><code>EXISTS</code></td><td><code>EXISTS (subconsulta)</code></td><td>Verdadero si la subconsulta devuelve alguna fila</td></tr><tr><td>Lógicos</td><td><code>AND</code>, <code>OR</code>, <code>NOT</code></td><td>Precedencia: NOT &gt; AND &gt; OR</td></tr></tbody></table>
+<h3 id="43-funciones-de-agregado-y-agrupación">4.3. Funciones de agregado y agrupación</h3>
+<table><thead><tr><th>Función</th><th>Nulos</th></tr></thead><tbody><tr><td><strong><code>COUNT(*)</code></strong></td><td>Cuenta <strong>todas</strong> las filas, incluidas las que tienen nulos</td></tr><tr><td><code>COUNT(col)</code></td><td>Cuenta los valores <strong>no nulos</strong> de col</td></tr><tr><td><code>COUNT(DISTINCT col)</code></td><td>Valores distintos no nulos</td></tr><tr><td><code>SUM</code>, <code>AVG</code>, <code>MIN</code>, <code>MAX</code></td><td><strong>Ignoran los nulos</strong>; sobre un conjunto vacío devuelven NULL (COUNT devuelve 0)</td></tr></tbody></table>
+<pre><code class="language-sql">-- Departamentos con más de 5 empleados y su salario medio
+SELECT cod_dpto, COUNT(*) AS num_emp, AVG(salario) AS media
+FROM empleado
+WHERE fecha_alta &gt;= DATE &#39;2020-01-01&#39;
+GROUP BY cod_dpto
+HAVING COUNT(*) &gt; 5
+ORDER BY media DESC;</code></pre>
+<p>Extensiones: <code>GROUP BY ROLLUP (a, b)</code> (subtotales jerárquicos), <code>CUBE</code> (todas las combinaciones), <code>GROUPING SETS</code>.</p>
+<h3 id="44-combinaciones-join">4.4. Combinaciones (JOIN)</h3>
+<table><thead><tr><th>JOIN</th><th>Devuelve</th></tr></thead><tbody><tr><td><strong><code>[INNER] JOIN ... ON</code></strong></td><td>Solo filas con pareja en ambas tablas</td></tr><tr><td><strong><code>LEFT [OUTER] JOIN</code></strong></td><td>Todas las de la <strong>izquierda</strong> + las coincidentes (nulos si no hay pareja)</td></tr><tr><td><strong><code>RIGHT [OUTER] JOIN</code></strong></td><td>Todas las de la <strong>derecha</strong> + las coincidentes</td></tr><tr><td><strong><code>FULL [OUTER] JOIN</code></strong></td><td>Todas las de ambas tablas</td></tr><tr><td><strong><code>CROSS JOIN</code></strong></td><td>Producto cartesiano (n × m filas)</td></tr><tr><td><strong><code>NATURAL JOIN</code></strong></td><td>Igualdad por <strong>columnas del mismo nombre</strong></td></tr><tr><td><code>JOIN ... USING (col)</code></td><td>Igualdad por las columnas indicadas</td></tr><tr><td><strong>Autocombinación</strong> (<em>self join</em>)</td><td>Una tabla consigo misma con alias</td></tr></tbody></table>
+<pre><code class="language-sql">-- Empleados con el nombre de su departamento (incluidos los que no tienen)
+SELECT e.nombre, d.nombre AS dpto
+FROM empleado e LEFT JOIN departamento d ON e.cod_dpto = d.cod_dpto;
+
+-- Empleado y nombre de su jefe (self join)
+SELECT e.nombre, j.nombre AS jefe
+FROM empleado e JOIN empleado j ON e.jefe = j.dni;
+
+-- Departamentos sin empleados (anti-join)
+SELECT d.nombre
+FROM departamento d LEFT JOIN empleado e ON e.cod_dpto = d.cod_dpto
+WHERE e.dni IS NULL;</code></pre>
+<p>Sintaxis antigua (SQL-89): <code>FROM empleado e, departamento d WHERE e.cod_dpto = d.cod_dpto</code>; <code>(+)</code> era la notación propia de Oracle para el <em>outer join</em>.</p>
+<h3 id="45-subconsultas">4.5. Subconsultas</h3>
+<table><thead><tr><th>Tipo</th><th>Ejemplo</th></tr></thead><tbody><tr><td><strong>Escalar</strong> (un valor)</td><td><code>WHERE salario &gt; (SELECT AVG(salario) FROM empleado)</code></td></tr><tr><td><strong>De lista</strong> con <code>IN</code>, <code>ANY</code>/<code>SOME</code>, <code>ALL</code></td><td><code>WHERE salario &gt; ALL (SELECT salario FROM empleado WHERE cod_dpto = 10)</code></td></tr><tr><td><strong>Correlacionada</strong> (usa columnas de la consulta externa; se evalúa por cada fila)</td><td>ver abajo</td></tr><tr><td><strong>En el FROM</strong> (tabla derivada)</td><td><code>FROM (SELECT ...) t</code></td></tr><tr><td><strong>CTE</strong> (<code>WITH</code>) y recursiva (<code>WITH RECURSIVE</code>, SQL:1999)</td><td>Jerarquías (organigramas)</td></tr></tbody></table>
+<pre><code class="language-sql">-- Empleados que ganan más que la media de SU departamento (correlacionada)
+SELECT e.nombre, e.salario
+FROM empleado e
+WHERE e.salario &gt; (SELECT AVG(x.salario)
+                   FROM empleado x
+                   WHERE x.cod_dpto = e.cod_dpto);
+
+-- Departamentos con al menos un empleado
+SELECT d.nombre FROM departamento d
+WHERE EXISTS (SELECT 1 FROM empleado e WHERE e.cod_dpto = d.cod_dpto);</code></pre>
+<ul><li><p><code>= ANY</code> equivale a <code>IN</code>; <code>&lt;&gt; ALL</code> equivale a <code>NOT IN</code>.</p></li><li><p><code>&gt; ALL</code> (conjunto vacío) es <strong>verdadero</strong>; <code>&gt; ANY</code> (conjunto vacío) es <strong>falso</strong>.</p></li><li><p><strong>Trampa clásica</strong>: <code>NOT IN (subconsulta)</code> cuando la subconsulta devuelve algún <strong>NULL</strong> no devuelve <strong>ninguna fila</strong> (la comparación da DESCONOCIDO). <code>NOT EXISTS</code> no tiene ese problema.</p></li></ul>
+<h3 id="46-operadores-de-conjuntos">4.6. Operadores de conjuntos</h3>
+<table><thead><tr><th>Operador</th><th>Resultado</th><th>Duplicados</th></tr></thead><tbody><tr><td><code>UNION</code></td><td>Filas de una u otra consulta</td><td><strong>Elimina</strong></td></tr><tr><td><code>UNION ALL</code></td><td>Igual, sin eliminar duplicados (más rápido)</td><td><strong>Mantiene</strong></td></tr><tr><td><code>INTERSECT</code></td><td>Filas comunes</td><td>Elimina</td></tr><tr><td><code>EXCEPT</code> (<code>MINUS</code> en Oracle)</td><td>Filas de la primera que no están en la segunda</td><td>Elimina</td></tr></tbody></table>
+<p>Las consultas deben tener el <strong>mismo número de columnas</strong> con tipos compatibles; <code>ORDER BY</code> solo al final.</p>
+<h3 id="47-funciones-de-ventana-sql2003">4.7. Funciones de ventana (SQL:2003)</h3>
+<pre><code class="language-sql">SELECT nombre, cod_dpto, salario,
+       RANK() OVER (PARTITION BY cod_dpto ORDER BY salario DESC) AS puesto,
+       SUM(salario) OVER (PARTITION BY cod_dpto) AS total_dpto
+FROM empleado;</code></pre>
+<p>A diferencia de <code>GROUP BY</code>, <strong>no agrupan filas</strong>: cada fila conserva su detalle. Funciones: <code>ROW_NUMBER</code>, <code>RANK</code> (deja huecos tras empates), <code>DENSE_RANK</code> (sin huecos), <code>LAG</code>, <code>LEAD</code>, agregados con <code>OVER</code>.</p>
+<p>Otras funciones frecuentes: <code>CASE WHEN ... THEN ... ELSE ... END</code>, <code>COALESCE(a, b, ...)</code> (primer valor no nulo), <code>NULLIF(a, b)</code>, <code>CAST(x AS tipo)</code>, <code>UPPER</code>, <code>LOWER</code>, <code>TRIM</code>, <code>SUBSTRING</code>, <code>CHAR_LENGTH</code>, <code>||</code> (concatenación estándar), <code>CURRENT_DATE</code>, <code>EXTRACT(YEAR FROM fecha)</code>.</p>
+<h3 id="48-insert-update-delete-y-merge">4.8. INSERT, UPDATE, DELETE y MERGE</h3>
+<pre><code class="language-sql">INSERT INTO departamento (cod_dpto, nombre, ciudad) VALUES (10, &#39;Informática&#39;, &#39;Madrid&#39;);
+INSERT INTO departamento VALUES (20, &#39;RR. HH.&#39;, &#39;Sevilla&#39;), (30, &#39;Registro&#39;, NULL);
+INSERT INTO historico (dni, salario) SELECT dni, salario FROM empleado;  -- desde consulta
+
+UPDATE empleado SET salario = salario * 1.02 WHERE cod_dpto = 10;
+
+DELETE FROM empleado WHERE fecha_alta &lt; DATE &#39;2000-01-01&#39;;
+-- Sin WHERE, UPDATE y DELETE afectan a TODAS las filas
+
+MERGE INTO empleado t                     -- &quot;upsert&quot; (SQL:2003)
+USING nuevos s ON (t.dni = s.dni)
+WHEN MATCHED THEN UPDATE SET salario = s.salario
+WHEN NOT MATCHED THEN INSERT (dni, nombre, salario, fecha_alta)
+                      VALUES (s.dni, s.nombre, s.salario, CURRENT_DATE);</code></pre>
+<h2 id="5-dcl-y-tcl-seguridad-transacciones-y-concurrencia">5. DCL y TCL: seguridad, transacciones y concurrencia</h2>
+<h3 id="51-privilegios-grant-y-revoke">5.1. Privilegios: GRANT y REVOKE</h3>
+<pre><code class="language-sql">GRANT SELECT, INSERT ON empleado TO usuario1;
+GRANT UPDATE (salario) ON empleado TO rrhh;            -- privilegio sobre columna
+GRANT SELECT ON emp_madrid TO PUBLIC;                  -- a todos los usuarios
+GRANT SELECT ON empleado TO usuario2 WITH GRANT OPTION; -- puede concederlo a otros
+
+CREATE ROLE consulta;
+GRANT SELECT ON departamento TO consulta;
+GRANT consulta TO usuario3;
+
+REVOKE INSERT ON empleado FROM usuario1;
+REVOKE SELECT ON empleado FROM usuario2 CASCADE;       -- revoca también lo que concedió</code></pre>
+<ul><li><p>Privilegios sobre objetos: <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>REFERENCES</code>, <code>USAGE</code>, <code>TRIGGER</code>, <code>EXECUTE</code> (rutinas), o <code>ALL PRIVILEGES</code>.</p></li><li><p><strong>Roles</strong>: agrupan privilegios para simplificar la administración.</p></li><li><p><strong><code>WITH GRANT OPTION</code></strong> permite propagar el privilegio; <strong><code>WITH ADMIN OPTION</code></strong> (Oracle) es su equivalente para privilegios de sistema y roles.</p></li><li><p>Las <strong>vistas</strong> completan la seguridad limitando filas y columnas visibles.</p></li></ul>
+<h3 id="52-transacciones-y-propiedades-acid">5.2. Transacciones y propiedades ACID</h3>
+<p>Una <strong>transacción</strong> es una unidad lógica de trabajo: un conjunto de operaciones que se ejecutan <strong>todas o ninguna</strong>.</p>
+<table><thead><tr><th>Propiedad</th><th>Significado</th><th>Quién la garantiza</th></tr></thead><tbody><tr><td><strong>Atomicidad</strong></td><td>Todo o nada</td><td>Gestor de recuperación (registro de <em>log</em>, <em>undo</em>)</td></tr><tr><td><strong>Consistencia</strong></td><td>Lleva la BD de un estado válido a otro válido</td><td>Restricciones de integridad + programador</td></tr><tr><td><strong>Aislamiento</strong> (<em>Isolation</em>)</td><td>Las transacciones concurrentes no se interfieren</td><td>Control de concurrencia (bloqueos, MVCC)</td></tr><tr><td><strong>Durabilidad</strong></td><td>Lo confirmado persiste aunque falle el sistema</td><td>Gestor de recuperación (<em>redo</em>, <em>log</em> en disco)</td></tr></tbody></table>
+<pre><code class="language-sql">START TRANSACTION;                 -- BEGIN en PostgreSQL/SQL Server; implícita en Oracle
+UPDATE cuenta SET saldo = saldo - 100 WHERE id = 1;
+SAVEPOINT tras_cargo;
+UPDATE cuenta SET saldo = saldo + 100 WHERE id = 2;
+-- ROLLBACK TO SAVEPOINT tras_cargo;  -- deshace solo hasta el punto de salvaguarda
+COMMIT;                            -- confirma; ROLLBACK desharía todo</code></pre>
+<ul><li><p><strong>Autocommit</strong>: muchos clientes confirman cada sentencia automáticamente.</p></li><li><p>Estados de una transacción: activa → parcialmente confirmada → <strong>confirmada</strong>; o fallida → <strong>abortada</strong>.</p></li></ul>
+<h3 id="53-problemas-de-concurrencia-y-niveles-de-aislamiento">5.3. Problemas de concurrencia y niveles de aislamiento</h3>
+<table><thead><tr><th>Fenómeno</th><th>Descripción</th></tr></thead><tbody><tr><td><strong>Lectura sucia</strong> (<em>dirty read</em>)</td><td>Se lee un dato modificado por otra transacción <strong>aún no confirmada</strong></td></tr><tr><td><strong>Lectura no repetible</strong> (<em>non-repeatable read</em>)</td><td>Releer la <strong>misma fila</strong> da otro valor porque otra transacción la modificó y confirmó</td></tr><tr><td><strong>Fantasma</strong> (<em>phantom</em>)</td><td>Repetir una consulta con condición devuelve <strong>filas nuevas</strong> insertadas por otra transacción</td></tr><tr><td><em>Actualización perdida</em> (<em>lost update</em>)</td><td>Dos transacciones actualizan el mismo dato y una sobrescribe a la otra</td></tr></tbody></table>
+<p><strong>Niveles del estándar</strong> (SQL-92), de menor a mayor aislamiento:</p>
+<table><thead><tr><th>Nivel</th><th>Lectura sucia</th><th>No repetible</th><th>Fantasma</th></tr></thead><tbody><tr><td><code>READ UNCOMMITTED</code></td><td>Posible</td><td>Posible</td><td>Posible</td></tr><tr><td><code>READ COMMITTED</code></td><td><strong>Evita</strong></td><td>Posible</td><td>Posible</td></tr><tr><td><code>REPEATABLE READ</code></td><td>Evita</td><td><strong>Evita</strong></td><td>Posible</td></tr><tr><td><code>SERIALIZABLE</code></td><td>Evita</td><td>Evita</td><td><strong>Evita</strong></td></tr></tbody></table>
+<pre><code class="language-sql">SET TRANSACTION ISOLATION LEVEL READ COMMITTED;</code></pre>
+<ul><li><p>El nivel <strong>por defecto en el estándar</strong> es <strong><code>SERIALIZABLE</code></strong>. En la práctica: <strong>Oracle, PostgreSQL y SQL Server</strong> usan por defecto <strong><code>READ COMMITTED</code></strong>; <strong>MySQL (InnoDB)</strong>, <strong><code>REPEATABLE READ</code></strong>.</p></li><li><p>A más aislamiento, menos concurrencia y más bloqueos.</p></li><li><p><strong>Mecanismos</strong>: <strong>bloqueos</strong> (compartidos/lectura S y exclusivos/escritura X; <strong>bloqueo en dos fases, 2PL</strong>, garantiza serializabilidad), <strong>marcas de tiempo</strong> y <strong>MVCC</strong> (control multiversión: los lectores no bloquean a los escritores; Oracle, PostgreSQL, InnoDB).</p></li><li><p><strong>Interbloqueo</strong> (<em>deadlock</em>): dos transacciones esperan cada una un recurso que tiene la otra; el SGBD lo detecta y <strong>aborta una</strong> (la víctima).</p></li><li><p><strong>Granularidad</strong> de bloqueo: BD, tabla, página, <strong>fila</strong>. <code>SELECT ... FOR UPDATE</code> bloquea las filas leídas.</p></li></ul>
+<h2 id="6-procedimientos-almacenados">6. Procedimientos almacenados</h2>
+<p>Un <strong>procedimiento almacenado</strong> es un programa con nombre, escrito en un lenguaje procedimental del SGBD, que se <strong>compila y guarda en la propia base de datos</strong> y se ejecuta en el <strong>servidor</strong>. El estándar es <strong>SQL/PSM</strong> (<em>Persistent Stored Modules</em>, parte 4 de ISO/IEC 9075, añadido en 1996).</p>
+<table><thead><tr><th>Dialecto</th><th>SGBD</th></tr></thead><tbody><tr><td><strong>PL/SQL</strong></td><td>Oracle</td></tr><tr><td><strong>T-SQL</strong> (Transact-SQL)</td><td>Microsoft SQL Server, Sybase</td></tr><tr><td><strong>PL/pgSQL</strong></td><td>PostgreSQL (admite también otros lenguajes: PL/Python, PL/Perl)</td></tr><tr><td><strong>SQL/PSM</strong> (muy cercano)</td><td>MySQL, MariaDB, IBM Db2 (SQL PL)</td></tr><tr><td><strong>Java</strong> (SQL/JRT, parte 13)</td><td>Oracle, Db2</td></tr></tbody></table>
+<h3 id="61-ventajas-e-inconvenientes">6.1. Ventajas e inconvenientes</h3>
+<table><thead><tr><th>Ventajas</th><th>Inconvenientes</th></tr></thead><tbody><tr><td><strong>Menos tráfico de red</strong> (una llamada en vez de muchas sentencias)</td><td><strong>Dependencia del fabricante</strong> (dialectos no portables)</td></tr><tr><td><strong>Rendimiento</strong>: código precompilado y plan reutilizable</td><td>Lógica de negocio repartida entre aplicación y BD</td></tr><tr><td><strong>Seguridad</strong>: se concede <code>EXECUTE</code> sin dar acceso directo a las tablas; ayuda frente a <strong>inyección SQL</strong> si se usan parámetros</td><td>Depuración, pruebas y control de versiones más difíciles</td></tr><tr><td><strong>Reutilización</strong> y reglas de negocio centralizadas</td><td>Carga adicional en el servidor de BD</td></tr></tbody></table>
+<h3 id="62-procedimiento-frente-a-función-almacenada">6.2. Procedimiento frente a función almacenada</h3>
+<table><thead><tr><th></th><th><strong>Procedimiento</strong></th><th><strong>Función</strong></th></tr></thead><tbody><tr><td>Valor de retorno</td><td>No (resultados mediante parámetros <code>OUT</code>)</td><td><strong>Sí</strong>, con <code>RETURN</code></td></tr><tr><td>Invocación</td><td><strong><code>CALL</code></strong> (estándar), <code>EXEC</code> (T-SQL), bloque PL/SQL</td><td>Dentro de una expresión o de un <code>SELECT</code></td></tr><tr><td>Parámetros</td><td><code>IN</code>, <code>OUT</code>, <code>INOUT</code></td><td>Normalmente solo <code>IN</code></td></tr></tbody></table>
+<h3 id="63-ejemplo-sintaxis-sqlpsm-válida-en-mysql">6.3. Ejemplo (sintaxis SQL/PSM, válida en MySQL)</h3>
+<pre><code class="language-sql">DELIMITER //
+CREATE PROCEDURE subir_salario(IN p_dpto INT, IN p_pct DECIMAL(5,2),
+                               OUT p_filas INT)
+BEGIN
+  DECLARE EXIT HANDLER FOR SQLEXCEPTION
+  BEGIN
+    ROLLBACK;
+    SET p_filas = -1;
+  END;
+
+  START TRANSACTION;
+  UPDATE empleado
+     SET salario = salario * (1 + p_pct / 100)
+   WHERE cod_dpto = p_dpto;
+  SET p_filas = ROW_COUNT();
+  COMMIT;
+END //
+DELIMITER ;
+
+CALL subir_salario(10, 2.5, @n);
+SELECT @n;</code></pre>
+<p>(<code>DELIMITER</code> es un comando del cliente <code>mysql</code>, no de SQL: permite usar <code>;</code> dentro del cuerpo.)</p>
+<h3 id="64-ejemplo-en-plsql-oracle">6.4. Ejemplo en PL/SQL (Oracle)</h3>
+<pre><code class="language-sql">CREATE OR REPLACE FUNCTION salario_medio(p_dpto IN NUMBER)
+RETURN NUMBER IS
+  v_media NUMBER;
+BEGIN
+  SELECT AVG(salario) INTO v_media FROM empleado WHERE cod_dpto = p_dpto;
+  RETURN NVL(v_media, 0);
+END;
+/
+
+SELECT nombre, salario_medio(cod_dpto) FROM departamento;</code></pre>
+<p>Estructura de un <strong>bloque PL/SQL</strong>: <code>DECLARE</code> (opcional) → <code>BEGIN</code> (obligatorio) → <code>EXCEPTION</code> (opcional) → <code>END;</code>. Los <strong>paquetes</strong> (<code>PACKAGE</code> = especificación + cuerpo) agrupan procedimientos, funciones y variables. Excepciones predefinidas frecuentes: <code>NO_DATA_FOUND</code> (un <code>SELECT ... INTO</code> sin filas) y <code>TOO_MANY_ROWS</code> (devuelve más de una).</p>
+<h3 id="65-elementos-procedimentales">6.5. Elementos procedimentales</h3>
+<ul><li><p><strong>Variables</strong>: <code>DECLARE v INT DEFAULT 0;</code> y asignación <code>SET v = ...</code> (PSM) o <code>v := ...</code> (PL/SQL); <code>SELECT ... INTO v</code>.</p></li><li><p><strong>Control de flujo</strong>: <code>IF ... THEN ... ELSEIF ... ELSE ... END IF</code>, <code>CASE</code>, <code>LOOP</code>, <code>WHILE ... DO ... END WHILE</code>, <code>REPEAT ... UNTIL ... END REPEAT</code>, <code>FOR</code>, <code>LEAVE</code> / <code>ITERATE</code> (PSM), <code>EXIT</code> (PL/SQL).</p></li><li><p><strong>Cursores</strong>: permiten recorrer <strong>fila a fila</strong> el resultado de una consulta. Ciclo: <strong><code>DECLARE</code> → <code>OPEN</code> → <code>FETCH</code> (en bucle) → <code>CLOSE</code></strong>.</p></li><li><p><strong>Excepciones / manejadores</strong>: <code>DECLARE CONTINUE | EXIT HANDLER FOR ...</code> (PSM, MySQL), <code>EXCEPTION WHEN ... THEN</code> (PL/SQL), <code>TRY ... CATCH</code> (T-SQL). Se lanzan errores con <code>SIGNAL</code> (PSM) o <code>RAISE_APPLICATION_ERROR</code> (Oracle).</p></li><li><p><strong>SQL dinámico</strong>: <code>PREPARE</code> / <code>EXECUTE</code> (PSM), <code>EXECUTE IMMEDIATE</code> (PL/SQL).</p></li></ul>
+<pre><code class="language-sql">-- Cursor en SQL/PSM (MySQL), dentro de un BEGIN ... END
+DECLARE fin INT DEFAULT 0;
+DECLARE v_nombre VARCHAR(60);
+DECLARE c CURSOR FOR SELECT nombre FROM empleado WHERE cod_dpto = 10;
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET fin = 1;
+OPEN c;
+bucle: LOOP
+  FETCH c INTO v_nombre;
+  IF fin = 1 THEN LEAVE bucle; END IF;
+  -- procesar v_nombre
+END LOOP;
+CLOSE c;</code></pre>
+<p>Gestión: <code>ALTER PROCEDURE</code>, <code>DROP PROCEDURE nombre</code>, <code>GRANT EXECUTE ON PROCEDURE nombre TO usuario</code>.</p>
+<h2 id="7-eventos-y-disparadores">7. Eventos y disparadores</h2>
+<p>Un <strong>disparador</strong> (<em>trigger</em>) es un procedimiento almacenado que el SGBD <strong>ejecuta automáticamente</strong> cuando ocurre un <strong>evento</strong> sobre una tabla o vista; no se invoca explícitamente ni recibe parámetros. Entraron en el estándar en <strong>SQL:1999</strong>. Siguen el modelo <strong>ECA</strong>: <strong>Evento → Condición → Acción</strong> (base de las <strong>BD activas</strong>).</p>
+<h3 id="71-clasificación">7.1. Clasificación</h3>
+<table><thead><tr><th>Criterio</th><th>Opciones</th></tr></thead><tbody><tr><td><strong>Evento</strong></td><td><code>INSERT</code>, <code>UPDATE</code> (opcionalmente <code>UPDATE OF columna</code>), <code>DELETE</code>. Algunos SGBD: <code>TRUNCATE</code> (PostgreSQL), DDL (<code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>) y de sistema (<code>LOGON</code>, <code>STARTUP</code> en Oracle)</td></tr><tr><td><strong>Momento</strong></td><td><strong><code>BEFORE</code></strong> (antes de la operación: validar o <strong>modificar los valores nuevos</strong>), <strong><code>AFTER</code></strong> (después: auditoría, propagar cambios), <strong><code>INSTEAD OF</code></strong> (en lugar de la operación; sobre <strong>vistas</strong>, SQL:2008)</td></tr><tr><td><strong>Granularidad</strong></td><td><strong><code>FOR EACH ROW</code></strong> (de <strong>fila</strong>: una vez por cada fila afectada) / <strong><code>FOR EACH STATEMENT</code></strong> (de <strong>sentencia</strong>: una vez por sentencia, aunque afecte a 0 filas). En el estándar, <strong>por defecto de sentencia</strong></td></tr><tr><td><strong>Condición</strong></td><td><code>WHEN (condición)</code> opcional</td></tr></tbody></table>
+<p><strong>Valores antiguo y nuevo</strong> (solo en triggers de fila):</p>
+<table><thead><tr><th>Evento</th><th><code>OLD</code></th><th><code>NEW</code></th></tr></thead><tbody><tr><td><code>INSERT</code></td><td>No existe</td><td>Fila insertada</td></tr><tr><td><code>UPDATE</code></td><td>Fila antes del cambio</td><td>Fila después del cambio</td></tr><tr><td><code>DELETE</code></td><td>Fila borrada</td><td>No existe</td></tr></tbody></table>
+<p>En el estándar se nombran con <code>REFERENCING OLD ROW AS ... NEW ROW AS ...</code>; en Oracle se escriben <code>:OLD</code> y <code>:NEW</code>; en MySQL y PostgreSQL, <code>OLD</code> y <code>NEW</code>. SQL Server usa las tablas virtuales <code>inserted</code> y <code>deleted</code> (solo triggers de sentencia <code>AFTER</code> e <code>INSTEAD OF</code>).</p>
+<h3 id="72-ejemplos">7.2. Ejemplos</h3>
+<pre><code class="language-sql">-- BEFORE de fila (MySQL): normalizar y validar antes de guardar
+CREATE TRIGGER trg_emp_bi
+BEFORE INSERT ON empleado
+FOR EACH ROW
+BEGIN
+  SET NEW.nombre = UPPER(NEW.nombre);
+  IF NEW.salario &lt; 1000 THEN
+    SIGNAL SQLSTATE &#39;45000&#39; SET MESSAGE_TEXT = &#39;Salario inferior al mínimo&#39;;
+  END IF;
+END;</code></pre>
+<pre><code class="language-sql">-- AFTER de fila (Oracle): auditoría de cambios de salario
+CREATE OR REPLACE TRIGGER trg_aud_salario
+AFTER UPDATE OF salario ON empleado
+FOR EACH ROW
+WHEN (NEW.salario &lt;&gt; OLD.salario)
+BEGIN
+  INSERT INTO auditoria (dni, sal_ant, sal_nuevo, fecha, usuario)
+  VALUES (:OLD.dni, :OLD.salario, :NEW.salario, SYSDATE, USER);
+END;
+/</code></pre>
+<pre><code class="language-sql">-- PostgreSQL: el trigger llama a una función que devuelve TRIGGER
+CREATE FUNCTION f_fecha_mod() RETURNS trigger AS $$
+BEGIN
+  NEW.ult_modif := now();
+  RETURN NEW;            -- en BEFORE, devolver NULL cancelaría la operación en esa fila
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_fecha_mod BEFORE UPDATE ON empleado
+FOR EACH ROW EXECUTE FUNCTION f_fecha_mod();</code></pre>
+<p>Detalle de Oracle: en la cláusula <code>WHEN</code> se escribe <code>NEW</code>/<code>OLD</code> <strong>sin</strong> dos puntos; en el cuerpo, con ellos (<code>:NEW</code>).</p>
+<h3 id="73-usos-y-precauciones">7.3. Usos y precauciones</h3>
+<p><strong>Usos típicos</strong>: <strong>auditoría</strong> (quién cambió qué y cuándo), <strong>reglas de negocio</strong> complejas que no expresan <code>CHECK</code> ni FK, <strong>integridad entre tablas</strong> (sustituto de las aserciones), mantener <strong>columnas derivadas</strong> o tablas resumen (desnormalización), <strong>replicación</strong>, hacer <strong>actualizables las vistas</strong> (<code>INSTEAD OF</code>), generar claves.</p>
+<p><strong>Precauciones</strong>:</p>
+<ul><li><p><strong>Cascada de triggers</strong>: un trigger puede disparar otros; los SGBD limitan la profundidad.</p></li><li><p><strong>Tabla mutante</strong> (Oracle, error <strong>ORA-04091</strong>): un trigger <strong>de fila</strong> no puede consultar ni modificar la <strong>misma tabla</strong> que lo disparó. Solución: trigger de sentencia o <em>compound trigger</em>.</p></li><li><p>Un trigger forma parte de la <strong>transacción</strong> de la sentencia que lo dispara: si falla, se deshace la sentencia completa. Normalmente <strong>no puede hacer <code>COMMIT</code> ni <code>ROLLBACK</code></strong>.</p></li><li><p>Lógica «oculta» y coste en rendimiento: documentarlos y no abusar.</p></li><li><p>Orden de ejecución habitual: triggers <code>BEFORE</code> de sentencia → para cada fila (<code>BEFORE</code> de fila → operación y comprobación de restricciones → <code>AFTER</code> de fila) → <code>AFTER</code> de sentencia.</p></li></ul>
+<p>Gestión: <code>DROP TRIGGER nombre</code>; desactivar: <code>ALTER TRIGGER nombre DISABLE</code> (Oracle), <code>ALTER TABLE t DISABLE TRIGGER nombre</code> (PostgreSQL, SQL Server).</p>
+<h3 id="74-eventos-programados">7.4. Eventos programados</h3>
+<p>Además de los eventos que activan triggers, algunos SGBD permiten <strong>eventos temporales</strong>: tareas que se ejecutan <strong>según un calendario</strong>, no por una operación sobre los datos (equivalen a un <em>cron</em> dentro de la BD).</p>
+<table><thead><tr><th>SGBD</th><th>Mecanismo</th></tr></thead><tbody><tr><td><strong>MySQL / MariaDB</strong></td><td><strong><code>CREATE EVENT</code></strong> con el <em>Event Scheduler</em> (variable <code>event_scheduler</code> activada)</td></tr><tr><td><strong>Oracle</strong></td><td>Paquete <strong><code>DBMS_SCHEDULER</code></strong> (antes <code>DBMS_JOB</code>)</td></tr><tr><td><strong>SQL Server</strong></td><td>Trabajos del <strong>SQL Server Agent</strong></td></tr><tr><td><strong>PostgreSQL</strong></td><td>Extensión <code>pg_cron</code> o planificador externo</td></tr></tbody></table>
+<pre><code class="language-sql">-- MySQL: purga diaria de registros antiguos
+CREATE EVENT ev_purga_log
+ON SCHEDULE EVERY 1 DAY
+STARTS &#39;2026-01-01 03:00:00&#39;
+DO
+  DELETE FROM log_accesos WHERE fecha &lt; NOW() - INTERVAL 90 DAY;
+
+-- Evento de una sola ejecución
+CREATE EVENT ev_unico
+ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL 1 HOUR
+DO UPDATE parametros SET valor = &#39;cerrado&#39; WHERE clave = &#39;plazo&#39;;</code></pre>
+<table><thead><tr><th></th><th><strong>Disparador</strong></th><th><strong>Evento programado</strong></th><th><strong>Procedimiento</strong></th></tr></thead><tbody><tr><td>Se activa</td><td>Automáticamente por una operación (<code>INSERT</code>/<code>UPDATE</code>/<code>DELETE</code>...)</td><td>Automáticamente en una <strong>fecha/hora</strong> o periodo</td><td><strong>Explícitamente</strong> con <code>CALL</code></td></tr><tr><td>Parámetros</td><td>No</td><td>No</td><td>Sí</td></tr><tr><td>Asociado a</td><td>Una tabla o vista</td><td>Un esquema</td><td>Un esquema</td></tr></tbody></table>
+<h2 id="esquema-de-repaso">Esquema de repaso</h2>
+<ul><li><p><strong>Lenguajes de interrogación</strong>: formales (álgebra procedimental; cálculo declarativo), comerciales (<strong>SQL</strong>, QUEL, <strong>QBE</strong>), otros (XQuery, SPARQL, Cypher, <strong>GQL ISO/IEC 39075:2024</strong>).</p></li><li><p><strong>SQL</strong>: declarativo; origen <strong>SEQUEL</strong> (Chamberlin y Boyce, IBM, System R). Primer estándar <strong>ANSI 1986</strong>, ISO <strong>1987</strong>; norma actual <strong>ISO/IEC 9075</strong>.</p></li><li><p>Versiones clave: <strong>SQL-92</strong> (JOIN explícitos, aislamiento) · <strong>SQL:1999</strong> (triggers, recursividad, OO) · <strong>SQL:2003</strong> (ventana, MERGE, identidad, XML) · <strong>SQL:2008</strong> (TRUNCATE, INSTEAD OF) · <strong>SQL:2011</strong> (temporal) · <strong>SQL:2016</strong> (JSON) · <strong>SQL:2023</strong> (vigente: SQL/PGQ parte 16, tipo JSON).</p></li><li><p><strong>DDL</strong> CREATE/ALTER/DROP/TRUNCATE · <strong>DML</strong> SELECT/INSERT/UPDATE/DELETE/MERGE · <strong>DCL</strong> GRANT/REVOKE · <strong>TCL</strong> COMMIT/ROLLBACK/SAVEPOINT.</p></li><li><p><code>TRUNCATE</code> es DDL: sin WHERE, sin triggers de fila; en Oracle no se puede deshacer.</p></li><li><p><code>CHAR</code> fijo / <code>VARCHAR</code> variable; <code>NUMERIC(p,s)</code>: p dígitos totales, s decimales.</p></li><li><p><code>PRIMARY KEY</code> = UNIQUE + NOT NULL, una por tabla; <code>UNIQUE</code> admite nulos; <code>CHECK</code> solo falla si la condición es FALSA.</p></li><li><p><strong>Índices</strong> no son estándar SQL (nivel físico): B-tree (rangos), hash (igualdad), bitmap (pocos valores).</p></li><li><p><strong>Vistas</strong>: tablas virtuales; <code>WITH CHECK OPTION</code>; no actualizables con DISTINCT, GROUP BY, agregados → <code>INSTEAD OF</code>.</p></li><li><p>Orden lógico: <strong>FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY</strong>. Agregados en HAVING, no en WHERE.</p></li><li><p><code>COUNT(*)</code> cuenta todas las filas; <code>COUNT(col)</code> y <code>SUM/AVG/MIN/MAX</code> ignoran nulos.</p></li><li><p><code>BETWEEN</code> incluye extremos; <code>LIKE</code>: <code>%</code> cualquier cadena, <code>_</code> un carácter; <code>IS NULL</code>, nunca <code>= NULL</code>.</p></li><li><p>JOIN: INNER, LEFT/RIGHT/FULL OUTER, CROSS (producto), NATURAL (columnas del mismo nombre), self join.</p></li><li><p>Subconsultas: escalares, <code>IN</code>/<code>ANY</code>/<code>ALL</code>, <strong>correlacionadas</strong>, <code>EXISTS</code>; <code>NOT IN</code> con NULL devuelve 0 filas.</p></li><li><p><code>UNION</code> elimina duplicados, <code>UNION ALL</code> no; <code>EXCEPT</code> = <code>MINUS</code> (Oracle).</p></li><li><p><strong>ACID</strong>: atomicidad, consistencia, aislamiento, durabilidad. Fenómenos: lectura sucia, no repetible, fantasma.</p></li><li><p>Niveles: READ UNCOMMITTED &lt; <strong>READ COMMITTED</strong> (evita sucia) &lt; <strong>REPEATABLE READ</strong> (evita no repetible) &lt; <strong>SERIALIZABLE</strong> (evita fantasma; defecto del estándar).</p></li><li><p><strong>Procedimientos almacenados</strong> (SQL/PSM, 1996): se ejecutan en el servidor, se invocan con <code>CALL</code>, parámetros IN/OUT/INOUT; <strong>funciones</strong> devuelven valor con RETURN. Cursores: DECLARE → OPEN → FETCH → CLOSE.</p></li><li><p><strong>Triggers</strong> (SQL:1999, modelo ECA): BEFORE/AFTER/INSTEAD OF × FOR EACH ROW/STATEMENT; <code>OLD</code> (UPDATE, DELETE) y <code>NEW</code> (INSERT, UPDATE); tabla mutante ORA-04091.</p></li><li><p><strong>Eventos programados</strong>: <code>CREATE EVENT ... ON SCHEDULE</code> (MySQL), DBMS_SCHEDULER (Oracle), SQL Server Agent.</p></li></ul>

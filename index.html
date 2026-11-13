@@ -148,6 +148,23 @@ button.opt:hover:not(:disabled) .bub { border-width: 2.5px; }
 .opt.wrong .bub { background: var(--bad); border-color: var(--bad); color: var(--paper); }
 .opt.wrong .note { color: var(--bad); }
 .opt:disabled, .opt.static { cursor: default; }
+.doc { background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 28px 32px; }
+.doc h2 { font-size: 1.45rem; margin: 30px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--print); }
+.doc h3 { font-size: 1.12rem; margin: 22px 0 8px; color: var(--print); }
+.doc p, .doc li { max-width: 72ch; }
+.doc p { margin: 0 0 12px; }
+.doc ul, .doc ol { margin: 0 0 12px; padding-left: 1.4rem; }
+.doc li p { margin: 0 0 4px; }
+.doc table { border-collapse: collapse; margin: 6px 0 16px; font-size: 0.93rem; min-width: 60%; }
+.doc th, .doc td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+.doc th { background: var(--print-soft); font-weight: 600; }
+.doc .tbl { overflow-x: auto; }
+.doc a { overflow-wrap: anywhere; }
+.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.92rem; }
+.toc a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.toc a:hover { color: var(--print); }
+@media (max-width: 640px) { .doc { padding: 18px 16px; } }
+@media print { .doc { border: 0; padding: 0; } .toc { display: none; } .doc table { page-break-inside: avoid; } }
 .exam-row { display: grid; grid-template-columns: 14rem 1fr; gap: 10px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--rule); }
 .exam-conv { font-weight: 600; font-stretch: 85%; }
 @media (max-width: 640px) { .exam-row { grid-template-columns: 1fr; gap: 6px; } }
@@ -233,7 +250,7 @@ code { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; 
     loading: true, loadError: null, msg: "",
     temas: [], bloques: [], indice: null, banks: [], intentos: [],
     cfg: { origen: "temas", temas: [], banco: "", num: "20", modo: "practica" },
-    run: null, result: null, reviewFilter: "fallos", confirmFinish: false, delAsk: null, timeUp: false
+    temasIdx: {}, temaHtml: {}, run: null, result: null, reviewFilter: "fallos", confirmFinish: false, delAsk: null, timeUp: false
   };
   const SEG_POR_PREGUNTA = 45;
   const LETRAS = ["a", "b", "c", "d", "e", "f"];
@@ -336,6 +353,7 @@ code { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; 
       const res = await Promise.allSettled((man.bancos || []).map((f) => getJSON("data/bancos/" + f).then((b) => Object.assign({}, b, { id: b.id || f.replace(/\.json$/, "") }))));
       S.banks = res.filter((r) => r.status === "fulfilled").map((r) => r.value);
       const fallidos = res.filter((r) => r.status === "rejected");
+      try { S.temasIdx = await getJSON("data/temas/index.json"); } catch (e) { S.temasIdx = {}; }
       if (fallidos.length) S.loadError = "No se pudieron cargar " + plural(fallidos.length, "banco", "bancos") + " de preguntas. Recarga la página.";
     } catch (e) {
       S.loadError = "No se pudo cargar el temario (" + e.message + "). Si abriste el archivo directamente, sírvelo con un servidor local: python3 -m http.server";
@@ -345,7 +363,9 @@ code { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; 
   }
 
   // ---------- Router ----------
-  function tab() { const h = (location.hash || "").replace("#", ""); return ["nivel", "test", "historial", "temario"].includes(h) ? h : "nivel"; }
+  function hashName() { return (location.hash || "").replace("#", ""); }
+  function temaHash() { const m = /^tema-(\d+)$/.exec(hashName()); return m ? Number(m[1]) : null; }
+  function tab() { const h = hashName(); if (temaHash() != null) return "temario"; return ["nivel", "test", "historial", "temario"].includes(h) ? h : "nivel"; }
   function go(t) { if (location.hash !== "#" + t) location.hash = t; else render(); }
   function render() {
     const t = tab();
@@ -358,7 +378,7 @@ code { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; 
     if (t === "nivel") h += viewNivel();
     else if (t === "test") h += S.run ? viewRun() : (S.result && !S.result._fromHist ? viewResult() : viewConfig());
     else if (t === "historial") h += S.result && S.result._fromHist ? viewResult() : viewHist();
-    else h += viewTemario();
+    else h += temaHash() != null ? viewTema(temaHash()) : viewTemario();
     app.innerHTML = h;
     if (t === "test" && S.run) startTick(); else stopTick();
   }
@@ -646,15 +666,48 @@ code { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; 
     return s + "</svg></figure>";
   }
 
+  // ---------- Leer un tema ----------
+  function viewTema(n) {
+    const t = S.temas.find((x) => x.n === n), meta = S.temasIdx[n];
+    if (!t || !meta) return '<section class="sheet"><h1>Tema no disponible</h1><p class="muted">Este tema aún no está en la web.</p><div class="row"><a class="btn" href="#temario">Volver al temario</a></div></section>';
+    const cuerpo = S.temaHtml[n];
+    if (cuerpo === undefined) {
+      S.temaHtml[n] = null;
+      fetch("data/temas/t" + String(n).padStart(2, "0") + ".html", { cache: "no-cache" })
+        .then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then((x) => { S.temaHtml[n] = x; if (temaHash() === n) render(); })
+        .catch(() => { S.temaHtml[n] = false; if (temaHash() === n) render(); });
+    }
+    const st = temaStats().get(n) || { total: 0 };
+    const prev = S.temas.find((x) => x.n === n - 1 && S.temasIdx[x.n]), next = S.temas.find((x) => x.n === n + 1 && S.temasIdx[x.n]);
+    let h = '<section class="sheet"><div class="spread"><span class="muted small"><a href="#temario">Temario</a> · Bloque ' + esc(t.bloque) + " · actualizado " + esc(meta.actualizado) + '</span><div class="row">' + (st.total ? '<button class="btn sm go" data-action="test-tema" data-tema="' + n + '">Test del tema · ' + st.total + "</button>" : "") + '<button class="btn sm" data-action="print">Imprimir</button></div></div>';
+    h += "<h1>" + esc(meta.titulo || ("Tema " + n)) + "</h1>";
+    let art = "";
+    if (cuerpo === null || cuerpo === undefined) art = '<p class="muted">Cargando el tema…</p>';
+    else if (cuerpo === false) art = '<div class="notice error">No se pudo cargar el tema. Comprueba la conexión y recarga.</div>';
+    else {
+      const d = new DOMParser().parseFromString("<div>" + cuerpo + "</div>", "text/html").body.firstChild;
+      d.querySelectorAll("script, iframe, object, embed").forEach((e) => e.remove());
+      d.querySelectorAll("table").forEach((tb) => { const w = document.createElement("div"); w.className = "tbl"; tb.replaceWith(w); w.appendChild(tb); });
+      const h2s = Array.from(d.querySelectorAll("h2"));
+      h2s.forEach((x, i) => { x.id = "sec-" + (i + 1); });
+      if (h2s.length > 2) h += '<nav class="toc" aria-label="Apartados">' + h2s.map((x, i) => '<a href="#tema-' + n + '" data-action="goto-sec" data-sec="' + (i + 1) + '">' + esc(x.textContent) + "</a>").join("") + "</nav>";
+      art = d.innerHTML;
+    }
+    h += '</section><article class="doc">' + art + "</article>";
+    h += '<div class="spread">' + (prev ? '<a class="btn" href="#tema-' + prev.n + '">← Tema ' + prev.n + "</a>" : "<span></span>") + (st.total ? '<button class="btn go" data-action="test-tema" data-tema="' + n + '">Hacer el test de este tema</button>' : "") + (next ? '<a class="btn" href="#tema-' + next.n + '">Tema ' + next.n + " →</a>" : "<span></span>") + "</div>";
+    return h;
+  }
+
   // ---------- Temario ----------
   function viewTemario() {
     if (!S.temas.length) return '<section class="sheet"><h1>Temario</h1><p class="muted">El temario aún no está cargado.</p></section>';
-    const st = temaStats(), escritos = S.temas.filter((t) => t.doc).length;
+    const st = temaStats(), escritos = S.temas.filter((t) => S.temasIdx[t.n]).length;
     let h = '<section class="sheet"><div class="spread"><h1>Temario</h1><span class="muted">' + escritos + " de " + S.temas.length + " temas escritos</span></div>";
-    h += '<p class="muted">Cada tema abre su versión vigente, que puedes exportar a PDF para estudiar en papel.' + (S.indice ? ' El plan de estudio está en el <a href="' + esc(S.indice) + '" target="_blank" rel="noopener">índice del temario</a>.' : "") + "</p>";
+    h += '<p class="muted">Lee cada tema aquí mismo o imprímelo para estudiar en papel. Se actualiza cuando cambia el temario.</p>';
     h += bloquesHtml((t) => {
       const s = st.get(t.n) || { total: 0 };
-      return { side: (t.doc ? '<a class="btn sm" href="' + esc(t.doc) + '" target="_blank" rel="noopener">Abrir tema</a>' : '<span class="tag">Por escribir</span>') + (s.total ? '<button class="btn sm" data-action="test-tema" data-tema="' + t.n + '">Test · ' + s.total + "</button>" : "") };
+      return { side: (S.temasIdx[t.n] ? '<a class="btn sm" href="#tema-' + t.n + '">Leer tema</a>' : '<span class="tag">Aún no está</span>') + (s.total ? '<button class="btn sm" data-action="test-tema" data-tema="' + t.n + '">Test · ' + s.total + "</button>" : "") };
     }, false);
     return h + "</section>";
   }
@@ -689,6 +742,8 @@ code { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; 
     else if (a === "del-ask") { S.delAsk = el.dataset.id; render(); }
     else if (a === "del-yes") { S.delAsk = null; borrarIntento(el.dataset.id); }
     else if (a === "export") exportar();
+    else if (a === "print") window.print();
+    else if (a === "goto-sec") { ev.preventDefault(); const x = document.getElementById("sec-" + el.dataset.sec); if (x) x.scrollIntoView({ behavior: "smooth", block: "start" }); }
     else if (a === "import") document.getElementById("import-file").click();
   });
   document.getElementById("import-file").addEventListener("change", (ev) => { const f = ev.target.files && ev.target.files[0]; if (f) importar(f); ev.target.value = ""; });
