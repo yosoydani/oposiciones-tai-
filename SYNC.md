@@ -12,7 +12,7 @@ El temario se escribe en docs de Claude Docs; la web guarda una copia en `data/t
 3. **Importar los cambiados.** Para cada uno:
    - `mcp__Claude_Docs__export(container={"kind":"project","id":"<id del doc>"}, file="<id de la pestaña>", format="html", pictures="fit")`.
    - Si el resultado se guarda en disco («Output too large… saved to»), usa esa ruta.
-   - Si llega entero en la conversación (pasa con los temas cortos), **no copies el base64 a mano**: mete erratas y además lo corta un filtro. Pide al usuario que exporte ese doc a Markdown desde su menú Exportar y lo adjunte, y pásale el `.md` al script.
+   - Si llega entero en la conversación (pasa con los temas cortos), **no copies el base64 a mano**: mete erratas y lo corta un filtro. Exporta el tema en PDF (`format="pdf"`, `pictures="fit"`, `paper="a4"`), que siempre se guarda en disco, y conviértelo: `python3 -I scripts/pdf-a-html.py <archivo guardado> /tmp/tNN.html`. El conversor reconoce títulos, listas, negritas y tablas; comparado con una exportación HTML exacta coincide en más del 99,9 % del texto.
    - Después: `python3 -I scripts/importar-tema.py NN <archivo> <rev>`. El script comprueba el tamaño.
 4. **Tema nuevo o renombrado.** Si el índice tiene un tema que no está en `data/temario.json`, o el título cambió, actualízalo ahí.
 5. **Validar y publicar.**

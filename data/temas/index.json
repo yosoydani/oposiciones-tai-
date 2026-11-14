@@ -1,4 +1,10 @@
 {
+ "1": {
+  "titulo": "Tema 1. La Constitución de 1978 y la Corona",
+  "rev": 12,
+  "actualizado": "2026-11-14",
+  "caracteres": 27801
+ },
  "2": {
   "titulo": "Tema 2. Cortes Generales, Tribunal Constitucional y Defensor del Pueblo",
   "rev": 17,
@@ -10,6 +16,12 @@
   "rev": 10,
   "actualizado": "2026-11-14",
   "caracteres": 39597
+ },
+ "4": {
+  "titulo": "Tema 4. Empleo público, transparencia y Agenda 2030",
+  "rev": 11,
+  "actualizado": "2026-11-14",
+  "caracteres": 27469
  },
  "5": {
   "titulo": "Tema 5. Igualdad, violencia de género, LGTBI, discapacidad y dependencia",
@@ -40,6 +52,24 @@
   "rev": 10,
   "actualizado": "2026-11-14",
   "caracteres": 38758
+ },
+ "10": {
+  "titulo": "Tema 10. Informática básica y arquitectura de ordenadores",
+  "rev": 9,
+  "actualizado": "2026-11-14",
+  "caracteres": 27092
+ },
+ "11": {
+  "titulo": "Tema 11. Periféricos",
+  "rev": 8,
+  "actualizado": "2026-11-14",
+  "caracteres": 21763
+ },
+ "12": {
+  "titulo": "Tema 12. Estructuras de datos, ficheros, algoritmos y formatos",
+  "rev": 7,
+  "actualizado": "2026-11-14",
+  "caracteres": 20660
  },
  "13": {
   "titulo": "Tema 13. Sistemas operativos",
